@@ -1,0 +1,59 @@
+#Form1 #JobAd
+{
+	background: none;
+}
+
+#Form1 #JobAd #JobDescription
+{
+	border: none;
+}
+
+#JobAd #JobDescription #Ad
+{
+	background: #FFFFFF url('../../img/ipaBackdrop.png') no-repeat right top;
+	padding: 5px;
+	font-size:120%;
+	font-weight:bold;
+}
+
+#JobAd #JobDescription H1
+{
+	padding-top:70px;
+	color: #000;
+	font-size: 300%;
+}
+
+#JobAd #JobDescription H2
+{
+	color: #000;
+	font-size: 160%;
+	text-decoration: none;
+	border: none;
+}
+
+#JobAd #JobDescription #Ad ul
+{
+	list-style-type: disc;
+	padding-left:18px;
+	font-size: 160%;
+}
+
+#Form1 #JobAd #Finish
+{
+	background: none;	
+}
+
+#Form1 #JobAd #InfoDownRight
+{
+	background: none;
+}
+
+#Form1 #JobAd #InfoTop
+{
+	background: none;
+}
+
+#Form1 #JobAd HR
+{
+	visibility: hidden;
+}

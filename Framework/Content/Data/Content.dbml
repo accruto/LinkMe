@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="ContentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Framework.Content.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ContentDetail" Member="ContentDetailEntities" AccessModifier="Internal">
+    <Type Name="ContentDetailEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="itemId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="value" Type="System.Object" DbType="Variant" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="stringValue" Type="System.String" DbType="text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ContentItem_ContentDetail" Member="ContentItemEntity" ThisKey="itemId" OtherKey="id" Type="ContentItemEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContentItem" Member="ContentItemEntities" AccessModifier="Internal">
+    <Type Name="ContentItemEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="parentId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="verticalId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ContentItem_ContentDetail" Member="ContentDetailEntities" ThisKey="id" OtherKey="itemId" Type="ContentDetailEntity" />
+      <Association Name="ContentItem_ContentItem" Member="ContentItemEntities" ThisKey="id" OtherKey="parentId" Type="ContentItemEntity" />
+      <Association Name="ContentItem_ContentItem" Member="ContentItem1" ThisKey="parentId" OtherKey="id" Type="ContentItemEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

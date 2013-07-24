@@ -1,0 +1,11 @@
+Database name: 'linkme'
+Database user id: 'sa'
+Database password: 'sa'
+Processing script: 'rollback_viewstate_cleanup_job.sql'
+CommandLine: 'isql -U sa -P sa -d linkme -i rollback_viewstate_cleanup_job.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> (1 row affected)
+(1 row affected)
+
++++ End Command Output +++

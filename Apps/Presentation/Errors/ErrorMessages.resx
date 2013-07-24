@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthenticationFailedException" xml:space="preserve">
+    <value>Login failed. Please try again.</value>
+  </data>
+  <data name="cardnumber" xml:space="preserve">
+    <value>credit card number</value>
+  </data>
+  <data name="ChooseProductException" xml:space="preserve">
+    <value>At least one of the packs must be chosen.</value>
+  </data>
+  <data name="CircularValidationError" xml:space="preserve">
+    <value>Setting the {0} will result in a circular dependency.</value>
+  </data>
+  <data name="CreditCardAuthorisationValidationError" xml:space="preserve">
+    <value>Please authorise the credit card charge.</value>
+  </data>
+  <data name="cvv" xml:space="preserve">
+    <value>security code</value>
+  </data>
+  <data name="desiredsalarylowerbound" xml:space="preserve">
+    <value>salary</value>
+  </data>
+  <data name="DifferentValidationError" xml:space="preserve">
+    <value>The {0} and {1} must match.</value>
+  </data>
+  <data name="DuplicateUserException" xml:space="preserve">
+    <value>The username is already being used.</value>
+  </data>
+  <data name="DuplicateValidationError" xml:space="preserve">
+    <value>The {0} is already being used.</value>
+  </data>
+  <data name="EmailAddressHostValidationError" xml:space="preserve">
+    <value>The {0} host name is not recognised.</value>
+  </data>
+  <data name="EnumValueValidationError" xml:space="preserve">
+    <value>The value for {0} is invalid.</value>
+  </data>
+  <data name="FileTooLargeException" xml:space="preserve">
+    <value>The size of the file exceeds the maximum allowed of {0}MB.</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>email address</value>
+  </data>
+  <data name="HtmlValidationError" xml:space="preserve">
+    <value>The {0} appears to have some script in it.</value>
+  </data>
+  <data name="InsufficientCreditsException" xml:space="preserve">
+    <value>You need {0} credit{1} to perform this action but you{2} have {3} available.</value>
+  </data>
+  <data name="InvalidFileNameException" xml:space="preserve">
+    <value>The file name '{0}' is not supported, as it must have one of the following extensions, {1}.</value>
+  </data>
+  <data name="InvalidPhotoExtensionException" xml:space="preserve">
+    <value>The photo extension '{0}' is not supported.</value>
+  </data>
+  <data name="InvalidResumeException" xml:space="preserve">
+    <value>Our system is unable to extract your profile information from this file. Please try another document or create your profile manually.</value>
+  </data>
+  <data name="InvalidResumeExtensionException" xml:space="preserve">
+    <value>The resume extension '{0}' is not supported.</value>
+  </data>
+  <data name="joinconfirmpassword" xml:space="preserve">
+    <value>confirm password</value>
+  </data>
+  <data name="joinloginid" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="joinpassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="LengthRangeValidationError" xml:space="preserve">
+    <value>The {0} must be between {1} and {2} characters in length.</value>
+  </data>
+  <data name="LengthValidationError" xml:space="preserve">
+    <value>The {0} must be {1} characters in length.</value>
+  </data>
+  <data name="loginid" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="loginloginid" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="loginpassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="MaximumLengthValidationError" xml:space="preserve">
+    <value>The {0} must be no more than {1} characters in length.</value>
+  </data>
+  <data name="MinimumLengthValidationError" xml:space="preserve">
+    <value>The {0} must be at least {1} characters in length.</value>
+  </data>
+  <data name="NotChangedValidationError" xml:space="preserve">
+    <value>The new {0} needs to be different from its original value.</value>
+  </data>
+  <data name="NotFoundException" xml:space="preserve">
+    <value>The {0} cannot be found.</value>
+  </data>
+  <data name="NotFoundValidationError" xml:space="preserve">
+    <value>The {0} with value '{1}' cannot be found.</value>
+  </data>
+  <data name="UnauthorizedException" xml:space="preserve">
+    <value>The user is not logged in.</value>
+  </data>
+  <data name="NotVisibleException" xml:space="preserve">
+    <value>The candidate details have been hidden by the candidate.</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>phone number</value>
+  </data>
+  <data name="NumericMaximumValueValidationError" xml:space="preserve">
+    <value>The {0} must be less than or equal to {1}.</value>
+  </data>
+  <data name="NumericMinimumValueValidationError" xml:space="preserve">
+    <value>The {0} must be greater than or equal to {1}.</value>
+  </data>
+  <data name="NumericValueRangeValidationError" xml:space="preserve">
+    <value>The {0} must be between {1} and {2}.</value>
+  </data>
+  <data name="ParserUnavailableException" xml:space="preserve">
+    <value>Our system is unable to extract your profile information from this file at this time. Please try again later or create your profile manually. We apologise for the inconvenience.</value>
+  </data>
+  <data name="PermissionsException" xml:space="preserve">
+    <value>You do not have sufficient permissions.</value>
+  </data>
+  <data name="PurchaseUserException" xml:space="preserve">
+    <value>The credit card could not be processed: {0}</value>
+  </data>
+  <data name="RegexLengthRangeValidationError" xml:space="preserve">
+    <value>The {0} must be between {1} and {2} characters in length and not have any invalid characters.</value>
+  </data>
+  <data name="RegexLengthValidationError" xml:space="preserve">
+    <value>The {0} must be {1} characters in length and not have any invalid characters.</value>
+  </data>
+  <data name="RegexMaximumLengthValidationError" xml:space="preserve">
+    <value>The {0} must be valid and have less than {1} characters.</value>
+  </data>
+  <data name="RegexMinimumLengthValidationError" xml:space="preserve">
+    <value>The {0} must be at least {1} characters in length and not have any invalid characters.</value>
+  </data>
+  <data name="RegexValidationError" xml:space="preserve">
+    <value>The {0} must not have any invalid characters.</value>
+  </data>
+  <data name="RequiredValidationError" xml:space="preserve">
+    <value>The {0} is required.</value>
+  </data>
+  <data name="salarylowerbound" xml:space="preserve">
+    <value>salary</value>
+  </data>
+  <data name="SalaryValidationError" xml:space="preserve">
+    <value>The lower and upper bounds for the {0} must not be negative.</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>availability</value>
+  </data>
+  <data name="TermsValidationError" xml:space="preserve">
+    <value>Please accept the terms and conditions.</value>
+  </data>
+  <data name="TooManyAccessesException" xml:space="preserve">
+    <value>Please call LinkMe on 1800 546-563 to contact additional candidates.</value>
+  </data>
+  <data name="TooManyJobAdsException" xml:space="preserve">
+    <value>Please call LinkMe on 1800 546-563 to post more job ads.</value>
+  </data>
+  <data name="TotalFilesTooLargeException" xml:space="preserve">
+    <value>The total size of all files exceeds the maximum allowed of {0}MB.</value>
+  </data>
+  <data name="PostalSuburbValidationError" xml:space="preserve">
+    <value>The {0} must be a valid postal location.</value>
+  </data>
+  <data name="UserDisabledException" xml:space="preserve">
+    <value>The user is disabled.</value>
+  </data>
+  <data name="UserMustChangePasswordException" xml:space="preserve">
+    <value>The user must change their password.</value>
+  </data>
+  <data name="IsNotEmptyValidationError" xml:space="preserve">
+    <value>The {0} cannot be empty.</value>
+  </data>
+  <data name="ValidationErrorsException" xml:space="preserve">
+    <value>Validation errors found:</value>
+  </data>
+  <data name="ServerErrorException" xml:space="preserve">
+    <value>An error has occurred in the LinkMe website. We apologise for the inconvenience.</value>
+  </data>
+  <data name="UrlNotFoundException" xml:space="preserve">
+    <value>The url '{0}' cannot be found.</value>
+  </data>
+  <data name="AlreadyAuthorizedException" xml:space="preserve">
+    <value>The user is already logged in.</value>
+  </data>
+  <data name="AlreadyAppliedException" xml:space="preserve">
+    <value>This job has already been applied for.</value>
+  </data>
+  <data name="NoResumeException" xml:space="preserve">
+    <value>The resume cannot be found.</value>
+  </data>
+  <data name="NoResumeFileException" xml:space="preserve">
+    <value>The resume file cannot be found.</value>
+  </data>
+  <data name="CouponExpiredException" xml:space="preserve">
+    <value>The coupon has already expired and is no longer valid.</value>
+  </data>
+  <data name="CouponNotFoundException" xml:space="preserve">
+    <value>The coupon code cannot be found. Please confirm you've typed it in correctly.</value>
+  </data>
+  <data name="CouponProductException" xml:space="preserve">
+    <value>The coupon does not apply to the type of products you've ordered.</value>
+  </data>
+  <data name="CouponRedeemerException" xml:space="preserve">
+    <value>The coupon code is not valid for your account. Please login as a different user or user another coupon code.</value>
+  </data>
+  <data name="JobAdExpiryValidationError" xml:space="preserve">
+    <value>The job ad expiry date cannot be later than {0} days from now.</value>
+  </data>
+</root>

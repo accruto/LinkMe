@@ -1,0 +1,180 @@
+﻿.discussions_section {}
+	.discussions_section .discussionposter_ascx .textbox_field .textbox_control .textbox {
+		width: 308px;
+	}
+
+
+.discussionsminilist_ascx {}
+	.discussionsminilist_ascx .minilist-header .opened {
+		float: right;
+	}
+
+	.discussionsminilist_ascx .discussions .discussion .subject {
+		min-height: 35px;
+	}
+	* html .discussionsminilist_ascx .discussions .discussion .subject {	/* IE6 min-height hack */
+		height: 35px;
+	}
+	
+	.discussionsminilist_ascx .discussions .discussion .details {
+		width: auto;
+		float: right;
+		text-align: right;
+		padding-left: 10px;
+	}
+		.discussionsminilist_ascx .discussions .discussion .details .date {
+			float: none;
+			font-size: 100%;
+		}
+	
+		.discussionsminilist_ascx .discussions .discussion .details .starter {
+			float: none;
+			color: #999;
+		}
+		.discussionsminilist_ascx .discussions .item_odd .details .starter {
+			color: #888;
+		}
+		.discussionsminilist_ascx .discussions .discussion .details .replies {
+			color: #999;
+			font-size: 100%;
+			width: auto;
+		}
+		.discussionsminilist_ascx .discussions .item_odd .details .replies {
+			color: #888;
+		}
+
+		
+	.discussionsminilist_ascx .discussions .discussion .snippet {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		font-size: 85%;
+	}
+	
+.discussionlist_ascx  .first_action-list,
+.discussionposts_ascx .first_action-list {
+	margin-bottom: 10px;
+}
+
+.discussionlist_ascx  .notification,
+.discussionposts_ascx .notification  {
+	margin-bottom: 5px;
+}
+
+/* ------------------------------------------------------------
+   Date = {day, time} data structure, as applies to discussions
+   ------------------------------------------------------------
+*/
+
+.discussions     .discussion     .date .time, 
+.discussionposts .discussionpost .date .time  {
+	color: #999;
+}
+
+.discussions     .item_odd       .date .time,
+.discussionposts .item_odd       .date .time  {
+	color: #888;
+}			
+			
+/* --------------------------------
+   Discussion Posts and Discussions
+   --------------------------------
+*/
+
+.discussions {}
+	.discussion {
+		vertical-align: top;
+	}
+
+	.discussions     .discussion     .photo,
+	.discussionposts .discussionpost .photo  {
+		width: 48px;
+	}
+		.discussions     .discussion     .photo .profile_thumbnail,
+		.discussionposts .discussionpost .photo .profile_thumbnail  {
+			margin:0;
+			margin-left: -1px;		/* Counter unexplained (yet browser-independent) 1px left margin */
+		}
+
+	.discussions     .discussion     .main,
+	.discussionposts .discussionpost .main  {}
+
+	.discussions     .discussion     .subject,
+	.discussionposts .discussionpost .message  {
+		min-height: 30px;
+	}
+	* html .discussions     .discussion     .subject,
+	* html .discussionposts .discussionpost .message  {	/* IE6 hack (minheight for 0 padding divs) */
+		height: 30px;
+	}
+	
+	.discussions     .discussion     .action-list,
+	.discussionposts .discussionpost .action-list  {
+		font-size: 85%;
+		margin-bottom: 0;
+	}
+	
+/* --------------------------------------------------
+   Discussion Posts and Discussions / 'details' block
+   --------------------------------------------------
+*/
+
+	.discussions     .discussion     .details,
+	.discussionposts .discussionpost .details,
+	.discussions     .discussion     .replies {
+		width: 0;				/* In a table, this means 'shrink-wrap'. */
+		font-size: 85%;
+		white-space: nowrap;
+	}
+	
+		.discussions     .discussion     .details .starter, 
+		.discussionposts .discussionpost .details .poster  {}			
+		
+		.discussions     .discussion     .date, 
+		.discussionposts .discussionpost .date  {}			
+
+			.discussions     .discussion     .date .day, 
+			.discussionposts .discussionpost .date .day  {}
+			
+			.discussions     .discussion     .details .date .time, 
+			.discussionposts .discussionpost .details .date .time  {
+				padding-left: 0.75em;
+			}
+
+.discussionlist_ascx {
+	clear: left;
+}
+
+.discussionposts_ascx {}
+	.discussionposts_ascx .discussionposts {}			
+		.discussionposts_ascx .discussionposts .discussionpost {
+			vertical-align: top;
+		}
+			.discussionposts_ascx .discussionposts .discussionpost .message {
+				font-size: 85%;
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
+			}
+
+
+
+.discussionposter_ascx {
+	clear: left;
+}
+	.discussionposter_ascx .subject_textbox_field {}
+		.discussionposter_ascx .subject_textbox_field .subject_textbox_control {}
+			.discussionposter_ascx .subject_textbox_field .subject_textbox_control .subject_textbox {
+				width: 520px;
+			}
+
+	.discussionposter_ascx .message_multiline_textbox_field {}
+		.discussionposter_ascx .message_multiline_textbox_field .message_multiline_textbox_control {}
+			.discussionposter_ascx .message_multiline_textbox_field .message_multiline_textbox_control .message_multiline_textbox {
+				width: 520px;
+			}
+	
+	.discussionposter_ascx .post_button_field {}
+		.discussionposter_ascx .post_button_field .post_button_control {}
+			.discussionposter_ascx .post_button_field .post_button_control .post_button {}

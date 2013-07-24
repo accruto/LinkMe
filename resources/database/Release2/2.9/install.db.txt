@@ -1,0 +1,16 @@
+data_ResumeSearch_delete_empty_criteria_searches.sql
+data_SavedResumeSearchAlert_delete_orphaned_alerts.sql
+data_company_add_westfield.sql
+create_DonationRecipient.sql
+create_DonationRequest.sql
+alter_networker_invites_add_donationRequestId.sql
+data_DonationRecipients.sql
+
+alter_event_log_profileId.sql
+alter_employer_profile_add_flags.sql
+create_NonMemberSettings.sql
+
+alter_Industry_add_names.sql
+create_IndustryAlias.sql
+
+data_Add_PersonalConcept_Intergator_user.sql

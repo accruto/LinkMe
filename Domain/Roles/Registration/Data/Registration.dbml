@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="RegistrationDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EmailVerification" Member="EmailVerificationEntities" AccessModifier="Internal">
+    <Type Name="EmailVerificationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="verificationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JoinReferral" Member="JoinReferralEntities" AccessModifier="Internal">
+    <Type Name="JoinReferralEntity" AccessModifier="Internal">
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="promotionCode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="refererUrl" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="referralCode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RegisteredUser_JoinReferral" Member="RegisteredUserEntity" ThisKey="userId" OtherKey="id" Type="RegisteredUserEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReferralSource" Member="ReferralSourceEntities" AccessModifier="Internal">
+    <Type Name="ReferralSourceEntity" AccessModifier="Internal">
+      <Column Name="displayName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ReferralSource_Member" Member="MemberEntities" ThisKey="id" OtherKey="enteredReferralSourceId" Type="MemberEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="MemberEntities" AccessModifier="Internal">
+    <Type Name="MemberEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="dateOfBirth" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerAccess" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstDegreeAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="secondDegreeAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="publicAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="enteredReferralSourceId" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="addressId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="profilePhotoId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ethnicFlags" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="disabilityFlags" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dateOfBirthParts" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="primaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="primaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tertiaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tertiaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastEditedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ReferralSource_Member" Member="ReferralSourceEntity" ThisKey="enteredReferralSourceId" OtherKey="id" Type="ReferralSourceEntity" IsForeignKey="true" />
+      <Association Name="RegisteredUser_Member" Member="RegisteredUserEntity" ThisKey="id" OtherKey="id" Type="RegisteredUserEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegisteredUser" Member="RegisteredUserEntities" AccessModifier="Internal">
+    <Type Name="RegisteredUserEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="loginId" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="flags" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="passwordHash" Type="System.String" DbType="Char(24)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emailAddressVerified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddressVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RegisteredUser_JoinReferral" Member="JoinReferralEntity" ThisKey="id" OtherKey="userId" Type="JoinReferralEntity" Cardinality="One" />
+      <Association Name="RegisteredUser_Member" Member="MemberEntity" ThisKey="id" OtherKey="id" Type="MemberEntity" Cardinality="One" />
+    </Type>
+  </Table>
+</Database>

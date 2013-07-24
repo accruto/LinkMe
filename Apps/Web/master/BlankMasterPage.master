@@ -1,0 +1,3 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="BlankMasterPage.master.cs" Inherits="LinkMe.Web.Master.BlankMasterPage" %>
+
+<asp:ContentPlaceHolder ID="Content" runat="server" />

@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Apps.Presentation</RootNamespace>
+    <AssemblyName>LinkMe.Apps.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IKVM.OpenJDK.Core, Version=0.40.0.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\Engine\bin\LinkMe.Query.Search.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="lucene-core-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\lucene-core-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="lucene-highlighter-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\lucene-highlighter-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\AdSenseQueryGenerator.cs" />
+    <Compile Include="Converters\AdSenseQueryValues.cs" />
+    <Compile Include="Converters\EmployerSearchCriteriaConverter.cs" />
+    <Compile Include="Converters\IConverter.cs" />
+    <Compile Include="Converters\JavaScriptValues.cs" />
+    <Compile Include="Converters\JobAdSearchCriteriaConverter.cs" />
+    <Compile Include="Converters\JobAdSearchCriteriaKeys.cs" />
+    <Compile Include="Converters\JobAdSearchSortCriteriaConverter.cs" />
+    <Compile Include="Converters\MemberSearchCriteriaConverter.cs" />
+    <Compile Include="Converters\MemberSearchCriteriaKeys.cs" />
+    <Compile Include="Converters\MemberSearchSortCriteriaConverter.cs" />
+    <Compile Include="Converters\QueryStringBinder.cs" />
+    <Compile Include="Converters\QueryStringGenerator.cs" />
+    <Compile Include="Converters\QueryStringValues.cs" />
+    <Compile Include="Converters\ResourceSearchCriteriaConverter.cs" />
+    <Compile Include="Converters\ResourceSearchCriteriaKeys.cs" />
+    <Compile Include="Converters\Values.cs" />
+    <Compile Include="Domain\CandidateStatusDisplay.cs" />
+    <Compile Include="Domain\ContactDetailsExtensions.cs" />
+    <Compile Include="Domain\DatesExtensions.cs" />
+    <Compile Include="Domain\DocFile.cs" />
+    <Compile Include="Domain\EthnicStatusDisplay.cs" />
+    <Compile Include="Domain\JobTypesDisplay.cs" />
+    <Compile Include="Domain\Products\ProductsExtensions.cs" />
+    <Compile Include="Domain\ProfessionDisplay.cs" />
+    <Compile Include="Domain\Roles\Affiliations\Communities\CommunitiesExtensions.cs" />
+    <Compile Include="Domain\Roles\Candidates\RelocationExtensions.cs" />
+    <Compile Include="Domain\Roles\JobAds\IJobAdFilesQuery.cs" />
+    <Compile Include="Domain\Roles\JobAds\MemberJobAdFilesQuery.cs" />
+    <Compile Include="Domain\Roles\JobAds\IMemberJobAdFilesQuery.cs" />
+    <Compile Include="Domain\Roles\JobAds\JobAdFilesQuery.cs" />
+    <Compile Include="Domain\Roles\JobAds\JobAdFile.cs" />
+    <Compile Include="Domain\Users\Members\Affiliations\Affiliates\AimeDisplay.cs" />
+    <Compile Include="Domain\Roles\Candidates\CandidateSalaryExtensions.cs" />
+    <Compile Include="Domain\Roles\Candidates\CandidatesExtensions.cs" />
+    <Compile Include="Domain\Roles\Candidates\Constants.cs" />
+    <Compile Include="Domain\Roles\Candidates\EmployerResumeFilesQuery.cs" />
+    <Compile Include="Domain\Roles\Candidates\IEmployerResumeFilesQuery.cs" />
+    <Compile Include="Domain\Roles\Candidates\ResumeFile.cs" />
+    <Compile Include="Domain\Roles\Candidates\ResumeFilesQuery.cs" />
+    <Compile Include="Domain\Roles\Candidates\IResumeFilesQuery.cs" />
+    <Compile Include="Domain\Roles\Resumes\JobsExtensions.cs" />
+    <Compile Include="Domain\Roles\Resumes\ResumesExtensions.cs" />
+    <Compile Include="Domain\Roles\Resumes\SchoolsExtensions.cs" />
+    <Compile Include="Domain\Roles\Communications\Settings\SettingsExtensions.cs" />
+    <Compile Include="Domain\Roles\JobAds\JobAdsExtensions.cs" />
+    <Compile Include="Domain\Roles\JobAds\Search\JobAdSearchExtensions.cs" />
+    <Compile Include="Domain\Roles\JobAds\Search\JobAdSortOrderDisplay.cs" />
+    <Compile Include="Domain\Roles\Orders\OrdersExtensions.cs" />
+    <Compile Include="Domain\Roles\Representatives\RepresentativesExtensions.cs" />
+    <Compile Include="Domain\SalaryExtensions.cs" />
+    <Compile Include="Domain\Search\SearchCriteriaExtensions.cs" />
+    <Compile Include="Domain\SeniorityDisplay.cs" />
+    <Compile Include="Domain\Users\Employers\Candidates\CandidateBlocklistsExtensions.cs" />
+    <Compile Include="Domain\Users\Employers\Candidates\CandidateFlagListsExtensions.cs" />
+    <Compile Include="Domain\Users\Employers\Candidates\CandidateFoldersExtensions.cs" />
+    <Compile Include="Domain\Users\Employers\JobAds\ApplicantListsExtensions.cs" />
+    <Compile Include="Domain\Users\Members\ContactsExtensions.cs" />
+    <Compile Include="Domain\Users\Members\MembersExtensions.cs" />
+    <Compile Include="Domain\Users\Members\MemberStatusDisplay.cs" />
+    <Compile Include="Domain\Users\Members\Search\MemberSearchExtensions.cs" />
+    <Compile Include="Domain\Users\Members\Search\MemberSortOrderDisplay.cs" />
+    <Compile Include="Domain\Users\Members\Search\MemberSearchContext.cs" />
+    <Compile Include="Domain\EducationLevelDisplay.cs" />
+    <Compile Include="Domain\VisaStatusDisplay.cs" />
+    <Compile Include="Errors\ChooseProductException.cs" />
+    <Compile Include="Errors\JobAdExpiryValidationError.cs" />
+    <Compile Include="Errors\ServerErrorException.cs" />
+    <Compile Include="Errors\UrlNotFoundException.cs" />
+    <Compile Include="Errors\ErrorCodes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorCodes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\NotFoundException.cs" />
+    <Compile Include="Errors\TermsValidationError.cs" />
+    <Compile Include="FlagsExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Search\CriteriaExtensions.cs" />
+    <Compile Include="Query\Search\Highlighter.cs" />
+    <Compile Include="Query\Search\HighlighterFactory.cs" />
+    <Compile Include="Query\Search\JobAds\JobAdSearchCriteriaExtensions.cs" />
+    <Compile Include="Query\Search\JobAds\JobAdSearchesExtensions.cs" />
+    <Compile Include="Query\Search\JobAds\JobSearchHighlighter.cs" />
+    <Compile Include="Errors\AuthorizationExceptions.cs" />
+    <Compile Include="Errors\StandardErrorHandler.cs" />
+    <Compile Include="Query\Search\KeywordUtil.cs" />
+    <Compile Include="Query\Search\JobAds\IJobAdHighlighter.cs" />
+    <Compile Include="Query\Search\JobAds\IJobAdHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Members\IResumeHighlighter.cs" />
+    <Compile Include="Query\Search\Members\IResumeHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Members\JobViewHtml.cs" />
+    <Compile Include="Query\Search\Members\MemberSearchCriteriaExtensions.cs" />
+    <Compile Include="Query\Search\Members\MemberSearchSuggestionsExtensions.cs" />
+    <Compile Include="Query\Search\JobAds\NullJobAdHighlighter.cs" />
+    <Compile Include="Query\Search\JobAds\JobAdHighlighter.cs" />
+    <Compile Include="Query\Search\JobAds\JobAdHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Members\NullResumeHighlighter.cs" />
+    <Compile Include="Query\Search\Members\ResumeHighlighter.cs" />
+    <Compile Include="Query\Search\Members\ResumeHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Members\ResumeViewHtml.cs" />
+    <Compile Include="Query\Search\Members\ResumeViewText.cs" />
+    <Compile Include="Query\Search\Members\SchoolViewHtml.cs" />
+    <Compile Include="Query\Search\Members\SnippetsBuilder.cs" />
+    <Compile Include="Query\Search\Resources\FaqHighlighter.cs" />
+    <Compile Include="Query\Search\Resources\FaqHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Resources\IResourceHighlighter.cs" />
+    <Compile Include="Query\Search\Resources\IResourceHighlighterFactory.cs" />
+    <Compile Include="Query\Search\Resources\NullResourceHighlighter.cs" />
+    <Compile Include="Query\Search\Resources\ResourceHighlighter.cs" />
+    <Compile Include="Query\Search\Resources\ResourceHighlighterFactory.cs" />
+    <Compile Include="Unity\PresentationConfigurator.cs" />
+    <Compile Include="UrlSegmentsExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Roles\Candidates\Resources\line_long.rtf" />
+    <EmbeddedResource Include="Domain\Roles\Candidates\Resources\line_short.rtf" />
+    <EmbeddedResource Include="Domain\Roles\Candidates\Resources\logo_tiny.rtf" />
+    <EmbeddedResource Include="Domain\Roles\JobAds\Resources\line_long.rtf" />
+    <EmbeddedResource Include="Domain\Roles\JobAds\Resources\line_short.rtf" />
+    <EmbeddedResource Include="Domain\Roles\JobAds\Resources\logo_tiny.rtf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Roles\Candidates\Resources\transform-resume-rtf.xsl" />
+    <EmbeddedResource Include="Errors\ErrorCodes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorCodes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors\ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Roles\JobAds\Resources\transform-jobad-rtf.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

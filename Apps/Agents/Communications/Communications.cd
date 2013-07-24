@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Agents.Communications.Subscribers.AffiliationsEmailSubscriber" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="2.25" />
+    <AssociationLine Name="_emailsCommand" Type="LinkMe.Domain.Agents.Communications.Emails.IEmailsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="4.812" />
+        <Point X="3.375" Y="4.812" />
+        <Point X="3.375" Y="0.812" />
+        <Point X="3.75" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_offerCategoriesCommand" Type="LinkMe.Domain.Roles.Affiliations.Offers.IOfferCategoriesCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="4.813" />
+        <Point X="6.375" Y="4.813" />
+        <Point X="6.375" Y="6.281" />
+        <Point X="8.5" Y="6.281" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_offerRequestsCommand" Type="LinkMe.Domain.Roles.Affiliations.Offers.IOfferRequestsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="4.813" />
+        <Point X="6.375" Y="4.813" />
+        <Point X="6.375" Y="5.562" />
+        <Point X="8.5" Y="5.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_communitiesCommand" Type="LinkMe.Domain.Roles.Affiliations.Communities.ICommunitiesCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="4.813" />
+        <Point X="6.375" Y="4.813" />
+        <Point X="6.375" Y="4.75" />
+        <Point X="8.5" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_communicationContactsCommand" Type="LinkMe.Domain.Roles.Communications.IContactsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="4.812" />
+        <Point X="6.375" Y="4.812" />
+        <Point X="6.375" Y="4.031" />
+        <Point X="8.5" Y="4.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAABQAAAAAAAAAABEgQAQAAABAAAAAAQAAAA=</HashCode>
+      <FileName>Communications\Subscribers\AffiliationsEmailSubscriber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_emailsCommand" />
+      <Field Name="_offerCategoriesCommand" />
+      <Field Name="_offerRequestsCommand" />
+      <Field Name="_communitiesCommand" />
+      <Field Name="_communicationContactsCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Agents.Communications.Subscribers.FriendsEmailSubscriber" Collapsed="true">
+    <Position X="3.75" Y="8.5" Width="2.25" />
+    <AssociationLine Name="_candidatesCommand" Type="LinkMe.Domain.Roles.Candidates.ICandidatesCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="8.875" />
+        <Point X="6.375" Y="8.875" />
+        <Point X="6.375" Y="8.25" />
+        <Point X="8.5" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_emailsCommand" Type="LinkMe.Domain.Agents.Communications.Emails.IEmailsCommand" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="8.781" />
+        <Point X="3.359" Y="8.781" />
+        <Point X="3.359" Y="0.812" />
+        <Point X="3.75" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_emailVerificationCommand" Type="LinkMe.Domain.Roles.Registration.IEmailVerificationCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="8.875" />
+        <Point X="6.375" Y="8.875" />
+        <Point X="6.375" Y="9.093" />
+        <Point X="8.5" Y="9.093" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_memberNetworkingCommand" Type="LinkMe.Domain.Users.Members.IMemberNetworkingCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="8.875" />
+        <Point X="6.375" Y="8.875" />
+        <Point X="6.375" Y="9.781" />
+        <Point X="8.5" Y="9.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEAhAAAAEAAAAAAAAEAAAQAAAAAAAAECAAAA=</HashCode>
+      <FileName>Communications\Subscribers\FriendsEmailSubscriber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_candidatesCommand" />
+      <Field Name="_emailsCommand" />
+      <Field Name="_emailVerificationCommand" />
+      <Field Name="_memberNetworkingCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Agents.Communications.Subscribers.ContributionsEmailSubscriber" Collapsed="true">
+    <Position X="3.75" Y="10.5" Width="2.25" />
+    <AssociationLine Name="_discussionsCommand" Type="LinkMe.Domain.Roles.Contributions.Discussions.IDiscussionsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="10.75" />
+        <Point X="6.375" Y="10.75" />
+        <Point X="6.375" Y="10.906" />
+        <Point X="8.5" Y="10.906" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_emailsCommand" Type="LinkMe.Domain.Agents.Communications.Emails.IEmailsCommand" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="10.781" />
+        <Point X="3.375" Y="10.781" />
+        <Point X="3.375" Y="0.812" />
+        <Point X="3.75" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_groupEventsCommand" Type="LinkMe.Domain.Roles.Contributions.Groups.IGroupEventsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="10.75" />
+        <Point X="6.375" Y="10.75" />
+        <Point X="6.375" Y="11.531" />
+        <Point X="8.5" Y="11.531" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_groupMembersCommand" Type="LinkMe.Domain.Roles.Contributions.Groups.IGroupMembersCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="10.75" />
+        <Point X="6.375" Y="10.75" />
+        <Point X="6.375" Y="12.281" />
+        <Point X="8.5" Y="12.281" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_groupsCommand" Type="LinkMe.Domain.Roles.Contributions.Groups.IGroupsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="10.75" />
+        <Point X="6.375" Y="10.75" />
+        <Point X="6.375" Y="13.031" />
+        <Point X="8.5" Y="13.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_whiteboardsCommand" Type="LinkMe.Domain.Roles.Contributions.Whiteboards.IWhiteboardsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="10.75" />
+        <Point X="6.375" Y="10.75" />
+        <Point X="6.375" Y="13.781" />
+        <Point X="8.5" Y="13.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAVABAAAAAAAAAQCAgCBgAAAACAAAAAAADAAg=</HashCode>
+      <FileName>Communications\Subscribers\ContributionsEmailSubscriber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_discussionsCommand" />
+      <Field Name="_emailsCommand" />
+      <Field Name="_groupEventsCommand" />
+      <Field Name="_groupMembersCommand" />
+      <Field Name="_groupsCommand" />
+      <Field Name="_whiteboardsCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Agents.Communications.Subscribers.MessagesEmailSubscriber" Collapsed="true">
+    <Position X="3.75" Y="7" Width="2.25" />
+    <AssociationLine Name="_emailsCommand" Type="LinkMe.Domain.Agents.Communications.Emails.IEmailsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="7.281" />
+        <Point X="3.375" Y="7.281" />
+        <Point X="3.375" Y="0.812" />
+        <Point X="3.75" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAACAAAAAQAAAAAAAAAAAAAAAIAAACAAA=</HashCode>
+      <FileName>Communications\Subscribers\MessagesEmailSubscriber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_emailsCommand" />
+      <Field Name="_messagesCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Agents.Communications.Emails.EmailsCommand" Collapsed="true">
+    <Position X="6" Y="0.5" Width="2" />
+    <AssociationLine Name="_communicationsCommand" Type="LinkMe.Domain.Roles.Communications.ICommunicationsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="1.062" />
+        <Point X="7.125" Y="1.343" />
+        <Point X="8.5" Y="1.343" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_settingsCommand" Type="LinkMe.Domain.Roles.Communications.Settings.ISettingsCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="1.062" />
+        <Point X="7.125" Y="2.031" />
+        <Point X="8.5" Y="2.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>cEAgAAAAAEABABAEAAgAAAAACAAAAQCAAAAGIEAAAYA=</HashCode>
+      <FileName>Communications\Emails\EmailsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_affiliateEmailsCommand" />
+      <Field Name="_communicationsCommand" />
+      <Field Name="_settingsCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Communities.ICommunitiesCommand" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Agents.Communications.Emails.IEmailsCommand" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Communications\Emails\IEmailsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Offers.IOfferCategoriesCommand" Collapsed="true">
+    <Position X="8.5" Y="6" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Offers.IOfferRequestsCommand" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Messages.IMessagesCommand" Collapsed="true">
+    <Position X="8.5" Y="7" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Candidates.ICandidatesCommand" Collapsed="true">
+    <Position X="8.5" Y="8" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Registration.IEmailVerificationCommand" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Users.Members.IMemberNetworkingCommand" Collapsed="true">
+    <Position X="8.5" Y="9.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Contributions.Discussions.IDiscussionsCommand" Collapsed="true">
+    <Position X="8.5" Y="10.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Contributions.Groups.IGroupEventsCommand" Collapsed="true">
+    <Position X="8.5" Y="11.25" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Contributions.Groups.IGroupMembersCommand" Collapsed="true">
+    <Position X="8.5" Y="12" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Contributions.Groups.IGroupsCommand" Collapsed="true">
+    <Position X="8.5" Y="12.75" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Contributions.Whiteboards.IWhiteboardsCommand" Collapsed="true">
+    <Position X="8.5" Y="13.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Agents.Communications.Emails.IAffiliateEmailsCommand" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communications\Emails\IAffiliateEmailsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.ICommunicationsCommand" Collapsed="true">
+    <Position X="8.5" Y="1" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Settings.ISettingsCommand" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.IContactsCommand" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

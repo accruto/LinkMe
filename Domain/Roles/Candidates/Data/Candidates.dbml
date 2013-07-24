@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="CandidatesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=(local);Initial Catalog=LinkMe;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CandidateWorkflow" Member="CandidateWorkflowEntities" AccessModifier="Internal">
+    <Type Name="CandidateWorkflowEntity" AccessModifier="Internal">
+      <Column Name="candidateId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="statusWorkflowId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="suggestedJobsWorkflowId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="activationEmailWorkflowId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="CandidateEntity_CandidateWorkflowEntity" Member="CandidateEntity" ThisKey="candidateId" OtherKey="id" Type="CandidateEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CandidateDiary" Member="CandidateDiaryEntities" AccessModifier="Internal">
+    <Type Name="CandidateDiaryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CandidateDiaryEntity_CandidateDiaryEntryEntity" Member="CandidateDiaryEntryEntities" ThisKey="id" OtherKey="diaryId" Type="CandidateDiaryEntryEntity" />
+      <Association Name="CandidateDiaryEntity_CandidateEntity" Member="CandidateEntities" ThisKey="id" OtherKey="diaryId" Type="CandidateEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CandidateDiaryEntry" Member="CandidateDiaryEntryEntities" AccessModifier="Internal">
+    <Type Name="CandidateDiaryEntryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="diaryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="startTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="endTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="totalHours" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CandidateDiaryEntity_CandidateDiaryEntryEntity" Member="CandidateDiaryEntity" ThisKey="diaryId" OtherKey="id" Type="CandidateDiaryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RelocationLocation" Member="RelocationLocationEntities" AccessModifier="Internal">
+    <Type Name="RelocationLocationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="candidateId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="locationReferenceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_RelocationLocationEntity" Member="LocationReferenceEntity" ThisKey="locationReferenceId" OtherKey="id" Type="LocationReferenceEntity" IsForeignKey="true" />
+      <Association Name="CandidateEntity_RelocationLocationEntity" Member="CandidateEntity" ThisKey="candidateId" OtherKey="id" Type="CandidateEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationReference" Member="LocationReferenceEntities" AccessModifier="Internal">
+    <Type Name="LocationReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="unstructuredLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="namedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_RelocationLocationEntity" Member="RelocationLocationEntities" ThisKey="id" OtherKey="locationReferenceId" Type="RelocationLocationEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CandidateIndustry" Member="CandidateIndustryEntities" AccessModifier="Internal">
+    <Type Name="CandidateIndustryEntity" AccessModifier="Internal">
+      <Column Name="candidateId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="industryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CandidateEntity_CandidateIndustryEntity" Member="CandidateEntity" ThisKey="candidateId" OtherKey="id" Type="CandidateEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CandidateResume" Member="CandidateResumeEntities" AccessModifier="Internal">
+    <Type Name="CandidateResumeEntity" AccessModifier="Internal">
+      <Column Name="candidateId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resumeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="parsedFromFileId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CandidateResumeFileEntity_CandidateResumeEntity" Member="CandidateResumeFileEntity" ThisKey="parsedFromFileId" OtherKey="id" Type="CandidateResumeFileEntity" IsForeignKey="true" />
+      <Association Name="CandidateEntity_CandidateResumeEntity" Member="CandidateEntity" ThisKey="candidateId" OtherKey="id" Type="CandidateEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CandidateResumeFile" Member="CandidateResumeFileEntities" AccessModifier="Internal">
+    <Type Name="CandidateResumeFileEntity" AccessModifier="Internal">
+      <Column Name="fileId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUsedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="candidateId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="uploadedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CandidateResumeFileEntity_CandidateResumeEntity" Member="CandidateResumeEntities" ThisKey="id" OtherKey="parsedFromFileId" Type="CandidateResumeEntity" />
+      <Association Name="CandidateEntity_CandidateResumeFileEntity" Member="CandidateEntity" ThisKey="candidateId" OtherKey="id" Type="CandidateEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Candidate" Member="CandidateEntities" AccessModifier="Internal">
+    <Type Name="CandidateEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="desiredJobTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredJobTypes" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="desiredSalaryLower" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredSalaryUpper" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredSalaryRateType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="relocationPreference" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="diaryId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="highestEducationLevel" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="recentSeniority" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="visaStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="recentProfession" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastEditedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CandidateEntity_CandidateWorkflowEntity" Member="CandidateWorkflowEntity" ThisKey="id" OtherKey="candidateId" Type="CandidateWorkflowEntity" Cardinality="One" />
+      <Association Name="CandidateEntity_RelocationLocationEntity" Member="RelocationLocationEntities" ThisKey="id" OtherKey="candidateId" Type="RelocationLocationEntity" />
+      <Association Name="CandidateEntity_CandidateIndustryEntity" Member="CandidateIndustryEntities" ThisKey="id" OtherKey="candidateId" Type="CandidateIndustryEntity" />
+      <Association Name="CandidateEntity_CandidateResumeEntity" Member="CandidateResumeEntities" ThisKey="id" OtherKey="candidateId" Type="CandidateResumeEntity" />
+      <Association Name="CandidateEntity_CandidateResumeFileEntity" Member="CandidateResumeFileEntities" ThisKey="id" OtherKey="candidateId" Type="CandidateResumeFileEntity" />
+      <Association Name="CandidateDiaryEntity_CandidateEntity" Member="CandidateDiaryEntity" ThisKey="diaryId" OtherKey="id" Type="CandidateDiaryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

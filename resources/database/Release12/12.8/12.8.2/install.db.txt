@@ -1,0 +1,9 @@
+create_JobAdIntegrationEvent.sql
+create_JobAdImportPostEvent.sql
+create_JobAdImportCloseEvent.sql
+create_JobAdExportPostEvent.sql
+create_JobAdExportCloseEvent.sql
+create_JobAdExportFeedIdEvent.sql
+create_JobAdExportFeedEvent.sql
+data_Integrator_Dewr.sql
+data_Integrator_HrCareers.sql

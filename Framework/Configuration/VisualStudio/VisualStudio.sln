@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudio", "VisualStudio.csproj", "{52748C82-240B-429A-A986-71FAAD7565DF}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{B1AC1FD2-5FDD-4604-8997-8BD033AD39E1}") = "Assemble", "Assemble\Assemble.paproj", "{4F0992A5-B020-4969-A845-3CDB1D96938B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{52748C82-240B-429A-A986-71FAAD7565DF} = {52748C82-240B-429A-A986-71FAAD7565DF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52748C82-240B-429A-A986-71FAAD7565DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52748C82-240B-429A-A986-71FAAD7565DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52748C82-240B-429A-A986-71FAAD7565DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52748C82-240B-429A-A986-71FAAD7565DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0992A5-B020-4969-A845-3CDB1D96938B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0992A5-B020-4969-A845-3CDB1D96938B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0992A5-B020-4969-A845-3CDB1D96938B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0992A5-B020-4969-A845-3CDB1D96938B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LinkMe.Apps.Integration.JobG8.AdvertPostService" CodeBehind="AdvertPostService.svc.cs" %>

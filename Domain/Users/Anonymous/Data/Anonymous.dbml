@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="AnonymousDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Users.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AnonymousUser" Member="AnonymousUserEntities" AccessModifier="Internal">
+    <Type Name="AnonymousUserEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="AnonymousUser_AnonymousContact" Member="AnonymousContactEntities" ThisKey="id" OtherKey="userId" Type="AnonymousContactEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnonymousContact" Member="AnonymousContactEntities" AccessModifier="Internal">
+    <Type Name="AnonymousContactEntity" AccessModifier="Internal">
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="contactDetailsId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="AnonymousUser_AnonymousContact" Member="AnonymousUserEntity" ThisKey="userId" OtherKey="id" Type="AnonymousUserEntity" IsForeignKey="true" />
+      <Association Name="ContactDetail_AnonymousContact" Member="ContactDetailEntity" ThisKey="contactDetailsId" OtherKey="id" Type="ContactDetailEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactDetails" Member="ContactDetailEntities" AccessModifier="Internal">
+    <Type Name="ContactDetailEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="faxNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmails" Type="System.String" DbType="NVarChar(700)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ContactDetail_AnonymousContact" Member="AnonymousContactEntities" ThisKey="id" OtherKey="contactDetailsId" Type="AnonymousContactEntity" />
+    </Type>
+  </Table>
+</Database>

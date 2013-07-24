@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Donations">
+  <DataContextMoniker Name="/DonationsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f609923b-af9f-4617-81ca-3af08cd45c20" absoluteBounds="0.75, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/DonationsDataContext/DonationRecipientEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a69f47aa-dfa7-4bae-ac1b-efaf6767cd9c" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c3511e7-72f8-4342-bae9-5daae552868c" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/DonationsDataContext/DonationRequestEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba08f1e8-b19c-41bf-804a-fea0244bc8f5" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.56814697265625); (3.5 : 1.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DonationsDataContext/DonationRecipientEntity/DonationRecipientEntity_DonationRequestEntity" />
+      <nodes>
+        <classShapeMoniker Id="f609923b-af9f-4617-81ca-3af08cd45c20" />
+        <classShapeMoniker Id="1c3511e7-72f8-4342-bae9-5daae552868c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b8e8a7d4-9bb9-4b20-9aa4-c0d41d6667d8" absoluteBounds="2.5, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DonationsDataContext/NetworkInvitationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad178167-01ea-474a-b926-7e8b6d56329a" absoluteBounds="2.515, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.2612939453125); (4 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DonationsDataContext/DonationRequestEntity/DonationRequestEntity_NetworkInvitationEntity" />
+      <nodes>
+        <classShapeMoniker Id="1c3511e7-72f8-4342-bae9-5daae552868c" />
+        <classShapeMoniker Id="b8e8a7d4-9bb9-4b20-9aa4-c0d41d6667d8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

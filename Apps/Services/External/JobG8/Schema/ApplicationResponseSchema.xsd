@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ApplicationResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="ApplicationAnswer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Questions">
+              <xs:complexType>
+                <xs:sequence maxOccurs="unbounded">
+                  <xs:element name="Question">
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="AnswerText" type="xs:string" maxOccurs="unbounded"/>
+                        <xs:element name="AnswerID" type="xs:int" maxOccurs="unbounded"/>
+                      </xs:choice>
+                      <xs:attribute name="ID" type="xs:string" use="required"/>
+                      <xs:attribute name="FormatID" type="xs:int"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Files" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CV" minOccurs="0">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="Filename"/>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="CoverLetter" minOccurs="0">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="Filename"/>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="JobReference" type="xs:string" use="required"/>
+          <xs:attribute name="JobBoardID" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>

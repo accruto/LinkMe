@@ -1,0 +1,39 @@
+#JobAd #JobDescription
+{
+	padding-left:5%;
+	width: 65%;
+	font-family:arial,helvetica,sans-serif;
+	padding-bottom: 10px;
+}
+
+#JobAd #JobDescription #Ad
+{
+	background: transparent url('Progressive People_images/bg.gif') right bottom no-repeat;
+}
+
+#JobAd #Ad #JobAdHeading
+{
+	padding-left:30px;
+	margin-bottom:40px;
+}
+
+#JobAd #Ad h1
+{
+	color:#000000;
+	font-family:arial,helvetica,sans-serif;
+	font-size:20pt;
+	font-weight:bold;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo
+{
+	height:90px;
+	background: url('Progressive People_images/bg.gif') left no-repeat;
+	border-bottom: 2px solid #333;
+	margin-bottom: 20px;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	border-bottom: 1px solid #333;
+}

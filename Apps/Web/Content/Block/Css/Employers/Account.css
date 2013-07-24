@@ -1,0 +1,61 @@
+﻿.form .login-section label {
+    width: 65px;
+}
+.form .login-section .control {
+    left: 80px;
+    margin-right: 80px;
+}
+.form .login-section .textbox {
+    width: 216px;
+}
+.form .login-section .checkbox_field label,
+.form .login-section .link_field {
+    font-size: 85%;
+}
+.form .login-section fieldset .link_field {
+    padding-top: 6px;
+    *padding-top: 4px;
+}
+.form .login-section .buttons_field {
+    position: relative;
+}
+.form .login-section .buttons_field .control {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 10px;
+    _bottom: 0;
+}
+
+.form .join-section label {
+    width: 125px;
+}
+.form .join-section .control {
+    left: 140px;
+}
+.form .industry_listbox_control .listbox {
+	width : 160px;
+}
+.form .join-section .radiobuttons_control .control {
+	left : 0px;
+}
+.form .join-section .radiobuttons_control label {
+    font-size: 82%;
+}
+.form .join-section .textbox {
+    width: 156px;
+}
+.form .join-section .password_textbox {
+    width: 116px;
+}
+.form .join-section .join-button {
+    float: right;
+}
+
+.form .login-section .section-body,
+.form .join-section .section-body {
+    height: 600px;
+}

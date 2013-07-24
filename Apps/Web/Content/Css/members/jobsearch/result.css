@@ -1,0 +1,1896 @@
+﻿#subheader .header {
+	font : Bold 24px Arial;
+	color : #333333;
+}
+#main-body {
+	width : 960px;
+	margin-top : -10px;
+}
+#main-body div, #main-body span, #main-body label, .overlay div, .overlay span {
+	font : 12px Helvetica,Arial;
+	color : black;
+	float : left;
+}
+#main-body a, #main-body ul, #main-body li {
+	float : left;
+}
+
+.leftside {
+	margin-left : 1px;
+	width : 239px;
+	min-height : 1px;
+}
+.leftside .area {
+	width : 237px;
+	border : 1px solid #D7D9DA;
+	border-radius : 4px;
+	margin-bottom : 8px;
+}
+.leftside .area.search .newsearch {
+	width : 237px;
+	margin : 10px 0px 10px 0px;
+}
+.leftside .area.search .newsearch .icon {
+	background-image : url("../../../images/employers/icons/new-search.png");
+	width : 18px;
+	height : 15px;
+	margin : 0px 5px 0px 5px;
+}
+.leftside .area.search .backtoresults {
+	width : 237px;
+	margin : 0px 0px 10px 0px;
+}
+.leftside .area.search .backtoresults .icon {
+	background-image : url("../../../images/employers/view-resume/back.png");
+	width : 13px;
+	height : 13px;
+	margin : 2px 10px 0px 5px;
+}
+#main-body .leftside .area.search .newsearch a, #main-body .leftside .area.search .backtoresults a {
+	font : 12.75px Verdana, Arial;
+}
+.leftside .area.search .divider {
+	background-color : #D7D9DA;
+	width : 200px;
+	height : 1px;
+	margin-left : 18px;
+}
+.leftside .area.search .titlebar {
+	width : 237px;
+	margin : 10px 0px 10px 0px;
+	cursor : pointer;
+}
+.leftside .area.search .keywords .titlebar .icon {
+	background-image : url("../../../images/employers/icons/change-search.png");
+	width : 16px;
+	height : 16px;
+	margin : 0px 5px 0px 5px;
+}
+.leftside .area.search .location .titlebar .icon {
+	background-image : url("../../../images/members/jobsearch/ChangeLocation.png");
+	width : 16px;
+	height : 16px;
+	margin : 0px 5px 0px 5px;
+}
+#main-body .leftside .area.search .titlebar .title {
+	font : 12.75px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+}
+#main-body .leftside .area.search .titlebar .arrow {
+	background-image : url("../../../images/members/jobsearch/TitleBarArrow.png");
+	width : 9px;
+	height : 5px;
+	float : right;
+	margin : 7px 10px 0px 0px;
+}
+#main-body .leftside .area.search .collapsed .titlebar .arrow {
+	background-position : 0px -5px;
+}
+.leftside .area.search .collapsed .content {
+	display : none;
+}
+.leftside .area.search .expanded .content {
+	display : block;
+}
+.leftside .area.search .field {
+	width : 207px;
+	margin-left : 13px;
+}
+#main-body .leftside .area.search .field label {
+	font : Bold 14px Arial;
+	color : #214263;
+	width : 207px;
+	margin : 5px 0px 5px 0px;
+}
+.leftside .area.search .field.checkbox_field .checkbox {
+	margin-top : 0px;
+}
+#main-body .leftside .area.search .field.checkbox_field .control label {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	width : 170px;
+	margin : 1px 0px 0px 5px;
+}
+.leftside .area.search .field .textbox_control .bg, .leftside .area.search .field .textbox_control input {
+	width : 193px;
+}
+.leftside .area.search .field .textbox_control.multiline_textbox_control .bg, .leftside .area.search .field .textbox_control.multiline_textbox_control input {
+	width : 207px;
+}
+.leftside .area.search .button.search {
+	margin : 10px 10px 10px 12px;
+}
+#main-body .leftside .area.search .searchtips {
+	font : 11.25px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+	margin-top : 15px;
+	cursor : pointer;
+}
+.leftside .area.search .Distance_dropdown_field {
+	width : 110px;
+}
+.leftside .area.search .Distance_dropdown_control {
+	width : 100px;
+}
+.leftside .area.search .Distance_dropdown_control input {
+	width : 92px;
+}
+.leftside .area.search .radius {
+	margin : 30px 0px 0px 0px;
+	width : 105px;
+	display : none;
+}
+.leftside .area.search .radius .title {
+	margin-right : 5px;
+}
+#main-body .leftside .area.search .radius .radiusof {
+	float : none;
+}
+.leftside .area.search .Country_dropdown_field, .leftside .area.search .Country_dropdown_control {
+	width : 205px;
+}
+.leftside .area.search .Country_dropdown_control .bg {
+	width : 195px;
+}
+.leftside .area.favourite.expanded .content {
+	display : block;
+}
+.leftside .area.favourite.collapsed .content, .leftside.notloggedin .area.favourite .content {
+	display : none;
+}
+.leftside .area.favourite .titlebar {
+	width : 237px;
+	margin : 10px 0px 5px 0px;
+	cursor : pointer;
+}
+.leftside .area.favourite .titlebar .icon, .leftside .area.favourite .folder .icon {
+	background-image : url("../../../images/employers/section-heading-icons/folders.png");
+	width : 20px;
+	height : 20px;
+	margin : 0px 5px 0px 5px;
+}
+.leftside .area.favourite .folder.flagged .icon, .leftside .area.filter .section.additional .content .row.flagged .icon, .rightside .resultscount .clearflags .icon, .rightside .titlebar .titles .icon.flagged {
+	background-image : url("../../../images/universal/action-icons/flagged.png");
+}
+.leftside .area.favourite .folder.flagged .icon {
+	width : 16px;
+	height : 16px;
+	margin : 2px 7px 0px 7px;
+}
+#main-body .leftside .area.favourite .titlebar .title {
+	font : Bold 14px Arial;
+	color : #214263;
+	margin-top : 3px;
+}
+#main-body .leftside .area.favourite .titlebar .arrow {
+	background-image : url("../../../images/members/jobsearch/TitleBarDoubleArrow.png");
+	width : 9px;
+	height : 11px;
+	float : right;
+	margin : 7px 10px 0px 0px;
+}
+#main-body .leftside .area.favourite.expanded .titlebar .arrow {
+	background-position : 0px -11px;
+}
+.leftside.notloggedin .area.favourite .titlebar .arrow {
+	display : none;
+}
+.leftside .area.favourite .divider {
+	background-image : url("../../../images/members/jobsearch/MyFavouriteDivider.png");
+	background-repeat : repeat-x;
+	width : 237px;
+	height : 10px;
+}
+.leftside.notloggedin .area.favourite .divider {
+	display : none;
+}
+#main-body .leftside .area.favourite .dragjobshere {
+	width : 222px;
+	border : 2px dotted #BDE7FF;
+	height : 16px;
+	text-align : center;
+	font : 11.25px Verdana, Arail;
+	color : #75A5C1;
+	margin : 0px 0px 11px 5px;
+	line-height : 16px;
+	display : none;
+}
+.leftside .area.favourite .folder {
+	width : 218px;
+	margin : 0px 0px 10px 9px;
+}
+#main-body .leftside .area.favourite .folder .title {
+	font : 11.25px Verdana, Arail;
+	color : #1155EE;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	max-width : 93px;
+	margin-top : 3px;
+	text-decoration : underline;
+	cursor : pointer;
+}
+#main-body .leftside .area.favourite .folder .count {
+	font : 11.25px Verdana, Arail;
+	color : #A0A0A0;
+	margin : 3px 0px 0px 4px;
+}
+#main-body .leftside .area.favourite .folder .icon.rename, #main-body .leftside .area.favourite .folder .icon.empty, #main-body .rightside.Folder .resultheader .icon.rename {
+	background-image : url("../../../images/members/jobsearch/FolderActionIcons.png");
+	width : 23px;
+	height : 24px;
+	float : right;
+	margin : -2px 0px 0px 7px;
+	cursor : pointer;
+}
+#main-body .leftside .area.favourite .folder .icon.empty {
+	background-position : -23px 0px;
+}
+.leftside .area.favourite .morefolders.collapsed {
+	display : none;
+}
+.leftside .area.favourite .morefolders.expanded {
+	display : block;
+}
+#main-body .leftside .area.favourite .toggle {
+	width : 220px;
+	height : 19px;
+	background-color : #EDEDED;
+	text-align : center;
+	font : 11.25px Verdana, Arial;
+	color : #1155EE;
+	cursor : pointer;
+	margin : 0px 0px 5px 8px;
+	line-height : 19px;
+}
+.leftside .area.filter.expanded .content {
+	display : block;
+}
+.leftside .area.filter.collapsed .content {
+	display : none;
+}
+.leftside .area.filter > .titlebar {
+	width : 237px;
+	margin : 10px 0px 5px 0px;
+	cursor : pointer;
+}
+.leftside .area.filter > .titlebar .icon {
+	background-image : url("../../../images/employers/section-heading-icons/filter.png");
+	width : 20px;
+	height : 20px;
+	margin : 0px 5px 0px 5px;
+}
+#main-body .leftside .area.filter > .titlebar .title {
+	font : Bold 14px Arial;
+	color : #214263;
+	margin-top : 3px;
+}
+#main-body .leftside .area.filter > .titlebar .arrow {
+	background-image : url("../../../images/members/jobsearch/TitleBarDoubleArrow.png");
+	width : 9px;
+	height : 11px;
+	float : right;
+	margin : 7px 10px 0px 0px;
+}
+#main-body .leftside .area.filter.expanded > .titlebar .arrow {
+	background-position : 0px -11px;
+}
+.leftside .area.filter .divider.withbg {
+	background-image : url("../../../images/members/jobsearch/MyFavouriteDivider.png");
+	background-repeat : repeat-x;
+	width : 237px;
+	height : 10px;
+	margin : 0px;
+	background-color : transparent;
+}
+.leftside .area.filter .row {
+	width : 237px;
+	margin : 0px 0px 10px 0px;
+}
+.leftside .area.filter .row.savesearch .icon, .overlay.savesearch > .icon {
+	background-image : url("../../../images/employers/icons/save-search.png");
+	width : 18px;
+	height : 18px;
+	margin : 0px 4px 0px 4px;
+}
+.leftside.notloggedin .area.filter .row.savesearch .icon {
+	background-image : url("../../../images/members/jobsearch/GraySavedSearch.png");
+}
+.leftside .area.filter .row.emailalert .icon, .overlay.emailalert > .icon {
+	background-image : url("../../../images/universal/action-icons/candidate-email-alerts.png");
+	width : 16px;
+	height : 16px;
+	margin : 0px 5px 0px 5px;
+}
+.leftside.notloggedin .area.filter .row.emailalert .icon {
+	background-image : url("../../../images/members/jobsearch/GrayEmailAlert.png");
+}
+.leftside .area.filter .row.reset .icon {
+	background-image : url("../../../images/employers/icons/clear.png");
+	width : 16px;
+	height : 16px;
+	margin : 0px 5px 0px 5px;
+}
+#main-body .leftside .area.filter .row .title {
+	font : 12.75px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+}
+#main-body .leftside.notloggedin .area.filter .row.savesearch .title, #main-body .leftside.notloggedin .area.filter .row.emailalert .title {
+	color : #707880;
+}
+.leftside .area.filter .divider {
+	background-color : #D7D9DA;
+	width : 223px;
+	height : 1px;
+	margin : 0px 0px 0px 7px;
+}
+.leftside .area.filter .section {
+	width : 237px;
+}
+.leftside .area.filter .section .titlebar {
+	width : 237px;
+	margin : 8px 0px 6px 0px;
+	cursor : pointer;
+}
+.leftside .area.filter .section .titlebar .checkbox {
+	background-image : url("../../../images/buttons/checkbox/filter-checkbox.png");
+	background-position : 0px 0px;
+	width : 16px;
+	height : 16px;
+	margin : 0px 6px 0px 8px;
+}
+.leftside .area.filter .section .titlebar .checkbox.hover {
+	background-position : 0px -17px;
+}
+.leftside .area.filter .section .titlebar .checkbox.mousedown {
+	background-position : 0px -34px;
+}
+.leftside .area.filter .section .titlebar .checkbox.checked {
+	background-position : 0px -51px;
+}
+.leftside .area.filter .section .titlebar .checkbox.checked.hover {
+	background-position : 0px -68px;
+}
+.leftside .area.filter .section .titlebar .checkbox.checked.mousedown {
+	background-position : 0px -85px;
+}
+#main-body .leftside .area.filter  .section .titlebar .title {
+	font : Bold 14px Verdana, Arial;
+	color : #4477AA;
+}
+#main-body .leftside .area.filter .section.salary .title span {
+	float : none;
+	font : 10px Verdana, Arial;
+	color : #98ABCD;
+	margin-left : 3px;
+}
+#main-body .leftside .area.filter  .section .titlebar .arrow {
+	background-image : url("../../../images/members/jobsearch/TitleBarArrow.png");
+	width : 9px;
+	height : 5px;
+	float : right;
+	margin : 7px 10px 0px 0px;
+}
+#main-body .leftside .area.filter  .section.collapsed .titlebar .arrow {
+	background-position : 0px -5px;
+}
+.leftside .area.filter .section .content {
+	display : none;
+	margin-bottom : 6px;
+}
+.leftside .area.filter .section.expanded .content {
+	display : block;
+}
+.leftside .area.filter .section.jobtypes .jobtype {
+	width : 43px;
+	margin-right : 2px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime {
+	margin-left : 8px;
+}
+.leftside .area.filter .section.jobtypes .jobtype .icon {
+	background-image : url("../../../images/members/jobsearch/CheckableJobTypes.png");
+	width : 43px;
+	height : 42px;
+	cursor : pointer;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon {
+	background-position : 0px 0px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon.hover {
+	background-position : 0px -42px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon.mousedown {
+	background-position : 0px -84px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon.checked {
+	background-position : 0px -126px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon.checked.hover {
+	background-position : 0px -168px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.FullTime .icon.checked.mousedown {
+	background-position : 0px -210px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon {
+	background-position : -43px 0px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon.hover {
+	background-position : -43px -42px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon.mousedown {
+	background-position : -43px -84px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon.checked {
+	background-position : -43px -126px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon.checked.hover {
+	background-position : -43px -168px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.PartTime .icon.checked.mousedown {
+	background-position : -43px -210px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon {
+	background-position : -86px 0px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon.hover {
+	background-position : -86px -42px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon.mousedown {
+	background-position : -86px -84px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon.checked {
+	background-position : -86px -126px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon.checked.hover {
+	background-position : -86px -168px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Contract .icon.checked.mousedown {
+	background-position : -86px -210px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon {
+	background-position : -129px 0px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon.hover {
+	background-position : -129px -42px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon.mousedown {
+	background-position : -129px -84px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon.checked {
+	background-position : -129px -126px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon.checked.hover {
+	background-position : -129px -168px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.Temp .icon.checked.mousedown {
+	background-position : -129px -210px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon {
+	background-position : -172px 0px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon.hover {
+	background-position : -172px -42px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon.mousedown {
+	background-position : -172x -84px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon.checked {
+	background-position : -172px -126px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon.checked.hover {
+	background-position : -172px -168px;
+}
+.leftside .area.filter .section.jobtypes .jobtype.JobShare .icon.checked.mousedown {
+	background-position : -172px -210px;
+}
+#main-body .leftside .area.filter .section.jobtypes .jobtype .count {
+	font : 10.25px Verdana, Arial;
+	color : #333333;
+	width : 43px;
+	text-align : center;
+}
+.leftside .area.filter .section.salary .salary-control .textbox_field, .leftside .area.filter .section.dateposted .recency-control .textbox_field, .leftside .area.filter .section.distance .distance-control .textbox_field {
+	display : none;
+}
+.leftside .area.filter .section.salary .salary-control, .leftside .area.filter .section.dateposted .recency-control, .leftside .area.filter .section.distance .distance-control {
+	margin-left : 10px;
+}
+.salary-range, .recency-range, .distance-range {
+	width : 217px;
+	margin-bottom : 5px;
+}
+#main-body .salary-range .left-range, #main-body .recency-range .left-range, #main-body .distance-range .left-range {
+	font : Bold 11.25px Verdana, Arial;
+}
+#main-body .salary-range .right-range, #main-body .recency-range .right-range, #main-body .distance-range .right-range {
+	float : right;
+	font : Bold 11.25px Verdana, Arial;
+}
+.salary-slider-bg, .recency-slider-bg, .distance-slider-bg {
+	width : 211px;
+	height : 11px;
+	margin-top : 18px;
+	position : absolute;
+	background-position : 0px -11px;
+}
+body.IE7 .salary-slider-bg, body.IE7 .recency-slider-bg, body.IE7 .distance-slider-bg {
+	margin : -18px 0px 0px -211px;
+}
+.salary-slider-bg, .salary-slider .ui-slider-range, .salary-slider .ui-slider-handle, .salary-slider-ruler, .recency-slider-bg, .recency-slider .ui-slider-range, .recency-slider .ui-slider-handle, .recency-slider-ruler, .distance-slider-bg, .distance-slider .ui-slider-range, .distance-slider .ui-slider-handle, .distance-slider-ruler {
+	background-image : url("../../../images/members/jobsearch/FilterSlider.png");
+}
+.salary-slider, .recency-slider, .distance-slider {
+	position : relative;
+	width : 211px;
+}
+.salary-slider .ui-slider-range, .recency-slider .ui-slider-range, .distance-slider .ui-slider-range {
+	width : 211px;
+	height : 11px;
+	cursor : pointer;
+	position : relative;
+}
+.salary-slider .ui-slider-handle, .recency-slider .ui-slider-handle, .distance-slider .ui-slider-handle {
+	background-position : -211px 0px;
+	width : 13px;
+	height : 19px;
+	position : absolute;
+	cursor : pointer;
+	outline : none;
+	margin-left : -6px;
+	border : 0;
+	background-color : transparent;
+}
+.salary-slider-ruler, .recency-slider-ruler, .distance-slider-ruler {
+	background-position : 0px -22px;
+	width : 211px;
+	height : 6px;
+}
+#main-body .salary-desc, #main-body .recency-desc, #main-body .distance-desc {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	text-align : center;
+	width : 211px;
+	margin : 5px 0px 5px 0px;
+}
+.leftside .area.filter .section.salary .field .checkbox {
+	margin : 0px 0px 0px 4px;
+}
+.leftside .area.filter .section.salary .field label {
+	margin-right : 0px;
+}
+#main-body .leftside .area.filter .section.distance .from, #main-body .leftside .area.filter .section.distance .emptyloc .text {
+	font : 10px Verdana, Arial;
+	color : #333333;
+	margin : 0px 0px 5px 8px;
+	width : 217px;
+}
+#main-body .leftside .area.filter .section.distance .from .location {
+	float : none;
+	font : 10px Verdana, Arial;
+	color : #808080;
+}
+#main-body .leftside .area.filter .section.distance .from .change, #main-body .leftside .area.filter .section.distance .emptyloc .text span {
+	float : none;
+	font : 10px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+}
+.leftside .area.filter .section.distance .emptyloc, .leftside .area.filter .section.distance.emptyloc .withloc {
+	display : none;
+}
+.leftside .area.filter .section.distance.emptyloc .emptyloc, .leftside .area.filter .section.distance .withloc {
+	display : block;
+}
+.leftside .area.filter .section.industry .allindustry {
+	width : 228px;
+	margin : 0px 0px 5px 9px;
+}
+.leftside .area.filter .section.industry .industry {
+	width : 217px;
+	margin : 0px 0px 5px 20px;
+}
+.leftside .area.filter .section.industry .allindustry .checkbox, .leftside .area.filter .section.industry .industry .checkbox {
+	margin : 0px 5px 0px 0px;
+}
+#main-body .leftside .area.filter .section.industry .content .title {
+	margin-right : 5px;
+	max-width : 160px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+}
+#main-body .leftside .area.filter .section.industry .count {
+	font : 11.25px Verdana, Arial;
+	color : #77859B;
+}
+#main-body .leftside .area.filter .section.industry .expander {
+	font : 11.25px Verdana, Arial;
+	color : #1155EE;
+	margin-left : 9px;
+	cursor : pointer;
+}
+#main-body .leftside .area.filter .section.industry .expander.right {
+	float : right;
+	margin-right : 9px;
+	display : none;
+}
+.leftside .area.filter .section.additional .content > .title {
+	margin : 0px 0px 5px 114px;
+}
+#main-body .leftside .area.filter .section.additional .content > .title span {
+	font : 10.75px Verdana, Arial;
+	color : #333333;
+	width : 40px;
+	text-align : center;
+}
+.leftside .area.filter .section.additional .content .row .icon {
+	width : 17px;
+	height : 17px;
+	margin : 0px 3px 0px 5px;
+}
+.leftside .area.filter .section.additional .content .row.notes .icon {
+	background-image : url("../../../images/employers/icons/note.png");
+}
+.leftside .area.filter .section.additional .content .row.viewed .icon {
+	background-image : url("../../../images/employers/icons/viewed.png");
+}
+.leftside .area.filter .section.additional .content .row.applied .icon {
+	background-image : url("../../../images/members/jobsearch/IconApplied.png");
+}
+#main-body .leftside .area.filter .section.additional .content .row .title {
+	font : 10.75px Verdana, Arial;
+	color : #333333;
+	width : 90px;
+	text-decoration : none;
+	cursor : default;
+	line-height : 17px;
+}
+.leftside .area.filter .section.additional .content .row input {
+	margin : 3px 13px 0px 12px;
+	cursor : pointer;
+}
+body.IE9 .leftside .area.filter .section.additional .content .row input, body.IE8 .leftside .area.filter .section.additional .content .row input, body.IE7 .leftside .area.filter .section.additional .content .row input {
+	margin-right : 4px;
+}
+.leftside .area.filter .row.reset {
+	margin-top : 5px;
+}
+.leftside .area.hiddenjobs .icon, .rightside.BlockList .resultheader .icon {
+	background-image : url("../../../images/employers/section-heading-icons/blocklists.png");
+	width : 20px;
+	height : 20px;
+	margin : 5px 5px 5px 5px;
+}
+#main-body .leftside .area.hiddenjobs .title {
+	font : Bold 14px Arial;
+	color : #214263;
+	margin : 7px 5px 0px 0px;
+	text-decoration : none;
+}
+#main-body .leftside .area.hiddenjobs .count {
+	font : Bold 14px Arial;
+	color : #A0A0A0;
+	margin-top : 7px;
+}
+.leftside.notloggedin .area.hiddenjobs .icon {
+	background-image : url("../../../images/members/jobsearch/GrayHiddenJobs.png");
+	height : 19px;
+}
+#main-body .leftside.notloggedin .area.hiddenjobs .title {
+	color : #707880;
+}
+.leftside.notloggedin .area.hiddenjobs .count {
+	display : none;
+}
+.leftside #apiorpartial, .leftside .apiorpartialtext {
+	display : none;
+}
+.rightside {
+	width : 700px;
+	margin-left : 5px;
+}
+.rightside .resultheader {
+	width : 677px;
+	border : 1px solid #DBDBDB;
+	padding : 5px 8px 5px 8px;
+}
+.rightside.SearchResult .resultheader .icon, .rightside.BrowseResult .resultheader .icon {
+	background-image : url("../../../images/employers/icons36/advanced-search.png");
+	width : 36px;
+	height : 36px;
+	margin-right : 10px;
+}
+.rightside.FlagList .resultheader .icon {
+	background-image : url("../../../images/employers/large-section-heading-icons/flaglists.png");
+	width : 20px;
+	height : 20px;
+	margin-right : 10px;
+}
+#main-body .rightside.FlagList .resultheader .title, #main-body .rightside.Folder .resultheader .title, #main-body .rightside.BlockList .resultheader .title, #main-body .rightside.SuggestedJobs .resultheader .title, #main-body .rightside.SimilarJobs .resultheader .title {
+	font : Bold 16px Arial;
+	color : #000033;
+	line-height : 24px;
+}
+.rightside.Folder .resultheader .icon.folder {
+	background-image : url("../../../images/members/jobsearch/HeaderFolderIcon.png");
+	width : 24px;
+	height : 24px;
+	margin-right : 5px;
+}
+.rightside .resultheader #results-header-text {
+	width : 630px;
+}
+#main-body .rightside .resultheader #results-header-text .search-criterion, #main-body .rightside .resultheader #results-header-text .search-criterion .boolean-operator {
+	float : none;
+}
+#main-body .rightside .resultheader #results-header-text .search-criterion-name  {
+	font : 14px Arial;
+	color : #000033;
+	line-height : 20px;
+	margin-right : 3px;
+}
+#main-body .rightside .resultheader #results-header-text .search-criterion-data {
+	font : Bold 16px Arial;
+	color : #000033;
+}
+#main-body .rightside .resultheader #results-header-text .search-criterion-separator {
+	font : Bold 16px Arial;
+	color : #000033;
+	margin-right : 5px;
+}
+#main-body .rightside .resultheader #results-header-text .synonyms-filter-text {
+	font : 14px Arial;
+	color : #808080;
+	line-height : 20px;
+}
+#results-header-text .mini-light-x_button {
+	background-image : url("../../../images/buttons/mini-light/x.png");
+	width : 14px;
+	height : 14px;
+	margin : 2px 0px 0px 2px;
+	cursor : pointer;
+}
+.rightside .resultscount {
+	width : 696px;
+	margin : 10px 0px 15px 0px;
+}
+#main-body .rightside .resultscount .total {
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	margin : 0px 75px 0px 6px;
+} 
+.rightside .resultscount .total b {
+	margin-right : 5px;
+}
+#main-body .rightside .resultscount .total .count {
+	float : none;
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	margin-left : 5px;
+}
+.rightside .resultscount .addtofolder, .rightside .resultscount .restoreall {
+	cursor : pointer;
+}
+.rightside .resultscount .addtofolder.hover {
+	border : 1px solid #B4BCC8;
+	padding : 5px 5px 5px 5px;
+	margin : -6px 0px 0px -6px;
+}
+.rightside .resultscount .addtofolder .icon, .menupan.folder .menuitem.folder .icon {
+	background-image : url("../../../images/universal/action-icons/folder.png");
+}
+.rightside.notloggedin .resultscount .addtofolder .icon {
+	background-image : url("../../../images/members/jobsearch/GrayFolder.png");
+}
+.rightside .resultscount .addtofolder .icon {
+	width : 15px;
+	height : 16px;
+	margin-right : 7px;
+}
+.rightside .resultscount .restoreall .icon {
+	background-position : -213px -38px;
+	width : 15px;
+	height : 16px;
+	margin-right : 7px;
+}
+#main-body .rightside.notloggedin .resultscount .action {
+	color : #707880;
+}
+#main-body .rightside .resultscount .action, #main-body .rightside .resultscount .action, #main-body .rightside .sort .expandalljobs .text {
+	font : 12.75px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+	margin-right : 0px;
+}
+#main-body .rightside .resultscount .clearflags {
+	float : right;
+	width : 136px;
+}
+.rightside .resultscount .clearflags .icon {
+	width : 16px;
+	height : 16px;
+	margin-right : 6px;
+}
+.rightside.notloggedin .resultscount .clearflags .icon {
+	background-image : url("../../../images/members/jobsearch/GrayFlag.png");
+}
+#main-body .rightside .resultscount .clearflags span {
+	font : 10px Verdana, Arial;
+	color : #909090;
+	float : right;
+}
+.rightside .sort {
+	width : 696px;
+	padding-bottom : 5px;
+	margin-bottom : 6px;
+	border-bottom : 1px solid #B6C1CD;
+}
+#main-body .rightside .sort .field label {
+	margin : 5px 12px 0px 5px;
+	color : #336699;
+}
+#SortOrder {
+	width : 110px;
+	border : 1px solid #88AACC;
+	outline : none;
+	padding : 1px;
+	line-height : 16px;
+	font-family : Verdana, Arial, sans-serif;	/* Bordered inputs don't inherit font in any browser */
+	color : #333333;
+}
+.rightside .sort .ascending, .rightside .sort .descending {
+	background-image : url("../../../images/members/jobsearch/SortOrder.png");
+}
+.rightside .sort .ascending {
+	width : 16px;
+	height : 11px;
+	margin : 7px 2px 0px 5px;
+	cursor : pointer;
+}
+.rightside .sort .ascending.active {
+	background-position : -16px 0px;
+}
+.rightside .sort .descending {
+	background-position : 0px -11px;
+	width : 17px;
+	height : 11px;
+	margin : 7px 5px 0px 0px;
+	cursor : pointer;
+}
+.rightside .sort .descending.active {
+	background-position : -16px -11px;
+}
+#main-body .rightside .sort .sorttext {
+	font : Bold 11px Verdana, Arial;
+	color : #333333;
+	margin-top : 5px;
+}
+#main-body .rightside .sort .expandalljobs {
+	float : right;
+}
+.rightside .sort .expandalljobs .text {
+	margin-top : 4px;
+}
+.rightside .sort .expandalljobs .button {
+	margin : 0px 0px 0px 9px;
+}
+.rightside .titlebar {
+	width : 696px;
+	margin-bottom : 10px;
+}
+.rightside .titlebar .bulktick {
+	width : 23px;
+	height : 23px;
+	padding : 7px 0px 0px 7px;
+	margin-right : 1px;
+	border : 1px solid #EEEEEE;
+}
+.rightside .titlebar .bulktick .checkbox {
+	margin : 0px;
+}
+.rightside .titlebar .bulkaction {
+	border : 1px solid #EEEEEE;
+	background-color : #F5F7F9;
+	height : 30px;
+	cursor : pointer;
+}
+.rightside .titlebar .bulkaction.selected {
+	border : 1px solid #86AEE7;
+}
+.rightside .titlebar .bulkaction .dropdown {
+	border : 1px solid #EEEEEE;
+	background-color : #F5F7F9;
+	height : 24px;
+	margin : 2px 2px 0px 2px;
+}
+.rightside .titlebar .bulkaction.selected .dropdown, .rightside .titlebar .bulkaction:hover .dropdown {
+	border : 1px solid #BFD5E2;
+}
+.rightside .titlebar .bulkaction .dropdown .icon {
+	background-image : url("../../../images/members/jobsearch/BulkActionDropdownIcon.png");
+	width : 8px;
+	height : 12px;
+	margin : 6px 12px 0px 8px;
+}
+.rightside .titlebar .bulkaction.selected .dropdown .icon {
+	background-position : -8px 0px;
+}
+#main-body .rightside .titlebar .bulkaction .dropdown .text {
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	line-height : 24px;
+	margin-right : 13px;
+}
+#main-body .rightside .titlebar .bulkaction .dropdown .text span {
+	float : none;
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+}
+.rightside .titlebar .bulkaction .dropdown .vline {
+	width : 1px;
+	height : 24px;
+	background-color : #EEEEEE;
+	display : none;
+}
+.rightside .titlebar .bulkaction .dropdown .arrow {
+	border-top : 4px solid #EEEEEE;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	margin : 10px 10px 0px 10px;
+	display : none;
+}
+.rightside .titlebar .bulkaction:hover .dropdown .vline, .rightside .titlebar .bulkaction.selected .dropdown .vline {
+	background-color : #BFD5E2;
+	display : block;
+}
+.rightside .titlebar .bulkaction:hover .dropdown .arrow, .rightside .titlebar .bulkaction.selected .dropdown .arrow {
+	border-top : 4px solid #000000;
+	display : block;
+}
+.menupan {
+	border : 1px solid #B4BCC8;
+	width : 276px;
+	background-color : #F3F4F6;
+	position : absolute;
+	display : none;
+	z-index : 1;
+}
+.menupan .divider {
+	width : 276px;
+	height : 1px;
+	background-color : #D3D8DF;
+}
+.menupan .divider.white {
+	background-color : #FFFFFF;
+}
+.menupan .menuitem, .menupan.folder .menuitem.favourite:hover {
+	border : 1px solid #F3F4F6;
+	background-color : #F3F4F6;
+	width : 266px;
+	height : 23px;
+	cursor : pointer;
+	margin : 2px 0px 2px 4px;
+}
+.menupan .menuitem:hover {
+	border : 1px solid #214263;
+	background-color : #638AB0;
+}
+.menupan .menuitem.disabled {
+	cursor : default;
+}
+.menupan.bulk .menuitem .icon, .menupan.folder .menuitem.favourite .icon {
+	width : 31px;
+	height : 23px;
+}
+.menupan.bulk .menuitem.folder .icon, .menupan.folder .menuitem.favourite .icon {
+	background-position : -3px -34px;
+}
+.menupan.bulk .menuitem.note .icon {
+	background-position : -43px -34px;
+}
+.menupan.bulk .menuitem.email .icon {
+	background-position : -105px -34px;
+}
+.menupan.bulk .menuitem.download .icon {
+	background-position : -145px -34px;
+}
+.menupan.bulk .menuitem.hide .icon {
+	background-position : -185px -34px;
+}
+.menupan.bulk .menuitem.restore .icon {
+	background-position : -225px -34px;
+}
+.menupan.folder .menuitem.folder .icon {
+	width : 15px;
+	height : 15px;
+	margin : 4px 8px 4px 8px;
+}
+.menupan.folder .menuitem.removefromfolder .icon {
+	background-image : url("../../../images/employers/icons/delete.png");
+	width : 15px;
+	height : 15px;
+	margin : 4px 8px 4px 8px;
+}
+#main-body .menupan .menuitem .text, #main-body .menupan .menuitem.favourite:hover .text {
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	line-height : 23px;
+}
+#main-body .menupan .menuitem .text span, #main-body .menupan.folder .menuitem.favourite:hover .text span {
+	float : none;
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+}
+#main-body .menupan .menuitem .text span.desc, #main-body .menupan.folder .menuitem.favourite:hover .text span.desc {
+	color : #4477AA;
+}
+#main-body .menupan .menuitem:hover .text, #main-body .menupan .menuitem:hover .text span {
+	color : #FFFFFF;
+}
+#main-body .menupan .menuitem:hover .text span.desc {
+	color : #C8CBCC;
+}
+#main-body .menupan .menuitem.favourite .text, #main-body .menupan .menuitem.favourite .text span, #main-body .menupan .menuitem.favourite .text span.desc, #main-body .menupan .menuitem.favourite:hover .text, #main-body .menupan.folder .menuitem.favourite:hover .text span, #main-body .menupan.folder .menuitem.favourite:hover .text span.desc {
+	font-weight : bold;
+}
+#main-body .menupan .menuitem .arrow {
+	background-image : url("../../../images/members/jobsearch/ParentMenuItemArrow.png");
+	width : 23px;
+	height : 25px;
+	margin : -1px -1px 0px 0px;
+	float : right;
+}
+.menupan .menuitem:hover .arrow {
+	background-position: 0px -25px;
+}
+.menupan.note {
+	background-color : #FFFED5;
+}
+.menupan.note[action='bulk'] .add, .menupan.note[action='single'] .row.empty, .menupan.note[action='bulk'] .row.empty, .menupan.note[action='single'] .editarea, .menupan.note .row .title .buttons {
+	display : none;
+}
+.menupan.note[action='bulk'] .editarea, .menupan.note[action='bulk'] .row, .menupan.note[action='single'] .row,  .menupan.note .row:hover .title .buttons {
+	display : block;
+}
+.menupan.note .icon {
+	background-image : url("../../../images/members/jobsearch/NoteIcons.png");
+	width : 13px;
+	height : 14px;
+	margin : 0px 5px 0px 5px;
+}
+.menupan.note .icon.edit {
+	background-position : -13px 0px;
+}
+.menupan.note .icon.delete {
+	background-position : -26px 0px;
+}
+.menupan.note .add {
+	margin : 7px 0px 16px 7px;
+	width : 269px;
+}
+.menupan.note .row {
+	margin-bottom : 10px;
+}
+.menupan.note .row .title {
+	width : 260px;
+	height : 14px;
+	margin-left : 12px;
+}
+#main-body .menupan.note .buttons {
+	float : right;
+}
+#main-body .menupan.note .add .text, #main-body .menupan.note .buttons .text {
+	font : 11px Verdana, Arial;
+	color : #2160EF;
+	text-decoration : underline;
+	cursor : pointer;
+}
+.menupan.note .editarea #Notes {
+	resize : none;
+	width : 255px;
+	height : 80px;
+	margin : -6px 0px 0px 7px;
+}
+.menupan.note[action='bulk'] .editarea #Notes {
+	margin-top : 10px;
+}
+#main-body .menupan.note .title .date {
+	font : Bold 10px Verdana, Arial;
+}
+#main-body .menupan.note .content {
+	font : 10px Verdana, Arial;
+	width : 260px;
+	margin : 12px;
+}
+#main-body .menupan.email .title {
+	font : Bold 12px Verdana, Arial;
+	margin : 13px 0px 4px 13px;
+}
+#main-body .menupan.email .title span {
+	float : none;
+	font : Bold 12px Verdana, Arial;
+}
+#main-body .menupan.email .desc {
+	margin : 5px 0px 5px 13px;
+	font : 12px Verdana, Airal;
+	width : 260px;
+}
+#main-body .menupan.email .desc span{
+	float : none;
+	font : 12px Verdana, Arial;
+}
+#main-body .menupan.email .jobtitle {
+	font : 12px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+}
+#main-body .menupan.email .thisjob {
+	font : 12px Verdana, Arial;
+}
+.menupan.email[action='single'] .jobtitle, .menupan.email[action='bulk'] .thisjob {
+	display : inline;
+}
+.menupan.email[action='single'] .thisjob, .menupan.email[action='bulk'] .jobtitle {
+	display : none;
+}
+.menupan.email .validationerror {
+	display : none;
+}
+.menupan.email .validationerror .bg {
+	background-color : #DD2649;
+	margin : 2px 0px 2px 0px;
+	padding : 13px 15px 13px 15px;
+}
+#main-body .menupan.email .validationerror div {
+	font : Bold 13px Arial;
+	color : #FFFFFF;
+}
+#main-body .menupan.email .validationerror li {
+	font : Bold 13px Arial;
+	color : #FFFFFF;
+	list-style : none;
+	margin-left : -15px;
+}
+.validationerror li .icon {
+	background-image : url("../../../images/members/jobsearch/ListArrow.png");
+	width : 8px;
+	height : 8px;
+	margin : 5px 5px 0px 0px;
+}
+.menupan.email .field {
+	margin : 5px 0px 5px 12px;
+	width : 260px;
+}
+#main-body .menupan.email .field label {
+	font : 12px Verdana, Arial;
+	width : 260px;
+	margin-bottom : 5px;
+}
+.menupan.email .field .mandatory {
+	margin : 5px 5px 0px 0px;
+}
+.menupan.email .field .textbox_control .bg, .menupan.email .field .textbox_control input {
+	width : 220px;
+}
+#main-body .menupan.email .field .help {
+	font : 10px Verdana, Arial;
+	color : #333333;
+	margin-left : 17px;
+}
+#main-body .rightside .titlebar .titles {
+	float : right;
+	margin-top : 7px;
+}
+#main-body .rightside .titlebar .titles .title {
+	color : #336699;
+}
+.rightside .titlebar .titles .title.salary {
+	margin-left : 53px;
+}
+.rightside .titlebar .titles .title.date {
+	margin-left : 70px;
+}
+.rightside .titlebar .titles .icon.flagged {
+	width : 16px;
+	height : 16px;
+	margin : -1px 6px 0px 14px;
+}
+.rightside .results .hits, .rightside .results .criteriahtml, .rightside .results .querystringforga {
+	display : none;
+}
+#main-body .rightside .emptylist span {
+	font : 12px Verdana, Arial;
+	line-height : 18px;
+	margin : 10px 0px 10px 0px;
+}
+.rightside.SearchResult .emptylist, .rightside.BrowseResult .emptylist {
+	margin-left : 45px;
+}
+#main-body .rightside .results .row {
+	font : 11px Verdana, Arial;
+	margin-bottom : 10px;
+}
+.rightside .results .row.empty {
+	display : none;
+}
+.rightside .results .row .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBar.png");
+	width : 696px;
+	height : 3px;
+}
+.rightside .results .row > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/Bg.png");
+	background-repeat : repeat-y;
+	width : 696px;
+	height : 91px;
+}
+.rightside .results .row .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBar.png");
+	width : 696px;
+	height : 3px;
+}
+.rightside .results .row.hover .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBarHover.png");
+}
+.rightside .results .row.hover > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BgHover.png");
+}
+.rightside .results .row.hover .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBarHover.png");
+}
+.rightside .results .row.selected .topbar, .rightside .results .row.selected.hover .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBarSelected.png");
+}
+.rightside .results .row.selected > .bg, .rightside .results .row.selected.hover > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BgSelected.png");
+}
+.rightside .results .row.selected .bottombar, .rightside .results .row.selected.hover .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBarSelected.png");
+}
+.rightside .results .row.featured .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBarFeatured.png");
+}
+.rightside .results .row.featured > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BgFeatured.png");
+}
+.rightside .results .row.featured .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBarFeatured.png");
+}
+.rightside .results .row.featured.hover .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBarFeaturedHover.png");
+}
+.rightside .results .row.featured.hover > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BgFeaturedHover.png");
+}
+.rightside .results .row.featured.hover .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBarFeaturedHover.png");
+}
+.rightside .results .row.featured.selected .topbar, .rightside .results .row.featured.selected.hover .topbar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/TopBarFeaturedSelected.png");
+}
+.rightside .results .row.featured.selected > .bg, .rightside .results .row.featured.selected.hover > .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BgFeaturedSelected.png");
+}
+.rightside .results .row.featured.selected .bottombar, .rightside .results .row.featured.selected.hover .bottombar {
+	background-image : url("../../../images/members/jobsearch/jobaditem/BottomBarFeaturedSelected.png");
+}
+.rightside .results .column.tick .checkbox {
+	margin : 23px 4px 0px 15px;
+}
+.rightside .results .column.tick .icon.new {
+	background-image : url("../../../images/members/jobsearch/jobaditem/IsNew.png");
+	width : 48px;
+	height : 48px;
+	display : none;
+	margin : -6px -48px 0px -3px;
+}
+.rightside .results .column.tick .icon.new.active {
+	display : block;
+}
+.rightside .results .icon.types {
+	background-image : url("../../../images/members/jobsearch/jobaditem/JobTypes.png");
+	width : 58px;
+	height : 51px;
+	margin : 9px 5px 0px 0px;
+}
+.rightside .results .icon.types.PartTime {
+	background-position : 0px -51px;
+}
+.rightside .results .icon.types.Contract {
+	background-position : 0px -102px;
+}
+.rightside .results .icon.types.Temp {
+	background-position : 0px -153px;
+}
+.rightside .results .icon.types.JobShare {
+	background-position : 0px -204px;
+}
+.rightside .results .icon.types.None {
+	background-position : 0px -255px;
+}
+.rightside .results .row .subtypes {
+	position : absolute;
+	margin : 50px 0px 0px -3px;
+}
+body.IE7 .rightside .results .row .subtypes {
+	margin-left : -66px;
+}
+.rightside .results .row .subtypes .subtype {
+	background-image : url("../../../images/members/jobsearch/jobaditem/SubJobTypes.png");
+	width : 18px;
+	height : 12px;
+	display : none;
+}
+.rightside .results .row .subtypes .subtype.active {
+	display : block;
+}
+.rightside .results .row .subtypes .subtype.PartTime {
+	background-position : -18px 0px;
+}
+.rightside .results .row .subtypes .subtype.Contract {
+	background-position : -36px 0px;
+}
+.rightside .results .row .subtypes .subtype.Temp {
+	background-position : -54px 0px;
+}
+.rightside .results .row .subtypes .subtype.JobShare {
+	background-position : -72px 0px;
+}
+#main-body .rightside .results .column.title {
+	width : 290px;
+	margin : 9px 5px 0px 0px;
+	font-weight : Bold;
+}
+#main-body .rightside .results .column.title .title {
+	color : #1155EE;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 290px;
+	line-height : 13px;
+}
+#main-body .rightside .results .column.title .company {
+	color : #00AD6E;
+	font : 11px Verdana, Arial;
+	margin-top : 4px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 290px;
+	line-height : 11px;
+}
+.rightside .results .column.title .action {
+	margin : 4px 0px 0px 1px;
+}
+.rightside .results .row .column.title .action .icon, .menupan.bulk .menuitem .icon, .menupan.folder .menuitem.favourite .icon, .rightside .results .row.hid .hidprompt .icon, .rightside .resultscount .restoreall .icon {
+	background-image : url("../../../images/members/jobsearch/jobaditem/ActionIcons.png");
+}
+.rightside .results .row .column.title .action .icon {
+	width : 41px;
+	height : 30px;
+	margin-left : -1px;
+	cursor : pointer;
+}
+.rightside .results .row .column.title .action .icon.note {
+	width : 63px;
+}
+#main-body .rightside .results .row .column.title .action .icon.note .count {
+	width : 29px;
+	text-align : center;
+	margin : 8px 0px 0px 31px;
+	font : 10.8px Verdana, Arial;
+	color : #A0A0A0;
+}
+.rightside.notloggedin .results .row .column.title .action .icon.note {
+	width : 41px;
+}
+#main-body .rightside.notloggedin .results .row .column.title .action .icon.note .count {
+	display : none;
+}
+.rightside.notloggedin .results .row .column.title .action .icon.folder, .rightside.notloggedin .results .row .column.title .action .icon.folder:hover {
+	background-position : 0px 0px;
+}
+.rightside.notloggedin .results .row .column.title .action .icon.note, .rightside.notloggedin .results .row .column.title .action .icon.note:hover {
+	background-position : -40px 0px;
+}
+.rightside.notloggedin .results .row .column.title .action .icon.hide, .rightside.notloggedin .results .row .column.title .action .icon.hide:hover {
+	background-position : -182px 0px;
+}
+.rightside.notloggedin .results .row .column.title .action .icon.restore, .rightside.notloggedin .results .row .column.title .action .icon.restore:hover {
+	background-position : -222px 0px;
+}
+.rightside .results .row .column.title .action .icon.folder {
+	background-position : 0px -30px;
+}
+.rightside .results .row .column.title .action .icon.note {
+	background-position : -40px -30px;
+}
+.rightside .results .row .column.title .action .icon.email {
+	background-position : -102px -30px;
+}
+.rightside .results .row .column.title .action .icon.download {
+	background-position : -142px -30px;
+}
+.rightside .results .row .column.title .action .icon.hide {
+	background-position : -182px -30px;
+}
+.rightside .results .row .column.title .action .icon.restore, .rightside .results .row.hover .column.title .action .icon.restore {
+	background-position : -222px -30px;
+	display : none;
+}
+.rightside.BlockList .results .row .column.title .action .icon.hide {
+	display : none;
+}
+.rightside.BlockList .results .row.hover .column.title .action .icon.restore {
+	display : block;
+}
+.rightside .results .row .column.title .action .icon.folder:hover, .rightside .results .row .column.title .action .icon.folder.hover {
+	background-position : 0px -60px;
+}
+.rightside .results .row .column.title .action .icon.note:hover, .rightside .results .row .column.title .action .icon.note.hover {
+	background-position : -40px -60px;
+}
+.rightside .results .row .column.title .action .icon.email:hover, .rightside .results .row .column.title .action .icon.email.hover {
+	background-position : -102px -60px;
+}
+.rightside .results .row .column.title .action .icon.download:hover {
+	background-position : -142px -60px;
+}
+.rightside .results .row .column.title .action .icon.hide:hover {
+	background-position : -182px -60px;
+}
+.rightside .results .row .column.title .action .icon.restore:hover {
+	background-position : -222px -60px;
+}
+.rightside .results .column.info {
+	width : 17px;
+	margin : 12px 10px 0px 0px;
+}
+.rightside .results .column.info .icon {
+	background-image : url("../../../images/members/jobsearch/jobaditem/StatusIcons.png");
+	width : 20px;
+	height : 17px;
+}
+.rightside .results .column.info .icon.viewed.active {
+	background-position : 0px 0px;
+}
+.rightside .results .column.info .icon.viewed {
+	background-position : -20px 0px;
+}
+.rightside .results .column.info .icon.applied.active {
+	background-position : 0px -17px;
+}
+.rightside .results .column.info .icon.applied {
+	background-position : -20px -17px;
+}
+#main-body .rightside .results .location {
+	font : 11px Verdana, Arial;
+	color : #333333;
+	margin : 4px 3px 0px 0px;
+	width : 260px;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	overflow : hidden;
+}
+.rightside .results .row .divider {
+	width : 1px;
+	height : 16px;
+	margin : 9px 10px 0px 0px;
+	background-color : #D7D7D7;
+}
+#main-body .rightside .results .salary {
+	color : #333333;
+	margin : 9px 3px 0px 0px;
+	width : 124px;
+}
+#main-body .rightside .results .date {
+	color : #333333;
+	margin : 9px 3px 0px 0px;
+	width : 70px;
+}
+.rightside .results .column.flag {
+	width  : 31px;
+	height : 66px;
+	margin : -1px 0px 5px 20px;
+}
+.rightside .results .column.flag .flag {
+	background-image : url("../../../images/members/jobsearch/jobaditem/FlagIcon.png");
+	width : 31px;
+	height : 49px;
+	cursor : pointer;
+}
+.rightside .results .column.flag .flag:hover {
+	background-position : 0px -49px;
+}
+.rightside .results .column.flag .flag.flagged, .rightside .results .column.flag .flag.flagged:hover {
+	background-position : 0px -98px;
+}
+.rightside .results .row .column.flag .button, .rightside .results .row .column.title .action .divider, .rightside .results .row .column.title .action .icon {
+	display : none;
+}
+.rightside .results .row:hover .column.flag .button, .rightside .results .row.hover .column.title .action .icon, body.mobile .rightside .results .row .column.title .action .icon {
+	display : block;
+}
+#main-body .rightside .results .row .featured {
+	font : Bold 12px Myriad Pro, Verdana, Arial;
+	color : #DBBD47;
+	margin : -15px 0px 0px 590px;
+}
+#main-body .rightside .results .row.hover .featured {
+	margin-top : -33px;
+}
+.rightside .results .row .featured {
+	display : none;
+}
+.rightside .results .row.featured .featured {
+	display : block;
+}
+.rightside .results .row .details.collapsed {
+	display : none;
+}
+.rightside .results .row .details.expanded {
+	display : block;
+}
+.rightside .results .row .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDivider.png");
+	height : 3px;
+	width : 696px;
+	margin : 0px;
+}
+.rightside .results .row:hover .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDividerHover.png");
+}
+.rightside .results .row.selected .details .divider, .rightside .results .row.selected:hover .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDividerSelected.png");
+}
+.rightside .results .row.fatured .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDividerFeatured.png");
+}
+.rightside .results .row.fatured:hover .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDividerFeaturedHover.png");
+}
+.rightside .results .row.fatured.selected .details .divider, .rightside .results .row.fatured.selected:hover .details .divider {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsDividerFeaturedSelected.png");
+}
+.rightside .results .row .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBg.png");
+	background-repeat : repeat-y;
+	width : 696px;
+	padding-top : 5px;
+}
+.rightside .results .row:hover .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBgHover.png");
+}
+.rightside .results .row.selected .details .bg, .rightside .results .row.selected:hover .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBgSelected.png");
+}
+.rightside .results .row.featured .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBgFeatured.png");
+}
+.rightside .results .row.featured:hover .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBgFeaturedHover.png");
+}
+.rightside .results .row.featured.selected .details .bg, .rightside .results .row.featured.selected:hover .details .bg {
+	background-image : url("../../../images/members/jobsearch/jobaditem/DetailsBgFeaturedSelected.png");
+}
+.rightside .results .row.hid .hidprompt {
+	display : block;
+	border : 1px solid #F2F1CC;
+	background-color : #FFFED5;
+	width : 681px;
+	height : 61px;
+	padding : 18px 0px 0px 13px;
+}
+.rightside .results .row .hidprompt, .rightside .results .row.hid .topbar, .rightside .results .row.hid .bg, .rightside .results .row.hid .bottombar {
+	display : none;
+}
+#main-body .rightside .results .row.hid .hidprompt .text {
+	font : 12px Verdana, Arial;
+	line-height : 21px;
+	width : 570px;
+}
+.rightside .results .row.hid .hidprompt .icon {
+	background-position : -213px -40px;
+	width : 14px;
+	height : 13px;
+	margin : 5px 5px 0px 25px;
+}
+#main-body .rightside .results .row.hid .hidprompt .undo {
+	font : 10.8px Verdana, Arial;
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+	margin-top : 3px;
+}
+#main-body .rightside .results .details .title {
+	width : 80px;
+	color : #336699;
+	font : 11px Verdana, Arial;
+	margin-left : 18px;
+}
+#main-body .rightside .results .details .summary ul.bulletpoints {
+	width : 556px;
+	margin : 0px 0px 0px 15px;
+	font : 11px Verdana, Arial;
+}
+.rightside .results .details .summary .bulletpoints li {
+	width : 556px;
+}
+.rightside .results .details .industry .desc {
+	width : 556px;
+}
+#main-body .rightside .results .details .description {
+	width : 636px;
+	overflow : hidden;
+	height : 64px;
+	margin : 5px 0px 0px 18px;
+	font : 11px Verdana, Arial;
+	line-height : 16px;
+}
+.rightside .pg.hide {
+	display : none;
+}
+.rightside .itemsperpage {
+	width : 696px;
+}
+#main-body .rightside .itemsperpage .field, #main-body .rightside .itemsperpage span.right {
+	float : right;
+}
+#ItemsPerPage {
+	width : 50px;
+	margin : -2px 5px 0px -5px;
+}
+#main-body .pagination-container {
+	border : 1px solid #A79C9C;
+	background : none;
+	width : 694px;
+	height : 26px;
+	padding : 0;
+	margin-top : 10px;
+}
+#main-body .pagination-holder, #main-body .pagination-holder .page-holder, #main-body .pagination-holder div.page-numbers {
+	width : auto;
+}
+.pagination-holder {
+	white-space : nowrap;
+}
+.pagination-holder .page-numbers {
+	margin-top : 2px;
+}
+#main-body .pagination-holder .page-numbers .page {
+	font : Bold 15px Arial;
+	color : #1155EE;
+	line-height : 16px;
+	margin : -3px 0px 0px 0px;
+	padding : 5px 6px 5px 6px;
+}
+#main-body .pagination-holder .page-numbers div.current {
+	font : Bold 15px Arial;
+	color : #333333;
+	line-height : 16px;
+	margin : -3px 0px 0px 0px;
+	padding : 5px 6px 5px 6px;
+	display : block;
+	cursor : default;
+	text-decoration : none;
+	border : 1px solid #CEDCFB;
+	background-color : #F1F5FC;
+}
+.pagination-holder div.page.active, .pagination-holder a.page.active {
+	display : block;
+}
+.pagination-holder div.page, .pagination-holder a.page {
+	display : none;
+}
+#main-body .pagination-holder div.first, #main-body .pagination-holder div.previous, #main-body .pagination-holder div.next, #main-body .pagination-holder div.last {
+	font : 12.75px Verdana;
+	color : #C0C0C0;
+	margin-top : 5px;
+	cursor : default;
+}
+#main-body .pagination-holder a.first, #main-body .pagination-holder a.last {
+	margin-top : 5px;
+}
+#main-body .pagination-holder a.previous {
+	margin-top : 4px;
+	padding : 0px 0px 0px 8px;
+}
+#main-body .pagination-holder a.next {
+	margin-top : 4px;
+	padding : 0px 8px 0px 0px;
+}
+#main-body .pagination-holder .previous span, #main-body .pagination-holder .next span {
+	float : none;
+	font : 12.75px Verdana;
+	color : #C0C0C0;
+}
+#main-body .pagination-holder .next, #main-body .pagination-holder .previous {
+	margin-left : 0px;
+	margin-right : 0px;
+}
+#main-body .pagination-holder a.next.active, #main-body .pagination-holder a.previous.active {
+	color : #1155EE;
+}
+#main-body .pagination-holder a.next.active span, #main-body .pagination-holder a.previous.active span {
+	font : 12.75px Verdana;
+	color : #1155EE;
+	text-decoration : underline;
+}
+#main-body .pagination-holder a.last.active, #main-body .pagination-holder a.first.active {
+	color : #779EF5;
+	text-decoration : underline;
+}
+#main-body .pagination-ellipsis {
+	font : 14px Arial;
+	color : #333333;
+	margin-top : 3px;
+	display : none;
+	cursor : default;
+}
+#main-body .pagination-ellipsis.active {
+	display : block;
+}
+#gainemptylist {
+	margin-left : 10px;
+}
+.overlay {
+	display : none;
+}
+.loginprompt-dialog .ui-dialog-titlebar, .renamefolder-dialog .ui-dialog-titlebar, .emptyfolder-dialog .ui-dialog-titlebar, .savesearch-dialog .ui-dialog-titlebar, .emailalert-dialog .ui-dialog-titlebar, .loading-dialog .ui-dialog-titlebar, .tips-dialog .ui-dialog-titlebar, .apierror-dialog .ui-dialog-titlebar  {
+	display : none;
+}
+.ui-dialog.renamefolder-dialog, .ui-dialog.emptyfolder-dialog, .ui-dialog.savesearch-dialog, .ui-dialog.emailalert-dialog, .ui-dialog.loading-dialog, .ui-dialog.tips-dialog, .ui-dialog.apierror-dialog {
+	padding : 0;
+}
+.ui-dialog .ui-dialog-content.overlay.renamefolder, .ui-dialog .ui-dialog-content.overlay.emptyfolder, .ui-dialog .ui-dialog-content.overlay.savesearch, .ui-dialog .ui-dialog-content.overlay.emailalert, .ui-dialog .ui-dialog-content.overlay.loading, .ui-dialog .ui-dialog-content.overlay.tips, .ui-dialog .ui-dialog-content.overlay.apierror {
+	padding : 0;
+	overflow : initial;
+}
+.overlay.renamefolder .titlebar, .overlay.emptyfolder .titlebar, .overlay.savesearch .titlebar, .overlay.emailalert .titlebar, .overlay.tips .titlebar {
+	width : 360px;
+	height : 30px;
+	background-color : #395F85;
+}
+.overlay.renamefolder .titlebar .title, .overlay.emptyfolder .titlebar .title, .overlay.savesearch .titlebar .title, .overlay.emailalert .titlebar .title, .overlay.tips .titlebar .title {
+	font : Bold 14px Arial;
+	color : #FFFFFF;
+	margin : 6px 0px 0px 6px;
+}
+.overlay.renamefolder .field label {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	margin : 12px 0px 0px 11px;
+	width : 340px;
+	float : left;
+}
+.overlay.savesearch .field label, .overlay.emailalert .field label {
+	font : 11.25px Verdana, Arial;
+	color : #4477AA;
+	margin : 12px 0px 0px 11px;
+	width : 340px;
+	float : left;
+}
+.overlay.renamefolder .textbox_field input, .overlay.savesearch .textbox_field input, .overlay.emailalert .textbox_field input {
+	background-color : white;
+	border : 1px solid #8CA5C6;
+	height : 21px;
+	width : 200px;
+	margin : 5px 0px 0px 11px;
+}
+body.IE8 .overlay.renamefolder .textbox_field input, body.IE8 .overlay.savesearch .textbox_field input, body.IE8 .overlay.emailalert .textbox_field input {
+	height : 17px;
+}
+.overlay.renamefolder .mandatory {
+	margin : -25px 0px 0px 225px;
+}
+.overlay.renamefolder .prompt, .overlay.savesearch .prompt, .overlay.emailalert .prompt {
+	margin : 5px 0px 0px 12px;
+}
+.overlay.renamefolder .prompt .icon, .overlay.savesearch .prompt .icon, .overlay.emailalert .prompt .icon {
+	background-image : url("../../../images/common/IconAlert.png");
+	width : 12px;
+	height : 12px;
+	margin-right : 5px;
+}
+.overlay.renamefolder .prompt .text, .overlay.savesearch .prompt .text, .overlay.emailalert .prompt .text {
+	font : 11.25px Verdana, Arial;
+	color : #FF0000;
+}
+.overlay.renamefolder .buttons, .overlay.emptyfolder .buttons, .overlay.savesearch .buttons, .overlay.emailalert .buttons {
+	float : right;
+	margin-right : 20px;
+}
+.overlay.emptyfolder .text > span, .overlay.login .text > span {
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	margin : 5px 0px 5px 10px;
+	text-align : left;
+}
+.overlay.emptyfolder .text > span span {
+	float : none;
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+}
+.overlay.tips .text li {
+	text-align : left;
+}
+.overlay.savesearch > .icon, .overlay.emailalert > .icon {
+	margin : -22px 4px 0px 14px;
+}
+.overlay.savesearch .textbox_field input, .overlay.emailalert .textbox_field input {
+	padding-left : 20px;
+}
+.overlay.savesearch .checkbox_field {
+	margin : 5px 0px 0px 10px;
+}
+.overlay.savesearch .checkbox_field input {
+	margin-top : 0px;
+	float : left;
+}
+.overlay.savesearch .checkbox_field label {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	margin : 0px 0px 0px 5px;
+	width : 200px;
+}
+.overlay.emailalert .text > span {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	margin : 5px 0px 5px 10px;
+	text-align : left;
+}
+.overlay.emailalert .text > span.gray {
+	color : #707070;
+}
+.overlay.login .button.cancel {
+	float : right;
+}
+.overlay.loading .icon {
+	width : 32px;
+	height : 32px;
+	background-image : url("../../../images/universal/loading3.gif");
+	margin : 59px 59px 59px 59px;
+}
+.overlay.apierror .text {
+	margin : 10px 0px 10px 10px;
+}
+.overlay.apierror .link {
+	float : right;
+	width : 110px;
+	margin-right : 15px;
+}
+.overlay.apierror .link span {
+	float : none;
+	color : #1155EE;
+	cursor : pointer;
+	text-decoration : underline;
+}

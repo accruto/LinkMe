@@ -1,0 +1,3 @@
+install_new_content.sql
+install_new_resume_complete_status.sql
+update_resume_complete_status.sql

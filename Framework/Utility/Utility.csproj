@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6860E675-45B5-4558-8EE7-FDD55A8A0A20}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.Framework.Utility</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinkMe.Framework.Utility</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\System.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BinarySerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BuildUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChangedProperty.cs" />
+    <Compile Include="ClrUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\CollectionUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\EmptyEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\ReadOnlyStringList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComInterop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Linq\SplitList.cs" />
+    <Compile Include="DnsQuery.cs" />
+    <Compile Include="EqualityExtensions.cs" />
+    <Compile Include="Expressions\BinaryOperator.cs" />
+    <Compile Include="Expressions\CannotRemoveTermException.cs" />
+    <Compile Include="Expressions\CommutativeExpression.cs" />
+    <Compile Include="Expressions\Expression.cs" />
+    <Compile Include="Expressions\ExpressionException.cs" />
+    <Compile Include="Expressions\IExpression.cs" />
+    <Compile Include="Expressions\InvalidQueryException.cs" />
+    <Compile Include="Expressions\LiteralTerm.cs" />
+    <Compile Include="Expressions\ModificationFlags.cs" />
+    <Compile Include="Expressions\ModifierExpression.cs" />
+    <Compile Include="Expressions\UnaryExpression.cs" />
+    <Compile Include="Expressions\UnaryOperator.cs" />
+    <Compile Include="Files\DelimiterFormatProvider.cs" />
+    <Compile Include="Files\ListFormatter.cs" />
+    <Compile Include="Files\MediaType.cs" />
+    <Compile Include="ParseUtil.cs" />
+    <Compile Include="Preparation\DefaultNewCodeAttribute.cs" />
+    <Compile Include="Preparation\PreparationAttribute.cs" />
+    <Compile Include="Preparation\DefaultNewGuidAttribute.cs" />
+    <Compile Include="Preparation\DefaultNowAttribute.cs" />
+    <Compile Include="Preparation\PreparationExtensions.cs" />
+    <Compile Include="Preparation\DefaultValueAttribute.cs" />
+    <Compile Include="Event\Details.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Event\GenericDetail.cs" />
+    <Compile Include="Event\NetDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Event\ProcessDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Event\SecurityDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Event\ThreadDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\BaseException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\ExceptionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\Exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\SqlException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\SystemException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\UtilityException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\WmiException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\XmlException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlagsExtensions.cs" />
+    <Compile Include="HtmlUtil.cs" />
+    <Compile Include="IHasId.cs" />
+    <Compile Include="IlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRemotable.cs" />
+    <Compile Include="Data\Linq\DataContextExtensions.cs" />
+    <Compile Include="Linq\KeyedCollection.cs" />
+    <Compile Include="Linq\LinqExtensions.cs" />
+    <Compile Include="Data\Linq\DataOptions.cs" />
+    <Compile Include="Linq\PredicateBuilder.cs" />
+    <Compile Include="Linq\ReadOnlyDictionary.cs" />
+    <Compile Include="MiscUtils.cs" />
+    <Compile Include="Net\AssemblyInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Net\ClassInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Net\NetWriteAdaptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Preparation\PrepareHtmlAttribute.cs" />
+    <Compile Include="Preparation\RemoveHtmlAttribute.cs" />
+    <Compile Include="Preparation\TrimAttribute.cs" />
+    <Compile Include="PublishedEvents\EventArgs.cs" />
+    <Compile Include="PublishedEvents\EventBroker.cs" />
+    <Compile Include="PublishedEvents\EventBrokerException.cs" />
+    <Compile Include="PublishedEvents\EventPublisher.cs" />
+    <Compile Include="PublishedEvents\EventSubscriber.cs" />
+    <Compile Include="PublishedEvents\PublishedEvent.cs" />
+    <Compile Include="PublishedEvents\PublishesAttribute.cs" />
+    <Compile Include="PublishedEvents\PublishSubscribeAttribute.cs" />
+    <Compile Include="PublishedEvents\SubscribesToAttribute.cs" />
+    <Compile Include="PublishedEvents\Unity\EventBrokerExtension.cs" />
+    <Compile Include="PublishedEvents\Unity\EventBrokerInfoPolicy.cs" />
+    <Compile Include="PublishedEvents\Unity\EventBrokerReflectionStrategy.cs" />
+    <Compile Include="PublishedEvents\Unity\EventBrokerWireupStrategy.cs" />
+    <Compile Include="PublishedEvents\Unity\IEventBrokerConfiguration.cs" />
+    <Compile Include="PublishedEvents\Unity\IEventBrokerInfoPolicy.cs" />
+    <Compile Include="RegexUtil.cs" />
+    <Compile Include="Results\CountResult.cs" />
+    <Compile Include="Results\DatedResults.cs" />
+    <Compile Include="Results\RangeResult.cs" />
+    <Compile Include="SoundEx.cs" />
+    <Compile Include="Sql\DatabaseHelper.cs" />
+    <Compile Include="Sql\IDbConnectionFactory.cs" />
+    <Compile Include="Sql\SqlConnectionFactory.cs" />
+    <Compile Include="Sql\SqlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StreamUtil.cs" />
+    <Compile Include="TempFileCollection.cs" />
+    <Compile Include="TextUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Unity\Container.cs" />
+    <Compile Include="Unity\ContainerExtensions.cs" />
+    <Compile Include="Unity\ConfigurerConfigurationExtension.cs" />
+    <Compile Include="Unity\IContainerEventSource.cs" />
+    <Compile Include="Unity\IncludeConfigurationExtension.cs" />
+    <Compile Include="Unity\IContainerConfigurer.cs" />
+    <Compile Include="Unity\RegisterTypesConfigurationExtension.cs" />
+    <Compile Include="Unity\ServiceModel\UnityBehaviorExtensionElement.cs" />
+    <Compile Include="Unity\ServiceModel\UnityInstanceProvider.cs" />
+    <Compile Include="Unity\ServiceModel\UnityServiceBehavior.cs" />
+    <Compile Include="Urls\Application.cs" />
+    <Compile Include="Urls\ApplicationUrl.cs" />
+    <Compile Include="Urls\ApplicationUrlState.cs" />
+    <Compile Include="Urls\QueryString.cs" />
+    <Compile Include="Urls\ReadOnlyApplicationUrl.cs" />
+    <Compile Include="Urls\ReadOnlyUrl.cs" />
+    <Compile Include="Urls\Url.cs" />
+    <Compile Include="Urls\UrlExtensions.cs" />
+    <Compile Include="Validation\Changed.cs" />
+    <Compile Include="Validation\Circular.cs" />
+    <Compile Include="Validation\ListLength.cs" />
+    <Compile Include="Validation\DefaultErrorHandler.cs" />
+    <Compile Include="Validation\Different.cs" />
+    <Compile Include="Validation\DuplicateValue.cs" />
+    <Compile Include="Validation\EmailAddress.cs" />
+    <Compile Include="Validation\EnumValue.cs" />
+    <Compile Include="Validation\ErrorCodes.cs" />
+    <Compile Include="Validation\IsNotEmpty.cs" />
+    <Compile Include="Validation\ValidationErrorName.cs" />
+    <Compile Include="Validation\Inconsistent.cs" />
+    <Compile Include="Validation\IsSet.cs" />
+    <Compile Include="Validation\ArrayLength.cs" />
+    <Compile Include="Validation\IErrorHandler.cs" />
+    <Compile Include="Validation\IValidator.cs" />
+    <Compile Include="Validation\Length.cs" />
+    <Compile Include="Validation\NotChanged.cs" />
+    <Compile Include="Validation\NotFound.cs" />
+    <Compile Include="Validation\NumericValue.cs" />
+    <Compile Include="Validation\Regex.cs" />
+    <Compile Include="Validation\RegularExpressions.cs" />
+    <Compile Include="Validation\Required.cs" />
+    <Compile Include="Validation\Same.cs" />
+    <Compile Include="Validation\StringLength.cs" />
+    <Compile Include="Exceptions\UserException.cs" />
+    <Compile Include="Validation\HtmlAttribute.cs" />
+    <Compile Include="Validation\ValidationAttribute.cs" />
+    <Compile Include="Validation\Constants.cs" />
+    <Compile Include="Validation\ValidationError.cs" />
+    <Compile Include="Validation\ValidationErrorsException.cs" />
+    <Compile Include="Validation\ValidationExtensions.cs" />
+    <Compile Include="Wcf\BindingFactory.cs" />
+    <Compile Include="Wcf\IChannelManager.cs" />
+    <Compile Include="Wcf\LocalChannelManager.cs" />
+    <Compile Include="Wcf\MsmqBindingFactory.cs" />
+    <Compile Include="Wcf\TcpBindingFactory.cs" />
+    <Compile Include="Wcf\WcfHttpChannelManager.cs" />
+    <Compile Include="Wcf\WcfMsmqChannelManager.cs" />
+    <Compile Include="Wcf\WcfTcpChannelManager.cs" />
+    <Compile Include="Wcf\XmlSerializerObjectSerializer.cs" />
+    <Compile Include="Wildcard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\Interfaces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\ReadOnlyIStream.cs" />
+    <Compile Include="Win32\SafeNativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\Structs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\UnsafeNativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Wmi\WmiUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\Interfaces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlExtensions.cs" />
+    <Compile Include="Xml\XmlReadAdaptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlWriteAdaptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Exceptions\Exceptions.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

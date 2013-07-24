@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:alter_networker_jobs_column_sizes.sql,update_database_version_table.sql

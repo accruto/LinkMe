@@ -1,0 +1,9 @@
+﻿<xs:schema id="PostAdvertHeaderData" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://jobg8.com/postadvertheaders" targetNamespace="http://jobg8.com/postadvertheaders" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xs:complexType name="Credentials">
+      <xs:sequence>
+         <xs:element name="Username" type="xs:string"/>
+         <xs:element name="Password" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="UserCredentials" type="Credentials"></xs:element>
+</xs:schema>

@@ -1,0 +1,123 @@
+﻿.form.profiles .status-icon
+{
+    background-image : url("../../../images/members/profiles/profiles.png");
+	width : 54px;
+	height : 52px;
+	margin-right : 17px;
+	cursor : pointer;
+    float: left;
+}
+
+.form.profiles .status-icon.available-now {
+	background-position : -951px -425px;
+}
+.form.profiles .status-icon.available-now.hover {
+	background-position : -951px -477px;
+}
+.form.profiles .status-icon.available-now.mouse-down {
+	background-position : -951px -529px;
+}
+.form.profiles .status-icon.available-now.checked {
+	background-position : -951px -581px;
+}
+.form.profiles .status-icon.available-now.checked.hover {
+	background-position : -951px -633px;
+}
+.form.profiles .status-icon.available-now.checked.mouse-down {
+	background-position : -951px -685px;
+}
+
+.form.profiles .status-icon.actively-looking {
+	background-position : -1005px -425px;
+}
+.form.profiles .status-icon.actively-looking.hover {
+	background-position : -1005px -477px;
+}
+.form.profiles .status-icon.actively-looking.mouse-down {
+	background-position : -1005px -529px;
+}
+.form.profiles .status-icon.actively-looking.checked {
+	background-position : -1005px -581px;
+}
+.form.profiles .status-icon.actively-looking.checked.hover {
+	background-position : -1005px -633px;
+}
+.form.profiles .status-icon.actively-looking.checked.mouse-down {
+	background-position : -1005px -685px;
+}
+
+.form.profiles .status-icon.open-to-offers {
+	background-position : -1059px -425px;
+}
+.form.profiles .status-icon.open-to-offers.hover  {
+	background-position : -1059px -477px;
+}
+.form.profiles .status-icon.open-to-offers.mouse-down {
+	background-position : -1059px -529px;
+}
+.form.profiles .status-icon.open-to-offers.checked {
+	background-position : -1059px -581px;
+}
+.form.profiles .status-icon.open-to-offers.checked.hover {
+	background-position : -1059px -633px;
+}
+.form.profiles .status-icon.open-to-offers.checked.mouse-down {
+	background-position : -1059px -685px;
+}
+
+.form.profiles .status-icon.not-looking {
+	background-position : -1113px -425px;
+	margin-right : -8px;
+}
+.form.profiles .status-icon.not-looking.hover  {
+	background-position : -1113px -477px;
+}
+.form.profiles .status-icon.not-looking.mouse-down {
+	background-position : -1113px -529px;
+}
+.form.profiles .status-icon.not-looking.checked {
+	background-position : -1113px -581px;
+}
+.form.profiles .status-icon.not-looking.checked.hover {
+	background-position : -1113px -633px;
+}
+.form.profiles .status-icon.not-looking.checked.mouse-down {
+	background-position : -1113px -685px;
+}
+
+.status-section {
+    padding-bottom: 5px;
+}
+.status-section .status-icon-content {
+    width: 12%;
+    float: left;
+}
+.status-section .status-icon {
+    float: right;
+    margin-right: 20px;
+}
+.status-section .status-icon.available-now {
+    background-image : url("../../../images/members/profiles/available-now.png");
+	width : 51px;
+	height : 45px;
+}
+.status-section .status-icon.actively-looking {
+    background-image : url("../../../images/members/profiles/actively-looking.png");
+	width : 51px;
+	height : 46px;
+}
+.status-section .status-icon.open-to-offers {
+    background-image : url("../../../images/members/profiles/open-to-offers.png");
+	width : 51px;
+	height : 45px;
+}
+.status-section .status-icon.not-looking {
+    background-image : url("../../../images/members/profiles/not-looking.png");
+	width : 51px;
+	height : 45px;
+}
+.status-section .status-need-confirmation {
+    padding-top: 10px;
+}
+
+

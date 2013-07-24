@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinkedIn">
+  <DataContextMoniker Name="/LinkedInDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9efafdb5-e744-4fe0-8a52-e8746cdaca32" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LinkedInDataContext/LinkedInProfileEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5216d82-e513-48b4-88ff-e430c7e4a82a" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27612095-9dba-4aa1-85d3-2a5ac5fd7767" absoluteBounds="3.5, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LinkedInDataContext/LinkedInProfileIndustryEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bf74d97-0400-4842-b3fe-2521dd8a52ec" absoluteBounds="3.515, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.09699625651042); (3.5 : 2.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinkedInDataContext/LinkedInProfileEntity/LinkedInProfile_LinkedInProfileIndustry" />
+      <nodes>
+        <classShapeMoniker Id="9efafdb5-e744-4fe0-8a52-e8746cdaca32" />
+        <classShapeMoniker Id="27612095-9dba-4aa1-85d3-2a5ac5fd7767" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="551478bb-ecfd-4d72-bc46-e1cebd447ffd" absoluteBounds="5.25, 4, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LinkedInDataContext/LocationReferenceEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e099fe00-616b-4fb0-8298-e15c660007fb" absoluteBounds="5.265, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.40625 : 4); (6.40625 : 3.05214680989583); (2.75 : 3.05214680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinkedInDataContext/LocationReferenceEntity/LocationReference_LinkedInProfile" />
+      <nodes>
+        <classShapeMoniker Id="551478bb-ecfd-4d72-bc46-e1cebd447ffd" />
+        <classShapeMoniker Id="9efafdb5-e744-4fe0-8a52-e8746cdaca32" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

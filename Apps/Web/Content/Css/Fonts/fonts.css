@@ -1,0 +1,13 @@
+﻿/* CSS must be in the same directory as fonts - IE6 can't find them using relative paths */
+
+/* Vegur is like Myriad Pro, but OSS */
+@font-face {
+	font-family: 'Vegur';
+	src: url('vegur-b_0.602-webfont.eot'); /* IE9 Compat Modes */
+	src: local('☺'), url('vegur-b_0.602-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('vegur-b_0.602-webfont.woff') format('woff'), /* Modern Browsers */
+		url('vegur-b_0.602-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('vegur-b_0.602-webfont.svg#webfont1ksm6qlY') format('svg'); /* Legacy iOS */
+	font-weight: bold;
+	font-style: normal;
+}

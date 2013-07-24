@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.625" name="Applicants">
+  <DataContextMoniker Name="/ContendersDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b789066b-70cb-47ba-b2f6-299f0d1454e4" absoluteBounds="5.875, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ContendersDataContext/CandidateListEntryEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f8010f2-f090-41d0-ac8d-a7616b2b5d4d" absoluteBounds="5.89, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="425c35c1-0d6a-4363-bc19-bd3a6b64e750" absoluteBounds="1.5, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ContendersDataContext/CandidateListEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dddad6f-565f-4acb-b0fb-050d86dc925b" absoluteBounds="1.5150000000000001, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35e39f4a-54b2-46b5-93e0-76c3dc5925eb" absoluteBounds="5.875, 4.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/ContendersDataContext/JobApplicationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c247704d-ee75-4a6b-b477-530c6eb9ed56" absoluteBounds="5.89, 5.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="737fb4b6-d2a0-44d9-8537-b7f09e809d3d" absoluteBounds="2.125, 4.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ContendersDataContext/CandidateNoteEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a410a3f-4819-4a56-b00c-fe90c30f3b6c" absoluteBounds="2.14, 5.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 2.57774983723958); (5.875 : 2.57774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ContendersDataContext/CandidateListEntity/CandidateListEntity_CandidateListEntryEntity" />
+      <nodes>
+        <classShapeMoniker Id="425c35c1-0d6a-4363-bc19-bd3a6b64e750" />
+        <classShapeMoniker Id="b789066b-70cb-47ba-b2f6-299f0d1454e4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.875 : 4.625); (6.875 : 3.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ContendersDataContext/JobApplicationEntity/JobApplicationEntity_CandidateListEntryEntity" />
+      <nodes>
+        <classShapeMoniker Id="35e39f4a-54b2-46b5-93e0-76c3dc5925eb" />
+        <classShapeMoniker Id="b789066b-70cb-47ba-b2f6-299f0d1454e4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0c0069b9-3c54-41ec-aeee-a44548b56b8f" absoluteBounds="2.5, 7.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ContendersDataContext/ExternalApplicationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77d4782f-a9ae-42e3-b334-fea8b078ecd5" absoluteBounds="2.515, 8.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

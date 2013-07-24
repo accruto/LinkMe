@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="EmployerEmail">
+      <VerticalContentItem VerticalId="1ef359aa-a3af-42bf-a3a6-3d4a4d8691c7">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <p>Kind regards,</p>
+        <p>Business Spectator.</p>
+        <p><img src="<%=GetUrl(false, "~/themes/communities/businessspectator/img/email_image.png")%>" alt="Executive Appointments" /></p>
+        <p><img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="provided by LinkMe" /></p>
+      </div>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+    <MasterTemplateContentItem Name="MemberEmail">
+      <VerticalContentItem VerticalId="1ef359aa-a3af-42bf-a3a6-3d4a4d8691c7">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <p>Kind regards,</p>
+        <p>Business Spectator.</p>
+        <p><img src="<%=GetUrl(false, "~/themes/communities/businessspectator/img/email_image.png")%>" alt="Executive Appointments" /></p>
+        <p>
+          Provided by
+          <img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="provided by LinkMe" />
+        </p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="NewEmployerWelcomeEmail" Master="EmployerEmail">
+      <VerticalContentItem VerticalId="1ef359aa-a3af-42bf-a3a6-3d4a4d8691c7">
+        <Subject><![CDATA[Executive Appointments login details for <%=To.FullName%>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p><strong>Welcome to Business Spectator Executive Appointments!</strong></p>
+<p>
+  We've partnered with LinkMe.com.au to provide an integrated recruitment advertising solution, covering the best of print display 
+  advertising(right next to great editorial content) with the functionality of an on-line jobs network and the ability to find 
+  candidates right away.
+</p>
+<p>
+  Your login ID: <%=LoginId%><br />
+<%if (Password != "") {%>
+  Your password: <%=Password%></p>
+<%} else {%>
+</p>
+<%}%>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/accounts/changepassword")%>">Log in</a> now to:
+  <ul>
+    <li>Change your password </li>
+    <li>Publish your job ad(s)</li>
+    <li>Edit your job ads</li>
+    <li>Search for candidates</li>
+    <li>Manage applications</li>
+  </ul>
+</p>
+<p>
+  <strong>Key Executive Appointment Functions:</strong>
+  <ul>
+    <li>Job ads published as display ads on www.businessspectator.com.au</li>
+    <li>Job ads also published on Executive Appointments and across the LinkMe network of job boards</li>
+    <li>Powerful candidate search - quickly and easily identify relevant candidates</li>
+    <li>Email alerts - get notified when candidates join</li>
+    <li>Find active and passive candidates - candidates you might not otherwise have access to</li>
+  </ul>
+</p>
+<p>
+  If you would like more information,
+  visit our <a href="<%=TinyUrls.Register(false, "~/employers/resources/")%>">resources</a> section.
+</p>
+<p>
+  For help with any aspect of the process of creating, posting and editing your ad, searching for and contacting 
+  candidates, and managing applications, please contact Business Spectator on 03 8624 3007 or LinkMe on 03 8508 9111
+</p>
+<p>
+  Once again, welcome to Business Spectator Executive Appointments. Any problems or questions, please give us a call. 
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ActivationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="1ef359aa-a3af-42bf-a3a6-3d4a4d8691c7">
+        <Subject>Activate your Executive Appointments account</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  Welcome to Business Spectator's Executive Appointments Career Network. 
+</p>
+<p>
+  This is a service provided for Business Spectator readers by our career partner LinkMe.com.au. 
+  Your Career Network password and account are separate from your Business Spectator login and password.
+</p>
+<p>
+  To activate your account, please click on the link below.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    Click here to activate your account
+  </a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="SendJobToFriendEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="1ef359aa-a3af-42bf-a3a6-3d4a4d8691c7">
+        <Subject><![CDATA[<%=JobAd.Title%>: An interesting job opportunity for you to look at]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi <%=ToDisplayName%></p>
+<p>
+  <%=FromDisplayName%> has found an interesting job 
+  opportunity on Business Spectator and thought that you should see it.
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <%=FromDisplayName%>'s personal message:
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  View the 
+  <a href="<%=TinyUrls.Register(false, "~/jobs/" + JobAd.Id)%>"><%=JobAd.Title%></a>
+  job opportunity on the Business Spectator executive appointments website.
+</p>
+<p>
+  While you're there, read the latest business news and analysis, including Australia's best commentary team of Alan Kohler, 
+  Robert Gottliebsen and Stephen Bartholomeusz, updated all day every day, at www.BusinessSpectator.com.au. 
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

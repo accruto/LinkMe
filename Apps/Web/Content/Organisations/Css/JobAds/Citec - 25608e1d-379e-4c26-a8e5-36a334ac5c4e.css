@@ -1,0 +1,85 @@
+#JobAd #JobDescription #Ad {
+	width: 460px;
+	border: 1px solid #A68;
+	padding-left: 100px;
+	background: url(citec_images/citec_sidebar.png) top left no-repeat;
+}
+
+#JobAd #JobDescription #JobAdHeading {
+	background: none;
+	padding-top: 30px;
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	background: url(citec_images/citec_footer.png) bottom left no-repeat;
+	padding-bottom: 102px;
+}
+
+#JobAd #JobDescription #Ad #LogoFooter {
+	position: absolute;
+	background: url(citec_images/citec_footer_decor.png) bottom left no-repeat;
+	padding: 0;
+	width: 100px;
+	height: 201px;
+	margin-left: -100px;
+	margin-top: -201px;
+}
+
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad .details *,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+}
+
+#JobAd #JobDescription #Ad label {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad h1,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol,
+#JobAd #JobDescription #Ad div {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#JobAd #JobDescription #JobAdHeading h1 {
+	font-size: 20pt;
+	color: #035;
+	margin-bottom: 20pt;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-right: 0;
+}
+
+#JobAd #JobDescription #JobAdHeading p {
+	font-size: 14pt;
+	padding-right: 0;
+}
+
+#JobAd #JobDescription #JobAdHeading .bulletpoints {
+	padding-right: 0;
+}
+
+#JobAd .bulletpoints li {
+	font-size: 9pt;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-left: -9px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	padding-left: 0;
+}
+
+#JobAd #JobDescription #Ad .details {
+	width: 400px !important;
+	position: relative;
+	left: 27px;
+	margin-bottom: 15px;
+}

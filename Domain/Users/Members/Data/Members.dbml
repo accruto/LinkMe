@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="MembersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Users.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CommunityMember" Member="CommunityMemberEntities" AccessModifier="Internal">
+    <Type Name="CommunityMemberEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="primaryCommunityId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CommunityMemberEntity_CommunityMemberDataEntity" Member="CommunityMemberDataEntities" ThisKey="id" OtherKey="memberId" Type="CommunityMemberDataEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="AddressEntities" AccessModifier="Internal">
+    <Type Name="AddressEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="line1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="line2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="locationReferenceId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="AddressEntity_MemberEntity" Member="MemberEntities" ThisKey="id" OtherKey="addressId" Type="MemberEntity" />
+      <Association Name="LocationReferenceEntity_AddressEntity" Member="LocationReferenceEntity" ThisKey="locationReferenceId" OtherKey="id" Type="LocationReferenceEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationReference" Member="LocationReferenceEntities" AccessModifier="Internal">
+    <Type Name="LocationReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="unstructuredLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="namedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_AddressEntity" Member="AddressEntities" ThisKey="id" OtherKey="locationReferenceId" Type="AddressEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunityMemberData" Member="CommunityMemberDataEntities" AccessModifier="Internal">
+    <Type Name="CommunityMemberDataEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="memberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="value" Type="System.Object" DbType="Variant" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CommunityMemberEntity_CommunityMemberDataEntity" Member="CommunityMemberEntity" ThisKey="memberId" OtherKey="id" Type="CommunityMemberEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegisteredUser" Member="RegisteredUserEntities" AccessModifier="Internal">
+    <Type Name="RegisteredUserEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="loginId" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="flags" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="passwordHash" Type="System.String" DbType="Char(24)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emailAddressVerified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddressVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RegisteredUserEntity_MemberEntity" Member="MemberEntity" ThisKey="id" OtherKey="id" Type="MemberEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="MemberEntities" AccessModifier="Internal">
+    <Type Name="MemberEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="dateOfBirth" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerAccess" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstDegreeAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="secondDegreeAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="publicAccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="enteredReferralSourceId" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="addressId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="profilePhotoId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ethnicFlags" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="disabilityFlags" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dateOfBirthParts" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="primaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="primaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tertiaryPhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tertiaryPhoneNumberType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastEditedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="AddressEntity_MemberEntity" Member="AddressEntity" ThisKey="addressId" OtherKey="id" Type="AddressEntity" IsForeignKey="true" />
+      <Association Name="RegisteredUserEntity_MemberEntity" Member="RegisteredUserEntity" ThisKey="id" OtherKey="id" Type="RegisteredUserEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

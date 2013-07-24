@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Files">
+  <DataContextMoniker Name="/FilesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d1233ac9-3306-487d-9a50-31a570924414" absoluteBounds="1.25, 2.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/FilesDataContext/FileDataEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="229ba2bb-539c-4f31-b8eb-d3fcf5bb1f8e" absoluteBounds="1.2650000000000001, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffc77c39-7cab-4655-9e4d-c6f25fd8d295" absoluteBounds="4.75, 2.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/FilesDataContext/FileReferenceEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f590e7fd-e883-4870-9aa2-3a5683c08179" absoluteBounds="4.765, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 3.26044840494792); (4.75 : 3.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FilesDataContext/FileDataEntity/FileDataEntity_FileReferenceEntity" />
+      <nodes>
+        <classShapeMoniker Id="d1233ac9-3306-487d-9a50-31a570924414" />
+        <classShapeMoniker Id="ffc77c39-7cab-4655-9e4d-c6f25fd8d295" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

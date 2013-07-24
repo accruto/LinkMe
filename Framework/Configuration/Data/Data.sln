@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{B1AC1FD2-5FDD-4604-8997-8BD033AD39E1}") = "Assemble", "Assemble\Assemble.paproj", "{22D68EB2-9345-4B4C-B175-5C56244352DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F8AB413F-DF7B-4796-BDD5-45212B34859F} = {F8AB413F-DF7B-4796-BDD5-45212B34859F}
+	EndProjectSection
+EndProject
+Project("{399BE3CE-48CC-48D7-AFC5-D613D8348D63}") = "Data", "Data.pdproj", "{F8AB413F-DF7B-4796-BDD5-45212B34859F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D68EB2-9345-4B4C-B175-5C56244352DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D68EB2-9345-4B4C-B175-5C56244352DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D68EB2-9345-4B4C-B175-5C56244352DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D68EB2-9345-4B4C-B175-5C56244352DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8AB413F-DF7B-4796-BDD5-45212B34859F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8AB413F-DF7B-4796-BDD5-45212B34859F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8AB413F-DF7B-4796-BDD5-45212B34859F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8AB413F-DF7B-4796-BDD5-45212B34859F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

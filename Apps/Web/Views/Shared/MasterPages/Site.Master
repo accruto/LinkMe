@@ -1,0 +1,60 @@
+﻿<%@ Import Namespace="LinkMe.Apps.Asp.Content" %>
+<%@ Import Namespace="LinkMe.Apps.Asp.Mvc.Html"%>
+<%@ Master Language="C#" CodeBehind="Site.Master.cs" Inherits="LinkMe.Web.Views.Shared.MasterPages.Site" %>
+<%@ Import Namespace="LinkMe.Web.Content" %>
+<%@ Import Namespace="LinkMe.Web.Html" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head runat="server">
+	
+	    <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+	        <% Page.Title = "Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia"; %>
+	    </asp:ContentPlaceHolder>
+	
+	    <%= Html.Base(GetClientUrl()) %>
+
+		<!-- Meta tags -->
+		
+	    <%= Html.MetaTag("verify-v1", "+67QvDKdYdfDw5mZk7OMxVNUnrLBQfDr1RKKs/I3/FI=") %>
+	    <%= Html.MetaTag("LMFP_OK", "LMFP_OK") %>
+		<asp:ContentPlaceHolder ID="MetaTags" runat="server" />
+		
+        <%= Html.CanonicalLink(GetClientUrl().GetCanonicalUrl())%>
+		<%= Html.Favicon(Head.FaviconReference)%>
+		<%= Html.RssFeeds(Head.RssFeedReferences)%>
+		
+		<!-- Stylesheets -->
+		
+        <mvc:DisplayStyleSheets runat="server" />
+        
+        <mvc:RegisterStyleSheets runat="server">
+            <%= Html.RenderStyles(StyleBundles.Site1)%>
+            <%= Html.RenderStyles(StyleBundles.Site2)%>
+        </mvc:RegisterStyleSheets>
+
+        <% Html.RenderPartial("StyleSheets"); %>
+        
+        <asp:ContentPlaceHolder id="StyleSheet" runat="server" />
+        
+        <!-- Java Scripts -->
+        
+        <script type="text/javascript" src="<%= GetJavascriptUrl() %>"></script>
+        <mvc:DisplayJavaScripts runat="server" />
+        <asp:ContentPlaceHolder id="JavaScript" runat="server" />
+
+        <% Html.RenderPartial("GoogleAnalyticsTracker"); %>
+	</head>
+	<body onload="Page_ValidationActive = false;" class="<%= (Request.UserAgent != null && (Request.UserAgent.IndexOf("iPad") > 0 || Request.UserAgent.IndexOf("iPhone") > 0 || Request.UserAgent.IndexOf("Android") > 0)) ? "mobile" : "" %>">
+	
+        <asp:ContentPlaceHolder ID="Body" runat="server" />
+
+        <input type="text" id="txtPageIdentifier" value="<%= PageIdentifier %>" style="display: none" />
+
+        <asp:ContentPlaceHolder id="BodyTrackers" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderLogo" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderRight" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderTitle" runat="server"></asp:ContentPlaceHolder>
+	
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jobg8.com/messages" elementFormDefault="qualified" targetNamespace="http://jobg8.com/messages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd1" namespace="http://jobg8.com/" />
+  <xs:element xmlns:q1="http://jobg8.com/" name="PostAdvert" type="q1:PostAdvertRequest" />
+  <xs:element name="PostAdvertResponse" type="tns:Response" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Success" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q2="http://jobg8.com/" name="AmendAdvert" type="q2:AmendAdvertRequest" />
+  <xs:element name="AmendAdvertResponse" type="tns:Response" />
+  <xs:element xmlns:q3="http://jobg8.com/" name="DeleteAdvert" type="q3:DeleteAdvertRequest" />
+  <xs:element name="DeleteAdvertResponse" type="tns:Response" />
+</xs:schema>

@@ -1,0 +1,94 @@
+﻿.join_section .with-labels-on-left label {
+    width: 125px;
+}
+.join_section .with-labels-on-left .control {
+    left: 140px;
+    margin-right: 140px;
+}
+.join-industry-section_control #IndustryIds {
+	width : 160px;
+}
+.join_section .with-labels-on-left .join-role-section_control .control {
+	left : 0px;
+	margin-right : 0px;
+}
+.join_section .with-labels-on-left .textbox {
+    width: 156px;
+}
+.join_section .with-labels-on-left .password_textbox {
+    width: 116px;
+}
+
+.join_section .horizontal_radiobuttons_control label {
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.join_section .industries_listbox {
+    width: 299px;
+}
+
+.join_section .join_button {
+    float: right;
+}
+
+.login_section .with-labels-on-left label {
+    width: 65px;
+}
+.login_section .with-labels-on-left .control {
+    left: 80px;
+    margin-right: 80px;
+}
+.login_section .with-labels-on-left .textbox {
+    width: 216px;
+}
+.login_section .checkbox_field label,
+.login_section .link_field {
+    font-size: 85%;
+}
+.login_section fieldset .link_field {
+    padding-top: 6px;
+    *padding-top: 4px;
+}
+.login_section .with-labels-on-left .button_field {
+    position: relative;
+}
+
+    .login_section .with-labels-on-left .button_field .control {
+        margin:0; padding:0;
+        width:auto;
+        position:absolute;
+        left:auto;
+        right:0;
+        bottom: 10px;
+        _bottom: 0;
+    }
+
+.purchase_section .button_control .purchase_large_button {
+    /* center the button */
+    margin: 15px auto;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.login_section .linkedin {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 0;
+}
+
+.login_section .question,
+.join_section .question {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.join_section .question {
+    margin-left: 10px;
+}
+
+.purchase_section p.last {
+    margin-bottom: 0;
+}

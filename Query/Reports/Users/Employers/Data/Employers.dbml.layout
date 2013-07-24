@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Employers">
+  <DataContextMoniker Name="/EmployersDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f0b35cee-24bc-406e-925a-fa0425d61e63" absoluteBounds="0.875, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EmployersDataContext/MemberViewingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d8cc02f-7ec6-4a23-8099-1dcd442552b3" absoluteBounds="0.88999999999999968, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ecbb663-8c9b-485c-82b4-2287c78d46b3" absoluteBounds="4, 2.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EmployersDataContext/RegisteredUserEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5601392a-74f7-436a-b0c4-c89088680846" absoluteBounds="4.015, 3.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="574b92da-2abe-4237-8c98-09eab0f527a6" absoluteBounds="0.875, 3.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EmployersDataContext/EmployerEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce21eb89-0587-4dce-b331-a07d8e6a04a4" absoluteBounds="0.88999999999999968, 3.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 4.23159912109375); (2.875 : 4.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EmployersDataContext/RegisteredUserEntity/RegisteredUser_Employer" />
+      <nodes>
+        <classShapeMoniker Id="8ecbb663-8c9b-485c-82b4-2287c78d46b3" />
+        <classShapeMoniker Id="574b92da-2abe-4237-8c98-09eab0f527a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3475595c-055d-47b8-bf05-f2da9b24e1c9" absoluteBounds="6.5, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EmployersDataContext/MemberContactEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e448f840-2d3a-4ba8-b4f2-29e4781d18b7" absoluteBounds="6.515, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3b88bdd-e608-419a-8da1-a207eeb7b49b" absoluteBounds="6.25, 4.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/EmployersDataContext/MemberViewingsByMemberEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8376256a-3921-4bf5-8c36-c06b98112447" absoluteBounds="6.265, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64ed9e5e-0849-46b5-9064-9b3426d6c8cf" absoluteBounds="8.625, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EmployersDataContext/MemberContactsByMemberEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00a3a197-ac0e-47fb-94b1-38e4f73926bd" absoluteBounds="8.64, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99546fe6-65dd-489c-b081-c05438fc14f2" absoluteBounds="6.375, 6.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EmployersDataContext/ResumeSearchResultEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90aee583-760f-45ae-a7f6-e353148031fc" absoluteBounds="6.39, 6.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,6 @@
+@import url('cobrandipa.css');
+
+#JobAd H1
+{
+	background: url('../../../images/jobad-templates/ipa/optus.png') no-repeat left top;
+}

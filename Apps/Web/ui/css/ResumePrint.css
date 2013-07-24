@@ -1,0 +1,13 @@
+#top-details
+{
+	margin-left: 0;
+}
+
+.resume_noprint
+{
+	display: none;
+}
+
+.resume_section {
+	page-break-inside: avoid;	/* This rule doesn't work in many browsers, unfortunately. */
+}

@@ -1,0 +1,116 @@
+/* div#JobAd is the outer wrapper. This applies to all nested DIVs including
+   #JobDescription and the subsequent controls and links (unless overrideen) */
+#JobAd {
+	padding-bottom: 1em;
+} 
+
+/* div#JobDescription is where the job ad really begins
+   - it contains #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #f63 url('people_industries_images/button_healthcare.gif') no-repeat left top;
+	border: 2px solid #f63;
+	color: #000;
+	margin: 0;
+	padding: 0 0 0 190px;
+	width: 480px;
+} 
+
+/* Ad section defaults */
+#JobDescription #Ad {
+	background-color: #fff;
+}
+
+#JobDescription #Ad div,
+#JobDescription #Ad p,
+#JobDescription #Ad ul,
+#JobDescription #Ad table {
+	margin-left: 36px;
+	margin-right: 36px;
+}
+#JobDescription #Ad div {
+	margin-top: 10px;
+}
+
+#JobDescription #Ad p {
+	margin-bottom: 0; /* counteracts LinkMe text-links-headings.css */
+}
+#JobDescription #Ad br {
+	display: none;
+}
+#JobDescription #Ad div br,
+#JobDescription #Ad p br {
+	display: block;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	display: none;
+}
+
+/* Reset areas where client cannot inject html */
+#JobDescription #Ad #JobAdHeading h1,
+#JobDescription #Ad #JobAdHeading p, 
+#JobDescription #Ad #JobAdHeading table,
+#JobDescription #Ad #JobAdHeading th, 
+#JobDescription #Ad #JobAdHeading td, 
+#JobDescription #Ad #JobAdHeading ul, 
+#JobDescription #Ad #JobAdHeading li, 
+#JobDescription #Ad #JobAdHeading label {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+/* #JobAdHeading section */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	text-align: left;
+	margin-left: 0; /* counteracts #JobDescription #Ad div's margin-left: 36px */
+	margin-top: 0; /* stops #JobDesc's bg from showing through */
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	background: transparent url('people_industries_images/bullet.jpg') no-repeat 5px 8px;
+	font-size: 200%;
+	font-weight: bolder;
+	line-height: 1.3em;
+	padding: 5px 0 5px 36px;  
+}
+
+/* Acts as sub-heading before table in the #JobAdHeading section */
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	display: block; 
+	font-weight: bold; 
+	margin-bottom: 1em;
+	margin-left: 3px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table {
+	margin-bottom: 1em;
+	width: 250px !important;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table label {
+	margin: 0; /* counteract margins from forms.css (line 40) */
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading ul li {
+	list-style-type: disc;
+	margin-left: 13px;	
+}
+
+#JobAd #JobDescription #Ad center {
+	margin-bottom: 1em;
+}
+
+/* AdContactDetails just before the #LogoFooter */
+#JobAd #JobDescription #Ad #AdContactDetails {
+	padding-bottom: 10px; /* instead of margin, stops #JobDesc's bg from showing through */
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	display: none;
+}

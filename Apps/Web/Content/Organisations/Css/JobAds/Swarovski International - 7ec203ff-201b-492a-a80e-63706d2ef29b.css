@@ -1,0 +1,126 @@
+/* div#JobAd is the outer wrapper. This applies to all nested DIVs including
+   #JobDescription and the subsequent controls and links (unless overrideen) */
+#JobAd {
+	color: #4D4D4D;
+	padding-bottom: 2em;
+} 
+
+/* div#JobDescription is where the job ad really begins
+   - it contains #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	border: 1px solid #4D4D4D; 
+	margin: 0px;
+	background: transparent url('swarovski_images/swarovski_bg_lite.jpg') no-repeat top right;
+	width: 458px;
+} 
+
+/* Ad section defaults */
+#JobDescription #Ad {
+/*	background-color: #fff; */
+}
+
+#JobDescription #Ad div,
+#JobDescription #Ad p,
+#JobDescription #Ad ul,
+#JobDescription #Ad table {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#JobDescription #Ad div {
+/*	margin-top: 10px;  */
+}
+
+#JobDescription #Ad p {
+	margin-bottom: 0; /* counteracts LinkMe text-links-headings.css */
+	padding-bottom: 5px;
+}
+#JobDescription #Ad br {
+	display: none;
+}
+#JobDescription #Ad div br,
+#JobDescription #Ad p br {
+	display: block;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+/*	color: #fff; */
+	background: transparent url('swarovski_images/swarovski_logo_sm.png') no-repeat top left;
+	margin-top: 60px; 
+	margin-bottom: 35px; 
+	margin-right: 0px;
+	height: 275px; 
+}
+
+/* Reset areas where client cannot inject html */
+#JobDescription #Ad #JobAdHeading h1,
+#JobDescription #Ad #JobAdHeading p, 
+#JobDescription #Ad #JobAdHeading table,
+#JobDescription #Ad #JobAdHeading th, 
+#JobDescription #Ad #JobAdHeading td, 
+#JobDescription #Ad #JobAdHeading ul, 
+#JobDescription #Ad #JobAdHeading li, 
+#JobDescription #Ad #JobAdHeading label {
+	color: #4D4D4D;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+/* #JobAdHeading section */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	text-align: left;
+	margin-left: 0; /* counteracts #JobDescription #Ad div's margin-left*/
+	margin-right: 0;
+	margin-top: 0; /* stops #JobDesc's bg from showing through */
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	font-size: 200%;
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-right: 5px;
+	text-align: center; 
+}
+
+/* Acts as sub-heading before table in the #JobAdHeading section */
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	display: block; 
+	font-weight: bold; 
+	margin-bottom: 1em;
+	margin-left: 3px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table {
+	margin-bottom: 1em;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table label {
+	margin: 0; /* counteract margins from forms.css (line 40) */
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading ul li {
+	list-style-type: disc;
+	margin-left: 13px;	
+}
+
+#JobAd #JobDescription #Ad center {
+	margin-bottom: 1em;
+}
+
+/* AdContactDetails just before the #LogoFooter */
+#JobAd #JobDescription #Ad #AdContactDetails {
+	padding-bottom: 10px; /* instead of margin, stops #JobDesc's bg from showing through */
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: transparent url('swarovski_images/swarovski_name.png') no-repeat right bottom;
+	height: 37px;
+	margin: 5px;
+	margin-right: 15px;
+}

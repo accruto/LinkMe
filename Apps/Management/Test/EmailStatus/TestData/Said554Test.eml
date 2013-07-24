@@ -1,0 +1,302 @@
+Received: by ns1.linkme.net.au (Postfix)
+	id 97C0962CD4; Fri, 15 Aug 2008 17:25:11 +1000 (EST)
+Date: Fri, 15 Aug 2008 17:25:11 +1000 (EST)
+From: MAILER-DAEMON@ns1.linkme.net.au (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: emailme@linkme.net.au
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="117AD62CD2.1218785111/ns1.linkme.net.au"
+Content-Transfer-Encoding: 8bit
+Message-Id: <20080815072511.97C0962CD4@ns1.linkme.net.au>
+
+This is a MIME-encapsulated message.
+
+--117AD62CD2.1218785111/ns1.linkme.net.au
+Content-Description: Notification
+Content-Type: text/plain
+
+This is the Postfix program at host ns1.linkme.net.au.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to <postmaster>
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+			The Postfix program
+
+<tassie31@dodo.com.au>: host postoffice02.mail-hub.dodo.com.au[202.136.40.235]
+    said: 550 Unknown user (in reply to RCPT TO command)
+
+--117AD62CD2.1218785111/ns1.linkme.net.au
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; ns1.linkme.net.au
+X-Postfix-Queue-ID: 117AD62CD2
+X-Postfix-Sender: rfc822; emailme@linkme.net.au
+Arrival-Date: Fri, 15 Aug 2008 17:25:09 +1000 (EST)
+
+Final-Recipient: rfc822; tassie31@dodo.com.au
+Action: failed
+Status: 5.0.0
+Diagnostic-Code: X-Postfix; host
+    postoffice02.mail-hub.dodo.com.au[202.136.40.235] said: 554 Unknown user
+    (in reply to RCPT TO command)
+
+--117AD62CD2.1218785111/ns1.linkme.net.au
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+
+Received: by ns1.linkme.net.au (Postfix, from userid 1056)
+	id 117AD62CD2; Fri, 15 Aug 2008 17:25:09 +1000 (EST)
+To: tassie31@dodo.com.au
+Subject: LinkMe Newsletter - Tired of doing things the hard way?
+From: LinkMe <EmailMe@linkme.net.au>
+Reply-To: LinkMe <EmailMe@linkme.net.au>
+Message-ID: <1218785109TheSystem@>
+X-Mailer: PHP v5.2.5
+X-emailme: WAgBDBgMDAMJFV5VCkQDCQUDUgIOQw1YX1VZEFlSAAsbBApVVlIGVVBUAVtTUgZWAwBQBl4ABwcAAgAGW1VQCAkQCEs=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="3527a4c7a9866cbfef79097e87fbbffe"
+Date: Fri, 15 Aug 2008 17:25:09 +1000 (EST)
+
+
+--3527a4c7a9866cbfef79097e87fbbffe
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>LinkMe Newsletter - Tired of doing things the hard way?</title>
+<style type="text/css">
+<!--
+.red {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+</head>
+<body>
+  <center>If you can't read this click <a href='http://emailme.linkme.net.au/view.php?tag=WAgBDBgMDAMJFV5VCkQDCQUDUgIOQw1YX1VZEFlSAAsbBApVVlIGVVBUAVtTUgZWAwBQBl4ABwcAAgAGW1VQCAkQCEs='>here</a> or cut and paste the url.</center>
+<div align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%;">
+    <table width="620" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="177" align="left" valign="top" background="http://marketing.linkme.com.au/20080805/sidebar_bg.gif"><br />
+          <div align="center"><a href="http://emailme.linkme.net.au/url.php?url=02f2cfba9f89d4b71a7b624703138738069c570fb2e9c47f6033fa16efbe84b90"><img src="http://marketing.linkme.com.au/20080808/100k_or_ipod_touch.png" width="150" height="107" style="border: none"/></a></div>
+            <table width="177" border="0" cellspacing="10" cellpadding="0">
+              <tr>
+                <td><h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 130%; font-weight: normal; color: #275363; margin-top: 0px;">More chances<br />
+                	to <a href="http://emailme.linkme.net.au/url.php?url=02f2cfba9f89d4b71a7b624703138738069c570fb2e9c47f6033fa16efbe84b90">WIN $100,000</a>!</h2>
+                	<ul style="margin: 0; padding-left: 15px;">
+                		<li style="margin-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=09b2ad88059730a9ceebed99c1e3f140369c570fb2e9c47f6033fa16efbe84b90">Upload your resume</a><br />
+                			= 3 chances to win </li>
+                		<li style="margin-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=09b2ad88059730a9ceebed99c1e3f140369c570fb2e9c47f6033fa16efbe84b90">Update your resume</a><br />
+                			= 3  chances to win</li>
+                		<li style="margin-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=0011ad5c42d64d6324685887708990feb69c570fb2e9c47f6033fa16efbe84b90">Invite a friend</a><br />
+                			= 1 extra chance</li>
+                		<li style="margin-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=0011ad5c42d64d6324685887708990feb69c570fb2e9c47f6033fa16efbe84b90">Invite multiple friends</a><br /> 
+                			= multiple extra chances</li>
+                		<li style="margin-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=014e6399e1dc93f32b481d95f1cdc258f69c570fb2e9c47f6033fa16efbe84b90">Accept invite</a><br />
+                			= 1 extra chance</li>
+                		</ul>
+                	<p align="right"><a href="http://emailme.linkme.net.au/url.php?url=02f2cfba9f89d4b71a7b624703138738069c570fb2e9c47f6033fa16efbe84b90">Read More</a></p>
+                	<h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 130%; font-weight: normal; color: #275363;"> Naveen &amp; Deepa's success story</h2>
+                  <p>&quot;Our luck changed when we joined LinkMe...&quot;</p>
+                  <p align="right"><a href="http://emailme.linkme.net.au/url.php?url=0610dbdd44e5c14de8f9f6cb280ff87a369c570fb2e9c47f6033fa16efbe84b90">Read More</a></p>
+                  </td>
+              </tr>
+              </table>            <div align="center">
+              	<p align="center" style="font-size: 90%; padding: 0; margin-bottom: 6px; color: #888">Sponsored Links</p>
+              	<a href="http://emailme.linkme.net.au/url.php?url=0365ed7aca125c0587016fa17964bb83d69c570fb2e9c47f6033fa16efbe84b90"><img src="http://marketing.linkme.com.au/need_work_visaB.gif" name="marketing2" width="150" height="150" border="0" /></a>
+              </div></td>
+        <td width="443" align="left" valign="top" background="http://marketing.linkme.com.au/20080805/content_bg.gif"><table width="443" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="163" background="http://marketing.linkme.com.au/20080805/header_1.png">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="40" align="left" valign="top" style="padding-left: 30px; color: #FFF;" background="http://marketing.linkme.com.au/20080805/header_2.png"><p style="margin: 0">Connecting with Tracy Williams</p></td>
+          </tr>
+          </table>
+          	<table width="443" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+				<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+            	<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Tired of doing things the hard way?</h1></td>
+            	</tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p>Do  you struggle to get though your 'to do' list everyday, constantly chasing your  tail and never fully completing what you need to do?&nbsp; Have you got procrastination down to a fine  art?&nbsp; Being organised is an essential life  skill and though some are naturally good at it anyone can learn to be  organised.</p>
+                <p><a href="http://emailme.linkme.net.au/url.php?url=0f591d3ac87a6521c13c69c1efab57a3d69c570fb2e9c47f6033fa16efbe84b90">Read our six strategies to get you  organised</a></p></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413">&nbsp;</td>
+            </tr>
+            <tr>
+				<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+            	<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Bouncing back after rejection</h1></td>
+            	</tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p>It  appears to be a match made in heaven &ndash; you apply for that dream job you know  you'd love and are capable of &ndash; only to crash and burn at the first hurdle and  are rejected! Sound familiar?&nbsp; You&rsquo;re  not alone &ndash; it's inevitable that at some point in your working life your  application for a job or promotion will be rejected.&nbsp; How you manage your disappointment will be  key.</p>
+              	<a href="http://emailme.linkme.net.au/url.php?url=06eee1f623ff84a50849d329bb5f43eee69c570fb2e9c47f6033fa16efbe84b90">Follow our guide to help you recover  quickly from rejection</a></td>
+            </tr>
+            <tr>
+				<td>&nbsp;</td>
+            	<td>&nbsp;</td>
+            	</tr>
+            <tr>
+				<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+            	<td height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Think you don't need a cover letter?</h1></td>
+            	</tr>
+            <tr>
+				<td>&nbsp;</td>
+            	<td><h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 130%; font-weight: normal; color: #275363;">Did you know many employers and recruiters won’t bother to read your resume if you haven’t attached a cover letter.</h2>
+            		<p>Cover  letters are always necessary &ndash; and once you understand how to structure them and  put your best side forward, you&rsquo;ll increase the chances of your resume actually being  read.</p>
+            		<a href="http://emailme.linkme.net.au/url.php?url=0c080544cb251855d1ef60360f39cfe6869c570fb2e9c47f6033fa16efbe84b90">Read Catherine&rsquo;s article giving you the  lowdown on cover letters</a></td>
+            	</tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Celebrate your LinkMe success</h1></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p align="left">Celebrate your own success by telling us about it - we would <a href="mailto:marketing@linkme.com.au?subject=SUCCESS_STORY">love to hear from you</a>! We'll even <strong>give you a surprise gift to celebrate your success</strong>*.<br />
+                <a href="http://emailme.linkme.net.au/url.php?url=0dd2bdf76f4345e1307b1db511803362769c570fb2e9c47f6033fa16efbe84b90"><br />
+                  Read recent success stories from other LinkMe members</a></p>
+                <p align="left">*Success will need to be proven to qualify for the surprise gift. Members need to reside and work in Australia.</p>
+                <p align="center" style="font-size: 90%; padding: 0; margin-bottom: 6px; color: #888">Sponsored Link</p>
+                <div align="center"><a href="http://emailme.linkme.net.au/url.php?url=0a9c3f74f48ad1a636eca4c33ce7ae77969c570fb2e9c47f6033fa16efbe84b90"><img src="http://marketing.linkme.com.au/20080722/girlsweekendaway.jpg" width="220" height="60" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Stay in touch with LinkMe</h1></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p align="left">Find out what your friends and colleagues are up to in their careers' with our new &lsquo;What's Happening&rsquo; feature. Build stronger, more effective connections by keeping up to date with the people in your network and their current work situation.&nbsp; You should also use their networks to identify opportunities for your career.</p>
+                <p>&nbsp; <img src="http://marketing.linkme.com.au/whats-happening.gif" alt="LinkMe website - &quot;What's happening with my friends" width="400" height="485" /></p>
+                <ul>
+                  <li>Identify networking opportunities among your connections </li>
+                  <li>Help friends and past or present colleagues find jobs and grow their networks </li>
+                  <li>Find out about new companies your friends are working for </li>
+                </ul>
+              <p><a href="http://emailme.linkme.net.au/url.php?url=09aab1b6a1407452c561da1ecd5bbdf9d69c570fb2e9c47f6033fa16efbe84b90">Log in now to see what's happening with your network</a></p></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Fancy a change of scene?</h1></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p>Have you got an itch to uproot and change locations for work? Maybe you need to be closer to family or want a change of scene? Now you can let employers know where you would consider moving to for work in Australia or a variety of international locations by updating your Desired Job details.</p>
+                <p>Simply <a href="http://emailme.linkme.net.au/url.php?url=09aab1b6a1407452c561da1ecd5bbdf9d69c570fb2e9c47f6033fa16efbe84b90">log in to your LinkMe account</a> and go to your resume and select to edit the Desired Job section.</p>
+              <p>Select multiple states, cities, regions or countries to be found for opportunities in your specified locations. </p></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0;">Get jobs emailed to you</h1></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p>Create job alerts and have jobs delivered straight to your inbox as they are posted by employers and recruiters.<br />
+                <br />
+                <a href="http://emailme.linkme.net.au/url.php?url=09aab1b6a1407452c561da1ecd5bbdf9d69c570fb2e9c47f6033fa16efbe84b90">Just login</a>, run a job search and create your job alert.</p>
+              	<p align="center" style="font-size: 90%; padding: 0; margin-bottom: 6px; color: #888">Sponsored Link</p>
+              	<p align="center"><a href="http://emailme.linkme.net.au/url.php?url=0437dea851e9bc117f5056f3647be019369c570fb2e9c47f6033fa16efbe84b90"><img src="http://marketing.linkme.com.au/20080805/brandleaders_ad.jpg" alt="BrandLeaders: Tell us about your *ultimate doughnut!*" width="413" height="113" border="0" /></a></p></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0">We're here to help</h1></td>
+            </tr>
+            <tr>
+              <td width="30">&nbsp;</td>
+              <td width="413"><p align="left">Following the complete overhaul of the LinkMe site, there have been a couple of glitches that we should let you know about.</p>
+                <p align="left">If you're <b>experiencing any problems logging in to your LinkMe account</b>, we may need to reactivate your account. Please contact us to have this issue resolved.<br />
+                    <br />
+              If you've <b>forgotten your password</b> and have had a new one automatically generated and sent to you by LinkMe, it's fine to cut and paste this when you attempt to login. However, please note that <b>passwords are both case and space sensitive</b>.</p></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="30" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg.png">&nbsp;</td>
+              <td width="413" height="43" background="http://marketing.linkme.com.au/20080805/heading_1_line_bg_noedge.png"><h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 180%; font-weight: normal; color: #037394; margin: 0">Need a new job?</h1></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 130%; font-weight: normal; color: #275363;">Find one here!</h2>
+                  <form action="http://www.linkme.com.au/ui/unregistered/JobSearchForm.aspx" method="get" name="linkmeJobSearch" target="_blank" id="linkmeJobSearch">
+                    <table width="100%" bgcolor="#DFE5E6" style="background: #F4F1F0; border: 1px solid #DAE2EB;">
+                      <tr>
+                        <td><strong>Keywords</strong></td>
+                        <td><strong>Location</strong></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><input id="txtKeywords" type="text" value="" name="Keywords" maxlength="265" /></td>
+                        <td><input id="txtLocality" type="text" value="" name="Locality" maxlength="100" /></td>
+                        <td><input id="btnSearchJobs" type="submit" value="Find Jobs" name="btnSearchJobs" />
+                            <input value="True" type="hidden" id="hidden1" name="performSearch" /></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>E.g.: Armadale, VIC</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" align="center">If this form does not work for you, <a href="http://emailme.linkme.net.au/url.php?url=0528586246e9b5c31db89c34013dfc1bc69c570fb2e9c47f6033fa16efbe84b90">search for jobs at LinkMe</a></td>
+                      </tr>
+                    </table></form>
+                <p align="center"><a href="http://emailme.linkme.net.au/url.php?url=0e833edd73805378783f9c3e4cb4bdd4b69c570fb2e9c47f6033fa16efbe84b90">Get help with using LinkMe's job search</a></p>
+                <p align="center"><a href="http://emailme.linkme.net.au/url.php?url=071b6d9fa4403b626283920605fa84ca169c570fb2e9c47f6033fa16efbe84b90">Terms of Use</a> | <a href="http://emailme.linkme.net.au/url.php?url=06c26d4768e76495fddb89adc9843085069c570fb2e9c47f6033fa16efbe84b90">Privacy Statement</a></p>
+                <h2 align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 130%; font-weight: normal; color: #275363;">Powered by email<img src="http://emailme.linkme.net.au/logo.php?id=WAgBDBgMDAMJFV5VCkQDCQUDUgIOQw1YX1VZEFlSAAsbBApVVlIGVVBUAVtTUgZWAwBQBl4ABwcAAgAGW1VQCAkQCEs=" alt="me" width="24" height="12" border="0" /></h2>
+                <p align="center">Click to <a href='http://emailme.linkme.net.au/bye.php?id=69c570fb2e9c47f6033fa16efbe84b90'>unsubscribe</a> from future LinkMe communications.</p>
+                <p align="center" style="font-size: 90%">Copyright &copy; 2008 LinkMe Pty Ltd</p></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            </table></td>
+      </tr>
+        </table>
+</div>
+</body>
+</html>
+
+--3527a4c7a9866cbfef79097e87fbbffe--
+
+
+
+--117AD62CD2.1218785111/ns1.linkme.net.au--

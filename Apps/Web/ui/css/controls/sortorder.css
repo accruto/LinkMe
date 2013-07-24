@@ -1,0 +1,9 @@
+﻿.sortorder_ascx {}
+    
+    .sortorder_ascx .items {
+        font-size: 85%;
+    }
+
+.section-title .ribbon .sortorder_ascx {
+    padding: 5px;
+}

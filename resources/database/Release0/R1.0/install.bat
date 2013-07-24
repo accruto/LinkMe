@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:drop_tables.sql,create_tables.sql,update_database_version_table.sql

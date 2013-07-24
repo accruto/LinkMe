@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="RepresentativeEmail">
+      <VerticalContentItem>
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <br />Thanks,
+        <br />Your LinkMe team
+        <br />
+        <p><img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="" /></p>
+      </div>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+  </TemplateContentItems>
+</ContentItems>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Registration">
+  <DataContextMoniker Name="/RegistrationDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6298bce0-b07a-49d8-84a3-f6ddf0ef9bdb" absoluteBounds="4.625, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/RegistrationDataContext/JoinReferralEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3eb4f6cd-8eda-4469-910d-ae308e4f6c07" absoluteBounds="4.64, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e47366b3-1641-47cd-956e-6ec25ed4becb" absoluteBounds="1.5, 0.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/RegistrationDataContext/RegisteredUserEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9543db1a-1d9a-497e-ab0f-e8a3312cd06a" absoluteBounds="1.5150000000000001, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 1.53929768880208); (4.625 : 1.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RegistrationDataContext/RegisteredUserEntity/RegisteredUser_JoinReferral" />
+      <nodes>
+        <classShapeMoniker Id="e47366b3-1641-47cd-956e-6ec25ed4becb" />
+        <classShapeMoniker Id="6298bce0-b07a-49d8-84a3-f6ddf0ef9bdb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

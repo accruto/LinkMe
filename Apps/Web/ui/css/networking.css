@@ -1,0 +1,166 @@
+.friends-container
+{
+	border-top: solid 1px #E1E1E1;
+	border-bottom: solid 1px #E1E1E1;
+	border-left: solid 1px #E1E1E1;
+	padding: 6px;
+	margin-bottom: 10px;
+	padding-top:13px;
+}
+
+.alternate-friends-container
+{
+	background-color: #F5F5F5;
+	border-top: solid 1px #E1E1E1;
+	border-bottom: solid 1px #E1E1E1;
+	border-left: solid 1px #E1E1E1;
+	padding: 6px;
+	margin-bottom: 10px;
+	padding-top:13px;
+}
+
+.picture-container
+{
+	float:left;
+	border: 3px solid #DDE3E1;
+}
+
+.friend-list-actions
+{
+	float:right;
+	line-height:19px;
+	margin-right:8px;
+}
+
+.friend-list-details
+{
+	float:left;
+	margin-left:15px;
+	width:60%;
+}
+
+.friend-list-details h1
+{
+	margin-top:0px;
+}
+
+.is-doing
+{
+	margin-bottom:7px;
+	margin-left:2px;
+	font-size:11px;
+}
+
+#profile-photo-holder
+{
+	float:left;
+	margin-right:10px;
+}
+
+#profile-photo-holder .affordance-link
+{
+	display:block;
+	margin-bottom:7px;
+}
+
+.valign-hack
+{
+	vertical-align:top;
+	padding-top:2px;
+}
+
+.mini-profile-container
+{
+	float: left;
+	margin-right: 21px;
+	margin-bottom: 15px;
+}
+
+.profile-thumb, .whiteboard-thumb
+{
+	padding:1px;
+	border: solid 1px #274061;
+}
+
+.profile-thumb a img, .whiteboard-thumb a img
+{
+	border: none;
+	padding: 0;
+}
+
+.profile-link
+{
+	clear:both;
+	margin-left:-10px;
+	text-align:center;
+}
+
+.resume-section-content
+{
+	background-color:#F0F0F0;
+	margin-bottom:20px;
+	padding-left:6px;
+	padding-right:8px;
+}
+		
+.text-heading a
+{
+	text-decoration: none;
+	color: #0404FF;
+}
+
+/* MF (2008-09-09): moved whiteboard-* to whiteboard.css */
+
+/* Invitations Page */
+
+.invitation-holder{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
+}
+
+.invitation-thumb{
+	float: left;
+	width: 60px;
+	text-align: center;
+}
+
+
+.invitation-thumb a:link{
+	text-decoration: none;
+	font-size: 11px;
+	color: blue;
+	
+}
+
+.invitation-thumb a:hover{
+	color: #FF6600;
+}
+
+
+.invitation-details{
+	float: left;
+	margin-left: 10px;
+	width: 230px;
+	
+}
+
+.invitation-buttons{
+	margin-top: 14px;
+}
+
+#sentInvitations
+{
+	list-style: none;
+	margin-left: 6px;
+	overflow: hidden;
+}
+
+.offer-dollar-home
+{
+	float:left;
+	line-height:47px;
+	font-size:45px;
+	color:#628c46;
+	padding-right:6px;
+}

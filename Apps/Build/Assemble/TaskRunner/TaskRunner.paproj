@@ -1,0 +1,33 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{E7069094-7E30-4878-9541-8C6475770F66}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.TaskRunner.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{988F131A-EDAE-4f15-8B4C-8961E1E840B0}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\TaskRunner\LinkMe.TaskRunner.exe">
+      <Guid>{3FACA334-9BED-4f84-9450-A87B1FF85B29}</Guid>
+      <Link>TaskRunner\LinkMe.TaskRunner.exe</Link>
+    </Assemble>
+    <Assemble Include="..\..\..\Services\External\Apple\Notifications\DevelopmentPushCert.p12">
+      <Guid>{ff5ded76-f5f3-4af1-a959-6afa318aae6a}</Guid>
+      <Link>TaskRunner\DevelopmentPushCert.p12</Link>
+    </Assemble>
+    <Assemble Include="..\..\..\Integration\LinkMe.Apps.Integration.dll">
+      <Guid>{283046DE-2E57-4223-B1BE-1956E0F3D123}</Guid>
+      <Link>TaskRunner\LinkMe.Apps.Integration.dll</Link>
+    </Assemble>
+    <Assemble Include="..\..\..\Web\LinkMe.Web.dll">
+      <Guid>{2CF6063B-CE92-4f59-ADD0-2BA39BE441C0}</Guid>
+      <Link>TaskRunner\LinkMe.Web.dll</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

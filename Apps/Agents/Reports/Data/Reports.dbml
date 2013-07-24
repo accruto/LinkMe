@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="ReportsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Apps.Agents.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReportDefinition" Member="ReportDefinitionEntities" AccessModifier="Internal">
+    <Type Name="ReportDefinitionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="reportType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="toAccountManager" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="toClient" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="organisationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="parameterSetId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ReportDefinitionEntity_SentReportEntity" Member="SentReportEntities" ThisKey="id" OtherKey="reportDefinitionId" Type="SentReportEntity" />
+      <Association Name="ReportParameterSetEntity_ReportDefinitionEntity" Member="ReportParameterSetEntity" ThisKey="parameterSetId" OtherKey="id" Type="ReportParameterSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportParameter" Member="ReportParameterEntities" AccessModifier="Internal">
+    <Type Name="ReportParameterEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="setId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ReportParameterSetEntity_ReportParameterEntity" Member="ReportParameterSetEntity" ThisKey="setId" OtherKey="id" Type="ReportParameterSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportParameterSet" Member="ReportParameterSetEntities" AccessModifier="Internal">
+    <Type Name="ReportParameterSetEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ReportParameterSetEntity_ReportDefinitionEntity" Member="ReportDefinitionEntities" ThisKey="id" OtherKey="parameterSetId" Type="ReportDefinitionEntity" />
+      <Association Name="ReportParameterSetEntity_ReportParameterEntity" Member="ReportParameterEntities" ThisKey="id" OtherKey="setId" Type="ReportParameterEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SentReport" Member="SentReportEntities" AccessModifier="Internal">
+    <Type Name="SentReportEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sentTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="periodStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="periodEnd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="reportDefinitionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sentToAccountManagerId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sentToClientEmail" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ReportDefinitionEntity_SentReportEntity" Member="ReportDefinitionEntity" ThisKey="reportDefinitionId" OtherKey="id" Type="ReportDefinitionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

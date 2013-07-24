@@ -1,0 +1,33 @@
+
+#linkme_divJoinForm {	/* The markup for this DIV is intended to be hosted, and thus styled, externally. */
+	border: 1px dotted black;
+	padding: 8px;
+	clear: left;
+	float: left;
+}
+
+fieldset { border: none; margin: 0; padding: 0; }
+label {}
+
+.linkme_helptext { font-size: 80%; color: #888; }
+
+.linkme_field { margin-bottom: 0.5em; }
+	.linkme_control {}
+
+.linkme_textbox_field {}
+	.linkme_textbox_control {}
+		.linkme_textbox {}
+	
+.linkme_password_textbox_field {}
+	.linkme_password_textbox_control {}
+		.linkme_password_textbox {}
+
+.linkme_checkbox_field {}
+	.linkme_checkbox_control {}
+		.linkme_checkbox {}
+
+.linkme_button_control {}
+	.linkme_button {}
+	
+.linkme_join_button_control {}
+	.linkme_join_button {}

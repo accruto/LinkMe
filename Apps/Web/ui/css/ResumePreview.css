@@ -1,0 +1,72 @@
+﻿#body-container, #main-body {
+	width: 614px;
+}
+
+.resume {
+	background: none;
+	width: 614px;
+}
+
+	.resume .metadata {
+		color: #000;
+		padding: 0;
+		padding-bottom: 20px;
+	}
+
+.preview-actions {
+    margin-bottom: 20px;
+}
+
+.printing-advice {
+    background: #FFC url(../images/universal/info.gif) 10px 10px no-repeat;
+    font-size: 85%;
+	color: #000;
+	text-align:left;
+    padding: 10px;
+    padding-left: 35px;						
+    border: 1px solid #A4B97F;
+    margin-bottom: 20px;
+}
+
+	.printing-advice strong {
+		font-size: 115%;
+	}
+	
+	.printing-advice ul {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 14px;
+	}
+	
+	.printing-advice ul li strong {
+		font-size: 100%;
+	}
+
+/* Remove extraneous material */
+#body-container {
+	border: none;
+}
+
+#header, #footer
+{
+	display: none;
+}
+
+/* Remove action links */
+.header-edit-details, .resume-body-edit, .resume-body-action
+{
+	display: none;
+}
+
+/* Hide validation errors */
+.resume_error
+{
+	display: none;
+}
+
+/* Hide "Please add blah" messages */
+.empty_resume-section-view
+{
+	display: none;
+}
+

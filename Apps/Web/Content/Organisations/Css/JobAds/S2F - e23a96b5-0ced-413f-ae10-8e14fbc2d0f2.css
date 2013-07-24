@@ -1,0 +1,19 @@
+#JobAd #JobDescription #Ad
+{
+	background: transparent url(S2F_images/S2F_logo.jpg) no-repeat right top;
+}
+
+#JobAd #JobDescription H1
+{
+	width: 400px;
+}
+
+#JobAd, #JobAd #InfoTop, #JobAd #Finish, #JobAd #Finish #InfoDownRight
+{
+	background: transparent;
+}
+
+#JobAd #JobDescription
+{
+	border: 1px solid #000;
+}

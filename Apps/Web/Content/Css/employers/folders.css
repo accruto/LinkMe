@@ -1,0 +1,319 @@
+.search-results-action-menu .menu-panel .menu-panel-inner .add-to-folder {
+    *position:static;
+}
+
+#left-sidebar .folders_ascx .section-content .section .section-content,
+.folders_ascx .section-content .section .section-content {
+    margin: 0 0 0 5px;
+    padding: 0 0 0 0;
+}
+
+.folders_ascx .section-content li a {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 0 0 0 0;
+    padding: 6px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.folders_ascx .nav-icon {
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+}
+
+.main-title-nav-icon {
+    display: inline-block;
+    min-height: 13px;
+    padding: 3px 0 3px 25px;
+    font-weight: bold;
+}
+
+.folders_ascx .manage-folders-icon {
+    background: url("../../images/employers/icons/leftPanelIcons.png") -65px 0px no-repeat;
+	height : 16px;
+	width : 16px;
+	display : inline-block;
+	margin : 0px 4px 3px 0px;
+	float : left;
+}
+
+.folders_ascx .folders-section-icon {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -47px 0px no-repeat;
+	width : 18px;
+	height : 16px;
+	display : inline-block;
+	margin : 3px 5px 3px 1px;
+	padding : 0px 0px 0px 0px;
+}
+.folders-section-icon div {
+	padding-left : 24px;
+}
+
+.folders_ascx .section-collapsible-content .section-collapsible-title {
+    width: 97%;
+}
+body.IE7 .folders_ascx .section-collapsible-content .section-collapsible-title {
+	height : 18px;
+}
+
+.folders_ascx .section-collapsible-content .section-collapsible-title-active {
+    padding: 0 0 10px 0;
+}
+
+.folders_ascx ul.add-folder-list {
+    list-style : none;
+    padding: 5px 0 5px 0;
+    margin: 0px 0px 0px -1px;
+}
+.folders_ascx ul.add-folder-list div {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -55px -46px no-repeat;
+	width : 13px;
+	height : 13px;
+	display : inline-block;
+	margin : -6px 7px 0px 3px;
+	padding : 0px 0px 0px 0px;
+}
+
+.folders_ascx .section-content ul.add-folder-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.folders_ascx .section-content ul.add-folder-list li a {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.folders_ascx ul.personal-folders-list, .folders_ascx ul.org-wide-folders-list {
+    list-style : none;
+    padding: 5px 0 5px 0;
+    margin: 0px 0px 0px -1px;
+}
+.folders_ascx ul.personal-folders-list div, .folders_ascx ul.org-wide-folders-list div {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -60px -29px no-repeat;
+	width : 15px;
+	height : 13px;
+	display : inline-block;
+	margin : -6px 7px 0px 1px;
+	padding : 0px 0px 0px 0px;
+}
+
+.folders_ascx ul.flagged-folder-list {
+	list-style : none;
+    padding: 5px 0 0 0;
+    margin: 0px 0px 0px -1px;
+}
+.folders_ascx ul.flagged-folder-list div {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -71px -45px no-repeat;
+	width : 14px;
+	height : 15px;
+	display : inline-block;
+	margin : -6px 5px 0px 1px;
+	padding : 0px 3px 0px 0px;
+}
+body.IE7 .folders_ascx ul li div {
+	float : left;
+	margin-top : -2px;
+}
+
+.folders_ascx .section-content ul li {
+    margin: 0;
+    padding: 3px 0 0 0;
+}
+
+.folders_ascx .section-content ul li a {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.folders_ascx .section-content ul li a.IE8, .folders_ascx .section-content ul li a.IE9 {
+	margin-bottom : -2px;
+}
+
+.folders_ascx .personal-folders_section .section-content ul li a, .folders_ascx .organisation-wide-folders_section .section-content ul li a {
+    font-size: 85%;
+    font-weight: normal;
+}
+
+.folders_ascx .section-content ul li a.manage-folders-icon {
+    padding: 6px 20px;
+}
+
+.folders_ascx .section-content ul li .count-holder {
+    font-size: 85%;
+    font-weight: normal;
+    color: #808080;
+}
+body.IE9 .folders_ascx .section-content ul li .count-holder {
+	vertical-align : top;
+}
+.folders_ascx .section-content ul li a.empty-link {
+    font-size: 85%;
+    font-weight: normal;
+    color: #91B0F6;
+    text-decoration: underline;
+}
+
+.folders_ascx .section-content ul li a.empty-link:hover {
+    color: #FF6600;
+    cursor: pointer;
+}
+
+.folders_ascx .large-folders {
+    background-color: #EEEEEE;
+    margin: 3px -10px 3px -10px;
+    padding: 3px 10px 5px 10px;
+    text-align: center;
+    font-size:85%;
+}
+
+.folders_ascx .folderTypeRadio {
+    padding: 3px 0 5px 0;
+    font-size: 85%;
+}
+
+.folders_ascx .folder-overlay .overlay {
+    width: 450px;
+}
+
+.create-folder_button { background-image: url(../../images/buttons/create-folder.png); border:0; width: 95px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:right; }
+
+.large-private-folder-list, .large-shared-folder-list, .large-jobads-Open-list, .large-jobads-Closed-list {
+    height: 125px; 
+    overflow-y: scroll;
+    *overflow-x: hidden;
+}
+
+.folder-header div h1 {
+    background: url("../../images/employers/large-section-heading-icons/folder.png") no-repeat scroll 5px 5px transparent;
+    padding-left: 36px;
+    height: 20px;
+}
+
+.folder-header div h1 .action-list a{
+    font-size: 68%;
+}
+
+.rename-folder-header div h1 {
+    background: url("../../images/employers/large-section-heading-icons/folder.png") no-repeat scroll 5px 5px transparent;
+    padding-left: 36px;
+    height: 30px;
+}
+
+.manage-folders .page-title {
+    background: url("../images/universal/hi-bg.png") repeat-x scroll left bottom transparent;
+    border-color: #E8E8E8 -moz-use-text-color #CCCCCC #E0E0E0;
+    border-left: 1px solid #E0E0E0;
+    border-right: medium none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    margin: 0 0 10px;
+    padding: 3px 6px;
+}
+
+.manage-folders .page-title h1 {
+    color: #000033;
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
+}
+
+.manage-folders .personal-folders-flagged ul, .manage-folders .personal-folders ul, .manage-folders .org-wide-folders ul {
+   list-style: none;
+   display: block;
+   line-height: 25px;
+   margin: 0;
+}
+
+.manage-folders .personal-folders-flagged li, .manage-folders .personal-folders li, .manage-folders .org-wide-folders li {
+   height:20px;
+}
+
+ul.folders-dropdown-list li a {
+    overflow: hidden;
+}
+
+.folder-overlay-section{
+    border: solid 1px #CCCCCC;
+    margin: 0 0 8px;
+    padding: 10px 10px 15px 10px;
+    position: relative;
+}
+
+.folderRadio{
+    font-size: 85%;
+    padding: 3px 0 5px;
+}
+
+.folder-overlay-section .field{
+    padding: 0 0 0 5px;
+    width: 300px;
+}
+
+.folder-overlay-section .disabled-overlay{
+    background: none repeat scroll 0 0 #FFFFFF;
+    left: 0;
+    opacity: 0.6;
+    filter:Alpha(Opacity=60);
+    position: absolute;
+    bottom: 0;
+    width: 428px;
+    z-index: 7;
+}
+
+.folder-overlay-section .folder-existing-disabled-overlay{
+    height: 55px;
+}
+
+.folder-overlay-section .folder-new-disabled-overlay{
+    height: 80px;
+}
+
+.folder-dropdown{
+    border: solid 1px #88AACC;
+    width: 330px;
+}
+
+.folder-dropdown option.folder-list-icon {
+    padding: 2px 0 2px 20px;
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+    vertical-align: middle;
+}
+
+.folder-dropdown option.flagged-icon {
+    background-image: url("../../images/universal/action-icons/flagged.png");
+}
+
+.folder-dropdown option.folder-icon {
+    background-image: url("../../images/universal/action-icons/folder.png");
+}
+
+.folder-overlay .section-separator{
+    padding: 8px 0 16px 0;
+    margin: 0;
+    width: 428px;
+}
+
+.folder-overlay .section-separator .horizontal-separator{
+    padding: 0 10px;
+    margin: 0;
+    width: 175px;
+    height: 1px;
+    background: url("../../images/employers/view-resume/hr.png") no-repeat transparent;
+    display: block;
+    float: left;
+}
+
+.folder-overlay .section-separator .or-holder{
+    padding: 0px 9px 0px 10px;
+    margin: -8px 0 0 0;
+    float: left;
+}

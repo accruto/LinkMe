@@ -1,0 +1,118 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, 
+#JobDescription table, #JobDescription th, #JobDescription td, 
+#JobDescription ul, #JobDescription li, 
+#JobDescription label, #JobDescription span {
+	color: #FFFFFF;
+	background-color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #fff;
+	border: 4px solid #66CC33;
+	width: 456px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad center {
+	margin: 0 32px;	
+}
+
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 1em 32px;	
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad td,
+#JobAd #JobDescription #Ad li {
+	font-size: 100%;
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad {
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: transparent url('frogpen_images/frogpen_logo.gif') no-repeat left top;
+	border-bottom: 4px solid #99cc00;
+	height: 83px;
+	width: 456px;
+	position: absolute;
+	margin: 0;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	background-color: #000000;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	background: #000000;
+	color: #66CC33;
+	font-size: 200%;
+	font-weight: bold;
+	margin-bottom: 0.5em;	
+	margin-top: 0em;
+	padding-top: 100px;
+	text-align: center;
+	background: #000000 url('frogpen_images/frogpen_animate.gif') no-repeat right 22px;
+}
+
+#JobAd #JobDescription #Ad p {
+	display: block;
+	padding: 0.5em;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 90% !important;
+	_width: 80%;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 3em;
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	padding: 0px;
+	margin-left: 3em;
+	height: 61px;
+	background: #000000 no-repeat bottom right;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	height: 0px;
+	_margin-bottom: -1.3em;
+}

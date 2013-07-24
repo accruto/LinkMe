@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_new_optout_search_fields.sql,rollback_new_networker_jobs_table.sql,rollback_new_searches_table.sql,rollback_new_search_criteria_table.sql,rollback_new_content_benefits.sql,rollback_new_user_data_field.sql,rollback_database_version_table.sql

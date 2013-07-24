@@ -1,0 +1,9 @@
+alter_JobApplication.sql
+alter_CandidateList.sql
+alter_CandidateListEntry.sql
+
+create_OfferingLocation.sql
+sp_CreateOfferingLocation.sql
+sp_CreateCategoryOffering.sql
+
+data_Product.sql

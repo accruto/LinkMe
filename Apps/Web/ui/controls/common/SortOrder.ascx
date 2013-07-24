@@ -1,0 +1,1 @@
+<%@ Control Language="c#" AutoEventWireup="False" EnableViewState="false" Codebehind="SortOrder.ascx.cs" Inherits="LinkMe.Web.UI.Controls.Common.SortOrder" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>

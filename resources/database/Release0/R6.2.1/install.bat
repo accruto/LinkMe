@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_get_employer_transaction_summary_procedure.sql,update_database_version_table.sql

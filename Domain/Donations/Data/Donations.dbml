@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="DonationsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DonationRecipient" Member="DonationRecipientEntities" AccessModifier="Internal">
+    <Type Name="DonationRecipientEntity" AccessModifier="Internal">
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="DonationRecipientEntity_DonationRequestEntity" Member="DonationRequestEntities" ThisKey="id" OtherKey="donationRecipientId" Type="DonationRequestEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonationRequest" Member="DonationRequestEntities" AccessModifier="Internal">
+    <Type Name="DonationRequestEntity" AccessModifier="Internal">
+      <Column Name="amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="donationRecipientId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="DonationRequestEntity_NetworkInvitationEntity" Member="NetworkInvitationEntities" ThisKey="id" OtherKey="donationRequestId" Type="NetworkInvitationEntity" />
+      <Association Name="DonationRecipientEntity_DonationRequestEntity" Member="DonationRecipientEntity" ThisKey="donationRecipientId" OtherKey="id" Type="DonationRecipientEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetworkInvitation" Member="NetworkInvitationEntities" AccessModifier="Internal">
+    <Type Name="NetworkInvitationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="inviteeEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="inviterId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="inviteeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="donationRequestId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DonationRequestEntity_NetworkInvitationEntity" Member="DonationRequestEntity" ThisKey="donationRequestId" OtherKey="id" Type="DonationRequestEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

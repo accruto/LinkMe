@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jobg8.com/" elementFormDefault="qualified" targetNamespace="http://jobg8.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PostAdvertRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Adverts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="PostAdvert">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="1" name="JobReference" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="ClientReference" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Classification" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="SubClassification" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Position" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Location" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Area" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PostCode" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+                  <xs:element minOccurs="1" maxOccurs="1" name="EmploymentType">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Permanent" />
+                        <xs:enumeration value="Contract" />
+                        <xs:enumeration value="Temporary" />
+                        <xs:enumeration value="Any" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Duration" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="WorkHours">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Part Time" />
+                        <xs:enumeration value="Full Time" />
+                        <xs:enumeration value="Not Specified" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="1" maxOccurs="1" name="VisaRequired">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Applications welcome from candidates who require a work visa" />
+                        <xs:enumeration value="Applications considered from candidates who require a work visa" />
+                        <xs:enumeration value="Applicants must be eligible to work in the specified location" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="1" maxOccurs="1" name="PayPeriod" nillable="true">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Hourly" />
+                        <xs:enumeration value="Weekly" />
+                        <xs:enumeration value="Monthly" />
+                        <xs:enumeration value="Annual" />
+                        <xs:enumeration value="Day" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayAmount" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayMinimum" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayMaximum" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Currency" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayAdditional" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Contact" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Telephone" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="ApplicationURL" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="ApplicationFormXML" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="JobSource" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="AdvertiserName" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="AdvertiserType">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Company" />
+                        <xs:enumeration value="Agency" />
+                        <xs:enumeration value="AdvertisingAgency" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="AccountNumber" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AmendAdvertRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Adverts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="AmendAdvert">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="1" name="JobReference" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Position" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Location" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Area" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PostCode" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+                  <xs:element minOccurs="1" maxOccurs="1" name="EmploymentType">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Permanent" />
+                        <xs:enumeration value="Contract" />
+                        <xs:enumeration value="Temporary" />
+                        <xs:enumeration value="Any" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Duration" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="WorkHours">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Part Time" />
+                        <xs:enumeration value="Full Time" />
+                        <xs:enumeration value="Not Specified" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="1" maxOccurs="1" name="VisaRequired">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Applications welcome from candidates who require a work visa" />
+                        <xs:enumeration value="Applications considered from candidates who require a work visa" />
+                        <xs:enumeration value="Applicants must be eligible to work in the specified location" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayPeriod">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Hourly" />
+                        <xs:enumeration value="Weekly" />
+                        <xs:enumeration value="Monthly" />
+                        <xs:enumeration value="Annual" />
+                        <xs:enumeration value="Day" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayAmount" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayMinimum" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayMaximum" type="xs:decimal" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Currency" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="PayAdditional" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Contact" type="xs:string" />
+                  <xs:element minOccurs="0" maxOccurs="1" name="Telephone" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="AccountNumber" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteAdvertRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Adverts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="DeleteAdvert">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="1" name="JobReference" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="AccountNumber" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

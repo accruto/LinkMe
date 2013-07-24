@@ -1,0 +1,3 @@
+sp_CreateCommunity.sql
+data_Credit_displayNames.sql
+data_EquivalentTerms.sql

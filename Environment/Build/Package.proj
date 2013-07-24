@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Package">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <OptimizePngFiles>False</OptimizePngFiles>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemPackage.proj" />
+
+</Project>

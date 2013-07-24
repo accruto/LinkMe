@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_to_old_get_employer_transaction_summary_procedure.sql,rollback_database_version_table.sql

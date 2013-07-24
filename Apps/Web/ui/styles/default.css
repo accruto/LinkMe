@@ -1,0 +1,478 @@
+a:active {
+	color:#FF6600;
+}
+a:visited {
+	color:#0000C0;
+}
+a {
+	color: #0000C0;
+}
+a:hover {
+	text-decoration:underline;
+	color:#FF6600;
+}
+
+.default, TD {
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #474747;
+}
+
+ul {list-style:square; margin-top: 0; margin-bottom: 0;}
+
+p.intro {font-size:13px;color:#E76800;}
+
+.small {font-family:tahoma,verdana,arial;font-size:9px;color:#474747;}
+
+.medium {font-family:tahoma,verdana,arial;font-size:11px;color:#474747;}
+
+.LargeTxt {font-family:tahoma,verdana,arial;font-size:12px;color:#474747;}
+
+.pageheading {font-family:arial,tahoma,verdana,arial;font-size:26px;color:#ffffff;}
+
+.bodyheading {font-family:arial,tahoma,verdana,arial;font-size:20px;color:#474747;}
+
+.subheading {font-family:arial,tahoma,verdana,arial;font-size:16px;color:#474747;font-weight:bold;}
+
+.sidenavtext {font-family:tahoma,verdana,arial;font-size:11px;color:#474747;}
+a.sidenavtext:link {color:#474747; text-decoration:none;}
+a.sidenavtext:visited {color:#474747; text-decoration:none;}
+a.sidenavtext:hover {color:#E76800; text-decoration:none;}
+
+a.sidenavtextlogout:link {color:#9F9A34; text-decoration:none;}
+a.sidenavtextlogout:visited {color:#9F9A34; text-decoration:none;}
+a.sidenavtextlogout:hover {color:#6D6806; text-decoration:none;}
+
+.sidenavtextsel {font-family:tahoma,verdana,arial;font-size:11px;color:#474747;font-weight:bold;}
+a.sidenavtextsel:link {color:#E76800; text-decoration:none;}
+a.sidenavtextsel:visited {color:#E76800; text-decoration:none;}
+a.sidenavtextsel:hover {color:#E76800; text-decoration:none;}
+
+.navicon {padding-left:20px;}
+
+.tableheader {font-family:tahoma,verdana,arial;font-size:11px;color:#ffffff;}
+a.tableheader:link {color:#ffffff; text-decoration:underline;}
+a.tableheader:visited {color:#ffffff; text-decoration:underline;}
+a.tableheader:hover {color:#CCC317; text-decoration:underline;}
+
+.siderighthead {font-family:tahoma,verdana,arial;font-size:11px;font-weight:bold;color:#ffffff;background-color:#939393;padding-left:10px;padding-top:7px;padding-bottom:7px;height:22px;width:180px;}
+
+.subhead1 {font-family:arial,tahoma,verdana,arial;font-size:14px;font-weight:bold;color:#E76800;padding-left:10px;padding-top:6px;padding-bottom:5px;height:24px;}
+.subhead2 {font-family:tahoma,verdana,arial;font-size:11px;font-weight:bold;color:#474747;background-color:#D6C103;padding-left:10px;padding-top:7px;padding-bottom:7px;height:22px;}
+.subhead3 {font-family:arial,tahoma,verdana,arial;font-size:14px;font-weight:bold;color:#5F5F5F;padding-left:10px;padding-top:6px;padding-bottom:5px;height:24px;}
+.subhead4 {font-family:arial,tahoma,verdana, Arial;font-size:14px;font-weight:bold;color:#474747;padding-left:0px;padding-top:6px;padding-bottom:0px;height:24px;}
+
+.topnav1 {font-weight:bold;padding-top:3px;padding-bottom:3px;padding-left:5px;padding-right:5px;background-color:#474747;border:1px solid #474747;cursor:hand;height:22px;}
+a.topnav1:link {color:#ffffff; text-decoration:none;}
+a.topnav1:visited {color:#ffffff; text-decoration:none;}
+a.topnav1:hover {color:#F1E797;text-decoration:none;padding-top:3px;padding-bottom:3px;padding-left:5px;padding-right:5px;background-color:#5F5F5F;border:1px solid #848484;cursor:hand;height:22px;}
+
+.topnav2 {font-weight: bold;padding-top:3px;padding-bottom:3px;padding-left:0px;padding-right:5px;background-color:#474747;border:1px solid #474747;cursor:hand;height:22px;}
+a.topnav2:link {color:#d2d2d2;text-decoration:none;}
+a.topnav2:visited {color:#d2d2d2;text-decoration:none;}
+a.topnav2:hover {color:#ffffff;text-decoration:none;}
+
+a.topnav3:link {color:#d2d2d2;text-decoration:none;}
+a.topnav3:visited {color:#d2d2d2;text-decoration:none;}
+a.topnav3:hover {color:#ffffff;text-decoration:none;}
+
+.topnav3 {font-weight: normal;}
+
+.signinfields {font-family:tahoma,verdana,arial;font-size:11px;color:#474747;width:100%;background-color:#ffffff;border: 1px solid #B3BC90;}
+
+.fielddefault {font-family:tahoma,verdana,arial;font-size:11px;color:#000000;background-color:#F3F6EB;border: 1px solid #B3BC90;}
+textarea.fielddefault {overflow-y:auto;}
+
+.fieldnooverflow {font-family:tahoma,verdana,arial;font-size:11px;color:#000000;background-color:#F3F6EB;border: 1px solid #B3BC90;}
+
+.fieldsignin {font-family:tahoma,verdana,arial;font-size:11px;color:#000000;background-color:#ffffff;border: 1px solid #B3BC90;width: 170px;}
+
+.selectFieldWide {font-family:tahoma,verdana,arial;font-size:11px;color:#000000;background-color:#F3F6EB;border: 1px solid #B3BC90;}
+
+a.footer:link {color:#474747; text-decoration: none;}
+a.footer:visited {color:#474747; text-decoration: none;}
+a.footer:hover {color:#474747; text-decoration: underline;}
+
+a.footernew:link {color:#B8BFA0; text-decoration: none;}
+a.footernew:visited {color:#B8BFA0; text-decoration: none;}
+a.footernew:hover {color:#474747; text-decoration: underline;}
+
+.footernew {font-family:tahoma,verdana,arial;font-size:11px;color:B8BFA0;}
+
+.intronet {font-family:tahoma,verdana,arial;font-size:11px;color:#E76800;}
+
+.introemp {font-family:tahoma,verdana,arial;font-size:11px;color:#708044;}
+
+.buttonnet {font-family:tahoma,verdana,arial;font-size:11px;color:#E76800;width:150px;height:22px;font-weight:normal;}
+
+.buttonemp {font-family:tahoma,verdana,arial;font-size:11px;color:#708044;width:150px;height:22px;font-weight:normal;}
+
+.buttondefault {font-family:tahoma,verdana,arial;font-size:11px;color:#132568;height:22px;font-weight:normal;}
+
+.buybutton
+ {
+	height:2em;
+	font-size:0.7em;
+	margin:0 0.2em 0 0.2em;
+	padding:0px 0px 0.2em;
+	width:12em;
+}           
+
+.searchresheader {color:#E76800;background-color:#E76800;}
+
+.resoddrow {background-color:#f1f1f1;}
+
+.resevenrow {background-color:#ffffff;}
+
+td.borderbottomright {border-bottom:1px solid #474747;border-right:1px solid #ACACAC;}
+
+td.borderbottom {border-bottom:1px solid #474747;}
+
+td.border {border-bottom:1px solid #474747;border-right:1px solid #474747;border-left:1px solid #474747;border-top:1px solid #474747;}
+
+td.formLabel {text-align:right; padding-right: 10px; vertical-align:top; padding-top: 7px;}
+
+.fontStats
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-family: Tahoma, Verdana, Arial;
+}
+
+.fontYellowLink
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: yellow;
+	font-family: Tahoma, Verdana, Arial;
+}
+
+
+.btnFrontPage {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#E76800;
+	width:136px;
+	height:34px;
+	font-weight:bold;
+	background-color:#CED5BC;
+	background: transparent url("../img/btn_joinnow.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+	
+}
+
+.btnminute {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#E76800;
+	width:40px;
+	height:20px;
+	font-weight:bold;
+	background-color:#CED5BC;
+	background: transparent url("../img/btn_minute.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsmall {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#E76800;
+	width:150px;
+	height:20px;
+	font-weight:bold;
+	background-color:#CED5BC;
+	background: transparent url("../img/btnsmall_bg.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnLarge
+ {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#E76800;
+	width:200px;
+	height:20px;
+	font-weight:bold;
+	background-color:#CED5BC;
+	background: transparent url("../img/btnlarge_bg.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsignin {
+	width:95px;
+	height:25px;
+	background: transparent url("../img/signin_btn.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsigninMouseOver {
+	width:95px;
+	height:25px;
+	background: transparent url("../img/signin_btn_over.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsignin2 {
+	width:95px;
+	height:25px;
+	background: transparent url("../img/signin_btn2.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsigninMouseOver2 {
+	width:95px;
+	height:25px;
+	background: transparent url("../img/signin_btn_over2.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.btnsmallalt {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#474747;
+	width:150px;
+	height:20px;
+	font-weight:bold;
+	background-color:#CED5BC;
+	background: transparent url("../img/btnsmall_bg.gif") no-repeat;
+	border:0px;
+	cursor:hand;
+}
+
+.tab {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#474747;
+}
+a.tab:link {color:#474747;text-decoration:none;}
+a.tab:visited {color:#474747;text-decoration:none;}
+a.tab:hover {color:#E76800;text-decoration:;}
+
+.tabon {
+	font-family:tahoma,verdana,arial;
+	font-size:11px;
+	color:#ffffff;
+	font-weight:bold;
+}
+a.tabon:link {color:#ffffff;text-decoration:none;}
+a.tabon:visited {color:#ffffff;text-decoration:none;}
+a.tabon:hover {color:#ffffff;text-decoration:none;}
+
+.valInfo 
+{
+	font-family:verdana,arial;
+	font-size:11px;
+	color:#154895;
+}
+.valError 
+{
+	font-family:verdana,arial;
+	font-size:11px;
+	color:#E76800;
+}
+
+.valSummary
+{
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+}
+
+/* DID YOU KNOW */
+
+#dhtmltooltip{
+font-family:tahoma,verdana;
+color:#7C8349;
+font-size:11px;
+position: absolute;
+left: -300px;
+width: 150px;
+border: 1px solid #474747;
+padding: 7px;
+background-color: #F5F5F5;
+visibility: hidden;
+z-index: 100;
+text-align: left;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+/*filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);*/
+}
+
+#dhtmlpointer{
+position:absolute;
+left: -300px;
+z-index: 101;
+visibility: hidden;
+}
+
+.helpFloatyIndent
+{
+opacity: 0.95;
+font-family:Trebuchet MS,tahoma,verdana;
+color:blue;
+font-size:11px;
+font-weight:normal;
+display:inline;
+width: 300px;
+border: 1px solid darkgray;
+padding: 300px;
+background-color: #F5F5F5;
+visibility: hidden;
+z-index: 100;
+text-align: left;
+}
+
+.helpFloaty
+{
+opacity: 0.95;
+font-family:Trebuchet MS,tahoma,verdana;
+color:blue;
+font-size:11px;
+font-weight:normal;
+display:inline;
+width: 300px;
+position:absolute;
+border: 1px solid darkgray;
+padding: 7px;
+background-color: #F5F5F5;
+visibility: hidden;
+z-index: 100;
+text-align: left;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+/*filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135); */
+
+}
+
+.helpFloatyImage
+{
+	display:inline;
+	vertical-align:bottom;
+}
+
+.step {font-family:tahoma,verdana,arial;font-size:9px;color:#474747;}
+a.step:link {color:#474747; text-decoration:none;}
+a.step:visited {color:#474747; text-decoration:none;}
+a.step:hover {color:#E76800; text-decoration:none;}
+
+.helpFloaty2{visibility:hidden;display:inline;font-size:9pt;color:#474747; font-weight:normal;border: 1px solid #474747;}
+.statusPending {color: orange;}
+.statusDeclined {color: red;}
+.statusApproved {color: green;}
+.statusPurchased {color: blue;}
+
+.screenNote
+{
+	color:#777;
+	font-size:smaller;	
+}
+
+.screenNoteSmall
+{
+	color:#777;
+	font-size:9pt;
+}
+
+.screenNoteMedium
+{
+	color:#777;
+	font-size:10pt;
+}
+
+.thinLine
+{
+	border-bottom:.1em solid silver;
+}
+
+.photo, .iconPhoto
+{
+	border: 1px solid #ccc;
+}
+
+.iconPhoto
+{
+	height:85px; width:70px;
+}
+
+.mandatoryIndicator
+{
+	color:#E76800;
+}
+
+/* Padding */
+
+.leftPad10
+{
+	padding-left: 10px;
+}
+.leftPad22
+{
+	padding-left: 22px;
+}
+
+/* Colors */
+
+.green
+{
+	color:Green;
+}
+
+.olive
+{
+	color:Olive;
+}
+
+.gray
+{
+	color:gray;
+}
+
+.graytowhite
+{
+	background: transparent url("../img/block_greytowhite.gif") repeat-x;
+	
+	/* border-top: groove 2px blue; */
+}
+
+/* Text sizes */
+
+.largerText
+{
+	font-size:14px;
+}
+
+/* Text styles */
+
+.Hidden
+{
+	visibility: hidden; height: 1px; width: 1px;
+}
+
+.header
+{
+	FONT-SIZE: 14px; COLOR: #474747; FONT-FAMILY: tahoma,verdana,arial; FONT-WEIGHT: bold
+}
+
+.txtBody
+{
+	FONT-SIZE: 12px; COLOR: #474747
+}
+
+.txtBold
+{
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,verdana,arial; FONT-WEIGHT: bold
+}
+
+.txtBoldLeftIndent
+{
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,verdana,arial; FONT-WEIGHT: bold; padding-left:10px
+}
+

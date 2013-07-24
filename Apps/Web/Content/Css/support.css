@@ -1,0 +1,29 @@
+﻿ol {
+	counter-reset: item;
+}
+li {
+	display: block;
+}
+.terms li:before {
+	content: counters(item, ".") " ";
+	counter-increment: item;
+}
+
+.privacy li:before {
+	content: counters(item, ".") " ";
+	counter-increment: item;
+}
+
+.terms-detail 
+{
+    font-family: verdana;
+    font-size: 80%;
+    max-width: 500px;
+}
+
+.terms-links
+{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: verdana;
+}

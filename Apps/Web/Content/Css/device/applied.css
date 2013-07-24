@@ -1,0 +1,132 @@
+﻿.applied {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+}
+.applied .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	color : #464646;
+	line-height : 1em;
+	margin-bottom : 0.75em;
+}
+.applied .title .icon {
+	width : 1.6944444444444444em;
+	height : 1.75em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconTick.png");
+	margin-right : 0.5em;
+	float : left;
+}
+.applied .contact {
+	font-size : 1.625em;
+	color : #464646;
+	line-height : 1.2em;
+	margin-bottom : 1em;
+}
+.applied .suggestedjobs .row .icon.jobtype.FullTime {
+	background-image : url("../../images/device/IconJobTypeFullTime.png");
+}
+.applied .suggestedjobs .row .icon.jobtype.PartTime {
+	background-image : url("../../images/device/IconJobTypePartTime.png");
+}
+.applied .suggestedjobs .row .icon.jobtype.Contract {
+	background-image : url("../../images/device/IconJobTypeContract.png");
+}
+.applied .suggestedjobs .row .icon.jobtype.Temp {
+	background-image : url("../../images/device/IconJobTypeTemp.png");
+}
+.applied .suggestedjobs .row .icon.jobtype.JobShare {
+	background-image : url("../../images/device/IconJobTypeJobShare.png");
+}
+.applied .suggestedjobs .row .icon.jobtype.None {
+	background-image : url("../../images/device/IconJobTypeNone.png");
+}
+.applied .suggestedjobs .title {
+	font-size : 1.875em;
+	font-weight : Bold;
+	color : #464646;
+	line-height : 1.2em;
+}
+.applied .suggestedjobs .row {
+	margin : 0 0em 0.5em;
+	font-size : 1.5em;
+	-webkit-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	-moz-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	border : 0.0833333333333333em solid #C0C3D2;
+	background-color : #FCFAFA;
+	border-radius : 0.5em;
+	padding : 0.75em;
+	line-height : 1.5em;
+	cursor : pointer;
+}
+.applied .suggestedjobs .row.featured {
+	border : 0.1666666666666667em solid #EDD260;
+	padding : 0.6666666666666667em;
+	background-color : #F9F5E4;
+}
+.applied .suggestedjobs .row.active {
+	border : 0.0833333333333333em solid #1F6DB6;
+	padding : 0.75em;
+	background-color : #307EEC;
+}
+.applied .suggestedjobs .row .titleline {
+	margin-bottom : 0.25em;
+}
+.applied .suggestedjobs .row .icon.new {
+	width : 2.75em;
+	height : 1.375em;
+	background-size : 100% 100%;
+	display : none;
+	float : left;
+	margin : 0 0.25em 0 -1em;
+}
+.applied .suggestedjobs .row .icon.new.active {
+	display : block;
+}
+.applied .suggestedjobs .row .icon.jobtype {
+	width : 3.9166666666666667em;
+	height : 1.25em;
+	float : left;
+	background-size : 100% 100%;
+	margin-right : 0.4166666666666667em;
+}
+.applied .suggestedjobs .row .title {
+	font-size : 1.1666666666666667em;
+	line-height : 1.1785714285714286em;
+	font-weight : bold;
+	color : #307EEC;
+}
+.applied .suggestedjobs .row.active .title {
+	color : white;
+}
+.applied .suggestedjobs .row .company {
+	color : #00AD6E;
+	width : 80%;
+}
+.applied .suggestedjobs .row.active .company {
+	color : white;
+}
+.applied .suggestedjobs .row .location, .applied .suggestedjobs .row .salary, .applied .suggestedjobs .row .date {
+	color : #464646;
+	width : 80%;
+}
+.applied .suggestedjobs .row.active .location, .applied .suggestedjobs .row.active .salary, .applied .suggestedjobs .row.active .date {
+	color : white;
+}
+.applied .suggestedjobs .row .featured {
+	display : none;
+	float : right;
+	width : 3.8333333333333333em;
+	height : 0.625em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/TextFeatured.png");
+	margin-top : -0.625em;
+}
+.applied .suggestedjobs .row.featured .featured {
+	display : block;
+}

@@ -1,0 +1,459 @@
+﻿#subheader .header {
+	font : Bold 24px Arial;
+	color : #333333;
+}
+#main-body {
+	width : 960px;
+	margin-top : -20px;
+}
+#main-body div, #main-body span, #main-body label, .overlay div, .overlay label {
+	font : 12px Helvetica,Arial;
+	color : black;
+	float : left;
+}
+#main-body a, #main-body ul, #main-body li {
+	float : left;
+}
+.prompt {
+	display : none;
+}
+.prompt.success .leftbar {
+	background-image : url("../../../images/members/jobsearch/PromptSuccessLeftBar.png");
+	width : 26px;
+	height : 40px;
+	margin-bottom : 10px;
+}
+.prompt.success .bg {
+	background-image : url("../../../images/members/jobsearch/PromptSuccessBg.png");
+	background-repeat : repeat-x;
+	width : 895px;
+	height : 40px;
+}
+.prompt.success .rightbar {
+	background-image : url("../../../images/members/jobsearch/PromptSuccessRightBar.png");
+	width : 18px;
+	height : 40px;
+}
+#main-body .prompt .text {
+	font : Bold 12px Arial;
+	margin : 12px 0px 0px 10px;
+}
+#main-body .prompt .text span {
+	font : Bold 12px Arial;
+	float : none;
+	display : inline-block;
+	max-width : 600px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+.prompt .icon.close {
+	width : 10px;
+	height : 10px;
+	margin-top : 7px;
+	cursor : pointer;
+}
+.tabs .tab {
+	margin-right : 2px;
+}
+.tabs .tab, .tabcontent .tab .topbar {
+	background-image : url("../../../images/members/jobsearch/RecentSearchesTabs.png");
+}
+.tabs .tab {
+	width : 210px;
+	height : 30px;
+	cursor : pointer;
+}
+.tabs .tab.Recent {	
+	background-position : 0px -60px;
+}
+.tabs .tab.Recent.active, .tabs .tab.Recent:hover {
+	background-position : 0px -0px;
+}
+.tabs .tab.Favourite {
+	background-position : -212px 0px;
+}
+.tabs .tab.Favourite.active, .tabs .tab.Favourite:hover {
+	background-position : -212px -60px;
+}
+.tabcontent .tab {
+	display : none;
+}
+.tabcontent .tab.active {
+	display : block;
+}
+.tabcontent .topbar {
+	width : 939px;
+	height : 26px;
+}
+.tabcontent .tab.Recent .topbar {
+	background-position : 0px -90px;
+}
+.tabcontent .tab.Favourite .topbar {
+	background-position : 0px -30px;
+}
+.tabcontent .Recent .row {
+	min-height : 44px;
+	width : 937px;
+	border-top : none;
+	border-right : 1px solid #C8C8C8;
+	border-bottom : 1px solid #DADEE0;
+	border-left : 1px solid #C8C8C8;
+	background-color : #FFFFFF;
+}
+.tabcontent .Recent .row.odd {
+	background-color : #F4F4F4;
+}
+.tabcontent .Recent .row .alert {
+	background-image : url("../../../images/members/jobsearch/EmailAlert.png");
+	width : 36px;
+	height : 25px;
+	background-position : 0px 25px;
+	margin : 0px 24px 0px 23px;
+	cursor : pointer;
+}
+.tabcontent .Recent .row .alert.active, .tabcontent .Recent .row .alert:hover {
+	background-position : 0px 0px;
+}
+.tabcontent .Recent .row .divider .line {
+	width : 1px;
+}
+.tabcontent .Recent .row .divider .line.one {
+	background-color : #DDE1E2;
+}
+.tabcontent .Recent .row .divider .line.two {
+	background-color : #FEFEFE;
+}
+.tabcontent .Recent .row .title {
+	width : 750px;
+	margin : 19px 0px 15px 13px;
+}
+.tabcontent .Recent .row .title a {
+	color : #1155EE;
+	text-decoration : none;
+}
+#main-body .tabcontent .Recent .row .title span {
+	float : none;
+	color : #1155EE;
+	font : 12px Arial;
+	line-height : 20px;
+	cursor : pointer;
+}
+#main-body .tabcontent .Recent .row .title span.search-criterion-name {
+	font : Bold 12px Arial;
+}
+.tabcontent .Recent .row {
+	min-height : 44px;
+	width : 937px;
+	border-top : none;
+	border-right : 1px solid #C8C8C8;
+	border-bottom : 1px solid #DADEE0;
+	border-left : 1px solid #C8C8C8;
+	background-color : #FFFFFF;
+}
+.tabcontent .Recent .row.odd {
+	background-color : #F4F4F4;
+}
+.tabcontent .Recent .row .alert {
+	background-image : url("../../../images/members/jobsearch/EmailAlert.png");
+	width : 36px;
+	height : 25px;
+	background-position : 0px 25px;
+	margin : 0px 24px 0px 23px;
+	cursor : pointer;
+}
+.tabcontent .Recent .row .alert.active, .tabcontent .Recent .row .alert:hover {
+	background-position : 0px 0px;
+}
+.tabcontent .Recent .row .divider .line {
+	width : 1px;
+}
+.tabcontent .Recent .row .divider .line.one {
+	background-color : #DDE1E2;
+}
+.tabcontent .Recent .row .divider .line.two {
+	background-color : #FEFEFE;
+}
+.tabcontent .Recent .row .title {
+	width : 750px;
+	margin : 19px 0px 15px 13px;
+}
+.tabcontent .Recent .row .title a {
+	color : #1155EE;
+	text-decoration : none;
+}
+#main-body .tabcontent .Recent .row .title span {
+	float : none;
+	color : #1155EE;
+	font : 12px Arial;
+	line-height : 20px;
+	cursor : pointer;
+}
+#main-body .tabcontent .Recent .row .title span.search-criterion-name {
+	font : Bold 12px Arial;
+}
+.tabcontent .Recent .row {
+	min-height : 44px;
+	width : 937px;
+	border-top : none;
+	border-right : 1px solid #C8C8C8;
+	border-bottom : 1px solid #DADEE0;
+	border-left : 1px solid #C8C8C8;
+	background-color : #FFFFFF;
+}
+.tabcontent .Recent .row.odd {
+	background-color : #F4F4F4;
+}
+.tabcontent .Recent .row .alert {
+	background-image : url("../../../images/members/jobsearch/EmailAlert.png");
+	width : 36px;
+	height : 25px;
+	background-position : 0px 25px;
+	margin : 0px 24px 0px 23px;
+	cursor : pointer;
+}
+.tabcontent .Recent .row .alert.active, .tabcontent .Recent .row .alert:hover {
+	background-position : 0px 0px;
+}
+.tabcontent .Recent .row .divider .line {
+	width : 1px;
+}
+.tabcontent .Recent .row .divider .line.one {
+	background-color : #DDE1E2;
+}
+.tabcontent .Recent .row .divider .line.two {
+	background-color : #FEFEFE;
+}
+.tabcontent .Recent .row .title {
+	width : 750px;
+	margin : 19px 0px 15px 13px;
+}
+.tabcontent .Recent .row .title a {
+	color : #1155EE;
+	text-decoration : none;
+}
+#main-body .tabcontent .Recent .row .title span {
+	float : none;
+	color : #1155EE;
+	font : 12px Arial;
+	line-height : 20px;
+	cursor : pointer;
+}
+#main-body .tabcontent .Recent .row .title span.search-criterion-name {
+	font : Bold 12px Arial;
+}
+.tabcontent .Favourite .row {
+	min-height : 44px;
+	width : 937px;
+	border-top : 1px solid transparent;
+	border-right : 1px solid #C8C8C8;
+	border-bottom : 1px solid #DADEE0;
+	border-left : 1px solid #C8C8C8;
+	background-color : #FFFFFF;
+}
+.tabcontent .Favourite .row.odd {
+	background-color : #F4F4F4;
+}
+.tabcontent .Favourite .row .hover {
+	border : 2px solid transparent;
+}
+.tabcontent .Favourite .row .alert {
+	background-image : url("../../../images/members/jobsearch/EmailAlert.png");
+	width : 36px;
+	height : 25px;
+	background-position : 0px 25px;
+	margin : 0px 24px 0px 23px;
+	cursor : pointer;
+}
+.tabcontent .Favourite .row .alert.active, .tabcontent .Favourite .row .alert:hover {
+	background-position : 0px 0px;
+}
+.tabcontent .Favourite .row .divider .line {
+	width : 1px;
+	margin-top : -3px;
+	margin-bottom : -3px;
+}
+.tabcontent .Favourite .row .divider .line.one {
+	background-color : #DDE1E2;
+}
+.tabcontent .Favourite .row .divider .line.two {
+	background-color : #FEFEFE;
+}
+.tabcontent .Favourite .row .title {
+	width : 718px;
+	margin : 19px 13px 15px 13px;
+}
+.tabcontent .Favourite .row .title a {
+	color : #1155EE;
+	text-decoration : none;
+}
+#main-body .tabcontent .Favourite .row .title span {
+	float : none;
+	color : #1155EE;
+	font : 12px Arial;
+	line-height : 20px;
+	cursor : pointer;
+}
+#main-body .tabcontent .Favourite .row .title span.search-criterion-name {
+	font : Bold 12px Arial;
+}
+.tabcontent .Favourite .row .divider.rename, .tabcontent .Favourite .row .divider.delete {
+	display : none;
+}
+.tabcontent .Favourite .row .divider.rename .line.one, .tabcontent .Favourite .row .divider.delete .line.one {
+	background-color : #F3F4F5;
+}
+.tabcontent .Favourite .row .divider.rename .line.two, .tabcontent .Favourite .row .divider.delete .line.two {
+	background-color : #C9CFD2;
+}
+.tabcontent .Favourite .row .divider.rename .line.three, .tabcontent .Favourite .row .divider.delete .line.three {
+	background-color : #FEFEFE;
+}
+.tabcontent .Favourite .row:hover {
+	border : 1px solid #98CAEA;
+}
+.tabcontent .Favourite .row:hover .hover {
+	border : 2px solid #C8E2FB;
+}
+.tabcontent .Favourite .row:hover .divider.rename, .tabcontent .Favourite .row:hover .divider.delete {
+	display : block;
+}
+.tabcontent .Favourite .row:hover .line, .tabcontent .Favourite .row:hover .line {
+	margin-top : 0px;
+	margin-bottom : 0px;
+}
+.tabcontent .Favourite .row .icon.action {
+	background-image : url("../../../images/members/jobsearch/SavedSearchActionIcons.png");
+	width : 23px;
+	height : 30px;
+	display : none;
+	margin : 0px 13px 0px 13px;
+	cursor : pointer;
+}
+.tabcontent .Favourite .row:hover .icon.rename, .tabcontent .Favourite .row:hover .icon.delete {
+	display : block;
+}
+.tabcontent .Favourite .row:hover .icon.delete {
+	background-position : -23px 0px;
+}
+#main-body .pagination-container {
+	border : 1px solid #A79C9C;
+	background : none;
+	width : 937px;
+	height : 26px;
+	padding : 0;
+	margin-top : 10px;
+}
+#main-body .pagination-holder, #main-body .pagination-holder .page-holder, #main-body .pagination-holder div.page-numbers {
+	width : auto;
+}
+#main-body .pagination-holder .page-numbers .page {
+	font : Bold 16px Arial;
+	color : #1155EE;
+	line-height : 16px;
+	margin : -3px 0px 0px 0px;
+	padding : 5px 6px 5px 6px;
+}
+#main-body .pagination-holder .page-numbers div.page-selected {
+	font : Bold 16px Arial;
+	color : #333333;
+	line-height : 16px;
+	margin : -3px 0px 0px 0px;
+	padding : 5px 6px 5px 6px;
+}
+#main-body .pagination-holder .first, #main-body .pagination-holder .previous, #main-body .pagination-holder .next, #main-body .pagination-holder .last {
+	font : 12.75px Verdana;
+	color : #C0C0C0;
+	margin-top : 5px;
+}
+#main-body .pagination-holder .previous span, #main-body .pagination-holder .next span {
+	float : none;
+	font : 12.75px Verdana;
+	color : #C0C0C0;
+}
+#main-body .pagination-holder .next, #main-body .pagination-holder .previous {
+	margin-left : 8px;
+	margin-right : 8px;
+}
+#main-body .pagination-holder .next.active, #main-body .pagination-holder .previous.active {
+	color : #1155EE;
+}
+#main-body .pagination-holder .next.active span, #main-body .pagination-holder .previous.active span {
+	font : 12.75px Verdana;
+	color : #1155EE;
+	font : 12.75px Verdana;
+	text-decoration : underline;
+}
+#main-body .pagination-holder .last.active, #main-body .pagination-holder .first.active {
+	color : #779EF5;
+	text-decoration : underline;
+}
+#main-body .pagination-ellipsis {
+	font : 14px Arial;
+	color : #333333;
+	margin-top : 3px;
+}
+.overlay {
+	display : none;
+}
+.ui-dialog.rename-dialog {
+	padding : 0;
+}
+.ui-dialog.rename-dialog .ui-widget-header {
+	border : 1px solid #D2E1EC;
+	background-image : none;
+	background-color : #EFF3F7;
+}
+.ui-dialog.rename-dialog .ui-widget-header .ui-dialog-title, .ui-dialog.delete-dialog .ui-widget-header .ui-dialog-title {
+	font : Bold 14px Arial;
+}
+.ui-dialog.rename-dialog .ui-widget-header .ui-dialog-title span {
+	font : Bold 14px Arial;
+	color : #1155EE;
+	max-width : 540px;
+	display : inline-block;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+.overlay.rename .field {
+	width : 720px;
+	margin : 10px 0px 3px 0px;
+}
+.overlay.rename .field label {
+	font : Bold 12px Arial;
+	color : #484848;
+	margin-top : 10px;
+}
+.overlay.rename .field .control .bg {
+	width : 386px;
+}
+.overlay.rename .field .control input {
+	float : left;
+	width : 380px;
+}
+.overlay.rename .button.rename {
+	margin-left : 118px;
+}
+.overlay.delete .text {
+	width : 700px;
+}
+.overlay.delete .text.name span {
+	text-overflow : ellipsis;
+	overflow : hidden;
+	white-space : nowrap;
+	float : none;
+	max-width : 510px;
+	display : inline-block;
+	color : #1155EE;
+}
+.overlay.delete .text.undoable {
+	font-weight : Bold;
+	margin-bottom : 10px;
+}
+.overlay.delete .button.delete {
+	margin-left : 240px;
+}
+.tabcontent .active .text.empty {
+	width : 739px;
+}

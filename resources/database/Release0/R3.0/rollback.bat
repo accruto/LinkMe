@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_endorsement.sql,rollback_administrator.sql,rollback_employer_purchases.sql,rollback_content.sql,rollback_ideal_job_info_index.sql,rollback_database_version_table.sql

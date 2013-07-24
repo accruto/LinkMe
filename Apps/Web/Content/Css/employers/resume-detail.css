@@ -1,0 +1,197 @@
+html, body
+{
+	font-family:HelveticaNeue;
+	margin:0;
+	padding:0;
+	font-size:36px;
+}
+
+.resume-details
+{
+	padding-bottom:20px;
+}
+
+.resume-details .tabs-nav .tab-content-outer
+{
+	font-size:24px;
+	padding-right:1px;
+	background:none
+}
+
+.resume-details .tabs-container
+{
+	position:relative;
+	margin:-3px 0 0 0
+}
+
+.resume-details .tab-content-inner
+{
+	padding:12px 5px 0 5px
+}
+
+.resume-details .tabs-container .resume-bg
+{
+	padding:15px 0 0 5px;
+}
+
+.resume-details .tabs-inner-container
+{
+	padding:5px 20px 5px 5px;
+}
+
+.resume-details .tabs-container .resume-footer-bg
+{
+	display:none
+}
+
+.resume-details .tabs-container .resume-details .tabs-container .resume-photo_frame
+{
+	margin:0;
+	padding:0;
+	border:none;
+	max-width:100px;
+	height:125px;
+	background:transparent;
+	float:left;
+	position:absolute;
+	z-index:1
+}
+
+.resume-details .resume_section
+{
+	padding:0 0 25px 0
+}
+
+.resume-details .summary-container .employment-history_section,.resume-details .summary-container .education-history_section,.resume-details .self-summary_section
+{
+	max-width:480px
+}
+
+.resume-details .employment-container .employment-history_section,.resume-details .education-container .education-history_section,.resume-details .summary-container .self-summary_section
+{
+	max-width:100%
+}
+
+.resume-details .resume_section .resume-heading
+{
+	color:#6b95aa;
+	font-size:36px;
+	padding:0 0 0 0
+}
+
+.resume-details .resume_section .resume-content
+{
+	border-top:solid 1px #b8c1cb;
+	font-size:20px;
+	padding:10px 0 20px 0;
+	margin:-2px 0 0 0
+}
+
+.resume-details .resume_section .resume-content table
+{
+	max-width:100%
+}
+
+.resume-details .resume_section .resume-content td.duration
+{
+	max-width:40%;
+	vertical-align:top
+}
+
+.resume-details .resume_section .resume-content td.description
+{
+	max-width:60%;
+	vertical-align:top
+}
+
+.resume-details .employment-history_section .resume-content .company,.resume-details .education-history_section .resume-content .institution
+{
+	color:#8e8e88
+}
+
+.resume-details .resume_section .resume-content .completion
+{
+	color:#47a
+}
+
+.resume-details .self-summary_section .resume-content
+{
+	padding:15px 0 20px 0
+}
+
+.resume-details .professional .desired-salary span
+{
+	float:left;
+	min-width:100%;
+}
+
+.employment-container .resume-content td,.employment-container .education-content td
+{
+	max-width:100%
+}
+
+.employment-container .employment-history_section .resume-content .title a,.education-container .education-history_section .resume-content .title a
+{
+	color:#47a;
+	text-decoration:none;
+	cursor:default
+}
+
+.employment-container .employment-history_section .resume-content .title a span,.education-container .education-history_section .resume-content .title a span
+{
+	text-decoration:none
+}
+
+.employment-container .resume-content td.last-data,.education-container .resume-content td.last-data
+{
+	padding:0 0 15px 0
+}
+
+.resume-details .skills_section .resume-content
+{
+	padding:15px 0 20px 0
+}
+
+.resume-details .professional_section .resume-content td,.resume-details .personal_section .resume-content td,.resume-details .education-history_section .resume-content .education-level td
+{
+	vertical-align:top;
+	padding:5px 0
+}
+
+.resume-details .professional_section .resume-content tr td:first-child,.resume-details .personal_section .resume-content tr td:first-child
+{
+	color:#47a;
+	max-width:20%
+}
+
+.resume-details .education-history_section .resume-content .education-level tr td:first-child
+{
+	color:#47a;
+	max-width:40%;
+	vertical-align:top
+}
+
+.resume-details .employment-history_section .resume-content .profession tr td:first-child
+{
+	color:#47a;
+	max-width:40%;
+	vertical-align:top
+}
+
+.resume-detail-aspx .resume-details .tabs-inner-container
+{
+	height:auto
+}
+.resume-detail-aspx .resume-details .tabs-container .resume-header-bg
+{
+	background-image:none;
+	display:none
+}
+.resume-details .employment-history_section .resume-content .jobs .job .duration {
+	padding-top : 3px;
+}
+
+.resume-details .professional_section .resume-content tr td .description, .resume-details .personal_section .resume-content tr td .description {
+	float : left;
+	margin-top : -1px;
+}

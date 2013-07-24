@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode security="secure" crawlable="false">
+    
+    <!-- Nodes -->
+
+    <siteMapNode url="~/service/GetProfessionalTitles.ashx" />
+    <siteMapNode url="~/service/GetSuggestedContacts.ashx" />
+    <siteMapNode url="~/service/GetSuggestedLocations.ashx" security="indifferent" />
+
+    <siteMapNode url="~/service/MailService.ashx" />
+    <siteMapNode url="~/service/InvitationPopupContents.aspx" />
+    <siteMapNode url="~/service/RepresentativePopupContents.aspx" />
+    <siteMapNode url="~/service/GetStructuredLocations.ashx" />
+    <siteMapNode url="~/service/PostMemberFeedback.ashx" security="indifferent" />
+    <siteMapNode url="~/service/LogUserEvent.ashx" />
+
+  </siteMapNode>
+</siteMap>

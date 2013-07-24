@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode security="indifferent"
+               crawlable="false">
+
+    <!-- Default roles for the site -->
+
+    <siteMapNode roles="Member"
+                 sidebar="members" />
+    <siteMapNode roles="Employer,Recruiter"
+                 sidebar="employers" />
+    <siteMapNode roles="Administrator"
+                 sidebar="empty" />
+    <siteMapNode roles="Custodian"
+                 sidebar="empty" />
+    <siteMapNode roles="Anonymous"
+                 sidebar="members-guests" />
+    
+    <!-- Includes -->
+
+    <siteMapNode siteMapFile="Members/Members.sitemap" />
+    <siteMapNode siteMapFile="employers/Employers.sitemap" />
+    <siteMapNode siteMapFile="guests/Guests.sitemap" />
+    <siteMapNode siteMapFile="service/Service.sitemap" />
+    <siteMapNode siteMapFile="ui/Ui.sitemap" />
+    <siteMapNode siteMapFile="landing/Landing.sitemap" />
+
+    <!-- Anything matching these expressions are not included in security checks etc. -->
+    
+    <siteMapNode excluded="true" expression="~/CuteSoft_Client/*" />
+    <siteMapNode excluded="true" expression="~/ajaxpro/*" />
+    <siteMapNode excludedExtensions="true" extensions="jpg;gif;css;js;png;axd;jmx" />
+
+    <!-- Home page -->
+
+    <siteMapNode url="~/"
+                 homeUrl="true"
+                 title="Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia"
+                 description="Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia. Find Jobs and Search for Jobs Online by uploading your resume and let Jobs find you! | LinkMe"
+                 keywords="jobs, search jobs, find jobs, online jobs, employment, careers, jobs guide, jobs in Australia, job seek, career search, jobs in Sydney, jobs in Melbourne, jobs in Brisbane, job sites, local jobs, Sydeny jobs, Melbourne jobs, Brisbane jobs, resume, Australian jobs, linkme, linkme.com.au, www.linkme.com.au"
+                 crawlable="true"
+                 changefreq="monthly"
+                 priority="1.0000"
+                 sidebar="members-guests-front">
+      
+      <!-- Rewrites -->
+
+      <siteMapNode rewrite="true" url="~/default.aspx" />
+      
+    </siteMapNode>
+
+    <!-- LogIn page -->
+
+    <siteMapNode url="~/login" logInUrl="true" security="secure" title="Sign In" sidebar="empty">
+      <siteMapNode redirect="true" url="~/ui/unregistered/common/SignInForm.aspx" />
+      <siteMapNode redirect="true" url="~/LogIn.aspx" />
+    </siteMapNode>
+
+    <siteMapNode url="~/ReferalTermsAndConditions.aspx" title="Spread-The-Word Terms and Conditions" />
+    
+    <!-- Technical pages-->
+
+
+    <siteMapNode url="~/MonitorPage.aspx" />
+    <siteMapNode url="~/dev.aspx" />
+
+    <!-- Java script libraries -->
+    
+    <siteMapNode url="~/js/prototype.js" />
+    <siteMapNode url="~/js/scriptaculous.js" />
+    <siteMapNode url="~/js/Javascript.aspx" />
+	<siteMapNode url="~/js/ClickTrackerJs.aspx" />
+
+    <!--
+      The following nodes are needed even though they are covered by the resources providers
+      below because in dev, where the cms stuff is not set up, they throw errors
+      in the web site.
+    -->
+
+    <!-- Info -->
+
+    <siteMapNode url="~/Info/res_serv.html">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/ResumeCritique.aspx" />
+    </siteMapNode>
+
+  </siteMapNode>
+    
+</siteMap>

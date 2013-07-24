@@ -1,0 +1,113 @@
+﻿.emailjobad {
+	width : 100%;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.emailjobad > .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	line-height : 1.2em;
+	color : #464646;
+	margin : 0 0.3333333333333333em 0.5em;
+}
+.emailjobad > .title span {
+	color : #307EEC;
+}
+.emailjobad > .desc {
+	font-size : 1.75em;
+	color : #464646;
+	line-height : 1.2em;
+	margin : 0 0.3333333333333333em 1em;
+}
+.emailjobad .field .watermark .title {
+	width : 100%;
+}
+.emailjobad .buttons {
+	width : 100%;
+	float : left;
+}
+.emailjobad .buttons .wrapper {
+	width : 50%;
+}
+.emailjobad .buttons .button {
+	font-size : 2.25em;
+	font-weight : bold;
+	color : white;
+	width : 100%;
+	height : 2.2222222222222222em;
+	border-radius : 0.3333333333333333em;
+	text-shadow : 0 -0.0555555555555555em 0 rgba(0,0,0,0.4);
+	background-image : -webkit-gradient(linear, center top, center bottom, from(#8CBB0E), to(#437904));
+	background-image : -webkit-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -moz-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -o-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -ms-linear-gradient(top, #8CBB0E, #437904);
+	background-image : linear-gradient(to bottom, #8CBB0E, #437904);
+	-webkit-box-shadow : 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	-moz-box-shadow : 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	box-shadow: 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	border : 0.0833333333333333em solid #437904;
+	float : left;
+	text-align : center;
+	line-height : 2.25em;
+	cursor : pointer;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	text-decoration : none;
+}
+.emailjobad .textbox_field.read-only_field .watermark {
+	display : none;
+}
+.emailjobad .textbox_field .textbox_control input[readonly='readonly'] {
+	color : #8894A6;
+	-webkit-box-shadow : 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em white, 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em #9BA9BA inset;
+	-moz-box-shadow : 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em white, 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em #9BA9BA inset;
+	box-shadow : 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em white, 0.125em 0.125em 0.4166666666666667em 0.1666666666666667em #9BA9BA inset;
+	background: -moz-linear-gradient(top,  rgba(171,184,203,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(171,184,203,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(171,184,203,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(171,184,203,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(171,184,203,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(171,184,203,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abb8cb', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+.emailjobad .textbox_field .textbox_control .icon.tip {
+	width : 2.375em;
+	height : 2.4375em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconCorrect.png");
+	float : left;
+	margin-left : 30.625em;
+	margin-top : -3.6875em;
+	display : none;
+	position : relative;
+	z-index : 10;
+}
+.emailjobad .textbox_field .textbox_control.success .icon.tip {
+	display : block;
+}
+.emailjobad .textbox_field .textbox_control.error .icon.tip {
+	display : block;
+	background-image : url("../../images/device/IconIncorrect.png");
+}
+.emailjobad .succ {
+	font-size : 1.875em;
+	margin : 0 0.3333333333333333em;
+}
+.emailjobad .succ ul li {
+	color : #307EEC;
+	list-style-position : inside;
+}
+.emailjobad .succ ul li a {
+	font-weight : Bold;
+	color : #307EEC;
+	display : inline;
+}
+.emailjobad .succ ul li span {
+	color : #464646;
+}

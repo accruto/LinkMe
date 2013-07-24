@@ -1,0 +1,15 @@
+data_IntegratorUser_JobG8.sql
+alter_SavedJobSearch.sql
+alter_JobSearchResult.sql
+create_FAQCategory.sql
+create_FAQSubcategory.sql
+create_FrequentlyAskedQuestion.sql
+data_Category_Subcategory.sql
+data_FrequentlyAskedQuestion_Employers.sql
+data_FrequentlyAskedQuestion_Members.sql
+data_FrequentlyAskedQuestion_Security.sql
+create_ResumeEvent.sql
+alter_Resume.sql
+create_SearchableMember.sql
+alter_FrequentlyAskedQuestion.sql
+data_FeaturedEmployer.sql

@@ -1,0 +1,36 @@
+// AddIn.idl : IDL source for AddIn
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddIn.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(5E0390AB-8255-42B8-A9DE-F024CB872164),
+	version(1.0),
+	helpstring("LinkMe Outlook Tools 1.0 Type Library")
+]
+library LinkMeOutlookToolsLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(F8E31DA7-4606-46B7-96C4-AC0B406004A8),
+		helpstring("LinkMe Outlook AddIn")
+	]
+	coclass AddIn
+	{
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(BC85E1FD-78DA-431E-9612-763D76BC9849),
+		helpstring("LinkMe Outlook AddIn Events")
+	]
+	coclass SearchEvent
+	{
+		[default] interface IUnknown;
+	};
+};

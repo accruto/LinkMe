@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6D36443-2C53-4FB5-8CA4-EBD896A09833}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Query.Search.Engine</RootNamespace>
+    <AssemblyName>LinkMe.Query.Search.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bobo-browse-2.5.0, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\bobo-browse-2.5.0.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-codec-1.3, Version=1.3.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\commons-codec-1.3.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Host">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Host\bin\LinkMe.Framework.Host.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="lucene-core-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucene-core-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="lucene-misc-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucene-misc-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="lucene-queries-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucene-queries-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="lucene-snowball-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucene-snowball-2.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="lucene-spellchecker-2.9.4, Version=2.9.4.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucene-spellchecker-2.9.4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="lucid-kstem, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\lucid-kstem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitWorldIndex.cs" />
+    <Compile Include="BoostingDocumentBuilder.cs" />
+    <Compile Include="BoostingSimilarity.cs" />
+    <Compile Include="BoostingTokenFilter.cs" />
+    <Compile Include="ExpressionExtensions.cs" />
+    <Compile Include="Booster.cs" />
+    <Compile Include="IBooster.cs" />
+    <Compile Include="JavaExtensions.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\ContentHandler.cs" />
+    <Compile Include="JobAds\Search\JobAdSearchBooster.cs" />
+    <Compile Include="JobAds\Sort\ContentHandlers\ContentHandler.cs" />
+    <Compile Include="JobAds\Sort\JobAdSortBooster.cs" />
+    <Compile Include="LocationComparator.cs" />
+    <Compile Include="LuceneExtensions.cs" />
+    <Compile Include="Members\AnalyzerFactory.cs" />
+    <Compile Include="Members\ContentHandlers\CandidateStatusContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\CommunityContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\VisaStatusContentHandler.cs" />
+    <Compile Include="Members\MemberContent.cs" />
+    <Compile Include="Members\IContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\HasResumeContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\LastUpdatedContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\LocationContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\NameContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\ContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\DesiredJobTypesContentHandler.cs" />
+    <Compile Include="Members\ContentHandlers\EthnicStatusContentHandler.cs" />
+    <Compile Include="Members\FieldName.cs" />
+    <Compile Include="Members\ContentHandlers\IndustryContentHandler.cs" />
+    <Compile Include="Members\Indexer.cs" />
+    <Compile Include="Members\ContentHandlers\SalaryContentHandler.cs" />
+    <Compile Include="Members\MemberSearchBooster.cs" />
+    <Compile Include="Members\QueryBuilder.cs" />
+    <Compile Include="Members\Searcher.cs" />
+    <Compile Include="Members\MemberSearchService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecencyBoostingQuery.cs" />
+    <Compile Include="Resources\ContentHandlers\ContentHandler.cs" />
+    <Compile Include="Resources\ResourceSearchBooster.cs" />
+    <Compile Include="SeniorityIndexFieldHandler.cs" />
+    <Compile Include="solr\spelling\PossibilityIterator.cs" />
+    <Compile Include="solr\spelling\RankedSpellPossibility.cs" />
+    <Compile Include="solr\spelling\SpellCheckCorrection.cs" />
+    <Compile Include="solr\spelling\SpellingOptions.cs" />
+    <Compile Include="solr\spelling\QueryConverter.cs" />
+    <Compile Include="solr\spelling\SpellingQueryConverter.cs" />
+    <Compile Include="solr\spelling\SpellingResult.cs" />
+    <Compile Include="solr\util\HighFrequencyDictionary.cs" />
+    <Compile Include="solr\util\TermFreqIterator.cs" />
+    <Compile Include="SpecialsComparator.cs" />
+    <Compile Include="SpellCheckCollator.cs" />
+    <Compile Include="SpellCheckerWrapper.cs" />
+    <Compile Include="SpellCheckHandler.cs" />
+    <Compile Include="solr\analysis\BaseTokenFilterFactory.cs" />
+    <Compile Include="solr\analysis\BaseTokenizerFactory.cs" />
+    <Compile Include="solr\analysis\CharFilterFactory.cs" />
+    <Compile Include="solr\analysis\EnglishPorterFilterFactory.cs" />
+    <Compile Include="solr\analysis\KStemFilterFactory.cs" />
+    <Compile Include="solr\analysis\LowerCaseFilterFactory.cs" />
+    <Compile Include="solr\analysis\SnowballPorterFilterFactory.cs" />
+    <Compile Include="solr\analysis\SolrAnalyzer.cs" />
+    <Compile Include="solr\analysis\StopFilterFactory.cs" />
+    <Compile Include="solr\analysis\SynonymFilter.cs" />
+    <Compile Include="solr\analysis\SynonymFilterFactory.cs" />
+    <Compile Include="solr\analysis\SynonymMap.cs" />
+    <Compile Include="solr\analysis\TokenFilterFactory.cs" />
+    <Compile Include="solr\analysis\TokenizerChain.cs" />
+    <Compile Include="solr\analysis\TokenizerFactory.cs" />
+    <Compile Include="solr\analysis\WhitespaceTokenizerFactory.cs" />
+    <Compile Include="solr\analysis\WordDelimiterFilter.cs" />
+    <Compile Include="solr\analysis\WordDelimiterFilterFactory.cs" />
+    <Compile Include="solr\common\ResourceLoader.cs" />
+    <Compile Include="solr\common\ResourceLoaderImpl.cs" />
+    <Compile Include="solr\common\StrUtils.cs" />
+    <Compile Include="solr\util\CharArrayMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="solr\util\plugin\ResourceLoaderAware.cs" />
+    <Compile Include="SpecialsFilter.cs" />
+    <Compile Include="ZeroLastIntComparator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Query.csproj">
+      <Project>{DBD6F3AE-66A2-4631-94C8-634322E0E188}</Project>
+      <Name>Query</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\PhoneticFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\PhoneticFilterFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\CommonGramsFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\BufferedTokenStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\CommonGramsQueryFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="solr\analysis\CommonGramsFilterFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content.cs" />
+    <Compile Include="IAnalyzerFactory.cs" />
+    <Compile Include="IndustryFieldHandler.cs" />
+    <Compile Include="JobAds\Sort\IContentHandler.cs" />
+    <Compile Include="JobAds\Sort\ContentHandlers\CreatedTimeContentHandler.cs" />
+    <Compile Include="JobAds\Sort\ContentHandlers\IntegratorContentHandler.cs" />
+    <Compile Include="JobAds\Sort\ContentHandlers\JobTypesContentHandler.cs" />
+    <Compile Include="JobAds\Sort\ContentHandlers\SalaryContentHandler.cs" />
+    <Compile Include="JobAds\Sort\FieldName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobAds\Sort\Indexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobAds\Sort\JobAdSortContent.cs" />
+    <Compile Include="JobAds\Sort\Sorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobAds\Sort\JobAdSortService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobAds\Search\AnalyzerFactory.cs" />
+    <Compile Include="JobAds\Search\JobAdContent.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\CommunityContentHandler.cs" />
+    <Compile Include="JobAds\Search\IContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\CreatedTimeContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\JobTypesContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\FeaturedContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\IndustryContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\LocationContentHandler.cs" />
+    <Compile Include="JobAds\Search\ContentHandlers\SalaryContentHandler.cs" />
+    <Compile Include="JobAds\Search\EmployerContent.cs" />
+    <Compile Include="JobAds\Search\FieldName.cs" />
+    <Compile Include="JobAds\Search\Indexer.cs" />
+    <Compile Include="JobAds\Search\QueryBuilder.cs" />
+    <Compile Include="JobAds\Search\Searcher.cs" />
+    <Compile Include="JobAds\Search\JobAdSearchService.cs" />
+    <Compile Include="JobTypesFieldHandler.cs" />
+    <Compile Include="Members\ContentHandlers\IsContactableContentHandler.cs" />
+    <Compile Include="Members\FieldExtensions.cs" />
+    <Compile Include="Resources\AnalyzerFactory.cs" />
+    <Compile Include="Resources\IContentHandler.cs" />
+    <Compile Include="Resources\ContentHandlers\ItemTypeContentHandler.cs" />
+    <Compile Include="Resources\ContentHandlers\PopularityContentHandler.cs" />
+    <Compile Include="Resources\ContentHandlers\SubcategoryContentHandler.cs" />
+    <Compile Include="Resources\ContentHandlers\CreatedTimeContentHandler.cs" />
+    <Compile Include="Resources\FieldExtensions.cs" />
+    <Compile Include="Resources\FieldName.cs" />
+    <Compile Include="Resources\Indexer.cs" />
+    <Compile Include="Resources\QueryBuilder.cs" />
+    <Compile Include="Resources\ResourceContent.cs" />
+    <Compile Include="Resources\Searcher.cs" />
+    <Compile Include="Resources\ResourceSearchService.cs" />
+    <Compile Include="SearchFieldName.cs" />
+    <Compile Include="SearchService.cs" />
+    <Compile Include="SeniorityIndexQuery.cs" />
+    <Compile Include="solr\analysis\EdgeNGramTokenFilter.cs" />
+    <Compile Include="solr\analysis\EdgeNGramTokenFilterFactory.cs" />
+    <Compile Include="solr\analysis\ShingleFilter.cs" />
+    <Compile Include="solr\analysis\ShingleFilterFactory.cs" />
+    <Compile Include="TimestampFieldHandler.cs" />
+    <Compile Include="LocationFilter.cs" />
+    <Compile Include="LocationFieldHandler.cs" />
+    <Compile Include="Members\ContentHandlers\IsActivatedContentHandler.cs" />
+    <Compile Include="SalaryFieldHandler.cs" />
+    <Compile Include="solr\analysis\CommonGramsQueryFilterFactory.cs" />
+    <Compile Include="Unity\EngineConfigurator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

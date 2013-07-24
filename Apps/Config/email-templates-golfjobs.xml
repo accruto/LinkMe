@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberEmail">
+      <VerticalContentItem VerticalId="4e09ab28-27d5-41d6-9aa3-4a87b84413f6">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <br />Thanks,
+        <br />Your Career Networking Team
+        <br />
+        <br />For support please email
+        <a href="mailto:careers@pga.org.au">careers@pga.org.au</a>
+        <p>
+          This service brought to you by
+          <img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="LinkMe" /> and
+          <img src="<%=GetUrl(false, "~/themes/communities/pga/img/email-logo.gif")%>" alt="PGA" />
+        </p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="ActivationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="4e09ab28-27d5-41d6-9aa3-4a87b84413f6">
+        <Subject>Activate your golfjobs.com.au account</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  <img src="<%=GetUrl(false, "~/themes/communities/pga/img/banner.jpg")%>" />
+</p>
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  Welcome to golfjobs.com.au - your career and networking portal.
+</p>
+<p>
+  You recently joined with this email address. Please click on the link below to activate your account.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    Please activate your account
+  </a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

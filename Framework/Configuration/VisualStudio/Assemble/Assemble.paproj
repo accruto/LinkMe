@@ -1,0 +1,40 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{4f0992a5-b020-4969-a845-3cdb1d96938b}</ProjectGuid>
+    <Name>Sdk</Name>
+    <CatalogueFile>Module\LinkMe.Framework.Configuration.VisualStudio.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{C982FAE1-F1AE-4590-A708-7E1F3575FFE2}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Bin" />
+    <Folder Include="Bin\Templates" />
+    <Folder Include="Bin\Templates\ProjectItems" />
+    <Folder Include="Bin\Templates\ProjectItems\Configuration" />
+    <Folder Include="Bin\Templates\Projects" />
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\LinkMe.Framework.Configuration.VisualStudio.dll">
+      <Guid>{9cb45d57-7904-48bb-af46-62826e2ce7ef}</Guid>
+      <Link>Bin\LinkMe.Framework.Configuration.VisualStudio.dll</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\Templates\Projects\Configuration.acproj">
+      <Guid>{e3a6aaa0-8650-466c-8e73-245887e75c9c}</Guid>
+      <Link>Bin\Templates\Projects\Configuration.acproj</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\Templates\ProjectItems\Configuration\LinkMe Configuration File.acs">
+      <Guid>{f9aa8ff9-a02a-4e3c-b9cc-9678455b505b}</Guid>
+      <Link>Bin\Templates\ProjectItems\Configuration\LinkMe Configuration File.acs</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_user_profile_password_flags.sql,rollback_database_version_table.sql

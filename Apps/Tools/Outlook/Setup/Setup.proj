@@ -1,0 +1,23 @@
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ToolPath>..\..\..\External\lib\Wix\</ToolPath>
+    <OutputName Condition="$(OutputName)==''" >LinkMeToolsOutlook</OutputName>
+    <OutputType Condition="$(OutputType)==''" >package</OutputType>
+    <DefineConstants>Configuration=$(Configuration);Platform=$(Platform)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(BuildNumber) != ''">
+    <DefineConstants>$(DefineConstants);ProductVersion=$(BuildNumber)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(BuildNumberSuffix) != ''">
+    <DefineConstants>$(DefineConstants);ProductVersionSuffix=$(BuildNumberSuffix)</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Outlook.wxs"/>
+  </ItemGroup>
+
+  <Import Project="$(ToolPath)wix.targets"/>
+</Project>
+

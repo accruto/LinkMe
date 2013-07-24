@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Roles.Registration.EmailVerificationCommand" Collapsed="true">
+    <Position X="3" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQADAAAAAkAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Registration\EmailVerificationCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Registration.Data.RegistrationRepository" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAAEAAAAAAAAAAACAQABEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Registration\Data\RegistrationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Registration.IEmailVerificationCommand" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAgAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Registration\IEmailVerificationCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Registration.IRegistrationRepository" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAgAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Registration\IRegistrationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

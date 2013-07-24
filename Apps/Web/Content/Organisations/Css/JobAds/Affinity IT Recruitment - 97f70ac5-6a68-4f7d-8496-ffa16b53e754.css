@@ -1,0 +1,114 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, 
+#JobDescription table, #JobDescription th, #JobDescription td, 
+#JobDescription ul, #JobDescription li, 
+#JobDescription label, #JobDescription span {
+	color: #333;
+	background: transparent;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #fff url(affinity_images/affinity_top.jpg) center top no-repeat;
+	margin-bottom: 1em;
+	padding-top: 88px;
+	width: 458px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad center {
+	margin: 0 1.0em 1em 2em;	
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad center,
+#JobAd #JobDescription #Ad p {
+/* 	margin-bottom: 0; fix to compensate for spacer divs in prod data */
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad {
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	display: none;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts,
+   so can't narrow the div itself */
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	font-size: 200%;
+	margin: 1em;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	color: #d60b0b;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 90% !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	color: #000000;
+	font-weight: bold;
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+/* Fix to compensate for excessive spacers in prod data */
+#JobAd #JobDescription #Ad br {
+	display: none;
+}
+#JobAd #JobDescription #Ad div br {
+	display: block; /* counteract above for br in nested divs e.g. div#AdContactDetails */
+}
+
+#JobAd #JobDescription #Ad div#AdContactDetails {
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: url(affinity_images/affinity_footer.gif) center bottom no-repeat;
+	border: 1px solid #ccc;
+	border-top: none;
+	height: 150px;
+}

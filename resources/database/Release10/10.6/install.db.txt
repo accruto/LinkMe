@@ -1,0 +1,6 @@
+alter_Vertical_add_loginUrl.sql
+alter_RegisteredUser_loginId.sql
+create_ExternalUser.sql
+drop_ResumeFilter.sql
+data_EmployerExpiryEmail.sql
+data_EquivalentTerms.sql

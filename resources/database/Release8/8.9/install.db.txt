@@ -1,0 +1,44 @@
+; Email structure
+alter_SavedJobSearchAlert_drop_emailAddress.sql
+alter_SavedResumeSearchAlert_drop_emailAddress.sql
+drop_NetworkerEmailAddress.sql
+alter_EmailCategorySettings_rename_send.sql
+create_sp_EmailSetSendPlainTextOnly.sql
+create_sp_EmailSetCategorySuppress.sql
+
+; Email data
+data_EmailCategory_add_Newsletter.sql
+
+; Email migration
+data_SendPlainTextOnly_migrate.sql
+data_SendNewsletter_migrate.sql
+
+CreateGroupEventTypes.sql
+DropGroupEventTables.sql
+GroupEvent.sql
+GroupEvents.sql
+GroupEventCoordinator.sql
+GroupEventAttendee.sql
+GroupEventInvitation.sql
+
+; Location
+create_LocationAlias.sql
+data_LocationAlias.sql
+
+create_ResumeViewsByCandidate.sql
+create_ResumesViewedBySearcher.sql
+
+alter_ResumeFilter.sql
+create_UQ_ResumeFilter.sql
+
+; Communities
+data_communities_add_missing_content.sql
+data_Content_LinkMe_Front_Page.sql
+data_Community_BusinessSpectator.sql
+data_Content_BusinessSpectator.sql
+data_Community_TheRedTentWoman.sql
+data_Content_TheRedTentWoman.sql
+
+;Changes to GroupEvents
+alter_GroupEventContributor.sql
+alter_GroupEvents.sql

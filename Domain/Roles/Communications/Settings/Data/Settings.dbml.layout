@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Settings">
+  <DataContextMoniker Name="/SettingsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="66727cde-24dd-4140-808a-6c189454687b" absoluteBounds="0.5, 3.125, 2.875, 1.5785953776041666">
+      <DataClassMoniker Name="/SettingsDataContext/CommunicationCategorySettingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a50ae98a-36e1-4c93-81e1-4a13e5f1e000" absoluteBounds="0.515, 3.585, 2.8449999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6429f32-d2b3-402f-8298-a044648cbd7f" absoluteBounds="5, 0.5, 2.75, 1.3862939453125">
+      <DataClassMoniker Name="/SettingsDataContext/CommunicationDefinitionEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e94bf272-eb96-4ab6-9b39-c93b2599353c" absoluteBounds="5.015, 0.96, 2.7199999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e80d2ed8-da67-476a-b4e0-0389558699c3" absoluteBounds="5.375, 3, 3, 1.5785953776041666">
+      <DataClassMoniker Name="/SettingsDataContext/CommunicationDefinitionSettingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8024041-efcb-4ed2-82aa-c12ac0e5ec2f" absoluteBounds="5.39, 3.46, 2.9699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d36da051-0fc4-402b-831d-03a8f161f2e5" absoluteBounds="3.375, 5.25, 2.125, 1.3862939453125">
+      <DataClassMoniker Name="/SettingsDataContext/CommunicationSettingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84a04b1f-ad50-4a66-93a3-fdf64b5b6112" absoluteBounds="3.39, 5.71, 2.0949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 5.25); (4.375 : 3.91429768880208); (3.375 : 3.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SettingsDataContext/CommunicationSettingEntity/CommunicationSettingEntity_CommunicationCategorySettingEntity" />
+      <nodes>
+        <classShapeMoniker Id="d36da051-0fc4-402b-831d-03a8f161f2e5" />
+        <classShapeMoniker Id="66727cde-24dd-4140-808a-6c189454687b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5625 : 1.8862939453125); (6.5625 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SettingsDataContext/CommunicationDefinitionEntity/CommunicationDefinitionEntity_CommunicationDefinitionSettingEntity" />
+      <nodes>
+        <classShapeMoniker Id="f6429f32-d2b3-402f-8298-a044648cbd7f" />
+        <classShapeMoniker Id="e80d2ed8-da67-476a-b4e0-0389558699c3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.9062515 : 5.25); (4.9062515 : 3.78929768880208); (5.375 : 3.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SettingsDataContext/CommunicationSettingEntity/CommunicationSettingEntity_CommunicationDefinitionSettingEntity" />
+      <nodes>
+        <classShapeMoniker Id="d36da051-0fc4-402b-831d-03a8f161f2e5" />
+        <classShapeMoniker Id="e80d2ed8-da67-476a-b4e0-0389558699c3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="77847f5f-8b7c-49ad-b709-eda5cfd3adda" absoluteBounds="7.125, 5.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SettingsDataContext/NonMemberSettingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03566c1b-4362-4839-8881-9cb29c3d80bc" absoluteBounds="7.1400000000000006, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9bb22c56-dda2-482e-a5fd-abf13a2e6acc" absoluteBounds="0.625, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SettingsDataContext/CommunicationCategoryEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b37a19ee-ed92-42db-b2ac-a20d137057b2" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.625 : 2.65549967447917); (1.625 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SettingsDataContext/CommunicationCategoryEntity/CommunicationCategoryEntity_CommunicationCategorySettingEntity" />
+      <nodes>
+        <classShapeMoniker Id="9bb22c56-dda2-482e-a5fd-abf13a2e6acc" />
+        <classShapeMoniker Id="66727cde-24dd-4140-808a-6c189454687b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 1.19314697265625); (5 : 1.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SettingsDataContext/CommunicationCategoryEntity/CommunicationCategoryEntity_CommunicationDefinitionEntity" />
+      <nodes>
+        <classShapeMoniker Id="9bb22c56-dda2-482e-a5fd-abf13a2e6acc" />
+        <classShapeMoniker Id="f6429f32-d2b3-402f-8298-a044648cbd7f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

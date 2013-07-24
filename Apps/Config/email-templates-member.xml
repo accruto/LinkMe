@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberEmail">
+      <VerticalContentItem>
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <br />Thanks,
+        <br />Your LinkMe team
+        <br />
+        <br />For support please
+        <a href="<%=TinyUrls.Register(false, "~/contactus")%>">contact us</a>.
+        <p><img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="" /></p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <![CDATA[<%=Body%>
+Thanks,
+Your LinkMe team
+
+For support please contact us here
+<%=TinyUrls.Register(false, "~/contactus")%>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberCampaignEmail">
+      <VerticalContentItem>
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <![CDATA[<%=Body%>
+Thanks,
+Your LinkMe team
+
+For support please contact us here
+<%=TinyUrls.Register(false, "~/contactus")%>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="FriendInvitationConfirmationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=Invitee.FullName%> has joined your career network]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p><%=Invitee.FullName%> accepted your invitation to join your network.</p>
+<p>You can now see and contact people in <%=Invitee.FirstName%>'s own network.</p>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/login")%>">Log in</a>
+  now to see how your network has grown!
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="RepresentativeInvitationConfirmationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=Invitee.FullName%> has become your nominated representative]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  <%=Invitee.FullName%> has accepted your request for them to represent you
+  in fielding employer enquiries.
+  They will receive any communication from employers on your behalf.
+</p>
+<p>
+  You can change your representative any time
+  <a href="<%=TinyUrls.Register(true, "~/members/friends/ViewRepresentative.aspx")%>">here</a>.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ResumeAttachmentEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Your Resume.</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>As requested, attached is a copy of your resume.</p>
+<p>
+  With a fresh resume you're twice as likely to be found by employers
+  for your dream job.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/members/profile")%>">Update your resume now</a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ReactivationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Please verify your email address for your career network</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  In order to protect your privacy
+  we need you to verify that the email address you have supplied is correct.
+  You will not be able to access the full functionality of the web site
+  until this is done.
+</p>
+<p>
+  More importantly, employers may not be able to send possible job opportunities
+  to you if your email address is not verified.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    Please verify your email address now
+  </a>
+</p>
+<p>
+  If this link doesn't work, please copy and paste the following link
+  into your browser:
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    <%= TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode) %>
+  </a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+In order to protect your privacy we need you to verify that the email
+address you have supplied is correct. You will not be able to access the
+full functionality of the web site until this is done.
+
+More importantly, employers may not be able to send possible job
+opportunities to you if your email address is not verified.
+
+Please use the link below to verify your email address:
+
+<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ActivationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Welcome to LinkMe: please confirm your details</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  You recently joined LinkMe by either uploading your resume,
+  applying for a job, joining a group or joining a network.
+</p>
+<p>
+  Please
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    click here
+  </a>
+  to confirm your details.
+</p>
+<p>
+  If this link doesn't work, please copy and paste the following link
+  into your browser:
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    <%= TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode) %>
+  </a>
+</p>
+<p>
+  LinkMe is an online career network and resume database focused on you,
+  for the life of your career.
+  By having your resume on our site and your details up to date,
+  you have the potential to be contacted by the many recruiters
+  and employers searching for staff.
+</p>
+<p>
+  LinkMe is a quick and easy way to:
+  <ul>
+    <li>
+      Be contacted by potential employers for job opportunities you may
+      have otherwise missed<p />
+    </li>
+    <li>
+      Have jobs sent to you that match your profile<p />
+    </li>
+    <li>
+      Keep your resume updated and ready to use for the duration of
+      your career<p />
+    </li>
+    <li>
+      Make your resume either visible or invisible to employers<p />
+    </li>
+    <li>
+      Search and apply for jobs<p />
+    </li>
+    <li>
+      Network with friends and colleagues who can help you progress in
+      your career<p />
+    </li>
+    <li>
+      Access free career resources such as videos, sample resumes,
+      personality tests and suggested connections<p />
+    </li>
+    <li>
+      Keep your details private
+    </li>
+  </ul>
+</p>
+<p>
+  We look forward to helping you throughout the life of your career.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+You recently joined LinkMe by either uploading your resume, applying for
+a job, joining a group or joining a network.
+
+Please use this link to confirm your details:
+<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>
+
+LinkMe is an online career network and resume database focused on you,
+for the life of your career. By having your resume on our site and your
+details up to date, you have the potential to be contacted by the many
+recruiters and employers searching for staff.
+
+LinkMe is a quick and easy way to:
+
+    * Be contacted by potential employers for job opportunities you may
+      have otherwise missed
+    * Have jobs sent to you that match your profile
+    * Keep your resume updated and ready to use for the duration of your
+      career
+    * Make your resume either visible or invisible to employers
+    * Search and apply for jobs
+    * Network with friends and colleagues who can help you progress in
+      your career
+    * Access free career resources such as videos, sample resumes,
+      personality tests and suggested connections
+    * Keep your details private
+
+We look forward to helping you throughout the life of your career.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="VerificationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Please verify your email address for your career network</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  In order to protect your privacy
+  we need you to verify that the email address you have supplied is correct.
+</p>
+<p>
+  More importantly, employers may not be able to send possible job opportunities
+  to you if your email address is not verified.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/accounts/verification", "verificationCode", VerificationCode)%>">
+    Please verify your email address now
+  </a>
+</p>
+<p>
+  If this link doesn't work, please copy and paste the following link
+  into your browser:
+  <a href="<%=TinyUrls.Register(false, "~/accounts/verification", "verificationCode", VerificationCode)%>">
+    <%= TinyUrls.Register(false, "~/accounts/verification", "verificationCode", VerificationCode) %>
+  </a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+In order to protect your privacy we need you to verify that the email
+address you have supplied is correct.
+
+More importantly, employers may not be able to send possible job
+opportunities to you if your email address is not verified.
+
+Please use the link below to verify your email address:
+
+<%=TinyUrls.Register(false, "~/accounts/verification", "verificationCode", VerificationCode)%>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="PasswordReminderEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>New Password</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  As requested, your password has been reset.
+</p>
+<p>
+  Your login ID is <strong><%=LoginId%></strong>
+  <br/>
+  and your new temporary password is <strong><%=Password%></strong>
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/login")%>">Log in</a>
+  to access your account and update your password.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+As requested, your password has been reset.
+
+Your login ID is '<%=LoginId%>'
+and your new temporary password is '<%=Password%>'
+
+<a href="<%=TinyUrls.Register(true, "~/login")%>">Log in</a>
+to access your account and update your password.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ContactInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Personal network invitation</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi</p>
+<p>
+  <%=From.FullName%> has sent you a request to join their personal network.
+</p>
+<%if (CurrentJob != "" || ContactCount > 0) {%>
+<div style="padding-left: 30px; font-family: Arial, Helvetica, sans-serif;">
+  <p>
+    <%=From.FullName%>
+<%if (CurrentJob != "") {%>
+    <br />
+    <%=CurrentJob%>
+<%}%>
+<%if (ContactCount == 1) {%>
+    <br />
+    already has <%=ContactCount%> friend
+    in their network who may be able to help you in your career.
+<%} else if (ContactCount > 1) {%>
+    <br />
+    already has <%=ContactCount%> friends
+    in their network who may be able to help you in your career.
+<%}%>
+  </p>
+</div>
+<%}%>
+<p>
+  A profile on our network will help position your career for success.
+  1000s of employers are searching for talent like you.
+</p>
+<%if (DonationRecipient != "") {%>
+<p>We'll also donate <%=DonationAmount%> to the <%=DonationRecipient%> when you join.</p>
+<%}%>
+<%if (MessageText != "") {%>
+<p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/Join.aspx", "inviteId", Invitation.Id.ToString("n"))%>">Join <%=MakeNamePossessive(From.FirstName)%> network</a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="FriendInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Personal network invitation</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi <%=To.FirstName%></p>
+<p>
+  <%=From.FullName%> has sent you a request to join their personal network.
+</p>
+<%if (CurrentJob != "" || ContactCount > 0) {%>
+<div style="padding-left: 30px; font-family: Arial, Helvetica, sans-serif;">
+  <p>
+    <%=From.FullName%>
+<%if (CurrentJob != "") {%>
+    <br />
+    <%=CurrentJob%>
+<%}%>
+<%if (ContactCount == 1) {%>
+    <br />
+    already has <%=ContactCount%> friend
+    in their network who may be able to help you in your career.
+<%} else if (ContactCount > 1) {%>
+    <br />
+    already has <%=ContactCount%> friends
+    in their network who may be able to help you in your career.
+<%}%>
+  </p>
+</div>
+<%}%>
+<%if (MessageText != "") {%>
+<p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+<%if (ToIsActivated) {%>
+  <a class="major-action" href="<%=TinyUrls.Register(true, "~/members/friends/Invitations.aspx")%>">Respond to <%=MakeNamePossessive(From.FirstName)%> personal invitation</a>
+<%} else {%>
+  <a class="major-action" href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", InviteeVerificationCode, "isInvite", "true")%>">Reactivate
+  your account and respond to <%=MakeNamePossessive(From.FirstName)%> friend request</a>
+<%}%>
+</p>
+<p><strong>Did you know that 60% of jobs are found through people you 
+know?</strong></p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="RepresentativeInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Nominated representative invitation</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi <%=To.FirstName%></p>
+<p>
+  <%=From.FullName%> has sent you a request to represent them
+  and respond to enquiries from employers on their behalf.
+</p>
+<p>
+  By accepting this request you will receive any communication
+  sent by employers relating to employment opportunities for
+  <a href="<%=TinyUrls.Register(true, "~/members/friends/ViewFriend.aspx", "friendId", From.Id.ToString())%>">
+    <%=From.FullName%>
+  </a>.
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+<%if (ToIsActivated) {%>
+  <a class="major-action" href="<%=TinyUrls.Register(true, "~/members/friends/Invitations.aspx")%>">Respond to <%=MakeNamePossessive(From.FirstName)%> invitation</a>
+<%} else {%>
+  <a class="major-action" href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", InviteeVerificationCode, "isInvite", "true")%>">Reactivate
+  your account and respond to <%=MakeNamePossessive(From.FirstName)%> invitation</a>
+<%}%>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ContactCandidateEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=Subject%>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  <%=From.FullName%> of <%=Organisation.FullName%>
+  has found you in our network and has a job opportunity
+  you may be interested in.
+</p>
+<p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:
+  <br />
+  <%= DoNotEncode(Content) %>
+</p>
+<p>
+  If you are interested please reply to this email.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+<%=From.FullName%> of <%=Organisation.FullName%>
+has found you in our network and has a job opportunity
+you may be interested in.
+
+<%=MakeNamePossessive(From.FirstName)%> personal message:
+
+<%= ConvertHtmlToPlainText(Content) %>
+
+If you are interested please reply to this email.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="RepresentativeContactCandidateEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=Subject%>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  <%=From.FullName%> of <%=Organisation.FullName%>
+  has found <%=Representee.FullName%>
+  in our network and has a job opportunity
+  they may be interested in.
+</p>
+<p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:
+  <br />
+  <%=Content%>
+</p>
+<p>
+  If you are interested please reply to this email.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+<%=From.FullName%> of <%=Organisation.FullName%>
+has found <%=Representee.FullName%> in our network and has a job opportunity
+they may be interested in.
+
+<%=MakeNamePossessive(From.FirstName)%> personal message:
+
+<%= ConvertHtmlToPlainText(Content) %>
+
+If you are interested please reply to this email.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="JobSearchAlertEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[Job alert - <%=CriteriaText%>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<div style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;">
+<p>Dear <%=To.FirstName%>,</p>
+<p style="margin-bottom: 0.5em">
+    Please find listed below 
+    <%if (Matches != 1) {%>
+        <%if (Matches != Results.Count) {%>
+            top <%=Results.Count%> out of total
+        <%}%>
+        <strong><%=Matches%> new jobs</strong>
+    <%} else {%>
+        <strong>1 new job</strong>
+    <%}%>
+    that match your job search criteria:
+</p>
+<blockquote style="font-style: italic; margin-top: 0.5em;">
+    <%=DoNotEncode(CriteriaHtml)%>.
+</blockquote>
+<p style="margin-bottom: 0.5em">
+    Click
+    <a href="<%=TinyUrls.Register(false, "~/search/jobs", CriteriaQueryString)%>">here</a>
+    <%if (To.UserType == LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+    to view all results.
+    <%} else {%>
+    to view all results or
+    <a href="<%=TinyUrls.Register(true, "~/members/searches/saved")%>">here</a>
+    to refine your daily job alerts.
+    <%}%>
+</p>    
+<hr /> 
+<%foreach (LinkMe.Apps.Agents.Communications.Emails.MemberAlerts.JobSearchAlertEmailResult Result in Results) {%>
+    <p style="font-size: 11pt; margin-bottom: 0.5em;">
+        <a href="<%=TinyUrls.Register(false, "~/jobs/" + Result.JobAdId)%>" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+            <%=DoNotEncode(Result.Title)%>
+            <%if (Result.Location != "") {%>
+                , <%=Result.Location%>
+            <%}%>
+            <%if (Result.Salary != "") {%>
+                , <%=Result.Salary%>
+            <%}%>
+        </a>
+        <br />
+        <span style="font-size: 7pt; font-weight: bold;"><%=Result.PostedAge%> (<%=Result.PostedDate%>)</span>
+    </p>
+    <%if (Result.Digest != "") {%>
+        <p style="font-size: 9pt; margin-top: 0.5em; margin-bottom: 0.5em;">
+            <%=DoNotEncode(Result.Digest)%>
+        </p>
+    <%}%>
+    <%if (Result.Fragments != "") {%>
+        <p style="font-size: 8pt; margin-top: 0.5em; margin-bottom: 0.5em;">
+            <%=DoNotEncode(Result.Fragments)%>
+        </p>
+    <%}%>
+<%}%>
+<hr style="margin-top: 2em" /> 
+<%if (To.UserType == LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          If you wish you can
+          <a href="<%=TinyUrls.Register(false, "~/members/searches/" + SavedSearchId + "/delete")%>">unsubscribe</a>
+          from receiving this email.
+        </p>
+      </div>
+<%}%>
+</div>
+<!-- Saved job search <%=SavedSearchId%> -->
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="SuggestedJobsEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[New suggested jobs from LinkMe - <%=Timestamp%>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<div style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;">
+<p>Dear <%=To.FirstName%>,</p>
+<p style="margin-bottom: 0.5em">
+    We have identified 
+    <%if (TotalMatches != 1) {
+      if (TotalMatches > MaxMatches) {%>
+        <strong>more than <%=MaxMatches%> new jobs</strong>
+    <%} else {%>
+        <strong><%=TotalMatches%> new jobs</strong>
+    <%}} else {%>
+        <strong>1 new job</strong>
+    <%}%>
+    that appear to match your resume, profile, desired work locations and salary. 
+    Ensuring your profile data is complete and up-to-date allows us 
+    to provide you with the closest matching jobs.
+</p>
+<p style="margin-bottom: 0.5em">
+    Click
+    <a href="<%=TinyUrls.Register(true, "~/members/jobs/suggested")%>">here</a>
+    to view all suggested jobs or
+    <a href="<%=TinyUrls.Register(true, "~/members/profile")%>">here</a>
+    to edit your profile.
+</p>    
+<hr /> 
+<%foreach (LinkMe.Workflow.Components.PeriodicWorkflow.SuggestedJobs.SuggestedJobsEmailItem job in Jobs) {%>
+    <p style="font-size: 11pt; margin-bottom: 0.5em;">
+        <a href="<%=TinyUrls.Register(false, "~/jobs/" + job.JobAdId, "backToSearchType", "suggestedJobSearch")%>" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+            <%=DoNotEncode(job.Title)%>
+            <%if (job.Location != "") {%>
+                , <%=job.Location%>
+            <%}%>
+            <%if (job.Salary != "") {%>
+                , <%=job.Salary%>
+            <%}%>
+        </a>
+        <br />
+        <span style="font-size: 7pt; font-weight: bold;">Posted <%=job.PostedAge%> (<%=job.PostedDate%>)</span>
+    </p>
+    <%if (job.Digest != "") {%>
+        <p style="font-size: 9pt; margin-top: 0.5em; margin-bottom: 0.5em;">
+            <%=DoNotEncode(job.Digest)%>
+        </p>
+    <%}%>
+    <%if (job.Fragments != "") {%>
+        <p style="font-size: 8pt; margin-top: 0.5em; margin-bottom: 0.5em;">
+            <%=DoNotEncode(job.Fragments)%>
+        </p>
+    <%}%>
+<%}%>
+<hr style="margin-top: 2em" /> 
+</div>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ImportNewMemberEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Welcome to your career network</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  Welcome to Australia's leading career network.
+  Your details were provided to us (with your permission)
+  by <%=MemberDataSource%> in order to help you to better position
+  your career for success.
+  We've created a free account for you, with the following details:
+</p>
+<p><strong>Login ID:</strong> <%=To.EmailAddress%></p>
+<p><strong>Password:</strong> <%=Password%></p>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/members/profile")%>">Log in</a>
+  and edit your career profile.
+  With a fresh resume you're twice as likely to be found for your dream job.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/privacy")%>">Privacy Statement</a>
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/terms")%>">Terms of Use</a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="MemberMessageSentEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=From.FirstName%> sent you a message]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p><%=From.FirstName%> sent you a message.</p>
+<p>
+  Subject: <%=MessageSubject%>
+</p>
+<p>
+  <%=MessageText%>
+</p>
+<p>
+  <br />
+  <br />
+  Follow this link to
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/messaging/ViewThread.aspx", "threadId", ThreadId.ToString("n"))%>">reply</a>.
+  <br />
+  Report as
+  <a href="<%=TinyUrls.Register(true, "~/members/messages/reportspam", "messageId", MessageId.ToString("n"))%>">spam</a>.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="SendJobToFriendEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[<%=JobAd.Title%>: An interesting job opportunity for you to look at]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi <%=ToDisplayName%></p>
+<p>
+  <%=FromDisplayName%> has found an interesting job 
+  opportunity and thought that you should see it.
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <%=FromDisplayName%>'s personal message:
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  View the 
+  <a href="<%=TinyUrls.Register(false, "~/jobs/" + JobAd.Id)%>"><%=JobAd.Title%></a>
+  job and apply now.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupFriendInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[Join the <%=Group.Name%> group]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  <%=From.FullName%> would like to invite you to join the <%=Group.Name%> group.
+</p>
+<p>
+  <strong>Group description:</strong>
+  <br/>
+  <%=Group.Description%>
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <strong><%=MakeNamePossessive(From.FirstName)%> message:</strong>
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/ViewGroup.aspx", "invitationId", Invitation.Id.ToString("n"))%>">Log in</a>
+  to join the <%=Group.Name%> group.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupContactInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[Join the <%=Group.Name%> group]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi,</p>
+<p>
+  <%=From.FullName%> would like to invite you to join the <%=Group.Name%> group.
+</p>
+<p>
+  <strong>Group description:</strong>
+  <br />
+  <%=Group.Description%>
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <strong><%=MakeNamePossessive(From.FirstName)%> message:</strong>
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  To join this group you must first create a profile.
+</p>
+<p>
+  Follow this
+  <a href="<%=TinyUrls.Register(false, "~/Join.aspx", "groupInvitationId", Invitation.Id.ToString("n"))%>">link</a>
+  to create a profile after which you will be automatically
+  registered as a group member and directed to the group page.
+</p>
+<p>
+  If you have already registered,
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/ViewGroup.aspx", "groupId", Group.Id.ToString("n"))%>">log in</a>
+  to join the <%=Group.Name%> group.
+</p>
+<p>
+  In addition to becoming part of our groups,
+  a profile can help your career and allow prospective employers to find you.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupInvitationRequestEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject><![CDATA[Request for invitation to join <%= Group.Name %>]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  I would like to join your group "<%= Group.Name %>" and am requesting an invitation to join.
+</p>
+<p>
+  To send me an invitation, please click the link below.
+</p>
+<p>
+  Thanks,<br />
+  <%= From.FirstName %>
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/InviteFriendsToGroup.aspx", "requestedInvitationId", Invitation.Id.ToString("n")) %>">Send invitation</a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupEventInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>
+          <![CDATA[You have been invited to the event '<%=Event.Name%>']]>
+        </Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi</p>
+<p>
+  You have been invited to the event <%=Event.Name%> by <%=From.FullName%>.
+</p>
+<p>
+  It starts on <%=Event.Time.Start.Value.ToString("d")%> at <%=Event.Time.Start.Value.ToString("t")%> and ends on <%=Event.Time.End.Value.ToString("d")%> at <%=Event.Time.End.Value.ToString("t")%>.
+</p>
+<% if(!String.IsNullOrEmpty(Event.Description)) { %><p>
+  Description: <%= Event.Description %>
+</p>
+<br/>
+<% } %>
+<% if(!String.IsNullOrEmpty(MessageText)) { %><p>
+  <%=MakeNamePossessive(From.FirstName)%> personal message:<br/><%=MessageText%>
+</p>
+<br/>
+<% } %>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/events/ViewEvent.aspx", "invitationId", Invitation.Id.ToString("n"))%>">View event</a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="CandidateLookingConfirmationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Your LinkMe status: Please confirm that you are still Actively Looking for Work</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  Dear <%=To.FirstName%>,
+</p>
+<p>
+  You are currently listed on LinkMe as 'Actively Looking for Work'.
+  To provide employers with your most accurate work status you should either:
+</p>
+<ol>
+  <li>
+    Confirm your
+    <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update", "status", "ActivelyLooking")%>">Actively Looking for Work</a>
+    status, or
+    <p />
+  </li>
+  <li>
+    <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update")%>">Change your work status</a>
+    to reflect your current situation, or
+    <p />
+  </li>
+  <li>
+    Do nothing and your work status will be changed automatically to
+    'Not Looking but Happy to Talk'.
+  </li>
+</ol>
+<p>
+  By ensuring your work status is up to date,
+  you increase your chances of being found and contacted by employers.
+  Employers and recruiters can search for Immediately Available or active jobseekers,
+  and can make their decisions to contact based on this information.
+</p>
+<p>
+  Please note: if you confirm your Actively Looking for Work status,
+  this will need to be confirmed on a monthly basis.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+You are currently listed on LinkMe as 'Actively Looking for Work'.
+To provide employers with your most accurate work status you should either:
+
+   1. Confirm your 'Actively Looking for Work' status using this link:
+      <%=TinyUrls.Register(true, "~/members/profile/status/update", "status", "ActivelyLooking")%>
+      
+   2. Change your work status using this link
+      <%=TinyUrls.Register(true, "~/members/profile/status/update")%>
+
+   3. Do nothing and your work status will be changed automatically to
+      'Not Looking but Happy to Talk'.
+      
+By ensuring your work status is up to date,
+you increase your chances of being found and contacted by employers.
+Employers and recruiters can search for Immediately Available or active jobseekers,
+and can make their decisions to contact based on this information.
+
+Please note: if you confirm your Actively Looking for Work status,
+this will need to be confirmed on a monthly basis.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="CandidatePassiveNotificationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Your LinkMe work status has been automatically updated</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  Dear <%=To.FirstName%>,
+</p>
+<p>
+  Your work status on LinkMe has been changed from 'Actively Looking for Work'
+  to 'Not Looking but Happy to Talk'.
+  This means that an employer who views your resume may think that you are no longer looking for work,
+  and so may not contact you for opportunities.
+</p>
+<p>
+  If this is not accurate, you can
+  <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update")%>">change your work status</a>
+  to:
+</p>
+<ol>
+  <li>'Actively Looking for Work', or<p /></li>
+  <li>'Immediately Available', or<p /></li>
+  <li>'Not Looking for Work'</li>
+</ol>
+<p>
+  Please note that if you indicate that you are Immediately Available
+  or Actively Looking for Work,
+  your status will have to be confirmed regularly.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+Your work status on LinkMe has been changed from 'Actively Looking for Work'
+to 'Not Looking but Happy to Talk'.
+This means that an employer who views your resume may think that you are no longer looking for work,
+and so may not contact you for opportunities.
+
+If this is not accurate, you can use this link
+    <%=TinyUrls.Register(true, "~/members/profile/status/update")%>
+    
+to change your work status to:
+
+   1. 'Actively Looking for Work', or
+
+   2. 'Immediately Available', or
+
+   3. 'Not Looking for Work'
+
+Please note that if you indicate that you are Immediately Available
+or Actively Looking for Work,
+your status will have to be confirmed regularly.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="CandidateAvailableConfirmationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Your LinkMe status: Please confirm that you are still Immediately Available for work</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  Dear <%=To.FirstName%>,
+</p>
+<p>
+  You are currently listed on LinkMe as 'Immediately Available for Work'.
+  To provide employers with your most accurate work status you should either:
+</p>
+<ol>
+  <li>
+    Confirm you are still
+    <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update", "status", "AvailableNow")%>">Immediately Available</a>, or
+    <p />
+  </li>
+  <li>
+    <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update")%>">Change your work status</a>
+    to reflect your current situation, or
+    <p />
+  </li>
+  <li>
+    Do nothing and your work status will be automatically changed to
+    'Actively Looking for Work'.
+  </li>
+</ol>
+<p>
+  By ensuring your work status is up to date,
+  you increase your chances of being found and contacted by employers.
+  Employers and recruiters can search for Immediately Available or active jobseekers,
+  and can make their decisions to contact based on this information.
+</p>
+<p>
+  Please note: if you confirm your Immediately Available status,
+  this will need to be confirmed on a weekly basis.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+You are currently listed on LinkMe as 'Immediately Available for Work'.
+To provide employers with your most accurate work status you should either:
+
+   1. Confirm you are still 'Immediately Available' using this link
+      <%=TinyUrls.Register(true, "~/members/profile/status/update", "status", "AvailableNow")%>
+
+   2. Change your work status using this link
+      <%=TinyUrls.Register(true, "~/members/profile/status/update")%>
+
+   3. Do nothing and your work status will be automatically changed to
+      'Actively Looking for Work'.
+      
+By ensuring your work status is up to date,
+you increase your chances of being found and contacted by employers.
+Employers and recruiters can search for Immediately Available or active jobseekers,
+and can make their decisions to contact based on this information.
+
+Please note: if you confirm your Immediately Available status,
+this will need to be confirmed on a weekly basis.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="CandidateLookingNotificationEmail" Master="MemberEmail">
+      <VerticalContentItem>
+        <Subject>Your LinkMe work status has been automatically updated</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  Dear <%=To.FirstName%>,
+</p>
+<p>
+  Your work status on LinkMe has been changed from 'Immediately Available' to 'Actively Looking for Work'.
+  This means that when employers find your resume,
+  they may assume that though you are looking for work,
+  you may need to provide a notice period to your current employer.
+</p>
+<p>
+  If this is not accurate, you can
+  <a href="<%=TinyUrls.Register(true, "~/members/profile/status/update")%>">change your work status</a>
+  to:
+</p>
+<ol>
+  <li>'Immediately Available', or<p /></li>
+  <li>'Not Looking but Happy to Talk', or<p /></li>
+  <li>'Not Looking for Work'</li>
+</ol>
+<p>
+  Please note that if you indicate that you are Immediately Available
+  or Actively Looking for Work,
+  your status will have to be confirmed regularly.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+        <ViewContentItem MimeType="text/plain">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Dear <%=To.FirstName%>,
+
+Your work status on LinkMe has been changed from 'Immediately Available' to 'Actively Looking for Work'.
+This means that when employers find your resume,
+they may assume that though you are looking for work,
+you may need to provide a notice period to your current employer.
+
+If this is not accurate, you can use this link
+    <%=TinyUrls.Register(true, "~/members/profile/status/update")%>
+to change your work status to:
+
+   1. 'Immediately Available', or
+
+   2. 'Not Looking but Happy to Talk', or
+
+   3. 'Not Looking for Work'
+
+Please note that if you indicate that you are Immediately Available or Actively Looking for Work,
+your status will have to be confirmed regularly.
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

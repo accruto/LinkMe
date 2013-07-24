@@ -1,0 +1,2248 @@
+﻿.top-bar, .rightside .topbuttons .emaillayer .top-bar, .bottom-bar, .left-edge, .right-edge, .point, .ribbons, .emailbutton, .applybutton, .divider, .icon, .newicon, .textbox-left, .textbox-right, .mandatory, .sendbutton, .cancelbutton, .alljobsbutton, .CallToActionOverlay .dialog-title, .CallToActionOverlay .bg .right-side .bg, .checkbox, .sendmejobsbyemail, .loginandsendmejobsbyemail, .seemorejobslikethis, .alertcreated, .Casual .usernamearrow, .resume_field .browse-holder .browse-button, .help-icon, .createmylinkmeprofile, .alerticon, .listicon, .CompleteProfile .progressbar .bg, .CompleteProfile .progressbar .fg, .CompleteProfile .completemyprofilenow, .radiobutton, .textarea-top, .textarea-bottom, .ui-slider-handle, .expressapply, .externalexpressapply, .leftcorner, .rightcorner, .yes, .cancel, .loginbutton, .forgotpassword .icon, .loginandapply, .backbutton, .closedjob, .main-content.closed .togglecontent, .main-content.closed .togglecontent .togglebutton, .ui-dialog .ui-dialog-content.learnmoredialog, .okbutton, .dropdown-scrollbar .ui-slider-handle, .jobadquestions #send {
+    background-image : url("../images/members/jobad/jobad.png");
+}
+
+#main-body {
+	width : 960px;
+}
+#form-container fieldset {
+	border : none;
+	padding : 0px;
+}
+
+#left-sidebar div, #left-sidebar span, #main-body div, #main-body span, #main-body label {
+	font : 12px Arial;
+	color : black;
+	float : left;
+}
+
+.jobviewed {
+	width : 696px;
+	margin : -20px 0px 15px 0px;
+}
+.jobviewed .jobindex {
+	display : none;
+}
+.jobviewed .viewed .icon {
+	background-image : url("../images/members/jobad/IconViewed.png");
+	width : 15px;
+	height : 10px;
+	margin : 3px 5px 0px 0px;
+}
+#main-body .jobviewed .viewed {
+	float : right;
+}
+.main-content {
+	width : 710px;
+}
+.main-content.closed {
+	width : 712px;
+}
+.main-content .titlebar {
+	background-image : url("../images/members/jobad/TitleBarBg.png");
+	width : 696px;
+	height : 88px;
+}
+.isnew {
+	background-image : url("../images/members/jobad/IsNew.png");
+	width : 42px;
+	height : 42px;
+	margin : -3px -42px 0px -3px;
+	position : relative;
+}
+.main-content .titlebar .previous, .main-content .titlebar .next {
+	background-image : url("../images/members/jobad/NavButton.png");
+	width : 36px;
+	height : 56px;
+	float : left;
+	cursor : default;
+	display : none;
+}
+.main-content .titlebar .previous {
+	background-position : 0px -112px;
+}
+.main-content .titlebar .previous.active {
+	background-position : 0px 0px;
+	cursor : pointer;
+}
+.main-content .titlebar .previous.active:hover {
+	background-position : 0px -56px;
+}
+.main-content .titlebar .next {
+	background-position : -36px -112px;
+}
+.main-content .titlebar .next.active {
+	background-position : -36px 0px;
+	cursor : pointer;
+}
+.main-content .titlebar .next.active:hover {
+	background-position : -36px -56px;
+}
+.main-content .titlebar .jobtype, .suggestedjobs .suggestedjob .jobtype {
+	background-image : url("../images/members/jobad/JobTypes.png");
+	width : 40px;
+	height : 35px;
+	margin : 12px 10px 0px 8px;
+}
+.main-content .titlebar .jobtype.PartTime {
+	background-position : 0px -35px;
+}
+.main-content .titlebar .jobtype.Contract {
+	background-position : 0px -70px;
+}
+.main-content .titlebar .jobtype.Temp {
+	background-position : 0px -105px;
+}
+.main-content .titlebar .jobtype.JobShare {
+	background-position : 0px -140px;
+}
+.main-content .titlebar .jobtype.None {
+	background-position : 0px -175px;
+}
+#main-body .main-content .titlebar > .title h1 {
+	font : Bold 16px Arial;
+	width : 622px;
+	margin-top : 18px;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	overflow : hidden;
+	height : 34px;
+}
+.main-content .titlebar .subtypes {
+	width : 145px;
+	margin : 10px 12px 0px 2px;
+}
+#main-body .main-content .titlebar .subtypes span {
+	font : 11.25px Verdana, Arial;
+	color : #333333;
+	float : right;
+	margin : -1px 4px 0px 0px;
+}
+.main-content .titlebar .subtypes .icon {
+	background-image : url("../images/members/jobsearch/jobaditem/SubJobTypes.png");
+	width : 18px;
+	height : 12px;
+	margin-right : -1px;
+}
+.main-content .titlebar .subtypes .icon.hide {
+	display : none;
+}
+.main-content .titlebar .subtypes .icon.FullTime.active {
+	background-position : 0px 0px;
+}
+.main-content .titlebar .subtypes .icon.PartTime.active {
+	background-position : -18px 0px;
+}
+.main-content .titlebar .subtypes .icon.Contract.active {
+	background-position : -36px 0px;
+}
+.main-content .titlebar .subtypes .icon.Temp.active {
+	background-position : -54px 0px;
+}
+.main-content .titlebar .subtypes .icon.JobShare.active {
+	background-position : -72px 0px;
+}
+.main-content .titlebar .subtypes .icon.FullTime {
+	background-position : 0px -12px;
+}
+.main-content .titlebar .subtypes .icon.PartTime {
+	background-position : -18px -12px;
+}
+.main-content .titlebar .subtypes .icon.Contract {
+	background-position : -36px -12px;
+}
+.main-content .titlebar .subtypes .icon.Temp {
+	background-position : -54px -12px;
+}
+.main-content .titlebar .subtypes .icon.JobShare {
+	background-position : -72px -12px;
+}
+.main-content .titlebar .viewed, .main-content .titlebar .applied {
+	width : 82px;
+	margin-top : 7px;
+}
+.main-content .titlebar .viewed .icon, .main-content .titlebar .applied .icon {
+	background-image : url("../images/members/jobsearch/jobaditem/StatusIcons.png");
+	width : 20px;
+	height : 17px;
+}
+#main-body .main-content .titlebar .viewed .text, #main-body .main-content .titlebar .applied .text {
+	font : 11.25px Verdana, Arial;
+	margin-top : 2px;
+	color : #333333;
+}
+#main-body .main-content .titlebar.notloggedin .applied .text {
+	color : #A0A0A0;
+}
+.main-content .titlebar .viewed .icon {
+	background-position : -20px 0px;
+	margin : 2px 3px 0px -2px;
+}
+.main-content .titlebar .viewed .icon.active {
+	background-position : 0px 0px;
+}
+.main-content .titlebar .applied .icon {
+	background-position : -20px -17px;
+	margin : 0px 3px 0px -2px;
+}
+.main-content .titlebar .applied .icon.active {
+	background-position : 0px -17px;
+}
+.main-content .titlebar .notes {
+	margin-top : 9px;
+}
+.main-content .titlebar .notes .icon {
+	background-image : url("../images/members/jobsearch/jobaditem/ActionIcons.png");
+	width : 15px;
+	height : 14px;
+	background-position : -53px -38px;
+	margin : 0px 5px 0px 0px;
+}
+.main-content .titlebar.notloggedin .notes .icon {
+	background-position : -53px -8px;
+}
+#main-body .main-content .titlebar .notes .text {
+	font : 11.25px Verdana, Arial;
+	color : #779EF5;
+	margin-right : 5px;
+	text-decoration : underline;
+	cursor : pointer;
+}
+#main-body .main-content .titlebar .notes .count {
+	font : 11.25px Verdana, Arial;
+	color : #A0A0A0;
+}
+#main-body .main-content .titlebar.notloggedin .notes .text {
+	color : #A0A0A0;
+	text-decoration : none;
+	cursor : auto;
+}
+.main-content .titlebar.notloggedin .notes .count {
+	display : none;
+}
+.main-content .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArgAAAABCAYAAAA1mt27AAAAOElEQVRIS+3QwQkAIAwEwZMrx3f6h3yTr+UErUPYKWFWZ94doZkRGGCAAQYYYIABBhj4dcC2TpUejF0JUUcOf70AAAAASUVORK5CYII=);
+	background-repeat : repeat-y;
+	width : 696px;
+}
+.main-content .bottom-bar {
+	background-position : 0px -6px;
+	width : 696px;
+	height : 4px;
+}
+
+.job-title {
+	margin-top : -4px;
+}
+.job-title .left-edge {
+	background-position : -698px 0px;
+	width : 4px;
+	height : 63px;
+}
+.job-title .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA/CAYAAAAhZaJUAAAAnElEQVQYV2XQ0QmDQBAEUAeSCtJ/FdNDilAURUVROVFO8VBM9hajIZmPx+zXwiAIghteEuz7zi+2bSOUdV3/cM4RblmI5WKe5fTM00RM1h5Y3+w4CsNAjJ5B6XvBGKI/MV1HmLYlOqVpiNbT1PWHqiJqpSyJSimKgzLPiULJMiFND3LflCxJhDgm0h+iiEguwpCIT+TlEzLYw3N/A1Y30NS9cauqAAAAAElFTkSuQmCC);
+	background-repeat : repeat-x;
+	height : 63px;
+	width : 688px;
+}
+.job-title .right-edge {
+	background-position : -704px 0px;
+	width : 4px;
+	height : 63px;
+}
+#main-body .job-title .title {
+	font : Bold 16px Arial;
+	width : 688px;
+	margin : 15px 0px 0px 12px;
+}
+#main-body .job-title .title h1 {
+	width : 680px;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	overflow : hidden;
+}
+#main-body .job-title .location {
+	font : 14px Arial;
+	width : 688px;
+	margin : 0px 0px 0px 12px;
+}
+
+.summary {
+	margin : 0px 0px 0px 1px;
+}
+.summary .bg {
+	background-image : url("../images/members/jobad/SummaryBg.png");
+	background-repeat : repeat-x;
+	width : 694px;
+	height : 229px;
+}
+.summary .logo-item {
+    width: 694px;
+    position: absolute;
+}
+.summary .logo {
+    float: right;
+}
+.summary .item 
+{
+	height : 38px;
+	width : 694px;
+}
+.summary.with-logo .item 
+{
+	height : 38px;
+	width : 469px;
+}
+.summary .item.bulletpoints {
+	height : auto;
+	width : 694px;
+}
+#main-body .summary .item .title {
+	font-weight : bold;
+	width : 110px;
+	margin : 12px 0px 0px 12px;
+}
+#main-body .summary .item .desc {
+	margin-top : 12px;
+}
+.summary .item .bulletpoints {
+	margin-left : 20px;
+	list-style : none;
+}
+.summary .item .bulletpoints .point {
+	background-position : -698px -66px;
+	width : 9px;
+	height : 9px;
+	margin : 4px 10px 0px 0px;
+}
+.summary .item .bulletpoints li {
+	font : Bold 12px Arial;
+}
+
+.main-content .divider {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8DwSMDEDAeO7Gvf8AOnYHg9CNbdQAAAAASUVORK5CYII=);
+	background-repeat : repeat-x;
+	width : 696px;
+	height : 3px;
+}
+.main-content .bg .content {
+	padding : 20px 10px 10px 20px;
+}
+.main-content.closed .bg > .content {
+	display : none;
+}
+.main-content .content li {
+	float : left;
+	width : 640px;
+}
+#main-body .main-content .content li, #main-body .main-content .content div, #main-body .main-content .content span {
+	float : none;
+	font : inherit;
+}
+.main-content .content div {
+	width : 660px;
+}
+.main-content .divider.ad-and-ribbon {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAEklEQVQIW2M8e/Tof0YE8R8IAIZ0DgP8gc5GAAAAAElFTkSuQmCC);
+	background-repeat : repeat-x;
+	width : 696px;
+	height : 4px;
+	margin-top : 30px;
+}
+.main-content.closed .divider.ad-and-ribbon {
+	margin-top : 0px;
+}
+.ribbons {
+	background-position : -1px -78px;
+	width : 711px;
+	height : 66px;
+	margin : 10px 0px 0px -6px;
+	position : relative;
+	z-index : 5;
+}
+.ribbons.halfsize {
+	width : 343px;
+	margin-right : 368px;
+}
+.ribbons.closed {
+	background-position : -5px -1220px;
+	width : 335px;
+	margin-right : 376px;
+}
+.ribbons.halfsize.closed {
+	display : none;
+}
+#main-body .ribbons div, #main-body .ribbons span {
+	font : Bold 17px "Myriad Pro", Arial;
+	color : white;
+	line-height : 21px;
+}
+.ribbons .job-title {
+	margin : 14px 0px 0px 53px;
+	overflow : hidden;
+}
+.ribbons.closed .job-title {
+	display : none;
+}
+#main-body .ribbons .right {
+	float : right;
+	width : 261px;
+	text-align : center;
+	margin : 18px 6px 0px 0px;
+}
+#main-body .ribbons.closed .right {
+	float : left;
+	margin : 20px 6px 0px 50px;
+}
+.ribbons .right span {
+	text-align : center;
+	width : 259px;
+}
+.ribbons .right .linkmejobs {
+	background-position : -621px -25px;
+	width : 70px;
+	height : 23px;
+}
+#main-body #JobAd div {
+	float : none;
+}
+#JobAd {
+	margin : 10px 0px 0px 1px;
+}
+.rightside {
+	width : 230px;
+}
+.rightside .topbuttons .top-bar, .rightside .suggestedjobs .top-bar {
+	background-image : url("../images/members/jobad/SideBarTitleBg.png");
+	width : 230px;
+}
+.rightside .topbuttons .top-bar {
+	height : 108px;
+}
+.rightside .topbuttons .backbutton {
+	background-position : -290px -63px;
+	width : 153px;
+	height : 12px;
+	margin : -87px 0px 0px 38px;
+	cursor : pointer;
+}
+.rightside .topbuttons .backbutton.newsearch {
+	background-position : -450px -63px;
+	width : 114px;
+	height : 15px;
+	margin-left : 58px;
+}
+.rightside .topbuttons .actions {
+	margin : -52px 0px 0px 1px;
+}
+.rightside .topbuttons .actions .icon {
+	background-image : url("../images/members/jobad/ActionIcons.png");
+	height : 52px;
+	cursor : pointer;
+}
+.rightside .topbuttons .actions .icon.folder {
+	width : 46px;
+}
+.rightside .topbuttons .actions .icon.folder:hover, .rightside .topbuttons .actions .icon.folder.selected {
+	background-position : 0px -52px;
+}
+.rightside .topbuttons .actions.notloggedin .icon.folder {
+	background-position : 0px -104px;
+	cursor : default;
+}
+.rightside .topbuttons .actions .icon.print {
+	background-position : -46px -0px;
+	width : 45px;
+}
+.rightside .topbuttons .actions .icon.print:hover {
+	background-position : -46px -52px;
+}
+.rightside .topbuttons .actions .icon.email {
+	background-position : -91px -0px;
+	width : 46px;
+}
+.rightside .topbuttons .actions .icon.email:hover, .rightside .topbuttons .actions .icon.email.selected {
+	background-position : -91px -52px;
+}
+.rightside .topbuttons .actions .icon.download {
+	background-position : -137px -0px;
+	width : 47px;
+}
+.rightside .topbuttons .actions .icon.download:hover {
+	background-position : -137px -52px;
+}
+.rightside .topbuttons .actions .icon.hide {
+	background-position : -184px -0px;
+	width : 44px;
+}
+.rightside .topbuttons .actions .icon.hide:hover, .rightside .topbuttons .actions .icon.hide.selected {
+	background-position : -184px -52px;
+}
+.rightside .topbuttons .actions.notloggedin .icon.hide {
+	background-position : -184px -104px;
+	cursor : default;
+}
+.menupan.folder .menuitem.favourite .icon {
+	background-image : url("../images/members/jobsearch/jobaditem/ActionIcons.png");
+}
+.menupan.folder .menuitem.folder .icon {
+	background-image : url("../images/universal/action-icons/folder.png");
+}
+.menupan {
+	border : 1px solid #B4BCC8;
+	width : 276px;
+	background-color : #F3F4F6;
+	position : absolute;
+	display : none;
+	z-index : 1;
+}
+.menupan .divider {
+	width : 276px;
+	height : 1px;
+	background-color : #D3D8DF;
+	background-image : none;
+}
+.menupan .divider.white {
+	background-color : #FFFFFF;
+	background-image : none;
+}
+.menupan.folder {
+	top : 117px;
+}
+.menupan .menuitem, .menupan.folder .menuitem.favourite:hover {
+	border : 1px solid #F3F4F6;
+	background-color : #F3F4F6;
+	width : 266px;
+	height : 23px;
+	cursor : pointer;
+	margin : 2px 0px 2px 4px;
+}
+.menupan .menuitem:hover {
+	border : 1px solid #214263;
+	background-color : #638AB0;
+}
+.menupan .menuitem.disabled, .menupan .menuitem.favourite.disabled:hover {
+	cursor : default;
+}
+.menupan.bulk .menuitem .icon, .menupan.folder .menuitem.favourite .icon {
+	width : 31px;
+	height : 23px;
+}
+.menupan.bulk .menuitem.folder .icon, .menupan.folder .menuitem.favourite .icon {
+	background-position : -3px -34px;
+}
+.menupan.folder .menuitem.folder .icon {
+	width : 15px;
+	height : 15px;
+	margin : 4px 8px 4px 8px;
+}
+#main-body .menupan .menuitem .text, #main-body .menupan .menuitem.favourite:hover .text {
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+	line-height : 23px;
+}
+#main-body .menupan .menuitem .text span, #main-body .menupan.folder .menuitem.favourite:hover .text span {
+	float : none;
+	font : 12.75px Verdana, Arial;
+	color : #333333;
+}
+#main-body .menupan .menuitem .text span.desc, #main-body .menupan.folder .menuitem.favourite:hover .text span.desc {
+	color : #4477AA;
+}
+#main-body .menupan .menuitem:hover .text, #main-body .menupan .menuitem:hover .text span {
+	color : #FFFFFF;
+}
+#main-body .menupan .menuitem:hover .text span.desc {
+	color : #C8CBCC;
+}
+#main-body .menupan .menuitem.favourite .text, #main-body .menupan .menuitem.favourite .text span, #main-body .menupan .menuitem.favourite .text span.desc, #main-body .menupan .menuitem.favourite:hover .text, #main-body .menupan.folder .menuitem.favourite:hover .text span, #main-body .menupan.folder .menuitem.favourite:hover .text span.desc {
+	font-weight : bold;
+}
+.menupan.note {
+	background-color : #FFFED5;
+	top : 97px;
+	left : 314px;
+}
+.main-content.closed .menupan.note {
+	top : 177px;
+}
+.menupan.note[action='bulk'] .add, .menupan.note[action='single'] .row.empty, .menupan.note[action='bulk'] .row.empty, .menupan.note[action='single'] .editarea, .menupan.note .row .title .buttons {
+	display : none;
+}
+.menupan.note[action='bulk'] .editarea, .menupan.note[action='bulk'] .row, .menupan.note[action='single'] .row,  .menupan.note .row:hover .title .buttons {
+	display : block;
+}
+.menupan.note .icon {
+	background-image : url("../images/members/jobsearch/NoteIcons.png");
+	width : 13px;
+	height : 14px;
+	margin : 0px 5px 0px 5px;
+}
+.menupan.note .icon.edit {
+	background-position : -13px 0px;
+}
+.menupan.note .icon.delete {
+	background-position : -26px 0px;
+}
+.menupan.note .add {
+	margin : 7px 0px 16px 7px;
+	width : 269px;
+}
+.menupan.note .row {
+	margin-bottom : 10px;
+}
+.menupan.note .row .title {
+	width : 260px;
+	height : 14px;
+	margin-left : 12px;
+}
+#main-body .menupan.note .buttons {
+	float : right;
+}
+#main-body .menupan.note .add .text, #main-body .menupan.note .buttons .text {
+	font : 11px Verdana, Arial;
+	color : #2160EF;
+	text-decoration : underline;
+	cursor : pointer;
+}
+.menupan.note .editarea #Notes {
+	resize : none;
+	width : 255px;
+	height : 80px;
+	margin : -6px 0px 0px 7px;
+}
+.menupan.note[action='bulk'] .editarea #Notes {
+	margin-top : 10px;
+}
+#main-body .menupan.note .title .date {
+	font : Bold 10px Verdana, Arial;
+}
+#main-body .menupan.note .content {
+	font : 10px Verdana, Arial;
+	width : 260px;
+	margin : 12px;
+}
+.rightside .topbuttons > .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOYAAAABCAYAAADKK9KBAAAAKElEQVQoU2NkYGAw//79+4m/f/8CmaNgNARGQ2AgQ4CZmZmBk5PTAgB9JQc5f7QsngAAAABJRU5ErkJggg==);
+	background-repeat : repeat-y;
+	width : 230px;
+}
+.careeroneapply {
+	width : 230px;
+}
+.careeroneapply .applybutton, .rightside .topbuttons .bg .applybutton, .managedexternallyapply .joinarea .applybutton {
+	background-position : 0px -1387px;
+	width : 185px;
+	height : 48px;
+	margin : 7px 0px 0px 23px;
+	cursor : pointer;
+	display : block;
+	float : left;
+}
+.careeroneapply .applybutton:hover, .rightside .topbuttons .bg .applybutton:hover, .managedexternallyapply .joinarea .applybutton:hover {
+	background-position : 0px -1335px;
+}
+.careeroneapply .text {
+	width : 180px;
+	margin : 10px 0px 10px 34px;	
+}
+.rightside .topbuttons .bottom-bar, .rightside .suggestedjobs .bottom-bar, .sponsor .bottom-bar {
+	background-position : 0px -209px;
+	width : 230px;
+	height : 5px;
+}
+.rightside .suggestedjobs .top-bar {
+	height : 56px;
+	margin-top : 10px;
+}
+.rightside .suggestedjobs .icon {
+	background-position : 5px -225px;
+	width : 220px;
+	height : 20px;
+	margin : -37px 0px 0px -3px;
+}
+.rightside .suggestedjobs > .bg, .sponsor > .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOYAAAABCAYAAADKK9KBAAAAKElEQVQoU2NkYGAw//79+4m/f/8CmaNgNARGQ2AgQ4CZmZmBk5PTAgB9JQc5f7QsngAAAABJRU5ErkJggg==);
+	background-repeat : repeat-y;
+	width : 230px;
+}
+.rightside .suggestedjobs .suggestedjob .divider {
+	background-position : 0px -266px;
+	width : 184px;
+	height : 2px;
+	margin-left : 23px;
+}
+.rightside .suggestedjobs .suggestedjob .bg {
+	background-image : url("../images/members/jobad/SuggestedJobBg206.png");
+	width : 206px;
+	height : 60px;
+	margin : 7px 0px 8px 12px;
+	cursor : pointer;
+}
+#main-body .suggestedjobs .suggestedjob .title, .CompleteProfile .suggestedjobs .suggestedjob .title {
+	font-size : 12px;
+	font-weight : bold;
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	width : 145px;
+	float : left;
+	display : block;
+	text-align : left;
+	margin-top : 8px;
+}
+#main-body .suggestedjobs .suggestedjob .location, .CompleteProfile .suggestedjobs .suggestedjob .location {
+	color : #547694;
+	font-size : 10px;
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	width : 145px;
+}
+#main-body .suggestedjobs .suggestedjob .postdate, .CompleteProfile .suggestedjobs .suggestedjob .postdate {
+	color : #809CAD;
+	width : 145px;
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	font-size : 10px;
+}
+.sponsor {
+	width : 230px;
+}
+.sponsor .top-bar {
+	background-position : 0px -270px;
+	width : 230px;
+	height : 32px;
+	margin-top : 10px;
+}
+.rightside.closed .sponsor .top-bar {
+	margin-top : 0px;
+}
+.sponsor .bg #google-ads {
+	margin : 5px 0px 2px 35px;
+}
+#horizontal-google-ads 
+{
+    width: 728px;
+    margin-top: 20px;
+    margin-left: 116px;
+}
+.main-content .afterribbon > .divider {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAGUlEQVQIW2NctPmIHAs7+8NgR8NPbCzM3gA0XQU7kfGeRgAAAABJRU5ErkJggg==);
+	background-repeat : repeat-y;
+	width : 4px;
+	margin : -10px 0px -3px 0px;
+	position : relative;
+}
+.main-content.closed .afterribbon > .divider {
+	display : none;
+}
+.afterribbon .applyarea {
+	margin-top : 20px;
+	width : 346px;
+}
+.afterribbon .suggestedjobs {
+	margin-top : 20px;
+	width : 346px;
+}
+.main-content.closed .afterribbon .suggestedjobs {
+	margin : 0px 0px 10px 0px;
+}
+.afterribbon .suggestedjobs .suggestedjob {
+	width : 326px;
+	margin-left : 10px;
+}
+.afterribbon .suggestedjobs .suggestedjob .divider, .CompleteProfile .suggestedjobs .suggestedjob .divider {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEUlEQVQIW2O8efPmf8b/QAAAJGEHiYZ4p2wAAAAASUVORK5CYII=);
+	background-repeat : repeat-x;
+	width : 310px;
+	height : 2px;
+	margin-left : 10px;
+}
+.afterribbon .suggestedjobs .suggestedjob .bg, .CompleteProfile .suggestedjobs .suggestedjob .bg, .appliedpage .suggestedjobs .suggestedjob .bg {
+	background-image : url("../images/members/jobad/SuggestedJobBg316.png");
+	width : 316px;
+	height : 60px;
+	margin : 7px 0px 8px 12px;
+	cursor : pointer;
+}
+#main-body .afterribbon .suggestedjobs .suggestedjob .title, .CompleteProfile .suggestedjobs .suggestedjob .title, #main-body .afterribbon .suggestedjobs .suggestedjob .location, .CompleteProfile .suggestedjobs .suggestedjob .location, #main-body .afterribbon .suggestedjobs .suggestedjob .postdate, .CompleteProfile .suggestedjobs .suggestedjob .postdate {
+	width : 255px;
+}
+#main-body .afterribbon .applyarea .popupsetting {
+	margin-left : 20px;
+	font-size : 10px;
+	width : 300px
+}
+.afterribbon .applyarea.AppliedForExternally .careeroneapply {
+	margin : 0px 58px 0px 58px;
+}
+.rightside .emaillayer {
+	display : none;
+	position : absolute;
+	top : 117px;
+	z-index : 100;
+	width : 293px;
+}
+body.IE7 .rightside .emaillayer {
+	top : 180px;
+	margin-left : -230px;
+}
+.rightside .emaillayer .top-bar {
+	background-position : -285px -145px;
+	width : 294px;
+	height : 117px;
+}
+.rightside .emaillayer > .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAS4AAAABCAYAAABgzUMUAAAAR0lEQVQ4T2PcsufEf2cbQ4Y/f/4yjILREBgNgdEQoCQEWFiYGfYeOc/g42JhATTnNxT/QmL/gbJBBQ4y/gfkw/B/IBuEcQIAMA0aAt/S1XMAAAAASUVORK5CYII=);
+	background-repeat : repeat-y;
+	width : 294px;
+}
+.rightside .emaillayer .bottom-bar {
+	background-position : -285px -265px;
+	width : 294px;
+	height : 25px;
+}
+.rightside .emaillayer .fields {
+	width : 277px;
+	margin : 10px 0px 0px 10px;
+}
+.control .textbox-left {
+	background-position : -413px -25px;
+	width: 5px;
+	height : 34px;
+}
+.read-only_field .control .textbox-left {
+	background-position : -402px -25px;
+	width : 4px;
+}
+.control.error .textbox-left {
+	background-position : -610px -25px;
+	width : 4px;
+}
+.control .textbox-bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAiCAYAAACeLbMRAAAAK0lEQVQIW2PcdOTKf8anr97/Z3z/6et/xu8/f/1n/Pv333/G/0AwWAiQIwFDXoW3Coe8SwAAAABJRU5ErkJggg==);
+	width : 232px;
+	height : 34px;
+	background-repeat : repeat-x;
+}
+.read-only_field .control .textbox-bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAiCAYAAACeLbMRAAAALElEQVQIW2PcdOTKf8aLN+//Z7z54Ml/xgdPX/xnfPri9X/G56/eDBoC5EgAo7B9zIZGcfsAAAAASUVORK5CYII=);
+	width : 233px;
+}
+.control.error .textbox-bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAiCAYAAACeLbMRAAAAI0lEQVQIW2O8q+b5nxFBfHv34T/jn0+f/zP++/JlgAlUpwEAxZd62vdMFToAAAAASUVORK5CYII=);
+	with : 233px;
+}
+.control .textbox-right {
+	background-position : -420px -25px;
+	width: 3px;
+	height : 34px;
+}
+.read-only_field .control .textbox-right {
+	background-position : -409px -25px;
+}
+.control.error .textbox-right {
+	background-position : -616px -25px;
+	width : 4px;
+}
+.field .control input[type='text'], .field .control input[type='password'] {
+	color : #464646;
+	height : 32px;
+	width : 221px;
+	border : none;
+	background : none;
+	padding-left : 14px;
+	font : 12px Arial;
+	margin-left : -3px;
+}
+body.IE8 .field .control input[type='text'], body.IE7 .field .control input[type='text'], body.IE8 .field .control input[type='password'], body.IE7 .field .control input[type='password'] {
+	padding : 9px 0px 9px 14px;
+	height : 16px;
+}
+.field {
+	margin-bottom : 5px;
+}
+#main-body .field label {
+	font : Bold 12px Verdana;
+	width : 277px;
+	margin-bottom : 5px;
+}
+.mandatory {
+	background-position : -210px -25px;
+	width : 11px;
+	height : 11px;
+	margin : 5px 5px 0px 0px;
+}
+.rightside .emaillayer .fields .sendbutton, .jobadquestions #send {
+	background-position : -231px -25px;
+	width : 80px;
+	height : 27px;
+	cursor : pointer;
+	margin : 10px 10px 10px 17px;
+}
+.rightside .emaillayer .fields .sendbutton:hover {
+	background-position : -265px -760px;
+}
+.rightside .emaillayer .fields .cancelbutton {
+	background-position : -180px -820px;
+	width : 80px;
+	height : 27px;
+	cursor : pointer;
+	margin : 10px 0px 10px 0px;
+}
+.rightside .emaillayer .fields .field .help {
+	margin-left : 17px;
+}
+#main-body .rightside .emaillayer .err-info {
+	width : 250px;
+	color : red;
+	margin-bottom : 10px;
+	background-color : #FDE3E2;
+	padding : 5px 5px 5px 5px;
+}
+.rightside .emaillayer .succ-info {
+	width : 250px;
+	margin-bottom : 10px;
+	background-color : #E4FEE1;
+	padding : 5px 5px 5px 5px;
+}
+#main-body .field .error-msg, .Occasional .error-msg, .Casual .error-msg {
+	font : Bold 12px Arial;
+	color : red;
+	width : 240px;
+	margin-left : 20px;
+}
+.appliedpage .popupwarning {
+	width : 944px;
+	height : 58px;
+	margin-bottom : 10px;
+	border : 1px solid #E4D45D;
+	background-color : #FEFBE2;
+	border-radius : 4px;
+}
+.appliedpage .popupwarning .icon.warning {
+	background-image : url("../images/members/jobad/IconWarning.png");
+	width : 17px;
+	height : 14px;
+	margin : 15px 10px 10px 15px;
+}
+#main-body .appliedpage .popupwarning span {
+	font : 14px Arial;
+	color : #464646;
+	margin-bottom : 5px;
+}
+.appliedpage .popupwarning .application {
+	margin-top : 10px;
+}
+#main-body .appliedpage .popupwarning span a {
+	font-weight : Bold;
+	color : #307EEC;
+}
+#main-body .appliedpage .popupwarning .icon.close {
+	float : right;
+	margin-top : -25px;
+}
+.appliedpage .applied {
+	width : 696px;
+}
+.appliedpage .sponsor {
+	margin : -10px 0px 0px 20px;
+}
+#main-body .appliedpage .applied .top-bar {
+	background-position : 0px -305px;
+	width : 696px;
+	height : 122px;
+	text-align : center;
+	padding-top : 15px;
+	font : Bold 24px Arial;
+	color : white;
+}
+.appliedpage .applied .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArgAAAABCAYAAAA1mt27AAAAS0lEQVRIS+3QoQ3AMAwF0V95Dy8QnP2l0JRmB+9gWS4uD7wb4MB73rV6zKmqEiGAAAII3BWICLm7MlPdfXfODQEEEEDgJ2BmOnvrA6VwElF9mNYoAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+	width : 696px;	
+}
+.appliedpage .applied .bottom-bar {
+	background-position : 0px -445px;
+	width : 696px;
+	height : 5px;
+}
+.appliedpage .applied .links, .appliedpage .applied .suggestedjobs {
+	width : 348px;
+}
+.appliedpage .applied .contact {
+	margin : -80px 5px 0px 5px;
+	width : 686px;
+	text-align : center;
+	text-overflow : ellipsis;
+	overflow : hidden;
+	white-space : nowrap;
+}
+.appliedpage .applied .links .linkholder {
+	width : 294px;
+	margin-left : 50px;
+	cursor : pointer;
+}
+.appliedpage .applied .links .linkholder .icon {
+	width : 30px;
+	height : 32px;
+	margin-bottom : 7px;
+}
+.appliedpage .applied .links .linkholder.jobad .icon {
+	background-position : -585px -145px;
+}
+.appliedpage .applied .links .linkholder.searchresult .icon {
+	background-position : -585px -185px;
+}
+.appliedpage .applied .links .linkholder.newjobsearch .icon {
+	background-position : -585px -224px;
+}
+.appliedpage .applied .links .linkholder.profile .icon {
+	background-position : -585px -264px;
+}
+#main-body .appliedpage .applied .links .linkholder .link {
+	margin : 7px 0px 0px 10px;
+	font-weight : Bold;
+	text-decoration : underline;
+	color : #15E;
+	line-height : 30px;
+}
+.appliedpage .applied .suggestedjobs .suggestedjob {
+	margin-left : 10px;
+	width : 330px;
+}
+#main-body .appliedpage .suggestedjobs .suggestedjob .titleline .title {
+	width : 285px;
+}
+#main-body .appliedpage .suggestedjobs .suggestedjob .titleline .title.isnew {
+	width : 245px;
+}
+#main-body .appliedpage .suggestedjobs .suggestedjob .location {
+	width : 153px;
+}
+#main-body .appliedpage .suggestedjobs .suggestedjob .postdate {
+	width : 153px;
+}
+#main-body .appliedpage .suggestedjobs .suggestedjob .content {
+	width : 320px;
+	padding : 0px;
+}
+.appliedpage .suggestedjobs .alljobsbutton, .CompleteProfile .suggestedjobs .alljobsbutton {
+	background-position : -425px -25px;
+	width : 181px;
+	height : 28px;
+	margin : 10px 0px 20px 90px;
+	cursor : pointer;
+	float : left;
+	display : block;
+}
+.appliedpage .suggestedjobs .alljobsbutton:hover, .CompleteProfile .suggestedjobs .alljobsbutton:hover {
+	background-position : -755px -25px;
+}
+.ui-widget-overlay {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	background : #aaaaaa url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABkCAYAAAD0ZHJ6AAAAr0lEQVRoQ+3SwQkAIBAEMe2/k2tSi5iPSPwPSG73zJz18Ns+GK9DMAIuggSrQO1tkGAVqL0NEqwCtbdBglWg9jZIsArU3gYJVoHa2yDBKlB7GyRYBWpvgwSrQO1tkGAVqL0NEqwCtbdBglWg9jZIsArU3gYJVoHa2yDBKlB7GyRYBWpvgwSrQO1tkGAVqL0NEqwCtbdBglWg9jZIsArU3gYJVoHa2yDBKlB7G/xe8AJs0itItGnYbwAAAABJRU5ErkJggg==) 50% 50% repeat-x;
+	opacity : .30;
+	filter : Alpha(Opacity=30);
+	z-index : 3;
+}
+.Occasional-dialog.ui-widget-content, .Casual-dialog.ui-widget-content, .CompleteProfile-dialog.ui-widget-content {
+	border : none;
+	background : none;
+}
+.Occasional-dialog .ui-dialog-titlebar, .Casual-dialog .ui-dialog-titlebar, .CompleteProfile-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.CallToActionOverlay {
+	border : none;
+	display : none;
+}
+.CallToActionOverlay.ui-widget-content, .ui-dialog .CallToActionOverlay.ui-dialog-content {
+	border : none;
+	background : none;
+	padding : 0;
+	overflow : hidden;
+}
+.CallToActionOverlay div, .CallToActionOverlay label {
+	float : left;	
+}
+.CallToActionOverlay .top-bar {
+	background-position : -1px -455px;
+	width : 751px;
+	height : 12px;
+}
+.CallToActionOverlay > .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuQAAAABCAYAAACWsrt9AAAAJ0lEQVRIS+3QMQEAAAgDINc/tNpiD0Qg+wYDBgwYMGDAgAEDBioDByWaA/5eYWvlAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+	width : 740px;
+}
+.CallToActionOverlay .bottom-bar {
+	background-position : -1px -470px;
+	width : 751px;
+	height : 12px;
+}
+.CallToActionOverlay .left-edge, .CallToActionOverlay .right-edge {
+	background-image : none;
+}
+.CallToActionOverlay .left-edge .vline, .CallToActionOverlay .right-edge .vline {
+	width : 1px;
+}
+.CallToActionOverlay .left-edge .vline div, .CallToActionOverlay .right-edge .vline div {
+	width : 1px;
+	height : 1px;
+}
+.CallToActionOverlay .left-edge .vline.vline-1 {
+	width : 3px;
+}
+.CallToActionOverlay .left-edge .vline.vline-1 div {
+	width : 3px;
+	height : 1px;
+}
+.CallToActionOverlay.Occasional .dialog-title, .CallToActionOverlay.CompleteProfile .dialog-title {
+	background-position : -5px -485px;
+	width : 742px;
+	height : 72px;
+	margin : -8px 0px 0px -1px;
+}
+.CallToActionOverlay.Casual .dialog-title {
+	background-position : -5px -995px;
+	width : 742px;
+	height : 72px;
+	margin : -8px 0px 0px -1px;
+}
+.CallToActionOverlay .dialog-title .close-icon {
+	float : right;
+	width : 8px;
+	height : 8px;
+	margin : 7px 7px 0px 0px;
+	cursor : pointer;
+}
+.CallToActionOverlay .bg .left-side, .CallToActionOverlay .bg .right-side {
+	width : 370px;
+}
+.CallToActionOverlay .bg .right-side .bg {
+	background-position : -350px -560px;
+	width : 389px;
+	height : 389px;
+	margin : -50px 0px 0px -10px;
+	padding-left : 10px;
+}
+.CallToActionOverlay.Casual .bg .right-side .bg {
+	background-position : -350px -1070px;
+	margin-top : -80px;
+}
+.Occasional .bg .right-side .jobsbyemail {
+	font : Bold 16px Arial;
+	color : #63819B;
+	width : 370px;
+	margin-top : 125px;
+}
+.Occasional .bg .right-side .jobsbyemail.viewjobonly {
+	margin-top : 180px;
+}
+.Occasional .bg .right-side .searchtitle {
+	font : 12px Arial;
+	width : 370px;
+}
+.Occasional .bg .right-side .search-criteria {
+	width : 265px;
+	border : 1px solid #F4E0E0;
+	background-color : #FDF4F4;
+	padding : 10px 10px 10px 10px;
+	margin : 10px 0px 0px 42px;
+	text-align : left;
+}
+.Occasional .bg .right-side .search-criteria span {
+	font : Italic 12px Arial;
+	display : inline;
+	position : static;
+	text-align : left;
+}
+.Occasional .bg .right-side .search-criteria .search-criterion-name {
+	font-weight : bold;
+	font-style : italic;
+}
+.Occasional .bg .right-side .search-criteria .hidepart {
+	display : none;
+}
+.Occasional .bg .right-side .search-criteria .moreorlessholder {
+	cursor : pointer;
+	color : #1155EE;
+}
+.Occasional .bg .right-side .search-criteria .moreorlesstext {
+	font-style : normal;
+	text-decoration : underline;
+}
+.checkbox {
+	background-position : -190px -60px;
+	width : 16px;
+	height : 17px;
+	cursor : pointer;
+}
+.checkbox:hover {
+	background-position : -575px -60px;
+}
+.checkbox.checked, .checkbox.checked:hover, .error .checkbox.checked, .error .checkbox.checked:hover {
+	background-position : -207px -60px;
+}
+.error .checkbox {
+	background-position : -226px -59px;
+	width : 18px;
+	height : 18px;
+}
+.Occasional .left-side .withoutprofile {
+	display : block;
+}
+.Occasional .left-side .withprofile {
+	display : none;
+}
+.CallToActionOverlay .field {
+	margin : 0px 0px 25px 20px;
+}
+.Occasional .left-side .field.checkbox_field {
+	margin-left : 125px;
+}
+body.IE7 .Occasional .left-side .field.checkbox_field.CreateProfile_field {
+	margin-left : 111px;
+}
+.Occasional .left-side .field.checkbox_field.AlreadyHaveProfile_field {
+	margin-top : 20px;
+}
+.Occasional .left-side .field.checkbox_field.AlreadyHaveProfile_field .AlreadyHaveProfile_control {
+	width : 246px;
+}
+.CallToActionOverlay .field label {
+	width : 75px;
+}
+.Occasional .left-side .field label[for='AlreadyHaveProfile'], .Occasional .left-side .field label[for='CreateProfile'] {
+	width : 209px;
+	margin-left : 10px;
+}
+body.IE9 .Occasional .left-side .field label[for='AlreadyHaveProfile'] {
+	width : 210px;
+}
+body.IE7 .Occasional .left-side .field.checkbox_field.AlreadyHaveProfile_field .AlreadyHaveProfile_control label {
+	width : 210px;
+}
+body.IE7 .Occasional .left-side .field.checkbox_field.CreateProfile_field .CreateProfile_control label {
+	width : 203px;
+}
+body.IE7 .Occasional .left-side .field.checkbox_field.CreateProfile_field > label {
+	width : 0px;
+}
+.Occasional .left-side .field label[for='CreateProfile'] {
+	margin-top : -5px;
+}
+.Occasional .left-side .field label[for='CreateProfile'] .learnmore, #main-body .managedexternallyapply .joinarea .CreateProfile_field label[for='CreateProfile'] .learnmore, body.IE7 .Occasional .left-side .CreateProfile_field .control label .learnmore {
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+	float : none;
+	font : Bold 12px Verdana;
+}
+.CallToActionOverlay .field.textbox_field label {
+	margin-top : 10px;
+}
+.Casual .left-side .field label[for='JoinConfirmPassword'] {
+	margin-top : 0px;
+}
+.Occasional .left-side .sendmejobsbyemail {
+	background-position : -5px -570px;
+	width : 170px;
+	height : 28px;
+	cursor : pointer;
+	margin-left : 125px;
+}
+.Occasional .left-side .sendmejobsbyemail:hover {
+	background-position : -180px -570px;
+}
+.Occasional .left-side .loginandsendmejobsbyemail {
+	background-position : -5px -605px;
+	width : 230px;
+	height : 28px;
+	cursor : pointer;
+	margin-left : 125px;
+}
+.Occasional .left-side .loginandsendmejobsbyemail:hover {
+	background-position : -5px -635px;
+}
+.Occasional .left-side .seemorejobslikethis {
+	display : none;
+	background-position : -5px -665px;
+	width : 170px;
+	height : 28px;
+	cursor : pointer;
+	margin-left : 150px;
+	float : left;
+}
+.Occasional .left-side .seemorejobslikethis:hover {
+	background-position : -5px -695px;
+}
+.CallToActionOverlay .alertcreated {
+	display : none;
+	background-position : -0px -950px;
+	width : 730px;
+	height : 40px;
+	margin : 20px 0px 20px 5px;
+}
+.Casual .alertcreated {
+	margin-bottom : 0px;
+}
+.CallToActionOverlay .alertcreated .desc {
+	font : Bold 13px Arial;
+	float : left;
+	margin : 12px 0px 0px 40px;
+}
+.CallToActionOverlay .alertcreated .alertaddress {
+	font : Bold 13px Arial;
+	color : red;
+	float : left;
+	margin : 12px 0px 0px 5px;
+}
+.Casual .topfields {
+	width : 380px;
+	margin-bottom : 20px;
+}
+.Casual .topfields .field:first-child {
+	margin-top : 20px;
+}
+.Casual .usernamearrow {
+	background-position : -5px -725px;
+	width : 158px;
+	height : 33px;
+	margin : -60px 0px 0px 380px;
+}
+.Casual .usernamearrow.error {
+	margin-top : -73px;
+}
+.Casual .divider {
+	height : 1px;
+	width : 741px;
+	background-color : #D9D9D9;
+}
+.Casual .addpassword {
+	font : Bold 16px Arial;
+	margin : 20px 0px 20px 25px;
+}
+.Casual .resume_field {
+	width : 370px;
+}
+.Casual .resume_field .control .textbox-bg {
+	width : 135px;
+}
+.resume_field .browse-holder .browse-button {
+	background-position : -185px -665px;
+	width : 91px !important;
+	height : 37px;
+	cursor : pointer;
+	overflow : hidden;
+	display : block;
+	margin : -1px 0px 0px 7px;
+	position : absolute;
+}
+.resume_field .browse-holder .browse-button:hover {
+	background-position : -185px -705px;
+}
+.resume_field .browse-holder .browse-button input {
+	filter: alpha(opacity=0);
+	-o-transform: translate(250px, -50px) scale(1);
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	-moz-transform: translate(69px, 7px) scale(1.7);
+	border-color: transparent;
+	border-style: solid;
+	border-width: 0 0 100px 200px;
+	cursor: pointer;
+	direction: rtl;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left : -1000px;
+}
+body.FF .resume_field .browse-holder .browse-button input {
+	left : 0px;
+}
+body.IE7 .resume_field .browse-holder .browse-button input {
+	margin : 0px 0px 0px -426px;
+	border-top: 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-bottom : 17px solid transparent;
+	border-left : 200px solid transparent;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	direction: ltr;
+	opacity: 0;
+	left : 0px;
+	right : 0px;
+}
+.help-icon {
+	background-position : -165px -725px;
+	width : 14px;
+	height : 14px;
+	margin : 8px 0px 0px 11px;
+	cursor : pointer;
+}
+.help-icon[helpfor='Resume'] {
+	position : absolute;
+	left : 365px;
+}
+.managedexternallyapply .help-icon[helpfor='Resume'], .managedinternallyapply .help-icon[helpfor='Resume'] {
+	margin : 27px 0px 0px -41px;
+}
+.help-area {
+	position : absolute;
+	display : none;
+	z-index : 1;
+}
+.help-area .triangle {
+	border-top : 9px solid transparent;
+	border-bottom : 9px solid transparent;
+	border-right : 9px solid #C3CDD6;
+	margin : 5px 0px 0px 10px;
+	height : 0px;
+	width : 0px;
+}
+.help-area .help-text {
+	font : 12px Arial;
+	width : 157px;
+	background-color : #C3CDD6;
+	min-height : 30px;
+	padding : 5px 5px 5px 5px;
+}
+.help-area .help-text span {
+	width : 100%;
+	float : left;
+	color : black;
+}
+.help-area.error .triangle {
+	border-right : 9px solid red;
+}
+.help-area.error .help-text {
+	background-color : red;
+}
+#main-body .help-area.error .help-text span {
+	color : white;
+}
+.Casual .TAndC_field {
+	width : 410px;
+}
+.Casual .TAndC_field .TAndC_control label[for='TAndC'], body.IE7 .Casual .TAndC_field .TAndC_control label {
+	width : 270px;
+}
+.createmylinkmeprofile {
+	background-position : -5px -760px;
+	width : 170px;
+	height : 28px;
+	cursor : pointer;
+	margin-left : 125px;
+}
+.createmylinkmeprofile:hover {
+	background-position : -5px -790px;
+}
+.CompleteProfile .bg .top-bar {
+	background-position : -5px -1475px;
+	width : 742px;
+	height : 50px;
+}
+.CallToActionOverlay.CompleteProfile .left-side {
+	width : 362px;
+}
+.CompleteProfile > .bg > .divider {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAFUlEQVQIW2O8ceNGJicnZ4ScnNxVACP7BJUz38PJAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+	width : 3px;
+	height : 100px;
+}
+.CompleteProfile .suggestedjobs {
+	width : 322px;
+	padding : 10px 20px 20px 20px;
+}
+.CompleteProfile .suggestedjobs div, .CompleteProfile .suggestedjobs span {
+	font : 12px Arial;
+}
+.CompleteProfile .suggestedjobs .suggestedjob .divider {
+	margin-bottom : 10px;
+}
+.CompleteProfile .suggestedjobs .suggestedjob .titleline {
+	margin-bottom : 5px;
+}
+.CompleteProfile .suggestedjobs .suggestedjob .location {
+	margin-left : -13px;
+}
+.CompleteProfile .suggestedjobs .suggestedjob .content {
+	margin : 0px 0px 10px 7px;
+}
+.CompleteProfile .progressbar {
+	margin : 10px 0px 40px 75px;
+	width : 240px;
+}
+.CompleteProfile .progressbar .bg {
+	background-position : -5px -895px;
+	width : 175px;
+	height : 13px;
+}
+.CompleteProfile .progressbar .fg {
+	background-position : -5px -880px;
+	width : 175px;
+	height : 13px;
+	margin-left : -175px;
+	border-radius : 8px;
+	-moz-border-radius : 8px;
+	-webkit-border-radius : 8px;
+}
+.CompleteProfile .progressbar .text {
+	font : Bold 12px Arial;
+	margin : -1px 10px 0px 10px;
+}
+.CompleteProfile .progressbar .alerticon {
+	background-position : -185px -880px;
+	width : 15px;
+	height : 16px;
+}
+.CompleteProfile .recommand {
+	width : 360px;
+	margin : 0px 0px 20px 20px;
+}
+.CompleteProfile .recommand p {
+	width : 330px;
+	font : 12px Arial;
+	text-align : left;
+}
+.CompleteProfile .recommand p span.red {
+	font-weight : bold;
+	color : red;
+}
+.CompleteProfile .contacted {
+	background-color : #FEE8EB;
+	font : 12px Arial;
+	padding : 10px 60px 10px 60px;
+	width : 210px;
+	margin : 0px 0px 20px 20px;
+}
+.CompleteProfile .contacted .red {
+	color : red;
+	font-weight : bold;
+}
+.CompleteProfile .completemyprofilenow {
+	background-position : -5px -820px;
+	width : 170px;
+	height : 28px;
+	float : left;
+	cursor : pointer;
+	margin : 0px 0px 10px 92px;
+}
+.CompleteProfile .completemyprofilenow:hover {
+	background-position : -5px -850px;
+}
+#main-body .loggedinuserapply .contact, #main-body .managedexternallyapply .contact, #main-body .managedinternallyapply .contact {
+	font : 10px Arial;
+	color : #22537D;
+	margin : -27px 0px 0px 8px;
+}
+.radiobutton {
+	width : 16px;
+	height : 16px;
+	background-position : -250px -60px;
+	cursor : pointer;
+	margin-right : 5px;
+}
+.radiobutton:hover {
+	background-position : -595px -60px;
+}
+.radiobutton.checked, .radiobutton.checked:hover {
+	background-position : -270px -60px;
+}
+.radiobutton.disabled {
+	background-position : -615px -60px;
+	cursor : default;
+}
+.loggedinuserapply, .managedexternallyapply {
+	margin-left : 10px;
+}
+.radio_control {
+	margin-bottom : 5px;
+}
+#main-body .loggedinuserapply .field .radio_control label {
+	font-weight : normal;
+	width : 300px;
+}
+#main-body .loggedinuserapply .field .radio_control.disabled label {
+	color : gray;
+}
+.loggedinuserapply .resume_field .control .textbox-bg {
+	width : 200px;
+}
+.loggedinuserapply .resume_field .help-icon {
+	left : 315px;
+}
+#main-body .loggedinuserapply .field label[for='Overwrite'] {
+	font-weight : normal;
+	width : 300px;
+}
+.loggedinuserapply .uploadsection .help-icon[helpfor='Overwrite'] {
+	margin : -23px 0px 0px 316px;
+}
+#main-body .loggedinuserapply div.reviewprofile, #main-body .loggedinuserapply div.lastusedresumefile {
+	color : gray;
+	font : 12px Verdana, Arial;
+}
+.loggedinuserapply .coverlettersection .multiline_textbox_control .textarea-top, .managedinternallyapply .multiline_textbox_control .textarea-top, .jobadquestions .multiline_textbox_control .textarea-top {
+	background-position : -5px -910px;
+	width : 296px;
+	height : 5px;
+}
+.loggedinuserapply .coverlettersection .multiline_textbox_control .textarea-bg, .managedinternallyapply .multiline_textbox_control .textarea-bg, .jobadquestions .multiline_textbox_control .textarea-bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAABCAYAAABt0zNTAAAAMklEQVQ4T2PcdOTKf1dTNQY2FhYGJiZGhlEwGgKjITAaAgMZAv/+/Wf49ecPw+7TtxgAqw8MS4i6/N0AAAAASUVORK5CYII=);
+	background-repeat : repeat-y;
+	width : 296px;
+	overflow : hidden;
+}
+.loggedinuserapply .coverlettersection .multiline_textbox_control .textarea-bottom, .managedinternallyapply .multiline_textbox_control .textarea-bottom, .jobadquestions .multiline_textbox_control .textarea-bottom {
+	background-position : -5px -917px;
+	width : 296px;
+	height : 5px;
+}
+#CoverLetter {
+	height : 225px;
+}
+.jobadquestions .multiline_textbox_control {
+	width : 296px;
+}
+.loggedinuserapply .coverlettersection .multiline_textbox_control textarea, .managedinternallyapply .multiline_textbox_control textarea, .jobadquestions .multiline_textbox_control textarea {
+	width : 275px;
+	border : none;
+	outline : none;
+	margin-left : 1px;
+	color : #464646;
+	float : left;
+	position : relative;
+	line-height : 15px;
+	padding-left : 14px;
+	padding-top : 0px;
+	padding-bottom : 0px;
+	font-family : Arial;
+	resize : none;
+	overflow : hidden;
+}
+.dropdown-vline {
+	width : 1px;
+	height : 34px;
+	margin-left : -28px;
+	float : left;
+	background-color : #B2C4D4;
+	cursor : pointer;
+}
+.dropdown-arrow {
+	border-top : 4px solid #7794aa;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	margin : 16px 0px 0px -18px;
+	float : left;
+	cursor : pointer;
+}
+.dropdown-scrollpan {
+	position : absolute;
+	margin-top : 33px;
+	overflow : hidden;
+	background-color : white;
+	border-bottom : 1px solid #B3C6D6;
+}
+.dropdown-scrollbar-toparrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	top : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-toparrow {
+	position : absolute;
+	right : 3px;
+	top : 4px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-toparrow {
+	top : -12px;
+}
+.dropdown-scrollbar-bottomarrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	bottom : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-bottomarrow {
+	position : absolute;
+	right : 3px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-bottomarrow {
+	bottom : -12px;
+}
+.dropdown-scrollbar-wrap {
+	position : absolute;
+	right : 0px;
+	width : 12px;
+	top : 10px;
+	border : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAIAAABlidhuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0OTMzODBDQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0OTMzODBEQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MzM4MEFDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MzM4MEJDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6WxLuLAAAAIUlEQVR42mK8ces2CwsLKysrgmRhYWZmZmJiYoABgAADAGHgAu32HnaBAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+}
+.dropdown-scrollbar {
+	position : absolute;
+	margin-top : 24px;
+}
+.dropdown-scrollbar .ui-slider-handle {
+	width : 14px;
+	height : 49px;
+	background-position : -700px -305px;
+	position : absolute;
+	margin : 0px 0px -25px -1px;
+	cursor : pointer;
+	outline : none;
+	left : 0px;
+	border : none;
+	background-color : transparent;
+}
+.dropdown-items, .listbox-items {
+	position : absolute;
+}
+#main-body .dropdown-item {
+	border : 1px solid #B3C6D6;
+	border-top : none;
+	height : 19px;
+	color : #807E7E;
+	font : 12px Arial;
+	background-color : #FFFFFF;
+	cursor : pointer;
+	padding : 6px 0px 0px 8px;
+	float : none;
+}
+#main-body .dropdown-item:first-child  {
+	border : 1px solid #B3C6D6;
+}
+#main-body .dropdown-item:hover, #main-body .dropdown-item.selected {
+	color : #F0F6FB;
+	background-color : #207CD5;
+}
+.field .dropdown_control {
+	width : 296px;
+}
+.jobadquestions {
+	margin-top : 20px;
+}
+.jobadquestions .dropdown input {
+	cursor : pointer;
+}
+.jobadquestions .field .control input[type='text'] {
+	width : 277px;
+}
+.jobadquestions .control .textbox-bg {
+	width : 288px;
+}
+.jobadquestions .button_field {
+	width : 410px;
+	margin-left : 273px;
+}
+.jobadquestions .mandatory {
+	margin-left : -16px;
+}
+#error-summary {
+	width : 600px;
+	margin-right : 360px;
+}
+#error-message {
+	margin-left : 90px;
+}
+.multiline_textbox_control .outer {
+	position : absolute;
+	margin : -4px 0px -1px 279px;
+	width : 17px;
+	display : none;
+}
+.multiline_textbox_control .outer .top, .multiline_textbox_control .outer .bottom, .multiline_textbox_control .outer  .wrap {
+	width : 15px;
+	border-left : 1px solid #B2C4D4;
+	border-right : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url("../images/common/ScrollBarBg.png");
+	background-repeat : repeat-y;
+}
+.multiline_textbox_control .outer .top .arrow {
+	position : absolute;
+	right : 4px;
+	top : 5px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+.multiline_textbox_control .outer .bottom .arrow {
+	position : absolute;
+	right : 4px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+.multiline_textbox_control .outer  .scrollbar {
+	width : 17px;
+	border : none;
+	cursor : pointer;
+	background : none;
+	margin-top : 48px;
+}
+.multiline_textbox_control .outer  .top, .multiline_textbox_control .outer .bottom {
+	height : 16px;
+}
+.multiline_textbox_control .scrollbar .ui-slider-handle {
+	width : 17px;
+	height : 48px;
+	margin : 0px 0px 0px 3px;
+	cursor : pointer;
+	outline : none;
+	border : none;
+	background-image : url("../images/common/ScrollBarHandle.png");
+}
+.loggedinuserapply .expressapply, .loggedinuserapply .externalexpressapply, .managedexternallyapply .joinarea .externalexpressapply, .managedinternallyapply .joinandloginsection .expressapply {
+	background-position : -5px -1070px;
+	width : 180px;
+	height : 44px;
+	cursor : pointer;
+	margin : 10px 0px 20px 50px;
+	float : left;
+}
+.loggedinuserapply .expressapply:hover, .loggedinuserapply .externalexpressapply:hover, .managedexternallyapply .joinarea .externalexpressapply:hover, .managedinternallyapply .joinandloginsection .expressapply:hover  {
+	background-position : -5px -1120px;
+}
+.emaillayer .validationerror, .applyarea .validationerror {
+	margin : 0px 0px 10px 0px;
+}
+#main-body .emaillayer .validationerror .prompt {
+	width : 215px;
+	color : white;
+}
+.emaillayer .validationerror .bg {
+	width :260px;
+}
+.emaillayer .validationerror .bottom-bar {
+	background : none;
+}
+.rightside .emaillayer .validationerror .top-bar {
+	height : 6px;
+}
+.emaillayer .validationerror .top-bar .center, .emaillayer .validationerror .bottom-bar .center {
+	width : 248px;
+}
+.emaillayer .validationerror .alerticon {
+	margin : 10px 5px 0px 10px;
+}
+.emaillayer .validationerror ul {
+	margin-left : 42px;
+	width : 209px;
+}
+#main-body .emaillayer .validationerror ul li .text {
+	width : 217px;
+	color : white;
+}
+#main-body .applyarea .validationerror .prompt {
+	width : 275px;
+	color : white;
+}
+.main-content .applyarea .validationerror .top-bar, .main-content .applyarea .validationerror .bottom-bar {
+	width : 332px;
+}
+.applyarea .validationerror .top-bar .center, .applyarea .validationerror .bottom-bar .center {
+	width : 320px;
+}
+.applyarea .validationerror .bg {
+	width : 332px;
+}
+.applyarea .validationerror .alerticon {
+	margin : 10px 5px 0px 10px;
+}
+.applyarea .validationerror .alerticon {
+	margin : 10px 5px 0px 10px;
+}
+.applyarea .validationerror ul {
+	margin-left : 42px;
+	width : 209px;
+}
+.Occasional .validationerror ul, .Casual .validationerror ul {
+	margin-left : 90px;
+}
+#main-body .applyarea .validationerror ul li .text {
+	width : 285px;
+	color : white;
+}
+.overwrite-overlay {
+	display : none;
+}
+.overwrite-overlay-dialog .ui-dialog-titlebar {
+	margin : -0.3em;
+	background-color : #EFF3F7;
+	background-image : none;
+}
+.overwrite-overlay-dialog .prompt-text {
+	font-size : 12px;
+	width : 540px;
+	text-align : left;
+	float : left;
+	margin-top : 10px;
+}
+.overwrite-overlay-dialog .prompt-text.red.bold {
+	color : red;
+	font-weight : bold;
+	margin-top : 20px;
+}
+.overwrite-overlay-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+	display : none;
+}
+.overwrite-overlay-dialog .yes {
+	background-position : -180px -760px;
+	width : 80px;
+	height : 28px;
+	float : left;
+	cursor : pointer;
+	margin : 20px 20px 0px 0px;
+}
+.overwrite-overlay-dialog .yes:hover {
+	background-position : -180px -790px;
+}
+.overwrite-overlay-dialog .cancel {
+	background-position : -180px -820px;
+	width : 80px;
+	height : 28px;
+	float : left;
+	cursor : pointer;
+	margin-top : 20px;
+}
+.rightside .emaillayer .fields .cancelbutton:hover, .overwrite-overlay-dialog .cancel:hover {
+	background-position : -180px -850px;
+}
+.managedexternallyapply .loginarea, .managedinternallyapply .promptarea {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACACAYAAADK+QP0AAABb0lEQVQoU53SWUsCcRQFcM6n6bl9L4pooSiKomih+n+oJCskKFoJjIh2s2IwJyZLrSnXJs3BYVCSFIbA7ow5Cr318uOchwuXy0VYyVcgkMxXIqDkqxBUtOoyREWrwUtCq4UvodXBL2v1eDCIZRsgxLKNuI9nm8C/ZZtx95Zrwa302Qp3ONMGLpJpx00w00GkOuAU051wvKa7cPZEnDyr3Tj1qT048qu9OHxM9uHAq/Rj36MMwC7Ig9jh5SFs334MY9P9PoINV2wU61xsDKs30jhsV9IEbNfRSaw4o1NYcoSnYb0Mz2DREZktYDkPzmHhPDQPy0WI/QOrPlbAGS1nWa8lbHqlXUwkhlWuyJqe1rj4LxsuSgZbfJFdXmYoIBB7JnQIBrsnyXBg4CUOC6gMxwZ+4tRAJC7EVDnOwCeDwbVBiOBMXNEvBgPeRJCoClKOiBMeE6+evHGNkAl6hl9EPYnJEt+MXkpH/UtIzTOY/ABbnmlDFJ60qgAAAABJRU5ErkJggg==);
+	background-repeat : repeat-x;
+	width : 347px;
+	position : relative;
+	z-index : 0;
+	margin-top : -50px;
+}
+#main-body .managedexternallyapply .loginarea .loginbutton {
+	background-position : -200px -880px;
+	width : 67px;
+	height : 28px;
+	margin : 70px 10px 27px 15px;
+	cursor : pointer;
+	float : right;
+}
+.managedexternallyapply .loginarea .loginbutton:hover {
+	background-position : -270px -880px;
+}
+#main-body .managedexternallyapply .loginarea .text {
+	font : Bold 14px Arial;
+	width : 220px;
+	margin : 68px 0px 27px 30px;
+}
+.managedexternallyapply .loginarea .divider, .managedexternallyapply .joinarea .divider, .managedinternallyapply .promptarea .divider {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEUlEQVQIW2O8efPmf8b/QAAAJGEHiYZ4p2wAAAAASUVORK5CYII=);
+	background-repeat : repeat-x;
+	width : 320px;
+	height : 2px;
+	margin : 0px 0px 10px 15px;
+}
+.managedexternallyapply .loginarea .divider {
+	margin-top : 20px;
+}
+.managedexternallyapply .loginarea {
+	margin-left : -10px;
+}
+.managedexternallyapply .loginarea .loginfields {
+	margin-top : -20px;
+	display : none;
+}
+.managedexternallyapply .loginarea .field {
+	margin-left : 10px;
+}
+.managedexternallyapply .loginarea .field .textbox-bg {
+	width : 300px;
+}
+.managedexternallyapply .loginarea .field .control input[type="text"], .managedexternallyapply .loginarea .field .control input[type="password"], .managedexternallyapply .joinarea .field .control input[type='text'], .managedexternallyapply .joinarea .field .control input[type='password'] {
+	width : 289px;
+}
+.managedinternallyapply .joinandloginsection .field .control input[type='text'], .managedinternallyapply .joinandloginsection .field .control input[type='password'] {
+	width : 277px;
+}
+.managedexternallyapply .loginarea .joinnow {
+	margin : 10px 0px 0px 10px;
+}
+#main-body .managedexternallyapply .loginarea .joinnow .link {
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+	margin-left : 5px;
+}
+#main-body .managedexternallyapply .loginarea .loginfields > .loginbutton {
+	margin : 5px 28px 10px 0px;
+}
+.managedexternallyapply .loginarea .validationerror {
+	margin : 0px 0px 10px 10px;
+	width : 320px;
+}
+#main-body .applyarea .managedexternallyapply .validationerror ul li .text {
+	font : 12px Arial;
+	margin : 0px;
+}
+#main-body .applyarea .field .error-msg {
+	margin-left : 0px;
+}
+.managedexternallyapply .field > label, .managedinternallyapply .field > label {
+	margin-left : 20px;
+}
+.managedexternallyapply .joinarea .field .textbox-bg {
+	width : 300px;
+}
+.managedinternallyapply .joinandloginsection .field .textbox-bg {
+	width : 288px;
+}
+.managedexternallyapply .field.resume_field > label, .managedinternallyapply .field.resume_field > label, .managedinternallyapply .field.multiline_textbox_field > label {
+	margin-left : 0px;
+}
+.managedexternallyapply .joinarea .field.resume_field .textbox-bg {
+	width : 203px;
+}
+.managedinternallyapply .joinandloginsection .field.resume_field .textbox-bg {
+	width : 191px;
+}
+body.IE7 .managedinternallyapply .joinandloginsection .field.radiobuttons_field {
+	margin-bottom : 10px;
+}
+#main-body .managedexternallyapply .joinarea .CreateProfile_field label[for='CreateProfile'] {
+	width : 200px;
+}
+.managedexternallyapply .joinarea .CreateProfile_field .checkbox.CreateProfile {
+	margin : 7px 5px 0px 0px;
+}
+.managedexternallyapply .joinarea .field.TAndC_field .mandatory, .managedinternallyapply .joinandloginsection .field.TAndC_field .mandatory {
+	margin-top : 7px;
+}
+.managedexternallyapply .joinarea .TAndC_field .checkbox.TAndC, .managedinternallyapply .TAndC_field .checkbox.TAndC {
+	margin : 0px 1px 0px 2px;
+}
+body.IE9 .managedexternallyapply .joinarea .TAndC_field .control, body.IE9 .managedinternallyapply .joinandloginsection .TAndC_field .control {
+	margin : -13px 0px 0px 13px;
+}
+body.IE9 #main-body .managedexternallyapply .joinarea .field.TAndC_field .control label, body.IE9 #main-body .managedinternallyapply .joinandloginsection .field.TAndC_field .control label {
+	width : 279px;
+}
+.managedexternallyapply .joinarea .divider {
+	margin-left : 0px;
+}
+.managedexternallyapply .joinarea .externalexpressapply {
+	margin-left : 0px;
+}
+.managedexternallyapply .joinarea .applybutton {
+	margin : 7px 0px 20px 0px;
+}
+#main-body .managedexternallyapply .joinarea label[for='EmailAddress'], #main-body .managedinternallyapply .joinandloginsection label[for='LoginId'] {
+	height : 15px;
+}
+#main-body .managedexternallyapply .joinarea label[for='EmailAddress'] .username, #main-body .managedinternallyapply .joinandloginsection label[for='LoginId'] .username {
+	float : none;
+	font-style : italic;
+	line-height : 14px;
+}
+.managedinternallyapply .promptarea {
+	height : 128px;
+	margin-top : -49px;
+}
+.managedinternallyapply .promptarea .join {
+	margin : 59px 0px 19px 0px;
+}
+#main-body .managedinternallyapply .promptarea .text {
+	font : Bold 14px Arial;
+	text-align : center;
+	width : 250px;
+	margin-left : 48px;
+}
+#main-body .managedinternallyapply .promptarea .text.blue {
+	font : Bold 14px Arial;
+	color : #22537D;
+	text-align : center;
+}
+.managedinternallyapply .promptarea .login {
+	margin : 59px 0px 0px 35px;
+	display : none;
+}
+.managedinternallyapply .promptarea .login .text {
+	width : 260px;
+	margin-left : 44px;
+}
+.managedinternallyapply .joinandloginsection {
+	margin : 10px 0px 0px 10px;
+}
+#main-body .managedinternallyapply .joinandloginsection .field label {
+	width : 302px;
+}
+#main-body .managedinternallyapply .joinandloginsection .field.TAndC_field .control label {
+	width : 230px;
+}
+.managedexternallyapply .loginarea .field .mandatory, .managedexternallyapply .joinarea .field .mandatory {
+	margin : 2px 0px 0px -305px;
+}
+.managedinternallyapply .joinandloginsection .field .mandatory {
+	margin : 2px 0px 0px -330px;
+}
+#main-body .managedinternallyapply .joinandloginsection .field label[for='SignMeUp'], #main-body .managedinternallyapply .joinandloginsection .field label[for='HaveLinkMePassword'] {
+	font-weight : normal;
+}
+.managedinternallyapply .joinandloginsection .forgotpassword .icon {
+	background-position : -165px -742px;
+	width : 16px;
+	height : 16px;
+	margin : 0px 5px 0px 1px;
+}
+.managedinternallyapply .joinandloginsection .loginandapply {
+	background-position : -5px -1169px;
+	width : 190px;
+	height : 47px;
+	cursor : pointer;
+	float : left;
+	margin : 10px 0px 20px 50px
+}
+.managedinternallyapply .joinandloginsection .loginandapply:hover {
+	background-position : -5px -1287px;
+}
+.Casual .validationerror ul li div.text {
+	width : 630px;
+}
+.Occasional .validationerror ul li div.text, .Casual .validationerror ul li div.text {
+	width : 630px;
+}
+.Casual .error-msg[error-for='JoinFirstName'] {
+	margin-left : 0px;
+}
+.Casual .error-msg[error-for='JoinLastName'] {
+	margin-left : 1px;
+}
+.Casual .error-msg[error-for='JoinEmailAddress'] {
+	margin-left : 22px;
+}
+.Casual .error-msg[error-for='JoinPassword'] {
+	margin-left : 8px;
+}
+.Casual .error-msg[error-for='JoinConfirmPassword'] {
+	margin-left : 55px;
+}
+.Casual .error-msg[error-for='Resume'] {
+	margin : 36px 0px 0px 105px;
+	position: relative;
+	display : block;
+	text-align : left;
+}
+.Occasional .error-msg[error-for='FirstName'], .Occasional .error-msg[error-for='LastName'] {
+	margin-left : 6px;
+}
+.Occasional .error-msg[error-for='Email'] {
+	margin-left : 30px;
+}
+.closedjob {
+	background-position : 0px -2030px;
+	width : 943px;
+	height : 70px;
+	margin-bottom : 10px;
+}
+.closedjob .text {
+	margin : 15px 0px 0px 300px;
+}
+#main-body .closedjob .text span {
+	width : 600px;
+	font : Bold 14px Arial;
+	color : white;
+	margin-bottom : 5px;
+}
+.closedjob .text span a {
+	color : white;
+}
+.main-content.closed .togglecontent {
+	background-position : 0px -2105px;
+	width : 695px;
+	height : 48px;
+}
+#main-body .main-content.closed .togglecontent .text {
+	font : Bold 14px Arial;
+	margin : 15px 0px 0px 10px;
+}
+#main-body .main-content.closed .togglecontent .togglelink {
+	font : Bold 14px Arial;
+	margin : 15px 10px 0px 260px;
+	float : left;
+	cursor : pointer;
+	color : #15e;
+}
+.main-content.closed .togglecontent .togglebutton {
+	width : 25px;
+	height : 25px;
+	margin-top : 11px;
+	cursor : pointer;
+}
+.main-content.closed .togglecontent .togglebutton.collapse {
+	background-position : -700px -2105px;
+}
+.main-content.closed .togglecontent .togglebutton.collapse:hover {
+	background-position : -730px -2105px;
+}
+.main-content.closed .togglecontent .togglebutton.expanded {
+	background-position : -760px -2105px;
+}
+.main-content.closed .togglecontent .togglebutton.expanded:hover {
+	background-position : -790px -2105px;
+}
+.learnmoredialog {
+	display : none;
+}
+.learnmoredialog .okbutton {
+	width : 81px;
+	height : 27px;
+	margin : 454px 0px 0px 628px;
+	cursor : pointer;
+	background-position : -265px -790px;
+}
+.learnmoredialog .okbutton:hover {
+	background-position : -265px -820px;
+}
+.learnmore-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.ui-dialog.learnmore-dialog {
+	padding : 0;
+	border : none;
+}
+.ui-dialog .ui-dialog-content.learnmoredialog {
+	background-position : 0px -1525px;
+	width : 700px;
+	height : 300px;
+	overflow : hidden;
+}

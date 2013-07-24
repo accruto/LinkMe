@@ -1,0 +1,450 @@
+.PanelAlternatingView
+{
+	border: solid 1px orange;
+}
+
+.line
+{
+	float: left;
+	margin-right: 5px;
+}
+
+dl.jobRole
+{
+	margin: 3px 0px;
+	padding: 0px;
+}
+dl.jobRole dt
+{
+	color: #aaa;
+	float: left;
+	text-align: left;
+	width: 95px;
+	margin: 0px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	padding: 0px;
+}
+dl.jobRole dd
+{
+	margin-bottom: 3px;
+	padding: 0px;
+}
+
+#applyForJobHeading
+{
+	background-position: left center;
+	background-image: url(../img/mail_icon.png);
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	text-decoration: none;
+	height: 40px;
+	margin-top: 10px;
+}
+
+#applyContent h2
+{
+	text-decoration: none;
+}
+#applyContent fieldset 
+{
+	border: none;
+	border-bottom: 1px solid #ccc;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+#applyContent
+{
+	padding: 10px 0px 10px 0px;
+	border:1px solid #CCC;
+}
+
+#applyContent .line
+{
+	float:left;
+	margin-right: 5px;
+	width: 60px;
+	padding-top: 0px;
+}
+
+.emailTextBox
+{
+	width: 260px;
+	overflow: hidden;
+}
+
+.emailMessageBox
+{
+	width: 260px;	
+}
+
+.workflowNavImage
+{
+	margin: 20px;
+}
+
+#job-ads
+{
+	width:565px;
+	text-align: left;
+	border-collapse: collapse;
+	margin: 10px 0;
+}
+
+#job-ads  th
+{
+	padding-right:1em;
+}
+
+#job-ads td
+{
+	border-bottom: solid 1px #ccc;
+	padding: 5px 5px 5px 0px;
+	vertical-align: top;
+}
+
+#job-ads .pagination
+{
+	border: 1px solid #ccc;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: #E8E8E8;
+	text-align: center;
+}
+
+#job-ads .jobTitle
+{
+	color: #474747;
+}
+
+#job-ads .jobReference
+{
+	max-width:80px;
+	color: #474747;
+}
+
+.pagination
+{
+	border: 1px solid #ccc;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: #E8E8E8;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#job-ads tr td.actions
+{
+	white-space: nowrap;
+	padding-right:1em;
+}
+
+#job-ads tr td.job, #job-ads tr td.job div
+{
+	width: 270px;
+}
+#job-ads tr td.job div
+{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#job-ads tr td.job span a:link
+{
+	color: #336699;
+}
+#job-ads tr td.action, #job-ads tr td.action div
+{
+	width: 120px;
+}
+#job-ads tr td.action div
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#job-ads tr td.applicants
+{
+	width: 85px;
+}
+#job-ads tr td.days-left
+{
+	width: 95px;
+}
+
+.date
+{
+	color: #006600;
+}
+
+#tabs
+{
+	float:left;
+	padding: 0;
+	margin: 0;
+}
+
+#tab
+{
+	float:left;
+	margin: 0 5px;
+}
+
+#tab h3
+{
+	float:left;
+	display: inline;
+	margin: 4px;
+}
+
+#tabSelected
+{
+	float: left;
+	background: #e8e8e8 url('../img/TabUpperL.gif') no-repeat left top;
+	text-align: left;
+	padding: 0;
+	margin: 0 5px;
+}
+
+#tabSelected h3
+{
+	float: left;
+	background: #e8e8e8 url('../img/TabUpperR.gif') no-repeat right top;
+	margin: 0 0 0 5px;
+	padding: 5px 10px 5px 5px;
+	display: inline;
+}
+
+#tabContent
+{
+	width: 550px;
+	float: left;
+	clear: both;
+	margin: 0;
+	border: solid 10px #e8e8e8;
+	padding: 10px;
+}
+
+dl.searchList dt
+{
+	float: left;
+	width: 250px;
+	font-size: 100%;
+	padding-top: 3px;
+	text-align: right;
+	margin-right: 5px;
+}
+
+dl.searchList dd
+{
+	float:left;
+	clear: right;
+}
+
+dl.searchList .input
+{
+	width: 250px;
+}
+
+dl.searchList .location
+{
+	width: 100px;
+}
+
+dl.searchList .km
+{
+	width: 50px;
+}
+
+dl.searchList .salary
+{
+	width: 70px;
+	float:left;
+	margin-right:5px;
+	
+}
+.salaryto{
+float:left; margin-right:10px; margin-left:22px;
+}
+
+* html .salaryto
+{
+	
+	margin-left:0px;
+	
+}
+
+
+
+dl.searchList .salaryInput
+{
+	width: 90px;
+	
+}
+
+#candidateView fieldset
+{
+	border:1px solid #ccc;	
+	padding:10px 0 10px 0;
+	margin:0;
+}
+
+#candidateView .frame
+{
+	border: solid 2px #ccc;
+	/*padding: 5px 5px 5px 5px;*/
+}
+
+#candidateView .leftFrame
+{
+	float: left;
+	padding-left:10px;
+}
+
+#candidateView .photo
+{
+	border: 1px solid #004A6F;
+	
+}
+
+#candidateView .email
+{
+	background-image: url(../img/icon_email.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 15px;	
+	font-size: 80%;
+}
+
+#candidateView .phone
+{
+	background-image: url(../img/icon_phone.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 15px;	
+}
+
+#candidateView .fullname
+{
+	color: #6F0011;
+	font-size: 180%;
+}
+
+#candidateView .employer
+{
+	font-size:110%;
+}
+
+#candidateView .major
+{
+	font-weight:bold;
+}
+
+.actionBar
+{
+	background:#ddd;
+	width:100%;
+	padding: 5px;
+	border: solid 1px #888;
+}
+
+.jobAdPoster
+{
+	color: #006600;
+}
+
+.compulsory {
+	background-image:url(../img/compulsory_bullet.gif);
+	background-position:left;
+	background-repeat:no-repeat;
+	padding-left:0.8em;
+	color:#000;
+	float:left;	
+}
+
+#named-images {
+	margin:13px 0 13px 0;
+	padding:0px;
+}
+#named-images li{
+	float:left;
+	width:1px;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	margin-right:13px;
+	list-style:none;
+}
+#named-images .photo{
+	border:1px solid #004A6F;
+}
+#named-images div {
+	font-size:100%;
+	font-weight:bold;
+	text-decoration:underline;
+}
+#named-images span {
+	color:black;
+	display:block;
+	text-decoration:none;
+}
+
+.jobOfferDetails
+{
+	float:left;
+	width:160px;
+}
+
+.peopleSearchFrame
+{
+	border:#cccccc 1px solid; 
+	padding:10px;
+}
+
+.signinFrame
+{
+	width:60%;
+	float:left;
+	padding: 10px;
+}
+
+.signinFrame fieldset
+{
+	height:200px;
+}
+
+.resumeOverview
+{
+	float:	left;
+	width:	220px;
+}
+
+.searchbox
+{
+	
+	width:465px;
+	background-color:#BED6D8;
+	height:86px;
+	margin-bottom:15px;
+	padding:40px 0 10px 10px;
+	background-image:url(../img/Searchcandidates.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+.searchbox .sub 
+{
+	color: #474747;	
+}
+
+.line p
+{
+	font-weight:normal;
+	font-size:smaller;
+	text-align:left;
+}
+
+dt .heading
+{
+	font-weight:bold;
+	font-size: 130%;
+	text-align:left;
+}

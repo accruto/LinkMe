@@ -1,0 +1,93 @@
+﻿.recentsearches {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.recentsearches > .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	color : #464646;
+	margin-bottom : 0.5em;
+}
+.recentsearches .row {
+	font-size : 1.75em;
+	font-weight : Bold;
+	color : #307EEC;
+	line-height : 1em;
+	background-color : white;
+	border-left : 0.0714285714285714em solid #959799;
+	border-right : 0.0714285714285714em solid #959799;
+	border-bottom : 0.0714285714285714em solid #959799;
+	padding : 0.7142857142857143em;
+	-webkit-box-shadow : 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+	-moz-box-shadow : 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+	box-shadow: 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+}
+.recentsearches .row:first-of-type {
+	border-top-left-radius : 0.5em;
+	border-top-right-radius : 0.5em;
+	border-top : 0.0714285714285714em solid #959799;
+}
+.recentsearches .row:last-of-type {
+	border-bottom-left-radius : 0.5em;
+	border-bottom-right-radius : 0.5em;
+}
+.recentsearches .row:active {
+	color : white;
+	background-color : #3991E2;
+}
+.recentsearches .row .icon.rightarrow {
+	width : 0.5714285714285714em;
+	height : 0.9285714285714286em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconRightArrowBlack.png");
+	float : right;
+	margin-top : 0.1428571428571429em;
+}
+.recentsearches .row:active .icon.rightarrow {
+	background-image : url("../../images/device/IconRightArrowWhite.png");
+}
+.recentsearches .row .count {
+	color : white;
+	background-color : #C55C5C;
+	border : 0.0357142857142857em solid #A62B2B;
+	border-radius : 0.5em;
+	padding : 0.0714285714285714em 0.25em;
+	margin-right : 0.25em;
+	float : right;
+	display : none;
+}
+.recentsearches .row:active .count {
+	color : #307EEC;
+	background-color : white;
+	border : 0.0357142857142857em solid white;
+}
+.recentsearches .row .title {
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 75%;
+	display : inline-block;
+}
+.recentsearches .noresults .desc {
+	font-size : 1.875em;
+	color : #464646;
+	margin : 2em 0 1.5em 0;
+}
+.recentsearches .noresults ul li {
+	font-size : 1.875em;
+	color : #307EEC;
+	list-style-position : inside;
+}
+.recentsearches .noresults ul li a {
+	font-weight : Bold;
+	color : #307EEC;
+	display : inline;
+}
+.recentsearches .noresults ul li span {
+	color : #464646;
+}

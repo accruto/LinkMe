@@ -1,0 +1,361 @@
+﻿.clearer {
+    clear: both;
+}
+.jobad {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+}
+.jobad > .text.closed.top {
+	font-size : 2.25em;
+	font-weight : bold;
+	color : #464646;
+	line-height : 1.5em;
+}
+.jobad > .link.back {
+	font-size : 1.875em;
+	font-weight : bold;
+	color : #307EEC;
+	text-decoration : none;
+	margin-bottom : 0.5em;
+}
+.jobad > .link.back .icon {
+	background-image : url("../../images/device/IconBack.png");
+	background-size : 100% 100%;
+	width : 0.8em;
+	height : 0.7333333333333333em;
+	float : left;
+	margin : 0.0333333333333333em 0.5em 0 0;
+}
+.jobad .navigation {
+	float : left;
+	width : 100%;
+}
+.jobad .navigation .wrapper {
+	width : 10%;
+	padding : 0;
+}
+.jobad .navigation a {
+	width : 2.0625em;
+	height : 2.875em;
+	background-size : 100% 100%;
+	margin-bottom : 0.5em;
+}
+.jobad .navigation a.previous {
+	background-image : url("../../images/device/IconPrevious.png");
+}
+.jobad .navigation a.previous.active {
+	background-image : url("../../images/device/IconPreviousActive.png");
+}
+.jobad .navigation a.next {
+	background-image : url("../../images/device/IconNext.png");
+	float : right;
+}
+.jobad .navigation a.next.active {
+	background-image : url("../../images/device/IconNextActive.png");
+}
+.jobad .navigation .title {
+	font-size : 1.875em;
+	color : #3B3F41;
+	line-height : 1.2em;
+	width : 80%;
+	float : left;
+	margin-top : 0.1666666666666667em;
+}
+.jobad .navigation .title .criteriahtml {
+	font-weight : bold;
+}
+.jobad .navigation .title .moreorlesstext {
+	color : #307EEC;
+	cursor : pointer;
+}
+.jobad .header {
+	background-size : 100% 100%;
+	background-image : url("../../images/device/JobAdHeaderBg.png");
+	width : 100%;
+	height : 5.8125em;
+	padding : 1em 1.25em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.jobad .header.closed {
+	background-image : url("../../images/device/JobAdHeaderBgClosed.png");
+	height : 0.5em;
+	padding : 0;
+}
+.jobad .header .button.applynow {
+	font-size : 1.5em;
+	font-weight : bold;
+	color : white;
+	width : 50%;
+	height : 2.1666666666666667em;
+	border-radius : 0.5em;
+	text-shadow : 0 -0.0833333333333333em 0 rgba(0,0,0,0.4);
+	background-image : -webkit-gradient(linear, center top, center bottom, from(#8CBB0E), to(#437904));
+	background-image : -webkit-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -moz-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -o-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -ms-linear-gradient(top, #8CBB0E, #437904);
+	background-image : linear-gradient(to bottom, #8CBB0E, #437904);
+	-webkit-box-shadow : 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	-moz-box-shadow : 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	box-shadow: 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	border : 0.125em solid #437904;
+	float : left;
+	line-height : 2.1666666666666667em;
+	text-align : center;
+	cursor : pointer;
+	text-decoration : none;
+}
+.jobad .header .button.forward {
+	float : right;
+	width : 5em;
+	height : 3.625em;
+	background-image : url("../../images/device/ButtonForward.png");
+	background-size : 100% 100%;
+	cursor : pointer;
+}
+.jobad .header .button.saved {
+	float : right;
+	width : 5em;
+	height : 3.625em;
+	background-image : url("../../images/device/IconSaved.png");
+	background-size : 100% 100%;
+	cursor : pointer;
+	margin-right : 1.25em;
+}
+.jobad .header .button.saved.active {
+	background-image : url("../../images/device/IconSavedActive.png");
+}
+.jobad .bg {
+	background-image : url("../../images/device/JobAdBg.png");
+	background-size : 100% 100%;
+	width : 100%;
+	padding : 0.5714285714285714em 0.8571428571428571em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	font-size : 1.75em;
+	float : left;
+	color : #464646;
+	line-height : 1.2142857142857143em;
+}
+.jobad .icon.new, .jobad .similarjobs .row .icon.new {
+	background-image : url("../../images/device/IconNew.png");
+}
+.jobad .icon.new {
+	width : 2.3571428571428571em;
+	height : 1.1785714285714286em;
+	background-size : 100% 100%;
+	display : none;
+	float : left;
+	margin : 0 0.2142857142857143em 0 -0.8571428571428571em;
+}
+.jobad .icon.new.active {
+	display : block;
+}
+.jobad .icon.jobtype {
+	width : 3.3571428571428571em;
+	height : 1.0714285714285714em;
+	float : left;
+	background-size : 100% 100%;
+	margin-right : 0.3571428571428571em;
+}
+.jobad .icon.jobtype.FullTime, .jobad .similarjobs .row .icon.jobtype.FullTime {
+	background-image : url("../../images/device/IconJobTypeFullTime.png");
+}
+.jobad .icon.jobtype.PartTime, .jobad .similarjobs .row .icon.jobtype.PartTime {
+	background-image : url("../../images/device/IconJobTypePartTime.png");
+}
+.jobad .icon.jobtype.Contract, .jobad .similarjobs .row .icon.jobtype.Contract {
+	background-image : url("../../images/device/IconJobTypeContract.png");
+}
+.jobad .icon.jobtype.Temp, .jobad .similarjobs .row .icon.jobtype.Temp {
+	background-image : url("../../images/device/IconJobTypeTemp.png");
+}
+.jobad .icon.jobtype.JobShare, .jobad .similarjobs .row .icon.jobtype.JobShare {
+	background-image : url("../../images/device/IconJobTypeJobShare.png");
+}
+.jobad .icon.jobtype.None, .jobad .similarjobs .row .icon.jobtype.None {
+	background-image : url("../../images/device/IconJobTypeNone.png");
+}
+.jobad .titleline .title {
+	font-size : 1.0714285714285714em;
+	line-height : 1.1em;
+	font-weight : bold;
+	color : #307EEC;
+}
+.jobad .company {
+	color : #00AD6E;
+}
+.jobad .content ul {
+	list-style-position : inside;
+}
+.jobad .divider {
+	background-color : #ABABAB;
+	height : 0.0357142857142857em;
+	margin : 1em 0;
+}
+.jobad .bg .text.closed {
+	font-size : 1.2857142857142857em;
+	font-style : Italic;
+	color : #C0C3D2;
+	margin-top : 0.4444444444444444em;
+	text-align : center;
+}
+.jobad .bg .button.applynow {
+	font-size : 0.8571428571428571em;
+	font-weight : bold;
+	color : white;
+	width : 100%;
+	height : 2.1666666666666667em;
+	border-radius : 0.5em;
+	text-shadow : 0 -0.0833333333333333em 0 rgba(0,0,0,0.4);
+	background-image : -webkit-gradient(linear, center top, center bottom, from(#8CBB0E), to(#437904));
+	background-image : -webkit-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -moz-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -o-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -ms-linear-gradient(top, #8CBB0E, #437904);
+	background-image : linear-gradient(to bottom, #8CBB0E, #437904);
+	-webkit-box-shadow : 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	-moz-box-shadow : 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	box-shadow: 0 0.0833333333333333em 0 rgba(0,0,0,0.2), inset 0 0 1.6666666666666667em 0.25em rgba(0,0,0,0.4);
+	border : 0.125em solid #437904;
+	float : left;
+	line-height : 2.1666666666666667em;
+	text-align : center;
+	margin-top : 1em;
+	cursor : pointer;
+	text-decoration : none;
+}
+.jobad .bottombar {
+	background-image : url("../../images/device/JobAdBottomBar.png");
+	background-size : 100% 100%;
+	width : 100%;
+	height : 0.75em;
+	float : left;
+}
+.jobad .similarjobs .title {
+	font-size : 1.875em;
+	font-weight : Bold;
+	color : #464646;
+	line-height : 3em;
+}
+.jobad .similarjobs .row {
+	margin : 0 0em 0.5em;
+	font-size : 1.5em;
+	-webkit-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	-moz-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	border : 0.0833333333333333em solid #C0C3D2;
+	background-color : #FCFAFA;
+	border-radius : 0.5em;
+	padding : 0.75em;
+	line-height : 1.5em;
+	cursor : pointer;
+}
+.jobad .similarjobs .row.featured {
+	border : 0.1666666666666667em solid #EDD260;
+	padding : 0.6666666666666667em;
+	background-color : #F9F5E4;
+}
+.jobad .similarjobs .row.active {
+	border : 0.0833333333333333em solid #1F6DB6;
+	padding : 0.75em;
+	background-color : #307EEC;
+}
+.jobad .similarjobs .row .titleline {
+	margin-bottom : 0.25em;
+}
+.jobad .similarjobs .row .icon.new {
+	width : 2.75em;
+	height : 1.375em;
+	background-size : 100% 100%;
+	display : none;
+	float : left;
+	margin : 0 0.25em 0 -1em;
+}
+.jobad .similarjobs .row .icon.new.active {
+	display : block;
+}
+.jobad .similarjobs .row .icon.jobtype {
+	width : 3.9166666666666667em;
+	height : 1.25em;
+	float : left;
+	background-size : 100% 100%;
+	margin-right : 0.4166666666666667em;
+}
+.jobad .similarjobs .row .title {
+	font-size : 1.1666666666666667em;
+	line-height : 1.1785714285714286em;
+	font-weight : bold;
+	color : #307EEC;
+}
+.jobad .similarjobs .row.active .title {
+	color : white;
+}
+.jobad .similarjobs .row .company {
+	color : #00AD6E;
+	width : 80%;
+}
+.jobad .similarjobs .row.active .company {
+	color : white;
+}
+.jobad .similarjobs .row .location, .jobad .similarjobs .row .salary, .jobad .similarjobs .row .date {
+	color : #464646;
+	width : 80%;
+}
+.jobad .similarjobs .row.active .location, .jobad .similarjobs .row.active .salary, .jobad .similarjobs .row.active .date {
+	color : white;
+}
+.jobad .similarjobs .row .featured {
+	display : none;
+	float : right;
+	width : 3.8333333333333333em;
+	height : 0.625em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/TextFeatured.png");
+	margin-top : -0.625em;
+}
+.jobad .similarjobs .row.featured .featured {
+	display : block;
+}
+.notification {
+	width : 32.75em;
+	height : 6.875em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/NotificationBg.png");
+	position : absolute;
+	display : none;
+	top : 6em;
+	left : 3.5em;
+	color : white;
+	padding-left : 1em;
+}
+.notification.added {
+	background-image : url("../../images/device/NotificationAddedBg.png");
+}
+.notification .title {
+	font-size : 1.875em;
+	font-weight : Bold;
+	margin-top : 1em;
+	line-height : 1.2em;
+}
+.notification .desc {
+	font-size : 1.625em;
+}
+#horizontal-google-ads 
+{
+    margin-top: 20px;
+    width: 320px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}

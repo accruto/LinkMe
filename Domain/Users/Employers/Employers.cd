@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Users.Employers.Data.CommunicationContactsRepository" Collapsed="true">
+    <Position X="9.75" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAACAAAAAAAAAACIAAAAAAAAQgAAAAAFAAAA=</HashCode>
+      <FileName>Employers\Data\CommunicationContactsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Users.Employers.Communications.CommunicationContactsCommand" Collapsed="true">
+    <Position X="3.25" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAAAAAAAQAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Employers\Communications\CommunicationContactsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Users.Employers.Communications.Campaigns.CampaignCategoriesCommand" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Employers\Communications\Campaigns\CampaignCategoriesCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Users.Employers.Communications.Campaigns.SearchCampaignUsersCommand" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Employers\Communications\Campaigns\SearchCampaignUsersCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Users.Employers.Communications.Campaigns.Data.SearchCampaignEmployersRepository" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="LinkMe.Domain.Users.Employers.Communications.Campaigns.Data.SearchCampaignEmployersRepository.UserFlags" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Employers\Communications\Campaigns\Data\SearchCampaignEmployersRepository.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Employers\Communications\Campaigns\Data\SearchCampaignEmployersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Users.Employers.Communications.ICommunicationContactsRepository" Collapsed="true">
+    <Position X="7" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAABAAAA=</HashCode>
+      <FileName>Employers\Communications\ICommunicationContactsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.ICommunicationContactsCommand" Collapsed="true">
+    <Position X="0.5" Y="1" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Campaigns.ICampaignCategoriesCommand" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Campaigns.ISearchCampaignUsersCommand" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Users.Employers.Communications.Campaigns.ISearchCampaignEmployersRepository" Collapsed="true">
+    <Position X="7" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Employers\Communications\Campaigns\ISearchCampaignEmployersRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

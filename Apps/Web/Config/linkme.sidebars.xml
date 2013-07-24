@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!-- vi: set syntax=xml : -->
+<sidebars>
+  <sidebar id="empty">
+    <comments><![CDATA[Contains no components.]]></comments>
+    <components>
+    </components>
+  </sidebar>
+  <sidebar id="members">
+    <comments><![CDATA[This is the default sidebar for all pages of the logged in member site. This sidebar will appear on all pages when the user is logged on with an activated account, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-home">
+    <comments><![CDATA[The home page of the member site when the user is logged on with an activated account.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+      <component title="">editable-section</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-aboutme">
+    <comments><![CDATA[This sidebar will appear on the About Me page.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-communications">
+    <comments><![CDATA[This sidebar will appear on the Communications page.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-feedback">
+    <comments><![CDATA[This sidebar is the same as the member sidebar, with the addition of a feedback box.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-jobs">
+    <comments><![CDATA[This sidebar is the same as the member sidebar, with the addition of a feedback box.]]></comments>
+    <components>
+      <component title="Find people">member-search</component>
+      <component title="Notifications">member-notify</component>
+      <component title="Sponsored links">adsense2</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-guests">
+    <comments><![CDATA[This is the default sidebar for all pages of the public member site.  This sidebar will appear on all pages when the user is not logged on with an activated account, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-job">
+    <comments><![CDATA[This is the default sidebar for all pages of the public member site.  This sidebar will appear on all pages when the user is not logged on with an activated account, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-login-only">
+    <comments><![CDATA[This is for a login box only.]]></comments>
+    <components>
+      <component title="Log in">member-log-in</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-guests-front">
+    <comments><![CDATA[This is the sidebar for the logged-out front page.]]></comments>
+    <components>
+    </components>
+  </sidebar>
+  <sidebar id="members-guests-join">
+    <comments><![CDATA[This is the member join page sidebar.]]></comments>
+    <components>
+      <component title="Join as a member">member-join</component>
+      <component title="Privacy">join-privacy</component>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-join-details">
+    <comments><![CDATA[This is the default sidebar for all pages of the public member site.  This sidebar will appear on all pages when the user is not logged on with an activated account, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Why ask for my career details?">join-details</component>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="members-join-location">
+    <comments><![CDATA[This is the default sidebar for all pages of the public member site.  This sidebar will appear on all pages when the user is not logged on with an activated account, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Sponsored links">adsense</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-guests">
+    <comments><![CDATA[This is the default sidebar for all pages of the public employer site. This sidebar will appear on all pages when the user is not logged on, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Log in">employer-log-in</component>
+      <component title="Access candidates now">employer-access</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-guests-front">
+    <comments><![CDATA[This is the sidebar for the logged-out employer front page.]]></comments>
+    <components>
+    </components>
+  </sidebar>
+  <sidebar id="employers-guests-nologin">
+    <comments><![CDATA[Like the default sidebar for the public employer site, but without a login component.]]></comments>
+    <components>
+      <component title="Access candidates now">employer-access</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-guests-folders">
+    <comments><![CDATA[This is the default sidebar for all pages of the public employer site. This sidebar will appear on all pages when the user is not logged on, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Access candidates now">employer-access</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-guests-join">
+    <comments><![CDATA[This is the default sidebar for all pages of the public employer site. This sidebar will appear on all pages when the user is not logged on, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Join as an employer">employer-join</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers">
+    <comments><![CDATA[This is the default sidebar for all pages of the logged in employer site. This sidebar will appear on all pages when the user is logged on, unless the page is specifically associated with another sidebar or will not have a sidebar.]]></comments>
+    <components>
+      <component title="Access candidates now">employer-subscriptions</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-job-ad">
+    <comments><![CDATA[New/Preview/Edit job ad]]></comments>
+    <components>
+      <component title="Access candidates now">employer-subscriptions</component>
+      <component title="Writing a great job ad">job-ad-writing-advice</component>
+      <component title="What makes a great job ad title?">job-ad-title-advice</component>
+      <component title="Include salary">job-ad-salary-advice</component>
+      <component title="What is shown to job hunters?">what-is-shown-to-job-hunters</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-folders">
+    <comments><![CDATA[Employer sidebar with candidate folders tree and search]]></comments>
+    <components>
+      <component title="Access candidates now">employer-subscriptions</component>
+    </components>
+  </sidebar>
+  <sidebar id="employers-folders-nosearch">
+    <comments><![CDATA[Employer sidebar with candidate folders tree, but no folders search]]></comments>
+    <components>
+      <component title="Access candidates now">employer-subscriptions</component>
+    </components>
+  </sidebar>
+</sidebars>
+
+<!-- Created by the following Perl script:
+#!/usr/bin/perl
+
+use strict;
+
+my $URI = "http://intranet/wikime/moin.cgi/Requirements/RequirementsForSideBars?action=raw";
+
+# MoinMoin barfs otherwise.
+my $UserAgent = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11";
+
+open WIKI, "curl -s -A \"User-Agent: $UserAgent\" $URI |";
+
+my $collect;
+
+open SRC, '<', $0;
+my $src = join '', <SRC>;
+
+print <<EOF;
+<?xml version="1.0"?>
+<!-@{[]}- vi: set syntax=xml : -@{[]}->
+<sidebars>
+EOF
+
+my $fmt = qr/(?:<.*?>)?\s*/;
+
+while (<WIKI>)
+{
+    if (/^\|\| *(''')?Sidebar(''')? *\|\| *(''')?Components(''')? *\|\| *(''')?Comments(''')? *\|\|/)
+    {
+        $collect = 1;
+    }
+    elsif (/^\s$/)
+    {
+        $collect = undef;
+    }
+    elsif ($collect && /^\|\|$fmt(.*?)\s*\|\|$fmt(.*?)\s*\|\|$fmt(.*?)\s*\|\|/)
+    {
+        my ($sidebar, $comps, $comments) = ($1, $2, $3);
+        $comments =~ s/\]\]>/\]\]&gt;/g;
+
+        print "  <sidebar id=\"$sidebar\">\n";
+        print "    <comments><![CDATA[$comments]]></comments>\n";
+        print "    <components>\n";
+        print "      <component>$_</component>\n" for split / *, */, $comps;
+        print "    </components>\n";
+        print "  </sidebar>\n";
+    }
+}
+
+print <<EOF
+</sidebars>
+
+<!-@{[]}- Created by the following Perl script:
+$src-@{[]}->
+EOF
+-->

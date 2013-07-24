@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="JOBS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CLIENT"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CLIENT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="JOB"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JOB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="JOBADTYPE"/>
+        <xs:element ref="TITLE"/>
+        <xs:element ref="DESCRIPTION"/>
+        <xs:element ref="ADDETAILS"/>
+        <xs:element maxOccurs="unbounded" ref="LOCATION"/>
+        <xs:element ref="APPLICATIONEMAIL"/>
+        <xs:element ref="CONTACTDETAILS"/>
+        <xs:element ref="PUBLICTRANSPORT"/>
+        <xs:element ref="ADVERTISERID"/>
+        <xs:element ref="ADVERTISERNAME"/>
+        <xs:element ref="HIDELOCATIONDETAILS"/>
+        <xs:element ref="CATEGORIES"/>
+        <xs:element ref="LISTING"/>
+        <xs:element ref="SALARY"/>
+        <xs:element ref="APPLICATIONMETHOD"/>
+        <xs:element ref="DATEPOSTED"/>
+        <xs:element ref="REFERENCENO"/>
+        <xs:element ref="PHONENO"/>
+      </xs:sequence>
+      <xs:attribute name="Reference" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JOBADTYPE" type="xs:NCName"/>
+  <xs:element name="TITLE" type="xs:string"/>
+  <xs:element name="DESCRIPTION" type="xs:string"/>
+  <xs:element name="ADDETAILS" type="xs:string"/>
+  <xs:element name="LOCATION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SUBREGION"/>
+        <xs:element ref="REGION"/>
+        <xs:element ref="STATE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SUBREGION" type="xs:string"/>
+  <xs:element name="REGION" type="xs:string"/>
+  <xs:element name="STATE" type="xs:string"/>
+  <xs:element name="APPLICATIONEMAIL" type="xs:string"/>
+  <xs:element name="CONTACTDETAILS" type="xs:string"/>
+  <xs:element name="PUBLICTRANSPORT">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ADVERTISERID" type="xs:integer"/>
+  <xs:element name="ADVERTISERNAME" type="xs:string"/>
+  <xs:element name="HIDELOCATIONDETAILS" type="xs:NCName"/>
+  <xs:element name="CATEGORIES">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CLASSIFICATION"/>
+        <xs:element ref="SUBCLASSIFICATION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SUBCLASSIFICATION" type="xs:string"/>
+  <xs:element name="LISTING">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="CLASSIFICATION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SALARY">
+    <xs:complexType>
+      <xs:attribute name="hideSalaryDetails" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APPLICATIONMETHOD">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="type" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DATEPOSTED" type="xs:NMTOKEN"/>
+  <xs:element name="REFERENCENO" type="xs:NMTOKEN"/>
+  <xs:element name="PHONENO" type="xs:string"/>
+  <xs:element name="CLASSIFICATION">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Name" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="SynonymsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Framework.Text.Properties.Settings" SettingsPropertyName="LinkMeConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EquivalentTerms" Member="EquivalentTermEntities">
+    <Type Name="EquivalentTermEntity">
+      <Column Name="searchTerm" Type="System.String" DbType="VarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="equivalentGroupId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

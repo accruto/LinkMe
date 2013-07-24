@@ -1,0 +1,1 @@
+alter_LocationReference_OnLocationReferenceUpdate.sql

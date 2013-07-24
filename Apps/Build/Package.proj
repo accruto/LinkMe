@@ -1,0 +1,140 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Package">
+
+  <PropertyGroup>
+    <DestinationRootDirectory Condition=" '$(DestinationRootDirectory)' == '' ">C:\LinkMe\Build\</DestinationRootDirectory>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <OptimizePngFiles>True</OptimizePngFiles>
+    <WebRootDirectory>$(SourceRootDirectory)Web\</WebRootDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MinJavaScripts Include="$(WebRootDirectory)Content\Js\**\*.js;$(WebRootDirectory)Content\*\Js\**\*.js" Exclude="$(SourceRootDirectory)Web\Content\Js\**\*.min.js;$(WebRootDirectory)Content\*\Js\**\*.min.js;$(SourceRootDirectory)Web\Content\Js\**\*.min-vsdoc.js;$(SourceRootDirectory)Web\Content\Js\**\jquery-1.4.1.js;$(SourceRootDirectory)Web\Content\Js\**\jquery-1.6.2.js;$(SourceRootDirectory)Web\Content\Js\**\jquery.validate.js" />
+    <MinStyleSheets Include="$(WebRootDirectory)Content\Css\**\*.css;$(WebRootDirectory)Content\*\Css\**\*.css" Exclude="$(WebRootDirectory)Content\Css\**\*.min.css;$(WebRootDirectory)Content\*\Css\**\*.min.css;$(WebRootDirectory)Content\Organisations\Css\**\*.css;" />
+    <OptimizePngFiles Include="$(WebRootDirectory)Content\Images\**\*.png" />
+  </ItemGroup>
+
+  <!-- This list should all be automated at some stage -->
+  
+  <ItemGroup>
+    <GacAssemblies Include="AjaxPro.2.dll" />
+    <GacAssemblies Include="Castle.Core.dll" />
+    <GacAssemblies Include="Castle.DynamicProxy2.dll" />
+    <GacAssemblies Include="Castle.DynamicProxy.dll" />
+    <GacAssemblies Include="Castle.DynamicProxy.xml" />
+    <GacAssemblies Include="Castle.MicroKernel.dll" />
+    <GacAssemblies Include="Castle.Windsor.dll" />
+    <GacAssemblies Include="Iesi.Collections.dll" />
+    <GacAssemblies Include="Iesi.Collections.xml" />
+    <GacAssemblies Include="FlexCel.dll" />
+    <GacAssemblies Include="HtmlAgilityPack.dll" />
+    <GacAssemblies Include="Microsoft.Practices.Unity.dll" />
+    <GacAssemblies Include="Microsoft.Practices.ObjectBuilder2.dll" />
+    <GacAssemblies Include="Microsoft.Practices.Unity.Configuration.dll" />
+    <GacAssemblies Include="Microsoft.Practices.Unity.Interception.dll" />
+    <GacAssemblies Include="MSLens.dll" />
+    <GacAssemblies Include="N2.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Corba.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Core.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Jdbc.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Misc.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Security.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.SwingAWT.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Text.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.Util.dll" />
+    <GacAssemblies Include="IKVM.OpenJDK.XML.dll" />
+    <GacAssemblies Include="IKVM.Runtime.dll" />
+    <GacAssemblies Include="IKVM.Runtime.JNI.dll" />
+    <GacAssemblies Include="lingpipe-4.1.0.dll" />
+    <GacAssemblies Include="lucene-core-2.9.0.dll" />
+    <GacAssemblies Include="lucene-highlighter-2.9.0.dll" />
+    <GacAssemblies Include="lucene-memory-2.9.0.dll" />
+    <GacAssemblies Include="lucene-snowball-2.9.4.dll" />
+    <GacAssemblies Include="Ionic.Zip.dll" />
+    <GacAssemblies Include="JdSoft.Apns.Feedback.dll" />
+    <GacAssemblies Include="JdSoft.Apns.Notifications.dll" />
+    <GacAssemblies Include="Newtonsoft.Json.Compact.dll" />
+    <GacAssemblies Include="Antlr3.Runtime.dll" />
+    <GacAssemblies Include="Microsoft.Web.Infrastructure.dll" />
+    <GacAssemblies Include="System.Web.Optimization.dll" />
+    <GacAssemblies Include="WebGrease.dll" />
+
+    <GacAssemblies Include="LinkMe.Interop.Cdosys.dll" />
+    <GacAssemblies Include="LinkMe.Interop.Msado15.dll" />
+    
+    <GacAssemblies Include="LinkMe.Environment.dll" />
+    
+    <GacAssemblies Include="LinkMe.Framework.Content.dll" />
+    <GacAssemblies Include="LinkMe.Framework.Communications.dll" />
+    <GacAssemblies Include="LinkMe.Framework.Instrumentation.dll" />
+    <GacAssemblies Include="LinkMe.Framework.Utility.dll" />
+
+    <GacAssemblies Include="LinkMe.Domain.dll" />
+    <GacAssemblies Include="LinkMe.Domain.Roles.dll" />
+    <GacAssemblies Include="LinkMe.Domain.Users.dll" />
+
+    <GacAssemblies Include="LinkMe.Query.dll" />
+    <GacAssemblies Include="LinkMe.Query.Reports.dll" />
+    <GacAssemblies Include="LinkMe.Query.Search.dll" />
+    <GacAssemblies Include="LinkMe.Query.Search.Engine.dll" />
+
+    <GacAssemblies Include="LinkMe.Apps.Agents.dll" />
+    <GacAssemblies Include="LinkMe.Apps.Presentation.dll" />
+    <GacAssemblies Include="LinkMe.Apps.Pageflows.dll" />
+    <GacAssemblies Include="LinkMe.Apps.Services.dll" />
+    <GacAssemblies Include="LinkMe.Apps.Asp.dll" />
+    
+    <GacAssemblies Include="LinkMe.Cms.Client.dll" />
+    <GacAssemblies Include="LinkMe.Common.dll" />
+    <GacAssemblies Include="LinkMe.Utility.dll" />
+    <GacAssemblies Include="LinkMe.WebControls.dll" />
+    <GacAssemblies Include="LinkMe.Workflow.dll" />
+    <GacAssemblies Include="LinkMe.Tracking.dll" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <WebProjects Include="Web.csproj">
+      <SubDirectory>Web\</SubDirectory>
+      <DestinationDirectory>$(DestinationRootDirectory)Web\</DestinationDirectory>
+      <SourceDirectory>$(WebRootDirectory)</SourceDirectory>
+      <VirtualPath>/LinkMe</VirtualPath>
+      <CatalogueFile>LinkMe.Apps.Web.catalogue</CatalogueFile>
+      <CatalogueFileGuid>{D4CC763B-49D7-4a77-A961-F7A979AA02B3}</CatalogueFileGuid>
+    </WebProjects>
+    <WebProjects Include="Integration.csproj">
+      <SubDirectory>Integration\</SubDirectory>
+      <DestinationDirectory>$(DestinationRootDirectory)Integration\</DestinationDirectory>
+      <SourceDirectory>$(SourceRootDirectory)Integration\</SourceDirectory>
+      <VirtualPath>/Integration</VirtualPath>
+      <CatalogueFile>LinkMe.Apps.Integration.catalogue</CatalogueFile>
+      <CatalogueFileGuid>{695CF706-7BA9-4dc9-ACDA-0C924A13FDAF}</CatalogueFileGuid>
+    </WebProjects>
+    <WebProjects Include="Management.csproj">
+      <SubDirectory>Management\</SubDirectory>
+      <DestinationDirectory>$(DestinationRootDirectory)Management\</DestinationDirectory>
+      <SourceDirectory>$(SourceRootDirectory)Management\</SourceDirectory>
+      <VirtualPath>/Management</VirtualPath>
+      <CatalogueFile>LinkMe.Apps.Management.catalogue</CatalogueFile>
+      <CatalogueFileGuid>{C4E40AE2-2759-47da-9D1C-611A6CF3FBA3}</CatalogueFileGuid>
+    </WebProjects>
+    <WebProjects Include="Api.csproj">
+      <SubDirectory>Api\</SubDirectory>
+      <DestinationDirectory>$(DestinationRootDirectory)Api\</DestinationDirectory>
+      <SourceDirectory>$(SourceRootDirectory)Api\</SourceDirectory>
+      <VirtualPath>/Api</VirtualPath>
+      <CatalogueFile>LinkMe.Apps.Api.catalogue</CatalogueFile>
+      <CatalogueFileGuid>{3B07C860-729A-4223-A3D1-2BD18DB918C3}</CatalogueFileGuid>
+    </WebProjects>
+  </ItemGroup>
+  <ItemGroup>
+    <ReportFolders Include="$(SourceRootDirectory)Reports\">
+      <SubDirectory>Reports\</SubDirectory>
+      <CatalogueFile>LinkMe.Apps.Reports.catalogue</CatalogueFile>
+      <CatalogueFileGuid>{59B1223B-FEF1-4cc1-8EA3-CED0E0E46847}</CatalogueFileGuid>
+    </ReportFolders>
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemPackage.proj" />
+
+</Project>

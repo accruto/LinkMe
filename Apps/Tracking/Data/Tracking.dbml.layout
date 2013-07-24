@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Tracking">
+  <DataContextMoniker Name="/TrackingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="068e3dae-5cc6-4d53-a274-532cd22a0c41" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/TrackingDataContext/TrackingCommunicationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="994da17f-94b0-4690-90d1-6d599e8671bf" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9d7cd5b-9732-4b02-92db-850394e0016e" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/TrackingDataContext/TrackingCommunicationLinkClickedEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26690fd1-c608-4899-998d-e4369c4cd599" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d7aa8f8-1744-4ec0-8b51-379816411279" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TrackingDataContext/TrackingCommunicationLinkEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb7ec7ed-edb6-4fa9-b71f-e6d64fc1133b" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69f0c590-2629-4b9d-8016-6a0475e31714" absoluteBounds="3.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/TrackingDataContext/TrackingCommunicationOpenedEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1442e10e-a666-488c-aa60-4c48e65e43b8" absoluteBounds="3.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc829c75-144f-4afc-9a2a-2783d1e4887d" absoluteBounds="3.625, 4.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/TrackingDataContext/TrackingRequestEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61997a8f-6f66-4510-b506-920d6747f5ea" absoluteBounds="3.6399999999999997, 5.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,99 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, #JobDescription table, #JobDescription th, #JobDescription td, #JobDescription ul, #JobDescription li, #JobDescription label, #JobDescription span {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	border: 1px solid #595959;
+	margin-bottom: 1em;
+	width: 458px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad h1, 
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 0 30px 1em 30px;	
+}
+
+/* Counter-act the above for outer/branding containers */
+
+#JobAd #JobDescription #Ad {
+	margin: 8px 0 0 0;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: transparent url('research_master/rm_logo.gif') no-repeat right top;
+	height: 70px;
+	margin: 0 8px 0 0;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	margin: -40px 0 0 0;
+}
+
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #000;
+	font-size: 200%;
+	/*margin-top: -110px;*/
+	font-weight: bold;
+	text-align: left;
+	width: 240px;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-top: 2em;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 390px !important;
+}
+
+#JobAd #JobDescription #Ad table td {
+	font-size: 110%;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad table label {
+	font-weight: bold;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: url('research_master/rm_footer.png') no-repeat center bottom;
+	height: 90px;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}

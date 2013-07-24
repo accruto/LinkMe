@@ -1,0 +1,11 @@
+create_JobApplicationStatus.sql
+create_JobApplicationType.sql
+create_JobApplicationIsPending.sql
+data_JobApplicationStatus.sql
+data_JobApplicationIsPending.sql
+data_JobApplicationType.sql
+drop_JobApplicationStatus.sql
+alter_EmployerMemberMessage.sql
+create_FeaturedStatistics.sql
+create_FeaturedJobAd.sql
+create_GetAvailableEmployerCredits.sql

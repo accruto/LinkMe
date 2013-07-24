@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="AppleDevicesDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UserAppleDevice" Member="UserAppleDeviceEntities" AccessModifier="Internal">
+    <Type Name="UserAppleDeviceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="deviceToken" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.IsOrganisationDescendent" Method="IsOrganisationDescendent" IsComposable="true">
+    <Parameter Name="parentId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="childId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.GetOrganisationFullName" Method="GetOrganisationFullName" IsComposable="true">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="separator" Type="System.Char" DbType="NChar(1)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.GetEffectiveOrgUnitContactDetailsId" Method="GetEffectiveOrgUnitContactDetailsId" IsComposable="true">
+    <Parameter Name="orgUnitId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Guid" />
+  </Function>
+</Database>

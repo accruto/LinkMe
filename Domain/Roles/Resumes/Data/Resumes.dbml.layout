@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.5" name="Resumes">
+  <DataContextMoniker Name="/ResumesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8152fac2-1cba-4396-b3d7-73e4a6c6404c" absoluteBounds="5.5, 1.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ResumesDataContext/ResumeJobEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96d698cf-dc13-4a06-8435-61b95b271bae" absoluteBounds="5.515, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5f7327e-91b1-4305-b9ae-daea217cb353" absoluteBounds="5.25, 5.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/ResumesDataContext/ResumeSchoolEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73e262a1-34c0-422b-9d3d-a293e736ff85" absoluteBounds="5.265, 5.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afd2f291-44dc-4dc8-8a38-c37a3687be5f" absoluteBounds="1.5, 7.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ResumesDataContext/ParsedResumeEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="878d88c9-5ce2-4a9f-9005-da519b0751a6" absoluteBounds="1.5150000000000001, 8.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c0c3b72-a443-46e1-b3d9-a553e5505810" absoluteBounds="1, 1.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/ResumesDataContext/ResumeEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77de6680-4b22-49c7-b5c0-ab6ca123ddee" absoluteBounds="1.0150000000000001, 1.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 2.99120198567708); (5.5 : 2.99120198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ResumesDataContext/ResumeEntity/ResumeEntity_ResumeJobEntity" />
+      <nodes>
+        <classShapeMoniker Id="7c0c3b72-a443-46e1-b3d9-a553e5505810" />
+        <classShapeMoniker Id="8152fac2-1cba-4396-b3d7-73e4a6c6404c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 4.89745148567708); (5.34375 : 4.89745148567708); (5.34375 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ResumesDataContext/ResumeEntity/ResumeEntity_ResumeSchoolEntity" />
+      <nodes>
+        <classShapeMoniker Id="7c0c3b72-a443-46e1-b3d9-a553e5505810" />
+        <classShapeMoniker Id="e5f7327e-91b1-4305-b9ae-daea217cb353" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.25 : 5.38621256510417); (2.25 : 7.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ResumesDataContext/ResumeEntity/ResumeEntity_ParsedResumeEntity" />
+      <nodes>
+        <classShapeMoniker Id="7c0c3b72-a443-46e1-b3d9-a553e5505810" />
+        <classShapeMoniker Id="afd2f291-44dc-4dc8-8a38-c37a3687be5f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="OrdersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ProductReceipt" Member="ProductReceiptEntities" AccessModifier="Internal">
+    <Type Name="ProductReceiptEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalTransactionId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalTransactionTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="creditCardPan" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="creditCardType" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductReceiptEntity" Member="ProductOrderEntity" ThisKey="orderId" OtherKey="id" Type="ProductOrderEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductOrder" Member="ProductOrderEntities" AccessModifier="Internal">
+    <Type Name="ProductOrderEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="confirmationCode" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="purchaserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="priceExclTax" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="priceInclTax" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductReceiptEntity" Member="ProductReceiptEntities" ThisKey="id" OtherKey="orderId" Type="ProductReceiptEntity" />
+      <Association Name="ProductOrderEntity_ProductOrderItemEntity" Member="ProductOrderItemEntities" ThisKey="id" OtherKey="orderId" Type="ProductOrderItemEntity" />
+      <Association Name="ProductOrderEntity_ProductOrderAdjustment" Member="ProductOrderAdjustmentEntities" ThisKey="id" OtherKey="orderId" Type="ProductOrderAdjustmentEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductOrderItem" Member="ProductOrderItemEntities" AccessModifier="Internal">
+    <Type Name="ProductOrderItemEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="productId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductOrderItemEntity" Member="ProductOrderEntity" ThisKey="orderId" OtherKey="id" Type="ProductOrderEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseTransaction" Member="PurchaseTransactionEntities" AccessModifier="Internal">
+    <Type Name="PurchaseTransactionEntity" AccessModifier="Internal">
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="transactionId" Type="System.String" DbType="NVarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="provider" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="requestMessage" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="requestTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="responseMessage" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="responseTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductCouponProduct" Member="ProductCouponProductEntities" AccessModifier="Internal">
+    <Type Name="ProductCouponProductEntity" AccessModifier="Internal">
+      <Column Name="couponId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="productId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductCouponEntity_ProductCouponProductEntity" Member="ProductCouponEntity" ThisKey="couponId" OtherKey="id" Type="ProductCouponEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductCouponRedeemer" Member="ProductCouponRedeemerEntities" AccessModifier="Internal">
+    <Type Name="ProductCouponRedeemerEntity" AccessModifier="Internal">
+      <Column Name="couponId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="redeemerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductCouponEntity_ProductCouponRedeemerEntity" Member="ProductCouponEntity" ThisKey="couponId" OtherKey="id" Type="ProductCouponEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductCoupon" Member="ProductCouponEntities" AccessModifier="Internal">
+    <Type Name="ProductCouponEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="expiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="canBeUsedOnce" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="percentageDiscount" Type="System.Decimal" DbType="Decimal(18,18)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fixedDiscount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ProductCouponEntity_ProductCouponProductEntity" Member="ProductCouponProductEntities" ThisKey="id" OtherKey="couponId" Type="ProductCouponProductEntity" />
+      <Association Name="ProductCouponEntity_ProductCouponRedeemerEntity" Member="ProductCouponRedeemerEntities" ThisKey="id" OtherKey="couponId" Type="ProductCouponRedeemerEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductOrderAdjustment" Member="ProductOrderAdjustmentEntities" AccessModifier="Internal">
+    <Type Name="ProductOrderAdjustmentEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="rank" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="initialPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="adjustedPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="referenceId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="percentageAmount" Type="System.Decimal" DbType="Decimal(18,18)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fixedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductOrderAdjustment" Member="ProductOrderEntity" ThisKey="orderId" OtherKey="id" Type="ProductOrderEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

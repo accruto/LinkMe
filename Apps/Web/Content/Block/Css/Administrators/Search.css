@@ -1,0 +1,50 @@
+﻿#search-results-header {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 10px;
+}
+
+#search-results-header .search-results-count {
+    margin-top: 5px;
+}
+
+#search-results-header .search-download-actions {
+    float: right;
+}
+
+#search-results .disabled-user th,
+#search-results .disabled-user td {
+	color: #B0B0B0;
+}
+#search-results .disabled-user a {
+	color: #6060FF;
+}
+#search-results .disabled-user a:hover {
+	color: #FF6600;
+}
+
+#search-results {
+    font-size: 85%;
+}
+
+#search-results .username-column-header {
+    width: 100px;
+}
+#search-results .status-column-header {
+    width: 50px;
+}
+#search-results .organisation-column-header {
+    
+}
+#search-results .user-column-header {
+    width: 150px;
+}
+#search-results .email-address-column-header {
+    
+}
+#search-results .name-column-header {
+    
+}
+#search-results .batch-status-column-header {
+    width: 200px;
+}

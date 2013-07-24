@@ -1,0 +1,145 @@
+.control_header {
+	background:transparent url('../images/friends/messaging-controller.png') no-repeat scroll 0px 3px;
+	padding-top:13px; 
+	padding-bottom:15px; 
+	padding-left:15px;
+	margin-top:-15px;
+	margin-bottom:10px;
+	width:25%;
+}
+
+.message_list {
+}
+
+.message_selector {
+	float:left; 
+	margin-top:60px; 
+	margin-right: 10px;
+}
+
+.avatar_image_holder {
+	float:left; 
+	border: solid 1px #F0F3F0;
+}
+
+.avatar_image {
+	margin: 5px;
+}
+
+.message_date_holder {
+	float:left; 
+	margin-left:20px;
+	color:#999999;
+}
+
+a.sender_link {
+ 	text-decoration:none;
+}
+
+a.sender_link_unread {
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a.subject_link {
+	text-decoration:none;
+}
+
+a.subject_link_unread {
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.unread_message_notification {
+	color:#000000;
+	float:right;
+	font-weight:bold;
+	font-size: 85%;
+	padding-right:10px;
+	padding-top:5px;
+}
+
+.message_area {
+	float:left; 
+	margin-left:20px; 
+	width:270px;
+}
+
+.message_text {
+	overflow:hidden;
+}
+
+.message_container 
+{
+	border-bottom: 1px solid #CCCCCC;
+	padding: 10px 0px 1px 1px;
+}
+
+.message_container_unread {
+	background-color: #EEF9FF;
+	border: 1px solid #CCCCCC;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.message_read {	
+}
+
+.message_input {
+	width: 428px;
+	margin-top:4px;
+}
+
+.message_text_input {
+	width:428px;
+	height:150px;
+	margin-top:4px;
+}
+
+.message_reply_container {
+	float:right; 
+	margin-top: 20px;
+	margin-right: 20px
+}
+
+.message_reply_header {
+	font-weight:bold; float:left; margin-right: 10px;
+}
+
+div.auto-complete {
+    width: 350px;
+    z-index: 9999;
+}
+
+div.auto-complete ul {
+	border:1px solid #A4B97F;
+	margin: 0;
+	padding: 1px;
+    background: #fff;
+	width: 100%;
+	color:#444444;
+	font-family:Arial;
+	font-size:14px;
+	font-weight: bold;
+    list-style-type:none;
+    list-style-image:none;
+}
+
+div.auto-complete ul li {
+    margin:0;
+    padding:3px;
+    float: none;
+    cursor: default;
+}
+
+div.auto-complete ul li.selected {
+    background-color: #FFFFCC;
+    padding:2px;
+    border: 1px solid #EECCAA;
+}
+
+div.auto-complete ul strong.highlight {
+    color: #800;
+    margin:0;
+    padding:0;
+}

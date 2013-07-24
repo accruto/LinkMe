@@ -1,0 +1,309 @@
+/* general styles that in principle could be refactored elsewhere */
+.leave-button {
+	background: url(../images/buttons/yes.png) no-repeat;
+	height: 21px;
+	width: 65px;
+	border:0px;
+}
+
+.sendinvitations_button {
+	background: url(../images/buttons/send-invitations.png) no-repeat;
+    width: 125px;
+}
+
+.create_button {
+	background: url(../images/buttons/create.png) no-repeat;
+    width: 62px;
+}
+
+.required {
+	background-image:url(../images/universal/compulsory-star.png);
+	background-position:right top;
+	background-repeat:no-repeat;
+	padding-right:7px;
+}
+
+.validation-advice {
+	color: #f00;
+}
+
+.title {}
+.hidden { display: none; }
+
+/* general groups styles */
+
+hr {
+	display: none;
+}
+
+h2 {
+	line-height: 2em;      /* MF: (2010-05-03) WTF ... must find out what this is intended to affect */
+}
+
+img {
+	border: 0;
+	vertical-align: top;	
+}
+	
+/* Workflow step indicator
+   Used in:
+   - "Create a group"
+   - "Edit a group"
+*/		
+#ProgressHeader span {
+	display: none;	
+}
+	#ProgressHeader ol {
+		margin: 20px 0;
+		padding-left: 0;
+	}
+		#ProgressHeader ol li {
+			color: #333;
+			display: inline;
+			font-weight: bold;
+			padding: 4px 12px 4px 26px;
+		}
+		#ProgressHeader ol li.selected {
+			color: #f60;
+		}
+		#ProgressHeader ol li#item_0 {
+		background: url('../img/one.gif') no-repeat left center;
+		}
+		#ProgressHeader ol li.selected#item_0 {
+			background: url('../img/oneOn.gif') no-repeat left center;
+		}
+		#ProgressHeader ol li#item_1 {
+		background: url('../img/two.gif') no-repeat left center;
+		}
+		#ProgressHeader ol li.selected#item_1 {
+			background: url('../img/twoOn.gif') no-repeat left center;
+		}
+		#ProgressHeader ol li#item_2 {
+		background: url('../img/three.gif') no-repeat left center;
+		}
+		#ProgressHeader ol li.selected#item_2  {
+			background: url('../img/threeOn.gif') no-repeat left center;
+		}	
+
+
+/* Styles for specific groups sections and/or screens */
+/* Groups landing page (GroupsHome.aspx)*/
+.groups_list_header, 
+.groups_list_item {
+	clear:both;
+}
+.groups_list_name, 
+.groups_list_description, 
+.groups_list_location {
+	float:left;
+	width: 150px;
+}
+
+.minilist-header .count-heading {
+	position: relative;
+	float: right;
+}
+
+.minilist-header .title-heading {
+	position: relative;
+	float: left;
+}
+
+/* ViewGroup.aspx			*/
+/* ASP.NET Calendar control */
+table.calendar  {
+	border-collapse: separate;
+	border-spacing: 0px;
+	border: 1px solid #CCC !important;
+	margin:0;
+	margin-bottom: 10px;
+}
+
+table.calendar td {
+	*position: relative;		/* IE (6,7) hack - border-spacing 0px by 'relative' bug. */
+}
+
+	table.calendar th {
+		font-weight: normal;
+		background: #EEE;
+		padding: 3px;
+		text-align: center;
+	}
+
+	table.calendar td {
+		padding: 0;
+	}
+	
+	table.calendar .calendar_title {
+		font-weight: bold;
+		background: #EEE;
+	}
+		table.calendar .calendar_title .calendar_nextprev a {
+			color: #1155EE !important;
+			text-decoration: none;
+			display: block;
+			font-size: 100%;
+		}
+
+		table.calendar .calendar_title .calendar_nextprev a:hover {
+			color: #FF6600 !important;
+		}
+
+		table.calendar .calendar_title tr td {
+			padding: 3px;
+			text-align: center;
+		}
+			
+	table.calendar .calendar-day {
+		text-align: right;
+		padding: 2px;
+	}
+	
+	table.calendar .calendar-day_today {
+		background: #FFF0EA;
+		border: 1px solid #FCC;
+	}	
+	
+		table.calendar .day_number {
+			padding: 0px;
+			padding-right: 0.5em;
+		}
+		
+		table.calendar .has-event .day_number,
+		table.calendar .has-events .day_number {
+			background: #DEF;
+			border: 1px solid #ACE;
+			text-decoration: none;
+			display: block;
+			color: #06F;
+			padding-right: 0;
+		}
+	
+		table.calendar .has-event .day_number:hover,
+		table.calendar .has-events .day_number:hover {
+			background: #FFF6E6;
+			border-color: #FF6600;
+			color: #950;
+		}
+		
+		table.calendar .has-events .day_number {
+			border-width: 3px;
+			border-style: double;
+		}
+		
+		
+		table.calendar .calendar-day .event a,
+		table.calendar .calendar-day .events a {
+			display: block;
+			color: inherit;
+			text-decoration: none;
+			padding-right: 0.35em;
+		}
+		
+		table.calendar .calendar-day .event a {
+			padding-right: 0.5em;
+		}
+		
+		
+		* html table.calendar .calendar-day .event a,		/* IE6 hack */
+		* html table.calendar .calendar-day .events a {
+			color: #06F;
+		}
+		* html table.calendar .calendar-day .event a:hover,		/* IE6 hack */
+		* html table.calendar .calendar-day .events a:hover {
+			color: #F60;
+		}
+		
+.communication-links {
+	margin-bottom: 20px;
+}
+
+.mini-profile-container 
+{
+	height: 72px;
+	margin: 10px 0;
+}
+
+.profile-thumb {
+	float: left;
+	margin: 0 10px 0 0;
+	width: 53px;
+}
+.profile-link {
+	clear: left;
+	padding-right: 10px;
+}
+
+/* View Group Members page */
+/* Return to styles previously specified for the controls */
+
+.picture-container img {
+	padding-top: 0;
+}
+.friend-list-details {
+	margin-left: 15px;
+}
+	.friend-list-details div {
+		margin-bottom: 2px;
+	}
+	.friend-list-details div.is-doing {
+		margin-bottom:7px;
+	}
+	
+.groups-screen {}
+
+.groups-logo {
+    max-width: 312px;
+    _width: expression(LinkMeUI.IE6MaxWidth(312, this));    /* IE6 max-width hack */
+}
+
+#error-message {
+	margin-top: 15px;
+}
+
+
+/* Used in:
+   - Create group page 3
+   - InviteFriendsToGroup.aspx
+*/
+div#group-invitations {
+}
+	
+/* Used in:
+   - ViewGroup.aspx
+*/
+
+ul.admin-list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/* Used in:
+   - ViewEvents.aspx
+*/
+.events {}
+.events_previous {}
+.events_upcoming {}
+
+.events table.list tr.event {
+	vertical-align: top;
+}
+
+.events table.list tr.event td {	/* Tabel cell heights are implicitly min-heights */
+	height: 68px;
+}
+
+.events table.list tr.event td .title {
+	margin-bottom: 3px;
+}
+
+/* 
+ * Note: the white-space property of this rule plays funny buggers with 
+ * table widths in Firefox 3, and possibly other browsers as well.
+ */
+.ellipsis-label {
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+}

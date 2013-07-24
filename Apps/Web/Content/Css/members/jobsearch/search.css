@@ -1,0 +1,1011 @@
+﻿#subheader .header {
+	font : Bold 24px Arial;
+	color : #333333;
+}
+#main-body {
+	width : 960px;
+	margin-top : -20px;
+}
+#main-body div, #main-body span, #main-body label {
+	font : 12px Helvetica,Arial;
+	color : black;
+	float : left;
+}
+#main-body a, #main-body ul, #main-body li {
+	float : left;
+}
+
+.tabs {
+	height : 32px;
+}
+.tabs .tab {
+	margin-right : 2px;
+}
+.tabs .tab.Search {
+	background-image : url("../../../images/members/jobsearch/TabSearch.png");
+	width : 181px;
+	height : 31px;
+	cursor : pointer;
+}
+.tabs .tab.Search.active, .tabs .tab.Search:hover {
+	background-position : 0px -31px;
+}
+.tabs .tab.Industry {
+	background-image : url("../../../images/members/jobsearch/TabIndustry.png");
+	width : 181px;
+	height : 31px;
+	cursor : pointer;
+	display : inline-block;
+}
+.tabs .tab.Industry.active, .tabs .tab.Industry:hover {
+	background-position : 0px -31px;
+}
+.tabs .tab.Location {
+	background-image : url("../../../images/members/jobsearch/TabLocation.png");
+	width : 181px;
+	height : 31px;
+	cursor : pointer;
+	display : inline-block;
+}
+.tabs .tab.Location.active, .tabs .tab.Location:hover {
+	background-position : 0px -31px;
+}
+.icon.recent {
+	background-image : url("../../../images/members/jobsearch/IconRecent.png");
+	width : 22px;
+	height : 15px;
+	margin : 8px 379px 9px 10px;
+	cursor : pointer;
+}
+.tabcontent {
+	margin-top : -2px;
+}
+.tabcontent .topbar {
+	background-image : url("../../../images/members/jobsearch/TabContentTopBar.png");
+	width : 935px;
+	height : 3px;
+}
+.tabcontent .tab {
+	display : none;
+	background-image : url("../../../images/members/jobsearch/TabContentBg.png");
+	background-repeat : repeat-y;
+	width : 935px;	
+}
+body.IE7 .tabcontent .tab {
+	padding-bottom : 10px;
+}
+.tabcontent .tab.active {
+	display : block;
+}
+.tabcontent .Search .quick, .tabcontent .Search .advanced {
+	display : none;
+}
+.tabcontent .Search .quick.active, .tabcontent .Search .advanced.active {
+	display : block;
+}
+.tabcontent .bottombar {
+	background-image : url("../../../images/members/jobsearch/TabContentBottomBar.png");
+	width : 935px;
+	height : 3px;
+}
+.tabcontent .Search .quick .row {
+	width : 935px;
+}
+.tabcontent .Search .quick .row.one {
+	margin-top : 22px;
+}
+.tabcontent .Search .quick .field {
+	width : 364px;
+	margin-left : 16px;
+}
+#main-body .tabcontent .Search .quick .field label {
+	font : Bold 14px Arial;
+	color : #333333;
+	width : 364px;
+	margin : 0px 0px 9px 2px;
+	line-height : 14px;
+}
+.tabcontent .Search .quick .field .control .bg {
+	width : 350px;
+}
+.tabcontent .Search .quick .textbox_control input {
+	width : 354px;
+}
+.tabcontent .Search .quick .Country_dropdown_field {
+	display : none;
+}
+.tabcontent .Search .quick .explaination {
+	margin : 0px 395px 0px 20px;
+	width : 360px;
+}
+#main-body .tabcontent .Search .quick .explaination span {
+	font : 12px Arial;
+	color : #81858B;
+}
+.tabcontent .Search .quick .explaination .hidepart {
+	display : none;
+}
+.tabcontent .Search .quick .explaination .moreorlessholder {
+	cursor : pointer;
+}
+.tabcontent .Search .quick .explaination .moreorlessholder.less {
+	margin : -15px 0px 0px 70px;
+}
+.tabcontent .Search .quick .explaination .moreorlessholder.more {
+	margin : -27px 0px 0px 245px;
+}
+#main-body .tabcontent .Search .quick .explaination .moreorlessholder .arrow {
+	color : #1155EE;
+	margin : 0px 5px 0px 5px;
+}
+#main-body .tabcontent .Search .quick .explaination .moreorlessholder .moreorlesstext {
+	color : #1155EE;
+	text-decoration : underline;
+}
+body.IE7 .tabcontent .Search .quick .explaination .hidepart li {
+	margin-right : 30px;
+}
+.tabcontent .Search .toggle {
+	cursor : pointer;
+}
+.tabcontent .Search .quick .toggle {
+	margin-left : 10px;
+}
+.tabcontent .Search .quick .row.two {
+	margin : 10px 0px 10px 0px;
+}
+.tabcontent .Search .quick .toggle .button.expand {
+	margin : -5px 0px 0px 9px;
+}
+.tabcontent .Search .quick .button.search {
+	margin-left : 16px;
+}
+.tabcontent .Search .advanced .button.search {
+	margin : 39px 0px 0px 4px;
+}
+.tabcontent .Search .advanced .col {
+	margin : 22px 0px 0px 16px;
+	width : 370px;
+}
+.tabcontent .Search .advanced .area {
+	border : 1px solid #B2C4D4;
+	margin-bottom : 16px;
+	width : 368px;
+}
+body.IE7 .tabcontent .Search .advanced .col.two .area {
+	padding-bottom : 16px;
+}
+.tabcontent .Search .advanced .col.two .area {
+	margin-bottom : 31px;
+}
+.tabcontent .Search .advanced .area.keywords {
+	height :380px;
+}
+#main-body .tabcontent .Search .advanced .area label.title {
+	font : Bold 14px Arial;
+	color : #333333;
+	margin : -7px 280px 0px 5px;
+	line-height : 14px;
+	padding : 0px 10px 0px 5px;
+	background-color : #FBFBFA;
+}
+body.IE7 .tabcontent .Search .advanced .area.salary {
+	padding-bottom : 13px;
+}
+.tabcontent .Search .advanced .area.salary label.title {
+	width : 180px;
+}
+#main-body .tabcontent .Search .advanced .area.salary label.title span {
+	float : none;
+}
+.tabcontent .Search .advanced .field {
+	width : 338px;
+	margin : 0px 0px 15px 16px;
+}
+#main-body .tabcontent .Search .advanced .field label {
+	font : Bold 14px Arial;
+	color : #333333;
+	width : 364px;
+	margin : 0px 0px 9px 2px;
+	line-height : 14px;
+}
+.tabcontent .Search .advanced .field .control .bg {
+	width : 324px;
+}
+.tabcontent .Search .advanced .textbox_control input {
+	width : 328px;
+}
+.tabcontent .Search .advanced .explaination {
+	margin : 0px 0px -10px 20px;
+	width : 330px;
+}
+body.IE7 .tabcontent .Search .advanced .explaination {
+	margin-bottom : 10px;
+}
+.tabcontent .Search .advanced .explaination li {
+	width : 310px;
+}
+.tabcontent .Search .advanced .field.Distance_dropdown_field {
+	width : 140px;
+}
+#main-body .tabcontent .Search .advanced .field.Distance_dropdown_field label {
+	font : 12px Arial;
+	width : 40px;
+	line-height : 14px;
+	margin-top : 10px;
+}
+.tabcontent .Search .advanced .field.Distance_dropdown_field .control {
+	width : 95px;
+}
+.tabcontent .Search .advanced .field.Distance_dropdown_field .control .bg {
+	width : 85px;
+}
+.tabcontent .Search .advanced .field.Distance_dropdown_field .control .dropdown input[type='text'] {
+	width : 54px;
+}
+.tabcontent .Search .advanced .area.location .radius {
+	margin : 9px 0px 0px 5px;
+	width : 200px;
+}
+.tabcontent .Search .advanced .area.location .radius .title {
+	margin-right : 5px;
+}
+#main-body .tabcontent .Search .advanced .field.Country_dropdown_field label {
+	font : 12px Arial;
+	width : 50px;
+	line-height : 14px;
+	margin-top : 10px;
+}
+.tabcontent .Search .advanced .field.Country_dropdown_field .control {
+	width : 286px;
+}
+.tabcontent .Search .advanced .field.Country_dropdown_field .control .bg {
+	width : 276px;
+}
+.tabcontent .Search .advanced .field.Country_dropdown_field .control .dropdown input[type='text'] {
+	width : 245px;
+}
+.tabcontent .Search .advanced .area.jobtype .field {
+	margin-top : 10px;
+}
+.tabcontent .Search .advanced .area.jobtype .field .checkbox {
+	margin-top : 10px;
+}
+#main-body .tabcontent .Search .advanced .area.jobtype .field .control label {
+	font : 12px Arial;
+	width : 50px;
+	line-height : 14px;
+	margin-top : 10px;
+}
+#main-body .tabcontent .Search .advanced .area.jobtype .field .control label[for='Temp'] {
+	width : 36px;
+}
+#main-body .tabcontent .Search .advanced .area.jobtype .field .control label[for='JobShare'] {
+	width : 57px;
+}
+.tabcontent .Search .advanced .area.industry .comment {
+	margin : -5px 0px 10px 16px;
+}
+.tabcontent .Search .advanced .area.salary .textbox_field {
+	display : none;
+}
+.tabcontent .Search .advanced .area.salary .salary-control {
+	width : 276px;
+	margin-left : 47px;
+}
+.salary-range {
+	width : 276px;
+}
+#main-body .salary-range .left-range {
+	font-weight : Bold;
+}
+#main-body .salary-range .right-range {
+	float : right;
+	font-weight : Bold;
+}
+.salary-slider-bg {
+	width : 276px;
+	height : 13px;
+	margin-top : 13px;
+	position : absolute;
+}
+body.IE7 .salary-slider-bg {
+	margin : -26px 0px 0px -276px;
+}
+.salary-slider-bg, .salary-slider .ui-slider-range, .salary-slider .ui-slider-handle, .salary-slider-ruler {
+	background-image : url("../../../images/members/jobsearch/SalarySlider.png");
+}
+.salary-slider {
+	position : relative;
+	width : 276px;
+}
+.salary-slider .ui-slider-range {
+	background-position : -13px 0px;
+	width : 276px;
+	height : 13px;
+	cursor : pointer;
+	position : relative;
+}
+.salary-slider .ui-slider-handle {
+	background-position : -280px 0px;
+	width : 18px;
+	height : 26px;
+	position : absolute;
+	cursor : pointer;
+	outline : none;
+	margin-left : -9px;
+}
+.salary-slider .ui-slider-handle.left {
+}
+.salary-slider-ruler {
+	background-position : 0px -26px;
+	width : 276px;
+	height : 12px;
+	margin-left : 3px;
+}
+#main-body .salary-desc {
+	color : red;
+	width : 276px;
+}
+.tabcontent .Search .advanced .area.salary .checkbox_control .checkbox {
+	margin : 0px 1px 0px 0px;
+}
+#main-body .tabcontent .Search .advanced .area.salary .checkbox_control label {
+	font : 12px Arial;
+	width : 210px;
+}
+.tabcontent .Search .advanced .area.salary .checkbox_field {
+	margin-bottom : 0px;
+}
+.tabcontent .Search .advanced .area.industry .listbox_field {
+	margin-bottom : 21px;
+}
+.tabcontent .Search .advanced .toggle {
+	margin : -2px 0px 0px 35px;
+}
+.tabcontent .Search .advanced .toggle span {
+	margin : 12px 10px 0px 1px;
+}
+#main-body .tabcontent .Industry .industry_listbox_field label {
+	font : Bold 18px Arial;
+	color : #333333;
+	margin : 19px 760px 12px 17px;
+}
+.tabcontent .Industry #IndustriesIndustry, .tabcontent .Industry .Country_dropdown_field {
+	display : none;
+}
+.tabcontent .Industry .row {
+	width : 935px;
+	height : 31px;
+	border-bottom : 1px solid #D9D9D9;
+}
+.tabcontent .Industry .row .item .checkbox {
+	margin : 8px 13px 0px 18px;
+}
+#main-body .tabcontent .Industry .row .item span {
+	font : 11px Arial;
+	color : #2F2F2F;
+	width : 124px;
+	line-height : 11px;
+	margin-top : 5px;
+}
+.tabcontent .Industry .multicheck {
+	width : 935px;
+}
+.tabcontent .Industry .selectall, .tabcontent .Industry .clearall {
+	cursor : pointer;
+	margin : 16px 28px 16px 21px;
+}
+#main-body .tabcontent .Industry .selectall .text, #main-body .tabcontent .Industry .clearall .text {
+	font : 12px Arial;
+	color : #174FDF;
+	text-decoration : underline;
+}
+.tabcontent .Industry .icon {
+	background-image : url("../../../images/members/jobsearch/IconIndustryCheck.png");
+	height : 13px;
+	margin-right : 17px;
+}
+.tabcontent .Industry .selectall .icon {
+	width : 10px;
+}
+.tabcontent .Industry .clearall .icon {
+	background-position : -10px 0px;
+	width : 13px;
+}
+.tabcontent .Industry .multicheck .divider {
+	width : 1px;
+	height : 15px;
+	background-color : #D0D0D0;
+	margin-top : 16px;
+}
+.tabcontent .Industry .multicheck .divider.light {
+	background-color : #DDDDDD;
+}
+.tabcontent .nowenter {
+	display : none;
+}
+.tabcontent .Industry .textbox_field {
+	width : 364px;
+	margin : 22px 0px 21px 22px;
+}
+#main-body .tabcontent .Industry .textbox_field label {
+	width : 364px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+.tabcontent .Industry .field .control .bg {
+	width : 324px;
+}
+.tabcontent .Industry .textbox_control input {
+	width : 328px;
+}
+.tabcontent .Industry .button.search {
+	margin : 45px 0px 0px -20px;
+}
+.tabcontent .Location .map_field {
+	width : 913px;
+	margin : 22px 0px 21px 22px;
+}
+#main-body .tabcontent .Location .map_field label {
+	width : 913px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+.aus-map {
+	height : 290px;
+	width : 450px;
+	position : relative;
+	left : 220px;
+	margin-right : 242px;
+}
+.aus-map .state, .aus-map .region, .aus-map .pin {
+	position : absolute;
+	background-image : url("../../../images/members/jobsearch/AusMap.png");
+}
+.aus-map .state[state='Western Australia'] {
+	background-position : -5px -25px;
+	width : 123px;
+	height : 178px;
+	left : 50px;
+	top : 31px;
+}
+.aus-map .state[state='Western Australia'].hover {
+	background-position : -5px -265px;
+}
+.aus-map .state[state='Western Australia'].active, .aus-map .state[state='Western Australia'].active.hover {
+	background-position : -5px -465px;
+}
+.aus-map .state[state='Northern Territory'] {
+	background-position : -179px -25px;
+	width : 70px;
+	height : 126px;
+	left : 174px;
+	top : 7px;
+}
+.aus-map .state[state='Northern Territory'].hover {
+	background-position : -179px -265px;
+}
+.aus-map .state[state='Northern Territory'].active, .aus-map .state[state='Northern Territory'].active.hover {
+	background-position : -179px -465px;
+}
+.aus-map .state[state='South Australia'] {
+	background-position : -280px -50px;
+	width : 90px;
+	height : 102px;
+	left : 174px;
+	top : 135px;
+}
+.aus-map .state[state='South Australia'].hover {
+	background-position : -280px -290px;
+}
+.aus-map .state[state='South Australia'].active, .aus-map .state[state='South Australia'].active.hover {
+	background-position : -280px -490px;
+}
+.aus-map .state[state='Queensland'] {
+	background-position : -390px -18px;
+	width : 117px;
+	height : 154px;
+	left : 244px;
+	top : 5px;
+}
+.aus-map .state[state='Queensland'].hover {
+	background-position : -390px -258px;
+}
+.aus-map .state[state='Queensland'].active, .aus-map .state[state='Queensland'].active.hover {
+	background-position : -390px -458px;
+}
+.aus-map .state[state='New South Wales'] {
+	background-position : -521px -56px;
+	width : 94px;
+	height : 78px;
+	left : 266px;
+	top : 153px;
+}
+.aus-map .state[state='New South Wales'].hover {
+	background-position : -521px -296px;
+}
+.aus-map .state[state='New South Wales'].active, .aus-map .state[state='New South Wales'].active.hover {
+	background-position : -521px -496px;
+}
+.aus-map .state[state='Victoria'] {
+	background-position : -638px -74px;
+	width : 68px;
+	height : 44px;
+	left : 266px;
+	top : 206px;
+}
+.aus-map .state[state='Victoria'].hover {
+	background-position : -638px -314px;
+}
+.aus-map .state[state='Victoria'].active, .aus-map .state[state='Victoria'].active.hover {
+	background-position : -638px -514px;
+}
+.aus-map .state[state='Tasmania'] {
+	background-position : -737px -73px;
+	width : 49px;
+	height : 36px;
+	left : 271px;
+	top : 246px;
+}
+.aus-map .state[state='Tasmania'].hover {
+	background-position : -737px -313px;
+}
+.aus-map .state[state='Tasmania'].active, .aus-map .state[state='Tasmania'].active.hover {
+	background-position : -737px -513px;
+}
+.aus-map .region[region='Darwin'] {
+	background-position : -876px -3px;
+	width : 122px;
+	height : 28px;
+	left : 109px;
+	top : 8px;
+}
+.aus-map .region[region='Darwin'].hover {
+	background-position : -876px -43px;
+}
+.aus-map .region[region='Darwin'].active, .aus-map .region[region='Darwin'].active.hover {
+	background-position : -876px -83px;
+}
+.aus-map .region[region='Perth'] {
+	background-position : -876px -186px;
+	width : 75px;
+	height : 24px;
+	left : 8px;
+	top : 175px;
+}
+.aus-map .region[region='Perth'].hover {
+	background-position : -876px -226px;
+}
+.aus-map .region[region='Perth'].active, .aus-map .region[region='Perth'].active.hover {
+	background-position : -876px -266px;
+}
+.aus-map .region[region='Perth'].hover.state, .aus-map .region[region='Perth'].active.state, .aus-map .region[region='Perth'].active.hover.state {
+	width : 64px;
+}
+
+.aus-map .region[region='Hobart'] {
+	background-position : -1020px -7px;
+	width : 80px;
+	height : 24px;
+	left : 299px;
+	top : 259px;
+}
+.aus-map .region[region='Hobart'].hover {
+	background-position : -1020px -47px;
+}
+.aus-map .region[region='Hobart'].active, .aus-map .region[region='Hobart'].active.hover {
+	background-position : -1020px -87px;
+}
+.aus-map .region[region='Hobart'].hover.state {
+	background-position : -1035px -47px;
+	width : 65px;
+	left : 314px;
+}
+.aus-map .region[region='Hobart'].active.state, .aus-map .region[region='Hobart'].active.hover.state {
+	background-position : -1035px -87px;
+	width : 65px;
+	left : 314px;
+}
+.aus-map .region[region='Melbourne'] {
+	background-position : -1020px -186px;
+	width : 100px;
+	height : 24px;
+	left : 292px;
+	top : 224px;
+}
+.aus-map .region[region='Melbourne'].hover {
+	background-position : -1020px -226px;
+}
+.aus-map .region[region='Melbourne'].active, .aus-map .region[region='Melbourne'].active.hover {
+	background-position : -1020px -266px;
+}
+.aus-map .region[region='Melbourne'].hover.state {
+	background-position : -1035px -226px;
+	width : 85px;
+	left : 307px;
+}
+.aus-map .region[region='Melbourne'].active.state, .aus-map .region[region='Melbourne'].active.hover.state {
+	background-position : -1035px -266px;
+	width : 85px;
+	left : 307px;
+}
+.aus-map .region[region='Gold Coast'] {
+	background-position : -1143px -7px;
+	width : 97px;
+	height : 24px;
+	left : 347px;
+	top : 136px;
+}
+.aus-map .region[region='Gold Coast'].hover {
+	background-position : -1143px -47px;
+}
+.aus-map .region[region='Gold Coast'].active, .aus-map .region[region='Gold Coast'].active.hover {
+	background-position : -1143px -87px;
+}
+.aus-map .region[region='Gold Coast'].hover.state {
+	background-position : -1158px -47px;
+	width : 82px;
+	left : 362px;
+}
+.aus-map .region[region='Gold Coast'].active.state, .aus-map .region[region='Gold Coast'].active.hover.state {
+	background-position : -1158px -87px;
+	width : 82px;
+	left : 362px;
+}
+.aus-map .region[region='Brisbane'] {
+	background-position : -1158px -185px;
+	width : 82px;
+	height : 30px;
+	left : 349px;
+	top : 110px;
+}
+.aus-map .region[region='Brisbane'].hover {
+	background-position : -1158px -225px;
+}
+.aus-map .region[region='Brisbane'].active, .aus-map .region[region='Brisbane'].active.hover {
+	background-position : -1158px -265px;
+}
+.aus-map .region[region='Brisbane'].hover.state {
+	background-position : -1168px -225px;
+	width : 72px;
+	left : 359px;
+}
+.aus-map .region[region='Brisbane'].active.state, .aus-map .region[region='Brisbane'].active.hover.state {
+	background-position : -1168px -265px;
+	width : 72px;
+	left : 359px;
+}
+.aus-map .region[region='Sydney'] {
+	background-position : -1276px -7px;
+	width : 84px;
+	height : 24px;
+	left : 333px;
+	top : 187px;
+}
+.aus-map .region[region='Sydney'].hover {
+	background-position : -1276px -47px;
+}
+.aus-map .region[region='Sydney'].active, .aus-map .region[region='Sydney'].active.hover {
+	background-position : -1276px -87px;
+}
+.aus-map .region[region='Australian Capital Territory'] {
+	background-position : -1260px -185px;
+	width : 87px;
+	height : 38px;
+	left : 241px;
+	top : 172px;
+}
+.aus-map .region[region='Australian Capital Territory'].hover {
+	background-position : -1260px -223px;
+}
+.aus-map .region[region='Australian Capital Territory'].active, .aus-map .region[region='Australian Capital Territory'].active.hover {
+	background-position : -1260px -264px;
+}
+.aus-map .region[region='Adelaide'] {
+	background-position : -1392px -7px;
+	width : 91px;
+	height : 24px;
+	left : 164px;
+	top : 195px;
+}
+.aus-map .region[region='Adelaide'].hover {
+	background-position : -1392px -47px;
+}
+.aus-map .region[region='Adelaide'].active, .aus-map .region[region='Adelaide'].active.hover {
+	background-position : -1392px -87px;
+}
+img[usemap='#mapAus'] {
+	width : 450px;
+	height : 290px;
+	position : absolute;
+	border : none;
+}
+.aus-map .pin {
+	background-position : -1125px -453px;
+	width : 18px;
+	height : 29px;
+	display : none;
+}
+.aus-map .pin[pinfor='Tasmania'] {
+	display : block;
+	left : 296px;
+	top : 242px;
+}
+.aus-map .pin[pinfor='Victoria'] {
+	display : block;
+	left : 289px;
+	top : 208px;
+}
+.aus-map .pin[pinfor='New South Wales'] {
+	display : block;
+	left : 301px;
+	top : 147px;
+}
+.aus-map .pin[pinfor='Queensland'] {
+	display : block;
+	left : 285px;
+	top : 70px;
+}
+.aus-map .pin[pinfor='South Australia'] {
+	display : block;
+	left : 210px;
+	top : 120px;
+}
+.aus-map .pin[pinfor='Northern Territory'] {
+	display : block;
+	left : 198px;
+	top : 50px;
+}
+.aus-map .pin[pinfor='Western Australia'] {
+	display : block;
+	left : 110px;
+	top : 90px;
+}
+.aus-map .pin[pinfor='Darwin'] {
+	display : block;
+	left : 180px;
+	top : 0px;
+}
+.aus-map .pin[pinfor='Brisbane'] {
+	display : block;
+	left : 344px;
+	top : 107px;
+}
+.aus-map .pin[pinfor='Gold Coast'] {
+	display : block;
+	left : 344px;
+	top : 117px;
+}
+.aus-map .pin[pinfor='Sydney'] {
+	display : block;
+	left : 330px;
+	top : 170px;
+}
+.aus-map .pin[pinfor='Australian Capital Territory'] {
+	display : block;
+	left : 307px;
+	top : 176px;
+}
+.aus-map .pin[pinfor='Melbourne'] {
+	display : block;
+	left : 288px;
+	top : 207px;
+}
+.aus-map .pin[pinfor='Hobart'] {
+	display : block;
+	left : 297px;
+	top : 240px;
+}
+.aus-map .pin[pinfor='Adelaide'] {
+	display : block;
+	left : 240px;
+	top : 180px;
+}
+.aus-map .pin[pinfor='Perth'] {
+	display : block;
+	left : 68px;
+	top : 158px;
+}
+.aus-map .pin[pinfor='Australia'] {
+	display : block;
+	left : 200px;
+	top : 106px;
+}
+#AnyWhereInAus {
+	position : absolute;
+	left : 250px;
+	top : 310px;
+}
+body.IE7 #AnyWhereInAus {
+	margin : 180px 0px 0px 330px;
+}
+#AnyWhereInAus .checkbox {
+	margin: 0px 5px 0px 0px;
+}
+.tabcontent .Location #browseByLocation {
+	display : none;
+}
+.tabcontent .Location .Industry_field {
+	width : 290px;
+	margin : 0px 0px 21px 22px;
+}
+#main-body .tabcontent .Location .Industry_field label {
+	width : 390px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+#main-body .tabcontent .Location .Industry_field label span {
+	font : Bold 14px Arial;
+	color : #295785;
+	float : none;
+}
+.tabcontent .Location .Industry_field .control {
+	width : 286px;
+}
+.tabcontent .Location .Industry_field .control .bg {
+	width : 276px;
+}
+.tabcontent .Location .Industry_field .control .dropdown input[type='text'] {
+	width : 245px;
+}
+
+.suggestedjobs .titlebar {
+	cursor : pointer;
+}
+.suggestedjobs .titlebar .leftbar {
+	background-image : url("../../../images/members/jobsearch/SuggestedJobsTitleLeftBar.png");
+	width : 39px;
+	height : 32px;
+}
+.suggestedjobs .titlebar .bg {
+	background-image : url("../../../images/members/jobsearch/SuggestedJobsTitleBg.png");
+	background-repeat : repeat-x;
+	width : 891px;
+	height : 32px;
+}
+.suggestedjobs .titlebar .rightbar {
+	background-image : url("../../../images/members/jobsearch/SuggestedJobsTitleRightBar.png");
+	width : 5px;
+	height : 32px;
+}
+#main-body .suggestedjobs .titlebar .title {
+	color : white;
+	font-weight : bold;
+	margin : 9px 0px 0px 10px;
+}
+.suggestedjobs.expanded .content {
+	display : block;
+}
+.suggestedjobs.collapsed .content {
+	display : none;
+}
+#main-body .suggestedjobs .content .row {
+	border-top : 1px solid #FFFFFF;
+	border-left : 1px solid #D9D9D9;
+	border-right : 1px solid #D9D9D9;
+	border-bottom : 1px solid #D9D9D9;
+	width : 933px;
+	font : 11px Verdana,Arial;
+}
+#main-body .suggestedjobs .content .row:hover {
+	border : 1px solid #98CAEA;
+}
+.suggestedjobs .content .row .hover {
+	border : 2px solid #FFFFFF;
+	width : 929px;
+}
+.suggestedjobs .content .row:hover .hover {
+	border : 2px solid #C8E2FB;
+}
+.suggestedjobs .content .icon.types {
+	background-image : url("../../../images/members/jobsearch/JobTypes.png");
+	width : 40px;
+	height : 35px;
+	margin : 7px 0px 5px 16px;
+}
+.suggestedjobs .content .icon.types.PartTime {
+	background-position : 0px -35px;
+}
+.suggestedjobs .content .icon.types.Contract {
+	background-position : 0px -70px;
+}
+.suggestedjobs .content .icon.types.Temp {
+	background-position : 0px -105px;
+}
+.suggestedjobs .content .icon.types.JobShare {
+	background-position : 0px -140px;
+}
+#main-body .suggestedjobs .content .titlearea {
+	width : 348px;
+	margin : 7px 55px 0px 15px;
+	font-weight : Bold;
+}
+#main-body .suggestedjobs .content .title {
+	color : #1155EE;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 348px;
+}
+#main-body .suggestedjobs .content .company {
+	color : #00AD6E;
+	margin-top : 4px;
+}
+#main-body .suggestedjobs .content .location {
+	color : #333333;
+	margin : 7px 17px 0px 0px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 172px;
+}
+#main-body .suggestedjobs .content .salary {
+	color : #333333;
+	margin-top : 7px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 133px;
+}
+#main-body .suggestedjobs .content .date {
+	color : #333333;
+	margin-top : 7px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	width : 86px;
+}
+.suggestedjobs .content .details {
+	width : 858px;
+	margin : 0px 0px 10px 71px;
+}
+.suggestedjobs .content .details.collapsed {
+	display : none;
+}
+.suggestedjobs .content .details.expanded {
+	display : block;
+}
+.suggestedjos .content .details .summary {
+}
+#main-body .suggestedjobs .content .details .title {
+	width : 80px;
+	color : #336699;
+	font : 11px Verdana, Arial;
+}
+#main-body .suggestedjobs .content .details .summary ul.bulletpoints {
+	width : 720px;
+	margin : 0px 0px 0px 15px;
+	font : 11px Verdana, Arail;
+}
+.suggestedjobs .content .details .summary .bulletpoints li {
+	width : 720px;
+}
+.suggestedjobs .content .details .industry .desc {
+	width : 720px;
+}
+#main-body .suggestedjobs .content .details .description {
+	width : 800px;
+	overflow : hidden;
+	height : 64px;
+	line-height : 16px;
+	margin-top : 5px;
+	font : 11px Verdana, Arail;
+}
+.suggestedjobs .buttonrow {
+	border-left : 1px solid #D7D9DA;
+	border-right : 1px solid #D7D9DA;
+	width : 933px;
+}
+.suggestedjobs .buttonrow .button {
+	margin : 10px 0px 10px 710px;
+}
+.suggestedjobs .content .text {
+	width : 913px;
+	border-left : 1px solid #D7D9DA;
+	border-right : 1px solid #D7D9DA;
+	padding : 5px 0px 10px 20px;
+}

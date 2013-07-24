@@ -1,0 +1,49 @@
+﻿<%@ Import Namespace="LinkMe.Apps.Asp.Content" %>
+<%@ Import Namespace="LinkMe.Web.Content"%>
+<%@ Import Namespace="LinkMe.Apps.Asp.Mvc.Html"%>
+<%@ Master Language="C#" CodeBehind="Site.Master.cs" Inherits="LinkMe.Web.Views.Shared.MasterPages.Site" %>
+<%@ Import Namespace="LinkMe.Web.Html" %>
+
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+    
+        <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+            <% Page.Title = "Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia"; %>
+        </asp:ContentPlaceHolder>
+    
+        <%= Html.Base(GetClientUrl()) %>
+        <%= Html.MetaTag("viewport", "width = device-width") %>
+        <%= Html.MetaTag("verify-v1", "+67QvDKdYdfDw5mZk7OMxVNUnrLBQfDr1RKKs/I3/FI=") %>
+        <%= Html.MetaTag("LMFP_OK", "LMFP_OK") %>
+        <%= Html.CanonicalLink(GetClientUrl().GetCanonicalUrl())%>
+        
+        <!-- Meta tags -->
+        <asp:ContentPlaceHolder ID="MetaTags" runat="server" />
+        
+        <!-- Stylesheets -->
+        <mvc:DisplayStyleSheets runat="server" />
+        <mvc:RegisterStyleSheets runat="server">
+            <%= Html.RenderStyles(StyleBundles.Devices)%>
+        </mvc:RegisterStyleSheets>
+        <asp:ContentPlaceHolder id="StyleSheet" runat="server" />
+        
+        <!-- Java Scripts -->
+        <mvc:DisplayJavaScripts ID="DisplayJavaScripts1" runat="server" />
+        <mvc:RegisterJavaScripts runat="server">
+            <%= Html.JavaScript(JavaScripts.JQuery162) %>
+            <%= Html.JavaScript(JavaScripts.JQueryCustom) %>
+            <%= Html.RenderScripts(ScriptBundles.Devices) %>
+        </mvc:RegisterJavaScripts>
+        <asp:ContentPlaceHolder id="JavaScript" runat="server" />
+
+        <% Html.RenderPartial("GoogleAnalyticsTracker"); %>
+    </head>
+    <body>
+        <% Html.RenderPartial("DeviceHeader"); %>
+        <div id="mainbody">
+            <asp:ContentPlaceHolder ID="Body" runat="server" />
+        </div>
+        <% Html.RenderPartial("DeviceFooter"); %>
+    </body>
+</html>

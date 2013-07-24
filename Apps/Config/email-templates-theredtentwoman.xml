@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberEmail">
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="ActivationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="b201e964-ca17-4291-a84a-b312e74b5b67">
+        <Subject>Activate your Red Tent Woman Career Network account</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  Welcome to The Red Tent Woman Career and Networking Portal. 
+</p>
+<p>
+  You recently joined with this email address. Please click on the link below to activate your account.
+</p>
+<p>
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    Please activate your account
+  </a>
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

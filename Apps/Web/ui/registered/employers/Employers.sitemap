@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+
+    <!-- Home -->
+    
+    <siteMapNode url="~/ui/registered/employers/SavedResumeSearches.aspx" title="Saved searches | Resumes | Employers" sidebar="employers-folders" />
+    <siteMapNode url="~/ui/registered/employers/SavedResumeSearchAlerts.aspx" title="Candidate alerts | Resumes | Employers" sidebar="employers-folders" />
+    <siteMapNode url="~/ui/registered/employers/EmployerJobAdsSuggestions.aspx" title="Suggested candidates | Resumes | Employers" />
+    
+    <siteMapNode url="~/ui/registered/employers/EmployerJobAds.aspx" sidebar="employers-job-ad" title="{0} ads | Jobs | Employers" />
+
+    <siteMapNode url="~/ui/registered/employers/ViewResumeSearchResult.aspx" sidebar="employers-folders" title="Candidate's resume | Employers">
+      <siteMapNode redirect="true" url="~/ui/registered/employers/EmployerFullCandidateViewForm.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/ui/registered/employers/ResumeSearchEmailAlerts.aspx" />
+    <siteMapNode url="~/employers/candidates/manage">
+      <siteMapNode redirect="true" url="~/ui/registered/employers/JobAdCandidates.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/employers/candidates" title="Candidate | Employers" >
+      <siteMapNode redirect="true" url="~/ui/registered/employers/ViewCandidate.aspx" />
+    </siteMapNode>
+
+  <!-- Pages used internally by JavaScript -->
+    
+    <siteMapNode url="~/ui/registered/employers/ViewCandidateNotes.aspx" />
+  </siteMapNode>
+</siteMap>

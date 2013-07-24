@@ -1,0 +1,40 @@
+/* for Crikey use only */
+#LM_main_holder			
+{ 
+	 width:260px; height:30px; background-image:url(../img/crikey_bg.png); background-repeat: no-repeat; padding:0px;
+}
+
+#LM_main_holder #select	
+{ 
+	margin-left:82px; width:94px; height:10px; 
+}
+
+#LM_main_holder #search	
+{ 
+	position:relative; width:182px; margin-top:-2px; left:80px; 
+}
+
+#LM_main_holder .formtext
+{ 
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; width:70px; 
+}
+
+#LM_main_holder #btnGo	
+{ 
+	margin-top:2px; border: 0px; vertical-align:top;
+}
+
+#LM_main_holder a		
+{ 
+	font-size: 9px; 
+}
+
+#LM_main_holder a:link	
+{ 
+	color: #0033FF; font-weight: bold; 
+}
+
+#LM_main_holder a:visited
+{ 
+	color: #0033FF; 
+}

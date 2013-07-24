@@ -1,0 +1,55 @@
+﻿.filesminilist_ascx {}
+	.filesminilist_ascx .minilist-header {
+	}
+	
+		.filesminilist_ascx .minilist-header-inner {
+			position: relative;		/* For AP anchoring */
+		}
+	
+	.filesminilist_ascx .files .file {}
+	
+		.filesminilist_ascx .files .file .file-inner {
+			position: relative;	/* Make widths relative to .file, minus padding */
+		}
+
+			.filesminilist_ascx .files .file .filename {
+				width: 55%;
+				overflow: hidden;
+				font-size: 85%;
+				padding-left: 19px;
+			}	
+			
+			.filesminilist_ascx .files .file .icon {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}					
+			
+			.filesminilist_ascx .files .file .details,
+			.filesminilist_ascx .minilist-header .details {
+				text-align: left;
+				position: absolute;	/* need AP, plus need to make absolute positioning and size of children relative to this */
+				overflow: hidden;
+				height: 1.2em;
+				left: 62%;
+				width: 38%;
+				top: 0;
+				white-space: nowrap;
+			}
+			.filesminilist_ascx .files .file .details {
+				font-size: 85%;
+			}
+			
+			.filesminilist_ascx .files .file .details .date,
+			.filesminilist_ascx .minilist-header .date {
+				float: none;
+				position: absolute;
+				overflow: hidden;
+				left: 0%;
+				width: 100%;
+				white-space: nowrap;
+			}
+			.filesminilist_ascx .files .file .details .date {
+				font-size: 100%;
+				color: #888;
+			}

@@ -1,0 +1,78 @@
+/* Links */
+
+.style1 {
+	font-size: 130%;
+	color: #6F0011;
+	font-weight:bold;
+}
+
+a {
+	font-size: 11px;
+	color: #0033FF;
+}
+
+a:visited {
+	color: #0033FF;
+}
+
+.sidelinks li{padding:4px;}
+
+.videoboxesleft{
+	width: 275px;
+	height: 100px;
+	background-color: #E8E8E8;
+	border: 1px solid #CCCCCC;
+	float:left;
+	padding: 5px;
+	margin-top: 8px;
+
+}
+
+/* Box model hack for IE */
+* html .videoboxesleft{
+	width: 287px;
+}
+
+.videoboxesright{
+	width: 275px;
+	height: 100px;
+	background-color: #E8E8E8;
+	border: 1px solid #CCCCCC;
+	float:right;
+	padding: 5px;
+	margin-top: 8px;
+}
+
+/* Box model hack for IE */
+* html .videoboxesright{
+	width: 287px;
+}
+
+.videoboxesleft p, .videoboxesright p
+{
+	font-size: 90%;
+}
+
+.videothumb{float:left;}
+
+.videotext{
+	float:left;
+	padding-left:4px;
+	width: 130px;
+}
+
+/*video pages */
+
+.video_holder{
+margin-top:20px;
+}
+
+.sidelinks{
+	padding-top:24px;
+	list-style-type: circle;
+}
+
+#video_content
+{
+	width:580px;
+}

@@ -1,0 +1,86 @@
+﻿#error-message {
+	background: #F5AC5F;
+	border: solid 1px #FF0000;
+	color: Black;
+	width: 70%;
+	text-align: left;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+#error-message ul {
+	margin: 0;
+}
+
+#error-message ul li {
+	list-style: none;
+	margin:8px;
+}
+
+#error-message ul li {
+    /* Gets rid of empty list items in IE6,7 */
+    *display: expression(this.innerHTML.replace(/^\s+|\s+$/g,"") == "" ? "none" : "block");
+}
+
+#error-message-list li {
+	list-style: disc;
+}
+
+#info-message {
+    background: #ffc;					
+	color: Black;
+	width: 70%;
+	text-align: center;
+    padding: 10px;							
+	margin: auto;
+	margin-bottom: 15px;
+    border: 1px solid #A4B97F;
+}
+
+#info-message small {
+    font-size: 85%;
+    font-weight: normal;
+}
+
+#info-message ul {
+	margin: 0;
+	padding: 0;
+}
+
+#info-message li {
+	font-weight:bold;
+	list-style:none;
+	margin:0;padding:0;
+	padding-top: 8px;
+}
+
+#info-message ul {				/* IE6 hack - adds ie_firstchild classes           */
+	*display: inline-block;		/* IE (6,7) hack - container-clearing. */
+}
+
+#info-message li:first-child,
+#info-message li.ie_firstli {
+	padding-top: 0;
+}
+
+#confirm-message {
+	background: #F5AC5F;
+	color: Black;
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}
+
+.IE7 #confirm-message {
+	margin-bottom : 12px;
+}
+
+#confirm-message ul {
+	margin-left: 0px;
+}
+
+#confirm-message li {
+	font-weight: bold;
+	list-style: none;
+	padding: 5px;
+}

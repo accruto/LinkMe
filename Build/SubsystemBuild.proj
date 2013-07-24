@@ -1,0 +1,108 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+  </PropertyGroup>
+
+  <!-- Build properties that shouldn't need to change. -->
+
+  <PropertyGroup>
+    <VersionRegex>\d+\.\d+\.((\d+|\*)\.(\d+|\*)|\*)</VersionRegex>
+    <AssemblyInfoFileVersionRegex>(?&lt;=\[assembly\s*:\s*AssemblyFileVersion\(\")$(VersionRegex)(?=\"\)\])</AssemblyInfoFileVersionRegex>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Build item groups. -->
+
+  <ItemGroup>
+    <AssemblyInfoFilesToVersion Include="$(SourceRootDirectory)**\AssemblyInfo.cs" Exclude="$(SourceRootDirectory)External\**\AssemblyInfo.cs;$(SourceRootDirectory)Build\**\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MofFilesToVersion Include="$(SourceRootDirectory)**\*.mof" Exclude="$(SourceRootDirectory)External\**\*.mof" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SqlFilesToVersion Include="$(SourceRootDirectory)**\*.sql" Exclude="$(SourceRootDirectory)External\**\*.sql" />
+  </ItemGroup>
+  
+  <!-- Top-level targets-->
+
+  <Target Name="Build" DependsOnTargets="Check; PreBuild; Version; CodeBuild;">
+    <Message Text="Build completed" />
+  </Target>
+
+  <Target Name="Clean" DependsOnTargets="CodeClean;">
+    <Message Text="Clean completed" />
+  </Target>
+
+  <!-- Check -->
+  
+  <Target Name="Check">
+    <Error Condition="$(SourceRootDirectory) == ''" Text="The SourceRootDirectory property must be set" />
+    <Message Text="SourceRootDirectory: $(SourceRootDirectory)" />
+  </Target>
+
+  <!-- PreBuild -->
+
+  <Target Name="PreBuild">
+
+    <!-- Extract the various forms of the version needed for the build. -->
+
+    <Message Text="BuildVersion: $(BuildVersion)" />
+    <GetVersions BuildVersion="$(BuildVersion)">
+      <Output TaskParameter="ProductVersion" PropertyName="ProductVersion" />
+      <Output TaskParameter="ProductVersionComma" PropertyName="ProductVersionComma" />
+      <Output TaskParameter="FullProductVersion" PropertyName="FullProductVersion" />
+      <Output TaskParameter="FullProductVersionComma" PropertyName="FullProductVersionComma" />
+      <Output TaskParameter="BuildVersionComma" PropertyName="BuildVersionComma" />
+    </GetVersions>
+    <Message Text="ProductVersion: $(ProductVersion)" />
+
+    <!-- Remove everything that is about to be built from the GAC. -->
+
+    <CallTarget Targets="DoRemoveFromGac" />
+
+    <!-- Check all project settings. -->
+
+    <CheckProjectSettings RootPath="$(SourceRootDirectory)" Projects="@(CodeProjects)" />
+  </Target>
+
+  <Target Name="DoRemoveFromGac" Condition="$(AssemblyPrefix) != ''">
+    <Message Condition="$(AssemblyPrefix) != ''" Text="Removing assemblies with prefix '$(AssemblyPrefix)' from the GAC" />
+    <RemoveFromGac ProductVersion="$(ProductVersion)" AssemblyPrefix="$(AssemblyPrefix)" />
+  </Target>
+  
+  <Target Name="Version" DependsOnTargets="PreBuild">
+
+    <!-- Version everything -->
+
+    <FileUpdate Files="@(AssemblyInfoFilesToVersion)" Regex="$(AssemblyInfoFileVersionRegex)" ReplacementText="$(BuildVersion)" />
+
+  </Target>
+
+  <!-- Clean-->
+
+  <Target Name="CodeClean">
+    <MSBuild Projects="@(CodeProjects)" Targets="Clean" StopOnFirstFailure="false" Properties="Configuration=$(Configuration);Platform=$(Platform)" />
+  </Target>
+
+  <!-- Build-->
+
+  <Target Name="CodeBuild">
+    <MSBuild Projects="@(CodeProjects)" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);Platform=$(Platform)" />
+  </Target>
+
+</Project>

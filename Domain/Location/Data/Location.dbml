@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="LocationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LocationAbbreviation" Member="LocationAbbreviationEntities" AccessModifier="Internal">
+    <Type Name="LocationAbbreviationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="countryId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="abbreviation" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="prefix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="suffix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CountryEntity_LocationAbbreviationEntity" Member="CountryEntity" ThisKey="countryId" OtherKey="id" Type="CountryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RelativeLocation" Member="RelativeLocationEntities" AccessModifier="Internal">
+    <Type Name="RelativeLocationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="countryId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="prefix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="suffix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CountryEntity_RelativeLocationEntity" Member="CountryEntity" ThisKey="countryId" OtherKey="id" Type="CountryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CountrySubdivision" Member="CountrySubdivisionEntities" AccessModifier="Internal">
+    <Type Name="CountrySubdivisionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="circleRadiusKm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="circleCentreId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countryId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="shortDisplayName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="urlName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CountrySubdivisionEntity_CountrySubdivisionAliasEntity" Member="CountrySubdivisionAliasEntities" ThisKey="id" OtherKey="countrySubdivisionId" Type="CountrySubdivisionAliasEntity" />
+      <Association Name="CountrySubdivisionEntity_LocalityCountrySubdivisionEntity" Member="LocalityCountrySubdivisionEntities" ThisKey="id" OtherKey="countrySubdivisionId" Type="LocalityCountrySubdivisionEntity" />
+      <Association Name="CountrySubdivisionEntity_PostalSuburbEntity" Member="PostalSuburbEntities" ThisKey="id" OtherKey="countrySubdivisionId" Type="PostalSuburbEntity" />
+      <Association Name="GeographicalAreaEntity_CountrySubdivisionEntity" Member="GeographicalAreaEntity" ThisKey="id" OtherKey="id" Type="GeographicalAreaEntity" IsForeignKey="true" />
+      <Association Name="LocalityEntity_CountrySubdivisionEntity" Member="LocalityEntity" ThisKey="circleCentreId" OtherKey="id" Type="LocalityEntity" IsForeignKey="true" />
+      <Association Name="CountryEntity_CountrySubdivisionEntity" Member="CountryEntity" ThisKey="countryId" OtherKey="id" Type="CountryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GeographicalArea" Member="GeographicalAreaEntities" AccessModifier="Internal">
+    <Type Name="GeographicalAreaEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="GeographicalAreaEntity_CountrySubdivisionEntity" Member="CountrySubdivisionEntity" ThisKey="id" OtherKey="id" Type="CountrySubdivisionEntity" Cardinality="One" />
+      <Association Name="GeographicalAreaEntity_LocalityEntity" Member="LocalityEntity" ThisKey="id" OtherKey="id" Type="LocalityEntity" Cardinality="One" />
+      <Association Name="GeographicalAreaEntity_RegionEntity" Member="RegionEntity" ThisKey="id" OtherKey="id" Type="RegionEntity" Cardinality="One" />
+      <Association Name="NamedLocationEntity_GeographicalAreaEntity" Member="NamedLocationEntity" ThisKey="id" OtherKey="id" Type="NamedLocationEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NamedLocation" Member="NamedLocationEntities" AccessModifier="Internal">
+    <Type Name="NamedLocationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="NamedLocationEntity_GeographicalAreaEntity" Member="GeographicalAreaEntity" ThisKey="id" OtherKey="id" Type="GeographicalAreaEntity" Cardinality="One" />
+      <Association Name="NamedLocationEntity_PostalCodeEntity" Member="PostalCodeEntity" ThisKey="id" OtherKey="id" Type="PostalCodeEntity" Cardinality="One" />
+      <Association Name="NamedLocationEntity_PostalSuburbEntity" Member="PostalSuburbEntity" ThisKey="id" OtherKey="id" Type="PostalSuburbEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CountrySubdivisionAlias" Member="CountrySubdivisionAliasEntities" AccessModifier="Internal">
+    <Type Name="CountrySubdivisionAliasEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CountrySubdivisionEntity_CountrySubdivisionAliasEntity" Member="CountrySubdivisionEntity" ThisKey="countrySubdivisionId" OtherKey="id" Type="CountrySubdivisionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Locality" Member="LocalityEntities" AccessModifier="Internal">
+    <Type Name="LocalityEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="centroidLatitude" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="centroidLongitude" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LocalityEntity_CountrySubdivisionEntity" Member="CountrySubdivisionEntities" ThisKey="id" OtherKey="circleCentreId" Type="CountrySubdivisionEntity" />
+      <Association Name="LocalityEntity_LocalityCountrySubdivisionEntity" Member="LocalityCountrySubdivisionEntities" ThisKey="id" OtherKey="localityId" Type="LocalityCountrySubdivisionEntity" />
+      <Association Name="LocalityEntity_PostalCodeEntity" Member="PostalCodeEntities" ThisKey="id" OtherKey="localityId" Type="PostalCodeEntity" />
+      <Association Name="LocalityEntity_LocalityRegionEntity" Member="LocalityRegionEntities" ThisKey="id" OtherKey="localityId" Type="LocalityRegionEntity" />
+      <Association Name="GeographicalAreaEntity_LocalityEntity" Member="GeographicalAreaEntity" ThisKey="id" OtherKey="id" Type="GeographicalAreaEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocalityCountrySubdivision" Member="LocalityCountrySubdivisionEntities" AccessModifier="Internal">
+    <Type Name="LocalityCountrySubdivisionEntity" AccessModifier="Internal">
+      <Column Name="localityId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CountrySubdivisionEntity_LocalityCountrySubdivisionEntity" Member="CountrySubdivisionEntity" ThisKey="countrySubdivisionId" OtherKey="id" Type="CountrySubdivisionEntity" IsForeignKey="true" />
+      <Association Name="LocalityEntity_LocalityCountrySubdivisionEntity" Member="LocalityEntity" ThisKey="localityId" OtherKey="id" Type="LocalityEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostalCode" Member="PostalCodeEntities" AccessModifier="Internal">
+    <Type Name="PostalCodeEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="PostalCodeEntity_PostalSuburbEntity" Member="PostalSuburbEntities" ThisKey="id" OtherKey="postcodeId" Type="PostalSuburbEntity" />
+      <Association Name="LocalityEntity_PostalCodeEntity" Member="LocalityEntity" ThisKey="localityId" OtherKey="id" Type="LocalityEntity" IsForeignKey="true" />
+      <Association Name="NamedLocationEntity_PostalCodeEntity" Member="NamedLocationEntity" ThisKey="id" OtherKey="id" Type="NamedLocationEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostalSuburb" Member="PostalSuburbEntities" AccessModifier="Internal">
+    <Type Name="PostalSuburbEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="postcodeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CountrySubdivisionEntity_PostalSuburbEntity" Member="CountrySubdivisionEntity" ThisKey="countrySubdivisionId" OtherKey="id" Type="CountrySubdivisionEntity" IsForeignKey="true" />
+      <Association Name="NamedLocationEntity_PostalSuburbEntity" Member="NamedLocationEntity" ThisKey="id" OtherKey="id" Type="NamedLocationEntity" IsForeignKey="true" />
+      <Association Name="PostalCodeEntity_PostalSuburbEntity" Member="PostalCodeEntity" ThisKey="postcodeId" OtherKey="id" Type="PostalCodeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocalityRegion" Member="LocalityRegionEntities" AccessModifier="Internal">
+    <Type Name="LocalityRegionEntity" AccessModifier="Internal">
+      <Column Name="localityId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="regionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LocalityEntity_LocalityRegionEntity" Member="LocalityEntity" ThisKey="localityId" OtherKey="id" Type="LocalityEntity" IsForeignKey="true" />
+      <Association Name="RegionEntity_LocalityRegionEntity" Member="RegionEntity" ThisKey="regionId" OtherKey="id" Type="RegionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Region" Member="RegionEntities" AccessModifier="Internal">
+    <Type Name="RegionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="urlName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isMajorCity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="RegionEntity_LocalityRegionEntity" Member="LocalityRegionEntities" ThisKey="id" OtherKey="regionId" Type="LocalityRegionEntity" />
+      <Association Name="RegionEntity_RegionAlia" Member="RegionAliasEntities" ThisKey="id" OtherKey="regionId" Type="RegionAliasEntity" />
+      <Association Name="GeographicalAreaEntity_RegionEntity" Member="GeographicalAreaEntity" ThisKey="id" OtherKey="id" Type="GeographicalAreaEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="CountryEntities" AccessModifier="Internal">
+    <Type Name="CountryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isoCode" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CountryEntity_LocationAbbreviationEntity" Member="LocationAbbreviationEntities" ThisKey="id" OtherKey="countryId" Type="LocationAbbreviationEntity" />
+      <Association Name="CountryEntity_RelativeLocationEntity" Member="RelativeLocationEntities" ThisKey="id" OtherKey="countryId" Type="RelativeLocationEntity" />
+      <Association Name="CountryEntity_CountrySubdivisionEntity" Member="CountrySubdivisionEntities" ThisKey="id" OtherKey="countryId" Type="CountrySubdivisionEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegionAlias" Member="RegionAliasEntities" AccessModifier="Internal">
+    <Type Name="RegionAliasEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="regionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="RegionEntity_RegionAlia" Member="RegionEntity" ThisKey="regionId" OtherKey="id" Type="RegionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

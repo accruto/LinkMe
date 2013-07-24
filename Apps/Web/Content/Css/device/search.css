@@ -1,0 +1,86 @@
+﻿.clearer {
+    clear: both;
+}
+.field.location_textbox_field {
+	width : 75%;
+	float : left;
+}
+.field.location_textbox_field .control {
+	margin-right : -0.75em;
+}
+.mylocation {
+	background-image : url("../../images/device/ButtonMyLocation.png");
+	background-size : 100% 100%;
+	width : 6.0625em;
+	height : 5.0625em;
+	float : right;
+	margin-right : 0.75em;
+	cursor : pointer;
+}
+.mylocation.denied {
+	background-image : url("../../images/device/ButtonMyLocationDenied.png");
+}
+.Country_dropdown_field {
+	display : none;
+}
+.salarydesc {
+	width : 57%;
+	margin : 0 0.4em;
+	float : left;
+	font-size : 1.875em;
+	color : #8894A6;
+	line-height : 1.7333333333333333em;
+}
+.salaryrate_field {
+	width : auto;
+	float : right;
+	margin-right : 0.75em;
+}
+.field.salaryrate_field .control {
+	margin-right : 0em;
+	float : left;
+}
+.salaryrate_field .radiobutton {
+	height : 3.25em;
+	cursor : pointer;
+	float : left;
+}
+.salaryrate_field .radiobutton[value='SalaryRateYear'] {
+	width : 2.625em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/SalaryRateYearly.png");
+	margin-right : 1em;
+}
+.salaryrate_field .radiobutton[value='SalaryRateYear'].checked {
+	background-image : url("../../images/device/SalaryRateYearlyActive.png");
+}
+.salaryrate_field .radiobutton[value='SalaryRateHour'] {
+	width : 5.8125em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/SalaryRateHourly.png");
+}
+.salaryrate_field .radiobutton[value='SalaryRateHour'].checked {
+	background-image : url("../../images/device/SalaryRateHourlyActive.png");
+}
+.salaryslider_field {
+	margin-bottom : 0;
+}
+.salaryrange_field .salaryrange {
+	font-size : 1.5em;
+	color : #8894A6;
+	margin-top : 0.3333333333333333em;
+}
+.salaryrange_field .salaryrange .left{
+	float : left;
+}
+.salaryrange_field .salaryrange .right {
+	float : right;
+}
+.recentsearches {
+	margin-top : 2em;
+}
+#horizontal-google-ads {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}

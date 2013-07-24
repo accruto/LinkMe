@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Instrumentation" Class="CommunicationsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=barney;Initial Catalog=Instrumentation;Integrated Security=True" SettingsObjectName="LinkMe.Query.Reports.Properties.Settings" SettingsPropertyName="InstrumentationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TrackingCommunication" Member="TrackingCommunicationEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sent" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="definition" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vertical" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationOpened" Member="TrackingCommunicationOpenedEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationOpenedEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="opened" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationLink" Member="TrackingCommunicationLinkEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationLinkEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="communicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="instance" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationLinkClicked" Member="TrackingCommunicationLinkClickedEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationLinkClickedEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clicked" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,178 @@
+.notes-content {
+    cursor: default;
+}
+
+.compact_search-results_ascx .notes-content .add-notes_holder, .resume-section .notes-content .add-notes_holder {
+    float: none;
+    padding: 5px 5px 4px 5px;
+}
+
+.notes-content .add-action {
+    background: url("../../images/universal/action-icons/add.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 17px;
+    font-size: 85%;
+}
+
+.notes-content .add-notes_button {
+    float: right;
+    padding: 5px;
+    background-color: #FFFED5;
+    border: solid 1px #EFEFEE;
+    cursor: pointer;
+}
+
+.compact_search-results_ascx .notes-content .add-notes_button, .resume-section .notes-content .add-notes_button {
+    float: none;
+    width: 75px;
+}
+
+.notes-content .edit-action {
+    background: url("../../images/universal/action-icons/edit.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 17px;
+    margin: 0 0 0 5px;
+}
+
+.notes-content .delete-action {
+    background: url("../../images/universal/action-icons/delete.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 17px;
+    margin: 0 0 0 5px;
+}
+
+.notes-content .notes-detail_holder {
+    width: 100%;
+    margin: 2px 0 0 0;
+    float: left;
+}
+
+.compact_search-results_ascx .notes-content .notes-detail_holder, .resume-section .notes-content .notes-detail_holder {
+    float: none;
+    padding: 5px 5px 4px 5px;
+    width: 680px;
+}
+
+.resume-section .notes-content .notes-detail_holder {
+    width: 654px;
+}
+
+.notes-content .notes-detail {    
+    padding: 5px;
+    background-color: #FFFED5;
+    border: solid 1px #EFEFEE;
+    margin: 0 0 2px 0;
+    font-size: 85%;
+}
+
+.notes-content .notes-detail .note-date {    
+    color: #5E5E5E;
+    padding: 5px 5px 5px 5px;
+}
+
+.notes-content .notes-detail .note-owner {    
+    font-weight: bold;
+    padding: 5px 0 5px 35px;
+}
+
+.notes-content .notes-detail .note-data {    
+    padding: 8px 5px 5px 5px;
+}
+
+.notes-content .notes-detail .notes-action_holder {    
+    float:right;
+}
+
+.notes-content .notes-detail .notes-action_holder .note-type {    
+    color: #5E5E5E;
+    padding: 0 0 0 5px;
+}
+
+.notes-content .add-notes_section, .notes-content .edit-notes_section, .add-notes_holder .add-notes_section {
+    padding: 9px 9px 40px 9px;
+    background-color: #FFFED5;
+    border: solid 1px #EFEFEE;
+    margin: 0 0 2px 0;
+}
+
+.notes-content .buttons_holder, .add-notes_holder .buttons_holder {
+    padding: 10px 0 10px 0;
+    float: left;
+}
+
+.notes-content .cancel-button, .add-notes_holder .cancel-button { background-image: url(../../images/buttons/cancel.png); border:0; width: 65px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:left; *margin:0 0 8px 8px;}
+
+.notes-content .save-button, .add-notes_holder .save_button { background-image: url(../../images/buttons/save.png); border:0; width: 65px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0 10px 0 0; padding:0 5px; float:left; *margin:0 0 8px 8px;}
+
+.note-type_holder {
+    padding: 10px 0 10px 0;
+    float: right;
+    font-size: 85%;
+}
+
+.notes-textarea_holder {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EEDEC5;
+}
+
+.notes-textarea {
+    border: medium none;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 85%;
+    margin: 0;
+    padding: 0;
+    height: 39px;
+    overflow-y: auto;
+    width: 645px;
+}
+
+.notes-content .link-holder {
+    padding: 5px 5px 0;
+    float:right;
+}
+
+.compact_search-results_ascx .notes-content .link-holder, .resume-section .notes-content .link-holder {
+    float:none;
+    height: 18px;
+    padding: 5px 5px 4px 5px;
+    width: 680px;
+}
+
+.notes-content a {
+    outline: none;
+}
+
+.notes-content .left-link {
+    float: left;
+    padding: 0 0 0 10px;
+}
+
+.notes-content .right-link {
+    float: right;
+}
+
+.notes-content .arrow-icon {
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 6px;
+    margin: 5px 0 0 5px;
+    position: relative;
+    width: 7px;
+}
+
+.notes-content .icon-down {
+    background-image: url("../../images/universal/more-details-triangle.gif");
+}
+
+.notes-content .icon-up {
+    background-image: url("../../images/universal/less-details-triangle.gif");
+}
+
+.bulk-notes_holder {
+    margin: 10px 0 10px 0;
+}

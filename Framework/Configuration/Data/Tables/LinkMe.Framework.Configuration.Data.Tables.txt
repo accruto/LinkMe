@@ -1,0 +1,10 @@
+FcComputer.sql
+FcDomain.sql
+FcModule.sql
+FcRepositoryType.sql
+FcRepository.sql
+FcStoreType.sql
+FcStore.sql
+FcDomainVariable.sql
+FcModuleVariable.sql
+FcVariable.sql

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="CreditsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Query.Reports.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetCreditReport" Method="GetCreditReport" IsComposable="true">
+    <Parameter Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="creditId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetCreditReportResult">
+      <Column Name="opening" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="added" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="used" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="expired" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="deallocated" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="closing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

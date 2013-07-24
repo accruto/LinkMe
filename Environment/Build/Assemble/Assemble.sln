@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{B1AC1FD2-5FDD-4604-8997-8BD033AD39E1}") = "Assemble", "Assemble.paproj", "{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>DynamicProxy for .NET</title>
+		<style> body { font-family: verdana, arial; font-size: 10pt; }
+	</style>
+	</head>
+	<body>
+		<h1>DynamicProxy.NET</h1>
+		<P>Last updated the 17. of October 2003</P>
+		<p>.NET doesn't come with a ready to use Dynamic proxy in the same sense that Java 
+			does.<br>
+			However, there is some Proxy support in .NET, through the Remoting feature, 
+			namely the RealProxy class.
+		</p>
+		<p>DynamicProxy.NET is a wrapper around the <code>RealProxy</code> class and <code>IRemotingInfo</code>
+			interface.<br>
+			DynamicProxy.NET provides an easy and simple interface to handling proxy 
+			invocations, plus it offers support for strict/loose type support (useful for 
+			when you cast the proxy to other types than those supported by the object being 
+			proxied).
+		</p>
+		<P>This introduction contains more detailed inners of DynamicProxy.NET. If you wish 
+			to read a tutorial to proxies and DynamicProxy.NET <a href="tutorial.htm">click 
+				here</a></P>
+		<h2>Dynamic Proxing</h2>
+		<p>To create a DynamicProxy instance you use the <code>DynamicProxyFactory</code>'s <code>
+				CreateProxy()</code> method.<br>
+			To work with DynamicProxy.NET you need to be aware of a special requirement 
+			that DynamicProxy.NET has:
+		</p>
+		<P align="center">
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" border="1">
+				<TR>
+					<TD><FONT size="4"><STRONG>Requirement: <EM>DynamicProxy.NET requires your code&nbsp;to use 
+									interface based implementation</EM></STRONG><EM>&nbsp;</EM></FONT>
+					</TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P align="left">What this mean is that you seperate interface and implementation, 
+			so you for instance have an interface called ISimpleInterface which defines the 
+			methods. You then create a class, for instance called SimpleClass, which 
+			implements the interface ISimpleInterface. .NET supports implementing more than 
+			one interface and&nbsp;DynamicProxy.NET also supports proxying of more than one 
+			interface.</P>
+		<pre>		TestClasses.SimpleClass testClass = <FONT color=#3300ff>new</FONT>  TestClasses.SimpleClass();
+		TestClasses.ISimpleInterface testClassProxy = <BR>					(TestClasses.ISimpleInterface) DynamicProxyFactory.Instance.CreateProxy(testClass, <FONT color=#3300ff>new</FONT> InvocationDelegate(InvocationHandler));
+		</pre>
+		<p>The InvocationHandler is a InvocationDelegate, which handles the invocation of 
+			the proxy in a reflective manner.<br>
+			The signature for the InvocationDelegate looks like the following:<br>
+			<code><FONT color="#3300ff">public delegate object</FONT> InvocationDelegate(<FONT color="#3300ff">object</FONT>
+				target, MethodBase method, <FONT color="#3300ff">object</FONT> [] parameters)<BR>
+			</code>
+			<br>
+			Eample of a Console logging invocation delegate:
+		</p>
+		<pre>		<FONT color=#3300ff>private static object</FONT> InvocationHandler(<FONT color=#3300ff>object</FONT> target, MethodBase method, <FONT color=#3300ff>object</FONT>[] parameters) {
+			Console.WriteLine("Before: " + method.Name);
+			<FONT color=#669966>// Call the real method reflectively
+</FONT>  
+			   
+			    
+			<FONT color=#3300ff>object</FONT> result = method.Invoke(target, parameters);
+			Console.WriteLine("After: " + method.Name);
+			<FONT color=#3300ff>return</FONT> result;
+		}
+ 		</pre>
+		<P>The InvocationHandler is called everytime a method is called on the proxy 
+			object. The InvocationHandler receives three parameters for each invocation:
+		</P>
+		<P>- target: Which is a reference to the real object being proxied. In this example 
+			the target will refer to the SimpleClass instance.<BR>
+			- method: Is the method instance for the method that was called.<BR>
+			- parameters: Is an array containing all the parameters that was given to the 
+			method</P>
+		<P>If for instance the Method4(int inValue) is called is called with the argument 
+			10, the parameters the InvocationHandler() will be:</P>
+		<P>- target: The SimpleClass instance<BR>
+			- method: An instance of the Method4 reflective method<BR>
+			- parameters: Is an array with one element, which is an integer with the value 
+			10.</P>
+		<P>To actually call the real method on the SimpleClass you will have to use the 
+			reflection API: <FONT color="#3300ff">object</FONT> result = 
+			method.Invoke(target, parameters);</P>
+		<H2>Strict/Loose type support</H2>
+		<p>DynamicProxy.NET also supports both strict and loose type support. Per default 
+			the type support is loose. The type support can be specified through the <code>CreateProxy()</code>
+			method in <code>DynamicProxyFactory</code> or via properties on the proxyied 
+			object, through the <code>IDynamicProxy</code> interface.
+		</p>
+		<pre>		<FONT color=#3300ff>public object</FONT> CreateProxy(<FONT color=#3300ff>object </FONT>target, InvocationDelegate invocationHandler)
+		<FONT color=#3300ff>public object</FONT> CreateProxy(<FONT color=#3300ff>object</FONT> target, InvocationDelegate invocationHandler, <FONT color=#3300ff>bool</FONT> strict)
+		<FONT color=#3300ff>public object</FONT> CreateProxy(<FONT color=#3300ff>object</FONT> target, InvocationDelegate invocationHandler, <FONT color=#3300ff>bool</FONT> strict, Type[] supportedTypes)
+		</pre>
+		<p>If <code>strict</code> is true then each cast is checked for type compliance 
+			against the types supported by the proxied object (<code>target</code> ) and 
+			the (if specified) list of <code>supportedTypes</code>.<br>
+			Through the <code>IDynamicProxy</code> interface you can access the following 
+			properties
+		</p>
+		<pre>		<FONT color=#009900>/// &lt;summary&gt;
+		/// Interface for a dynamic proxy. Through this interface you can work on the proxy instance.
+		/// &lt;/summary&gt;</FONT>
+		public interface IDynamicProxy {
+			<FONT color=#009900>/// &lt;summary&gt;
+			/// The target object for the proxy (aka. the proxied object)
+			/// &lt;/summary&gt;</FONT>
+			<FONT color=#3300ff>object ProxyTarget</FONT> {
+				<FONT color=#3300ff>get</FONT>;
+				<FONT color=#3300ff>set</FONT>;
+			}
+
+			<FONT color=#009900>/// &lt;summary&gt;
+			/// The delegate which handles the invocation task in the dynamic proxy
+			/// &lt;/summary&gt;</FONT>
+			<FONT color=#3300ff>InvocationDelegate InvocationHandler</FONT> {
+				<FONT color=#3300ff>get</FONT>;
+				<FONT color=#3300ff>set</FONT>;
+			}
+
+			<FONT color=#009900>/// &lt;summary&gt;
+			/// Type support strictness. Used for cast strictness
+			/// &lt;/summary&gt;</FONT>
+			<FONT color=#3300ff>bool Strict</FONT> {
+				<FONT color=#3300ff>get</FONT>;
+				<FONT color=#3300ff>set</FONT>;
+			}
+
+			<FONT color=#009900>/// &lt;summary&gt;
+			/// List of supported types for cast strictness support. Is only checked if Strict is true
+			/// &lt;/summary&gt;</FONT>
+			<FONT color=#3300ff>Type[] SupportedTypes</FONT> {
+				<FONT color=#3300ff>get</FONT>;
+				<FONT color=#3300ff>set</FONT>;
+			}
+		}
+		</pre>
+		<h2>Example</h2>
+		Given the following interface<br>
+		<pre>	<FONT color=#009900>/// &lt;summary&gt;
+	/// Interface for the SimpleClass (since you have to program against interfaces with the Dynamic proxy)
+	/// &lt;/summary&gt;</FONT>
+	<FONT color=#3300ff>public interface</FONT> ISimpleInterface {
+		<FONT color=#3300ff>void</FONT> Method1();
+		<FONT color=#3300ff>string</FONT> Method2();
+		<FONT color=#3300ff>int</FONT> Method3();
+		<FONT color=#3300ff>int</FONT> Method4(<FONT color=#3300ff>int</FONT> inValue);
+		<FONT color=#3300ff>void</FONT> Method5(<FONT color=#3300ff>int</FONT> inValue, <FONT color=#3300ff>out int</FONT> outValue);
+		<FONT color=#3300ff>void</FONT> Method6(<FONT color=#3300ff>ref int</FONT> value);
+	}
+		</pre>
+		and a class <code>SimpleClass</code> that implements it<br>
+		<code><FONT color="#3300ff">public class</FONT> SimpleClass : ISimpleInterface</code><br>
+		using the InvocationHandler from above, which is a InvocationDelegate delegate, 
+		we can proxy a SimpleClass instance in the following way:<BR>
+		<BR>
+		&nbsp;<FONT face="Courier New" size="2">&nbsp;&nbsp; TestClasses.SimpleClass 
+			testClass = <FONT color="#3300ff">new</FONT> TestClasses.SimpleClass();
+			<BR>
+			&nbsp;&nbsp;&nbsp; TestClasses.ISimpleInterface testClassProxy = 
+			&nbsp;(TestClasses.ISimpleInterface) 
+			DynamicProxyFactory.Instance.CreateProxy(testClass, <FONT color="#3300ff">new</FONT>
+			InvocationDelegate(InvocationHandler));</FONT>
+		<BR>
+		<br>
+		Notice the use of the <code>ISimpleInterface</code> when coding against the 
+		proxy. This is required, since you can't program against the SimpleClass, since 
+		it's not an interface and the result from the <code>CreateProxy()</code> is a <code>
+			TransparentProxy</code> which isn't the same same as the SimpleClass.<br>
+		<b>Therefore: Code against interfaces when you proxy an object<BR>
+			<BR>
+		</b>With the proxy instance <code>testClassProxy</code> you can call the 
+		methods on the proxied object:<br>
+		<code>
+			<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp; textClassProxy.Method1()</code><br>
+		<BR>
+		Using the Invocation handler from above, the call to <code>Method1</code> on 
+		the <code>testClassProxy</code> will first write out some information to the <code>Console</code>, 
+		then call the real <code>Method1()</code> on the <code>testClass</code> object.<br>
+		<br>
+		You can decide exactly what happens during a proxy method call by creating your 
+		own <code>InvocationDelegate</code> delegate. This way you could build an 
+		Interception framework or even an AOP framework if you wish.
+		<h2>License</h2>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>LGPL.
+				<BR>
+				<BR>
+				<b><u>Disclaimer:</u></b><br>
+				This software is provided "as is" without warranty of any kind,<br>
+				either expressed or implied. The entire risk as to the<br>
+				quality and performance of the software is with you. Should the<br>
+				software prove defective, you assume the cost of all necessary<br>
+				servicing, repair, or correction. In no event shall the author,<br>
+				copyright holder, or any other party who may redistribute the<br>
+				software be liable to you for damages, including any general,<br>
+				special, incidental, or consequential damages arising out of<br>
+				the use or inability to use the software (including, but not<br>
+				limited to, loss of data, data being rendered inaccurate, loss of<br>
+				business profits, loss of business information, business<br>
+				interruptions, loss sustained by you or third parties, or a<br>
+				failure of the software to operate with any other software) even<br>
+				if the author, copyright holder, or other party has been advised<br>
+				of the possibility of such damages.
+				<br>
+			</p>
+		</BLOCKQUOTE>
+		<h2>Download</h2>
+		<P><EM>Compiled for .NET version 1.1. Should work under 1.0 as well.</EM></P>
+		<p>Binary version:<a href="dynamicproxynet.zip">Click here</a><BR>
+			Binary and Sourcecode version (includes <a href="http://www.unit.org">NUnit</a> 
+			version 2): <A href="dynamicproxynetsrc.zip">Click here</A><BR>
+		</p>
+		© Copyright 2003 Jeppe Cramon
+	</body>
+</html>

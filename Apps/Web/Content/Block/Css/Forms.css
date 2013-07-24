@@ -1,0 +1,1000 @@
+﻿/*	===================
+    Nesting hierarchies
+	=================== */
+
+fieldset {}
+	.field {}
+		label {}
+		.control {}
+			.control {}
+				.control {}
+			.description {}
+		.helptext {}
+
+	.textbox_field {}
+		.textbox_control {}
+			.textbox {}
+	.mutliline_textbox_field {}
+		.multiline_textbox_control {}
+			.multiline_textbox {}
+				
+	.dropdown_field {}
+		.dropdown_control {}
+			.dropdown {}
+				
+	.listbox_field {}
+		.listbox_control {}
+			.listbox {}
+				
+	.checkbox_field {}
+		.checkbox_control {}
+			.checkbox {}			/* asp:Checkbox */
+				input {}
+				label {}
+			/* or */
+			input.checkbox {}		/* Clean style */
+			label {}
+				
+	.radio_field {}
+		.radio_control {}
+			.radio {}				/* asp:RadioButton */
+				input {}
+				label {}
+			/* or */
+			input.radio {}			/* Clean style */
+			label {}
+				
+	.horizontal_radiolist_field {}			/* ASP.NET-control wrapper */
+		.horizontal_radiolist_control {}
+			.horizontal_radiolist {}			/* this class is not required */
+				span {}
+					span {}
+						input {}
+						label {}
+		
+	.radiolist_field {}						/* ASP.NET-control wrapper */
+		.radiolist_control {}
+			.radiolist {}						/* this class is not required */
+				table {}
+					tr {}
+						td {}
+							input {}
+							label {}
+		
+	.horizontal_checkboxlist_field {}		/* ASP.NET-control wrapper */
+		.horizontal_checkboxlist_control {}
+			.horizontal_checkboxlist {}			/* this class is not required */
+				span {}
+					span {}
+						input {}
+						label {}
+						
+	.checkboxlist_field {}					/* ASP.NET-control wrapper */
+		.checkboxlist_control {}
+			.checkboxlist {}					/* this class is not required */
+				table {}
+					tr {}
+						td {}
+							input {}
+							label {}
+								
+	.button_field {}					/* Clean style */
+		.button_control {}
+				
+	.buttons_field {}					/* Clean style */
+		.buttons_control {}
+				
+	.radiobuttons_field {}					/* Clean style */
+		.radiobuttons_control {}
+			.radio_control {}
+								
+	.horizontal_radiobuttons_field {}		/* Clean style */
+		.horizontal_radiobuttons_control {}
+			.radio_control {}
+
+	.checkboxes_field {}					/* Clean style */
+		.checkboxes_control {}
+			.checkbox_control {}
+
+	.horizontal_checkboxes_field {}			/* Clean style */
+		.horizontal_checkboxes_control {}
+			.checkbox_control {}
+
+	.file_field {}
+		.file_control {}
+			.file {}
+				
+	.link_field {}					        /* Clean style */
+		.link_control {}
+				
+
+/*  ======
+    Styles
+    ======
+
+    To "activate" these styles, surround your markup in <span class="form">...</span>
+
+    This is necessary now that this stylesheet is automatically imported by controls which
+    need their appearance reliably rendered. Since the website is large, class name conflicts
+    could arise and some "scoping" device was needed to "contain the damage" of CSS selectors
+    here acting unintentionally. */
+
+/*	======================
+    Form "framework rules"
+    ====================== */
+
+.form .field *
+{
+/*  This is not possible to pixel-perfect across browsers (Close to 1.2 ems) :-(
+    99.7% of users don't change text size and those who do in FF will get expected
+    behaviour anyway. Those who do in IE(x) won't notice any problem since the text
+    sizes are so limited :-) */
+    line-height: 14px;
+}
+
+.form .field p
+{
+    margin-bottom: 0.75em;
+    color: #333333;
+}
+
+/*	Self-clearing elements, everything but a field is a freeform content area. */
+
+.form .field:after,
+.form .control:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.form .field,
+.form .control
+{
+    zoom: 1;
+}
+
+/*	========
+    fieldset
+	========
+
+	Provides a grouping element for fieldsets.
+	
+    Fieldsets don't need a ".fieldsets" container, but won't render vertical spacing
+    between each other properly without one. */
+
+.form .fieldsets
+{
+}
+
+.form .fieldsets fieldset
+{
+    margin-top: 30px;
+}
+        
+.form .fieldsets .ie_firstchild,
+.form .fieldsets fieldset:first-child 
+{
+    margin-top: 0;
+}
+
+/*	========
+	fieldset
+	========
+
+	Provides a grouping element for fields.
+	
+	(Without a fieldset, fields cannot know which is the 'first-child' so vertical margins
+	can't be smartly determined.) */
+	
+.form fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.form fieldset legend
+{
+    margin: 0;
+    padding: 0;
+    *margin-left: -7px;
+    font-size: 130%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.2em;
+    color: #FF6600;
+    width: 100%;
+    border-bottom: 1px solid #EEE;
+}
+	
+/*	=====
+	field
+	=====
+
+	Fields typically contain a label, control, and helptext.
+	If a field is "with-labels-on-left", its children labels and controls will rearrange accordingly.
+
+	Fields usually have "types" which indicate what their controls contain (e.g. textbox_field) -
+	the point of this is to make fields aware of what's in them so that:
+
+	•	Labels can 'see what they're next to' and align correctly
+	•	Labels can look "compulsory" (show the required star *) when in a compulsory field
+	•	So they can be addressed individually "by name" or "by type".
+	•	etc.
+
+	When marking up a field, mark it up as:
+		<div class="[subtype_field] [type_field] [name_field] [attribute_field] field">
+	(class order doesn't matter).
+
+	Attributes can be:
+	•	read-only_field
+	•	compulsory_field */
+
+.form fieldset .field
+{
+/*  Can only maintain spacing across all browsers where the parent of the 'first-child' is known,
+    in this case a fieldset. */
+    padding-top: 12px;
+    margin-bottom: 0;
+}
+	
+.form .control .field
+{
+    padding-top: 7px;
+}
+
+.form fieldset .field:first-child,
+.form fieldset .ie_firstchild,
+.form .control .field:first-child,
+.form .control .ie_firstchild
+{
+    padding-top: 0;							
+}
+	
+.form fieldset .forced-not-first_field,
+.form fieldset .forced-not-first_field:first-child
+{
+    padding-top: 12px;
+}
+	
+.form fieldset.row .field
+{
+    float: left;
+    padding-top: 0;
+    margin-left: 10px;
+}
+
+.form fieldset.row .field:first-child,
+.form fieldset.row .ie_firstchild
+{
+    margin-left: 0;
+}
+
+.form .field .field
+{
+    /* Field cannot be directly under a field. */
+    border: 3px solid #FF0000;
+}
+
+.form .field .control .field
+{
+    /* Field must be under a field using a control intermediate. */
+    border: none;
+}
+
+/*	=====
+	label
+	=====
+	
+	Labels display the purpose of a field as you'd expect.
+
+	What's special here is that they arrange themselves according to a parent
+	having "with-labels-on-left" or not. */
+
+.form .field label,
+.form .control .field label,
+.form .field .label,
+.form .control .field .label
+{
+    margin: 0;
+    padding: 0;
+    font-size: 85%;			/* Shrink for fields */
+    color: #47A;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
+.form .control label,
+.form .control .label
+{
+    margin: 0;
+    padding: 0;
+    font-size: 95%;		/* Keep large for controls (they might not expect the shrinking) */
+    color: #333;
+    font-weight: normal;
+}
+
+.form .with-labels-on-left label,
+.form .with-labels-on-left fieldset.with-labels-on-left label,
+.form .with-labels-on-left .label,
+.form .with-labels-on-left fieldset.with-labels-on-left .label
+{
+    width: 175px;
+    position: absolute;
+    text-align: right;
+}
+	
+.form .wider_with-labels-on-left label,
+.form .wider_with-labels-on-left fieldset.with-labels-on-left label,
+.form .wider_with-labels-on-left .label,
+.form .wider_with-labels-on-left fieldset.with-labels-on-left .label 
+{
+    width: 225px;
+}
+	
+.form .with-labels-on-left fieldset label,  /* Undo the above for fieldsets in fieldsets */
+.form .control label,	                    /* And also for controls with labels inside */
+.form .with-labels-on-left fieldset .label,
+.form .control .label
+{
+    width: auto;
+    text-align: left;
+    position: static;
+    padding-right: 0;
+}
+
+.form .compulsory_field label,
+.form .compulsory_field .label
+{
+    /* "Compulsory" is a field property */
+    padding-right: 7px;
+    background: url(../images/forms/compulsory-star.png) top right no-repeat;
+}
+
+.form .compulsory_field .control label,
+.form .compulsory_field .control .label 
+{
+    /* "Compulsory" should only travel 1 level deep... */
+    padding-right: 0;
+    background: none;
+}
+
+.form .compulsory_field .checkbox_control label,
+.form .compulsory_field .checkbox_control .label
+{
+    /* ...unless we're talking about a checkbox. */
+    padding-right: 7px;
+    background: url(../images/forms/compulsory-star.png) top right no-repeat;
+}
+
+/*	=======
+	control
+	=======
+
+	The purpose of this class is to designate the part of a field which will
+	is treated as "the stuff that's not the label and not the help text".
+
+	Inside a field "with-labels-on-left", it moves to the right to make way.
+
+	No floats are used by control, but they are self-clearing and cope well with
+	floated children.
+
+	WARNING:
+	IE6 and IE7 will propagate the "with-labels-on-left" margin-left from here
+	to some types of child inputs (at least type=text and type=button). So that's
+	why position: left: x / margin-right: (negative x) is used instead (same effect). */
+
+.form .control
+{
+    margin: 0;
+    padding:0;
+}
+	
+.form .indented_control
+{
+    padding-left: 20px;
+}
+
+.form .with-labels-on-left .control
+{
+    position: relative;
+    left: 190px;
+    margin-right: 190px;
+}
+
+.form .wider_with-labels-on-left .control
+{
+    position: relative;
+    left: 240px;
+    margin-right: 240px;
+}
+
+.form .with-labels-on-left fieldset .control,   /* Undo the above for further nested fieldsets */
+.form .control .control	                        /* and also for further nested controls */
+{
+    left: 0;
+    margin-right: 0;
+}
+
+/*  ===========================
+    Structures inside a control
+    =========================== */
+
+/*  description */
+
+.form .description
+{
+    /* Description can't be outside a control */
+    margin: 0;
+    padding: 0;
+}
+
+.form .control .description
+{
+    /* Description is only for inside a control */
+    border: none;
+    font-size: 85%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.form .control .description,
+.form .control .description *
+{
+    color: #888;
+}
+
+.form .control .description ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.form .control .description ul li
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+/*  =================
+    Bordered controls
+    ================= */
+    
+.form .textbox,
+.form .dropdown,
+.form .listbox
+{
+    margin: 0;
+    padding: 1px;
+    border: 1px solid #8AC;
+    line-height: 16px;
+    font-family: Verdana, Arial, sans-serif;	/* Bordered inputs don't inherit font in any browser */
+    color: #333333;
+}
+			
+/*  =======
+    textbox
+    ======= */
+
+.form .textbox
+{
+}
+			
+.form .read-only_field .textbox
+{
+    border: none;
+    padding: 2px;
+}
+			
+.form .field input.textbox,
+.form .field textarea.textbox
+{
+    /* Only applies to real textboxes/areas */
+    *margin-top: -1px;
+    *margin-bottom: -1px;
+    *line-height: 17px;	/* Make IE6,7 textboxes match heights */
+    *padding-top: 0;	/* Kill extra padding in IE7 only (IE6 will ignore textbox border customisation) */
+}
+			
+.form .field input.textbox
+{
+    /* Only applies to real textboxes */
+    height: 1.3em;
+}
+			
+.form .read-only_field input.textbox
+{
+    /* Only applies to real textboxes */
+    *padding-top: 1px;	/* Kill extra padding in IE7 only (IE6 will ignore textbox border customisation) */
+}
+			
+html>/**/body .form .field input.textbox,
+html>/**/body .form .field textarea.textbox,
+x:-moz-any-link
+{
+    /* FF hack, only real textboxes */
+    padding-bottom: 0;	/* Counteract FF's added bottom/left 1px padding */
+    padding-left: 0;
+}
+			
+html>/**/body .form .read-only_field input.textbox, x:-moz-any-link
+{
+    /* FF hack, only real textboxes */
+    padding-bottom: 1px;
+    padding-left: 1px;
+}
+			
+/*	Read-only visibility switching (between faux input and real input) */
+			
+.form .field .textbox
+{
+    /* read/write: hide presumed faux input */
+    /*display: none;*/
+}
+				
+.form .field input.textbox,			/* read/write: show known real inputs */
+.form .field textarea.textbox		/* read/write: show known real inputs */
+{
+    /*display: inline;*/
+}
+				
+.form .read-only_field .textbox			/* read-only: show presumed faux inputs */
+{
+    /*display: block;*/
+}
+
+.form .read-only_field input.textbox,		/* read-only: hide known real inputs */
+.form .read-only_field textarea.textbox	    /* read-only: hide known real inputs */
+{
+    /*display: none;*/
+}
+				
+/*	=================
+    multiline textbox
+    ================= */
+
+.form .multiline_textbox
+{
+    width: 20em;
+    font-size: 100%;	/* Firefox needs this for some reason, otherwise it enlarges the font-size (!) */
+}
+			
+/*	========
+    dropdown
+	======== */
+
+.form .dropdown
+{
+    height: 1.65em;
+}
+			
+.form .read-only_field .dropdown
+{
+    border: none;
+    padding: 2px 1px;
+}
+			
+html>/**/body .form .field select.dropdown,
+x:-moz-any-link 	/* FF hack, real dropdowns */
+{
+    padding: 0;
+}
+			
+html>/**/body .form .read-only_field .dropdown,
+x:-moz-any-link     /* FF hack */
+{
+    padding-left: 5px;
+    margin-bottom: -3px;
+}
+			
+.form .read-only_field .dropdown
+{
+    /* IE6,7 appearance */
+    *margin-bottom: -3px;
+    *padding-left: 5px;
+    *padding-top: 3px;
+    *padding-bottom: 1px;
+}
+			
+/*	Read-only visibility switching (between faux input and real input) */
+			
+.form .field .dropdown
+{
+    /* read/write: hide presumed faux inputs */
+    display: none;
+}
+				
+.form .field select.dropdown
+{
+    /* read/write: show known real inputs */
+    display: inline;
+}
+				
+.form .read-only_field .dropdown
+{
+    /* read-only: show presumed faux inputs */
+    display: inline-block;		/* If this read-only "dropdown" is a DIV, force it inline (block). */
+    *display: inline; *zoom: 1; /* IE6,7 inline-block hack */
+    /* FF2 inline-block not supported */
+}
+				
+.form .read-only_field select.dropdown
+{
+    /* read-only: hide known real inputs */
+    display: none;
+}
+		
+/*	================
+    checkbox & radio
+    ================ */
+
+.form .radiobuttons_control .radio_control,
+.form .checkboxes_control .checkbox_control
+{
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+}
+			
+.form .radiobuttons_control .radio_control:first-child,
+.form .radiobuttons_control .ie_firstchild,
+.form .checkboxes_control .checkbox_control:first-child,
+.form .checkboxes_control .ie_firstchild 
+{
+    padding-top: 0;
+}
+
+.form span.checkbox,
+.form span.radio
+{
+    margin: 0;
+    padding: 0;
+    display: block;		    /* Allow vertical margins to be altered */
+    margin-top: 0;          /* Remove line-height-originated margin (none cos I fixed the line-height) */
+    *margin-top: 0;	        /* IE6,7 variation on the above */
+    *margin-bottom: -2px;   /* IE6,7 remove 1px from the bottom because label is shifted up 1px */
+}
+			
+.form input.checkbox,
+.form .checkbox input,
+.form .checkboxlist_control input,
+.form input.radio,
+.form .radio input,
+.form .radiolist_control input
+{
+    margin: 0;
+    padding: 0;
+    width: 13px; height: 13px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 0.6ex;	/* Size-of-a-space right-margin */
+}
+			
+.form .checkbox_control label,
+.form .checkbox label,
+.form .checkboxlist_control label,
+.form .radio_control label,
+.form .radio label,
+.form .radiolist_control label,
+.form .checkbox_control .label,
+.form .checkbox .label,
+.form .radio_control .label,
+.form .radio .label
+{
+    position: relative;
+    vertical-align: middle;
+    top: 0;
+    *top: -1px;
+}
+
+.form .radiolist_control table
+{
+    margin: 0;
+    padding: 0;
+    border-collapse : collapse;			/* Emulate cell-spacing 0 */
+}
+
+.form .radiolist_control label
+{
+    top: -1px;							/* Fix alignment in non-IE (i.e. Firefox) */
+}
+			
+.form .horizontal_radiolist_control span span,		/* For ASP.NET's dirtily marked up */
+.form .horizontal_checkboxlist_control span span	/* radio/checkboxlist controls     */
+{
+    /*padding-right: 1em;*/
+}
+
+.form .horizontal_radiolist_control span label,		/* (2010/05/31) ASP.NET no longer renders      */
+.form .horizontal_checkboxlist_control span label	/* spans in spans for radio/checkbox lists (!) */
+{
+    padding-right: 1em;
+}
+
+.form .horizontal_radiolist_control table,          /* ASP.NET preferred solution: use  */
+.form .horizontal_checkboxlist_control table        /* 'table' RepeatLayout, not 'flow' */
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.form .horizontal_radiolist_control table tr,
+.form .horizontal_checkboxlist_control table tr
+{
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.form .horizontal_radiolist_control table td,
+.form .horizontal_checkboxlist_control table td
+{
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    *padding-bottom: 0;     /* IE6/7 provide their own "special" padding */
+    *vertical-align: top;
+}
+			
+.form .horizontal_radiobuttons_control .radio_control,
+.form .horizontal_checkboxes_control .checkbox_control
+{
+    display: inline;		/* Note - inline layouts are sensitive to spaces!     */
+    padding-right: 0;		/* So, typical markup (i.e. with spaces) is expected. */
+    *padding-right: 1em;	/* Which IE6,7 doesn't actually space. */
+}
+
+.form .horizontal_radiobuttons_control .radio_control .radio,
+.form .horizontal_checkboxes_control .checkbox_control .checkbox
+{
+    display: inline;
+}
+			
+/* Overrides to make up for mysterious failure of horizontal_radiobuttons radio controls to line up in a row... */
+               
+.form .horizontal_radiobuttons_control
+{
+}
+
+.form .horizontal_radiobuttons_control .radio_control
+{
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-right: 1em;  /* Padding is on RHS so all LHS's line up when wrapping */
+}
+			
+.form .checkbox_control .description,	/* Indent description/inner control/field to match label */
+.form .checkbox_control .control,
+.form .checkbox_control .field,
+.form .radio_control .description,
+.form .radio_control .control,
+.form .radio_control .field
+{
+    padding-left: 14px;
+    *padding-left: 15px;/* IE falls short 1px */
+    margin-left: 0.6ex;	/* Equals the space between a radio/check and its label */
+}
+
+.form .checkbox_control .control .control,	/* Undo the above for further nested controls etc. */
+.form .checkbox_control .field .control,
+.form .radio_control .control .control,
+.form .radio_control .field .control
+{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/*	=====
+	image
+	===== */
+
+.form .image_control
+{
+    padding-bottom: 12px;
+}
+	
+/*	========
+	helptext
+	======== */
+	
+.form .control .helptext
+{
+    /* don't put helptext in a control */
+    border: 3px solid red;
+}
+
+.form .field .helptext
+{
+    /* put it in a field */
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 85%;
+    max-width: none;	/* Override base helptext style */
+    width: auto;		/* Override base helptext style */
+    background: none;	/* Override base helptext style */
+    color: #888;
+}
+
+.form .field .helptext p
+{
+    margin: 0;
+    padding: 0;
+    margin-top: 0.3em;
+    color: #888;
+}
+	
+.form .field .helptext p:first-child,
+.form .field .helptext .ie_firstchild
+{
+    margin-top:0;
+}
+
+.form .with-labels-on-left .field .helptext
+{
+    margin-left: 190px;
+}
+
+.form.with-labels-on-left .textbox_field.email_textbox_field.field .example_helptext.helptext
+{
+    margin-left : 140px;
+}
+
+.form .wider_with-labels-on-left .field .helptext
+{
+    margin-left: 240px;
+}
+
+.form .with-labels-on-left fieldset .field .helptext,
+.form .with-labels-on-left .field .field .helptext
+{
+    margin-left: 0;
+}
+
+.form .example_helptext
+{
+    font-style: italic;
+    color: #888;
+}
+
+.form .with-labels-on-left .example_helptext
+{
+}
+
+/*  =====
+    image
+    ===== */
+    
+.form .image_field {}
+    .form .image_control {}
+	    .form .image {}
+	
+/*	====================
+    autocomplete textbox
+    ==================== */
+	
+.form .autocomplete_textbox_field {}
+    .form .autocomplete_textbox_control {}
+        .form .autocomplete_textbox
+        {
+            background: #FFFFEC;
+        }
+        .form .read-only_field .autocomplete_textbox
+        {
+            background: transparent;	/* Intended to undo the above for read-only auto-complete fields */
+        }
+
+/*	=============
+    wider textbox
+    ============= */
+	
+.form .textbox_field {}
+    .form .textbox_control {}
+	    .form .wider_textbox
+	    {
+	        width: 20em;
+        }
+
+.form .textbox_field {}
+    .form .textbox_control {}
+        .form .widest_textbox
+        {
+            width: 30em;
+        }
+	
+.form .textbox_field {}
+    .form .textbox_control {}
+        .form .shorter_textbox
+        {
+            width: 7em;
+        }
+
+/*	====
+    link
+    ==== */
+
+.link_field {}
+    .link_control {}
+        .link {}
+
+/*	=======
+	buttons
+	======= */
+
+.form .button_control .button,
+.form .buttons_control .button
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+	
+.form .buttons_control .button
+{
+    float: left;
+    margin-left: 5px;
+}
+
+.form .buttons_control .button:first-child,
+.form .buttons_control .ie_firstchlid
+{
+    margin-left: 0;
+}
+
+.form .button
+{
+    /* Intended to apply to <button>, <input type="button">, or <a> - but may apply to any element */
+    font-size: 0;
+    *line-height: 240px;	/* Kills text nicely in IE 6,7 */
+    padding: 0 5px;
+    margin: 7px 0;
+    background-position: top left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0;
+}
+
+.form .button:hover
+{
+    background-position: left center;
+}
+
+.form .button:active
+{
+    background-position: left bottom;
+}
+	
+.form a.button
+{
+    /* Tweaks intended for use on <a> */
+    padding: 0;
+    zoom: 1;                     /* IE 6,7 */
+    display: -moz-inline-box;    /* FF2 */
+    display: inline-block;       /* Modern browsers */
+    overflow: hidden;
+    *line-height:0;
+}
+	
+.form .large_button
+{
+    height: 36px;
+    *overflow: hidden !important;
+}
+	

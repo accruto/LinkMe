@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="Page.Master.cs" Inherits="LinkMe.Web.Master.Page" MasterPageFile="~/Master/SiteMasterPage.master" %>
+<%@ Register TagPrefix="uc" TagName="Header" Src="~/ui/controls/common/navs/PageHeader.ascx" %>
+<%@ Register TagPrefix="uc" TagName="SideBarContainer" Src="~/ui/controls/common/SideBarContainer.ascx" %>
+<%@ Register TagPrefix="uc" TagName="Footer" Src="~/ui/controls/common/navs/PageFooter.ascx" %>
+<%@ Register TagPrefix="wc" Namespace="LinkMe.WebControls" Assembly="LinkMe.WebControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6" %>
+<%@ Register TagPrefix="nv" Namespace="LinkMe.Web.Manager.Navigation" Assembly="LinkMe.Web" %>
+<%@ Register TagPrefix="cm" Namespace="LinkMe.Web.Cms" Assembly="LinkMe.Web" %>
+<%@ Register TagPrefix="cv" Namespace="LinkMe.Web.Cms.ContentDisplayViews" Assembly="LinkMe.Web" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Body" runat="server">
+
+    <cv:CommunityHeaderContextualContentDisplayView ID="cmCommunityHeader" runat="server" />
+
+    <div id="container">
+    
+        <div id="header">
+            <uc:Header id="ucHeader" runat="server" />
+        </div>
+        <div id="subheader">
+            <asp:ContentPlaceHolder ID="BreadCrumbs" runat="server" />
+            <asp:ContentPlaceHolder ID="SubHeader" runat="server" />
+        </div>
+
+        <div id="body-container">
+        
+            <div id="left-sidebar">
+                <asp:ContentPlaceHolder ID="LeftSidebarContent" runat="server" />
+            </div>
+
+            <div id="main-body">
+                <asp:PlaceHolder ID="phForm" runat="server">
+	                <nv:NavigationForm id="Form" name="Form" runat="server">
+                        <wc:LinkMeValidationSummary id="wcValidationSummary" runat="server" />
+                        
+                        <wc:ExplicitClientIdHtmlControl Tag="div" id="wcFormContainer" runat="server">
+                            <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+	                        <asp:ContentPlaceHolder ID="FormContent" runat="server" />
+	                    </wc:ExplicitClientIdHtmlControl>
+	                    
+                    </nv:NavigationForm>
+                </asp:PlaceHolder>
+                
+                <asp:PlaceHolder ID="phNonFormContent" runat="server" />
+
+            </div>
+
+            <div id="sidebar">
+            </div>
+
+            <div class="clearer"></div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="Footer" runat="server" />
+        <div id="footer">
+            <uc:Footer id="ucFooter" runat="server" />
+        </div>
+
+    </div>
+    
+    <cv:CommunityFooterContextualContentDisplayView ID="cmCommunityFooter" runat="server" />
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="JavaScript" runat="server">
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server" />
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="BodyTrackers" runat="server">
+    <asp:ContentPlaceHolder ID="BodyTrackers" runat="server" />
+</asp:Content>

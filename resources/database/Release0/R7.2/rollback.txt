@@ -1,0 +1,2 @@
+drop.linkme_owner.tag.sql
+drop.linkme_owner.blog.sql

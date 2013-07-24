@@ -1,0 +1,2 @@
+drop.linkme_owner.locality.sql
+drop.linkme_owner.state_synonym.sql

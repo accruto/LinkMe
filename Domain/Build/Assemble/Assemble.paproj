@@ -1,0 +1,38 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{b9a2a1e2-10be-4ee6-addc-4f09fef012cf}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Domain.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{E44752C7-8633-4907-BDA5-C0F1E9169F48}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\LinkMe.Domain.dll">
+      <Guid>{A4D70187-E6B4-4fd0-8EF3-CA98DA440EBB}</Guid>
+      <Link>Bin\LinkMe.Domain.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A4F3F658-5CB1-4409-B85E-68268A3267AB}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Roles\LinkMe.Domain.Roles.dll">
+      <Guid>{F179215E-3D11-4f7a-8340-DAAB2E66482F}</Guid>
+      <Link>Bin\LinkMe.Domain.Roles.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{CCEFD91A-1B6D-494b-BA10-2E75038C21D2}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Users\LinkMe.Domain.Users.dll">
+      <Guid>{9416D8F1-FFE8-45ba-A034-1FB09CFD7342}</Guid>
+      <Link>Bin\LinkMe.Domain.Users.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{7BAB8D94-4179-4862-813F-79DD9690E4EB}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

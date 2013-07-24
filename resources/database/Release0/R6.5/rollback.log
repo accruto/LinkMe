@@ -1,0 +1,68 @@
+Database name: 'linkme'
+Database user id: 'linkme_owner'
+Database password: 'linkme'
+Processing script: 'rollback_database_version_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_database_version_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> (1 row affected)
+1> 
++++ End Command Output +++
+Processing script: 'rollback_new_networker_statistics_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_new_networker_statistics_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 1> 2> 
++++ End Command Output +++
+Processing script: 'rollback_missing_indexes.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_missing_indexes.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 1> 2> 3> 4> 1> 2> 3> 4> 1> 2> 3> 1> 2> 3> 4> 5> 1> 2> 3> 4> 1> 2> 3> 4> 5> 6> Msg 3728, Level 16, State 1, Server GANDALF, Line 4
+'pk_networker_jobs' is not a constraint.
+Msg 3727, Level 16, State 0, Server GANDALF, Line 4
+Could not drop constraint. See previous errors.
+1> 2> 3> 1> 2> 3> 4> 5> 6> 1> 2> 3> 1> 2> 3> 4> 5> 6> 1> 2> 3> 1> 2> 3> 4> 5> 6> 1> 2> 3> 1> 2> 3> 4> 1> 2> 3> 4> 1> 2> 3> 4> 5> 6> 1> 2> 3> 4> 1> 2> 3> 4> 5> 6> 1> 2> 3> 4> 5> 6> 1> 2> 3> 4> 5> 6> 1> 2> 3> 1> 2> 3> 4> 5> 6> 1> 2> 3> 4> 5> 6> 1> 2> 
++++ End Command Output +++
+Processing script: 'rollback_searches_add_created_date.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_searches_add_created_date.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 1> 
++++ End Command Output +++
+Processing script: 'rollback_user_alert_data_add_created_date.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_user_alert_data_add_created_date.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 1> 
++++ End Command Output +++
+Processing script: 'rollbackl_networking_loadNetwork_proc.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollbackl_networking_loadNetwork_proc.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 1> 
++++ End Command Output +++
+Processing script: 'rollback_networking_setNetworkerNodeXml_proc.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_networking_setNetworkerNodeXml_proc.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 1> 
++++ End Command Output +++
+Processing script: 'rollback_networking_getNetworkerNodeXml_proc.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_networking_getNetworkerNodeXml_proc.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 1> 
++++ End Command Output +++
+Processing script: 'rollback_networking_deleteNetworkNode_proc.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_networking_deleteNetworkNode_proc.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 1> 
++++ End Command Output +++
+Processing script: 'rollback_networking_networkerNodes_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_networking_networkerNodes_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 1> 
++++ End Command Output +++

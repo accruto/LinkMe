@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="LinkMe.Domain.Contacts.IUser">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Accounts.IUserAccount">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAEAAAAAAAAE=</HashCode>
+      <FileName>Accounts\IUserAccount.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Framework.Communications.ICommunicationRecipient">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Contacts.IAdministrator">
+    <Position X="1" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\IAdministrator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Contacts.ICustodian">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\ICustodian.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Contacts.IEmployer">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Contacts\IEmployer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Contacts.IMember">
+    <Position X="8.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAACAAAAAAAAAAAAQAAACAEACAAAACIA=</HashCode>
+      <FileName>Contacts\IMember.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

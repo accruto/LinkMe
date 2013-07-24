@@ -1,0 +1,228 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B200111-856E-4749-BCEF-CA02D21404AE}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.Framework.Instrumentation.Tools.Mmc</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinkMe.Framework.Instrumentation.Tools.Mmc</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <AssemblyOriginatorKeyFile>..\..\..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ExportRepositoryHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ExportRepositoryResultsRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ImportRepositoryHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ImportRepositoryResultsRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\CatalogueNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\ControlNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\EventTypesNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\NamespaceNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\NamespacesNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\RepositoryNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Nodes\SourceNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewEventTypeWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewMessageHandlerTypeWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewMessageReaderTypeWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewNamespaceWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewSourceTypeWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Wizards\NewSourceWizard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Configuration\Configuration.csproj">
+      <Project>{1F7A6A11-F8B9-4000-B5D5-8EC2E68D0842}</Project>
+      <Name>Configuration %28Configuration\Configuration%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Extension\Extension.csproj">
+      <Project>{F46A4AE8-4CCA-42DF-9FB2-60E2F5229A36}</Project>
+      <Name>Extension %28Configuration\Extension%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Management\Management.csproj">
+      <Project>{27030A15-642D-47E1-9FA8-B770CB19A538}</Project>
+      <Name>Management %28Configuration\Management%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Tools\Mmc\Mmc.csproj">
+      <Project>{BA07E3A0-1A04-432C-A703-66F2A49DC89A}</Project>
+      <Name>Mmc %28Configuration\Mmc%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Tools\Tools.csproj">
+      <Project>{9AD1715E-DE31-4CA8-9C98-E3D28190C8C8}</Project>
+      <Name>Tools %28Configuration\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\Mmc\Mmc.csproj">
+      <Project>{88A1C8C3-5DEF-41F4-9704-A64B180D59AC}</Project>
+      <Name>Mmc %28Tools\Mmc%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\Tools.csproj">
+      <Project>{8C5E942B-33DD-430F-99B7-B2F296D7837C}</Project>
+      <Name>Tools %28Tools\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Type\Type.csproj">
+      <Project>{EA220628-98C7-40C7-8290-52D638D537AB}</Project>
+      <Name>Type %28Type\Type%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utility\Utility.csproj">
+      <Project>{6860E675-45B5-4558-8EE7-FDD55A8A0A20}</Project>
+      <Name>Utility %28Utility\Utility%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Connection\Connection.csproj">
+      <Project>{04DBBF80-AC10-432A-A519-D308703C3AB8}</Project>
+      <Name>Connection %28Instrumentation\Connection%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Management\Management.csproj">
+      <Project>{D8F98A71-2256-46B2-B4A3-B2D78A0B2F0B}</Project>
+      <Name>Management %28Instrumentation\Management%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools.csproj">
+      <Project>{38C24FD2-ACC1-478F-92B7-1EC29D526899}</Project>
+      <Name>Tools %28Instrumentation\Tools%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(FrameworkSDKDir)Bin\gacutil.exe" /nologo /if "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

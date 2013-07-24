@@ -1,0 +1,34 @@
+Date: Fri, 8 Jul 1994 09:21:47 -0400
+From: Mail Delivery Subsystem <MAILER-DAEMON@CS.UTK.EDU>
+Subject: Returned mail: User unknown
+To: <owner-ups-mib@CS.UTK.EDU>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+     boundary="JAA13167.773673707/CS.UTK.EDU"
+
+--JAA13167.773673707/CS.UTK.EDU
+content-type: text/plain; charset=us-ascii
+
+  ----- The following addresses had delivery problems -----
+<barney@test.linkme.net.au>  (unrecoverable error)
+<wsnell@sdcc13.ucsd.edu>  (unrecoverable error)
+
+--JAA13167.773673707/CS.UTK.EDU
+content-type: message/delivery-status
+
+Reporting-MTA: dns; cs.utk.edu
+
+Original-Recipient: rfc822;barney@test.linkme.net.au
+Final-Recipient: rfc822;barney@test.linkme.net.au
+Action: failed
+Status: 5.0.0 (permanent failure)
+Diagnostic-Code: smtp;
+ 550 'barney@test.linkme.net.au' is not a registered gateway user
+Remote-MTA: dns; vnet.ibm.com
+
+
+--JAA13167.773673707/CS.UTK.EDU
+content-type: message/rfc822
+
+[original message goes here]
+--JAA13167.773673707/CS.UTK.EDU--

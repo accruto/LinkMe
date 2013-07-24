@@ -1,0 +1,16 @@
+﻿.three-columns {
+    height: 230px;
+}
+.three-columns-shadowed-section .section-content {
+    height: 140px;
+}
+
+.jobad-list-view,
+#jobad-view {
+    margin-top: 10px;
+}
+.jobad-list-view .bottombar,
+#jobad-view .bottom-bar {
+    margin-bottom: 20px;
+}
+

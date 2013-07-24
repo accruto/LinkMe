@@ -1,0 +1,22 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>Module</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>Module</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{11AE61DA-BAB6-47e0-BDC5-E48DF30690C1}</ProjectGuid>
+    <Name>Module</Name>
+    <ModuleGuid>{A6B5138C-95D0-4db8-8A29-C22279590498}</ModuleGuid>
+    <Manufacturer>LinkMe</Manufacturer>
+    <MergeModuleFile>LinkMe.Apps</MergeModuleFile>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Catalogue Include="..\..\Install\Module\LinkMe.Apps.catalogue">
+      <Link>LinkMe.Apps.catalogue</Link>
+    </Catalogue>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Package.targets" />
+</Project>

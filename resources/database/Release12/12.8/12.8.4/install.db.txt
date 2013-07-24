@@ -1,0 +1,14 @@
+create_ResourcePoll.sql
+alter_FaqSubcategory.sql
+alter_ResourceArticleUserRating.sql
+alter_ResourceViewing.sql
+alter_ResourceAnsweredQuestion.sql
+data_ResourceArticle.sql
+data_ResourceAnsweredQuestion.sql
+data_ResourceVideo.sql
+data_FeaturedResource.sql
+data_ResourceArticleTest.sql
+data_ResourceAnsweredQuestionTest.sql
+data_ResourceVideoTest.sql
+data_ResourceArticle_new.sql
+data_ResourceAnsweredQuestion_new.sql

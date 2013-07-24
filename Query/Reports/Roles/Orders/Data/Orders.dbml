@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="OrdersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Query.Reports.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ProductOrder" Member="ProductOrderEntities" AccessModifier="Internal">
+    <Type Name="ProductOrderEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="confirmationCode" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="purchaserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="priceExclTax" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="priceInclTax" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductReceiptEntity" Member="ProductReceiptEntities" ThisKey="id" OtherKey="orderId" Type="ProductReceiptEntity" />
+      <Association Name="ProductOrderEntity_ProductOrderItemEntity" Member="ProductOrderItemEntities" ThisKey="id" OtherKey="orderId" Type="ProductOrderItemEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductReceipt" Member="ProductReceiptEntities" AccessModifier="Internal">
+    <Type Name="ProductReceiptEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalTransactionId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalTransactionTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="creditCardPan" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="creditCardType" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductReceiptEntity" Member="ProductOrderEntity" ThisKey="orderId" OtherKey="id" Type="ProductOrderEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegisteredUser" Member="RegisteredUserEntities" AccessModifier="Internal">
+    <Type Name="RegisteredUserEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="loginId" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="flags" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="passwordHash" Type="System.String" DbType="Char(24)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emailAddressVerified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmailAddressVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RegisteredUserEntity_Employer" Member="EmployerEntity" ThisKey="id" OtherKey="id" Type="EmployerEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductOrderItem" Member="ProductOrderItemEntities" AccessModifier="Internal">
+    <Type Name="ProductOrderItemEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="orderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="productId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductOrderEntity_ProductOrderItemEntity" Member="ProductOrderEntity" ThisKey="orderId" OtherKey="id" Type="ProductOrderEntity" IsForeignKey="true" />
+      <Association Name="ProductEntity_ProductOrderItemEntity" Member="ProductEntity" ThisKey="productId" OtherKey="id" Type="ProductEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="ProductEntities" AccessModifier="Internal">
+    <Type Name="ProductEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userTypes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ProductEntity_ProductOrderItemEntity" Member="ProductOrderItemEntities" ThisKey="id" OtherKey="productId" Type="ProductOrderItemEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employer" Member="EmployerEntities" AccessModifier="Internal">
+    <Type Name="EmployerEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="contactPhoneNumber" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="subRole" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerPartnerId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="organisationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="RegisteredUserEntity_Employer" Member="RegisteredUserEntity" ThisKey="id" OtherKey="id" Type="RegisteredUserEntity" IsForeignKey="true" />
+      <Association Name="Organisation_Employer" Member="OrganisationEntity" ThisKey="organisationId" OtherKey="id" Type="OrganisationEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organisation" Member="OrganisationEntities" AccessModifier="Internal">
+    <Type Name="OrganisationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="addressId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Organisation_Employer" Member="EmployerEntities" ThisKey="id" OtherKey="organisationId" Type="EmployerEntity" />
+    </Type>
+  </Table>
+</Database>

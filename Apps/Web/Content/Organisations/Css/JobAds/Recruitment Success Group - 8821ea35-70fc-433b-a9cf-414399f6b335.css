@@ -1,0 +1,86 @@
+#JobAd {}
+
+	/* This wrapper stops above the Apply button and nav links */
+	#JobAd #JobDescription {
+		background: #fff url(recruitment_success_images/bg.gif) repeat-y left top;
+		border: 1px solid #000;
+		margin-bottom: 1em; /* separates ad contents from Apply btn and links */
+		width: 458px;
+	}
+	
+		/* #Ad wrapper stops above #LogoFooter */
+		#JobAd #JobDescription #Ad {}
+			
+			/* Covers all content of #Ad, including prescribed fields as well as
+			the free-form user input in the middle section, unless overridden */
+			#JobAd #JobDescription #Ad div,
+			#JobAd #JobDescription #Ad p {
+				color: #000;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 1.3em;
+				margin-left: 65px;
+				margin-right: 65px;
+			}
+			/* override margins of above decl. for nested containers */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				margin-left: 0; 
+				margin-right: 0;
+			}	
+			#JobAd #JobDescription #Ad div#JobAdHeading {}	
+			#JobAd #JobDescription #Ad div#AdContactDetails {}
+			
+			/* Usual placeholder for header graphic */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				display: none;
+			}
+					
+			/* Contains content that comes from prescribed fields */
+			#JobAd #JobDescription #Ad div#JobAdHeading {}
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading h1 {
+					color: #28549d;
+					font-size: 250%;
+					line-height: 1;
+					margin-bottom: 25px;
+					margin-top: 25px;
+					text-align: center;
+				}		
+					
+				/* These elements are unfortunately used as a subheading  */
+				#JobAd #JobDescription #Ad div#JobAdHeading p {
+					margin-left: 0;
+				}
+				#JobAd #JobDescription #Ad div#JobAdHeading p strong {
+					display: block;
+					font-weight: bold;
+					text-align: left;
+				}
+	
+				#JobAd #JobDescription #Ad div#JobAdHeading table {
+					width: 90% !important; /* overrides setting from text-links-headings.css */
+				}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td {
+						font-family: Arial, Helvetica, sans-serif;
+						padding-left: 0;
+						vertical-align: top;
+					}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td label {
+						color: #000;
+						font-family: Arial, Helvetica, sans-serif;
+						margin-left: 0; /* overrides setting from forms.css */
+					}
+				#JobAd #JobDescription #Ad div#JobAdHeading ul {}
+					#JobAd #JobDescription #Ad div#JobAdHeading ul li {}
+			
+			/* Last div for textual content inside div#Ad */
+			#JobAd #JobDescription #Ad div#AdContactDetails {
+				text-align: center;
+			}
+				
+		/* Usual placeholder for footer graphic -- N.B. is outside div#Ad */
+		#JobAd #JobDescription #LogoFooter {
+			background: #fff url(recruitment_success_images/footer.gif) no-repeat left bottom;
+			height: 120px;
+		}
+	
+	

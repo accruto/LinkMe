@@ -1,0 +1,25 @@
+body {
+	margin: 0px;
+	padding:0px;
+}
+
+pre {
+	font-size: 100%;
+}
+
+#letter-layout {
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+#letter-layout div.body {
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: pre;
+}
+#letter-layout div.signature {
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: pre;
+	padding-top: 1em;
+}
+#letter-layout span {
+	font-weight: bolder;
+}

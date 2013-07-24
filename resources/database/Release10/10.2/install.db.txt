@@ -1,0 +1,2 @@
+alter_CandidateNote.sql
+alter_CandidateAccessPurchase.sql

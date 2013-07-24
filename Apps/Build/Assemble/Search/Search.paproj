@@ -1,0 +1,57 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{6077440C-2E6B-4fe8-85CD-F316A7BBAECC}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.Search.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{A9A51DFB-6BD9-4aee-B337-58B5B67D02D6}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.search.member.app.config">
+      <Guid>{149E4F2D-EC79-444d-AE69-8D666B41074A}</Guid>
+      <Link>Config\linkme.search.member.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.search.job.app.config">
+      <Guid>{0890E0FB-7E60-4774-AED1-1D7152234ADA}</Guid>
+      <Link>Config\linkme.search.job.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.sort.job.app.config">
+      <Guid>{81FE29C2-8A99-42E6-9366-65F0112A9CA7}</Guid>
+      <Link>Config\linkme.sort.job.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.search.resource.app.config">
+      <Guid>{59F13386-2E84-4BBD-86CA-7598CC08C2E7}</Guid>
+      <Link>Config\linkme.search.resource.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.jobexport.app.config">
+      <Guid>{79564529-392A-47ad-B9D0-F00B5A70C9AF}</Guid>
+      <Link>Config\linkme.jobexport.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.analyse.job.app.config">
+      <Guid>{520378DB-140B-4BF8-91BE-0FA548F36C46}</Guid>
+      <Link>Config\linkme.analyse.job.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.analyse.member.app.config">
+      <Guid>{6817DFCF-BF40-4663-AEE2-99E806384689}</Guid>
+      <Link>Config\linkme.analyse.member.app.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

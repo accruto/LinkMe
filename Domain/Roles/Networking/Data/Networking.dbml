@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="NetworkingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NetworkLink" Member="NetworkLinkEntities" AccessModifier="Internal">
+    <Type Name="NetworkLinkEntity" AccessModifier="Internal">
+      <Column Name="fromNetworkerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="toNetworkerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="addedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetworkInvitation" Member="NetworkInvitationEntities" AccessModifier="Internal">
+    <Type Name="NetworkInvitationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="inviteeEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" />
+      <Column Name="inviterId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="inviteeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="donationRequestId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="UserToUserRequestEntity_NetworkInvitationEntity" Member="UserToUserRequestEntity" ThisKey="id" OtherKey="id" Type="UserToUserRequestEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserToUserRequest" Member="UserToUserRequestEntities" AccessModifier="Internal">
+    <Type Name="UserToUserRequestEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="actionedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="firstSentTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flags" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="lastSentTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="messageText" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="UserToUserRequestEntity_NetworkInvitationEntity" Member="NetworkInvitationEntity" ThisKey="id" OtherKey="id" Type="NetworkInvitationEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IgnoredNetworkMatch" Member="IgnoredNetworkMatchEntities" AccessModifier="Internal">
+    <Type Name="IgnoredNetworkMatchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="category" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ignorerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ignoredId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,215 @@
+#JobAd {}
+	#JobAd .action-list {
+		margin: 0;
+		padding: 10px 0;
+		margin-left: 132px;
+		float: left;
+	}
+	
+	* html #JobAd .action-list {	/* IE 6 hack - anti-margin-doubling */
+		margin-left: 65px;
+	}
+	
+	#JobAd .horizontal_action-list {	/* This is Back to Search results | Send to a friend */
+		float: right;
+		margin-right: 20px;
+		margin-left: 0;
+	}
+	* html #JobAd .horizontal_action-list {		/* IE 6 anti-double-margins hack */
+		margin-right: 10px;
+	}
+	
+	#JobAd .horizontal_action-list li {
+		margin-top: 0;
+		padding-top: 3px;
+		margin-bottom: 0;
+		padding-bottom: 3px;
+	}
+
+#JobDescription {}
+	#JobDescription #JobAdHeading * {
+		margin:0;
+		padding:0;
+	}
+	#JobDescription #Ad {
+		border-bottom: 1px solid #DAE2EB;
+		width: 676px;
+	}
+		#JobDescription #Ad #brandingLogo {
+			margin-bottom:18px;
+		}	/* This DIV does not exist except when there is a branding image. */
+	
+		#JobDescription #Ad #JobAdHeading {}	/* Element which covers jobheader and table.details */
+		
+		#JobDescription #Ad .jobheader {
+			border: 1px solid;
+			border-color: #C1D4E4 #DAE2EB #BDCFDD #DAE2EB;
+			background: url(default_images/bg_jobheader_middle.png) top left repeat-y;
+			min-height: 57px;
+		}
+		
+		#JobDescription #Ad .jobheader_inner {
+			background: url(default_images/bg_jobheader_top.png) top left no-repeat;
+		}
+		#JobDescription #Ad .jobheader_innermore {
+			background: url(default_images/bg_jobheader_bottom.png) bottom left no-repeat;
+			padding: 18px 15px;
+		}
+		#JobDescription #Ad .jobheader_innermost {
+			min-height: 58px;
+		}
+		* html #JobDescription #Ad .jobheader_innermost {	/* IE 6 hack - min-height */
+			height: 58px;
+		}
+		
+			#JobDescription #Ad .jobheader h1 {
+				font-size: 200%;
+				color: #214263;
+				margin-bottom: 0.5em;
+			}
+
+			#JobDescription #Ad .jobheader .details {
+				font-weight: bold;
+			}
+			
+			#JobDescription #Ad .jobheader .position_open {
+				width: 75px;
+				height: 94px;
+				float: right;
+				background: url(default_images/position_open.png) top left no-repeat;
+			}
+			
+		#JobDescription #Ad table.details {
+			width: 100% !important;
+			border-spacing: 0;
+			
+		}
+		#JobDescription #Ad table.details {			/* Makes IE 6,7 do border-spacing: 0 */
+			*border-collapse: collapse;				/* (Note the FF will mess up left-most borders by 1px if allowed to see this) */
+		}
+		
+			#JobDescription #Ad table.details tr {}
+				#JobDescription #Ad table.details tr td {
+					padding: 1px 0px;
+				}
+				
+				#JobDescription #Ad table.details tr td.first {
+					border-left: 1px solid #DAE2EB;
+					width: 130px;
+				}
+				#JobDescription #Ad table.details tr td.last {
+					border-right: 1px solid #DAE2EB;
+				}
+				
+				#JobDescription #Ad table.details tr.odd td {}
+				
+				#JobDescription #Ad table.details tr.even td {
+					padding: 0;
+					border-top: 1px solid #ECEBEA;
+					border-bottom: 1px solid #ECEBEA;
+					background: #F6F5F4;
+				}
+				
+				#JobDescription #Ad table.details tr.even td.first {
+					border-left: 1px solid #D7DDE3;
+				}
+				#JobDescription #Ad table.details tr.even td.last {
+					border-right: 1px solid #D7DDE3;
+				}
+				
+					#JobDescription #Ad table.details tr td label {
+						display: block;
+						margin-left: 12px;
+						height: 20px;
+						text-indent: -9999px;
+						background-position: top left;
+						background-repeat: no-repeat;
+					}
+					
+					#JobDescription #Ad table.details tr.industry td label {
+						background-image: url(default_images/labels/industry.png);
+					}
+					#JobDescription #Ad table.details tr.jobtype td label {
+						background-image: url(default_images/labels/jobtype.png);
+					}
+					#JobDescription #Ad table.details tr.location td label {
+						background-image: url(default_images/labels/location.png);
+					}
+					#JobDescription #Ad table.details tr.refno td label {
+						background-image: url(default_images/labels/refno.png);
+					}
+					#JobDescription #Ad table.details tr.companyname td label {
+						background-image: url(default_images/labels/companyname.png);
+					}
+					#JobDescription #Ad table.details tr.advertiser td label {
+						background-image: url(default_images/labels/advertiser.png);
+					}
+					#JobDescription #Ad table.details tr.package td label {
+						background-image: url(default_images/labels/package.png);
+					}
+					#JobDescription #Ad table.details tr.posteddate td label {
+						background-image: url(default_images/labels/posteddate.png);
+					}
+					#JobDescription #Ad table.details tr.closeson td label {
+						background-image: url(default_images/labels/closeson.png);
+					}
+					#JobDescription #Ad table.details tr.closedon td label {
+						background-image: url(default_images/labels/closedon.png);
+					}
+					
+		#JobDescription #Ad ul.bulletpoints {
+			border-left: 1px solid #DAE2EB;
+			border-right: 1px solid #DAE2EB;
+			padding-top: 6px;
+			padding-bottom: 6px;
+		}
+		
+		#JobDescription #Ad ul.odd_bulletpoints {
+			/* background: url(default_images/bg_bulletpoints_odd.png) left bottom repeat-x; */ /* Frankly looks a bit odd */
+		}
+		
+		#JobDescription #Ad ul.even_bulletpoints {
+			border: 1px solid #ECEBEA;
+			border-bottom: none;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			background: #F6F5F4;
+		}
+		
+			#JobDescription #Ad ul.bulletpoints li {
+				margin-left: 132px;
+				list-style: none;
+				background: url(default_images/bullet.png) left 0.5em no-repeat;
+				padding-left: 20px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			
+		#JobDescription #Ad .jobadcontent, 		/* These DIVs are rendered out specifically for this stylesheet */
+		#JobDescription #Ad .localapplicationsonly,
+		#JobDescription #Ad .contactdetails {
+			border-left: 1px solid #DAE2EB;
+			border-right: 1px solid #DAE2EB;
+			padding-left: 132px;
+			padding-right: 132px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+		* html #JobDescription #Ad .jobadcontent, 			/* Anti-IE6 'unpaint' bug */
+		* html #JobDescription #Ad .localapplicationsonly,	/* Yes, all attributes are needed >:( */
+		* html #JobDescription #Ad .contactdetails {		
+			position: relative;
+			zoom: 1;
+			margin-left: 1px;				/* IE6 likes to paint the borders OUTSIDE the parent div... */
+			margin-right: 1px;				/* Because it is a stupid head */
+		}
+		
+		#JobDescription #Ad .jobadcontent {
+			border-top: 1px solid #ECEBEA;
+			padding-top: 15px;
+		}
+		#JobDescription #Ad .contactdetails {
+			padding-bottom: 15px;
+		}
+	#JobDescription #Ad .logofooter {}

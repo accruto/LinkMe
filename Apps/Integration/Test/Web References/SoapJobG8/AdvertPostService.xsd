@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jobg8.com/postadvertheaders" elementFormDefault="qualified" targetNamespace="http://jobg8.com/postadvertheaders" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UserCredentials" type="tns:Credentials" />
+  <xs:complexType name="Credentials">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

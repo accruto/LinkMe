@@ -1,0 +1,236 @@
+; Preliminary fixes
+
+rename_filename_type.sql
+data_user_profile_set_deactivated_userIds.sql
+data_user_profile_fix_duplicate_userIds.sql
+data_locality_fixes.sql
+data_blogs_delete_orphan_blogs.sql
+
+; Drop old full-text catalogs, re-create them later
+
+drop_old_fulltextcatalogs.sql
+
+; User-defined types
+
+create_many_types.sql
+
+; Modify some existing tables
+
+alter_AtsIntegrator.sql
+alter_IntegratorUser.sql
+alter_ServicePartner.sql
+alter_Industry.sql
+alter_IndustryAlias.sql
+alter_DonationRecipient.sql
+alter_DonationRequest.sql
+alter_Person.sql
+alter_ContactDetails.sql
+alter_Publisher.sql
+alter_NonMemberSettings.sql
+alter_JobSearchCriteria.sql
+alter_JobSearchCriteriaSet.sql
+alter_JobSearchResult.sql
+alter_JobSearchResultSet.sql
+alter_SavedJobSearch.sql
+alter_SavedJobSearchAlert.sql
+alter_ResumeSearchCriteria.sql
+alter_ResumeSearchCriteriaSet.sql
+alter_ResumeSearchResultSet.sql
+alter_SavedResumeSearchAlert.sql
+alter_PurchaseItem.sql
+alter_ProductDefinition.sql
+alter_ProductPackageAssociation.sql
+alter_ProductGrantReason.sql
+alter_Payment.sql
+alter_ManualPayment.sql
+alter_InvoicePayment.sql
+alter_CreditCardPayment.sql
+alter_CreditCardType.sql
+alter_equivalent_terms.sql
+alter_tbl_Tag.sql
+alter_tbl_Association.sql
+alter_tbl_Count.sql
+alter_tbl_Post.sql
+
+; Legacy tables that are not being dropped - we should refactor or remove these at some point,
+; but for now just change the owner to dbo.
+
+alter_content.sql
+alter_linkme_viewstate.sql
+
+; Files
+
+data_FileData_fix_extension.sql
+create_FileData.sql
+create_FileReference.sql
+migrate_File.sql
+
+; Locality
+
+create_Country.sql
+data_Country.sql
+create_GeographicalArea.sql
+create_Locality.sql
+create_CountrySubdivision.sql
+data_CountrySubdivision_other.sql
+data_CountrySubdivision_Australia.sql
+create_CountrySubdivisionAlias.sql
+data_CountrySubdivisionAlias_Australia.sql
+create_LocalityCountrySubdivision.sql
+create_PostalCode.sql
+create_PostalSuburb.sql
+create_Region.sql
+create_LocalityRegion.sql
+migrate_Locality.sql
+; Now that we have Locality rows update the state circles for Australia
+data_CountrySubdivision_Australia_circles.sql
+
+; User, Company
+
+create_RegisteredUser.sql
+migrate_RegisteredUser.sql
+create_JoinReferral.sql
+migrate_JoinReferral.sql
+create_EmailVerification.sql
+migrate_EmailVerification.sql
+create_Administrator.sql
+migrate_Administrator.sql
+alter_Company.sql
+migrate_Company.sql
+
+; Employer
+
+create_CandidateSearcher.sql
+migrate_CandidateSearcher.sql
+create_JobPoster.sql
+migrate_JobPoster.sql
+create_Employer.sql
+migrate_Employer.sql
+create_EmployerIndustry.sql
+migrate_EmployerIndustry.sql
+
+; Member
+
+create_Address.sql
+create_Candidate.sql
+migrate_Candidate.sql
+create_CandidateIndustry.sql
+migrate_CandidateIndustry.sql
+create_CandidateAssessment.sql
+migrate_CandidateAssessment.sql
+create_JobHunter.sql
+migrate_JobHunter.sql
+create_Networker.sql
+create_NetworkerEmailAddress.sql
+migrate_Networker.sql
+migrate_ReferralSource.sql
+migrate_CandidateResumeFile.sql
+create_Resume.sql
+migrate_Resume.sql
+migrate_ResumeSearchResult.sql
+create_Member.sql
+migrate_Member.sql
+alter_ReferralSource_drop_old_id.sql
+create_CandidateAccessPurchase.sql
+migrate_CandidateAccessPurchase.sql
+
+; Networking
+
+create_NetworkLink.sql
+migrate_NetworkLink.sql
+create_NetworkerReference.sql
+migrate_NetworkerReference.sql
+create_UserToUserRequest.sql
+create_NetworkInvitation.sql
+migrate_NetworkInvitation.sql
+create_ReferenceRequest.sql
+create_WhiteboardMessage.sql
+
+; Messaging
+
+create_MessageThread.sql
+create_MessageThreadParticipant.sql
+create_UserMessage.sql
+create_UserMessageAttachment.sql
+
+; Job ad and application
+
+alter_JobAdIndustry.sql
+alter_JobAdPublisher.sql
+migrate_JobAd.sql
+create_JobAdArea.sql
+migrate_JobAdArea.sql
+migrate_CandidateList.sql
+migrate_CandidateListEntry.sql
+migrate_JobApplication.sql
+
+; Event log
+
+create_UserEvent.sql
+create_UserEventActionedJobAd.sql
+create_UserEventActionedResume.sql
+create_UserEventActionedUser.sql
+create_UserEventExtraData.sql
+create_NetworkerEvent.sql
+create_NetworkerEventDelta.sql
+
+; Miscellaneous
+
+create_WhatImDoingHistory.sql
+create_CachedMemberData.sql
+migrate_CandidateNote.sql
+migrate_JobSearch.sql
+migrate_SavedJobSearch.sql
+migrate_ResumeSearch.sql
+migrate_SavedResumeSearch.sql
+migrate_Product.sql
+migrate_ProductGrant.sql
+migrate_Purchase.sql
+migrate_tbl_Blog.sql
+migrate_tbl_Comment.sql
+migrate_UserEvent.sql
+migrate_CachedMemberData.sql
+data_RegisteredUser_collapse_spaces.sql
+data_ProductDefinitions.sql
+
+; Stored procedures and functions
+
+alter_GetLinkMeViewState.sql
+alter_SaveLinkMeViewState.sql
+create_GetLocalitiesWithinRadius.sql
+drop_GetPostcodesWithinRadius.sql
+create_CreateAdminUser.sql
+drop_old_procs.sql
+
+; Create new full-text catalogs
+
+create_fulltextindex_Company.sql
+create_fulltextindex_JobAd.sql
+
+; Triggers
+
+create_OnAddressUpdate.sql
+create_OnCachedMemberDataUpdate.sql
+create_OnCandidateIndustryInsertDelete.sql
+create_OnCandidateUpdate.sql
+create_OnMemberUpdate.sql
+create_OnNetworkerUpdate.sql
+create_OnNetworkLinkInsert.sql
+create_OnPostInsert.sql
+create_OnRegisteredUserUpdate.sql
+create_OnResumeInsertUpdate.sql
+create_OnWhiteboardMessageInsert.sql
+
+; Fix PostalSuburb display name case
+
+create_ToPascalCase.sql
+data_PostalSuburb_fix_name_case.sql
+drop_ToPascalCase.sql
+
+; Drop all the old tables and types. (Comment out while testing.)
+
+drop_syncobj_views.sql
+drop_old_tables.sql
+drop_old_filename_type.sql
+
+; Manually run post_migrate_create_File_indexes.sql after running FixDuplicateFileDataTask

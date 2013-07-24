@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{067E9617-8502-4A5C-8612-3346D67667DA}"
+	ProjectSection(SolutionItems) = preProject
+		Setup\Setup.proj = Setup\Setup.proj
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Outlook", "Outlook.vcproj", "{20CAE5CA-7EEF-442A-8342-2273D1F5F262}"
+EndProject
+Project("{A49CE20D-CE64-4A08-9F24-92A6443D6699}") = "Setup", "Setup\Setup.wixproj", "{55BA402A-E0ED-4112-A9DA-D0CF73B862E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{20CAE5CA-7EEF-442A-8342-2273D1F5F262} = {20CAE5CA-7EEF-442A-8342-2273D1F5F262}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CAE5CA-7EEF-442A-8342-2273D1F5F262}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20CAE5CA-7EEF-442A-8342-2273D1F5F262}.Debug|Win32.Build.0 = Debug|Win32
+		{20CAE5CA-7EEF-442A-8342-2273D1F5F262}.Release|Win32.ActiveCfg = Release|Win32
+		{20CAE5CA-7EEF-442A-8342-2273D1F5F262}.Release|Win32.Build.0 = Release|Win32
+		{55BA402A-E0ED-4112-A9DA-D0CF73B862E2}.Debug|Win32.ActiveCfg = Debug
+		{55BA402A-E0ED-4112-A9DA-D0CF73B862E2}.Debug|Win32.Build.0 = Debug
+		{55BA402A-E0ED-4112-A9DA-D0CF73B862E2}.Release|Win32.ActiveCfg = Release
+		{55BA402A-E0ED-4112-A9DA-D0CF73B862E2}.Release|Win32.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

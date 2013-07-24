@@ -1,0 +1,8 @@
+data_Integrator_JobG8.sql
+data_Integrator_MyCareer.sql
+alter_JobSearch_add_columns.sql
+alter_JobAdNote_add_columns.sql
+create_AnonymousUser.sql
+create_AnonymousContact.sql
+alter_SavedResumeSearch_dropAlertId.sql
+data_SavedResumeSearchAlert_Cleanup.sql

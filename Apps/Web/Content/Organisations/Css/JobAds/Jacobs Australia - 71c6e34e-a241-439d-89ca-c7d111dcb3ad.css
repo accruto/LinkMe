@@ -1,0 +1,94 @@
+#JobAd {}
+
+	#JobAd #JobDescription {
+		background: #fff url(jacobs_images/jacobs_bg.jpg) repeat-y right top;
+	/*	background: #fff url(dept_tas_treasury_images/bg.gif) repeat-y left top; */
+		margin-bottom: 1em; /* separates ad contents from Apply btn and links */
+		width: 670px;
+	}
+	
+		#JobAd #JobDescription #Ad {}
+			/* Covers all content of ad, including prescribed fields as well as
+			the free-form user input in the middle section, unless overridden */
+			#JobAd #JobDescription #Ad div,
+			#JobAd #JobDescription #Ad p {
+				color: #000;
+				font-family: Arial, Helvetica, sans-serif;
+				margin-left: 0px;
+				width: 270px;
+			}
+			/* override margins of above decl. for nested containers */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				margin-left: 0; 
+				margin-right: 0;
+			}	
+			#JobAd #JobDescription #Ad div#JobAdHeading {
+				width: auto;	/* Overrides the DIV catch-all above */
+			}
+			
+			#JobAd #JobDescription #Ad div#AdContactDetails {}
+			
+			/* Used as subheading in main body of the advert - will also apply
+			   to subheading in the #JobAdHeading unless overridden below */
+			#JobAd #JobDescription #Ad p strong {}
+			
+			/* Usual placeholder for header graphic */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				display: none;
+			}
+					
+			/* Contains content that comes from prescribed fields */
+			#JobAd #JobDescription #Ad div#JobAdHeading {}
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading h1 {
+					background: transparent url(jacobs_images/jacobs_top_left.gif) no-repeat left top;
+					margin-right: -40px;
+					color: #000;
+					font-size: 120%;
+					line-height: 1.3em;
+					margin-top: 0px;
+					padding-top: 140px;
+					text-align: left;
+					/* text-transform: lowercase; */
+				}		
+					
+				/* This element is unfortunately used as a subheading  */
+				#JobAd #JobDescription #Ad div#JobAdHeading p strong {
+					display: block;
+					font-size: 100%;
+					margin-bottom: 20px;
+					margin-top: 20px;
+					text-align: left;
+				}
+	
+				#JobAd #JobDescription #Ad div#JobAdHeading table {
+					width: 280px !important;
+				}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td {
+						font-family: Arial, Helvetica, sans-serif;
+						padding-left: 0;
+						vertical-align: top;
+					}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td label {
+						color: #000;
+						font-family: Arial, Helvetica, sans-serif;
+						margin-left: 0; /* overrides setting from forms.css */
+					}
+				#JobAd #JobDescription #Ad div#JobAdHeading ul {}
+					#JobAd #JobDescription #Ad div#JobAdHeading ul li {}
+			
+			/* Last div for textual content inside div#Ad */
+			#JobAd #JobDescription #Ad div#AdContactDetails {}
+				
+		/* Usual placeholder for footer graphic -- N.B. is outside div#Ad */
+		#JobAd #JobDescription #LogoFooter {
+			background: transparent url(jacobs_images/jacobs_footer.png) no-repeat left center;
+			height: 108px;
+		}
+		
+		* html #JobAd #JobDescription #LogoFooter {		/* IE 6 hack for transparency */
+			background: none;
+			filter: expression("progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='" + LinkMeUI.ApplicationPath + "/ui/styles/recruiters/jacobs_images/jacobs_footer.png')");
+		}
+	
+	

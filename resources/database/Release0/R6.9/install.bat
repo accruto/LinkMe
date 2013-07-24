@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:create_email_tables.sql,create_search_log.sql,create_search_log_criteria.sql,create_search_log_result.sql,update_GetABNTransactionSummaryByDateRange_proc.sql,update_GetAccountTransactionSummaryByDateRange_proc.sql,bug758_update_alertType.sql,update_IdealJobSalary.sql

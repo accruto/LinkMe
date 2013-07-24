@@ -1,0 +1,16 @@
+alter_ResumeView.sql
+create_UQ_ResumeFilter.sql
+alter_Campaigns.sql
+
+create_GroupFile.sql
+create_GroupAffiliation.sql
+drop_Contributor.sql
+
+create_CandidateWorkflow.sql
+
+data_Community_SAE.sql
+data_Content_SAE.sql
+data_Community_Ping.sql
+data_Content_Ping.sql
+
+data_EquivalentTerms.sql

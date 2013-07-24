@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+
+    <!-- Nodes -->
+
+	  <siteMapNode url="~/ui/registered/networkers/JustJoinedApplication.aspx" />
+
+    <siteMapNode url="~/ui/registered/networkers/Diary.aspx" title="Diary | Profile | Members" sidebar="members-aboutme" />
+    <siteMapNode url="~/ui/registered/networkers/MemberSettings.aspx" title="Settings | Profile | Members" sidebar="members-feedback" />
+    <siteMapNode url="~/ui/registered/networkers/VisibilitySettingsBasic.aspx" title="My visibility | Profile | Members" sidebar="members-feedback" />
+
+    <siteMapNode sidebar="members-feedback">
+      <siteMapNode url="~/ui/registered/networkers/PreviousApplications.aspx" title="Applications | Jobs | Members" />
+      <siteMapNode url="~/ui/registered/networkers/CreateJobSearchEmailAlert.aspx" title="Email alerts | Jobs | Members" />
+      <siteMapNode url="~/ui/registered/networkers/SuggestedJobs.aspx" title="Suggested jobs | Jobs | Members" />
+    </siteMapNode>
+
+    <siteMapNode>
+      <siteMapNode url="~/ui/registered/networkers/ApplyForJob.aspx" title="Job Application" />
+      <siteMapNode url="~/ui/registered/networkers/ExternalJobApplication.aspx" title="Jobs: Complete Application" />
+			<siteMapNode url="~/ui/registered/networkers/JobG8Application.aspx" title="Jobs: Complete Application" />
+			<siteMapNode url="~/ui/registered/networkers/ResumePreview.aspx" title="Resume Preview" sidebar="empty" />
+      <siteMapNode url="~/ui/registered/networkers/DiaryPreview.aspx" title="Diary Preview" sidebar="empty" />
+    </siteMapNode>
+
+    <siteMapNode url="~/ui/registered/networkers/DeactivateAccount.aspx" title="Deactivate my account">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/RemoveAccount.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/ui/registered/networkers/EnterTextResumeForm.aspx" />
+    <siteMapNode url="~/ui/registered/networkers/VisibilitySettingsAdvanced.aspx" title="My Visibility - Advanced | Profile | Members" />
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,21 @@
+#jobResults .pagination
+{
+	border:none;
+	background: none;
+	text-align: center;
+}
+
+#jobResults ol li a 
+{
+	font-size: 125%;	
+}
+
+#jobResults .location 
+{
+	color: #777;
+}
+#jobResults .location a
+{
+ font-size: 100%;
+}
+

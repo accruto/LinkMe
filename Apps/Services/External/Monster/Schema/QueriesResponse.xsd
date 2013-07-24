@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://schemas.monster.com/Monster" xmlns="http://schemas.monster.com/Monster" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:include schemaLocation="Common.xsd"/>
+  <xsd:include schemaLocation="Job.xsd"/>
+  <xsd:element name="QueriesResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+        <xsd:element ref="Jobs"/>
+      </xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

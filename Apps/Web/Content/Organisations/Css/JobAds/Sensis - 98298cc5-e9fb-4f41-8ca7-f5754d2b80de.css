@@ -1,0 +1,38 @@
+#JobAd #JobDescription {
+	background: #fff url(Sensis_images/sensis_right.GIF) right repeat-y;
+}
+
+#JobAd #JobDescription #Ad
+{
+	background: transparent url(Sensis_images/sensis_bg.gif) top right no-repeat;
+}
+
+* html #JobAd #JobDescription #Ad
+{
+	background: transparent url(Sensis_images/sensis_bg.gif) top no-repeat;
+}
+
+#JobAd #JobDescription h1
+{
+	text-align: center;
+	color: #0556C4;
+	margin-top: 50px;
+}
+
+#JobAd #JobDescription #ContactDetails
+{
+	text-align: center;
+}
+
+#JobAd #JobDescription #Ad h2, #JobAd #JobDescription #Ad hr
+{
+	width: 475px;
+}
+
+#JobAd #JobDescription #Ad hr
+{
+	margin-left: inherit;
+	margin-right: auto;
+	border: none;
+	border-top: solid 1px #ccc;
+}

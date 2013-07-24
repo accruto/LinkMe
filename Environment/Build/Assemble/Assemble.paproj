@@ -1,0 +1,30 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{A2BA7B76-F7C1-4bc7-8832-0FABB5842BA2}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Environment.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{03C76D10-1B0B-4c86-8234-71BBFA909209}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\LinkMe.Environment.dll">
+      <Guid>{0372b1e0-9d37-4a08-832c-364b441a6e16}</Guid>
+      <Link>Bin\LinkMe.Environment.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{E03A2C38-75FF-455d-822F-404C13179043}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Util\LinkMe.Environment.Util.exe">
+      <Guid>{dfb8dd05-0dcb-4aed-8ae5-9a7a3c3e48d7}</Guid>
+      <Link>Bin\LinkMe.Environment.Util.exe</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

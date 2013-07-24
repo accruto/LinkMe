@@ -1,0 +1,129 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{d0265474-39d1-44af-9d33-8d8d4bfab707}</ProjectGuid>
+    <Name>Data</Name>
+  </PropertyGroup>
+  <ItemGroup>
+    <Merge Include="Functions\LinkMe.Framework.Instrumentation.Data.Store.Functions.txt">
+      <Link>Functions\LinkMe.Framework.Instrumentation.Data.Store.Functions.txt</Link>
+    </Merge>
+    <Merge Include="Security\LinkMe.Framework.Instrumentation.Data.Store.Security.txt">
+      <Link>Security\LinkMe.Framework.Instrumentation.Data.Store.Security.txt</Link>
+    </Merge>
+    <Merge Include="StoredProcedures\LinkMe.Framework.Instrumentation.Data.Store.StoredProcedures.txt">
+      <Link>StoredProcedures\LinkMe.Framework.Instrumentation.Data.Store.StoredProcedures.txt</Link>
+    </Merge>
+    <Merge Include="Tables\LinkMe.Framework.Instrumentation.Data.Store.Tables.txt">
+      <Link>Tables\LinkMe.Framework.Instrumentation.Data.Store.Tables.txt</Link>
+    </Merge>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiStoreMessage.sql">
+      <Link>Tables\FiStoreMessage.sql</Link>
+    </None>
+    <None Include="Tables\FiStoreParameter.sql">
+      <Link>Tables\FiStoreParameter.sql</Link>
+    </None>
+    <None Include="Tables\FiStoreSource.sql">
+      <Link>Tables\FiStoreSource.sql</Link>
+    </None>
+    <None Include="Tables\FiStoreType.sql">
+      <Link>Tables\FiStoreType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Functions\AggregateDays.sql">
+      <Link>Functions\AggregateDays.sql</Link>
+    </None>
+    <None Include="Functions\AggregateDaysNonLeapYear.sql">
+      <Link>Functions\AggregateDaysNonLeapYear.sql</Link>
+    </None>
+    <None Include="Functions\AggregateDaysLeapYear.sql">
+      <Link>Functions\AggregateDaysLeapYear.sql</Link>
+    </None>
+    <None Include="Functions\TimeToTicks.sql">
+      <Link>Functions\TimeToTicks.sql</Link>
+    </None>
+    <None Include="Functions\DateToTicks.sql">
+      <Link>Functions\DateToTicks.sql</Link>
+    </None>
+    <None Include="Functions\DateTimeToTicks.sql">
+      <Link>Functions\DateTimeToTicks.sql</Link>
+    </None>
+    <None Include="Functions\TicksToDateTime.sql">
+      <Link>Functions\TicksToDateTime.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreGetAllMessages.sql">
+      <Link>StoredProcedures\FiStoreGetAllMessages.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreGetMessageCount.sql">
+      <Link>StoredProcedures\FiStoreGetMessageCount.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreGetMessageRange.sql">
+      <Link>StoredProcedures\FiStoreGetMessageRange.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreGetParameters.sql">
+      <Link>StoredProcedures\FiStoreGetParameters.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreInsertMessage.sql">
+      <Link>StoredProcedures\FiStoreInsertMessage.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreInsertParameter.sql">
+      <Link>StoredProcedures\FiStoreInsertParameter.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FiStoreDeleteOldMessages.sql">
+      <Link>StoredProcedures\FiStoreDeleteOldMessages.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FiStoreWriter.sql">
+      <Link>Security\FiStoreWriter.sql</Link>
+    </None>
+    <None Include="Security\FiStoreReader.sql">
+      <Link>Security\FiStoreReader.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\" />
+    <Folder Include="Security\" />
+    <Folder Include="StoredProcedures\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetDetails.sql">
+      <Link>StoredProcedures\FiStoreGetDetails.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetMessageIdentifierRange.sql">
+      <Link>StoredProcedures\FiStoreGetMessageIdentifierRange.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetMessageIdentifierRangeFilter.sql">
+      <Link>StoredProcedures\FiStoreGetMessageIdentifierRangeFilter.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetMessage.sql">
+      <Link>StoredProcedures\FiStoreGetMessage.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetMessageTimeRange.sql">
+      <Link>StoredProcedures\FiStoreGetMessageTimeRange.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiStoreGetMessageTimeRangeFilter.sql">
+      <Link>StoredProcedures\FiStoreGetMessageTimeRangeFilter.sql</Link>
+    </None>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Data.targets" />
+</Project>

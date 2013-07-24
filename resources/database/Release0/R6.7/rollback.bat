@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_postcode_fields_networker_profile.sql,rollback_update_networker_profile_age.sql,rollback_update_networker_profile_sex.sql,rollback_employer_profile_industry_type_field.sql,rollback_postcode_fields_user_profile.sql,rollback_email_verified_user_profile.sql,rollback_table_email_verification.sql

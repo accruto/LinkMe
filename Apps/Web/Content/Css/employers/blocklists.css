@@ -1,0 +1,21 @@
+﻿.blocklist-header div h1 {
+    background: url("../../images/employers/section-heading-icons/blocklists.png") no-repeat scroll 5px 5px transparent;
+    padding-left: 36px;
+}
+
+.blocklist-header div h1 .action-list a {
+    font-size: 68%;
+}
+
+.blocklist-header .blocklist-header-title {
+    font-weight: bold;
+    float:left;
+}
+
+.blocklist-header .blocklist-header-title-separator {
+    font-weight: normal;
+    color: #000033;
+    float:left;
+}
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd2" filename="AdvertPostService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd1" filename="AdvertPostService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?wsdl" filename="AdvertPostService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?disco" filename="AdvertPostService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd0" filename="AdvertPostService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?wsdl=wsdl0" filename="AdvertPostService0.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

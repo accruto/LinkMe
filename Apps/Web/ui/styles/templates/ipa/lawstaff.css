@@ -1,0 +1,7 @@
+@import url('ipa.css');
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: #FFFFFF url('../../../images/jobad-templates/ipa/Lawstaff.jpg') no-repeat left top;
+	height: 100px;
+}

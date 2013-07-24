@@ -1,0 +1,812 @@
+/* This sheet defines the global layout properties applied to every single page */
+
+.wbr:before {           /* span class=wbr for IE8 and other really really standards-compliant browsers :) */
+    content: "\200B";
+}
+
+/*  ---------------------------------
+    Self-clearing / float containment
+    ---------------------------------
+
+    The .self-clearing class is NOT recommended for use in your HTML.
+
+    Instead, add this styling information to the CSS definition for any
+    block you would like to self-clear (contain floats), to keep your HTML
+    clean (higher priority than keeping CSS clean).
+
+    However, feel free to test this class on elements in Firebug, to see
+    if adding self-clearing would fix your particular layout issues.
+
+*/
+
+.self-clearing:after {	/* Modern-browser solution */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.self-clearing {		/* IE6,7 solution */
+	zoom: 1;			/* Invalid CSS, hasLayout trigger */
+}
+
+/* ------- PAGE LAYOUT  ------- */
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    min-height:100%;
+}
+
+body {
+	text-align:center;
+}
+
+#container {
+	background: url(../images/universal/bg_default.png) top left repeat-x;
+	position: relative; 	/* AP anchor -- added */
+	margin: 0;
+	padding:0;
+	min-height:100%;
+}
+#container.IE7 {
+	overflow-x : hidden;
+}
+
+#body-container {
+	width:950px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:0px;
+	background:url(../images/universal/two-column-bg.png) repeat-y;
+	text-align:left;
+	margin-top: 25px;
+	position: relative;	/* AP anchor -- added */
+	*position: inherit;
+	padding-bottom:170px;   /* Height of the footer */
+	*z-index: 50;
+}
+
+/*#body-container:after {*/	/* Self-clearing for modern browsers  --  added */
+    /*content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}*/
+
+/*#body-container {*/	/* Self-clearing for IE6,7  --  added */
+	/*zoom: 1;
+}*/
+
+#print-body-container {
+	width:950px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	padding-left:0px;
+	text-align:left;
+}
+
+#main-body {
+	float:left;
+	width:694px;
+}
+
+/*
+This is used in place of main-body on all guest pages.
+In IE there was a problem where the overall layout of the screen was messed up
+if just main-body was used.
+*/
+
+#main-body-guest{
+	float:left;
+}
+
+
+            #footer {
+	            margin: 0 auto;
+	            /*padding-top:8px;*/
+	            text-align:center;
+	            color: #214263;
+	            position:absolute;
+                width:100%;
+                height:162px;   /* Height of the footer */
+                bottom: 0;
+                left: 0;
+            }
+            
+            /*	----------
+                SEO Footer
+                ----------
+            */
+            #seo-footer {
+                padding-bottom: 5px;
+            }
+                #seo-footer ul {
+                    margin: 0; padding: 0;
+                }
+                
+                    #seo-footer li {
+                        display:inline;
+                        padding-left:3px;
+                        padding-right:3px;
+                        font-size: 60%;
+                    }
+                    
+/* Footer Styles */
+#footer-container {
+    background: #214263 url(../images/homepage/footer/bg.png) repeat;
+    width: 100%;
+    height: 162px;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 85%;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#footer-container a {
+    color: #FFFFFF;
+}
+
+#footer-container .footer-holder {
+    width: 934px;
+    min-width: 934px;
+    max-width: 934px;
+    margin: 0 auto;
+}
+
+#footer-container .footer-holder .footer-links-holder {
+    padding: 10px 5px 90px 5px;
+}
+
+#footer-container .footer-holder .footer-links-holder a {
+    text-decoration: none;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+#footer-container .footer-holder .left-section {
+    width: 40%;
+    float: left;
+    text-align: left;
+}
+
+#footer-container .footer-holder .right-section {
+    width: 57%;
+    float: right;
+    text-align: right;
+    padding: 20px 15px 0 0;
+}
+
+#footer-container .logo {
+    background: url(../images/homepage/footer/logo_linkme_tagline.png) no-repeat;
+    width: 160px;
+    max-width: 160px;
+    min-width: 160px;
+    height: 75px;
+    min-height: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    *display: inline;
+    float: left;
+    border: none;
+    cursor: pointer;
+}
+
+#footer-container .copyright {
+    padding: 25px 0 0 0;
+}
+
+#footer-container .main-links {
+    *min-width: 288px;
+    *max-width: 485px;
+}
+
+#footer-container .main-links div, #footer-container .sub-links div, #footer-container .seo-links div {
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    vertical-align: middle;
+}
+
+#footer-container .main-links .footer-link, #footer-container .sub-links .footer-link, #footer-container .seo-links .footer-link {
+    padding: 0 3px 0 0;
+}
+
+#footer-container .separator {
+    width: 3px;
+    height: 23px;
+    background: url(../images/homepage/footer/vertical-divider.png) no-repeat scroll left top transparent;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+}
+
+#footer-container .bullet {
+    width: 10px;
+    height: 11px;
+    background: url(../images/homepage/footer/bullet.png) no-repeat scroll left center transparent;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    margin: auto 5px auto 8px;
+}
+
+#footer-container .member-bullet {
+    background: url(../images/homepage/footer/member-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .employer-bullet {
+    background: url(../images/homepage/footer/employer-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .sub-links .bullet {
+    background: url(../images/homepage/footer/sub-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .footer-holder .member-link a {
+    color: #85b218;
+}
+
+#footer-container .footer-holder .employer-link a {
+    color: #fe8a00;
+}
+
+#footer-container .footer-holder .main-links {
+    /*float: right\9;*/
+}
+.main-links.IE7 {
+	margin-right : -260px;
+}
+.main-links.not-login.IE7 {
+	margin-right : -50px;
+}
+
+#footer-container .footer-holder .sub-links {
+    padding: 5px 0 0 0;
+    *padding: 5px 0 0 260px;
+    float: right\9;
+}
+
+#footer-container .footer-holder .sub-links a {
+    color: #959595;
+}
+
+#footer-container .footer-holder .main-links a:hover, #footer-container .footer-holder .sub-links a:hover, #footer-container .seo-links .footer-link a:hover {
+    text-decoration: underline;
+}
+
+#footer-container .divider {
+    width: 927px;
+    height: 3px;
+    background: url(../images/homepage/footer/horizontal-divider.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+}
+
+#footer-container .seo-links {
+    padding: 10px 0 0 0;
+    font-size: 90%;
+}
+
+#footer-container .seo-links .footer-link {
+    padding: 0 0 0 15px;
+}
+
+#footer-container .seo-links .footer-link a {
+    color: #FFFFFF;
+	text-decoration : none;
+}
+body.IE7 #footer-container .seo-links {
+	width : 550px;
+}
+body.IE7 #footer-container .seo-links.candidates {
+	width : 250px;
+}
+.clearer{
+	clear:both;
+}
+br.clearer {
+	font-size: 0;	/* Stop creating a space out of a clearer line-break. */
+}
+
+
+#login-box
+{
+	padding-left:6px;
+	padding-right:3px;
+	margin-bottom: 10px;
+}
+
+#body-login #login-box
+{
+	width:295px;
+	background:none;
+}
+
+#body-login .login-input
+{
+	margin-top:-16px;
+}
+
+.login-links
+{
+	display:inline;
+	float:left;
+	padding-left:4px;
+	margin-top:8px
+}
+
+#body-login .login-links
+{
+	margin-left:85px;
+	margin-top:9px;
+}
+
+#job-search{
+	margin-bottom:20px;
+}
+
+#login-button-holder
+{
+	display:inline;
+	float:right;
+	margin-top:9px;
+}
+
+/* ------- SIDEBAR  ------- */
+
+#sidebar {
+	width:239px;
+	float:right;
+	overflow: hidden;   /* Stop IE6 expanding the width when sidebar elements are too wide */
+}
+
+/* ------- 2 COLUMN COLUMN WIDTHS ------- */
+
+.left-half{
+	float:left;
+	width:47%;
+}
+
+.right-half{
+	float:right;
+	width:47%;
+}
+
+/* ------- Validation Summary ------- */
+
+#error-message
+{
+	background:#F5AC5F;
+	border: solid 1px #FF0000;
+	color:Black;
+	width:70%;
+	text-align:left;
+	margin:auto;
+	margin-bottom:15px;
+}
+
+#error-message ul
+{
+	margin:0;
+}
+
+#error-message ul li
+{
+	list-style: none;
+	margin:8px;
+}
+
+#error-message ul li {
+    /* Gets rid of empty list items in IE6,7 */
+    *display: expression(this.innerHTML.replace(/^\s+|\s+$/g,"") == "" ? "none" : "block");
+}
+
+/* For a <ul> INSIDE an error message we do want to show bullets. */
+#error-message-list li
+{
+	list-style: disc;
+}
+
+.info-message,
+#info-message
+{
+    background: #ffc;					
+	color:Black;
+	width:70%;
+	text-align:center;
+    padding: 10px;							
+	margin:auto;
+	margin-bottom: 15px;
+    border: 1px solid #A4B97F;
+}
+
+.info-message small,
+#info-message small
+{
+    font-size: 85%;
+    font-weight: normal;
+}
+
+.info-message ul,
+#info-message ul
+{
+	margin:0;padding:0;
+}
+
+.info-message li,
+#info-message li
+{
+	font-weight:bold;
+	list-style:none;
+	margin:0;padding:0;
+	padding-top: 8px;
+}
+
+.info-message ul,
+#info-message ul {				/* IE6 hack - adds ie_firstchild classes           */
+	*display: inline-block;		/* IE (6,7) hack - container-clearing. */
+}
+
+.info-message li:first-child,
+.info-message li.ie_firstli,
+#info-message li:first-child,
+#info-message li.ie_firstli {
+	padding-top: 0;
+}
+
+
+#confirm-message
+{
+	background:#F5AC5F;
+	color:Black;
+	width:70%;
+	text-align:center;
+	margin:auto;
+}
+.IE7 #confirm-message {
+	margin-bottom : 12px;
+}
+#confirm-message ul
+{
+	margin-left:0px;
+}
+
+#confirm-message li
+{
+	font-weight:bold;
+	list-style:none;
+	padding:5px;
+}
+
+/* ------- Paging ------- */
+
+.pagination {
+	border: 1px solid #E1E1E1;
+	border-right: 0px;
+	background-color: #F5F5F5;
+	text-align: center;
+	position: relative;
+	z-index: 2; /* Ensure that pagination is on top of any search result with -1px bottom-margin */
+}
+    .pagination a[disabled="disabled"],
+    .pagination a:hover[disabled="disabled"] {   /* For non-IE browsers */
+        color: #888;
+        cursor: default;
+        text-decoration: none;
+    }
+    
+    .pagination a {
+        padding: 5px;
+        padding-top: 3px;
+        margin-left: -2px;
+        margin-right: -2px;
+        display: -moz-inline-box;   /* Firefox 2 */
+        display: inline-block;      /* Other browsers */
+    }
+
+/* ------- Overlay Popups ------- */
+#overlay-background
+{
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5; 	
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+#overlay-popup-container
+{
+	position: absolute;
+	left: 300px;
+	top: 250px;
+	width: 566px;
+	border: solid 3px #fff;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	z-index: 101;
+
+}
+
+#overlay-popup-content
+{
+	background: #fff;
+	border: solid 3px #244F7A;
+	padding: 15px;
+	height: 100%;
+	width: 530px;
+}
+
+* html #overlay-popup-content
+{
+	width: 100%;
+}
+
+
+
+/* ------- Debugging ------- */
+.debug-note
+{
+	background-color: #ffffcc;
+}
+
+
+
+/* ------- Control: TooltipIcon ------- */
+
+.helpicon {
+	margin-left: 8px;
+	cursor: pointer;
+	display: inline-block;		/* Modern browser inline block */
+	*display: inline; *zoom: 1;	/* IE6,7 inline block */
+	vertical-align: bottom;
+}
+
+legend .helpicon {
+    position: relative;
+    top: -2px;
+}
+
+p .helpicon {
+    position: relative;
+    top: 0;
+}
+
+.section-title .helpicon,
+.page-title .helpicon {
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+.file_control .helpicon {
+    vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+.textbox_control .helpicon {
+    vertical-align: middle;
+	position: relative;
+	top: -2px;
+}
+
+/* Firefox 2 hackery - layout like an image */
+html>/**/body .helpicon, x:-moz-any-link             { display: -moz-inline-box; }
+html>/**/body .helpicon, x:-moz-any-link, x:default  { display: inline-block; }
+
+.information_helpicon {
+	background: url(../universal/images/info.gif) top left no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
+.question_helpicon {
+	background: url(../universal/images/help.gif) top left no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.tooltip {
+    background-color: #ffc;					
+    border: 1px solid #94A95F;
+    padding: 10px;
+    font-size: 10pt;
+    text-align: left;
+    max-width: 300px;
+    _width: expression(LinkMeUI.IE6MaxWidth(300, this));     /* IE6 max-width hack */
+    -moz-box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    
+    /* MF: I'll bring this back in when I figure out how to get it applying to tooltips on first show, and get it working in IE8 */
+    /* behavior: expression( "url (" + LinkMeUI.ApplicationPath + "/ui/css/ie-css3.htc)" ); */
+    /* _z-index: 1; */
+}
+
+    .tooltip ul {
+        margin: 0; padding: 0;
+        margin-top: 0.5em;
+        padding-left: 1.25em;
+    }
+
+    .tooltip p {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
+        
+    .tooltip .ie_firstchild,
+    .tooltip > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+.callout-tooltip {}
+
+    .callout-tooltip {
+        width: 329px;
+        margin-right: -15px;
+        margin-bottom: -20px;
+        margin-top: -5px;
+        margin-left: -15px;
+        position: absolute;
+        text-align: left;
+        color: #333;
+    }
+        .callout-tooltip-head {
+            background:                        url(../images/controls/tooltip-icon/bg_shadowed_top.png) top left no-repeat;
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/controls/tooltip-icon/bg_shadowed_top.png"));
+            _background:none; font-size: 0;
+            height: 29px;
+        }
+        .callout-tooltip-body {
+            background:                        url(../images/controls/tooltip-icon/bg_shadowed.png) top left no-repeat;
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/controls/tooltip-icon/bg_shadowed.png"));
+            _background:none;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 30px;
+            padding-right: 30px;
+            zoom: 1;    /* IE6,7 self-clearing solution */
+            font-size: 75%; /* =12/16 (points of default font size) */
+        }
+        
+        .callout-tooltip-body p {
+            margin-top: 1em;
+            margin-bottom: 0;
+            line-height: 1.35em;
+        }
+        
+        .callout-tooltip-body *:first-child, .callout-tooltip-body .ie_firstchild {
+            margin-top: 0 !important;
+        }
+        
+        .callout-tooltip-body:after {   /* Modern-browser self-clearing solution */
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+        }
+            .callout-tooltip-body .textbox,     /* Interactive element re-activation for IE6 */
+            .callout-tooltip-body .checkbox,
+            .callout-tooltip-body .button,
+            .callout-tooltip-body a {
+                position: relative;
+            }
+            
+        .callout-tooltip-foot {
+            background:                        url(../images/controls/tooltip-icon/bg_shadowed_bottom.png) top left no-repeat;
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/controls/tooltip-icon/bg_shadowed_bottom.png"));
+            _background:none; font-size: 0;
+            height: 30px;
+        }
+        .callout-tooltip-tail {
+            background:                        url(../images/controls/tooltip-icon/bg_shadowed_top_callout.png) top left no-repeat;
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/controls/tooltip-icon/bg_shadowed_top_callout.png"));
+            _background:none; font-size: 0;
+            width: 16px;
+            height: 16px;
+            margin-left: 7px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+
+/* -------- Notifications --------- */
+
+.notification {
+	margin: 10px 0px 12px 0px;
+	padding-left: 25px;
+	background: url(../images/universal/info.gif) left center no-repeat;
+	min-height: 16px;
+	_height: 16px;	/* IE6 min-height hack */
+}
+.information {
+	margin: 10px 0px 12px 0px;
+	padding-left: 25px;
+	background: url(../images/universal/info.gif) left 0.15em no-repeat;
+	font-size: 85%;
+	min-height: 16px;
+	_height: 16px;	/* IE6 min-height hack */
+}
+
+ul.stars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.star-information,
+.doublestar-information {
+	margin: 10px 0px 12px 0px;
+	padding-left: 15px;
+	background: url(../images/universal/asterisk.png) left 0.25em no-repeat;
+	font-size: 85%;
+	min-height: 16px;
+	_height: 16px;	/* IE6 min-height hack */
+}
+
+.doublestar-information {
+	background: url(../images/universal/asterisk_x2.png) left 0.25em no-repeat;
+}
+
+.asterisks {
+    font-size: 75%;
+    position: relative;
+    top: -0.3em;
+    font-weight: normal;
+}
+
+.question {
+	margin: 10px 0px 12px 0px;
+	padding-left: 25px;
+	background: url(../images/universal/question.png) left center no-repeat;
+	min-height: 16px;
+	height: 16px;	/* IE6 min-height hack */
+}
+
+
+/* Hacks for missing classes */
+.center
+{
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.search-criterion {}
+    .search-criterion-name {
+        font-weight: bold;
+    }
+    .search-criterion-data {}
+    .search-criterion-note {
+	    color:#777;
+	    font-size:smaller;	
+    }
+    .boolean-operator {}
+        .or_boolean-operator {}
+        .and_boolean-operator {}
+        .not_boolean-operator {}
+
+.search-criterion-separator {}
+
+
+/* Stuff that's in job and member search, but doesn't justify a whole new stylesheet */
+.search-criteria-display {
+    border: 1px solid #EEE;
+    background: #F8F8F8;
+    padding: 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}

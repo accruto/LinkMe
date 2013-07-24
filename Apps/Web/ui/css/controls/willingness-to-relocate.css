@@ -1,0 +1,62 @@
+
+.willingness-to-relocate_ascx {
+	padding-top: 10px;				/* Match field padding-top */
+}
+
+    .willingness-to-relocate_ascx .why_textbox_field {}
+        .willingness-to-relocate_ascx .why_textbox_control {}
+            .willingness-to-relocate_ascx .why_textbox {
+                width: 450px;
+            }
+
+    .willingness-to-relocate_ascx .relocation-area {
+        padding-top: 10px;
+    }
+    
+    .willingness-to-relocate_ascx .listboxpair_field .field {
+        float: left;
+        padding-top: 0;
+    }
+	.willingness-to-relocate_ascx .listboxpair_field .field * {
+		_float: left;	/* IE6 needs handholding re: widths of things */
+	}
+	.willingness-to-relocate_ascx .listboxpair_field .field .control {
+		_clear: left;
+	}
+    .willingness-to-relocate_ascx .listboxpair_field .listbox_field .listbox {
+        height: 330px;
+    }
+    
+    .willingness-to-relocate_ascx .listboxpair_field .listbox_field .listbox,
+    .willingness-to-relocate_ascx .listboxpair_field .listbox_field label {
+        width: 220px;
+    }
+    
+        .willingness-to-relocate_ascx .relocation-area .listboxpair_control .from_listbox_field {}
+            .willingness-to-relocate_ascx .from_listbox_control {}
+                .willingness-to-relocate_ascx .from_listbox {}
+    
+        .willingness-to-relocate_ascx .relocation-area .listboxpair_control .to_listbox_field {}
+            .willingness-to-relocate_ascx .to_listbox_control {}
+                .willingness-to-relocate_ascx .to_listbox {}
+    
+        .willingness-to-relocate_ascx .guillemet_button {
+            float: left;
+            clear: left;
+            width: 22px;
+            height: 22px;
+            position: relative;
+            top: 150px;
+            margin:0 !important; padding:0 !important;
+            margin-left: 4px !important;
+            margin-right: 4px !important;
+            margin-bottom: 4px !important;
+        }
+        
+        .willingness-to-relocate_ascx .left_guillemet_button {
+            background-image: url(../../images/buttons/light/guillemet_left.png);
+        }
+        
+        .willingness-to-relocate_ascx .right_guillemet_button {
+            background-image: url(../../images/buttons/light/guillemet_right.png);
+        }

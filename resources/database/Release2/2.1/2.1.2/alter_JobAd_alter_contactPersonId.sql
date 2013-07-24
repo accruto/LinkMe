@@ -1,0 +1,3 @@
+ALTER TABLE linkme_owner.JobAd
+ALTER COLUMN contactPersonId UNIQUEIDENTIFIER NULL
+GO

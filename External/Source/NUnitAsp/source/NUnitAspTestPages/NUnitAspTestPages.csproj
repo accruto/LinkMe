@@ -1,0 +1,502 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D7986CC-8D3D-433E-94EC-35D753E894DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NUnitAspTestPages</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NUnitAspTestPages</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.9.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AspErrorTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\ButtonTestPage.aspx" />
+    <Content Include="AspTester\CheckBoxTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\DataGridTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\DropDownListTestPage.aspx" />
+    <Content Include="AspTester\ImageButtonTestPage.aspx" />
+    <Content Include="AspTester\LabelTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\LinkButtonTestPage.aspx" />
+    <Content Include="AspTester\ListBoxTestPage.aspx" />
+    <Content Include="AspTester\RadioButtonTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\TextBoxTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="AspTester\UserControlTestPage.aspx" />
+    <Content Include="AspTester\ValidationSummaryTestPage.aspx" />
+    <Content Include="Credentials\CredentialsTest.aspx" />
+    <Content Include="FormVariableTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="HtmlTester\HtmlAnchorTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="HtmlTester\HtmlInputCheckBoxTestPage.aspx" />
+    <Content Include="HtmlTester\htmlinputfiletestpage.aspx" />
+    <Content Include="HttpClientTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="InfiniteRedirector.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="LocalhostDoctype.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="MalformedRedirector.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="MalformedTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformanceTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="RedirectionTarget.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ServerTimeTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="UnicodeTestPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Web.config" />
+    <Compile Include="AspErrorTestPage.aspx.cs">
+      <DependentUpon>AspErrorTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspErrorTestPage.aspx.designer.cs">
+      <DependentUpon>AspErrorTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\ButtonTestPage.aspx.cs">
+      <DependentUpon>ButtonTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\ButtonTestPage.aspx.designer.cs">
+      <DependentUpon>ButtonTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\CheckBoxTestPage.aspx.cs">
+      <DependentUpon>CheckBoxTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\CheckBoxTestPage.aspx.designer.cs">
+      <DependentUpon>CheckBoxTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\DataGridTestPage.aspx.cs">
+      <DependentUpon>DataGridTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\DataGridTestPage.aspx.designer.cs">
+      <DependentUpon>DataGridTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\DropDownListTestPage.aspx.cs">
+      <DependentUpon>DropDownListTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\DropDownListTestPage.aspx.designer.cs">
+      <DependentUpon>DropDownListTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\ImageButtonTestPage.aspx.cs">
+      <DependentUpon>ImageButtonTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\ImageButtonTestPage.aspx.designer.cs">
+      <DependentUpon>ImageButtonTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\LabelTestPage.aspx.cs">
+      <DependentUpon>LabelTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\LabelTestPage.aspx.designer.cs">
+      <DependentUpon>LabelTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\LinkButtonTestPage.aspx.cs">
+      <DependentUpon>LinkButtonTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\LinkButtonTestPage.aspx.designer.cs">
+      <DependentUpon>LinkButtonTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\ListBoxTestPage.aspx.cs">
+      <DependentUpon>ListBoxTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\ListBoxTestPage.aspx.designer.cs">
+      <DependentUpon>ListBoxTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\RadioButtonTestPage.aspx.cs">
+      <DependentUpon>RadioButtonTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\RadioButtonTestPage.aspx.designer.cs">
+      <DependentUpon>RadioButtonTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\TextBoxTestPage.aspx.cs">
+      <DependentUpon>TextBoxTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\TextBoxTestPage.aspx.designer.cs">
+      <DependentUpon>TextBoxTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\UserControlTestPage.aspx.cs">
+      <DependentUpon>UserControlTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\UserControlTestPage.aspx.designer.cs">
+      <DependentUpon>UserControlTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspTester\ValidationSummaryTestPage.aspx.cs">
+      <DependentUpon>ValidationSummaryTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspTester\ValidationSummaryTestPage.aspx.designer.cs">
+      <DependentUpon>ValidationSummaryTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Credentials\CredentialsTest.aspx.cs">
+      <DependentUpon>CredentialsTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Credentials\CredentialsTest.aspx.designer.cs">
+      <DependentUpon>CredentialsTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormVariableTestPage.aspx.cs">
+      <DependentUpon>FormVariableTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormVariableTestPage.aspx.designer.cs">
+      <DependentUpon>FormVariableTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlAnchorTestPage.aspx.cs">
+      <DependentUpon>HtmlAnchorTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlAnchorTestPage.aspx.designer.cs">
+      <DependentUpon>HtmlAnchorTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputCheckBoxTestPage.aspx.cs">
+      <DependentUpon>HtmlInputCheckBoxTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputCheckBoxTestPage.aspx.designer.cs">
+      <DependentUpon>HtmlInputCheckBoxTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputFileTestPage.aspx.cs">
+      <DependentUpon>htmlinputfiletestpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputFileTestPage.aspx.designer.cs">
+      <DependentUpon>htmlinputfiletestpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpClientTestPage.aspx.cs">
+      <DependentUpon>HttpClientTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HttpClientTestPage.aspx.designer.cs">
+      <DependentUpon>HttpClientTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfiniteRedirector.aspx.cs">
+      <DependentUpon>InfiniteRedirector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfiniteRedirector.aspx.designer.cs">
+      <DependentUpon>InfiniteRedirector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalhostDoctype.aspx.cs">
+      <DependentUpon>LocalhostDoctype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalhostDoctype.aspx.designer.cs">
+      <DependentUpon>LocalhostDoctype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MalformedRedirector.aspx.cs">
+      <DependentUpon>MalformedRedirector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MalformedRedirector.aspx.designer.cs">
+      <DependentUpon>MalformedRedirector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MalformedTestPage.aspx.cs">
+      <DependentUpon>MalformedTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MalformedTestPage.aspx.designer.cs">
+      <DependentUpon>MalformedTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceTestPage.aspx.cs">
+      <DependentUpon>PerformanceTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformanceTestPage.aspx.designer.cs">
+      <DependentUpon>PerformanceTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RedirectionTarget.aspx.cs">
+      <DependentUpon>RedirectionTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedirectionTarget.aspx.designer.cs">
+      <DependentUpon>RedirectionTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerTimeTestPage.aspx.cs">
+      <DependentUpon>ServerTimeTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerTimeTestPage.aspx.designer.cs">
+      <DependentUpon>ServerTimeTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnicodeTestPage.aspx.cs">
+      <DependentUpon>UnicodeTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnicodeTestPage.aspx.designer.cs">
+      <DependentUpon>UnicodeTestPage.aspx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AspErrorTestPage.aspx.resx">
+      <DependentUpon>AspErrorTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\ButtonTestPage.aspx.resx">
+      <DependentUpon>ButtonTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\CheckBoxTestPage.aspx.resx">
+      <DependentUpon>CheckBoxTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\DataGridTestPage.aspx.resx">
+      <DependentUpon>DataGridTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\DropDownListTestPage.aspx.resx">
+      <DependentUpon>DropDownListTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\ImageButtonTestPage.aspx.resx">
+      <DependentUpon>ImageButtonTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\LabelTestPage.aspx.resx">
+      <DependentUpon>LabelTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\LinkButtonTestPage.aspx.resx">
+      <DependentUpon>LinkButtonTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\ListBoxTestPage.aspx.resx">
+      <DependentUpon>ListBoxTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\RadioButtonTestPage.aspx.resx">
+      <DependentUpon>RadioButtonTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\TextBoxTestPage.aspx.resx">
+      <DependentUpon>TextBoxTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\UserControlTestPage.aspx.resx">
+      <DependentUpon>UserControlTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AspTester\ValidationSummaryTestPage.aspx.resx">
+      <DependentUpon>ValidationSummaryTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credentials\CredentialsTest.aspx.resx">
+      <DependentUpon>CredentialsTest.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVariableTestPage.aspx.resx">
+      <DependentUpon>FormVariableTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlTester\HtmlAnchorTestPage.aspx.resx">
+      <DependentUpon>HtmlAnchorTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlTester\HtmlInputCheckBoxTestPage.aspx.resx">
+      <DependentUpon>HtmlInputCheckBoxTestPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlTester\HtmlInputFileTestPage.aspx.resx">
+      <DependentUpon>HtmlInputFileTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HttpClientTestPage.aspx.resx">
+      <DependentUpon>HttpClientTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfiniteRedirector.aspx.resx">
+      <DependentUpon>InfiniteRedirector.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalhostDoctype.aspx.resx">
+      <DependentUpon>LocalhostDoctype.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalformedRedirector.aspx.resx">
+      <DependentUpon>MalformedRedirector.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalformedTestPage.aspx.resx">
+      <DependentUpon>MalformedTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceTestPage.aspx.resx">
+      <DependentUpon>PerformanceTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RedirectionTarget.aspx.resx">
+      <DependentUpon>RedirectionTarget.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerTimeTestPage.aspx.resx">
+      <DependentUpon>ServerTimeTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnicodeTestPage.aspx.resx">
+      <DependentUpon>UnicodeTestPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NUnitAspTest\NUnitAspTest.csproj">
+      <Project>{9B344403-AB76-4420-BA97-115A147F7B7D}</Project>
+      <Name>NUnitAspTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUnitAsp\NUnitAsp.csproj">
+      <Project>{18E46492-3A7D-4BCC-88D2-2B598D955348}</Project>
+      <Name>NUnitAsp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1367</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C5E942B-33DD-430F-99B7-B2F296D7837C}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.Framework.Tools</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinkMe.Framework.Tools</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Interop.Msado27">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\InteropAssemblies\Msado27\LinkMe.Interop.Msado27.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Interop.Oledb32">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\InteropAssemblies\Oledb32\LinkMe.Interop.Oledb32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bitmaps\BasicTypeEditor.bmp" />
+    <EmbeddedResource Include="Bitmaps\ExceptionViewer.bmp" />
+    <EmbeddedResource Include="Bitmaps\GenericEditorGrid.bmp" />
+    <EmbeddedResource Include="Bitmaps\GuidEditor.bmp" />
+    <EmbeddedResource Include="Bitmaps\MaximiserButton.bmp" />
+    <EmbeddedResource Include="Bitmaps\ObjectBrowser.bmp" />
+    <EmbeddedResource Include="Bitmaps\ObjectProperties.bmp" />
+    <EmbeddedResource Include="Bitmaps\ThreePanes.bmp" />
+    <EmbeddedResource Include="Bitmaps\TwoPanes.bmp" />
+    <EmbeddedResource Include="Bitmaps\TwoPanesVertical.bmp" />
+    <EmbeddedResource Include="Bitmaps\XmlTextBox.bmp" />
+    <EmbeddedResource Include="Source\Controls\Bitmaps\Button.bmp" />
+    <EmbeddedResource Include="Source\Controls\Bitmaps\ButtonPressed.bmp" />
+    <EmbeddedResource Include="Source\Controls\ComboBox.resx">
+      <DependentUpon>ComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\DataGrid.resx">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\DataGridBoolColumn.resx">
+      <DependentUpon>DataGridBoolColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\DataGridButtonColumn.resx">
+      <DependentUpon>DataGridButtonColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\DataGridTextBoxColumn.resx">
+      <DependentUpon>DataGridTextBoxColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ExceptionDialog.resx">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ExceptionPanes.resx">
+      <DependentUpon>ExceptionPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ExceptionViewer.resx">
+      <DependentUpon>ExceptionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\Form.resx">
+      <DependentUpon>Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ListView.resx">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\MaximiserButton.resx">
+      <DependentUpon>MaximiserButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ReadOnlyManager.resx">
+      <DependentUpon>ReadOnlyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\TabOrderManager.resx">
+      <DependentUpon>TabOrderManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\ThreePanes.resx">
+      <DependentUpon>ThreePanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\TreeView.resx">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\TwoPanes.resx">
+      <DependentUpon>TwoPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\TwoPanesVertical.resx">
+      <DependentUpon>TwoPanesVertical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\UserControl.resx">
+      <DependentUpon>UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Controls\XmlTextBox.resx">
+      <DependentUpon>XmlTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\BasicTypeEditor.resx">
+      <DependentUpon>BasicTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\BooleanEditor.resx">
+      <DependentUpon>BooleanEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\DataSetEditor.resx">
+      <DependentUpon>DataSetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\EditorDialog.resx">
+      <DependentUpon>EditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\GenericEditorGrid.resx">
+      <DependentUpon>GenericEditorGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\GuidEditor.resx">
+      <DependentUpon>GuidEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Editors\Icons\Edit.ico" />
+    <EmbeddedResource Include="Source\Net\ClassInfoControl.resx">
+      <DependentUpon>ClassInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectBrowser\Com\ComBrowserSettings.resx">
+      <DependentUpon>ComBrowserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectBrowser\Net\NetBrowserForm.resx">
+      <DependentUpon>NetBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectBrowser\Net\NetBrowserSettings.resx">
+      <DependentUpon>NetBrowserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectBrowser\ObjectBrowser.resx">
+      <DependentUpon>ObjectBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectProperties\ElementPropertyPage.resx">
+      <DependentUpon>ElementPropertyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectProperties\EmptyPropertyPage.resx">
+      <DependentUpon>EmptyPropertyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectProperties\ObjectPropertyForm.resx">
+      <DependentUpon>ObjectPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectProperties\ObjectPropertySettings.resx">
+      <DependentUpon>ObjectPropertySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\ObjectProperties\ObjectPropertySheet.resx">
+      <DependentUpon>ObjectPropertySheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Bitmaps\Location.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\BorderLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DataGridBoolColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DataGridButtonColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DataGridTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DisplayModeChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ExceptionPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ExceptionViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ICellToolTip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\IChangeDisplayMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\IFormIsClosing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\IXmlTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\MaximiserButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ReadOnlyManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\RichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\SelectedIndexChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\Splitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TabOrderManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TabPageIndexEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\ThreePanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TwoPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\TwoPanesVertical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\XmlTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\DescriptionBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\DescriptionText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\BasicTypeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\BooleanEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\CellEditorData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\DataGridEditorColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\DataGridExpandableColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\DataSetEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\EditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\EditorManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\EditorValueFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\ExceptionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\GenericEditorGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\GuidEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\ICanCreateNew.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\ICanCreateNewRemote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\IEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Editors\IRemoteEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Images.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\LongRunningMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\ArrayElementWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\BaseWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\ClassInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Net\DictionaryElementWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\FieldWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\GenericWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\ICustomWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\ListElementWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\ListTooLongWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\MemberWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\MemberWrapperEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\MemberWrappers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\PropertyWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Net\WrappedValueFormats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\AccessModifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\ComBrowserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\ComBrowserSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\ComMemberBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\ComTypeBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\MemberDesc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\ObjectType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\TypeLibraryBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Com\TypeLibraryNamespaceBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Delegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\ElementBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\IElementBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\IMemberBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\INamespaceBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\IRepositoryBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\ITypeBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\MemberEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\MemberOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetAssemblyBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetBrowserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetBrowserSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetMemberBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetNamespaceBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\NetTypeBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\ObjectType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteAssemblyBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteMemberBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteNamespaceBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteNetBrowserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteNetBrowserSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\Net\RemoteTypeBrowserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\ObjectBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\ObjectBrowserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\ObjectBrowserSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectBrowser\TypeOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ApplyEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ElementEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ElementPropertyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ElementPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\EmptyPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\IElementPropertyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\IObjectPropertyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\IPropertyPageParent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ObjectPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ObjectPropertyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ObjectPropertySettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\ObjectProperties\ObjectPropertySheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\OleDbUtil.cs" />
+    <Compile Include="Source\OperationMemberType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\SafeNativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\ISettingsObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\RecentlyUsedClickEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\RecentlyUsedList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\SettingChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\SettingsBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Settings\WindowSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\UnsafeNativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Xml\XmlRichTextWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{6860E675-45B5-4558-8EE7-FDD55A8A0A20}</Project>
+      <Name>Utility %28Utility\Utility%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

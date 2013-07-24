@@ -1,0 +1,179 @@
+﻿.candidate-note-expander_ascx {}
+	.candidate-note-expander_ascx .notes-count {
+		font-size: 85%;
+		padding-right: 10px;
+	}
+
+	.candidate-note-expander_ascx .notes_action-list {}
+
+	.candidate-note-expander_ascx .action-list .show-all-action  { background: url(../../images/controls/CandidateNotes/show-all.png) left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+	.candidate-note-expander_ascx .action-list .hide-all-action  { background: url(../../images/controls/CandidateNotes/hide-all.png) left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+	.candidate-note-expander_ascx .action-list .add-note-action  { background: url(../../images/controls/CandidateNotes/add.png)      left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+
+	.candidate-note-item_ascx .action-list .edit-note-action     { background: url(../../images/controls/CandidateNotes/edit.png)     left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+	.candidate-note-item_ascx .action-list .delete-note-action   { background: url(../../images/controls/CandidateNotes/delete.png)   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+	
+.resume .resume-notes-container {
+	color: #FFF;
+	padding: 0;
+	padding-left: 20px;
+	width: 440px;
+	float: left;
+}
+		
+.candidate-note-item_ascx {
+	*zoom: 1; /* IE6 block-layout fix */
+	position: relative;	/* AP anchor */
+	clear: both;
+}
+
+.note-expander {}
+
+	.notes-collection {
+		margin-top: 1em;
+	}
+
+		.candidate-note-item_ascx {
+			margin-bottom: 15px;
+		}
+			
+			.candidate-note-item_ascx .note-content {
+				font-size: 100%;
+			}
+			
+			.candidate-note-item_ascx .note-edit .note-content {
+				border: 1px solid #EEDEC5;
+				background: #FFF;
+			}
+			
+				.candidate-note-item_ascx .note-content .multiline_textbox {
+					width: 413px;
+					border: none;
+					margin: 0; padding: 0;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 85%;
+				}
+				
+			.resume-notes-container .description .question_helpicon {	/* On-resume appearance */
+				/*background: url(../../images/resume/help_on-blue.png) top left no-repeat;*/
+			}
+		
+			.candidate-note-item_ascx .note-display,
+			.candidate-note-item_ascx .note-edit {
+			}
+			
+				.candidate-note-item_ascx .note-bg {
+					background: #FFFED5;
+					color: #333;
+					padding: 9px;
+					border: 1px solid #DDA;
+					border-bottom: 1px solid #CCA;
+					*zoom: 1;	/* Stop IE forgetting that .note-bg exists when repainting backgrounds */
+				}
+				
+				.resume-notes-container .candidate-note-item_ascx .note-bg {	/* On-resume appearance */
+					border: 1px solid #5B859A;
+					border-bottom: 1px solid #4B758A;
+				}					
+			
+					.candidate-note-item_ascx .note-heading {
+						float: left;
+						font-weight: bold;
+						font-size: 85%;
+						padding-bottom: 10px;
+					}
+
+						.candidate-note-item_ascx .note-created-by {
+							float: left; width: 180px;
+						}
+						
+					.candidate-note-item_ascx .note-content {
+						clear: left;
+					}
+					
+						.candidate-note-item_ascx .note-content label {
+							font-size: 85%;
+						}
+						
+				.candidate-note-item_ascx .note-last-edited {
+					font-size: 85%;
+					float: left;
+					white-space: nowrap;
+					color: #888;
+				}
+					.resume-notes-container .candidate-note-item_ascx .note-last-edited {	/* On-resume appearance */
+						color: #ADCAD8;
+					}
+					
+				.candidate-note-item_ascx .note-footer:after {		/* Self-clearing for modern browsers */
+					content: ".";
+					display: block;
+					height: 0;
+					clear: both;
+					visibility: hidden;
+				}
+				.candidate-note-item_ascx .note-footer {			/* Self-clearing for IE6,7 */
+				    *zoom: 1;
+				}
+				
+					.candidate-note-item_ascx .note-buttons {
+						clear: both;
+						float: left;
+						white-space: nowrap;
+					}
+					
+						.candidate-note-item_ascx .save-button {
+							background: transparent url(../../images/buttons/png24/save.png) top left no-repeat;
+							_background: none;  /* IE6 Transparency Hack */
+							_filter: expression(LinkMeUI.IE6Alpha("/ui/images/buttons/png24/save.png"));
+						}
+						.candidate-note-item_ascx .cancel-button {
+							background: transparent url(../../images/buttons/png24/cancel.png) top left no-repeat;
+							_background: none;  /* IE6 Transparency Hack */
+							_filter: expression(LinkMeUI.IE6Alpha("/ui/images/buttons/png24/cancel.png"));
+						}
+					
+					.candidate-note-item_ascx .note-shared {
+						text-align: right;
+						float: right;
+						width: 50%;
+						right: 0;
+					}
+
+						.candidate-note-item_ascx .note-shared * {
+							vertical-align: middle;
+						}				
+							.candidate-note-item_ascx .checkbox label {
+								font-size: 85%;	
+							}
+							.resume-notes-container .candidate-note-item_ascx .checkbox label	{	/* On-resume appearance */
+								color: #FFF;
+							}							
+
+
+.notes-heading-collapsed, .notes-heading-expanded {
+	float: left;
+	margin-top: 0;
+}
+
+.notes-heading-collapsed {
+	width: 100px;
+}
+
+.notes-heading-expanded {
+	width: 400px;
+	margin-right: 10px;
+}
+
+.note-preview-text {
+	font-size: 85%;
+	color: #888;
+}
+	.resume-notes-container .note-preview-text {	/* On-resume appearance */
+		color:#ADCAD8;
+	}
+
+.note-template,
+.record_id {
+    display: none;
+}

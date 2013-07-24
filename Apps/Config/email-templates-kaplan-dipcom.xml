@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberEmail">
+      <VerticalContentItem VerticalId="90C2199D-277E-41b0-84E9-D5172EEE18AD">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <br />Thanks,
+        <br />Your LinkMe team
+        <br/>
+        <br/>
+        <img height="64" width="129" src="<%=GetUrl(false, "~/themes/communities/kaplan/img/email-logo.jpg")%>" alt="Kaplan" />
+        <br />
+        <br />For support please
+        <a href="<%=TinyUrls.Register(false, "~/contactus")%>">contact us</a>.
+        <p>This service brought to you by</p>
+        <p>
+          <img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="LinkMe" />
+        </p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="OfferEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="90C2199D-277E-41b0-84E9-D5172EEE18AD">
+        <Subject>Your further education request</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  You have indicated that you would like to be contacted regarding the Diploma of Commerce.
+  LinkMe is pleased to advise that the education provider you will be contacted by is Kaplan Business School.
+</p>
+<p>
+  Kaplan Business School offers an intimate and personal environment
+  in which to complete further studies,
+  with small classroom sizes and one-to-one advice services.
+</p>
+<p>
+  Kaplan Business School also forms part of Kaplan, Inc. (Kaplan),
+  a leading global education provider with over 70 years'
+  experience in schools, colleges and universities.
+  Today Kaplan is in over 35 countries worldwide,
+  serves more than one million students each year
+  and has over 31,000 employees in approximately 600 locations.
+</p>
+<p>
+  A Kaplan Business School representative will be in contact with you shortly to discuss your individual needs.
+</p>  
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="FilesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FileData" Member="FileDataEntities">
+    <Type Name="FileDataEntity">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="context" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="extension" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="hash" Type="System.Data.Linq.Binary" DbType="Binary(16) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sizeBytes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FileDataEntity_FileReferenceEntity" Member="FileReferenceEntities" ThisKey="id" OtherKey="dataId" Type="FileReferenceEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileReference" Member="FileReferenceEntities">
+    <Type Name="FileReferenceEntity">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mimeType" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(260) NOT NULL" CanBeNull="false" />
+      <Column Name="dataId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FileDataEntity_FileReferenceEntity" Member="FileDataEntity" ThisKey="dataId" OtherKey="id" Type="FileDataEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

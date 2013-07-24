@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- PostJobAds response version 1.0 -->
+  <xs:element name="PostJobAdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ReturnCode" type="tns:WebServiceReturnCode" />
+        <xs:element name="JobAds" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence />
+            <!-- The number of new job ads that were posted. -->
+            <xs:attribute name="added" use="required" type="xs:nonNegativeInteger" />
+            <!-- The number of existing job ads that were updated. -->
+            <xs:attribute name="updated" use="required" type="xs:nonNegativeInteger" />
+            <!-- The number of existing job ads that were closed (always 0 if 'closeAllOtherAds' was false). -->
+            <xs:attribute name="closed" use="required" type="xs:nonNegativeInteger" />
+            <!-- The number of job ads that failed to be added or updated. -->
+            <xs:attribute name="failed" use="required" type="xs:nonNegativeInteger" />
+            <!-- Note that the total of added + updated + failed should equal the total number of input job ads. -->
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Errors" type="tns:Errors" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:PostJobAdsResponseVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="PostJobAdsResponseVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

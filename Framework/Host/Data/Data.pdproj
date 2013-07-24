@@ -1,0 +1,283 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{cc677a2b-a3f1-4c5b-a4e5-e4dc1650735e}</ProjectGuid>
+    <Name>Data</Name>
+  </PropertyGroup>
+  <ItemGroup>
+    <Merge Include="Functions\LinkMe.Framework.Host.Data.Functions.txt">
+      <Link>Functions\LinkMe.Framework.Host.Data.Functions.txt</Link>
+    </Merge>
+    <Merge Include="Security\LinkMe.Framework.Host.Data.Security.txt">
+      <Link>Security\LinkMe.Framework.Host.Data.Security.txt</Link>
+    </Merge>
+    <Merge Include="StoredProcedures\LinkMe.Framework.Host.Data.StoredProcedures.txt">
+      <Link>StoredProcedures\LinkMe.Framework.Host.Data.StoredProcedures.txt</Link>
+    </Merge>
+    <Merge Include="Tables\LinkMe.Framework.Host.Data.Tables.txt">
+      <Link>Tables\LinkMe.Framework.Host.Data.Tables.txt</Link>
+    </Merge>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Functions\FhGetParentNameFromFullName.sql">
+      <Link>Functions\FhGetParentNameFromFullName.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\" />
+    <Folder Include="Security\" />
+    <Folder Include="StoredProcedures\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FhWriter.sql">
+      <Link>Security\FhWriter.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FhReader.sql">
+      <Link>Security\FhReader.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhContainer.sql">
+      <Link>Tables\FhContainer.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhNamespace.sql">
+      <Link>Tables\FhNamespace.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhContainerDelete.sql">
+      <Link>StoredProcedures\FhContainerDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhContainersGet.sql">
+      <Link>StoredProcedures\FhContainersGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhContainerUpdate.sql">
+      <Link>StoredProcedures\FhContainerUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhNamespaceDelete.sql">
+      <Link>StoredProcedures\FhNamespaceDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhNamespaceEnsure.sql">
+      <Link>StoredProcedures\FhNamespaceEnsure.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhNamespacesGet.sql">
+      <Link>StoredProcedures\FhNamespacesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhNamespaceUpdate.sql">
+      <Link>StoredProcedures\FhNamespaceUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhChannel.sql">
+      <Link>Tables\FhChannel.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhContainerEnsure.sql">
+      <Link>StoredProcedures\FhContainerEnsure.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhChannelDelete.sql">
+      <Link>StoredProcedures\FhChannelDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhChannelsGet.sql">
+      <Link>StoredProcedures\FhChannelsGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhChannelUpdate.sql">
+      <Link>StoredProcedures\FhChannelUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhThreadPool.sql">
+      <Link>Tables\FhThreadPool.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolUpdate.sql">
+      <Link>StoredProcedures\FhThreadPoolUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolDelete.sql">
+      <Link>StoredProcedures\FhThreadPoolDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolsGet.sql">
+      <Link>StoredProcedures\FhThreadPoolsGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhThreadPoolType.sql">
+      <Link>Tables\FhThreadPoolType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolTypeUpdate.sql">
+      <Link>StoredProcedures\FhThreadPoolTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolTypeDelete.sql">
+      <Link>StoredProcedures\FhThreadPoolTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhThreadPoolTypesGet.sql">
+      <Link>StoredProcedures\FhThreadPoolTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhSourceType.sql">
+      <Link>Tables\FhSourceType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhSinkType.sql">
+      <Link>Tables\FhSinkType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourceTypeUpdate.sql">
+      <Link>StoredProcedures\FhSourceTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinkTypeDelete.sql">
+      <Link>StoredProcedures\FhSinkTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinkTypesGet.sql">
+      <Link>StoredProcedures\FhSinkTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinkTypeUpdate.sql">
+      <Link>StoredProcedures\FhSinkTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourceTypeDelete.sql">
+      <Link>StoredProcedures\FhSourceTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourceTypesGet.sql">
+      <Link>StoredProcedures\FhSourceTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhSink.sql">
+      <Link>Tables\FhSink.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinkUpdate.sql">
+      <Link>StoredProcedures\FhSinkUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinkDelete.sql">
+      <Link>StoredProcedures\FhSinkDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSinksGet.sql">
+      <Link>StoredProcedures\FhSinksGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhChannelEnsure.sql">
+      <Link>StoredProcedures\FhChannelEnsure.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhSource.sql">
+      <Link>Tables\FhSource.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourceUpdate.sql">
+      <Link>StoredProcedures\FhSourceUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourceDelete.sql">
+      <Link>StoredProcedures\FhSourceDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhSourcesGet.sql">
+      <Link>StoredProcedures\FhSourcesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhApplicationType.sql">
+      <Link>Tables\FhApplicationType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationTypeUpdate.sql">
+      <Link>StoredProcedures\FhApplicationTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationTypeDelete.sql">
+      <Link>StoredProcedures\FhApplicationTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationTypesGet.sql">
+      <Link>StoredProcedures\FhApplicationTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FhApplication.sql">
+      <Link>Tables\FhApplication.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationUpdate.sql">
+      <Link>StoredProcedures\FhApplicationUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationDelete.sql">
+      <Link>StoredProcedures\FhApplicationDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FhApplicationsGet.sql">
+      <Link>StoredProcedures\FhApplicationsGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Data.targets" />
+</Project>

@@ -1,0 +1,1268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A060F80-0CFE-4363-AA58-015349A71D83}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.AcceptanceTest</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinkMe.AcceptanceTest</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\Test\bin\LinkMe.Domain.Roles.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Test\bin\LinkMe.Domain.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\Test\bin\LinkMe.Domain.Users.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Content">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Content\bin\LinkMe.Framework.Content.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Host">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Host\bin\LinkMe.Framework.Host.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Host.Wcf">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Host\Wcf\bin\LinkMe.Framework.Host.Wcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Text">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Text\bin\LinkMe.Framework.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports.Test">
+      <HintPath>..\..\Query\Reports\Test\bin\LinkMe.Query.Reports.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\Engine\bin\LinkMe.Query.Search.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Engine.Test">
+      <HintPath>..\..\Query\Search\Engine\Test\bin\LinkMe.Query.Search.Engine.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\Test\bin\LinkMe.Query.Search.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Reports\bin\LinkMe.Query.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WatiN.Core, Version=2.1.0.1196, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\WatiN.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\AccountsRedirectTests.cs" />
+    <Compile Include="Accounts\ActivationSentTests.cs" />
+    <Compile Include="Accounts\Api\LoginTests.cs" />
+    <Compile Include="Accounts\Authentication\AuthenticationCookiesTests.cs" />
+    <Compile Include="Accounts\Authentication\CookiesTests.cs" />
+    <Compile Include="Accounts\ChangePasswordTests.cs" />
+    <Compile Include="Accounts\AdministratorChangePasswordTests.cs" />
+    <Compile Include="Accounts\CustodianChangePasswordTests.cs" />
+    <Compile Include="Accounts\EmployerChangePasswordTests.cs" />
+    <Compile Include="Accounts\MemberChangePasswordTests.cs" />
+    <Compile Include="Accounts\VerificationTests.cs" />
+    <Compile Include="Accounts\VerificationSentTests.cs" />
+    <Compile Include="Accounts\NotVerifiedTests.cs" />
+    <Compile Include="Accounts\EmployerHomeLoginTests.cs" />
+    <Compile Include="Accounts\EmployerLoginLoginTests.cs" />
+    <Compile Include="Accounts\LoginLoginTests.cs" />
+    <Compile Include="Accounts\LoginTests.cs" />
+    <Compile Include="Accounts\HomeLoginTests.cs" />
+    <Compile Include="Accounts\LogoutTests.cs" />
+    <Compile Include="Accounts\SessionTests.cs" />
+    <Compile Include="Administrators\Administrators\AdministratorsTests.cs" />
+    <Compile Include="Administrators\Administrators\EditAdministratorTests.cs" />
+    <Compile Include="Administrators\Administrators\NewAdministratorTests.cs" />
+    <Compile Include="Administrators\Administrators\ViewAdministratorsTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\CampaignsIndexTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\CampaignsTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\CreateCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\DeleteCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Edm\EdmCampaignsTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Edm\SendTestEmailTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Edm\UpdateCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\IosLaunch\IosLaunchCampaignsTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\IosLaunch\SendTestEmailTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\IosLaunch\UpdateCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\PreviewTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Reengagement\EmailLinksTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Reengagement\ReengagementCampaignsTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Reengagement\SendTestEmailTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\Reengagement\UpdateCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\SendTestEmailTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\UpdateCampaignTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\UpdateEmployerCriteriaTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\UpdateMemberCriteriaTests.cs" />
+    <Compile Include="Administrators\Communications\Campaigns\UpdateTemplateTests.cs" />
+    <Compile Include="Administrators\Communities\CommunitiesTests.cs" />
+    <Compile Include="Administrators\Communities\EditCustodianTests.cs" />
+    <Compile Include="Administrators\Communities\NewCustodianTests.cs" />
+    <Compile Include="Administrators\Communities\CustodiansTests.cs" />
+    <Compile Include="Administrators\Communities\ViewCommunitiesTests.cs" />
+    <Compile Include="Administrators\Employers\AllocateCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ApplicantCredits\VerifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\ApplicantCredits\VerifiedOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\ApplicantCredits\VerifiedParentOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\ApplicantCredits\ViewApplicantCreditsUsageTests.cs" />
+    <Compile Include="Administrators\Employers\ApplicantCredits\UnverifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\ContactCredits\ViewContactCreditsUsageTests.cs" />
+    <Compile Include="Administrators\Employers\ContactCredits\UnverifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\ContactCredits\VerifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\ContactCredits\VerifiedOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\ContactCredits\VerifiedParentOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\JobAdCredits\UnverifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\JobAdCredits\VerifiedEmployerTests.cs" />
+    <Compile Include="Administrators\Employers\JobAdCredits\VerifiedOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\JobAdCredits\VerifiedParentOrganisationTests.cs" />
+    <Compile Include="Administrators\Employers\JobAdCredits\ViewJobAdCreditsUsageTests.cs" />
+    <Compile Include="Administrators\Employers\ViewAllocationsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\ViewCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\UnverifiedNoAllocationsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\UnverifiedNoCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\UnverifiedSomeCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\UnverifiedUnlimitedCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\VerifiedNoAllocationsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\VerifiedNoCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\VerifiedSomeCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCredits\VerifiedUnlimitedCreditsTests.cs" />
+    <Compile Include="Administrators\Employers\CreditsTests.cs" />
+    <Compile Include="Administrators\Employers\EmployersTests.cs" />
+    <Compile Include="Administrators\Employers\ViewCreditsUsageTests.cs" />
+    <Compile Include="Administrators\Employers\ViewMultipleCreditsUsageTests.cs" />
+    <Compile Include="Administrators\Members\EditExternalMemberTests.cs" />
+    <Compile Include="Administrators\Members\MembersTests.cs" />
+    <Compile Include="Administrators\Members\SearchMembersTests.cs" />
+    <Compile Include="Administrators\Organisations\CommunicationsTests.cs" />
+    <Compile Include="Administrators\Organisations\CreditsTests.cs" />
+    <Compile Include="Administrators\Organisations\EditOrganisationTests.cs" />
+    <Compile Include="Administrators\Organisations\EmployersTests.cs" />
+    <Compile Include="Administrators\Organisations\NewEmployerTests.cs" />
+    <Compile Include="Administrators\Organisations\NewOrganisationTests.cs" />
+    <Compile Include="Administrators\Organisations\OrganisationsTests.cs" />
+    <Compile Include="Administrators\Organisations\ReportsTests.cs" />
+    <Compile Include="Administrators\Organisations\RunReportsTests.cs" />
+    <Compile Include="Administrators\Organisations\SearchOrganisationsTests.cs" />
+    <Compile Include="Administrators\SearchEngines\SearchEnginesTests.cs" />
+    <Compile Include="Api\Coupons\CouponsApiTests.cs" />
+    <Compile Include="Api\Location\ClosestLocationsTests.cs" />
+    <Compile Include="Api\Location\ResolveLocationsTests.cs" />
+    <Compile Include="Api\Search\KeywordsTests.cs" />
+    <Compile Include="communities\EmailAddressTests.cs" />
+    <Compile Include="communities\External\ExternalCookieTests.cs" />
+    <Compile Include="communities\External\ExternalCredentialsTests.cs" />
+    <Compile Include="communities\External\ExternalUpdateTests.cs" />
+    <Compile Include="communities\MemberLoginTests.cs" />
+    <Compile Include="communities\External\ExternalConvertTests.cs" />
+    <Compile Include="communities\RedirectTests.cs" />
+    <Compile Include="communities\Specific\AatTests.cs" />
+    <Compile Include="communities\Specific\AesTests.cs" />
+    <Compile Include="communities\Specific\AhriTests.cs" />
+    <Compile Include="communities\Specific\AimeTests.cs" />
+    <Compile Include="communities\Specific\AimpeTests.cs" />
+    <Compile Include="communities\Specific\AllTests.cs" />
+    <Compile Include="communities\Specific\BusinessSpectatorTests.cs" />
+    <Compile Include="communities\Specific\CorporateCulchaTests.cs" />
+    <Compile Include="communities\Specific\CrossroadsTests.cs" />
+    <Compile Include="communities\Specific\GtaTests.cs" />
+    <Compile Include="communities\Specific\IndigenousCareersTests.cs" />
+    <Compile Include="communities\Specific\ItcraLinkTests.cs" />
+    <Compile Include="communities\Specific\LiveInAustraliaTests.cs" />
+    <Compile Include="communities\Specific\FinsiaTests.cs" />
+    <Compile Include="communities\Specific\MaanzTests.cs" />
+    <Compile Include="communities\Specific\NextStepTests.cs" />
+    <Compile Include="communities\Specific\OtdTests.cs" />
+    <Compile Include="communities\Specific\PingTests.cs" />
+    <Compile Include="communities\Specific\RedTentWomanTests.cs" />
+    <Compile Include="communities\Specific\SaeTests.cs" />
+    <Compile Include="communities\Specific\Talent2Tests.cs" />
+    <Compile Include="communities\Specific\TheJunctionWorksTests.cs" />
+    <Compile Include="communities\Specific\TheNursingCentreTests.cs" />
+    <Compile Include="communities\Specific\UniMelbArtsTests.cs" />
+    <Compile Include="communities\Specific\VecciTests.cs" />
+    <Compile Include="Api\Location\PartialMatchesTests.cs" />
+    <Compile Include="Content\ContentRedirectTests.cs" />
+    <Compile Include="Emails\TinyUrlTests.cs" />
+    <Compile Include="Employers\Candidates\Views\SeoTests.cs" />
+    <Compile Include="Employers\JobAds\JobAdsRedirectTests.cs" />
+    <Compile Include="Employers\JobAds\LogoTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdLimitTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\BulletPointsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\ContentTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\CompanyNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\LogoTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\JobTypesTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\SalaryTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\HideContactDetailsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\LocationTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\CountryIdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\IndustryIdsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\FaxNumberTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\PhoneNumberTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\SecondaryEmailAddressesTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\EmailAddressTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\LastNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\FirstNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\ExpiryDateTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\HideCompanyTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\PackageTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\ResidencyRequiredTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\SummaryTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\ExternalReferenceIdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\PositionTitleTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\CreateJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\CreateJobAds\TitleTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\BulletPointsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\CompanyNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\ContentTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\CountryIdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\EditJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\EmailAddressTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\ExpiryDateTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\ExternalReferenceIdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\FaxNumberTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\FirstNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\HideCompanyTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\HideContactDetailsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\IndustryIdsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\JobTypesTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\LastNameTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\LocationTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\LogoTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\PackageTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\PhoneNumberTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\PositionTitleTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\ResidencyRequiredTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\SalaryTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\SecondaryEmailAddressesTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\SummaryTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\EditJobAds\TitleTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\CustomizedNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\JoinNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\EmployerNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\ZeroCreditsNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\LimitedCreditsNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\NewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdFlow\UnlimitedCreditsNewJobAdFlowTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewCustomizedJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewClosedExpiredJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewClosedJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewLogoTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewOpenJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewDraftJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PreviewJobAds\PreviewJobAdTests.cs" />
+    <Compile Include="Employers\LinkedIn\LinkedInTests.cs" />
+    <Compile Include="Employers\Products\ProductsRedirectTests.cs" />
+    <Compile Include="Employers\Products\ViewOrders\CreditSummaryTests.cs" />
+    <Compile Include="Employers\Search\Criteria\VisaStatusTests.cs" />
+    <Compile Include="Employers\Search\Results\TitleTests.cs" />
+    <Compile Include="Employers\Search\SearchRedirectTests.cs" />
+    <Compile Include="Employers\Settings\LinkedInSettingsTests.cs" />
+    <Compile Include="Integration\JobAds\FilesTests.cs" />
+    <Compile Include="HomePage\MobileTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\ContactDetailsJobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostNoLimitsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostJobAdErrorsTests.cs" />
+    <Compile Include="Members\Friends\PhotosTests.cs" />
+    <Compile Include="Members\Home\HomeTests.cs" />
+    <Compile Include="Members\Jobs\Email\EmailJobAdsTests.cs" />
+    <Compile Include="Members\Jobs\Email\MobileEmailJobAdTests.cs" />
+    <Compile Include="Members\Jobs\JobsSwitchTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\AnonymousWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\AnonymousWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\QuestionsWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\QuestionsWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInResumeWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LogInWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInResumeWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LogInWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\JoinWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInLastUsedResumeWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInProfileWithRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\JoinWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInLastUsedResumeWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInProfileWithoutRedirectionTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\AnonymousTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\LoggedInLastUsedResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\LoggedInProfileTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\LoggedInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Mobile\ManagedInternallyTests.cs" />
+    <Compile Include="Members\Jobs\Applications\MobileApplyTests.cs" />
+    <Compile Include="Members\Jobs\Applications\Previous\Mobile\MobilePreviousApplicationsTests.cs" />
+    <Compile Include="Members\Jobs\Applications\Previous\PreviousApplicationsTests.cs" />
+    <Compile Include="Members\Jobs\Applications\WebApplyTests.cs" />
+    <Compile Include="Members\Jobs\BlockLists\BlockListsTests.cs" />
+    <Compile Include="Members\Jobs\BlockLists\Web\WebBlockListsTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\CompanyNameTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\ContactDetailsTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\ContentTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\IsInMobileFolderTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\MobileDisplayTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\StatusTests.cs" />
+    <Compile Include="Members\Jobs\Display\Mobile\TitleTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\CompanyNameTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\ContactDetailsTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\ContentTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\CustomizedDisplayTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\StatusTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\StylesTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\TitleTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\Customized\ViewedCountTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\StatusTests.cs" />
+    <Compile Include="Members\Jobs\FlagLists\FlagListsTests.cs" />
+    <Compile Include="Members\Jobs\FlagLists\Web\WebFlagListsTests.cs" />
+    <Compile Include="Members\Jobs\Folders\ApiFoldersTests.cs" />
+    <Compile Include="Members\Jobs\Folders\FoldersTests.cs" />
+    <Compile Include="Members\Jobs\Folders\Mobile\MobileFoldersTests.cs" />
+    <Compile Include="Members\Jobs\Folders\Web\WebFoldersTests.cs" />
+    <Compile Include="Members\Jobs\JobAdListTests.cs" />
+    <Compile Include="Members\Jobs\LogoTests.cs" />
+    <Compile Include="Members\Jobs\Mobile\MembersJobsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\IsInMobileFolderTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Pagination\Web\PaginationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Mobile\SaveSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Mobile\MembersSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\MobileSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\CriteriaTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\IndustryIdsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\JobTypesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\RecencyTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Mobile\SortOrderTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\CriteriaTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\CompanyNameTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\ContactDetailsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\CreatedTimeTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\DisplayTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\FeatureBoostTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\IsNewTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\JobTypesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Mobile\TitleTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\DisplayTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Mobile\RecentSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Mobile\SavedSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Mobile\SearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\WebSearchTests.cs" />
+    <Compile Include="Members\Jobs\Similar\SimilarJobsTests.cs" />
+    <Compile Include="Members\Jobs\Suggested\WebSuggestedJobsTests.cs" />
+    <Compile Include="Members\Jobs\Suggested\MobileSuggestedJobsTests.cs" />
+    <Compile Include="Members\Jobs\Suggested\SuggestedJobsTests.cs" />
+    <Compile Include="Members\Profile\Status\StatusEmailTests.cs" />
+    <Compile Include="Members\Profile\Status\UpdateStatusTests.cs" />
+    <Compile Include="Members\Resources\ArticlesTests.cs" />
+    <Compile Include="Members\Resources\ArticleTests.cs" />
+    <Compile Include="Members\Resources\QnATests.cs" />
+    <Compile Include="Members\Resources\VideoTests.cs" />
+    <Compile Include="Members\Resources\QnAsTests.cs" />
+    <Compile Include="Members\Resources\VideosTests.cs" />
+    <Compile Include="Members\Resources\FeaturedQnATests.cs" />
+    <Compile Include="Members\Resources\FeaturedVideoTests.cs" />
+    <Compile Include="Members\Resources\FeaturedArticlesTests.cs" />
+    <Compile Include="Members\Resources\ResourcesTests.cs" />
+    <Compile Include="Mobile\SwitchBrowserTests.cs" />
+    <Compile Include="Navigation\SwitchTests.cs" />
+    <Compile Include="Public\Deprecated\GroupsTests.cs" />
+    <Compile Include="Support\FaqsTests.cs" />
+    <Compile Include="Support\SupportRedirectTests.cs" />
+    <Compile Include="TestAssembly.cs" />
+    <Compile Include="Employers\Candidates\Browse\BrowseCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\Browse\PaginationTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiCheckCanSendMessagesCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\Views\AccountsTests.cs" />
+    <Compile Include="Employers\Candidates\Views\ObjectiveTests.cs" />
+    <Compile Include="Employers\Candidates\Views\DesiredJobTitleTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\SuggestedCandidates\CriteriaTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\SuggestedCandidates\JobAdsTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\SuggestedCandidates\ResultsTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\SuggestedCandidates\SuggestedCandidatesTests.cs" />
+    <Compile Include="Employers\Join\JoinRedirectTests.cs" />
+    <Compile Include="Employers\Search\Criteria\CandidateStatusTests.cs" />
+    <Compile Include="Employers\Search\Criteria\JobTypesTests.cs" />
+    <Compile Include="Employers\Search\HelpPromptTests.cs" />
+    <Compile Include="Employers\Search\ResultsRedirectTests.cs" />
+    <Compile Include="Employers\Search\Results\PhoneNumbers\ViewPhoneNumbersTests.cs" />
+    <Compile Include="Employers\Search\Results\PhoneNumbers\CompactPhoneNumbersTests.cs" />
+    <Compile Include="Employers\Search\Results\PhoneNumbers\ExpandedPhoneNumbersTests.cs" />
+    <Compile Include="Employers\Search\Seo\AnalyticsTests.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\GetJobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\HideInternalJobAdTests.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\HideJobAdTests.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\HideOtherJobAdTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\AnonymousJobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\OtherIntegratorJobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\ExternalReferenceIdJobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostDraftJobAdsTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\CompanyNameTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\ContactDetailsTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\ContentTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\ViewedCountTests.cs" />
+    <Compile Include="Members\Jobs\JobsRedirectTests.cs" />
+    <Compile Include="Members\Jobs\Search\PaginationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\CompanyNameTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\FeatureBoostTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\CountrySubdivisionTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\CountryTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\RegionTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\PostalSuburbTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Criteria\Web\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiAlertsErrorTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiRenameTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiKeywordsAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiRegionAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiCountryAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiCountrySubdivisionAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiLocalityAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiCriteriaAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiDeleteTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Web\SavedSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Web\RecentSearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\Web\SearchesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\AdvertiserNameTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\SortOrderTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\IncludeSynonymsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\HasNotesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\IsFlaggedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\HasAppliedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\HasViewedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\IndustryIdsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\JobTypesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\KeywordsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\CriteriaTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\AdTitleTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\RecencyTests.cs" />
+    <Compile Include="Members\Jobs\Search\Criteria\Web\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\ResultsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\ContactDetailsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\BulletPointsTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\ContentTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\IndustriesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\IsFlaggedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\CreatedTimeTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\SalaryTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\HasViewedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\HasAppliedTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\LocationTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\TitleTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\JobTypesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Results\Display\Web\IsNewTests.cs" />
+    <Compile Include="Members\Jobs\Search\Seo\AnalyticsTests.cs" />
+    <Compile Include="Members\Jobs\Seo\SimilarJobsTests.cs" />
+    <Compile Include="Members\Profile\ProfileRedirectTests.cs" />
+    <Compile Include="Members\Resources\ResourcesRedirectTests.cs" />
+    <Compile Include="Navigation\RoutingRedirectTests.cs" />
+    <Compile Include="Emails\EmailsTests.cs" />
+    <Compile Include="Emails\EmailUnsubscribeLinksTests.cs" />
+    <Compile Include="Emails\VerticalEmailLinksTests.cs" />
+    <Compile Include="Employers\Candidates\ActionCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\ApiActionCreditsTests.cs" />
+    <Compile Include="Employers\ApiTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\ApiBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\ApiCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\ApiGetBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\ApiPermanentCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\ApiTemporaryCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\PaginationTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\SortOrderTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\BlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\ActionCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\ApiActionCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\AccessTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\ApiCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\ApiGetJobAdsTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\ApiJobAdsTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\ManageCandidates\JobAdApplicationsTests.cs" />
+    <Compile Include="Employers\Candidates\JobAds\ManageCandidates\ManageCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiSendMessagesCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\ApiPhoneNumberTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\ApiPhoneNumbersCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\ApiDownloadCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\ApiEmailCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\DownloadCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\DownloadTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\ApiUnlockCreditLimitsTests.cs" />
+    <Compile Include="Employers\Candidates\Views\ViewBugTests.cs" />
+    <Compile Include="Employers\Candidates\Views\VisaStatusTests.cs" />
+    <Compile Include="Employers\Candidates\Views\HighestEducationLevelTests.cs" />
+    <Compile Include="Employers\Candidates\Views\RecentProfessionSeniorityTests.cs" />
+    <Compile Include="Employers\Candidates\Views\SalaryTests.cs" />
+    <Compile Include="Employers\Candidates\Views\LocationTests.cs" />
+    <Compile Include="Employers\Candidates\Views\JobsTests.cs" />
+    <Compile Include="Employers\Candidates\Views\ViewsTests.cs" />
+    <Compile Include="Employers\Home\HomeTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderCouponLinkTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderCouponTests.cs" />
+    <Compile Include="Employers\Search\AccountsTests.cs" />
+    <Compile Include="Employers\Search\ApiSearchesTests.cs" />
+    <Compile Include="Employers\Search\BackToSearch\BlockListBackToSearchTests.cs" />
+    <Compile Include="Employers\Search\Communities\CommunitySiteSearchTests.cs" />
+    <Compile Include="Employers\Search\Communities\CommunityTests.cs" />
+    <Compile Include="Employers\Search\Communities\CommunitySearchSnippetTests.cs" />
+    <Compile Include="Employers\Search\Communities\CommunitySearchTests.cs" />
+    <Compile Include="Employers\Search\Criteria\CommunityTests.cs" />
+    <Compile Include="Employers\Search\BackToSearch\FlagListBackToSearchTests.cs" />
+    <Compile Include="Employers\Search\Criteria\DesiredJobTitleTests.cs" />
+    <Compile Include="Employers\Search\Criteria\JobTitleTests.cs" />
+    <Compile Include="Employers\Search\Criteria\CriteriaTests.cs" />
+    <Compile Include="Employers\Search\Criteria\IsUnlockedTests.cs" />
+    <Compile Include="Employers\Search\Criteria\LocationTests.cs" />
+    <Compile Include="Employers\Search\CurrentSearchBlockListTests.cs" />
+    <Compile Include="Employers\Search\Criteria\EducationTests.cs" />
+    <Compile Include="Employers\Search\Criteria\EmployerTests.cs" />
+    <Compile Include="Employers\Search\BackToSearch\FolderBackToSearchTests.cs" />
+    <Compile Include="Employers\Search\Criteria\IndigenousTests.cs" />
+    <Compile Include="Employers\Search\MultipleEngines\MultipleEnginesTests.cs" />
+    <Compile Include="Employers\Search\Results\CommunityTests.cs" />
+    <Compile Include="Employers\Search\Results\HighlightedTests.cs" />
+    <Compile Include="Employers\Search\Results\TestDataContactNumbersTests.cs" />
+    <Compile Include="Employers\Search\Results\MemberAccountsTests.cs" />
+    <Compile Include="Employers\Candidates\Views\RelocationTests.cs" />
+    <Compile Include="Employers\Search\Results\PhoneNumbers\PhoneNumbersTests.cs" />
+    <Compile Include="Employers\Search\Results\ResumeLastUpdatedTests.cs" />
+    <Compile Include="Employers\Search\Results\SalaryTests.cs" />
+    <Compile Include="Employers\ProfileTests.cs" />
+    <Compile Include="FrontEnd\Employers\Homepage\HomepageTest.cs" />
+    <Compile Include="Employers\Search\Searches\SearchesTests.cs" />
+    <Compile Include="FrontEnd\Employers\JobAds\IntegrateJobAdsWithLeftHandNavTests.cs" />
+    <Compile Include="Employers\Search\Criteria\KeywordsTests.cs" />
+    <Compile Include="Employers\Search\Criteria\NameTests.cs" />
+    <Compile Include="Employers\Search\Criteria\RecencyTests.cs" />
+    <Compile Include="Employers\Search\Criteria\SalaryTests.cs" />
+    <Compile Include="Employers\Search\Criteria\HasViewedTests.cs" />
+    <Compile Include="Employers\Search\SearchTests.cs" />
+    <Compile Include="Employers\CandidateListsTests.cs" />
+    <Compile Include="Employers\Candidates\CreditInfo.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\ApiCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\ApiFlagListsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\FlagListsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\PaginationTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\SortOrderTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiCandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiDeleteFolderTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiGetFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiNewFolderTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ApiRenameFolderTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\CandidatesTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\FoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\PaginationTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\SortOrderTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiAttachmentsTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiMessagesTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiSendMessagesTests.cs" />
+    <Compile Include="Employers\Candidates\Messages\ApiSendMessagesCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\ApiDeleteNotesTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\ApiEditNotesTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\ApiGetNotesTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\ApiNewNotesTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\ApiNotesTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\ApiPhoneNumbersCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\Photos\PhotosTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\ApiDownloadCreditsTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employers\Candidates\Resumes\ApiEmailCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\BackTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\DownloadCreditsTests.cs" />
+    <Compile Include="Employers\Candidates\Resumes\ResumesTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\ApiUnlockCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\JobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\ViewJobAdsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\ManageFoldersTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderAccountTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderAllocationsTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderCommunityTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderDataTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderPriceTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderWizardTests.cs" />
+    <Compile Include="Employers\Products\NewOrders\NewOrderValidationTests.cs" />
+    <Compile Include="Employers\Products\ProductsTests.cs" />
+    <Compile Include="Employers\Products\SecurityTests.cs" />
+    <Compile Include="Employers\Products\ViewOrders\ViewChildOrganisationOrdersTests.cs" />
+    <Compile Include="Employers\Products\ViewOrders\ViewUnverifiedOrganisationOrdersTests.cs" />
+    <Compile Include="Employers\Products\ViewOrders\ViewOrdersTests.cs" />
+    <Compile Include="Employers\Products\ViewOrders\ViewParentOrganisationOrdersTests.cs" />
+    <Compile Include="Employers\Searches\SearchesTests.cs" />
+    <Compile Include="Employers\Search\SortOrderTests.cs" />
+    <Compile Include="Employers\Security\SecurityTests.cs" />
+    <Compile Include="FrontEnd\Extension\BrowserIeExtension.cs" />
+    <Compile Include="FrontEnd\Member\JobAd\CareerOneTest.cs" />
+    <Compile Include="FrontEnd\WatiN\WatiNTest.cs" />
+    <Compile Include="HomePage\AccessTests.cs" />
+    <Compile Include="HomePage\DataTests.cs" />
+    <Compile Include="HomePage\HomeRedirectTests.cs" />
+    <Compile Include="HomePage\HttpTests.cs" />
+    <Compile Include="HomePage\PreferredUserTypeTests.cs" />
+    <Compile Include="Integration\IntegrationTests.cs" />
+    <Compile Include="Integration\JobAds\JobApplicationTests.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\JobAdIdsTest.cs" />
+    <Compile Include="Integration\JobAds\GetJobAds\JobAdsTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\ParentOrganisationCreditTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\OrganisationCreditTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\EmployerCreditTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostJobAdContentTests.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostJobAdCreditTests.cs" />
+    <Compile Include="Landing\JobSearchTests.cs" />
+    <Compile Include="Landing\LandingTests.cs" />
+    <Compile Include="Accounts\ReturnUrlTests.cs" />
+    <Compile Include="Members\Friends\RepresentativesFlowTests.cs" />
+    <Compile Include="Members\Friends\RepresentativesTests.cs" />
+    <Compile Include="Members\Friends\ViewRepresentativeTests.cs" />
+    <Compile Include="Members\Friends\ViewRepresenteesTests.cs" />
+    <Compile Include="Members\Jobs\Alerts\AlertsTests.cs" />
+    <Compile Include="Members\Jobs\Alerts\AnonymousUserAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Alerts\RegisteredUserAlertsTests.cs" />
+    <Compile Include="Members\Jobs\Api\ApiViewedTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\AnonymousTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\AppliedForExternallyTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\ErrorTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\JoinTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\AppliedForExternally\LoggedInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\AnonymousTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\ErrorTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\IntegrationTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\AnonymousTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\QuestionsTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\JoinTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInLastUsedResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInProfileTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LoggedInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JobG8\JobG8Tests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\JoinTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\LoggedInLastUsedResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\LoggedInProfileTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\LoggedInResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\LoggedInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedExternally\ManagedExternallyTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\AnonymousTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\ErrorTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\JoinTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\ManagedInternallyTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\LoggedInLastUsedResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\LoggedInProfileTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\LoggedInResumeTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\LoggedInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ManagedInternally\Web\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Applications\Previous\Web\WebPreviousApplicationsTests.cs" />
+    <Compile Include="Members\Jobs\Api\ApiExternallyAppliedTests.cs" />
+    <Compile Include="Members\Jobs\CareerOneApplyTests.cs" />
+    <Compile Include="Members\Jobs\Communities\CommunityTests.cs" />
+    <Compile Include="Members\Jobs\Communities\LoggedInViewTests.cs" />
+    <Compile Include="Members\Jobs\Communities\NotLoggedInViewTests.cs" />
+    <Compile Include="Members\Jobs\Communities\ViewTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\DisplayBugTests.cs" />
+    <Compile Include="Members\Jobs\Display\DisplayTests.cs" />
+    <Compile Include="Members\Jobs\Email\ApiEmailJobAdTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\TitleTests.cs" />
+    <Compile Include="Members\Jobs\GetJobTests.cs" />
+    <Compile Include="Members\Jobs\JobsTests.cs" />
+    <Compile Include="Members\Jobs\MultipleEngines\MultipleEnginesTests.cs" />
+    <Compile Include="Members\Jobs\Overlays\OverlaysTests.cs" />
+    <Compile Include="Members\Jobs\Search\AdSense\AdSenseTests.cs" />
+    <Compile Include="Members\Jobs\Search\Industries\IndustriesTests.cs" />
+    <Compile Include="Members\Jobs\Search\Searches\ApiSaveSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\SearchTests.cs" />
+    <Compile Include="Members\Jobs\Seo\CareerOneJobTests.cs" />
+    <Compile Include="Members\Jobs\Seo\StandardJobTests.cs" />
+    <Compile Include="Members\Jobs\Seo\JobsTests.cs" />
+    <Compile Include="Members\Jobs\Seo\JobTests.cs" />
+    <Compile Include="Members\Jobs\Seo\SeoTests.cs" />
+    <Compile Include="Members\Profile\Api\ApiTests.cs" />
+    <Compile Include="Members\Profile\Api\ContactDetailsTests.cs" />
+    <Compile Include="Members\Profile\Api\CareerObjectivesTests.cs" />
+    <Compile Include="Members\Profile\Api\ProfileStatusTests.cs" />
+    <Compile Include="Members\Profile\Api\RemoveSchoolTests.cs" />
+    <Compile Include="Members\Profile\Api\OtherTests.cs" />
+    <Compile Include="Members\Profile\Api\EducationTests.cs" />
+    <Compile Include="Members\Profile\Api\EmploymentHistoryTests.cs" />
+    <Compile Include="Members\Profile\Api\DesiredJobTests.cs" />
+    <Compile Include="Members\Profile\Api\RemoveJobTests.cs" />
+    <Compile Include="Members\Profile\Api\SendResumeTests.cs" />
+    <Compile Include="Members\Profile\Api\SetCurrentTests.cs" />
+    <Compile Include="Members\Profile\Api\VisibilityTests.cs" />
+    <Compile Include="Members\Profile\Partials\CareerObjectivesTests.cs" />
+    <Compile Include="Members\Profile\Partials\ContactDetailsTests.cs" />
+    <Compile Include="Members\Profile\Partials\OtherTests.cs" />
+    <Compile Include="Members\Profile\Partials\EducationTests.cs" />
+    <Compile Include="Members\Profile\Partials\EmploymentHistoryTests.cs" />
+    <Compile Include="Members\Profile\Partials\DesiredJobTests.cs" />
+    <Compile Include="Members\Profile\Partials\PartialProfileTests.cs" />
+    <Compile Include="Members\Profile\Photos\PhotosTests.cs" />
+    <Compile Include="Members\Profile\ProfileTests.cs" />
+    <Compile Include="Members\Profile\Resumes\DownloadResumeTests.cs" />
+    <Compile Include="Members\Profile\StateTests.cs" />
+    <Compile Include="Members\Profile\Resumes\UploadTests.cs" />
+    <Compile Include="Members\Profile\Resumes\DownloadTests.cs" />
+    <Compile Include="Members\Profile\Resumes\ResumesTests.cs" />
+    <Compile Include="Members\Profile\Api\EmailTests.cs" />
+    <Compile Include="Members\Profile\Status\CandidateLookingConfirmationEmailTests.cs" />
+    <Compile Include="Members\Profile\Status\CandidateLookingNotificationEmailTests.cs" />
+    <Compile Include="Members\Profile\Status\CandidatePassiveNotificationEmailTests.cs" />
+    <Compile Include="Members\Profile\Status\CandidateAvailableConfirmationEmailTests.cs" />
+    <Compile Include="Members\Profile\Status\StatusTests.cs" />
+    <Compile Include="Members\Resources\MultipleEngines\MultipleEnginesTests.cs" />
+    <Compile Include="Members\Settings\DeactivateTests.cs" />
+    <Compile Include="Members\Settings\EditSettingsTests.cs" />
+    <Compile Include="Members\Settings\EmailTests.cs" />
+    <Compile Include="Members\Settings\ExternalLoginTests.cs" />
+    <Compile Include="Members\Settings\SettingsTests.cs" />
+    <Compile Include="Errors\ErrorsTests.cs" />
+    <Compile Include="Navs\CustodianNavTests.cs" />
+    <Compile Include="Navigation\RedirectTests.cs" />
+    <Compile Include="Navigation\SecurityRedirectTests.cs" />
+    <Compile Include="Employers\Search\BackToSearch\BackToSearchTests.cs" />
+    <Compile Include="Employers\Search\TestDataCandidatesTests.cs" />
+    <Compile Include="Public\Deprecated\BlogsTests.cs" />
+    <Compile Include="Public\Join\Activate\ActivateTests.cs" />
+    <Compile Include="Public\Join\AccountTests.cs" />
+    <Compile Include="Public\Join\Api\ApiJoinTests.cs" />
+    <Compile Include="Public\Join\EmailTests.cs" />
+    <Compile Include="Public\Join\JobDetails\CitizenshipTests.cs" />
+    <Compile Include="Public\Join\JobDetails\SecondaryEmailAddressTests.cs" />
+    <Compile Include="Public\Join\JobDetails\DateOfBirthTests.cs" />
+    <Compile Include="Public\Join\JobDetails\ExternalReferralTests.cs" />
+    <Compile Include="Public\Join\JobDetails\IndustryTests.cs" />
+    <Compile Include="Public\Join\JobDetails\RecentProfessionTests.cs" />
+    <Compile Include="Public\Join\JobDetails\DesiredJobTitleTests.cs" />
+    <Compile Include="Public\Join\JobDetails\DesiredJobTypesTests.cs" />
+    <Compile Include="Public\Join\JobDetails\EthnicStatusTests.cs" />
+    <Compile Include="Public\Join\JobDetails\FieldsTests.cs" />
+    <Compile Include="Public\Join\JobDetails\GenderTests.cs" />
+    <Compile Include="Public\Join\JobDetails\HighestEducationTests.cs" />
+    <Compile Include="Public\Join\JobDetails\JobCompanyTests.cs" />
+    <Compile Include="Public\Join\JobDetails\JobTitleTests.cs" />
+    <Compile Include="Public\Join\JobDetails\RecentSeniorityTests.cs" />
+    <Compile Include="Public\Join\JobDetails\RelocationLocationsTests.cs" />
+    <Compile Include="Public\Join\JobDetails\RelocationPreferenceTests.cs" />
+    <Compile Include="Public\Join\JobDetails\SecondaryPhoneTests.cs" />
+    <Compile Include="Public\Join\JobDetails\VisaStatusTests.cs" />
+    <Compile Include="Api\Resumes\ParseApiTests.cs" />
+    <Compile Include="Public\Join\JoinParameterTests.cs" />
+    <Compile Include="Public\Join\ParseTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\AcceptTermsTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\DesiredSalaryTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\ErrorTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\PasswordTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\PhoneNumberTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\CountryTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\EmailAddressTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\LocationTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\LastNameTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\FirstNameTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\FieldsTests.cs" />
+    <Compile Include="Api\Resumes\ResumesApiTests.cs" />
+    <Compile Include="Public\Join\JoinTests.cs" />
+    <Compile Include="Public\Join\JoinWizardTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\SalaryVisibilityTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\StatusTests.cs" />
+    <Compile Include="Public\Join\PersonalDetails\VisibilityTests.cs" />
+    <Compile Include="Api\Resumes\UploadApiTests.cs" />
+    <Compile Include="Public\Join\JoinRedirectTests.cs" />
+    <Compile Include="Public\Join\UploadTests.cs" />
+    <Compile Include="Reports\LogInTests.cs" />
+    <Compile Include="Members\Jobs\Display\Web\LocationTests.cs" />
+    <Compile Include="location\ResolveLocationTest.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\AdvancedSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\CommunityTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\LoggedInAdvancedSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\NotLoggedInAdvancedSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\LoggedInSimpleSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\NotLoggedInSimpleSearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\SearchTests.cs" />
+    <Compile Include="Members\Jobs\Search\Communities\SimpleSearchTests.cs" />
+    <Compile Include="Employers\Search\Credits\AnonymousTests.cs" />
+    <Compile Include="Employers\Search\Credits\CreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedNoAllocationsTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedNoCreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedNoCreditsUsedCreditTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedSomeCreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedSomeCreditsUsedCreditTests.cs" />
+    <Compile Include="Employers\Search\Credits\UnverifiedUnlimitedCreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedNoAllocationsTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedNoCreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedNoCreditsUsedCreditTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedSomeCreditsTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedSomeCreditsUsedCreditTests.cs" />
+    <Compile Include="Employers\Search\Credits\VerifiedUnlimitedCreditsTests.cs" />
+    <Compile Include="AAspxPrecompile.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Emails\EmailLinksTests.cs" />
+    <Compile Include="AutoSuggestHelperTest.cs" />
+    <Compile Include="Members\Jobs\BrowseJobsTests.cs" />
+    <Compile Include="LinksAndCSSClassTest.cs" />
+    <Compile Include="Navigation\NavigationManagerTests.cs" />
+    <Compile Include="Navs\AdministratorNavTests.cs" />
+    <Compile Include="Navs\AnonymousEmployerNavTests.cs" />
+    <Compile Include="Navs\EmployerNavTests.cs" />
+    <Compile Include="Navs\AnonymousMemberNavTests.cs" />
+    <Compile Include="Navs\MemberNavTests.cs" />
+    <Compile Include="Navs\NavTests.cs" />
+    <Compile Include="Navigation\RewriteTests.cs" />
+    <Compile Include="Navigation\SeoTests.cs" />
+    <Compile Include="service\GetFileTests.cs" />
+    <Compile Include="service\GetProfessionalTitlesTest.cs" />
+    <Compile Include="Integration\JobAds\ResumeTests.cs" />
+    <Compile Include="service\GetStructuredLocationsTest.cs" />
+    <Compile Include="service\InvitationPopupContentsTest.cs" />
+    <Compile Include="Integration\JobAds\PostJobAds\PostJobAdsTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="service\SampleTest.cs" />
+    <Compile Include="ATestOfTests.cs" />
+    <Compile Include="Integration\JobAds\SetJobApplicationStatusTests.cs" />
+    <Compile Include="Support\AboutUsTests.cs" />
+    <Compile Include="Support\ContactUsTests.cs" />
+    <Compile Include="Support\CareersTests.cs" />
+    <Compile Include="Support\ApiContactUsTests.cs" />
+    <Compile Include="Support\PrivacyDetailTests.cs" />
+    <Compile Include="Support\TermsDetailTests.cs" />
+    <Compile Include="Support\PrivacyTests.cs" />
+    <Compile Include="Support\SupportTests.cs" />
+    <Compile Include="Support\TermsTests.cs" />
+    <Compile Include="Tasks\SuggestedCandidatesEmailTaskTest.cs" />
+    <Compile Include="Accounts\ActivationTests.cs" />
+    <Compile Include="Members\Settings\CommunicationSettingsTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdCreditTests.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\NewJobAdInputTests.cs" />
+    <Compile Include="ui\registered\Employers\SavedResumeSearchesTests.cs" />
+    <Compile Include="Accounts\Settings\UnsubscribeTests.cs" />
+    <Compile Include="ui\WebFormDataTestCase.cs" />
+    <Compile Include="Members\Friends\FindFriendsTests.cs" />
+    <Compile Include="Members\Friends\ViewFriendsTests.cs" />
+    <Compile Include="Members\Friends\ViewFriendTests.cs" />
+    <Compile Include="Members\Friends\NewMemberInvitationTests.cs" />
+    <Compile Include="Members\Friends\ViewFriendsFriendsTests.cs" />
+    <Compile Include="Members\Settings\VisibilitySettingsBasicTests.cs" />
+    <Compile Include="ui\ReferrerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\registered\AcceptServerNameMismatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounts\NotActivatedTests.cs" />
+    <Compile Include="Administrators\Employers\EditEmployerTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Administrators\Members\EditMemberTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Administrators\Employers\SearchEmployersTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounts\ChangeEmailsTests.cs" />
+    <Compile Include="Employers\Settings\SettingsTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employers\JobAds\MaintainJobAds\JobAdListTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounts\EmployerJoinTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employers\JobAds\MaintainJobAds\MaintainJobAdTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\Friends\InviteFriendsTests.cs" />
+    <Compile Include="Members\Jobs\Applications\ApplyTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounts\MustChangePasswordTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\registered\LoginStatsTest.cs" />
+    <Compile Include="Employers\JobAds\MaintainJobAds\PostJobAdsTests.cs" />
+    <Compile Include="Members\Friends\InvitationsTests.cs" />
+    <Compile Include="Employers\JobAds\NewApplicantsTests.cs" />
+    <Compile Include="Accounts\NewPasswordTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\rolebasedsecurity\RoleBasedSecurityTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\SecurityTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\Jobs\Display\Web\SalaryTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="communities\ActivateBrandingTests.cs" />
+    <Compile Include="communities\EmployerJoinTests.cs" />
+    <Compile Include="communities\Specific\AutopeopleTests.cs" />
+    <Compile Include="communities\Specific\ItWireTests.cs" />
+    <Compile Include="communities\Specific\MonashGsbTests.cs" />
+    <Compile Include="communities\Specific\PgaTests.cs" />
+    <Compile Include="communities\Specific\RcsaTests.cs" />
+    <Compile Include="communities\Specific\ScoutsTests.cs" />
+    <Compile Include="communities\Specific\SpecificCommunityTests.cs" />
+    <Compile Include="communities\CommunityTests.cs" />
+    <Compile Include="WebTestClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Employers\Search\Results\TestData\Primary.eml" />
+    <None Include="Employers\Search\Results\TestData\Secondary.eml" />
+    <None Include="res\test\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agents\Agents.csproj">
+      <Project>{29B2CC57-2147-424E-BEF6-D86A4B5C8A70}</Project>
+      <Name>Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agents\Test\Agents.Test.csproj">
+      <Project>{E91FED87-821E-4CE1-89E4-C0C127E3C228}</Project>
+      <Name>Agents.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Api\Test\Api.Test.csproj">
+      <Project>{BE30FC8D-F38B-44CD-9E3E-95A30084C67A}</Project>
+      <Name>Api.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Asp\Asp.csproj">
+      <Project>{4430078D-3F59-472A-8B0A-F2515609570D}</Project>
+      <Name>Asp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Asp\Test\Asp.Test.csproj">
+      <Project>{036C23EC-BD70-4278-B34A-54FF05312FB7}</Project>
+      <Name>Asp.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{BFBECF45-C404-48B3-A246-C7005A949810}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Integration\Integration.csproj">
+      <Project>{76521752-1E42-4D00-A684-F57FFA9ADD27}</Project>
+      <Name>Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Integration\Test\Integration.Test.csproj">
+      <Project>{CB85E971-8661-4027-9061-E7FEB37CD7E2}</Project>
+      <Name>Integration.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Management\Management.csproj">
+      <Project>{69706DF8-269D-430E-8200-9EF68B0AC597}</Project>
+      <Name>Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Management\Test\Management.Test.csproj">
+      <Project>{F4BA6CC9-45B0-49CF-84D1-A168B4F6289E}</Project>
+      <Name>Management.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mocks\Mocks.csproj">
+      <Project>{4809C1EE-0984-4F32-8633-F571012BEEAA}</Project>
+      <Name>Mocks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation\Presentation.csproj">
+      <Project>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation\Test\Presentation.Test.csproj">
+      <Project>{EB5C61A9-4201-4E44-B7D5-30B695E2D525}</Project>
+      <Name>Presentation.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{23BDC76F-D52E-4F6D-8AE4-33224D02A6FA}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Test\Services.Test.csproj">
+      <Project>{1EA344B4-045D-4F42-B053-31998FF38D20}</Project>
+      <Name>Services.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskRunner\TaskRunner.csproj">
+      <Project>{C6F82299-6FB8-434A-9DAC-87FFC2EB1DF3}</Project>
+      <Name>TaskRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskRunner\Test\TaskRunner.Test.csproj">
+      <Project>{92B8DCE5-184A-4281-9C0E-D5B089276122}</Project>
+      <Name>TaskRunner.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Test\Utility.Test.csproj">
+      <Project>{617CD682-C920-46F8-9471-CAAD2881B6AE}</Project>
+      <Name>Utility.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{48F7E3B6-D00D-45DA-9AB2-148779E0B949}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControls\WebControls.csproj">
+      <Project>{C1DB46DE-B26A-46CE-80AB-E4DB57487EC1}</Project>
+      <Name>WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\Test\Web.Test.csproj">
+      <Project>{57C00274-261A-4D68-8532-E356728C58C2}</Project>
+      <Name>Web.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\Web.csproj">
+      <Project>{05D5A16E-A22B-4BF4-8FB0-4D019E644079}</Project>
+      <Name>Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow\Components\Workflow.Components.csproj">
+      <Project>{D066694D-03F7-45A7-AD6E-A87267A28DC7}</Project>
+      <Name>Workflow.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow\Test\Workflow.Test.csproj">
+      <Project>{238FC049-401D-4375-AF68-9BFC90C89B87}</Project>
+      <Name>Workflow.Test</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,27 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Test">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TestAssemblies Include="$(SourceRootDirectory)Agents\Test\bin\LinkMe.Apps.Agents.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Utility\Test\bin\LinkMe.Apps.Utility.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Presentation\Test\bin\LinkMe.Apps.Presentation.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Workflow\Test\bin\LinkMe.Apps.Workflow.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Web\Test\bin\LinkMe.Apps.Web.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Asp\Test\bin\LinkMe.Apps.Asp.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Services\Test\bin\LinkMe.Apps.Services.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)TaskRunner\Test\bin\LinkMe.TaskRunner.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Reports\Test\bin\LinkMe.Apps.Reports.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Integration\Test\bin\LinkMe.Apps.Integration.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Management\Test\bin\LinkMe.Apps.Management.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)AcceptanceTest\bin\LinkMe.AcceptanceTest.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Api\Test\bin\LinkMe.Apps.Api.Test.dll" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemTest.proj" />
+
+</Project>

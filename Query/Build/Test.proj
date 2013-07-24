@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Test">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TestAssemblies Include="$(SourceRootDirectory)Search\Test\bin\LinkMe.Query.Search.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Reports\Test\bin\LinkMe.Query.Reports.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Search\Engine\Test\bin\LinkMe.Query.Search.Engine.Test.dll" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemTest.proj" />
+
+</Project>

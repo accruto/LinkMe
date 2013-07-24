@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Instrumentation" Class="TrackingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=Instrumentation;Integrated Security=True" SettingsObjectName="LinkMe.Apps.Tracking.Properties.Settings" SettingsPropertyName="InstrumentationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TrackingCommunication" Member="TrackingCommunicationEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sent" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="definition" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="vertical" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationLinkClicked" Member="TrackingCommunicationLinkClickedEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationLinkClickedEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clicked" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationLink" Member="TrackingCommunicationLinkEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationLinkEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="communicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="instance" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingCommunicationOpened" Member="TrackingCommunicationOpenedEntities" AccessModifier="Internal">
+    <Type Name="TrackingCommunicationOpenedEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="opened" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrackingRequest" Member="TrackingRequestEntities" AccessModifier="Internal">
+    <Type Name="TrackingRequestEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sessionId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="queryString" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="referrerUrl" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="referrerQueryString" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="clientHostName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="clientHostAddress" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="clientAgent" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="serverHostName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="serverProcessId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Function Name="dbo.TrackingInsertCommunication" Method="TrackingInsertCommunication">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="sent" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="definition" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="vertical" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="userId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="emailAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TrackingInsertCommunicationLink" Method="TrackingInsertCommunicationLink">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="communicationId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="link" Type="System.String" DbType="NVarChar(1024)" />
+    <Parameter Name="instance" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TrackingInsertCommunicationLinkClicked" Method="TrackingInsertCommunicationLinkClicked">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="communicationId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="clicked" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TrackingInsertCommunicationOpened" Method="TrackingInsertCommunicationOpened">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="opened" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

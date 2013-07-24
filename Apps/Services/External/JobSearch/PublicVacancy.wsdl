@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s1="http://schemas.xmlsoap.org/ws/2002/04/secext" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.dewr.gov.au/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.dewr.gov.au/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.dewr.gov.au/">
+      <s:element name="VacancyAddandMatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="request" type="tns:ExtVacancyAddPublicRequestData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtVacancyAddPublicRequestData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="orgCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="employerID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="occupationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="yourReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancySuburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyPostcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="positionLimit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="workType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="duration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="daysToExpiry" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="howToApplyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="kioskDisplayFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactEmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressSuburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressPostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="jobHoursDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="indigenousJobFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="numberOfNotificationsSent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="alternateJobType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="stateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="salary" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="returnMatchesFlag" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyAddandMatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VacancyAddandMatchResult" type="tns:ExtVacancyAddResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtVacancyAddResponseData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="vacancyID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="employerID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="integrityControlNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LodgementSuccessFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobSeekerMatches" type="tns:ArrayOfJobSeekerMatchItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfJobSeekerMatchItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JobSeekerMatchItem" type="tns:JobSeekerMatchItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JobSeekerMatchItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="JobSeekerID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobMatchPreferenceID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rank" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResumeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobSeekerSkillText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreferredDeliveryMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WsgInSoapHeader" type="tns:WsgInSoapHeader" />
+      <s:complexType name="WsgInSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionSettings" type="tns:SessionSettings" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SessionSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="org" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="site" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WsgOutSoapHeader" type="tns:WsgOutSoapHeader" />
+      <s:complexType name="WsgOutSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="transactionId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="executionStatus" type="tns:EsiExecutionStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:ArrayOfEsiMessage" />
+          <s:element minOccurs="0" maxOccurs="1" name="reserved" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EsiExecutionStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Failed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfEsiMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EsiMessage" type="tns:EsiMessage" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EsiMessage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:EsiMessageType" />
+          <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="help" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tag" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EsiMessageType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Error" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="Information" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="VacancyUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="request" type="tns:ExtVacancyUpdatePublicRequestData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtVacancyUpdatePublicRequestData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="vacancyID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="integrityControlNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="orgCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="employerID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="occupationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="yourReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancySuburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyPostcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="positionLimit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="workType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="duration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="daysToExpiry" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="howToApplyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="kioskDisplayFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactEmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressSuburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressPostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="jobHoursDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="indigenousJobFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="numberOfNotificationsSent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="alternateJobType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="stateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="salary" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VacancyUpdateResult" type="tns:ExtVacancyUpdateResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtVacancyUpdateResponseData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="recordsAffected" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="integrityControlNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateSuccessFlag" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="request" type="tns:VacancyDeleteRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VacancyDeleteRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="vacancyID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="integrityControlNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="afterHourAccess" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VacancyDeleteResult" type="tns:VacancyDeleteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VacancyDeleteResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="recordsAffected" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyGetDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="request" type="tns:VacancyGetDetailsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VacancyGetDetailsRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="vacancyID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="userDefinedVacancyID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VacancyGetDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VacancyGetDetailsResult" type="tns:VacancyGetDetailsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VacancyGetDetailsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="vacancyID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="integrityControlNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="organisationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="employerID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="occupationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="postCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VacancyDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacancyType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="skills" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="workType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="positionLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="referralLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="referralsMade" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="duration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="expiryDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="howToApplyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="followUpFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="thirdPartyDisplayFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="kioskDisplayFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="display" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactPhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactFaxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactEmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressLine3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressSuburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactAddressPostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlternateJobType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numberOfNotificationsSent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="onHireCompanyFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="relationshipToOnHire" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="autoMatchFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="stateCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="createDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="modifiedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="jobHoursDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userDefinedVacancyID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="indigenousJobFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="statusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="employerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="positionsAvailable" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="referralsAvailable" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="jobseekerFlexFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="areaDisplayCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numUnregisteredPlacements" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="inactivatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="claimFlag" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="esaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="newspaperMatchingArea" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="salary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentPhoneContactNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentFaxNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="agentEmailAddr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ignoreSiteUpdateFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="caseloadMatchFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="anticipatedVacancyFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="migrantFriendly" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="licences" type="tns:ArrayOfLicenceItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="anticipatedToStart" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobWAEligible" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="wageAssistPlaces" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="placementType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLicenceItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="licenceItem" type="tns:licenceItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="licenceItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="licenceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenceState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenceDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.xmlsoap.org/ws/2002/04/secext">
+      <s:element name="Security" type="s1:Security" />
+      <s:complexType name="Security">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UsernameToken" type="s1:SecurityUsernameToken" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinarySecurityToken" type="s1:SecurityBinarySecurityToken" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordToken" type="s1:SecurityChangePasswordToken" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SecurityUsernameToken">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s1:Username" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s1:Password" />
+        </s:sequence>
+        <s:attribute name="ValueType" type="s:string" />
+      </s:complexType>
+      <s:complexType name="Username">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="Id" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="Password">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="Id" type="s:string" />
+            <s:attribute name="ValueType" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="SecurityBinarySecurityToken">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="Id" type="s:string" />
+            <s:attribute name="ValueType" type="s:string" />
+            <s:attribute name="EncodingType" type="s:string" />
+            <s:attribute name="Created" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="SecurityChangePasswordToken">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s1:Username" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldPassword" type="s1:Password" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s1:Password" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VacancyAddandMatchSoapIn">
+    <wsdl:part name="parameters" element="tns:VacancyAddandMatch" />
+  </wsdl:message>
+  <wsdl:message name="VacancyAddandMatchSoapOut">
+    <wsdl:part name="parameters" element="tns:VacancyAddandMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="VacancyAddandMatchWsgInSoapHeader">
+    <wsdl:part name="WsgInSoapHeader" element="tns:WsgInSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyAddandMatchWsgOutSoapHeader">
+    <wsdl:part name="WsgOutSoapHeader" element="tns:WsgOutSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyAddandMatchSecurity">
+    <wsdl:part name="Security" element="s1:Security" />
+  </wsdl:message>
+  <wsdl:message name="VacancyUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:VacancyUpdate" />
+  </wsdl:message>
+  <wsdl:message name="VacancyUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:VacancyUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="VacancyUpdateWsgInSoapHeader">
+    <wsdl:part name="WsgInSoapHeader" element="tns:WsgInSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyUpdateWsgOutSoapHeader">
+    <wsdl:part name="WsgOutSoapHeader" element="tns:WsgOutSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyUpdateSecurity">
+    <wsdl:part name="Security" element="s1:Security" />
+  </wsdl:message>
+  <wsdl:message name="VacancyDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:VacancyDelete" />
+  </wsdl:message>
+  <wsdl:message name="VacancyDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:VacancyDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="VacancyDeleteWsgInSoapHeader">
+    <wsdl:part name="WsgInSoapHeader" element="tns:WsgInSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyDeleteWsgOutSoapHeader">
+    <wsdl:part name="WsgOutSoapHeader" element="tns:WsgOutSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyDeleteSecurity">
+    <wsdl:part name="Security" element="s1:Security" />
+  </wsdl:message>
+  <wsdl:message name="VacancyGetDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:VacancyGetDetails" />
+  </wsdl:message>
+  <wsdl:message name="VacancyGetDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:VacancyGetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="VacancyGetDetailsWsgInSoapHeader">
+    <wsdl:part name="WsgInSoapHeader" element="tns:WsgInSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyGetDetailsWsgOutSoapHeader">
+    <wsdl:part name="WsgOutSoapHeader" element="tns:WsgOutSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VacancyGetDetailsSecurity">
+    <wsdl:part name="Security" element="s1:Security" />
+  </wsdl:message>
+  <wsdl:portType name="PublicVacancyLodgementSoap">
+    <wsdl:operation name="VacancyAddandMatch">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add a Vacancy and get staff matches</documentation>
+      <wsdl:input message="tns:VacancyAddandMatchSoapIn" />
+      <wsdl:output message="tns:VacancyAddandMatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VacancyUpdate">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update a Vacancy</documentation>
+      <wsdl:input message="tns:VacancyUpdateSoapIn" />
+      <wsdl:output message="tns:VacancyUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VacancyDelete">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Delete a Vacancy</documentation>
+      <wsdl:input message="tns:VacancyDeleteSoapIn" />
+      <wsdl:output message="tns:VacancyDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VacancyGetDetails">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get the Vacancy Details</documentation>
+      <wsdl:input message="tns:VacancyGetDetailsSoapIn" />
+      <wsdl:output message="tns:VacancyGetDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PublicVacancyLodgementSoap" type="tns:PublicVacancyLodgementSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="VacancyAddandMatch">
+      <soap:operation soapAction="http://www.dewr.gov.au/VacancyAddandMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyAddandMatchWsgInSoapHeader" part="WsgInSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyAddandMatchSecurity" part="Security" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyAddandMatchWsgOutSoapHeader" part="WsgOutSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyAddandMatchSecurity" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VacancyUpdate">
+      <soap:operation soapAction="http://www.dewr.gov.au/VacancyUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyUpdateWsgInSoapHeader" part="WsgInSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyUpdateSecurity" part="Security" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyUpdateWsgOutSoapHeader" part="WsgOutSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyUpdateSecurity" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VacancyDelete">
+      <soap:operation soapAction="http://www.dewr.gov.au/VacancyDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyDeleteWsgInSoapHeader" part="WsgInSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyDeleteSecurity" part="Security" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyDeleteWsgOutSoapHeader" part="WsgOutSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyDeleteSecurity" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VacancyGetDetails">
+      <soap:operation soapAction="http://www.dewr.gov.au/VacancyGetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyGetDetailsWsgInSoapHeader" part="WsgInSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyGetDetailsSecurity" part="Security" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:VacancyGetDetailsWsgOutSoapHeader" part="WsgOutSoapHeader" use="literal" />
+        <soap:header message="tns:VacancyGetDetailsSecurity" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublicVacancyLodgement">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">External Vacancy Lodgement Component.</documentation>
+    <wsdl:port name="PublicVacancyLodgementSoap" binding="tns:PublicVacancyLodgementSoap">
+      <soap:address location="http://ecsn.gov.au/employment/publicvacancylodgement.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

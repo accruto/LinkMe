@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="JobAdsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Query.Search.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JobSearchResult" Member="JobSearchResultEntities" AccessModifier="Internal">
+    <Type Name="JobSearchResultEntity" AccessModifier="Internal">
+      <Column Name="setId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="rank" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobSearchResultSetEntity_JobSearchResultEntity" Member="JobSearchResultSetEntity" ThisKey="setId" OtherKey="id" Type="JobSearchResultSetEntity" IsForeignKey="true" />
+      <Association Name="JobAdEntity_JobSearchResultEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSearchResultSet" Member="JobSearchResultSetEntities" AccessModifier="Internal">
+    <Type Name="JobSearchResultSetEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobSearchResultSetEntity_JobSearchResultEntity" Member="JobSearchResultEntities" ThisKey="id" OtherKey="setId" Type="JobSearchResultEntity" />
+      <Association Name="JobSearchResultSetEntity_JobSearchEntity" Member="JobSearchEntities" ThisKey="id" OtherKey="resultSetId" Type="JobSearchEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSearchCriteria" Member="JobSearchCriteriaEntities" AccessModifier="Internal">
+    <Type Name="JobSearchCriteriaEntity" AccessModifier="Internal">
+      <Column Name="setId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="VarChar(19) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobSearchCriteriaSetEntity_JobSearchCriteriaEntity" Member="JobSearchCriteriaSetEntity" ThisKey="setId" OtherKey="id" Type="JobSearchCriteriaSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSearchCriteriaSet" Member="JobSearchCriteriaSetEntities" AccessModifier="Internal">
+    <Type Name="JobSearchCriteriaSetEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobSearchCriteriaSetEntity_JobSearchCriteriaEntity" Member="JobSearchCriteriaEntities" ThisKey="id" OtherKey="setId" Type="JobSearchCriteriaEntity" />
+      <Association Name="JobSearchCriteriaSetEntity_JobSearchEntity" Member="JobSearchEntities" ThisKey="id" OtherKey="criteriaSetId" Type="JobSearchEntity" />
+      <Association Name="JobSearchCriteriaSetEntity_SavedJobSearchEntity" Member="SavedJobSearchEntities" ThisKey="id" OtherKey="criteriaSetId" Type="SavedJobSearchEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSearch" Member="JobSearchEntities" AccessModifier="Internal">
+    <Type Name="JobSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="context" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="duration" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="startTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resultSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="searcherId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="searcherIp" Type="System.String" DbType="VarChar(39)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="savedSearchId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="channelId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="appId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="JobSearchCriteriaSetEntity_JobSearchEntity" Member="JobSearchCriteriaSetEntity" ThisKey="criteriaSetId" OtherKey="id" Type="JobSearchCriteriaSetEntity" IsForeignKey="true" />
+      <Association Name="JobSearchResultSetEntity_JobSearchEntity" Member="JobSearchResultSetEntity" ThisKey="resultSetId" OtherKey="id" Type="JobSearchResultSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedJobSearch" Member="SavedJobSearchEntities" AccessModifier="Internal">
+    <Type Name="SavedJobSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="alertId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="displayText" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobSearchCriteriaSetEntity_SavedJobSearchEntity" Member="JobSearchCriteriaSetEntity" ThisKey="criteriaSetId" OtherKey="id" Type="JobSearchCriteriaSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAd" Member="JobAdEntities" AccessModifier="Internal">
+    <Type Name="JobAdEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="bulletPoints" Type="System.String" DbType="NVarChar(767)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="content" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerCompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="expiryTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalReferenceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="jobTypes" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUpdatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="maxSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="minSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="packageDetails" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="postcode" Type="System.String" DbType="VarChar(8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="residencyRequired" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="summary" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="brandingLogoImageId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="candidateListId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="contactDetailsId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="positionTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalApplyUrl" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="integratorUserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="cssFilename" Type="System.String" DbType="NVarChar(260)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="salaryRateType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobPosterId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobg8ApplyForm" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="contactCompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="integratorReferenceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hideContactDetails" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="maxParsedSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="minParsedSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hideCompany" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobSearchResultEntity" Member="JobSearchResultEntities" ThisKey="id" OtherKey="jobAdId" Type="JobSearchResultEntity" />
+      <Association Name="JobAdEntity_JobAdIndexingEntity" Member="JobAdIndexingEntity" ThisKey="id" OtherKey="jobAdId" Type="JobAdIndexingEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdIndexing" Member="JobAdIndexingEntities" AccessModifier="Internal">
+    <Type Name="JobAdIndexingEntity" AccessModifier="Internal">
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="modifiedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdIndexingEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.JobAdSetModified" Method="JobAdSetModified">
+    <Parameter Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,135 @@
+/*.file_upload {
+  position: relative;
+  overflow: hidden;
+  direction: ltr;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  background: palegreen;
+  border: 1px solid limegreen;
+}
+
+.file_upload_small {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  font-size: auto;
+  background: palegreen;
+  border: 1px solid limegreen;
+}
+
+.file_upload_large {
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  font-size: 20px;
+  background: palegreen;
+  border: 1px solid limegreen;
+}
+
+.file_upload_highlight {
+  background: lawngreen;
+}*/
+
+.file_upload input {
+  /*position: absolute;
+  top: 0;
+  right: 0;*/
+  margin: 0;
+  /*border: 300px solid transparent;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  filter: alpha(opacity=0);
+  -o-transform: translate(-300px, -300px) scale(10);
+  -moz-transform: translate(-800px, 0) scale(10);*/
+  cursor: pointer;
+}
+
+/*.file_upload iframe, .file_upload button {
+  display: none;
+}*/
+
+#files {
+    padding: 5px 0 0 0;
+    width: 420px;
+}
+
+#files .file {
+    float: none;
+    margin: 7px 0 0 0;
+    width: 420px;
+    height: 16px;
+}
+
+#files .filename {
+    float: left;
+}
+
+#files .filesize {
+    float: left;
+}
+
+.file_upload_progress {
+    float: left;
+    width: 100px;
+    height: 12px;
+    border: solid 1px #CCCCCC;
+    margin: 0 0 0 5px;
+}
+
+.file_upload_cancel {
+    float: left;
+}
+
+.file_delete {
+    float: left;
+}
+
+.file_upload_preview img {
+    width: 80px;
+}
+
+.file_upload_progress .ui-progressbar-value {
+    background: url(../../../../Content/Images/employers/send-email/pbar-ani.gif);
+}
+
+.file_upload_progress span {
+    background-image: url(../../../../Content/Images/employers/send-email/pbar-ani.gif);
+    background-repeat: repeat-x;
+    width: 100px;
+    height: 12px;
+    float: left;
+}
+
+.file_upload_cancel button {
+    cursor: pointer;
+}
+
+.file_delete .icon {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+
+.file_delete .icon-delete {
+    background-image: url(../../../../Content/Images/employers/send-email/delete.png);
+    height: 15px;
+    width: 15px;
+    margin: 0 0 0 3px;  
+}
+
+.file_delete .icon-delete:hover, .file_upload .icon-delete:focus {
+    background-position: left -30px;
+}
+.file_delete .icon-delete:active {
+    background-position: left -45px;
+}

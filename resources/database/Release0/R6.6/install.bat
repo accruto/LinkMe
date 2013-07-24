@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:update_database_version_table.sql,install_proc_loadNetworkGraph.sql

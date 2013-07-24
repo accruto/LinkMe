@@ -1,0 +1,26 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Test-->
+
+  <Target Name="Deploy">
+    <DeployReports Folders="@(ReportFolders)" DataSources="@(DataSources)" ReportServerUrl="$(ReportServerUrl)" />
+  </Target>
+
+</Project>

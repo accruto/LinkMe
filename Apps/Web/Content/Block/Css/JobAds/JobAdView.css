@@ -1,0 +1,330 @@
+﻿#jobad-view div, #jobad-view span, #jobad-view label {
+	font: 12px Arial;
+	color: black;
+	float: left;
+}
+
+#jobad-view .titlebar {
+	background-image: url("../../images/jobads/jobadview/titlebar-bg.png");
+	width: 696px;
+	height: 88px;
+}
+
+#jobad-view .isnew {
+	background-image: url("../../images/jobads/jobadview/isnew.png");
+	width: 42px;
+	height: 42px;
+	margin: -3px -42px 0px -3px;
+	position: relative;
+}
+
+#jobad-view .titlebar .jobtype {
+	background-image: url("../../images/jobads/jobadview/jobtypes.png");
+	width: 40px;
+	height: 35px;
+	margin: 12px 10px 0px 8px;
+}
+#jobad-view .titlebar .jobtype.PartTime {
+	background-position: 0px -35px;
+}
+#jobad-view .titlebar .jobtype.Contract {
+	background-position: 0px -70px;
+}
+#jobad-view .titlebar .jobtype.Temp {
+	background-position: 0px -105px;
+}
+#jobad-view .titlebar .jobtype.JobShare {
+	background-position: 0px -140px;
+}
+#jobad-view .titlebar .jobtype.None {
+	background-position: 0px -175px;
+}
+
+#jobad-view .titlebar > .title h1 {
+	font: Bold 16px Arial;
+	width: 622px;
+	margin-top: 18px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 34px;
+}
+
+#jobad-view .titlebar .subtypes {
+	width: 145px;
+	margin: 10px 12px 0px 2px;
+}
+#jobad-view .titlebar .subtypes span {
+	font: 11.25px Verdana, Arial;
+	color: #333333;
+	float: right;
+	margin: -1px 4px 0px 0px;
+}
+#jobad-view .titlebar .subtypes .icon {
+	background-image: url("../../images/jobads/jobadview/subjobtypes.png");
+	width: 18px;
+	height: 12px;
+	margin-right: -1px;
+}
+#jobad-view .titlebar .subtypes .icon.hide {
+	display: none;
+}
+#jobad-view .titlebar .subtypes .icon.FullTime.active {
+	background-position: 0px 0px;
+}
+#jobad-view .titlebar .subtypes .icon.PartTime.active {
+	background-position: -18px 0px;
+}
+#jobad-view .titlebar .subtypes .icon.Contract.active {
+	background-position: -36px 0px;
+}
+#jobad-view .titlebar .subtypes .icon.Temp.active {
+	background-position: -54px 0px;
+}
+#jobad-view .titlebar .subtypes .icon.JobShare.active {
+	background-position: -72px 0px;
+}
+#jobad-view .titlebar .subtypes .icon.FullTime {
+	background-position: 0px -12px;
+}
+#jobad-view .titlebar .subtypes .icon.PartTime {
+	background-position: -18px -12px;
+}
+#jobad-view .titlebar .subtypes .icon.Contract {
+	background-position: -36px -12px;
+}
+#jobad-view .titlebar .subtypes .icon.Temp {
+	background-position: -54px -12px;
+}
+#jobad-view .titlebar .subtypes .icon.JobShare {
+	background-position: -72px -12px;
+}
+
+#jobad-view .titlebar .viewed,
+#jobad-view .titlebar .applied {
+	width: 82px;
+	margin-top: 7px;
+}
+#jobad-view .titlebar .viewed .icon,
+#jobad-view .titlebar .applied .icon {
+	background-image: url("../../images/jobads/jobadview/status.png");
+	width: 20px;
+	height: 17px;
+}
+#jobad-view .titlebar .viewed .text,
+#jobad-view .titlebar .applied .text {
+	font: 11.25px Verdana, Arial;
+	margin-top: 2px;
+	color: #333333;
+}
+#jobad-view .titlebar.notloggedin .applied .text {
+	color: #A0A0A0;
+}
+#jobad-view .titlebar .viewed .icon {
+	background-position: -20px 0px;
+	margin: 2px 3px 0px -2px;
+}
+#jobad-view .titlebar .viewed .icon.active {
+	background-position: 0px 0px;
+}
+#jobad-view .titlebar .applied .icon {
+	background-position: -20px -17px;
+	margin: 0px 3px 0px -2px;
+}
+#jobad-view .titlebar .applied .icon.active {
+	background-position: 0px -17px;
+}
+
+#jobad-view .titlebar .notes {
+	margin-top: 9px;
+}
+#jobad-view .titlebar .notes .icon {
+	background-image: url("../../images/jobads/jobadview/actions.png");
+	width: 15px;
+	height: 14px;
+	background-position: -53px -38px;
+	margin: 0px 5px 0px 0px;
+}
+#jobad-view .titlebar.notloggedin .notes .icon {
+	background-position: -53px -8px;
+}
+#jobad-view .titlebar .notes .text {
+	font: 11.25px Verdana, Arial;
+	color: #779EF5;
+	margin-right: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#jobad-view .titlebar .notes .count {
+	font: 11.25px Verdana, Arial;
+	color: #A0A0A0;
+}
+#jobad-view .titlebar.notloggedin .notes .text {
+	color: #A0A0A0;
+	text-decoration: none;
+	cursor: auto;
+}
+#jobad-view .titlebar.notloggedin .notes .count {
+	display: none;
+}
+
+#jobad-view .menupan {
+	border: 1px solid #B4BCC8;
+	width: 276px;
+	background-color: #F3F4F6;
+	position: absolute;
+	display: none;
+	z-index: 1;
+}
+#jobad-view .menupan.note {
+	background-color: #FFFED5;
+	top: 97px;
+	left: 314px;
+}
+#jobad-view .menupan.note[action='bulk'] .add,
+#jobad-view .menupan.note[action='single'] .row.empty,
+#jobad-view .menupan.note[action='bulk'] .row.empty,
+#jobad-view .menupan.note[action='single'] .editarea,
+#jobad-view .menupan.note .row .title .buttons {
+	display: none;
+}
+#jobad-view .menupan.note[action='bulk'] .editarea,
+#jobad-view .menupan.note[action='bulk'] .row,
+#jobad-view .menupan.note[action='single'] .row,
+#jobad-view .menupan.note .row:hover .title .buttons {
+	display: block;
+}
+#jobad-view .menupan.note .icon {
+	background-image: url("../../images/jobads/jobadview/notes.png");
+	width: 13px;
+	height: 14px;
+	margin: 0px 5px 0px 5px;
+}
+#jobad-view .menupan.note .icon.edit {
+	background-position: -13px 0px;
+}
+#jobad-view .menupan.note .icon.delete {
+	background-position: -26px 0px;
+}
+#jobad-view .menupan.note .add {
+	margin: 7px 0px 16px 7px;
+	width: 269px;
+}
+#jobad-view .menupan.note .row {
+	margin-bottom: 10px;
+}
+#jobad-view .menupan.note .row .title {
+	width: 260px;
+	height: 14px;
+	margin-left: 12px;
+}
+#jobad-view #main-body .menupan.note .buttons {
+	float: right;
+}
+#jobad-view .menupan.note .add .text,
+#jobad-view .menupan.note .buttons .text {
+	font: 11px Verdana, Arial;
+	color: #2160EF;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#jobad-view .menupan.note .editarea #Notes {
+	resize: none;
+	width: 255px;
+	height: 80px;
+	margin: -6px 0px 0px 7px;
+}
+#jobad-view .menupan.note[action='bulk'] .editarea #Notes {
+	margin-top: 10px;
+}
+#jobad-view .menupan.note .title .date {
+	font: Bold 10px Verdana, Arial;
+}
+#jobad-view .menupan.note .content {
+	font: 10px Verdana, Arial;
+	width: 260px;
+	margin: 12px;
+}
+
+#jobad-view .bg {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArgAAAABCAYAAAA1mt27AAAAOElEQVRIS+3QwQkAIAwEwZMrx3f6h3yTr+UErUPYKWFWZ94doZkRGGCAAQYYYIABBhj4dcC2TpUejF0JUUcOf70AAAAASUVORK5CYII=);
+	background-repeat: repeat-y;
+	width: 696px;
+}
+
+#jobad-view .summary {
+	margin: 0px 0px 0px 1px;
+}
+#jobad-view .summary .bg {
+	background-image: url("../../images/jobads/jobadview/summary-bg.png");
+	background-repeat: repeat-x;
+	width: 694px;
+	height: 229px;
+}
+#jobad-view .summary .logo-item {
+    width: 694px;
+    position: absolute;
+}
+#jobad-view .summary .logo {
+    float: right;
+}
+#jobad-view .summary .item {
+	height : 38px;
+	width : 694px;
+}
+#jobad-view .summary.with-logo .item {
+	height : 38px;
+	width : 469px;
+}
+#jobad-view .summary .item.bulletpoints {
+	height : auto;
+	width : 694px;
+}
+#jobad-view .summary .item .title {
+	font-weight : bold;
+	width : 110px;
+	margin : 12px 0px 0px 12px;
+}
+#jobad-view .summary .item .desc {
+	margin-top : 12px;
+}
+#jobad-view .summary .item .bulletpoints {
+	margin-left : 20px;
+	list-style : none;
+}
+#jobad-view .summary .item .bulletpoints .point {
+	background-position : -698px -66px;
+	width : 9px;
+	height : 9px;
+	margin : 4px 10px 0px 0px;
+}
+#jobad-view .summary .item .bulletpoints li {
+	font : Bold 12px Arial;
+}
+
+#jobad-view .bg .content {
+	padding : 20px 10px 10px 20px;
+}
+#jobad-view .closed .bg > .content {
+	display : none;
+}
+#jobad-view .content li {
+	float : left;
+	width : 640px;
+}
+#jobad-view .content li,
+#jobad-view .content div,
+#jobad-view .content span {
+	float : none;
+	font : inherit;
+}
+#jobad-view .main-content .content div {
+	width : 660px;
+}
+
+#jobad-view .bottom-bar {
+    background-image: url("../../images/jobads/jobadview/jobad.png");
+	background-position: 0px -6px;
+	width: 696px;
+	height: 4px;
+}

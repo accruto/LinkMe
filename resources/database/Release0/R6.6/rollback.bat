@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_database_version_table.sql,rollback_proc_loadNetworkGraph.sql

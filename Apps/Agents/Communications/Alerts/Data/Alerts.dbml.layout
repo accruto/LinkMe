@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Alerts">
+  <DataContextMoniker Name="/AlertsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8a5f933f-e39e-48d1-8f86-228fe48b170d" absoluteBounds="8.75, 1.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/AlertsDataContext/CandidateEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dcb0ecb-ff68-49d8-96f6-ee608ab4b872" absoluteBounds="8.765, 1.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6110bbd1-229c-4e6a-a464-c70f6c3dea04" absoluteBounds="0.75, 1.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AlertsDataContext/SavedResumeSearchEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8eac6428-3cbf-4d98-b050-f8e9188b1717" absoluteBounds="0.76500000000000012, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8388bce-ac46-44c7-a2e6-16050523fdef" absoluteBounds="5.125, 1.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AlertsDataContext/SavedResumeSearchAlertEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a77687e-d500-4452-95f9-761cc2ced31a" absoluteBounds="5.1400000000000006, 2.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.69794840494792); (5.125 : 2.69794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AlertsDataContext/SavedResumeSearchEntity/SavedResumeSearchEntity_SavedResumeSearchAlertEntity" />
+      <nodes>
+        <classShapeMoniker Id="6110bbd1-229c-4e6a-a464-c70f6c3dea04" />
+        <classShapeMoniker Id="a8388bce-ac46-44c7-a2e6-16050523fdef" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2de64f7d-2825-4014-a248-b81a357fdac4" absoluteBounds="5.125, 4.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AlertsDataContext/SavedSearchAlertResultEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed636ff3-1571-444a-ac40-b9a60d061709" absoluteBounds="5.14, 4.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 3.52089680989583); (6.125 : 4.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AlertsDataContext/SavedResumeSearchAlertEntity/SavedResumeSearchAlertEntity_SavedSearchAlertResultEntity" />
+      <nodes>
+        <classShapeMoniker Id="a8388bce-ac46-44c7-a2e6-16050523fdef" />
+        <classShapeMoniker Id="2de64f7d-2825-4014-a248-b81a357fdac4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="23d364f9-948b-443c-93f8-3400dc8cad6f" absoluteBounds="4.25, 6.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AlertsDataContext/SavedJobSearchEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="879c7794-3900-4bbf-8c4f-d2771c5e5b9c" absoluteBounds="4.265, 6.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7474fdd-0d45-40ed-8a1e-d26573117e13" absoluteBounds="1.375, 6.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AlertsDataContext/SavedJobSearchAlertEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccbcdd62-4254-478c-b7ad-ba8a57ed5165" absoluteBounds="1.3900000000000001, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 7.31814697265625); (4.25 : 7.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AlertsDataContext/SavedJobSearchAlertEntity/SavedJobSearchAlert_SavedJobSearchEntity" />
+      <nodes>
+        <classShapeMoniker Id="d7474fdd-0d45-40ed-8a1e-d26573117e13" />
+        <classShapeMoniker Id="23d364f9-948b-443c-93f8-3400dc8cad6f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

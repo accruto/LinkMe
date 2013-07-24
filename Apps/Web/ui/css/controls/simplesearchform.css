@@ -1,0 +1,64 @@
+﻿/*
+    SimpleSearch.ascx (employers search for candidates)
+*/
+
+.simple-search_ascx {}
+
+    .keywords_field {}
+    .location_field {}
+    .create-email-alert_field {}
+    .search-and-links_field {}
+        .search-and-links_control {}
+    
+
+.horizontal_simple-search_ascx {}
+
+	.horizontal_simple-search_ascx fieldset .field {
+		float: left;
+		clear: none;
+		width: auto;
+		padding-top: 0;
+		padding-right: 10px;
+		_margin-right: 10px;    /* For IE6's benefit */
+	}
+	
+	.horizontal_simple-search_ascx .field .textbox_control {
+	    _float: left;   /* For IE6's benefit */
+	}
+	.horizontal_simple-search_ascx .keywords_field .helptext {
+	    clear: left;   /* For IE6's benefit */
+	}
+	
+	.horizontal_simple-search_ascx .keywords_field {}
+		.horizontal_simple-search_ascx .keywords_field .textbox {
+			width: 250px;
+		}
+		
+	.horizontal_simple-search_ascx fieldset .create-email-alert_field {
+        margin-top: 0.65em;
+	}
+	
+	.horizontal_simple-search_ascx fieldset .search-and-links_field {
+		padding-top: 1em;
+		padding-right: 1em;
+	}		
+
+		.simple-search_ascx .search-and-links_control {}
+				
+			.simple-search_ascx .search-and-links_control .button {
+				float: left;
+				margin: 0;
+				margin-right: 10px;
+			}
+			.simple-search_ascx .search-and-links_control .action-list {
+				float: left;
+				clear: none;
+				font-size: 80%;
+			}
+			.simple-search_ascx .search-and-links_control .action-list li {
+				margin: 0;
+				margin-top: -3px;
+			}
+				.simple-search_ascx .search-and-links_control .action-list li a {
+					
+				}

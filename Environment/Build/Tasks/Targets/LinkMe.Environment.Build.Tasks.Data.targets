@@ -1,0 +1,83 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Data.MergeData"
+    AssemblyFile="..\Bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Data.CleanData"
+    AssemblyFile="..\Bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <!-- Merge -->
+  
+  <Target Name="MergeData">
+    
+    <MergeData
+      ProjectFullPath="$(MSBuildProjectFullPath)"
+      OutputPath="$(OutputPath)"
+      Configuration="$(Configuration)" 
+      Merges="@(Merge)"
+      />
+
+  </Target>
+
+  <Target Name="CleanData">
+
+<!--
+    <CleanData
+      ProjectFullPath="$(MSBuildProjectFullPath)"
+      OutputPath="$(OutputPath)"
+      Merges="@(Merge)"
+      />
+-->
+
+  </Target>
+
+  <!-- Build -->
+  
+  <PropertyGroup>
+    <BuildDependsOn>
+      MergeData
+    </BuildDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Build"
+    DependsOnTargets="$(BuildDependsOn)"
+    />
+
+  <!-- Clean -->
+  
+  <PropertyGroup>
+    <CleanDependsOn>
+      CleanData
+    </CleanDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Clean"
+    DependsOnTargets="$(CleanDependsOn)"
+    />
+
+  <!-- ReBuild -->
+
+  <PropertyGroup>
+    <RebuildDependsOn>
+      Clean;
+      Build;
+    </RebuildDependsOn>
+
+    <RebuildDependsOn Condition=" '$(MSBuildProjectDefaultTargets)' == 'Rebuild' " >
+      Clean;
+      Build;
+    </RebuildDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Rebuild"
+    DependsOnTargets="$(RebuildDependsOn)"
+    />
+
+</Project>

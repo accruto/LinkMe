@@ -1,0 +1,98 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.GetVersions"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.GetBaselineVersion"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.GetAbsolutePath"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.DeleteDirectoryContents"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.DeleteDirectoryFiles"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.RemoveFromGac"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.CheckProjectSettings"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Svn.SvnPathExists"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Svn.SvnDelete"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.KillDatabaseConnections"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.BackupDatabase"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.RestoreDatabase"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.RunDatabaseScript"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.RunDatabaseScriptList"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Sql.GetDatabaseScriptListFiles"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Reports.DeployReports"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.PurgeMsmqQueues"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.StyleSheets.ReplaceDataUrls"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.StyleSheets.MakeUrlsAbsolute"
+    AssemblyFile="..\bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+</Project>

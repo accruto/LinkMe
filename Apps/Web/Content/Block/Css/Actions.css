@@ -1,0 +1,229 @@
+﻿/*	=======
+    Actions
+	======= */
+
+ul.actions
+{
+	margin:0;
+	padding:0;
+	margin-left: 0px;
+	clear: left;
+}
+
+ul.actions label
+{					        /* XHTML2 working draft proposed using <label> as modern <lh> element */
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+ul.actions:after
+{                           /* Container-clearing - no need for for <br class="clearer" />	*/
+	content: ".";			/* after child floated elements.								*/
+	display: block; 
+	height: 0;				/* (Container-clearing is only needed for elements which aren't		*/
+	clear: both;			/* floated themselves, but have floated children.)				*/
+	visibility: hidden;						
+}
+
+ul.actions li
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	list-style: none;
+	padding-left: 13px;
+	background: url(../images/actions/actions-bullet.gif) left 0.2em no-repeat;
+}
+
+.helptext ul.actions li
+{
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+ul.actions
+{
+	*display: inline-block;	/* IE (6,7) hack - container-clearing. */
+}
+
+/*  =============
+	Plain actions
+    =============
+    Removes action bullets. Useful for preventing the "> [icon] Action" look. */
+
+ul.plain-actions li
+{
+	padding-left: 0;
+	background: none;
+}
+
+/* ==================
+   Horizontal actions
+   ==================
+   This is an | example of | horizontal actions. */
+
+ul.horizontal-actions
+{
+	padding-left: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+ul.horizontal-actions li 
+{
+	float: left;
+	background: url(../images/actions/actions-divider.png) no-repeat center left;
+	padding-left: 11px;
+	margin-left: 10px;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+ul.horizontal-actions li:first-child,
+ul.horizontal-actions li.ie_firstchild
+{
+	background-image: none;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+ul.horizontal-actions li
+{	/* Make IE (6,7) magically remove empty list items */
+	*display: expression(this.innerHTML.length == 0 ? "none" : "list-item");
+}
+
+/*	=========================
+	Corner actions
+	=========================
+	These actions move themselves to the upper-right-hand corner of its 'least ancestral' anchor div. */
+	
+ul.corner-actions
+{
+	position: absolute;
+	right: 20px;
+	top: 5px;
+	z-index: 1;			/* Just in case some transparent div covers it :( */
+}
+	
+/*	=========================
+	Corner horizontal actions
+	=========================
+	These actions move themselves to the upper-right-hand corner of its 'least ancestral' anchor div.
+	In addition, it shows | no | dividers. */
+	
+ul.corner-horizontal-actions
+{
+	position: absolute;
+	right: 8px;
+	top: 1px;
+	line-height: 2em;
+	z-index: 1;			/* Just in case some transparent div covers it :( */
+}
+	
+/*	========================
+	Plain horizontal actions
+	========================
+	Removes | these | delimiters. */
+
+ul.plain-horizontal-actions li
+{
+	padding-left: 0;
+	background: none;
+}
+
+/*	==============
+	Inline actions
+	==============
+	Inline actionss are those which appear at the end of a line 
+	of text, or even in the middle of text.
+	Text within appears a little smaller. */
+
+ul.inline-actions
+{
+	margin: 0;
+	display: inline;
+	float: none;
+	font-size: 85%;
+}
+
+ul.inline-actions li
+{
+	display: inline;
+	float: none;
+	list-style: none;
+	padding-left: 7px;
+	margin-left: 3px;
+	background: url(../images/actions/actions-divider.png) no-repeat center left;
+}
+
+ul.inline-actions li:first-child,
+ul.inline-actions li.ie_firstchild
+{
+	padding-left: 0px;
+	margin-left: 0;
+	background-image: none;
+}
+
+/*	====================
+	Plain inline actions
+	====================
+	No | dividers. */
+	
+ul.plain-inline-actions li
+{
+	background: none;
+}
+
+/*	=====================
+	Corner inline actions
+	=====================
+	These actions move themselves to the upper-right-hand corner of its 'least ancestral' anchor div.
+	In addition, it shows | no | dividers. */
+	
+ul.corner-inline-actions
+{
+	font-size: 85%;
+	position: absolute;
+	right: 8px;
+	top: 1px;
+	line-height: 2em;
+	z-index: 1;			/* Just in case some transparent div covers it :( */
+}
+	
+ul.corner-inline-actions li
+{
+	background-image: none;
+}
+	
+ul.corner-inline-actions li
+{
+	background: none;
+}
+	
+/*	============
+	Action icons
+	============ */
+      
+.actions .edit-action             { background: url(../images/actions/edit.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .save-action             { background: url(../images/actions/save.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .cancel-action           { background: url(../images/actions/cancel.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .delete-action           { background: url(../images/actions/delete.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .email-action            { background: url(../images/actions/email.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .download-action         { background: url(../images/actions/download.png)               left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .add-action              { background: url(../images/actions/add.png)                    left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .add-folder-action       { background: url(../images/actions/folder.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .copy-to-folder-action   { background: url(../images/actions/copy-to-folder.png)         left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .move-to-folder-action   { background: url(../images/actions/move-to-folder.png)         left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .phone-action            { background: url(../images/actions/phone.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .shortlist-action        { background: url(../images/actions/shortlist.png)              left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .reject-action           { background: url(../images/actions/reject.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .remove-candidate-action { background: url(../images/actions/remove-candidate.png)       left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .candidate-alert-action  { background: url(../images/actions/candidate-email-alerts.png) left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .close-action            { background: url(../images/actions/close.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .edit-action             { background: url(../images/actions/edit.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .execute-job-ad-action   { background: url(../images/actions/suggested-candidates.png)   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .repost-action           { background: url(../images/actions/repost.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .manage-folders-action   { background: url(../images/actions/manage-folder.png)          left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .go-to-folder-action     { background: url(../images/actions/folder.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .new-search-action       { background: url(../images/actions/new-search.png)             left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+.actions .print-action            { background: url(../images/actions/print.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }

@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_new_profile_content.sql,rollback_database_version_table.sql

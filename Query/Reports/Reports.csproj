@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC2557DF-D309-4274-B327-73FBED704D3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Query.Reports</RootNamespace>
+    <AssemblyName>LinkMe.Query.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Data\AccountReportsRepository.cs" />
+    <Compile Include="Accounts\Data\Accounts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\IAccountReportsRepository.cs" />
+    <Compile Include="Credits\CreditReport.cs" />
+    <Compile Include="Credits\Queries\CreditReportsQuery.cs" />
+    <Compile Include="Credits\Data\CreditReportsRepository.cs" />
+    <Compile Include="Credits\Data\Credits.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Credits\Queries\ICreditReportsQuery.cs" />
+    <Compile Include="Accounts\Queries\AccountReportsQuery.cs" />
+    <Compile Include="Credits\ICreditReportsRepository.cs" />
+    <Compile Include="DailyReports\DailyReport.cs" />
+    <Compile Include="DailyReports\Queries\DailyReportsQuery.cs" />
+    <Compile Include="DailyReports\Queries\IDailyReportsQuery.cs" />
+    <Compile Include="Roles\Candidates\Commands\IResumeReportsCommand.cs" />
+    <Compile Include="Roles\Candidates\Commands\ResumeReportsCommand.cs" />
+    <Compile Include="Roles\Candidates\Data\CandidateReportsRepository.cs" />
+    <Compile Include="Roles\Candidates\Data\Candidates.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Candidates.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Candidates\Data\Mappings.cs" />
+    <Compile Include="Roles\Candidates\ICandidateReportsRepository.cs" />
+    <Compile Include="Roles\Candidates\ResumeEvent.cs" />
+    <Compile Include="Roles\Communications\CommunicationReport.cs" />
+    <Compile Include="Roles\Integration\Commands\JobAdIntegrationReportsCommand.cs" />
+    <Compile Include="Roles\Integration\Commands\IJobAdIntegrationReportsCommand.cs" />
+    <Compile Include="Roles\Integration\Data\Integration.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Integration.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Integration\Data\IntegrationReportsRepository.cs" />
+    <Compile Include="Roles\Integration\Data\Mappings.cs" />
+    <Compile Include="Roles\Integration\IIntegrationReportsRepository.cs" />
+    <Compile Include="Roles\Integration\JobAdIntegrationEvent.cs" />
+    <Compile Include="Roles\Integration\JobAdIntegrationReport.cs" />
+    <Compile Include="Roles\Integration\Queries\JobAdIntegrationReportsQuery.cs" />
+    <Compile Include="Roles\Integration\Queries\IJobAdIntegrationReportsQuery.cs" />
+    <Compile Include="Roles\JobAds\Data\JobAdReportsRepository.cs" />
+    <Compile Include="Roles\Orders\OrderReport.cs" />
+    <Compile Include="Roles\Registration\PromotionCodeReport.cs" />
+    <Compile Include="Search\Data\MemberSearchReportsRepository.cs" />
+    <Compile Include="Roles\JobAds\Data\JobAds.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobAds.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\JobAds\IJobAdReportsRepository.cs" />
+    <Compile Include="Search\IMemberSearchReportsRepository.cs" />
+    <Compile Include="Roles\JobAds\JobAdReport.cs" />
+    <Compile Include="Roles\Candidates\Queries\ICandidateReportsQuery.cs" />
+    <Compile Include="Roles\Candidates\Queries\CandidateReportsQuery.cs" />
+    <Compile Include="Roles\Communications\Queries\CommunicationReportsQuery.cs" />
+    <Compile Include="Roles\Communications\Data\Communications.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Communications.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Communications\Data\CommunicationsRepository.cs" />
+    <Compile Include="Roles\Communications\Queries\ICommunicationReportsQuery.cs" />
+    <Compile Include="Roles\Communications\ICommunicationsRepository.cs" />
+    <Compile Include="Roles\Networking\Data\Networking.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Networking.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Networking\Data\NetworkingReportsRepository.cs" />
+    <Compile Include="Roles\Networking\INetworkingReportsRepository.cs" />
+    <Compile Include="Roles\Orders\Data\OrderReportsRepository.cs" />
+    <Compile Include="Roles\Orders\Data\Orders.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Orders.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Orders\IOrderReportsRepository.cs" />
+    <Compile Include="Roles\Registration\Data\Registration.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Registration\Data\RegistrationReportsRepository.cs" />
+    <Compile Include="Roles\Registration\IRegistrationReportsRepository.cs" />
+    <Compile Include="Roles\Registration\Queries\IRegistrationReportsQuery.cs" />
+    <Compile Include="Roles\Registration\Queries\RegistrationReportsQuery.cs" />
+    <Compile Include="Search\Data\JobAdSearchReportsRepository.cs" />
+    <Compile Include="Search\Data\Search.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Search.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\IJobAdSearchReportsRepository.cs" />
+    <Compile Include="Search\Queries\MemberSearchReportsQuery.cs" />
+    <Compile Include="Search\Queries\IMemberSearchReportsQuery.cs" />
+    <Compile Include="Unity\ReportsRegisterer.cs" />
+    <Compile Include="Users\Employers\Data\EmployerMemberAccessReportsRepository.cs" />
+    <Compile Include="Users\Employers\Data\Employers.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employers.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Employers\EmployerMemberAccessReport.cs" />
+    <Compile Include="Users\Employers\EmployerMemberViewingReport.cs" />
+    <Compile Include="Users\Employers\IEmployerMemberAccessReportsRepository.cs" />
+    <Compile Include="Users\Employers\MemberAccessReport.cs" />
+    <Compile Include="Users\Employers\Queries\EmployerMemberAccessReportsQuery.cs" />
+    <Compile Include="Users\Employers\Queries\IEmployerMemberAccessReportsQuery.cs" />
+    <Compile Include="Roles\Networking\Queries\INetworkingReportsQuery.cs" />
+    <Compile Include="Roles\Orders\Queries\IOrderReportsQuery.cs" />
+    <Compile Include="Roles\Networking\Queries\NetworkingReportsQuery.cs" />
+    <Compile Include="Roles\Orders\Queries\OrderReportsQuery.cs" />
+    <Compile Include="Search\Queries\JobAdSearchReportsQuery.cs" />
+    <Compile Include="Data\ReportsRepository.cs" />
+    <Compile Include="Accounts\Queries\IAccountReportsQuery.cs" />
+    <Compile Include="Search\Queries\IJobAdSearchReportsQuery.cs" />
+    <Compile Include="Roles\Candidates\Queries\IResumeReportsQuery.cs" />
+    <Compile Include="Roles\JobAds\Queries\IJobAdReportsQuery.cs" />
+    <Compile Include="Roles\JobAds\Queries\JobAdReportsQuery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Candidates\Queries\ResumeReportsQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Communications\Data\Communications.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Communications.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Credits\Data\Credits.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Credits.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Roles\Communications\Data\Communications.dbml.layout">
+      <DependentUpon>Communications.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Credits\Data\Credits.dbml.layout">
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </None>
+    <None Include="Roles\Integration\Data\Integration.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Integration.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Roles\JobAds\Data\JobAds.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>JobAds.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\JobAds\Data\JobAds.dbml.layout">
+      <DependentUpon>JobAds.dbml</DependentUpon>
+    </None>
+    <None Include="Search\Data\Search.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Search.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accounts\Data\Accounts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Accounts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Search\Data\Search.dbml.layout">
+      <DependentUpon>Search.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accounts\Data\Accounts.dbml.layout">
+      <DependentUpon>Accounts.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Candidates\Data\Candidates.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Candidates.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Candidates\Data\Candidates.dbml.layout">
+      <DependentUpon>Candidates.dbml</DependentUpon>
+    </None>
+    <None Include="Roles\Networking\Data\Networking.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Networking.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Networking\Data\Networking.dbml.layout">
+      <DependentUpon>Networking.dbml</DependentUpon>
+    </None>
+    <None Include="Roles\Orders\Data\Orders.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Orders.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Orders\Data\Orders.dbml.layout">
+      <DependentUpon>Orders.dbml</DependentUpon>
+    </None>
+    <None Include="Roles\Registration\Data\Registration.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Registration.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Registration\Data\Registration.dbml.layout">
+      <DependentUpon>Registration.dbml</DependentUpon>
+    </None>
+    <None Include="Users\Employers\Data\Employers.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Employers.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Users\Employers\Data\Employers.dbml.layout">
+      <DependentUpon>Employers.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Roles\Integration\Data\Integration.dbml.layout">
+      <DependentUpon>Integration.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

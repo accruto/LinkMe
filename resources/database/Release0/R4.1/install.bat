@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_new_optout_search_fields.sql,update_optout_search_fields.sql,install_new_networker_jobs_table.sql,install_new_searches_table.sql,install_new_search_criteria_table.sql,install_new_content_benefits.sql,install_new_user_data_field.sql,update_content_fields.sql,update_database_version_table.sql

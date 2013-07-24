@@ -1,0 +1,3 @@
+sp_CreateCommunity.sql
+sp_DeleteVerticalContent.sql
+sp_CreateVerticalContent.sql

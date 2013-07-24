@@ -1,0 +1,26 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="StandardMasterPage.master.cs" Inherits="LinkMe.Web.Master.StandardMasterPage" MasterPageFile="~/master/StructureMasterPage.master" %>
+<%@ MasterType VirtualPath="~/master/StructureMasterPage.master" %>
+
+<asp:Content ContentPlaceHolderID="FormContent" runat="server">
+    <asp:ContentPlaceHolder ID="Content" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="NonFormContent" runat="server">
+    <asp:ContentPlaceHolder ID="NonFormContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="Footer" runat="server">
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JavaScript" runat="server">
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="BodyTrackers" runat="server">
+    <asp:ContentPlaceHolder ID="BodyTrackers" runat="server" />
+</asp:Content>

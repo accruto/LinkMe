@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ************************************************************
+  Copyright 2006, Burning Glass Technologies
+  Job Posting Content Model
+  ************************************************************
+  
+  Include using:
+  <!DOCTYPE posting SYSTEM "jobdoc.dtd">
+-->
+<!-- ************************************************************ -->
+<!-- Root Element -->
+<xs:schema targetNamespace="http://www.burning-glass.com/JobDoc/1.0" xmlns:jd="http://www.burning-glass.com/JobDoc/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:element name="JobDoc">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:special"/>
+				<xs:element ref="jd:posting"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- The actual posting -->
+	<!--
+    sic is the industry code for the employer.  It is used during 
+    the scoring process. sic2 is the first two digits of sic and
+    represents the industry; it is provided for keyword searching.
+    
+    title is the canonicalized job title.  It is used during the
+    scoring process.
+  -->
+	<xs:element name="posting">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:title"/>
+				<xs:element ref="jd:benefits"/>
+				<xs:element ref="jd:duties"/>
+				<xs:element ref="jd:background"/>
+				<xs:element ref="jd:contact"/>
+				<xs:element ref="jd:qualifications"/>
+			</xs:choice>
+			<xs:attributeGroup ref="jd:attlist.posting"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.posting">
+		<xs:attribute ref="xml:space" default="preserve"/>
+		<xs:attribute name="canonversion" type="xs:NMTOKEN"/>
+		<xs:attribute name="sic" type="xs:NMTOKEN"/>
+		<xs:attribute name="sic2" type="xs:NMTOKEN"/>
+		<xs:attribute name="title" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 1 Elements -->
+	<!-- benefits -->
+	<xs:element name="benefits">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="jd:salary" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- duties -->
+	<xs:element name="duties">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:title"/>
+				<xs:element ref="jd:company"/>
+				<xs:element ref="jd:location"/>
+				<xs:element ref="jd:jobtype"/>
+				<xs:element ref="jd:area"/>
+				<xs:element ref="jd:skill"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- background -->
+	<xs:element name="background">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:title"/>
+				<xs:element ref="jd:company"/>
+				<xs:element ref="jd:location"/>
+				<xs:element ref="jd:department"/>
+				<xs:element ref="jd:url"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- contact -->
+	<xs:element name="contact">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:person"/>
+				<xs:element ref="jd:company"/>
+				<xs:element ref="jd:address"/>
+				<xs:element ref="jd:phone"/>
+				<xs:element ref="jd:fax"/>
+				<xs:element ref="jd:email"/>
+				<xs:element ref="jd:url"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- qualifications -->
+	<xs:element name="qualifications">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:required"/>
+				<xs:element ref="jd:preferred"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 2 Elements -->
+	<!-- address -->
+	<!--
+    lat/lon are latitude and longitude calculated from the 
+    address fields.  Currently, only the postalcode is used to
+    calculate the values.
+  -->
+	<xs:element name="address">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:city"/>
+				<xs:element ref="jd:state"/>
+			</xs:choice>
+			<xs:attributeGroup ref="jd:attlist.address"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.address">
+		<xs:attribute name="lat"/>
+		<xs:attribute name="lon"/>
+	</xs:attributeGroup>
+	<!-- required -->
+	<xs:element name="required">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:interval"/>
+				<xs:element ref="jd:area"/>
+				<xs:element ref="jd:skill"/>
+				<xs:element ref="jd:certification"/>
+				<xs:element ref="jd:education"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- preferred -->
+	<xs:element name="preferred">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:interval"/>
+				<xs:element ref="jd:area"/>
+				<xs:element ref="jd:skill"/>
+				<xs:element ref="jd:certification"/>
+				<xs:element ref="jd:education"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 3 Elements -->
+	<!-- interval -->
+	<xs:element name="duration">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:duration"/>
+				<xs:element ref="jd:area"/>
+				<xs:element ref="jd:skill"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- education -->
+	<xs:element name="education">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jd:degree"/>
+				<xs:element ref="jd:major"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Other Elements -->
+	<!-- salary -->
+	<xs:element name="salary" type="xs:string"/>
+	<!-- title -->
+	<xs:element name="title" type="xs:string"/>
+	<!-- phone -->
+	<xs:element name="phone">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="jd:attlist.phone"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.phone">
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="home"/>
+					<xs:enumeration value="work"/>
+					<xs:enumeration value="pager"/>
+					<xs:enumeration value="cell"/>
+					<xs:enumeration value="fax"/>
+					<xs:enumeration value="voicemail"/>
+					<xs:enumeration value="voice"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- company -->
+	<xs:element name="company" type="xs:string"/>
+	<!-- location -->
+	<xs:element name="location" type="xs:string"/>
+	<!-- skill -->
+	<xs:element name="skill" type="xs:string"/>
+	<!-- interval -->
+	<xs:element name="interval" type="xs:string"/>
+	<!-- jobtype -->
+	<xs:element name="jobtype" type="xs:string"/>
+	<!-- person -->
+	<xs:element name="person" type="xs:string"/>
+	<!-- department -->
+	<xs:element name="department" type="xs:string"/>
+	<!-- url -->
+	<xs:element name="url" type="xs:string"/>
+	<!-- city -->
+	<xs:element name="city" type="xs:string"/>
+	<!-- state -->
+	<xs:element name="state" type="xs:string"/>
+	<!-- postalcode -->
+	<xs:element name="postalcode" type="xs:string"/>
+	<!-- country -->
+	<!-- The iso3 attribute is the 3 letter code for the country -->
+	<xs:element name="country">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="jd:attlist.country"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.country">
+		<xs:attribute name="iso3" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- email -->
+	<xs:element name="email" type="xs:string"/>
+	<!-- area -->
+	<xs:element name="area" type="xs:string"/>
+	<!-- fax -->
+	<xs:element name="fax" type="xs:string"/>
+	<!-- certification -->
+	<xs:element name="certification" type="xs:string"/>
+	<!-- degree -->
+	<xs:element name="degree" type="xs:string"/>
+	<!-- major -->
+	<xs:element name="major" type="xs:string"/>
+	<!-- special -->
+	<xs:element name="special" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,1 @@
+data_ResourceArticle.sql

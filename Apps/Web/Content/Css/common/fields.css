@@ -1,0 +1,440 @@
+﻿.textbox_control .leftbar {
+	background-image : url("../../images/common/TextBoxLeftBar.png");
+	width : 7px;
+	height : 40px;
+}
+.textbox_control .bg {
+	background-image : url("../../images/common/TextBoxBg.png");
+	background-repeat : repeat-x;
+	width : 86px;
+	height : 40px;
+}
+.textbox_control .rightbar {
+	background-image : url("../../images/common/TextBoxRightBar.png");
+	width : 7px;
+	height : 40px;
+}
+.read-only_field .textbox_control .leftbar {
+	background-image : url("../../images/common/TextBoxLeftBarReadonly.png");
+	width : 7px;
+	height : 40px;
+}
+.read-only_field .textbox_control .bg {
+	background-image : url("../../images/common/TextBoxBgReadonly.png");
+	width : 7px;
+	height : 40px;
+}
+.read-only_field .textbox_control .rightbar {
+	background-image : url("../../images/common/TextBoxRightBarReadonly.png");
+	width : 7px;
+	height : 40px;
+}
+.textbox_control.active .leftbar {
+	background-image : url("../../images/common/TextBoxLeftBarActive.png");
+}
+.textbox_control.active .bg {
+	background-image : url("../../images/common/TextBoxBgActive.png");
+}
+.textbox_control.active .rightbar {
+	background-image : url("../../images/common/TextBoxRightBarActive.png");
+}
+.textbox_control input {
+	background : none;
+	border : none;
+	padding-left : 7px;
+	color : black;
+	outline : none;
+	height : 35px;
+	margin : 1px 0px 0px -5px;
+	font : 12px Arial;
+}
+.forms_v2 .field .textbox_control input {
+	border : 1px solid #47A;
+	height : 20px;
+}
+body.IE7 .textbox_control input, body.IE8 .textbox_control input {
+	padding-top : 10px;
+	height : 25px;
+}
+body.IE7 .forms_v2 .textbox_control input, body.IE8 .forms_v2 .textbox_control input {
+	padding-top : 0px;
+	height : 17px;
+}
+.read-only_field .textbox_control input {
+	color : #807E7E;
+}
+.textbox_control input.mask, .field.multiline_textbox_field .control.multiline_textbox_control textarea.mask {
+	color : #959595;
+}
+.field.dropdown_field .control .dropdown input[type='text'] {
+	background : none;
+	border : none;
+	padding-left : 7px;
+	color : black;
+	outline : none;
+	height : 30px;
+	margin : 0px 0px 0px -5px;
+	cursor : pointer;
+	font : 12px Arial;
+}
+body.IE7 .field.dropdown_field .control .dropdown input[type='text'], body.IE8 .field.dropdown_field .control .dropdown input[type='text'] {
+	padding-top : 8px;
+	height : 24px;
+}
+.dropdown_control .leftbar {
+	background-image : url("../../images/common/DropdownLeftBar.png");
+	width : 5px;
+	height : 34px;
+	cursor : pointer;
+}
+.dropdown_control .bg {
+	background-image : url("../../images/common/DropdownBg.png");
+	background-repeat : repeat-x;
+	width : 90px;
+	height : 34px;
+	cursor : pointer;
+}
+.dropdown_control .rightbar {
+	background-image : url("../../images/common/DropdownRightBar.png");
+	width : 5px;
+	height : 34px;
+	cursor : pointer;
+}
+.dropdown-vline {
+	width : 1px;
+	height : 34px;
+	margin-left : -28px;
+	float : left;
+	background-color : #B2C4D4;
+	cursor : pointer;
+}
+.dropdown-arrow {
+	border-top : 4px solid #7794aa;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	margin : 16px 0px 0px -18px;
+	float : left;
+	cursor : pointer;
+}
+.listbox {
+	width : 340px;
+}
+.listbox-scrollpan {
+	position : absolute;
+	overflow : hidden;
+	background-color : white;
+}
+.dropdown-scrollpan {
+	position : absolute;
+	margin-top : 33px;
+	overflow : hidden;
+	background-color : white;
+	text-align : left;
+}
+.dropdown-scrollbar-toparrow-border, .listbox-scrollbar-toparrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	top : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-toparrow, .listbox-scrollbar-toparrow {
+	position : absolute;
+	right : 3px;
+	top : 4px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-toparrow, body.IE7 .listbox-scrollbar-toparrow {
+	top : -12px;
+}
+.dropdown-scrollbar-bottomarrow-border, .listbox-scrollbar-bottomarrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	bottom : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-bottomarrow, .listbox-scrollbar-bottomarrow {
+	position : absolute;
+	right : 3px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-bottomarrow, body.IE7 .listbox-scrollbar-bottomarrow {
+	bottom : -12px;
+}
+.dropdown-scrollbar-wrap, .listbox-scrollbar-wrap {
+	position : absolute;
+	right : 0px;
+	width : 12px;
+	top : 11px;
+	border : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAIAAABlidhuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0OTMzODBDQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0OTMzODBEQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MzM4MEFDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MzM4MEJDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6WxLuLAAAAIUlEQVR42mK8ces2CwsLKysrgmRhYWZmZmJiYoABgAADAGHgAu32HnaBAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+}
+.dropdown-scrollbar.ui-slider.ui-widget, .listbox-scrollbar.ui-slider.ui-widget {
+	position : absolute;
+	margin-top : 24px;
+	border : none;
+	width : 0px;
+}
+.dropdown-scrollbar .ui-slider-handle.ui-state-default, .listbox-scrollbar .ui-slider-handle.ui-state-default {
+	background-image : url("../../images/common/DropdownScrollbarHandle.png");
+	width : 14px;
+	height : 48px;
+	position : absolute;
+	margin : 0px 0px -25px -1px;
+	cursor : pointer;
+	outline : none;
+	left : 0px;
+}
+.dropdown-items, .listbox-items {
+	position : absolute;
+}
+.dropdown-item, .listbox-item {
+	border : 1px solid #B3C6D6;
+	border-top : none;
+	height : 19px;
+	color : #807E7E;
+	font : 12px Arial;
+	background-color : #FFFFFF;
+	cursor : pointer;
+	padding : 6px 0px 0px 8px;
+}
+.dropdown-item.disabled {
+	cursor : default;
+}
+.dropdown-item:first-child , .listbox-item:first-child{
+	border : 1px solid #B3C6D6;
+}
+.dropdown-item:not(.disabled):hover, .listbox-item:hover, .dropdown-item.selected {
+	color : #F0F6FB;
+	background-color : #207CD5;
+}
+#main-body .dropdown-item, #main-body .listbox-item {
+	float : none;
+}
+.checkbox {
+	background-image : url("../../images/common/Checkbox.png");
+	background-position : 0px -16px;
+	width : 16px;
+	height : 16px;
+	cursor : pointer;
+	margin : 0px 1px 0px 0px;
+}
+.checkbox.disabled {
+	background-position : 0px 0px;
+}
+.checkbox:hover {
+	background-position : 0px -32px;
+}
+.checkbox.checked, .checkbox.checked:hover, .listbox-item.selected .checkbox {
+	background-position : 0px -48px;
+}
+.error .checkbox, .error .checkbox:hover {
+	width : 18px;
+	height : 18px;
+	background-position : 0px -64px;
+}
+.listbox-item .checkbox {
+	margin : -1px 8px 0px 0px;
+}
+.mandatory {
+	background-image : url("../../images/common/Compulsory.png");
+	width : 10px;
+	height : 11px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand .topbar {
+	background-image : url("../../images/common/ETextBoxTopBar.png");
+	width: 207px;
+	height : 8px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand .bg {
+	background-image : url("../../images/common/ETextBoxBg.png");
+	background-repeat : repeat-y;
+	width: 207px;
+	height : auto;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand .bottombar {
+	background-image : url("../../images/common/ETextBoxBottomBar.png");
+	width: 207px;
+	height : 5px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand.active .topbar {
+	background-image : url("../../images/common/ETextBoxTopBarActive.png");
+	width: 207px;
+	height : 8px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand.active .bg {
+	background-image : url("../../images/common/ETextBoxBgActive.png");
+	background-repeat : repeat-y;
+	width: 207px;
+	height : auto;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand.active .bottombar {
+	background-image : url("../../images/common/ETextBoxBottomBarActive.png");
+	width: 207px;
+	height : 5px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control textarea {
+	width : 361px;
+	border : 1px solid #B2C4D4;
+	border-radius : 4px;
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	outline : none;
+	margin-left : 1px;
+	color : #464646;
+	float : left;
+	position : relative;
+	line-height : 15px;
+	padding-left : 7px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	font-family : Arial;
+	resize : none;
+	overflow : hidden;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control.autoexpand textarea {
+	border : none;
+	background : none;
+	width : 195px;
+	height : 17px;
+	padding-top : 5px;
+}
+.field.multiline_textbox_field .control.multiline_textbox_control .outer {
+	position : absolute;
+	margin : 0px 0px 0px 356px;
+	width : 17px;
+	display : none;
+}
+.multiline_textbox_control .outer .top, .multiline_textbox_control .outer .bottom, .multiline_textbox_control .outer  .wrap {
+	width : 15px;
+	border-left : 1px solid #B2C4D4;
+	border-right : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url("../../images/common/ScrollBarBg.png");
+	background-repeat : repeat-y;
+}
+.multiline_textbox_control .outer .top {
+	border-top : 1px solid #B2C4D4;
+}
+.multiline_textbox_control .outer .bottom {
+	border-bottom : 1px solid #B2C4D4;
+}
+.multiline_textbox_control .outer  .scrollbar {
+	width : 17px;
+	border : none;
+	cursor : pointer;
+	background : none;
+	margin-top : 48px;
+}
+.multiline_textbox_control .outer  .top, .multiline_textbox_control .outer .bottom {
+	height : 16px;
+}
+.multiline_textbox_control .outer .top .arrow {
+	position : absolute;
+	right : 4px;
+	top : 5px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+.multiline_textbox_control .outer .bottom .arrow {
+	position : absolute;
+	right : 4px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+.multiline_textbox_control .scrollbar .ui-slider-handle {
+	width : 17px;
+	height : 48px;
+	margin : 0px 0px 0px 3px;
+	cursor : pointer;
+	outline : none;
+	border : none;
+	background-image : url("../../images/common/ScrollBarHandle.png");
+}
+.succinfo, .validationerror {
+	display : none;
+}
+.succinfo {
+	margin : 0px 0px 10px 10px;
+	border : 1px solid #9FD690;
+	border-radius : 4px;
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	background-color : #E6FEE3;
+	padding : 5px;
+	width : 496px;
+}
+.succinfo .icon {
+	background-image : url("../../images/faq/IconSuccess.png");
+	width : 14px;
+	height : 14px;
+	margin : 5px;
+}
+.succinfo .prompt {
+	width : 460px;
+	text-align : left;
+}
+.validationerror {
+	margin : 0px 0px 10px 10px;
+	border : 1px solid #D69090;
+	border-radius : 4px;
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	background-color : #DD2649;
+	padding : 5px;
+	width : 496px;
+	color : white;
+}
+.validationerror .alerticon {
+	background-image : url("../../images/faq/IconAlert.png");
+	width : 26px;
+	height : 20px;
+	margin : 5px;
+}
+.validationerror .prompt {
+	margin-top : 8px;
+}
+.validationerror ul {
+	margin-top : 5px;
+}
+.validationerror li {
+	list-style : none;
+	float : left;
+	width : 496px;
+}
+.validationerror li .listicon {
+	background-image : url("../../images/faq/IconArrowPoint.png");
+	width : 8px;
+	height : 8px;
+	margin : 4px 4px 0px 14px;
+}
+.validationerror li .text {
+	width : 445px;
+	text-align : left;
+}
+.field .errormsg {
+	font-weight : bold;
+	color : red;
+	float : left;
+	margin-left : 148px;
+	text-align : left;
+}

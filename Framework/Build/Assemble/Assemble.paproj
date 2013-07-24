@@ -1,0 +1,212 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{b9a2a1e2-10be-4ee6-addc-4f09fef012cf}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Framework.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{161AFB47-0030-4c20-8F63-110A746A516A}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\SqlServer\LinkMe.Framework.SqlServer.dll">
+      <Guid>{77FC00FC-CDB8-4c23-B181-658798CA1E2E}</Guid>
+      <Link>Bin\LinkMe.Framework.SqlServer.dll</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Utility\LinkMe.Framework.Utility.dll">
+      <Guid>{c5b4f38b-f5e9-4ed8-b2e2-afec8c2017fb}</Guid>
+      <Link>Bin\LinkMe.Framework.Utility.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{E0FABFF4-B6BA-4cb9-8849-3EBAC83FF52B}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Communications\LinkMe.Framework.Communications.dll">
+      <Guid>{63CA2CAD-8BF2-45a8-A2EC-AD3198BA3E65}</Guid>
+      <Link>Bin\LinkMe.Framework.Communications.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{4993C045-B5B7-4fe5-9920-45C461AC614E}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Tools\LinkMe.Framework.Tools.dll">
+      <Guid>{f6bb6d60-83e8-4284-a2e7-4ed31ab912d8}</Guid>
+      <Link>Bin\LinkMe.Framework.Tools.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{20557121-7FF9-46e6-B85A-41E95449FE6B}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Reports\LinkMe.Framework.Reports.dll">
+      <Guid>{F682FEEB-37A4-439f-8F9A-654FE09F5ACC}</Guid>
+      <Link>Bin\LinkMe.Framework.Reports.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{9AFBB764-1553-421b-AF07-721F3453A323}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Type\LinkMe.Framework.Type.dll">
+      <Guid>{35655b38-dd3a-4998-ba79-206305153200}</Guid>
+      <Link>Bin\LinkMe.Framework.Type.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6BBB3EAE-BEB0-4f58-AFE0-8882D06D6C2B}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Type\Tools\LinkMe.Framework.Type.Tools.dll">
+      <Guid>{ef939e97-b5f7-4100-9c26-0f956868683f}</Guid>
+      <Link>Bin\LinkMe.Framework.Type.Tools.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{91D29796-D581-4163-8765-4F55A0B4861F}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Configuration\LinkMe.Framework.Configuration.dll">
+      <Guid>{b03403cc-5e14-4fdf-b65d-d5b7ce3a6a46}</Guid>
+      <Link>Bin\LinkMe.Framework.Configuration.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{7AE268A9-8F36-485f-AA25-1913B3C80571}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Configuration\Tools\LinkMe.Framework.Configuration.Tools.dll">
+      <Guid>{880cffd8-e710-4695-bd56-9e24bdc46f0e}</Guid>
+      <Link>Bin\LinkMe.Framework.Configuration.Tools.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{484E0010-0A59-4ba0-9BAF-935FBA1DC11C}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Configuration\Connection\LinkMe.Framework.Configuration.Connection.dll">
+      <Guid>{be85523b-92a3-42dc-96a2-8462162bd8b3}</Guid>
+      <Link>Bin\LinkMe.Framework.Configuration.Connection.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{3C513068-4459-448f-94C9-5672BDBA0719}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Text\LinkMe.Framework.Text.dll">
+      <Guid>{86933546-9141-4d4f-913C-56621A416CA5}</Guid>
+      <Link>Bin\LinkMe.Framework.Text.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{AEF56398-C7A3-45f6-AB85-C27C60660F35}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Content\LinkMe.Framework.Content.dll">
+      <Guid>{4C9A57B7-AC67-4385-8045-3435B317A255}</Guid>
+      <Link>Bin\LinkMe.Framework.Content.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{D9E44DAA-1E5A-4963-BD0A-AD00E60E555C}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\LinkMe.Framework.Instrumentation.dll">
+      <Guid>{38f15f14-04e2-4a83-a6d3-47efe12cb35f}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{FE226E74-EC8C-49d6-A8F7-9808B44E4984}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Tools\LinkMe.Framework.Instrumentation.Tools.dll">
+      <Guid>{8ce8c3a0-b925-41a9-b8f2-1c7fbdbd26c0}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.Tools.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{EE8F9AB0-869A-438a-AA8F-133C700F65D1}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Management\LinkMe.Framework.Instrumentation.Management.dll">
+      <Guid>{ef2e5cae-2b4d-4259-9bd1-83aea023d205}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.Management.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{0EBF9939-8F5A-4233-B311-E9E8F8F79EFF}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Connection\LinkMe.Framework.Instrumentation.Connection.dll">
+      <Guid>{778e3b38-b5c8-4189-a100-8a14bd02aa3b}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.Connection.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6E8DD07B-3954-429c-BD28-A7C1C4D9796B}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Tools\EventViewer\LinkMe.Framework.Instrumentation.Tools.EventViewer.exe">
+      <Guid>{2bc6db03-2690-45b8-8cd7-af79c81fe050}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.Tools.EventViewer.exe</Link>
+      <ShortcutName>Event Viewer</ShortcutName>
+      <ShortcutPath>LinkMe</ShortcutPath>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Tools\Config\LinkMe.Framework.Instrumentation.Tools.EventViewer.Modules.config">
+      <Guid>{dfb67274-bbdd-4f33-962a-b3708b06a1aa}</Guid>
+      <Link>Bin\LinkMe.Framework.Instrumentation.Tools.EventViewer.Modules.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Instrumentation\Config\Repository\Wmi\LinkMe.Framework.Instrumentation.mof">
+      <Guid>{8daa963e-3297-4529-b3c7-fb13a647d202}</Guid>
+      <Link>Config\LinkMe.Framework.Instrumentation.mof</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Host\LinkMe.Framework.Host.dll">
+      <Guid>{70033c83-6696-4ebd-9a2c-bd761c3a2268}</Guid>
+      <Link>Bin\LinkMe.Framework.Host.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{5506FEEB-CB1F-42cb-8E94-FE8664D244DE}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Host\Instrumentation\LinkMe.Framework.Host.Instrumentation.dll">
+      <Guid>{898705d9-4ebb-4686-bcf5-9fd155535039}</Guid>
+      <Link>Bin\LinkMe.Framework.Host.Instrumentation.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{75748DBB-BC47-4a27-80B6-057F48429041}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Host\Msmq\LinkMe.Framework.Host.Msmq.dll">
+      <Guid>{C5C06E12-3AF7-4a15-BCDA-36FE01292969}</Guid>
+      <Link>Bin\LinkMe.Framework.Host.Msmq.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A3BDC112-70E3-4541-8592-5FF2FC45172E}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Host\Wcf\LinkMe.Framework.Host.Wcf.dll">
+      <Guid>{F444F698-EF50-4167-A93E-35D2C6CC5228}</Guid>
+      <Link>Bin\LinkMe.Framework.Host.Wcf.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{2B2925A1-D42B-4e64-AEF0-851D36B47145}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Host\Service\LinkMe.Framework.Host.Service.exe">
+      <Guid>{fb029610-894d-45da-9923-54ad62c54ca8}</Guid>
+      <Link>Bin\LinkMe.Framework.Host.Service.exe</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Environment\Util\LinkMe.Framework.Environment.Util.exe">
+      <Guid>{047e082e-758f-4059-b378-45781d98c10e}</Guid>
+      <Link>Bin\LinkMe.Framework.Environment.Util.exe</Link>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+    <Folder Include="Bin\Targets\" />
+    <Folder Include="Config\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Targets\" />
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

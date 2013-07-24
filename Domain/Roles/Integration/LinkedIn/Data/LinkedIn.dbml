@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="LinkedInDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LinkedInProfile" Member="LinkedInProfileEntities" AccessModifier="Internal">
+    <Type Name="LinkedInProfileEntity" AccessModifier="Internal">
+      <Column Name="linkedInId" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUpdatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="organisationName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="locationReferenceId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LinkedInProfile_LinkedInProfileIndustry" Member="LinkedInProfileIndustryEntities" ThisKey="linkedInId" OtherKey="linkedInId" Type="LinkedInProfileIndustryEntity" />
+      <Association Name="LocationReference_LinkedInProfile" Member="LocationReferenceEntity" ThisKey="locationReferenceId" OtherKey="id" Type="LocationReferenceEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LinkedInProfileIndustry" Member="LinkedInProfileIndustryEntities" AccessModifier="Internal">
+    <Type Name="LinkedInProfileIndustryEntity" AccessModifier="Internal">
+      <Column Name="linkedInId" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="industryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LinkedInProfile_LinkedInProfileIndustry" Member="LinkedInProfileEntity" ThisKey="linkedInId" OtherKey="linkedInId" Type="LinkedInProfileEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationReference" Member="LocationReferenceEntities" AccessModifier="Internal">
+    <Type Name="LocationReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="unstructuredLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="namedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LocationReference_LinkedInProfile" Member="LinkedInProfileEntities" ThisKey="id" OtherKey="locationReferenceId" Type="LinkedInProfileEntity" />
+    </Type>
+  </Table>
+</Database>

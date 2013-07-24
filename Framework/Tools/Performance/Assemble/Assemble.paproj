@@ -1,0 +1,31 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{C181694B-D0DD-4b11-8B45-681ADF382CAD}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Framework.Tools.Performance.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{E2A1497D-5E0A-440d-9929-829E563796FE}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Bin" />
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\LinkMe.Framework.Tools.Performance.dll">
+      <Guid>{0F7314A4-99F8-4cb8-80A2-BB21A0133D12}</Guid>
+      <Link>Bin\LinkMe.Framework.Tools.Performance.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{C66B09B8-9238-4adf-8351-F2076F347842}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\Config\LinkMe.Framework.Tools.Performance.Counters.config">
+      <Guid>{C33084F5-F9E0-431b-AE75-1CBB3F49D95A}</Guid>
+      <Link>Config\LinkMe.Framework.Tools.Performance.Counters.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

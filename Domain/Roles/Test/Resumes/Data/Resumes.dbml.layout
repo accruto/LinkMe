@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Resumes">
+  <DataContextMoniker Name="/ResumesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cca5f4e7-f826-49dc-8568-449f734c6dbf" absoluteBounds="4.875, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ResumesDataContext/ResumeEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28d9bc51-e93a-4562-afc0-600458df6726" absoluteBounds="4.89, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdf14070-dc7c-44fb-8846-3f7f4abf55b6" absoluteBounds="1.5, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ResumesDataContext/Resume2Entity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ac65182-b204-4777-a242-45af6a60b20d" absoluteBounds="1.5150000000000001, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

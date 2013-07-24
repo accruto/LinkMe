@@ -1,0 +1,54 @@
+#errorMsg 
+{
+	background:#FFE8D9 url(../img/ErrorU-435.gif) no-repeat scroll left top;
+}
+
+#errorMsg div 
+{
+	background:transparent url(../img/ErrorD-435.gif) no-repeat scroll left bottom;
+}
+
+#errorMsg div div {
+   background:transparent url(../img/ErrorL.gif) no-repeat scroll 10px;
+}
+
+#errorMsg 
+{
+	width: 435px;
+}
+
+div.clearer {
+	clear: none;
+}
+
+a.title {
+	font-size:100%;
+}
+
+ol {
+	margin:3px 3px 3px 20px;
+	padding:5px 0pt 0pt 3px;
+}
+
+ol li {
+	width:400px;
+}
+
+
+dl {
+	padding:0px 0px;
+}
+
+
+body		{}
+
+#main
+{
+	width: 440px;
+}
+
+#content
+{
+	width: 435px;
+	margin:5px 0px 0px;
+}

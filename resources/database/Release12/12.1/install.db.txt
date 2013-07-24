@@ -1,0 +1,15 @@
+create_ResourcePollAnswer.sql
+create_ResourcePollAnswerVote.sql
+alter_ResourceQuestion.sql
+alter_ProductOrderAdjustment.sql
+data_Product.sql
+create_AnonymousUserProfile.sql
+data_ResourceFeaturedArticle.sql
+create_JobAdIndexing.sql
+create_ResourceIndexing.sql
+alter_ResourceArticle.sql
+alter_ResourceAnsweredQuestion.sql
+alter_ResourceVideo.sql
+data_ResourceAnsweredQuestion.sql
+data_ResourceVideo.sql
+data_ResourceArticle.sql

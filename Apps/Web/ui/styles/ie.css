@@ -1,0 +1,15 @@
+
+/* fixes font-size keyword problem for IE5/Win */
+body 
+{
+	font-size: x-small; /* IE5 Win */
+	line-height: 1.5em;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	font-size: small;
+}
+
+html>body 
+{ /* be nice to Opera */
+	font-size: small;
+}

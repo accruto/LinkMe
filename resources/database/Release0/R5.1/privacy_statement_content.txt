@@ -1,0 +1,78 @@
+Last Updated: 11 December 2004<p>
+
+Protecting your information and maintaining your privacy are of the utmost importance to LINKME
+<ul>
+<li>We never rent or sell your personal information to third parties for marketing purposes - Those third parties who do have access to your contact information as nominated by you are bound by terms of use which prohibit them from using your information for any other use than the one in which you intended it to be used
+<li>We never share your contact information with another user - The only way a user will know your identity is if you choose to disclose your contact information to them in the course of your interaction 
+<li>Any information submitted for the purpose 
+              of purchasing LINKME products will be secured with industry 
+              standard encryption technology. LINKME uses Verisign</li>
+</ul>
+
+Please read this Privacy Statement to learn more about:
+<ol>
+<li>What personally identifiable information of yours is collected by LINKME. 
+<li>How the information is used. 
+<li>With whom the information may be shared. 
+<li>How you can access and change your Account information. 
+<li>What security procedures are in place to protect the loss, misuse or alteration of information collected by LINKME. 
+<li>How to contact us.</li> 
+</ol>
+If users have questions or concerns regarding this statement, you should first contact LINKME by email at <a href="mailto:business@linkme.com.au">business@linkme.com.au</a><p>
+
+<b>Information Collection</b><p>
+
+<ul>
+<i>Registration</i><br>
+Your name and email address are collected at registration. Special Memberships which give users annual access to features and tools of the LINKME service may be offered in the future and in this case credit card information would also be collected at the time of registration. 
+<p>
+<i>Profile Information</i><br>
+Profile information is compiled by submitting your CV. No other data or time commitment is required unless you do not have a CV and then some effort is required in order to manual submit your skills and experience
+<p>
+<i>Information about your Contacts</i><br>
+In order to invite others to connect with you directly via LINKME, you will enter their names and email addresses. This information will be used by LINKME to send your invitation including a message composed by you. The names and email addresses of people that you invite will be used only to send your invitations to them, feedback to you and reminders in the case that they are required.<p>
+All information that you enter or upload about your contacts will be covered by the same terms of this privacy statement.
+<p>
+<i>Cookies &amp; Log Files</i><br>
+LINKME uses cookies to track 
+              sessions.</p>
+</ul>
+
+<b>Information Use</b><P>
+
+The LINKME service is provided to assist users to network with other users in order to make contacts to assist them in their professional development. The service is also designed to reduce the time and effort it takes to find new employment opportunities by allowing those users, who nominate that they wish to participate, to have their details, skills and experience searchable by applicable employers and recruiters. Your contact information is only given to these specific third parties if you nominate it to be so.<P>
+
+LINKME will communicate with users via email. LINKME users will also communicate with other users via email. LINKME from time to time will ask users to update their profile / CV information by submitting updated information or CV's. LINKME will also send news to users about new features and updates to the LINKME service.<P>
+
+<b>Information Sharing</b><P>
+
+<ul>
+<i>Third Party Searching</i><br>
+LINKME values users and therefore will only share information with third parties as nominated by the user, specifically for the purpose of employment opportunities.<p> 
+Networker to Networker interaction is anonymous until users choose to reveal their details to each other. Only anonymous excerpts of user information are shown to networkers for the purpose of validating searches on specific user attributes.<p> 
+<b>Note:</b> Users will always know the identity of those users whom they invited in the first instance - They had to know them to invite them.<p>
+<i>Partnering</i><br>
+LINKME may partner with other service providers in order to evolve or expand the LINKME service offering and these services will only be marketed to users via the web site or email if nominated by the user.
+<p>
+<i>Communications between Users</i><br>
+Many emails you initiate through LINKME, an invitation sent to a non-user for instance, will list your name in the subject line of the message. Emails you initiate may also provide aggregate information about your network (for instance how many people are in your network), but will never list the people to whom you are directly connected.
+<p> 
+Other communications that you initiate through the LINKME website, like a request for contact, will list your name as the initiator but will not include your personal contact information. Your contact information will only be shared with another user if you choose to disclose that information.<p>
+<i>Legal Disclaimer</i><br>
+LINKME may also have to 
+              share information with law enforcement agencies should it be 
+              compelled to do so.</p>
+</ul>
+
+<b>Accessing and Changing Your Account Information</b><p>
+
+You can access and change your account information by selecting Edit Profile from the left navigation panel.<p>
+
+<b>Security</b><p>
+In order to secure your personal information, all communications between you and the LINKME website are protected through secure socket layer (SSL) encryption. Credit Card details are also secured using 128 bit encryption.<p>
+
+<b>Changes to this Privacy Policy</b><p>
+LINKME may update this privacy statement at anytime. In the event there are significant changes in the way we treat your personal information, we will send a notice to the primary email address specified in your LINKME account or by displaying it prominently in areas of the LINKME site.<p>
+
+<b>Questions or Comments</b><p>
+If you have questions or comments about this privacy policy, please email us at <a href="mailto:business@linkme.com.au">business@linkme.com.au</a>.

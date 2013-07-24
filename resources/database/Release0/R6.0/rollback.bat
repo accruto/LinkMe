@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_get_viewstate_sp.sql,rollback_save_viewstate_sp.sql,rollback_database_version_table.sql

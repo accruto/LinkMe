@@ -1,0 +1,25 @@
+#JobAd #JobDescription #Ad
+{
+	background: transparent url('Affinity IT_images/header.jpg') no-repeat center top;
+	padding-top: 88px;
+}
+
+#JobAd #JobDescription H1
+{
+	color: #333;
+	font-family: verdana,helvetica,sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#JobAd #JobDescription ul li
+{
+	list-style-type: disc;
+	font-weight: bold;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: url('Affinity IT_images/logo.gif') no-repeat right;
+	height: 58px;
+}

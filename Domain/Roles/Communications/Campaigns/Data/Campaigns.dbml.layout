@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Campaigns">
+  <DataContextMoniker Name="/CampaignsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dc1e1351-f80c-44da-9e96-18c409f52304" absoluteBounds="6, 3.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CampaignsDataContext/CampaignTemplateEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb9fd572-f09d-44b3-a2e4-979c8095d855" absoluteBounds="6.0150000000000006, 3.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="843a1890-e851-4f96-b4d6-87a45f54f7e8" absoluteBounds="3.75, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CampaignsDataContext/CampaignCriteriaEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="938cc6ce-d553-459f-8eaa-5e0b315d1f57" absoluteBounds="3.7649999999999997, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6510f63c-d7c4-4504-8d86-e752d97b977d" absoluteBounds="7.375, 1.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CampaignsDataContext/CampaignCriteriaSetEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67c1c24c-5195-4bc0-a95a-e7a195b4a115" absoluteBounds="7.39, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 1.69314697265625); (5.75 : 1.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CampaignsDataContext/CampaignCriteriaSetEntity/CampaignCriteriaSetEntity_CampaignCriteriaEntity" />
+      <nodes>
+        <classShapeMoniker Id="6510f63c-d7c4-4504-8d86-e752d97b977d" />
+        <classShapeMoniker Id="843a1890-e851-4f96-b4d6-87a45f54f7e8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7e619733-b1ab-4fcb-ae72-09f0c0275203" absoluteBounds="1, 2.375, 3.25, 2.5401025390624996">
+      <DataClassMoniker Name="/CampaignsDataContext/CampaignEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da45befc-74a1-4cbb-93d7-639be1f8092a" absoluteBounds="1.015, 2.835, 3.2199999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 4.06814697265625); (6 : 4.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CampaignsDataContext/CampaignEntity/Campaign_CampaignTemplateEntity" />
+      <nodes>
+        <classShapeMoniker Id="7e619733-b1ab-4fcb-ae72-09f0c0275203" />
+        <classShapeMoniker Id="dc1e1351-f80c-44da-9e96-18c409f52304" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

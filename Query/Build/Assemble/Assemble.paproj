@@ -1,0 +1,50 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{1A0ABFAE-4DF7-493d-8D59-F8D2DFE5C51A}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Query.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{FB7D38CA-D451-454a-BF87-B7A342707BE7}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\LinkMe.Query.dll">
+      <Guid>{EB2521F3-90E9-4dae-9750-F3D4F6B8AF4E}</Guid>
+      <Link>Bin\LinkMe.Query.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{4BAFB89E-851E-4c89-9076-5E8C990405F3}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Search\LinkMe.Query.Search.dll">
+      <Guid>{7667F01A-A34C-4443-94F9-54A434916CEB}</Guid>
+      <Link>Bin\LinkMe.Query.Search.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{5CC68C0C-1FEA-4322-AED3-9B3B73FEA190}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Reports\LinkMe.Query.Reports.dll">
+      <Guid>{BF9EB515-428E-4133-A81D-D78BA307D213}</Guid>
+      <Link>Bin\LinkMe.Query.Reports.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{86C16F38-E1AC-496a-88EA-77B62AF05EE8}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Search\Engine\LinkMe.Query.Search.Engine.dll">
+      <Guid>{7E340311-84D4-44be-B447-B5B26F8F4BA4}</Guid>
+      <Link>Bin\LinkMe.Query.Search.Engine.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{41764630-E519-4955-81A8-7E9E82C2E5F9}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

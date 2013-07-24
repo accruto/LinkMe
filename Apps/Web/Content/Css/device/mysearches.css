@@ -1,0 +1,40 @@
+﻿.mysearches {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.mysearches .title {
+	font-size : 2.25em;
+	font-size : Bold;
+	color : #464646;
+	line-height : 2em;
+}
+.mysearches .button {
+	text-decoration : none;
+	color : #464646;
+	font-size : 2em;
+	font-weight : Bold;
+	width : 100%;
+	height : 3.15625em;
+	background-size : 100% 100%;
+	margin-bottom : 1em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	padding : 1em 0 0 3em;
+}
+.mysearches .button.newsearch {
+	height : 2.90625em;
+	background-image : url("../../images/device/ButtonNewSearch.png");
+}
+.mysearches .button.recentsearches {
+	background-image : url("../../images/device/ButtonRecentSearches.png");
+}
+.mysearches .button.myfavouritesearches {
+	background-image : url("../../images/device/ButtonMyFavouriteSearches.png");
+}

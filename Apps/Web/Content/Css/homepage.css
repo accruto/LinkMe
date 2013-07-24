@@ -1,0 +1,1828 @@
+#container {
+    background: #D9E2E6 url(../images/homepage/body_background.png) repeat;
+    width: 100%;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+#body-container {
+    border: 0;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+#container .section {
+    overflow: visible;
+}
+
+#main-body div, #main-body span, #main-body label, #main-body li, #main-body a {
+    float: left;
+}
+
+.login_ascx {
+    height: 88px;
+}
+
+.login_ascx .section {
+    background: #D9E2E6 url(../images/homepage/login/login_bg.png) no-repeat top center;
+    min-width: 950px;
+    height: 88px;
+}
+
+.login_ascx .left-section {
+    width: 50%;  
+    float: left;
+}
+
+.login_ascx .right-section {
+    width: 50%; 
+    *width: 49.9%; 
+    float: right;
+}
+
+.login_ascx .left-section .section {
+    width: 475px;
+    min-width: 475px;  
+    float: right;
+    background: none;
+}
+
+.login_ascx .right-section .section {
+    width: 475px;
+    min-width: 475px;  
+    float: left;
+    background: none;
+    padding: 18px 0 0 25px;
+    *padding: 18px 0 0 10px;
+}
+
+.login_ascx .homepage-button:hover {
+    background-position:left center;
+}
+
+.login_ascx .homepage-button:active {
+    background-position:left bottom;
+}
+
+.homepage-actual-button {
+    background: none no-repeat scroll 0 0 transparent;
+    border: none;
+    margin: 0;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.login-actual-button {
+    height: 35px;
+    width: 100px;
+}
+
+.join-actual-button {
+    height: 27px;
+    width: 80px;
+}
+
+.search-actual-button {
+    height: 44px;
+    width: 172px;
+}
+
+.advanced-search-actual-button {
+    height: 27px;
+    width: 121px;
+}
+
+.login_ascx .left-section .bottom-row {
+    position: relative;
+}
+
+.login_ascx .join_button {
+    background-image: url(../images/homepage/login/join.png); 
+    border:0; 
+    width: 115px;
+    background-position:left top; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:36px; 
+    margin:0; 
+    padding:0 5px;
+    display: inline-block;
+    position: absolute;
+    left: 27%;
+    top: 35px;
+}
+
+.login_ascx .login_button {
+    background-image: url(../images/homepage/login/login.png); 
+    border:0; 
+    width: 100px;
+    background-position:left top; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:36px; 
+    margin:0; 
+    padding:0 5px;
+}
+
+.login_ascx .right-section .login-holder table td {
+    padding: 2px;
+}
+
+.login_ascx .right-section .login-holder table td.login-error-holder {
+    padding: 0px;
+}
+
+.login_ascx .right-section .bottom-row {
+    font-size: 58%;
+    font-weight: bold;
+    position: inherit;
+}
+
+.login_ascx .homepage-field {
+    background: none;
+    border: none;
+    width: 142px;
+    width: 138px\9;
+    height: 15px;
+    margin: 0;
+    padding: 10px 8px 10px 8px;
+    padding-left: 5px\9;
+    font-size: 85%;
+}
+
+.login_ascx .password-field {
+    width: 136px;
+    width: 130px\9;
+}
+
+.login_ascx .loginid_holder .text-holder {
+    margin:0;
+    height:38px;
+    width:160px;
+    background: url(../images/homepage/login/username-field.png) no-repeat bottom;
+}
+
+.login_ascx .password_holder .text-holder {
+    margin:0;
+    height:38px;
+    width:154px;
+    background: url(../images/homepage/login/password-field.png) no-repeat bottom;
+}
+
+.login_ascx .login-error {
+    background-color: #9c4f6c;
+    border: #9e526f;
+    color: #FFFFFF;
+    padding: 4px 7px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/*.login_ascx .right-section .checkbox-holder, .login_ascx .right-section .link-holder {
+    display: inline-block;
+    position: absolute;
+}*/
+
+.login_ascx .right-section .checkbox-holder {
+    color: #FFFFFF;
+}
+
+.login_ascx .right-section .link-holder {
+    padding: 2px 0 0 16px;
+    float: left;
+}
+
+.login_ascx .homepage-link {
+    color: #1f3e5e;
+}
+
+.pushcheck {
+    float: left;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .pushcheck {
+        float: none;
+        display: inline-block;
+    }
+}*/
+
+.pushcheck:first-child {	/* Doesn't work for IE6 */
+    margin-left: 0;
+}
+.pushcheck-hover         { background-position: 0px -17px; }
+.pushcheck-down          { background-position: 0px -34px; }
+.pushcheck-checked       { background-position: 0px -51px; }
+.pushcheck-checked-hover { background-position: 0px -68px; }
+.pushcheck-checked-down  { background-position: 0px -85px; }
+
+.homepage-checkbox_pushcheck {
+    width: 16px;
+    height: 16px;
+}
+.homepage-checkbox_pushcheck {
+    background-image: url(../images/homepage/homepage-checkbox.png);
+}
+
+.checkbox-holder span 
+{
+    /*display: inline-block;*/
+    padding: 2px 0 0 5px;
+}
+
+.login_ascx .right-section .bottom-row .checkbox-holder span {
+    float: left;
+}
+
+.login_ascx .join-section{
+}
+
+.login_ascx .join-section .arrow {
+    position: absolute;
+    left: 223px;
+    top: 40px;
+    z-index:6;
+    width: 27px;
+    height: 27px;
+    background-image: url(../images/homepage/login/arrow.png);
+    cursor: pointer;
+}
+
+.login_ascx .join-section .join-dropdown {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    z-index: 5;
+}
+
+.login_ascx .join-section .join-dropdown .join-top {
+    z-index:5;
+    width: 282px;
+    height: 10px;
+    background: url(../images/homepage/login/join_section-top.png) no-repeat scroll left top transparent;
+}
+
+.login_ascx .join-section .join-dropdown .join-bg {
+    z-index:5;
+    width: 282px;
+    background-image: url(../images/homepage/login/join_section-bg.png);
+    background-repeat: repeat-y;
+}
+
+.login_ascx .join-section .join-dropdown .join-bottom {
+    z-index:5;
+    width: 282px;
+    height: 13px;
+    background: url(../images/homepage/login/join_section-bottom.png) no-repeat scroll left top transparent;
+}
+
+.login_ascx .join-content {
+    text-align: left;
+    padding: 0 8px;
+}
+
+.login_ascx .join-heading .heading {
+    font-size: 100%;
+    color: #484848;
+    font-weight: bold;
+    padding: 0 0 3px 0;
+}
+
+.login_ascx .join-heading .sub-text {
+    padding: 2px 0 8px 0;
+}
+
+.login_ascx .join-heading .sub-text .not-candidate {
+    font-size: 75%;
+    color: #959595;
+    font-weight: bold;
+    display: inline-block;
+    *display: inline;
+    padding: 0 3px 0 0;
+}
+
+.login_ascx .join-heading .sub-text .employer-link {
+    font-size: 75%;
+    color: #e8a122;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    *display: inline;
+    cursor: pointer;
+    background: url(../images/homepage/login/employer-arrow.png) no-repeat scroll left center transparent;
+    min-height: 20px;
+    padding: 4px 0 0 24px;
+}
+
+.login_ascx .homepage-field_holder {
+    border-top: solid 1px #e5e5e5;
+    padding: 8px 3px;
+    *padding: 10px 3px 23px 3px;
+}
+
+.login_ascx .join-error {
+    border-top: solid 1px #e5e5e5;
+    background-color: #f1c6ce;
+    padding: 8px 8px;
+    font-size: 75%;
+    font-weight: bold;
+    color: #484848;
+}
+
+.login_ascx .join-error a {
+    color: #18639f;
+}
+
+.login_ascx .homepage-field_label {
+    font-size: 75%;
+    font-weight: bold;
+    color: #484848;
+    display: inline-block;
+    *display: inline;
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    width: 65px\9;
+    min-width: 65px\9;
+    max-width: 65px\9;
+    word-wrap: break-word;
+    *float: left;
+    *clear: all;
+    *padding: 5px 0 0 0;
+    vertical-align: middle;
+}
+
+.login_ascx .homepage-field_label .homepage-field_sub-label {
+    font-size: 68%;
+    color: #888888;
+    font-style: italic;
+}
+
+.login_ascx .join-body .homepage-field_holder .last-child {
+    *padding: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .login_ascx .homepage-field_label {
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+    }
+}
+
+.login_ascx .join-section .join_text-field {
+    background: none;
+    border: none;
+    width: 165px;
+    width: 155px\9;
+    height: 15px;
+    margin: 0;
+    padding: 8px 8px 8px 8px;
+    font-size: 75%;
+}
+
+.login_ascx .join-section .text-holder {
+    margin:0;
+    height:30px;
+    width:183px;
+    background: url(../images/homepage/login/text-field.png) no-repeat bottom;
+    display: inline-block;
+    *display: inline;
+    *float: right;
+    *clear: all;
+}
+
+/*.login_ascx .join_text-field {
+    padding: 8px 9px 8px 8px;
+    font-size:75%;
+    background-image: url(../images/homepage/login/text-field.png);
+    display: inline-block;
+    *display: inline;
+    *float: right;
+    *clear: all;
+}*/
+
+.login_ascx .join-terms {
+    border-top: solid 1px #e5e5e5;
+    padding: 8px 0 0 0;
+}
+
+.login_ascx .terms-and-conditions {
+    width: 135px;
+    margin:0; 
+    padding:0 8px;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 75%;
+    font-weight: bold;
+    color: #484848;
+    *display: inline;
+    *float: left;
+    *clear: all;
+    *margin: -25px 0 0 15px;
+}
+
+.login_ascx .homepage-link {
+    color: #18639f;
+    cursor: pointer;
+}
+
+.login_ascx .join_tiny-button {
+    background-image: url(../images/homepage/login/join-tiny.png); 
+    border:0; 
+    width: 80px;
+    background-position:left top; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:27px; 
+    margin:0; 
+    padding:0 5px;
+    display: inline-block;
+    *display: inline;
+    *float: right;
+    *clear: left;
+}
+
+.login_ascx .text-label {
+    color: #959595;
+    font-size: 75%;
+}
+
+.homepage_aspx .section {
+    min-width: 950px;
+}
+body.IE7 .homepage_aspx .section {
+	width : 948px;
+}
+.homepage_aspx .left-section {
+    width: 50%;
+}
+
+#main-body .homepage_aspx .right-section {
+    width: 50%; 
+    *width: 49.9%; 
+    float: right;
+}
+
+.homepage_aspx .homepage-section {
+    margin: 18px 0 0 0;
+}
+
+.homepage_aspx .candidate-help-info .section-top {
+    width: 933px;
+    height: 8px;
+    background: url(../images/homepage/candidate-help-info/section-top.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .candidate-help-info .section-bg {
+    width: 933px;
+    background: url(../images/homepage/candidate-help-info/section-bg.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .candidate-help-info .section-bottom {
+    width: 933px;
+    height: 8px;
+    background: url(../images/homepage/candidate-help-info/section-bottom.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .homepage-section .homepage-content-holder {
+    padding: 18px;
+}
+
+.homepage_aspx .homepage-section .homepage-title {
+    font-size: 185%;
+    font-weight: bold;
+    color: #383737;
+    padding: 0 0 12px 0;
+}
+
+.homepage_aspx .homepage-section .homepage-content {
+    color: #484848;
+    font-size: 90%;
+    min-width: 900px;
+}
+.homepage_aspx .homepage-section.jobs-by-employers .featured .homepage-content .title {
+	width : 400px;
+	padding-bottom : 5px;
+}
+.homepage_aspx .homepage-section.jobs-by-employers .featured .homepage-content {
+	width : 400px;
+	min-width : 400px;
+}
+#main-body .homepage_aspx .homepage-left-content {
+    width: 48%;  
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 8px 0 0;
+	float : none;
+    *display: inline;
+    *float: left;
+    *clear: both;
+}
+
+#main-body .homepage_aspx .homepage-right-content {
+    width: 48%; 
+    *width: 48%; 
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0 0 12px;
+	float : none;
+    *display: inline;
+    *float: right;
+    *clear: left;
+}
+
+#main-body .homepage_aspx .homepage-section .homepage-vertical-divider {
+    width: 3px;
+    height: 492px;
+    background: url(../images/homepage/candidate-help-info/divider_vertical.png) no-repeat scroll left top transparent;
+    display: inline-block;
+	float : none;
+    *display: inline;
+    *float: left;
+}
+
+.homepage_aspx .text-label {
+    color: #959595;
+}
+
+.homepage_aspx .numbered-title {
+    font-size: 160%;
+    font-weight: bold;
+    display: inline-block;
+    *display: inline;
+    min-height: 20px;
+    padding: 8px 0 4px 40px;
+}
+body.IE7 .homepage_aspx .numbered-title {
+	width : 400px;
+}
+
+.homepage_aspx .step-one-icon {
+    background: url(../images/homepage/candidate-help-info/icon_stepscounter_1.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .step-two-icon {
+    background: url(../images/homepage/candidate-help-info/icon_stepscounter_2.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .steps-text {
+    padding: 12px 16px 12px 40px;
+    text-align: justify;
+}
+
+.homepage-right-content .steps-text {
+	padding-bottom : 15px;
+}
+#main-body .expanded-help-text {
+	float : none;
+}
+.homepage_aspx .homepage-centered-image {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 16px 0;
+}
+
+#main-body .homepage_aspx .step-one-image {
+    width: 353px;
+    height: 123px;
+    background: url(../images/homepage/candidate-help-info/image_step1_howto.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+	float : none;
+}
+
+#main-body .homepage_aspx .step-two-image {
+    width: 317px;
+    height: 123px;
+    background: url(../images/homepage/candidate-help-info/image_step2_howto.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+	float : none;
+}
+
+#main-body .homepage_aspx .homepage-section .homepage-horizontal-divider {
+    width: 282px;
+    height: 5px;
+    background: url(../images/homepage/candidate-help-info/divider_horizontal.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+	float : none;
+}
+
+.homepage_aspx .sub-content {
+    padding: 10px 8px 10px 10px;
+}
+
+.homepage_aspx .sub-content-title {
+    font-size: 120%;
+    font-weight: bold;
+    display: inline-block;
+    min-height: 20px;
+    padding: 10px 0 10px 40px;
+}
+
+.homepage_aspx .thirty-seconds {
+    background: url(../images/homepage/candidate-help-info/icon_30_seconds.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .you-are-in-control {
+    background: url(../images/homepage/candidate-help-info/icon_youre_in_control.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .let-linkme-work-for-you {
+    background: url(../images/homepage/candidate-help-info/icon_let_linkme_work_for_you.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .we-are-listening {
+    background: url(../images/homepage/candidate-help-info/icon_were_listening.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .choose-simple-or-advanced-search {
+    background: url(../images/homepage/candidate-help-info/icon_choose_simple_or_advanced_search.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .browse-by-industry-and-location {
+    background: url(../images/homepage/candidate-help-info/icon_browse_by_industry_and_location.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .reuse-your-existing-resume {
+    background: url(../images/homepage/candidate-help-info/icon_reuse_existing_resume.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .saved-searches-and-email-alerts {
+    background: url(../images/homepage/candidate-help-info/icon_saved.png) no-repeat scroll left center transparent;
+}
+
+.homepage_aspx .sub-content-text {
+    padding: 0 0 0 40px;
+}
+
+.homepage_aspx .expand-link {
+    color: #dd2649;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 12px;
+    padding: 0 10px 3px 0;
+    *padding: 0 10px 0 0;
+}
+
+#main-body .homepage_aspx .more-link {
+    background: url(../images/homepage/candidate-help-info/icon_red_arrow_down.png) no-repeat scroll right center transparent;
+	float : none;
+}
+
+#main-body .homepage_aspx .hide-link {
+    background: url(../images/homepage/candidate-help-info/icon_red_arrow_up.png) no-repeat scroll right center transparent;
+	float : none;
+}
+
+
+.homepage_aspx .jobs-by-employers .section-top {
+    width: 933px;
+    height: 8px;
+    background: url(../images/homepage/jobs-by-employers/section-top.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .jobs-by-employers .section-bg {
+    width: 933px;
+    background: url(../images/homepage/jobs-by-employers/section-bg.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .jobs-by-employers .section-bottom {
+    width: 933px;
+    height: 8px;
+    background: url(../images/homepage/jobs-by-employers/section-bottom.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .jobs-by-employers .homepage-content-holder {
+    padding: 5px 8px 0px 18px;
+	width : 430px;
+}
+.homepage_aspx .jobs-by-employers .homepage-content-holder .homepage-title {
+	width : 410px;
+}
+.jobs-by-employers .qow .q {
+	background-image : url("../images/homepage/jobs-by-employers/IconQ.png");
+	width : 18px;
+	height : 15px;
+	margin : 3px 15px 0px 0px;
+}
+.jobs-by-employers .qow .title {
+	width : 390px;
+	font-weight : bold;
+	font-size : 16px;
+	color : #383737;
+}
+.jobs-by-employers .qow .a {
+	background-image : url("../images/homepage/jobs-by-employers/IconA.png");
+	width : 18px;
+	height : 15px;
+	margin : 3px 15px 0px 0px;
+}
+.jobs-by-employers .qow .desc {
+	width : 390px;
+	font-size : 12px;
+	color : #484848;
+}
+#main-body .jobs-by-employers .qow .readmore {
+	float : none;
+	color : #DD2649;
+}
+.jobs-by-employers .qow .help {
+	font : Bold 12px Arial;
+	color : #333333;
+	margin : 20px 30px 0px 33px;
+}
+.jobs-by-employers .qow .button.askyourownquestion {
+	background-image : url("../images/homepage/jobs-by-employers/AskYourOwnQuestion.png");
+	width : 170px;
+	height : 28px;
+	padding : 0;
+	margin-top : 13px;
+}
+.jobs-by-employers .qow .button.askyourownquestion:hover {
+	background-position : 0px -28px;
+}
+.jobs-by-employers .divider {
+	background-image : url("../images/homepage/jobs-by-employers/JobsByEmployersDivider.png");
+	width : 6px;
+	height : 140px;
+	margin : 50px 8px 0px 7px;
+}
+
+.homepage_aspx .title {
+    font-size: 140%;
+    font-weight: bold;
+    padding: 0 0 18px 0;
+}
+
+.homepage_aspx .jobs-by-employers .homepage-centered-image {
+    width: 130px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+	margin-top : 10px;
+}
+
+.homepage_aspx .jobs-by-employers .featured-link {
+    margin: 0 auto;
+    cursor: pointer;
+}
+.homepage_aspx .employers-and-recruiters {
+    padding: 10px 18px 0px 18px;
+	background-image : url("../images/homepage/EmployersAndRecruitersBg.png");
+	width : 892px;
+	height : 414px;
+}
+.employers-and-recruiters .column {
+	width : 370px;
+	margin : 0px 25px 0px 24px;
+	padding-left : 30px;
+}
+.employers-and-recruiters .videotitle {
+	font : Bold 16px Helvetica, Arial;
+	color : #383737;
+	width : 400px;
+	margin-bottom : 5px;
+}
+.employers-and-recruiters .desc {
+	height : 30px;
+	width : 320px;
+	margin-bottom : 10px;
+}
+#main-body .employers-and-recruiters .desc .red {
+	color : #F73451;
+	float : none;
+}
+.homepage_aspx .employers-and-recruiters .employer-site-button {
+    background-image: url(../images/homepage/employer-site.png); 
+    border:0; 
+    width: 155px;
+    background-position:left top; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:26px; 
+    margin:0; 
+    padding:0;
+    display: inline-block;
+}
+.employers-and-recruiters .employer-site-section-text {
+	font : Bold 14px Helvetica, Arial;
+	color : #474747;
+	margin : 5px 15px 0px 0px;
+}
+.homepage_aspx .employers-and-recruiters .employer-site-button:hover {
+    background-position:left center;
+}
+
+.homepage_aspx .employers-and-recruiters .employer-site-button:active {
+    background-position:left bottom;
+}
+
+#main-body .homepage_aspx .employers-and-recruiters .employer-button-holder {
+    padding: 15px 30px 0px 0px;
+    float: right;
+}
+
+.homepage_aspx .expose-yourself {
+    margin: 0 0 0 3px;
+}
+.expose-yourself .play {
+	background-image : url("../images/homepage/ExposeYourselfBg.png");
+	width : 454px;
+	height : 391px;
+	cursor : pointer;
+}
+#main-body .expose-yourself .play .discover {
+	font : Bold 30px Helvetica, Arial;
+	float : none;
+	color : #383737;
+	text-align : center;
+	width : 370px;
+	margin : 30px 0px 0px 42px;
+	display : block;
+}
+#main-body .expose-yourself .play .discover .red {
+	color : #C7253D;
+	float : none;
+}
+#main-body .expose-yourself .play .watch {
+	font : Bold 18px Helvetica, Arial;
+	color : #383737;
+	width : 370px;
+	text-align : center;
+	margin : 160px 0px 0px 42px;
+}
+.expose-yourself .video {
+	display : none;
+}
+.expose-yourself .video .section-bg {
+	padding : 13px 0px 0px 19px;
+}
+body.IE7 .expose-yourself .video .section-bg {
+	padding-bottom : 12px;
+}
+.expose-yourself .button.learnmore {
+	display : block;
+	margin-top : 20px;
+}
+.homepage_aspx .find-jobs {
+    margin: 0;
+    position: absolute;
+    *position: inherit;
+	width : 454px;
+}
+
+.homepage_aspx .expose-yourself .section-top {
+    width: 454px;
+    height: 8px;
+    background: url(../images/homepage/mini-section/section-top.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .find-jobs .section-top {
+    width: 454px;
+    height: 30px;
+}
+
+.homepage_aspx .expose-yourself .section-bg, .homepage_aspx .find-jobs .section-bg {
+    width: 454px;
+    background: url(../images/homepage/mini-section/section-bg.png) repeat-y scroll left top transparent;
+    min-height: 287px;
+}
+
+.homepage_aspx .expose-yourself .section-bottom, .homepage_aspx .find-jobs .section-bottom {
+    width: 454px;
+    height: 8px;
+    background: url(../images/homepage/mini-section/section-bottom.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .expose-yourself .shaded-bottom, .homepage_aspx .find-jobs .shaded-bottom {
+    width: 454px;
+    height: 77px;
+    min-height: 77px;
+    background: url(../images/homepage/mini-section/section-bottom-bg.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .expose-yourself .shaded-box-content, .homepage_aspx .find-jobs .shaded-box-content {
+    width: 418px;
+    height: 85px;
+    /*background: url(../images/homepage/mini-section/section-bottom-shaded.png) no-repeat scroll left top transparent;*/
+}
+
+.homepage_aspx .expose-yourself .shaded-jobs-bottom, .homepage_aspx .find-jobs .shaded-jobs-bottom {
+    width: 454px;
+    height: 85px;
+    background: url(../images/homepage/mini-section/section-jobs-bottom-shaded.png) no-repeat scroll left top transparent;
+}
+
+.homepage_aspx .expose-yourself .homepage-content-holder {
+    padding: 0 18px 0 18px;
+}
+
+.homepage_aspx .expose-yourself .homepage-title, .homepage_aspx .find-jobs .homepage-title {
+    font-size: 235%;
+    padding: 0 0 5px 0;
+}
+
+.homepage_aspx .expose-yourself .shaded-box-content .sub-content a {
+    font-size: 90%;
+    color: #18639f;
+}
+
+.homepage_aspx .find-jobs .homepage-title {
+    padding: 0;
+	margin : 13px 0px 18px 0px;
+}
+
+
+.homepage_aspx .expose-yourself .homepage-content-holder .title, .homepage_aspx .find-jobs .homepage-content-holder .title {
+    font-size: 110%;
+}
+
+.homepage_aspx .expose-yourself .homepage-content, .homepage_aspx .find-jobs .homepage-content {
+    min-width: 420px;
+    padding: 0 0 18px 0;
+    font-size: 100%;
+}
+
+.homepage_aspx .find-jobs .homepage-content {
+    padding: 0;
+}
+
+.homepage_aspx .expose-yourself-img {
+    width: 400px;
+    height: 155px;
+    background: url(../images/homepage/expose-yourself/baby-laptop.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+}
+
+.homepage_aspx .expose-yourself .upload-resume-button {
+    background-image: url(../images/homepage/expose-yourself/upload-resume.png); 
+    border:0; 
+    width: 302px;
+    background-position:left top; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:45px; 
+    margin : 15px 0px 15px 20px; 
+    padding:0;
+}
+
+.homepage_aspx .expose-yourself .upload-resume-button:hover {
+    background-position:left center;
+}
+
+.homepage_aspx .expose-yourself .upload-resume-button:active {
+    background-position:left bottom;
+}
+
+.homepage_aspx .shaded-box-content {
+    padding: 0 18px;
+    font-family: Helvetica, arial, sans-serif;
+    color: #484848;
+    font-weight: bold;
+}
+
+.homepage_aspx .shaded-box-content .title {
+    font-size: 130%;
+    padding: 7px 0 3px 0;
+	width : 430px;
+}
+.homepage_aspx .shaded-box-content .sub-content {
+    padding: 0;
+	width : 430px;
+}
+.homepage_aspx .shaded-box-content .sub-title {
+    font-size: 95%;
+    min-width: 155px;
+    width: 155px;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    *padding: 2px 0 0 0;
+}
+
+.homepage_aspx .shaded-box-content .digit {
+    font-size: 120%;
+    color: #dd2649;
+    display: inline-block;
+    *display: inline;
+}
+
+#main-body .homepage_aspx .find-jobs .shaded-box-content .digit {
+    font-size: 100%;
+	float : none;
+}
+
+#subheader {
+	font-size: 100%;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	/*margin-bottom: -25px;*/	/* Cancels against #body-container margin-top in universal-layout.css */
+	padding: 0;
+}
+
+.homepage_aspx .find-jobs .section-tab {
+    width: 150px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+	background-image : url("../images/homepage/SearchTabs.png");
+}
+.find-jobs #industry-tab-content, .find-jobs #location-tab-content {
+	display : none;
+}
+.find-jobs #search-tab {
+	background-position : 0px 0px;
+	margin-right : 2px;
+}
+.find-jobs #search-tab:hover, .find-jobs #search-tab.section-tab-selected {
+	background-position : 0px -30px;
+}
+.find-jobs #industry-tab {
+	background-position : -152px 0px;
+	margin-right : 2px;
+}
+.find-jobs #industry-tab:hover, .find-jobs #industry-tab.section-tab-selected {
+	background-position : -152px -30px;
+}
+.find-jobs #location-tab {
+	background-position : -304px 0px;
+}
+.find-jobs #location-tab:hover, .find-jobs #location-tab.section-tab-selected {
+	background-position : -304px -30px;
+}
+#main-body #industry-tab-content .industry_listbox_field label {
+	font : Bold 18px Arial;
+	color : #333333;
+	margin : 14px 0px 15px 14px;
+}
+#industry-tab-content #IndustriesIndustry, #industry-tab-content .Country_dropdown_field {
+	display : none;
+}
+#industry-tab-content .row {
+	width : 440px;
+	height : 35px;
+}
+#industry-tab-content .row .item .checkbox {
+	margin : 0px 5px 0px 15px;
+}
+#main-body #industry-tab-content .row .item span {
+	font : 11px Arial;
+	color : #2F2F2F;
+	width : 110px;
+	line-height : 11px;
+	margin-top : 3px;
+}
+#industry-tab-content .multicheck {
+	width : 440px;
+}
+#industry-tab-content .selectall, #industry-tab-content .clearall {
+	cursor : pointer;
+	margin : 11px 28px 11px 21px;
+}
+#main-body #industry-tab-content .selectall .text, #main-body #industry-tab-content .clearall .text {
+	font : 12px Arial;
+	color : #174FDF;
+	text-decoration : underline;
+}
+#industry-tab-content .icon {
+	background-image : url("../images/members/jobsearch/IconIndustryCheck.png");
+	height : 13px;
+	margin-right : 17px;
+}
+#industry-tab-content .selectall .icon {
+	width : 10px;
+}
+#industry-tab-content .clearall .icon {
+	background-position : -10px 0px;
+	width : 13px;
+}
+#industry-tab-content .multicheck .divider {
+	width : 1px;
+	height : 15px;
+	background-color : #D0D0D0;
+	margin : 11px 0px 0px 0px;
+}
+#industry-tab-content .multicheck .divider.light {
+	background-color : #DDDDDD;
+}
+#industry-tab-content .nowenter, #industry-tab-content .nowenter {
+	display : none;
+}
+#industry-tab-content .textbox_field {
+	width : 298px;
+	margin : 22px 0px 21px 22px;
+}
+#main-body #industry-tab-content .textbox_field label {
+	width : 364px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+#industry-tab-content .field .control .bg {
+	width : 254px;
+}
+#industry-tab-content .textbox_control input {
+	width : 328px;
+}
+#industry-tab-content .button.search {
+	margin : 45px 0px 0px -20px;
+}
+#location-tab-content .section-bg {
+	min-height : 438px;
+}
+#location-tab-content .map_field {
+	width : 431px;
+	margin : 22px 0px 21px 22px;
+}
+#main-body #location-tab-content .map_field label {
+	width : 913px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+.aus-map {
+	height : 290px;
+	width : 452px;
+	position : relative;
+	left : -21px;
+}
+.aus-map .state, .aus-map .region, .aus-map .pin {
+	position : absolute;
+	background-image : url("../images/members/jobsearch/AusMap.png");
+}
+.aus-map .state[state='Western Australia'] {
+	background-position : -5px -25px;
+	width : 123px;
+	height : 178px;
+	left : 50px;
+	top : 31px;
+}
+.aus-map .state[state='Western Australia'].hover {
+	background-position : -5px -265px;
+}
+.aus-map .state[state='Western Australia'].active, .aus-map .state[state='Western Australia'].active.hover {
+	background-position : -5px -465px;
+}
+.aus-map .state[state='Northern Territory'] {
+	background-position : -179px -25px;
+	width : 70px;
+	height : 126px;
+	left : 174px;
+	top : 7px;
+}
+.aus-map .state[state='Northern Territory'].hover {
+	background-position : -179px -265px;
+}
+.aus-map .state[state='Northern Territory'].active, .aus-map .state[state='Northern Territory'].active.hover {
+	background-position : -179px -465px;
+}
+.aus-map .state[state='South Australia'] {
+	background-position : -280px -50px;
+	width : 90px;
+	height : 102px;
+	left : 174px;
+	top : 135px;
+}
+.aus-map .state[state='South Australia'].hover {
+	background-position : -280px -290px;
+}
+.aus-map .state[state='South Australia'].active, .aus-map .state[state='South Australia'].active.hover {
+	background-position : -280px -490px;
+}
+.aus-map .state[state='Queensland'] {
+	background-position : -390px -18px;
+	width : 117px;
+	height : 154px;
+	left : 244px;
+	top : 5px;
+}
+.aus-map .state[state='Queensland'].hover {
+	background-position : -390px -258px;
+}
+.aus-map .state[state='Queensland'].active, .aus-map .state[state='Queensland'].active.hover {
+	background-position : -390px -458px;
+}
+.aus-map .state[state='New South Wales'] {
+	background-position : -521px -56px;
+	width : 94px;
+	height : 78px;
+	left : 266px;
+	top : 153px;
+}
+.aus-map .state[state='New South Wales'].hover {
+	background-position : -521px -296px;
+}
+.aus-map .state[state='New South Wales'].active, .aus-map .state[state='New South Wales'].active.hover {
+	background-position : -521px -496px;
+}
+.aus-map .state[state='Victoria'] {
+	background-position : -638px -74px;
+	width : 68px;
+	height : 44px;
+	left : 266px;
+	top : 206px;
+}
+.aus-map .state[state='Victoria'].hover {
+	background-position : -638px -314px;
+}
+.aus-map .state[state='Victoria'].active, .aus-map .state[state='Victoria'].active.hover {
+	background-position : -638px -514px;
+}
+.aus-map .state[state='Tasmania'] {
+	background-position : -737px -73px;
+	width : 49px;
+	height : 36px;
+	left : 271px;
+	top : 246px;
+}
+.aus-map .state[state='Tasmania'].hover {
+	background-position : -737px -313px;
+}
+.aus-map .state[state='Tasmania'].active, .aus-map .state[state='Tasmania'].active.hover {
+	background-position : -737px -513px;
+}
+.aus-map .region[region='Darwin'] {
+	background-position : -876px -3px;
+	width : 122px;
+	height : 28px;
+	left : 109px;
+	top : 8px;
+}
+.aus-map .region[region='Darwin'].hover {
+	background-position : -876px -43px;
+}
+.aus-map .region[region='Darwin'].active, .aus-map .region[region='Darwin'].active.hover {
+	background-position : -876px -83px;
+}
+.aus-map .region[region='Perth'] {
+	background-position : -876px -186px;
+	width : 75px;
+	height : 24px;
+	left : 8px;
+	top : 175px;
+}
+.aus-map .region[region='Perth'].hover {
+	background-position : -876px -226px;
+}
+.aus-map .region[region='Perth'].active, .aus-map .region[region='Perth'].active.hover {
+	background-position : -876px -266px;
+}
+.aus-map .region[region='Perth'].hover.state, .aus-map .region[region='Perth'].active.state, .aus-map .region[region='Perth'].active.hover.state {
+	width : 64px;
+}
+
+.aus-map .region[region='Hobart'] {
+	background-position : -1020px -7px;
+	width : 80px;
+	height : 24px;
+	left : 299px;
+	top : 259px;
+}
+.aus-map .region[region='Hobart'].hover {
+	background-position : -1020px -47px;
+}
+.aus-map .region[region='Hobart'].active, .aus-map .region[region='Hobart'].active.hover {
+	background-position : -1020px -87px;
+}
+.aus-map .region[region='Hobart'].hover.state {
+	background-position : -1035px -47px;
+	width : 65px;
+	left : 314px;
+}
+.aus-map .region[region='Hobart'].active.state, .aus-map .region[region='Hobart'].active.hover.state {
+	background-position : -1035px -87px;
+	width : 65px;
+	left : 314px;
+}
+.aus-map .region[region='Melbourne'] {
+	background-position : -1020px -186px;
+	width : 100px;
+	height : 24px;
+	left : 292px;
+	top : 224px;
+}
+.aus-map .region[region='Melbourne'].hover {
+	background-position : -1020px -226px;
+}
+.aus-map .region[region='Melbourne'].active, .aus-map .region[region='Melbourne'].active.hover {
+	background-position : -1020px -266px;
+}
+.aus-map .region[region='Melbourne'].hover.state {
+	background-position : -1035px -226px;
+	width : 85px;
+	left : 307px;
+}
+.aus-map .region[region='Melbourne'].active.state, .aus-map .region[region='Melbourne'].active.hover.state {
+	background-position : -1035px -266px;
+	width : 85px;
+	left : 307px;
+}
+.aus-map .region[region='Gold Coast'] {
+	background-position : -1143px -7px;
+	width : 97px;
+	height : 24px;
+	left : 347px;
+	top : 136px;
+}
+.aus-map .region[region='Gold Coast'].hover {
+	background-position : -1143px -47px;
+}
+.aus-map .region[region='Gold Coast'].active, .aus-map .region[region='Gold Coast'].active.hover {
+	background-position : -1143px -87px;
+}
+.aus-map .region[region='Gold Coast'].hover.state {
+	background-position : -1158px -47px;
+	width : 82px;
+	left : 362px;
+}
+.aus-map .region[region='Gold Coast'].active.state, .aus-map .region[region='Gold Coast'].active.hover.state {
+	background-position : -1158px -87px;
+	width : 82px;
+	left : 362px;
+}
+.aus-map .region[region='Brisbane'] {
+	background-position : -1158px -185px;
+	width : 82px;
+	height : 30px;
+	left : 349px;
+	top : 110px;
+}
+.aus-map .region[region='Brisbane'].hover {
+	background-position : -1158px -225px;
+}
+.aus-map .region[region='Brisbane'].active, .aus-map .region[region='Brisbane'].active.hover {
+	background-position : -1158px -265px;
+}
+.aus-map .region[region='Brisbane'].hover.state {
+	background-position : -1168px -225px;
+	width : 72px;
+	left : 359px;
+}
+.aus-map .region[region='Brisbane'].active.state, .aus-map .region[region='Brisbane'].active.hover.state {
+	background-position : -1168px -265px;
+	width : 72px;
+	left : 359px;
+}
+.aus-map .region[region='Sydney'] {
+	background-position : -1276px -7px;
+	width : 84px;
+	height : 24px;
+	left : 333px;
+	top : 187px;
+}
+.aus-map .region[region='Sydney'].hover {
+	background-position : -1276px -47px;
+}
+.aus-map .region[region='Sydney'].active, .aus-map .region[region='Sydney'].active.hover {
+	background-position : -1276px -87px;
+}
+.aus-map .region[region='Australian Capital Territory'] {
+	background-position : -1260px -185px;
+	width : 87px;
+	height : 38px;
+	left : 241px;
+	top : 172px;
+}
+.aus-map .region[region='Australian Capital Territory'].hover {
+	background-position : -1260px -223px;
+}
+.aus-map .region[region='Australian Capital Territory'].active, .aus-map .region[region='Australian Capital Territory'].active.hover {
+	background-position : -1260px -264px;
+}
+.aus-map .region[region='Adelaide'] {
+	background-position : -1392px -7px;
+	width : 91px;
+	height : 24px;
+	left : 164px;
+	top : 195px;
+}
+.aus-map .region[region='Adelaide'].hover {
+	background-position : -1392px -47px;
+}
+.aus-map .region[region='Adelaide'].active, .aus-map .region[region='Adelaide'].active.hover {
+	background-position : -1392px -87px;
+}
+img[usemap='#mapAus'] {
+	width : 450px;
+	height : 290px;
+	position : absolute;
+	border : none;
+}
+.aus-map .pin {
+	background-position : -1125px -453px;
+	width : 18px;
+	height : 29px;
+	display : none;
+}
+.aus-map .pin[pinfor='Tasmania'] {
+	display : block;
+	left : 296px;
+	top : 242px;
+}
+.aus-map .pin[pinfor='Victoria'] {
+	display : block;
+	left : 289px;
+	top : 208px;
+}
+.aus-map .pin[pinfor='New South Wales'] {
+	display : block;
+	left : 301px;
+	top : 147px;
+}
+.aus-map .pin[pinfor='Queensland'] {
+	display : block;
+	left : 285px;
+	top : 70px;
+}
+.aus-map .pin[pinfor='South Australia'] {
+	display : block;
+	left : 210px;
+	top : 120px;
+}
+.aus-map .pin[pinfor='Northern Territory'] {
+	display : block;
+	left : 198px;
+	top : 50px;
+}
+.aus-map .pin[pinfor='Western Australia'] {
+	display : block;
+	left : 110px;
+	top : 90px;
+}
+.aus-map .pin[pinfor='Darwin'] {
+	display : block;
+	left : 180px;
+	top : 0px;
+}
+.aus-map .pin[pinfor='Brisbane'] {
+	display : block;
+	left : 344px;
+	top : 107px;
+}
+.aus-map .pin[pinfor='Gold Coast'] {
+	display : block;
+	left : 344px;
+	top : 117px;
+}
+.aus-map .pin[pinfor='Sydney'] {
+	display : block;
+	left : 330px;
+	top : 170px;
+}
+.aus-map .pin[pinfor='Australian Capital Territory'] {
+	display : block;
+	left : 307px;
+	top : 176px;
+}
+.aus-map .pin[pinfor='Melbourne'] {
+	display : block;
+	left : 288px;
+	top : 207px;
+}
+.aus-map .pin[pinfor='Hobart'] {
+	display : block;
+	left : 297px;
+	top : 240px;
+}
+.aus-map .pin[pinfor='Adelaide'] {
+	display : block;
+	left : 240px;
+	top : 180px;
+}
+.aus-map .pin[pinfor='Perth'] {
+	display : block;
+	left : 68px;
+	top : 158px;
+}
+.aus-map .pin[pinfor='Australia'] {
+	display : block;
+	left : 200px;
+	top : 106px;
+}
+#AnyWhereInAus {
+	position : absolute;
+	left : 80px;
+	top : 340px;
+}
+body.IE7 #AnyWhereInAus {
+	margin : 180px 0px 0px 330px;
+}
+#AnyWhereInAus .checkbox {
+	margin: 0px 5px 0px 0px;
+}
+#location-tab-content #browseByLocation {
+	display : none;
+}
+#location-tab-content .Industry_field {
+	width : 266px;
+	margin : 0px 0px 13px 22px;
+}
+#main-body #location-tab-content .Industry_field label {
+	width : 390px;
+	font : Bold 14px Arial;
+	color : #333333;
+	margin-bottom : 13px;
+}
+#main-body #location-tab-content .Industry_field label span {
+	font : Bold 14px Arial;
+	color : #295785;
+	float : none;
+}
+#location-tab-content .Industry_field .control {
+	width : 266px;
+}
+#location-tab-content .Industry_field .control .bg {
+	width : 256px;
+}
+#location-tab-content .Industry_field .control .dropdown input[type='text'] {
+	width : 245px;
+}
+#location-tab-content .button.search {
+	margin : 21px 0px 0px 9px;
+}
+#location-tab-content .dropdown-scrollbar .ui-slider-handle {
+	margin-left : -2px;
+}
+.homepage_aspx .find-jobs .shaded-box-content .sub-content a {
+    font-size: 90%;
+    color: #18639f;
+}
+
+.homepage_aspx .find-jobs .homepage-content-holder {
+    padding: 8px 18px 16px 18px;
+}
+body.IE9 .homepage_aspx .find-jobs .homepage-content-holder {
+    padding-bottom: 20px;
+}
+.homepage_aspx .find-jobs .homepage-field_holder {
+    padding: 5px 0 20px 0;
+}
+body.IE7 .homepage_aspx .find-jobs .homepage-field_holder {
+	width : 420px;
+}
+
+.homepage_aspx .find-jobs .homepage-field_label {
+    padding: 8px 0 17px 0;
+    font-weight: bold;
+	width : 420px;
+}
+#main-body .homepage_aspx .find-jobs .italized-label {
+    font-size: 90%;
+    font-weight: normal;
+    font-style: italic;
+	float : none;
+}
+.homepage_aspx .find-jobs .homepage-field {
+    background: none;
+    border: none;
+    width: 380px;
+    width: 375px\9;
+    height: 16px;
+    margin: 0;
+    padding: 9px 8px 9px 8px;
+    font-size: 100%;
+    color: #000000;
+}
+
+.homepage_aspx .find-jobs .text-label {
+    color: #959595;
+}
+
+.homepage_aspx .find-jobs .text-holder {
+    margin: 0;
+    height: 34px;
+    width: 400px;
+    background: url(../images/homepage/find-jobs/text-field.png) no-repeat bottom;
+}
+
+.homepage_aspx .find-jobs .search-button_holder {
+    padding: 19px 20px 5px 0px;
+	width : 400px;
+}
+
+.homepage_aspx .find-jobs .search-button {
+    background-image: url(../images/homepage/find-jobs/search.png); 
+    border:0; 
+    width: 143px;
+    background-position:0px 0px; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:46px; 
+    margin:0 auto; 
+    padding:0;
+    float : left;
+}
+
+.homepage_aspx .find-jobs .search-button:hover {
+    background-position:0px -46px;
+}
+
+#main-body .homepage_aspx .find-jobs .expand-link {
+    color: #383737;
+    font-size: 85%;
+    font-weight: bold;
+    float: right;
+    margin: 15px 0 0 0;
+    padding: 0 12px 1px 0;
+}
+
+.homepage_aspx .more-search-link {
+    background: url(../images/homepage/find-jobs/icon_arrow_down.png) no-repeat scroll right center transparent;
+}
+
+.homepage_aspx .hide-search-link {
+    background: url(../images/homepage/find-jobs/icon_arrow_up.png) no-repeat scroll right center transparent;
+}
+
+.homepage_aspx .find-jobs .advanced-search-button_holder {
+    padding: 5px 0px 5px 20px;
+    text-align: right;
+	margin-bottom : -8px;
+}
+
+.homepage_aspx .find-jobs .advanced-search-button {
+    background-image: url(../images/homepage/find-jobs/advanced-search.png); 
+    border:0; 
+    width: 143px;
+    background-position:0px 0px; 
+    background-repeat:no-repeat; 
+    cursor:pointer; 
+    font-size:0; 
+    height:46px; 
+    margin: -56px 0 0px 130px; 
+    padding:0;
+}
+
+.homepage_aspx .find-jobs .advanced-search-button:hover {
+    background-position:0px -47px;
+}
+
+.homepage_aspx .find-jobs .expanded-search_holder {
+    padding: 12px 0 0 0;
+    text-align: left;
+}
+
+.homepage_aspx .find-jobs .divider {
+    width: 394px;
+    height: 5px;
+    background: url(../images/homepage/find-jobs/divider.png) no-repeat scroll left top transparent;
+    margin: 0 0 0 4px;
+}
+
+#main-body .homepage_aspx .find-jobs .checkbox-holder {
+    display: inline-block;
+    padding: 0 8px 0 0;
+    *display: inline;
+    float : none;
+}
+body.IE7 #main-body .homepage_aspx .find-jobs .checkbox-holder {
+	float : left;
+}
+body.IE7 #main-body .homepage_aspx .find-jobs .slider_holder .checkbox-holder {
+	float : right;
+}
+.homepage_aspx .find-jobs .checkbox-holder span {
+    display: inline-block;
+    padding: 0 0 0 5px;
+}
+
+.homepage_aspx .find-jobs .slider-field_holder {
+    display: inline-block;
+    padding: 0 8px 0 0;
+	width : 179px;
+}
+
+#main-body .homepage_aspx .find-jobs .slider_holder .checkbox-holder {
+    width: 130px;
+    padding: 0;
+    float: right;
+    margin: 22px 0 0 0;
+}
+
+.homepage_aspx .find-jobs .slider_holder .checkbox-holder span {
+    width: 100px;
+    word-wrap: break-word;
+    margin: -8px 0 0 0;
+}
+
+.ruler50{ border: 0; background: url(../images/homepage/slider/ruler_50.png) no-repeat; top:-2px; position:relative; z-index:0; left:7px; width : 264px; }
+#search-tab-content .ui-slider { position: relative; width:264px; height:10px; margin-top:5px; z-index:1; cursor:pointer; background: url(../images/homepage/slider/slider_bg.png) repeat-x scroll 50% 50% #FFFFFF; border: none;}
+#search-tab-content .ui-slider .ui-slider-handle { background:url(../images/homepage/slider/slider_handle.png) no-repeat; position: absolute; width:22px; height:28px; left:0px; top:-3px; border:none; cursor:pointer; outline:none;}
+.ui-slider-horizontal .ui-slider-handle { margin-left: -10px; }
+.ui-slider-range { background: url("../images/homepage/slider/slider_bar.png") repeat-x scroll 50% 50% #739E0C; }
+.range{ width : 279px; font-size:90%; font-weight:bold; color:#DD2649;}
+.slider-holder{ padding:0px 5px 5px 10px;}
+.slider-limits{ width:260px; height:15px; padding:5px 5px 0px 5px; font-size:90%; font-weight:bold;}
+.minrange{ width:50%; float:left; text-align:left;}
+.maxrange{ width:50%; float:right; text-align:right;}
+
+.homepage_aspx .find-jobs #industry-tab-content .homepage-content-holder {
+    padding: 8px;
+}
+
+.industries-list {
+    vertical-align: top;
+    height: 348px;
+    min-height: 348px;
+    max-height: 348px;
+}
+
+.industries-list ul {
+    list-style-image: url("../images/homepage/find-jobs/bullet.png");
+    width: 190px;
+    min-width: 190px;
+    max-width: 190px;
+    display: inline-block;
+    margin: 0px 0 0 23px;
+    float: left;
+}
+
+.industries-list li {
+    margin-bottom: 7px;
+    *margin-bottom: 6px;
+}
+
+.industries-list li a {
+    color: #484848;
+    font-size: 90%;
+    word-wrap: break-word;
+}
+
+.industries-list li a:hover {
+    color: #24639E;
+}
+
+#ads {
+    margin-top: 20px;
+    *margin-bottom: 20px;   /* IE6,7 hack */
+	width : 933px;
+}
+
+#main-body #ads #google-ads {
+    margin: 0 auto;
+    width: 728px;
+	float : none;
+}
+
+.ticker-item {
+	display : inline-block;
+	white-space : nowrap;
+	width : 418px;
+	text-overflow : ellipsis;
+	overflow : hidden;
+}
+.firstlogin .bg, .firstlogin .button {
+	background-image : url("../images/homepage/FirstLogin.png");
+}
+.firstlogin .bg {
+	width : 750px;
+	height : 355px;
+}
+.firstlogin .icon {
+	float : left;
+	cursor : pointer;
+	margin : 19px 0px 0px 715px;
+	width : 10px;
+	height : 10px;
+}
+.firstlogin .button.candidate {
+	background-position : 0px -353px;
+	width : 185px;
+	height : 48px;
+	float : left;
+	margin : 170px 0px 0px 100px;
+}
+.firstlogin .button.candidate:hover {
+	background-position : -202px -353px;
+}
+.firstlogin .button.employer {
+	background-position : 0px -404px;
+	width : 185px;
+	height : 48px;
+	float : left;
+	margin : 171px 0px 0px 176px;
+}
+.firstlogin .button.employer:hover {
+	background-position : -201px -404px;
+}
+.firstlogin-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.ui-dialog.firstlogin-dialog {
+	background : none;
+	border : none;
+	padding : 0px;
+}
+.ui-dialog.firstlogin-dialog .firstlogin.ui-dialog-content {
+	border : none;
+	padding : 0px;
+}

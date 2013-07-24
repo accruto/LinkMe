@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Roles.Networking.NetworkingCommand" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="2.5" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Networking.INetworkingRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.781" />
+        <Point X="6.375" Y="1.781" />
+        <Point X="6.375" Y="3" />
+        <Point X="7.25" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAIQAIAAAAAAAAASAAAAAAAAIAEAACAAA=</HashCode>
+      <FileName>Networking\NetworkingCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Networking.NetworkingEventsCommand" Collapsed="true">
+    <Position X="3.5" Y="4" Width="2.5" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Networking.INetworkingRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="4.281" />
+        <Point X="6.375" Y="4.281" />
+        <Point X="6.375" Y="3" />
+        <Point X="7.25" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Networking\NetworkingEventsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Networking.NetworkingInvitationsCommand" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="2.5" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Networking.INetworkingRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="3.156" />
+        <Point X="6.375" Y="3.156" />
+        <Point X="6.375" Y="3" />
+        <Point X="7.25" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IASAAAAAQATAQIAJACAAAgAAAAAAQAAGAAAAYAgABAA=</HashCode>
+      <FileName>Networking\NetworkingInvitationsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_networkingCommand" />
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Networking.Data.NetworkingRepository" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAEAIAAISEgCKEQCBEIAGgAAIESAAAgBAAIFQIAC0A=</HashCode>
+      <FileName>Networking\Data\NetworkingRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Networking.INetworkingCommand" Collapsed="true">
+    <Position X="1" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAgAIAEAAAAAAAAAAgAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Networking\INetworkingCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Networking.INetworkingRepository" Collapsed="true">
+    <Position X="7.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAgCIAEADAAAAAAAAkAAAAAAIAAECAACAA=</HashCode>
+      <FileName>Networking\INetworkingRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Networking.INetworkingEventsCommand" Collapsed="true">
+    <Position X="1" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAACAA=</HashCode>
+      <FileName>Networking\INetworkingEventsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Networking.INetworkingInvitationsCommand" Collapsed="true">
+    <Position X="1" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQEAAACICAADEBAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Networking\INetworkingInvitationsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

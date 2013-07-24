@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Credits">
+  <DataContextMoniker Name="/CreditsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ac7f7d7b-0634-4798-b34f-c8c111cf78b2" absoluteBounds="4.625, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CreditsDataContext/CreditEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c87b5af-a709-43f9-b2ee-33870b2aae21" absoluteBounds="4.64, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a05264d1-8115-4e57-8322-4ce38f334349" absoluteBounds="1.375, 2.125, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/CreditsDataContext/CreditAllocationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3330ec47-173b-4064-9b09-36b3c189f00e" absoluteBounds="1.3899999999999997, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1a5aa0f-85bc-4f64-b68a-44074773416b" absoluteBounds="5.25, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CreditsDataContext/CandidateAccessPurchaseEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="317d75a9-aace-49c6-a53a-ce03e7a9549b" absoluteBounds="5.265, 4.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 2.66429768880208); (3.375 : 2.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CreditsDataContext/CreditEntity/CreditEntity_CreditAllocationEntity" />
+      <nodes>
+        <classShapeMoniker Id="ac7f7d7b-0634-4798-b34f-c8c111cf78b2" />
+        <classShapeMoniker Id="a05264d1-8115-4e57-8322-4ce38f334349" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

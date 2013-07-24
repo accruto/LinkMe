@@ -1,0 +1,14 @@
+insert into localityregion select max(id), 2810 from namedlocation where displayname = '0841' -- darwin
+insert into localityregion select max(id), 6093 from namedlocation where displayname = '2769' -- Sydney-Parramatta-Western-Suburbs
+insert into localityregion select max(id), 2809 from namedlocation where displayname = '2769' -- sydney
+insert into localityregion select max(id), 6029 from namedlocation where displayname = '2808' -- Regional-NSW-Dubbo-Central-NSW
+insert into localityregion select max(id), 2814 from namedlocation where displayname = '3027' -- melbourne
+insert into localityregion select max(id), 6017 from namedlocation where displayname = '3027' -- darwin
+insert into localityregion select max(id), 2814 from namedlocation where displayname = '3086' -- melbourne
+insert into localityregion select max(id), 6016 from namedlocation where displayname = '3086' -- Melbourne-Northern-Suburbs
+insert into localityregion select max(id), 6075 from namedlocation where displayname = '3586' -- Regional-VIC-Mildura-Murray
+insert into localityregion select max(id), 6079 from namedlocation where displayname = '3785' -- Regional-VIC-Yarra-Valley-High-Country
+insert into localityregion select max(id), 6083 from namedlocation where displayname = '6180' -- Regional-WA-Bunbury-South-West
+insert into localityregion select max(id), 6083 from namedlocation where displayname = '6209' -- Regional-WA-Bunbury-South-West
+insert into localityregion select max(id), 6083 from namedlocation where displayname = '6211' -- Regional-WA-Bunbury-South-West
+insert into localityregion select max(id), 6066 from namedlocation where displayname = '7466' -- Regional-TAS-Devenport-North-West

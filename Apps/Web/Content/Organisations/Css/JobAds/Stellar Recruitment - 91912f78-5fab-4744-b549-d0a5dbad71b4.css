@@ -1,0 +1,43 @@
+#JobAd #JobDescription 
+{
+	border:solid 1px #003C78;
+	width: 70%;
+}
+
+#JobAd #JobDescription #Ad
+{
+	margin-left: 4%;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	margin-right: 4%;
+}
+
+#JobAd #JobDescription table
+{
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#JobAd h1
+{
+	font-family: Arial,Verdana,Helvetica,sans-serif;
+	font-size: 28px;
+	color: #003C78;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo
+{
+	margin-left: 55%;
+	margin-top: 5px;
+	height: 60px;
+	background: url('Stellar Recruitment_images/logo.gif') no-repeat;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: transparent url('Stellar Recruitment_images/footer.gif') left bottom no-repeat;
+	height: 102px;
+}

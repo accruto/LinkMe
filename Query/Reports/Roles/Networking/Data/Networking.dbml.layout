@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Networking">
+  <DataContextMoniker Name="/NetworkingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="21e97b4d-f998-4d95-ad9f-11881f28d68f" absoluteBounds="4.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/NetworkingDataContext/NetworkInvitationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b12adc79-24b8-4b14-9240-b05cd0687301" absoluteBounds="4.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aad66442-62f8-4800-8985-14bb9ce37b5b" absoluteBounds="1.375, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/NetworkingDataContext/UserToUserRequestEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11058891-7b01-4324-aae2-5725b73c910d" absoluteBounds="1.3900000000000001, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 1.88544840494792); (4.75 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NetworkingDataContext/UserToUserRequestEntity/UserToUserRequestEntity_NetworkInvitationEntity" />
+      <nodes>
+        <classShapeMoniker Id="aad66442-62f8-4800-8985-14bb9ce37b5b" />
+        <classShapeMoniker Id="21e97b4d-f998-4d95-ad9f-11881f28d68f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

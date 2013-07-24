@@ -1,0 +1,2 @@
+delete from SavedResumeSearchAlert
+where SavedResumeSearchId is null

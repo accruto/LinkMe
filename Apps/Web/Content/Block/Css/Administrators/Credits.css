@@ -1,0 +1,92 @@
+﻿#credits {
+    margin-top: 10px;
+    font-size: 85%;
+}
+
+#credits .credit-column-header {
+    width: 60px;
+}
+#credits .status-column-header {
+    width: 60px;
+}
+#credits .initial-quantity-column-header {
+    width: 60px;
+    text-align: center;
+}
+#credits .remaining-quantity-column-header {
+    width: 60px;
+    text-align: center;
+}
+#credits .expirydate-column-header {
+    width: 75px;
+}
+#credits .usage-column-header {
+    width: 30px;
+}
+#credits .order-column-header {
+    
+}
+#credits .deallocate-column-header {
+    width: 1px;
+}
+#credits .time-column-header {
+    width: 140px;
+}
+#credits .owner-column-header {
+    
+}
+#credits .used-by-column-header {
+    
+}
+#credits .used-on-column-header {
+    
+}
+#credits .credit-used-column-header {
+    width: 30px;
+    text-align: center;
+}
+
+#credits .credit-column {
+    
+}
+#credits .status-column {
+    
+}
+#credits .initial-quantity-column {
+    text-align: right;
+    padding-right: 30px;
+}
+#credits .remaining-quantity-column {
+    text-align: right;
+    padding-right: 30px;
+}
+#credits .expirydate-column {
+    text-align: right;
+    padding-right: 20px;
+}
+#credits .usage-column {
+    
+}
+#credits .order-column {
+    
+}
+#credits .deallocate-column {
+}
+#credits .time-column {
+    
+}
+#credits .owner-column {
+    
+}
+#credits .used-by-column {
+    
+}
+#credits .used-on-column {
+    
+}
+#credits .credit-used-column {
+    text-align: right;
+    padding-right: 30px;
+}
+
+

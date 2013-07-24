@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_endorsements_endorsedDate.sql,install_endorsements_update_existing_endorsements.sql,alter_NetworkerPurchasedResult_table_new_field.sql,alter_NetworkerProfile_table_new_field.sql,alter_NetworkerProfile_table_existing_countries.sql,update_search_criteria_full_resume.sql,update_database_version_table.sql

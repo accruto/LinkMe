@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" Inherits="LinkMe.Apps.Asp.Mvc.Views.ViewMasterPage" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head runat="server">
+        <mvc:DisplayStyleSheets ID="DisplayStyleSheets1" runat="server" />
+
+        <% Html.RenderPartial("StyleSheets"); %>
+        <asp:ContentPlaceHolder id="StyleSheet" runat="server" />
+
+        <asp:ContentPlaceHolder ID="MetaTags" runat="server" />
+    </head>
+    <body onload="Page_ValidationActive = false;">
+
+        <asp:ContentPlaceHolder id="Body" runat="server">
+
+            <div id="print-body-container">
+            
+                <div id="main-body">
+
+                    <div id="form-container">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                    
+                </div>
+
+                <div class="clearer"></div>
+            </div>
+            
+        </asp:ContentPlaceHolder>
+    </body>
+</html>

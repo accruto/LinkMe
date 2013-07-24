@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Spam">
+  <DataContextMoniker Name="/SpamDataContext" />
+  <nestedChildShapes>
+    <classShape Id="70850181-7be5-4e61-9249-65e685c7b8b5" absoluteBounds="1.875, 1.375, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/SpamDataContext/SpamTextEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa43564e-9d2a-4310-9acb-4051aab97339" absoluteBounds="1.8900000000000001, 1.835, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29538f18-a571-48c9-ba80-0d93af935ebd" absoluteBounds="2.125, 3.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SpamDataContext/SpammerEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="859f48df-c3fd-4d6e-a254-ce9b0ca44155" absoluteBounds="2.14, 3.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57d02620-a944-4a1c-856e-6e5de00e264b" absoluteBounds="5.625, 2.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SpamDataContext/SpammerReportEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f73837b3-fc8b-4cee-a811-8ddc9d816f01" absoluteBounds="5.64, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

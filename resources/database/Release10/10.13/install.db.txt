@@ -1,0 +1,6 @@
+alter_Product_decimals.sql
+data_Product.sql
+data_Credit.sql
+alter_Vertical_add_emailAddress.sql
+alter_CandidateWorkflow_ActivationEmail.sql
+

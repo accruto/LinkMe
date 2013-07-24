@@ -1,0 +1,53 @@
+.desiredjob_ascx {}
+
+	.desiredjob_ascx .small-form-label {
+		font-family:Verdana;
+		color:#333;
+		font-weight:bold;
+		margin-top:7px;		
+	}
+
+	.desiredjob_ascx select.leftSelect {
+		width: 188px;
+	}
+
+	.desiredjob_ascx select.rightSelect {
+		width: 200px;
+	}
+
+	.desiredjob_ascx .country_td { 
+		width: 220px;
+	}
+
+	/*.desiredjob_ascx .relocateTitle {
+		float:none;
+		margin-left:0px;
+		margin-top:7px;		
+	}*/
+
+	/*.desiredjob_ascx .relocateSelection {
+		float:none;
+		margin-top: 7px;
+		margin-left:0px;
+	}*/
+
+	.desiredjob_ascx .relocation_edit_area {
+		margin-left: 0px;
+	}
+
+	.desiredjob_ascx .rightSelectHolder {
+		margin-left:399px;
+		margin-top: 42px;
+	}	
+
+	.desiredjob_ascx .small-form-label {
+		color:#333333;
+		font-family:Verdana;
+		font-size:11px;
+		font-weight:bold;
+		margin-top:7px;
+	}
+
+	.desiredjob_ascx .relocation-reason-text {
+		width: 425px;
+	}

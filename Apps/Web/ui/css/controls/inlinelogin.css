@@ -1,0 +1,71 @@
+﻿.inlinelogin_ascx {
+	width: auto;
+}
+
+	.inlinelogin_ascx .with-labels-on-left .field label {
+		width: 6em;
+		text-align: left;
+	}
+	
+	.inlinelogin_ascx .textbox {
+		width: 200px;
+	}
+
+	.inlinelogin_ascx .username_textbox_field {}
+		.inlinelogin_ascx .username_textbox_control {}
+			.inlinelogin_ascx .username_textbox_control .username_textbox {}
+			
+	.inlinelogin_ascx .password_textbox_field {}
+		.inlinelogin_ascx .password_textbox_control {}
+			.inlinelogin_ascx .password_textbox_control .password_textbox {}
+	
+	.inlinelogin_ascx .layout_field {
+		float: left;
+		width: auto;
+	}
+	
+	.inlinelogin_ascx .with-labels-on-left .layout_field {
+		margin-left: 6em;
+	}
+	* html .inlinelogin_ascx .with-labels-on-left .layout_field {	/* IE6 hack on a hack (on a hack)... must fix float issues */
+		margin-left: 3em;
+	}
+		.inlinelogin_ascx .layout_field .layout_control {
+			width: 200px;
+		}
+		
+		.inlinelogin_ascx .layout_field .layout_control .sublayout_control {
+			min-width: 130px;
+			float: left;
+			clear: left;
+		}
+		* html .inlinelogin_ascx .layout_field .layout_control .sublayout_control {	/* IE6 min-width hack */
+			width: 130px;
+		}
+		
+		.inlinelogin_ascx .rememberme_checkbox_control {
+			margin-bottom: 5px;
+			white-space: nowrap;
+		}
+			.inlinelogin_ascx .field .rememberme_checkbox_control label {
+				font-size: 85%;
+			}
+	
+		.inlinelogin_ascx .rememberme_checkbox_control .rememberme_checkbox {}
+		
+		.inlinelogin_ascx .forgotpassword_link_control {
+			font-size: 85%;
+			white-space: nowrap;
+		}
+		
+		.inlinelogin_ascx .forgotpassword_link_control {}
+			.inlinelogin_ascx .forgotpassword_link_control .forgotpassword_link {}
+
+		.inlinelogin_ascx .layout_field .login_button_control {
+			float: left;
+			clear: none;
+			margin-top: 1em;
+		}
+		
+	.inlinelogin_ascx .login_button_field .login_button_control .login_button {}		/* From forms_v2 */
+			

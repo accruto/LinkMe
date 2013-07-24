@@ -1,0 +1,292 @@
+﻿#left-sidebar {
+    float: left;
+    width: 239px;
+    margin-right: 17px;
+}
+
+#main-body {
+    float: left;
+    width: 694px;
+    *width: auto;
+    padding-bottom: 30px;
+}
+
+#left-sidebar .section {
+    margin: 0;
+    padding: 0;
+    background: url(../images/sidebar/leftsidebar/bg.png) top left no-repeat;
+    margin-bottom: 9px;
+}
+
+#left-sidebar .section .section-title {
+    margin: 0;
+    padding: 0;
+    border: none; background: none;
+}
+
+#left-sidebar .section .section-title + .section-content {
+    padding-top: 0;
+}
+
+#left-sidebar .section ul.actions li:first-child {
+    margin-top: 0;
+}
+
+#left-sidebar .section ul.actions li:last-child {
+    margin-bottom: 0;
+}
+
+#left-sidebar .section .section-title h2 {
+    margin: 0; padding: 0; border: none; background: none;
+    color: #224466;
+    padding: 8px;
+}
+
+#left-sidebar .section .section-title h3 {
+    margin: 0; padding: 0; border: none; background: none;
+    color: #4477AA;
+    padding-bottom: 8px;
+}
+
+#left-sidebar .section .section-title h3 small {
+    color: #88AACC;
+    font-size: 100%;
+}
+
+#left-sidebar .section .section-body {
+    margin: 0;
+    padding: 8px;
+    background: url(../images/sidebar/leftsidebar/bg-bottom.png) bottom left no-repeat;
+}
+    
+#left-sidebar .help-text {
+    font-size: 85%;
+    text-align: justify;
+}
+
+#left-sidebar .help-text .sub-section-title {
+    font-size: 100%;
+    font-weight:bold;
+    padding: 16px 0 8px 0;
+}
+
+#left-sidebar .help-text .heading {
+    font-size: 110%;
+    padding: 8px 0 8px 0;
+}
+
+#left-sidebar .hint-section .section-body {
+    font-size: 85%;
+    line-height: 1.75;
+}
+
+#left-sidebar .hint-section .section-body p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+/*
+#body-container {
+    background: none;
+}
+
+
+
+// 2nd-level sidebar section
+
+#left-sidebar .section .section-content .section {
+    background: none;
+    margin:0; padding:0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #D7D9DA;
+}
+        
+#left-sidebar .section .drag-area .section {
+    *margin-top: 0px;
+}
+
+#left-sidebar .section .section-content .section:first-child,
+#left-sidebar .section .section-content .ie_firstsection {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#left-sidebar .section .section .section-content {
+    background: none;
+    margin: 0;
+    padding:10px 0px 0px 0px;
+}
+                
+#left-sidebar .hint_section .section-content {
+    font-size: 85%;
+    line-height: 1.75;
+}
+
+#left-sidebar .hint_section .section-content p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+		
+.main_columns {
+    padding-left: 0;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.main_columns .column {
+    width: 335px;
+    margin-left: 20px;
+    overflow: visible;
+}
+    
+.main_columns .ie_firstcolumn { // Based on IE6 hack in text-links-headings.css
+    margin-left: 0;
+}
+
+// Collapsible Sections 
+
+.section-collapsible-title {
+	margin: 0;
+	padding: 5px 8px;
+	background: url(../images/sidebar/leftsidebar/section-collapsible-head-bg.png) top left no-repeat;	
+	color: #214263;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.section-collapsible-title-active {
+	border-bottom: 0px solid #F2F2F2;
+	font-weight: bold;
+}
+
+.section-collapsible-title-default {
+	border-bottom:0px;
+	background:url("../images/sidebar/leftsidebar/bg-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.section-icon 
+{
+    margin-top:4px;
+	*margin:-18px 4px 0 0;	
+	cursor:pointer;
+	float:right;
+}
+
+.section-icon-up { 
+	width: 9px;
+	height: 11px;
+	background: url("../images/sidebar/leftsidebar/icons.png") -80px -17px;
+	display: block;
+	margin : 7px 3px 0px 0px;
+}
+
+body.IE7 #left-sidebar .section-icon-up {
+	margin-top : -14px;
+}
+
+.section-icon-down { 
+	width: 9px; 
+	height: 11px; 
+	background: url("../images/sidebar/leftsidebar/icons.png") -71px -17px;
+	display: block;
+	margin : 7px 3px 0px 0px;
+}
+
+body.IE7 #left-sidebar .section-icon-down {
+	margin-top : -14px;
+}
+
+.section-collapsible-content .section-collapsible-title {
+	margin: 0 0 0 5px;
+	padding: 0;
+	background: none repeat scroll 0 0 transparent;	
+	color: #4477AA;
+	font-weight: normal;
+	cursor: pointer;
+	float: left;
+	*float: inherit;
+	width: 88%;
+	*width: 90%;
+}
+
+.section-collapsible-content .section-collapsible-title {
+    float: none;
+}
+
+.section-collapsible-content .section-collapsible-title-active {
+	border-bottom: 0px;
+	font-weight: bold;
+}
+
+.section-collapsible-content .section-collapsible-title-default {
+	border-bottom: 0px;
+}
+
+.section-collapsible-content .section-icon {
+	margin-top:0px;
+	*margin:-15px 0 0 0;
+	cursor:pointer;
+	float:right;
+}
+
+.section-collapsible-content .section-icon-up { 
+	width: 9px;
+	height: 5px;
+	background: url("../images/sidebar/leftsidebar/icons.png") -60px -23px;
+	display: block;
+	margin : 5px 3px 0px 0px;
+}
+
+.section-collapsible-content .section-icon-down { 
+	width: 9px;
+	height: 5px;
+	background: url("../images/sidebar/leftsidebar/icons.png") -60px -18px;
+	display: block;
+	margin : 5px 3px 0px 0px;
+}
+
+body.IE7 .section-collapsible-content .section-icon-up, body.IE7 .section-collapsible-content .section-icon-down {
+	margin-top : -12px;
+	margin-right : 2px;
+}
+
+.section-collapsible-content .section-icon-clear {
+    margin-top:0px;
+	cursor:pointer;
+	float:left;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/icons/clear.png);
+	display: block;
+	margin:1px 5px 0 0;
+}
+
+.section-collapsible-content .section-icon-clear-bg {
+    margin-top:0px;
+	cursor:pointer;
+	float:left;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/icons/clear-bg.png);
+	display: block;
+	margin:1px 5px 0 0;
+}
+
+.small {
+	font-size: 70%;
+}
+
+.no_loc .small {
+	font-size : 85%;
+}
+
+.location {
+	color:#888888;
+}
+
+
+*/

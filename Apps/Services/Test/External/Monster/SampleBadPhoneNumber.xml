@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Body>
+      <QueriesResponse xmlns="http://schemas.monster.com/Monster">
+        <Jobs>
+          <Job allowExpiredUpdates="false" inventoryType="transactional" enforceUniqueness="true" jobRefCode="29675a" jobComplete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <RecruiterReference userId="157578522">
+              <UserName>xc1b_chandlerma2x001</UserName>
+              <PersonName>
+                <GivenName>Internal</GivenName>
+                <FamilyName>Admin</FamilyName>
+              </PersonName>
+              <EmailAddress>operations@careerone.com.au</EmailAddress>
+            </RecruiterReference>
+            <CompanyReference companyId="9990493">
+              <CompanyXCode>xc1b_chandlerma2x</CompanyXCode>
+              <CompanyName>Chandler Macleod</CompanyName>
+            </CompanyReference>
+            <FolderReference folderId="130495392">
+              <FolderName>Reach forklift driver - Cardboard supplier</FolderName>
+            </FolderReference>
+            <Channel monsterId="168" />
+            <OccupationalClassification occupationId="101015">
+              <Name>Forklift Operator</Name>
+            </OccupationalClassification>
+            <JobInformation>
+              <JobTitle>Reach forklift driver - Cardboard supplier</JobTitle>
+              <JobShortDescription />
+              <JobType monsterId="20">Seasonal</JobType>
+              <JobStatus monsterId="26">Perdiem</JobStatus>
+              <IsHandinamic>false</IsHandinamic>
+              <ProDiversity>false</ProDiversity>
+              <Replacement>false</Replacement>
+              <Contact hideAll="false" hideAddress="false" hideStreetAddress="false" hideCity="false" hideState="false" hidePostalCode="false" hideCountry="false" hideContactInfoField="false" hideCompanyName="false" hideEmailAddress="false" hideFax="false" hideName="false" hidePhone="false" hideStreetAddress2="false">
+                <Name>Alexander Jong</Name>
+                <CompanyName>Chandler Macleod</CompanyName>
+                <Address />
+                <Phones>
+                  <Phone phoneType="contact">Please apply via the link</Phone>
+                </Phones>
+              </Contact>
+              <PhysicalAddress>
+                <StreetAddress />
+                <StreetAddress2 />
+                <City>Oakleigh South</City>
+                <State>VIC</State>
+                <CountryCode>AU</CountryCode>
+                <PostalCode>3167</PostalCode>
+              </PhysicalAddress>
+              <DisableApplyOnline>false</DisableApplyOnline>
+              <HideCompanyInfo>false</HideCompanyInfo>
+              <DisableFilters>false</DisableFilters>
+              <JobBody>&lt;ul&gt;&lt;li&gt;Oakleigh South location&lt;/li&gt;&lt;li&gt;Casual On-going role&lt;/li&gt;&lt;li&gt;Day Shifts - $21.90 p/h&lt;/li&gt;&lt;/ul&gt;Are you a experienced Reach forklift driver seeking a steady income and stable working hours?&lt;br&gt; &lt;br&gt; Chandler Macleod is now recruiting for a experienced Reach Forklift Driver for our client located in Oakleigh South. &lt;br&gt; &lt;br&gt; Our client is a industry leading cardboard supplier specialising in the supply and manufacturing of display stands. We currently seek a experienced Reach forklift driver with a minimum of 12 months experience. &lt;br&gt; &lt;br&gt; Your role as forklift driver will see you working in a all round role working in receiving and despatch. These duties include but are not limited to loading and unloading trucks, despatching cardboard boxes and assisting with general labouring. &lt;br&gt; &lt;br&gt; This position is a casual on going role Monday &amp;ndash; Friday 6am to 2.30pm for the right candidate pending performance and workflow. The successful applicant must be flexible to accommodate any shift changes and overtime as per production and logistic demands.&lt;br&gt; &lt;br&gt; To be further considered you MUST possess:&lt;br&gt; &amp;bull; Minimum 12 months Reach forklift experience &lt;br&gt; &amp;bull; Monday- Friday Availability&lt;br&gt; &amp;bull; Flexibility to accommodate overtime and shift changes where required&lt;br&gt; &amp;bull; Ability to perform manual handling up to 25 kg&lt;br&gt; &amp;bull; Own reliable transport&lt;br&gt; &lt;br&gt; Don&amp;rsquo;t miss your opportunity to secure ongoing employment and apply for this fantastic opportunity! Attach your CV via the &amp;ldquo;Apply&amp;rdquo; button</JobBody>
+              <YearsOfExperience monsterId="0" />
+              <DesiredLanguages>
+                <Language>
+                  <LanguageName monsterId="27">English</LanguageName>
+                </Language>
+              </DesiredLanguages>
+              <ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+              <JobSourceId monsterId="3" />
+              <CustomApplyOnlineURL>http://jobapplication.chandlermacleod.com/?job=1200362&amp;source=alfm7vd4ot3ejhots5cjin6q5m</CustomApplyOnlineURL>
+            </JobInformation>
+            <JobPostings>
+              <JobPosting jobPostingState="active" desiredDuration="30" postingId="118932977" jobPostingRefCode="29675a">
+                <RecruiterReference userId="157578522">
+                  <UserName>xc1b_chandlerma2x001</UserName>
+                  <PersonName>
+                    <GivenName>Internal</GivenName>
+                    <FamilyName>Admin</FamilyName>
+                  </PersonName>
+                  <EmailAddress>operations@careerone.com.au</EmailAddress>
+                </RecruiterReference>
+                <Location locationId="137">
+                  <City>Melbourne</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                </Location>
+                <Locations>
+                  <Location locationId="137">
+                    <City>Melbourne</City>
+                    <State>VIC</State>
+                    <CountryCode>AU</CountryCode>
+                  </Location>
+                </Locations>
+                <JobCategory monsterId="5625">Logistics/Transportation</JobCategory>
+                <JobCategories>
+                  <JobCategory monsterId="5625">Logistics/Transportation</JobCategory>
+                </JobCategories>
+                <JobOccupations>
+                  <JobOccupation categoryId="5625" monsterId="11793">
+                    <Name>Equipment/Forklift/Crane Operation</Name>
+                  </JobOccupation>
+                  <JobOccupation categoryId="5625" monsterId="11906">
+                    <Name>General/Other: Logistics/Transportation</Name>
+                  </JobOccupation>
+                  <JobOccupation categoryId="5625" monsterId="11964">
+                    <Name>Shipping and Receiving/Warehousing</Name>
+                  </JobOccupation>
+                </JobOccupations>
+                <JobCity>Oakleigh South</JobCity>
+                <BoardName monsterId="1">Monster</BoardName>
+                <JobPostingDates>
+                  <JobPostDate>2013-01-31T00:01:16.6630000-05:00</JobPostDate>
+                  <JobActiveDate>2013-01-31T00:01:16.6630000-05:00</JobActiveDate>
+                  <JobExpireDate>2013-03-02T00:01:16.6630000-05:00</JobExpireDate>
+                  <JobModifiedDate>2013-01-31T00:01:00.0000000-05:00</JobModifiedDate>
+                </JobPostingDates>
+                <PostingStats increment="false">
+                  <Views>0</Views>
+                  <SeekerApps>0</SeekerApps>
+                  <EmailApps>0</EmailApps>
+                  <TotalClicks>0</TotalClicks>
+                </PostingStats>
+                <ApplyOnlineURL>http://jobapplication.chandlermacleod.com/?job=1200362&amp;source=alfm7vd4ot3ejhots5cjin6q5m</ApplyOnlineURL>
+                <PhysicalAddress>
+                  <StreetAddress />
+                  <StreetAddress2 />
+                  <City>Oakleigh South</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                  <PostalCode>3167</PostalCode>
+                </PhysicalAddress>
+                <DisplayTemplate monsterId="16825" />
+                <PostingOccupationalClassification occupationId="101015">
+                  <Name>Forklift Operator</Name>
+                </PostingOccupationalClassification>
+                <Industries>
+                  <Industry>
+                    <IndustryName monsterId="12">Manufacturing - Other</IndustryName>
+                  </Industry>
+                  <Industry>
+                    <IndustryName monsterId="19">Transport and Storage - Materials</IndustryName>
+                  </Industry>
+                  <Industry>
+                    <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+                  </Industry>
+                </Industries>
+              </JobPosting>
+            </JobPostings>
+          </Job>
+        </Jobs>
+      </QueriesResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

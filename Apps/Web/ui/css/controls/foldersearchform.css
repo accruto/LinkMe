@@ -1,0 +1,36 @@
+﻿.folder-search-form_ascx:after {		/* Modern-browser self-clearing */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.folder-search-form_ascx {		/* IE6,7 self-clearing */
+	zoom: 1;				    /* Invalid CSS, hasLayout trigger */
+}
+
+.folder-search-form_ascx fieldset .textbox_field {
+    float: left;
+}
+
+.folder-search-form_ascx fieldset .textbox_field .textbox {
+    width: 144px;
+}
+
+.folder-search-form_ascx fieldset .button_field {
+    float: left;
+    padding-top: 1em;
+    padding-left: 10px;
+    *padding-top: 1.4em;    /* For IE6/7's benefit */
+}
+#sidebar .folder-search-form_ascx fieldset .button_field {
+    *padding-top: 1.2em;    /* For IE6/7's benefit */
+}
+
+.folder-search-form_ascx fieldset .textbox_control {
+    _float: left;    /* For IE6's benefit */
+}
+.folder-search-form_ascx fieldset .button_control {
+    _float: left;    /* For IE6's benefit */
+}

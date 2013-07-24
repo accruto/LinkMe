@@ -1,0 +1,19 @@
+#JobAd #JobDescription #Ad
+{
+ background: transparent url('Hostec_images/top_bg.gif') top left no-repeat;
+ padding: 5px;
+ padding-top: 28px;
+ margin-right: 50px;
+}
+
+#JobAd #JobDescription
+{
+ background: #fff url('Hostec_images/right_bg.gif') no-repeat right top;
+
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: transparent url('Hostec_images/bottom_bg.gif') no-repeat left bottom;
+	height: 18px;
+}

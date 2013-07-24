@@ -1,0 +1,364 @@
+﻿/*	================
+    industry listbox
+    ================ */
+	
+.form .industry_listbox_field {}
+    .form .industry_listbox_control {}
+	    .form .industry_listbox
+	    {
+	        width: 19.5em;
+        }
+
+.form .industries_listbox_field {}
+    .form .industries_listbox_control {}
+        .form .industries_listbox
+        {
+            width: 19.5em;
+        }
+
+/*	================
+    country dropdown
+    ================ */
+	
+.form .country_dropdown_field {}
+    .form .country_dropdown_control {}
+        .form .country_dropdown {}
+
+/*	=============
+    phone textbox
+    ============= */
+	
+.form .phone_textbox_field {}
+    .form .phone_textbox_control {}
+        .form .phone_textbox
+        {
+            width: 10em;
+        }
+
+/*	=============
+    email textbox
+    ============= */
+	
+.form .email_textbox_field {}
+    .form .email_textbox_control {}
+	    .form .email_textbox
+	    {
+	        width: 20em;
+        }
+	
+/*	================
+    password textbox
+    ================ */
+    
+.form .password_textbox_field {}
+    .form .password_textbox_control {}
+        .form .password_textbox {}
+
+.credit-card-type_dropdown_field {}
+    .credit-card-type_dropdown_control {}
+        .credit-card-type_dropdown_control img {
+    	    vertical-align: middle;
+    	    padding-left: 20px;
+    	}
+    	
+/*  ========
+    datetime
+    ======== */
+
+.form .datetime_textbox_control {
+    height: 25px;
+}
+    
+.form .datetime_textbox_control .datetime_textbox {
+    position: absolute;
+}
+
+.form .datetime_textbox_control button {
+    position: absolute;
+    left: 165px;
+    margin-top: -1px;
+}
+
+/*  =======
+    buttons
+    ======= */
+
+.form .save-button
+{
+	background-image: url("../images/forms/buttons/save.png");
+	width: 80px;
+	height: 28px;
+}
+
+.form .save-button:hover
+{
+	background-position: 0 -28px;
+}
+
+.form .cancel-button
+{
+    background: url(../images/forms/buttons/cancel.png) no-repeat;
+    width: 81px;
+    height: 28px;
+}
+
+.form .cancel-button:hover {
+	background-position: 0 -28px;
+}
+
+.form .edit-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .edit-button
+{
+	background: url(../images/forms/buttons/edit.png) no-repeat;
+	width: 93px;
+	height: 29px;
+}
+
+.form .edit-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .back-button
+{
+    background: url(../images/forms/buttons/back.png) no-repeat;
+    width: 78px;
+    height: 29px;
+}
+
+.form .back-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .done-button
+{
+    background: url(../images/forms/buttons/done.png) no-repeat;
+    width: 93px;
+    height: 29px;
+}
+
+.form .done-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .send-button
+{
+    background: url(../images/forms/buttons/send.png) no-repeat;
+    width: 80px;
+    height: 28px;
+}
+
+.form .send-button:hover {
+	background-position: 0 -28px;
+}
+
+.form .search_button
+{
+    background: url(../images/forms/buttons/search.png) no-repeat;
+    width: 103px;
+    height: 28px;
+}
+
+.form .search_button:hover {
+	background-position: 0 -28px;
+}
+
+.form .preview-button
+{
+	background: url(../images/forms/buttons/preview.png) no-repeat;
+	width: 121px;
+	height: 29px;
+}
+
+.form .preview-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .publish-button
+{
+	background: url(../images/forms/buttons/publish.png) no-repeat;
+	width: 117px;
+	height: 29px;
+}
+
+.form .publish-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .reopen-button
+{
+	background: url(../images/forms/buttons/reopen.png) no-repeat;
+	width: 115px;
+	height: 29px;
+}
+
+.form .reopen-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .repost-button
+{
+	background: url(../images/forms/buttons/repost.png) no-repeat;
+	width: 108px;
+	height: 29px;
+}
+
+.form .repost-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .login-button
+{
+	background: url(../images/forms/buttons/login.png) no-repeat;
+	width: 73px;
+	height: 29px;
+}
+
+.form .login-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .join-button
+{
+	background: url(../images/forms/buttons/join.png) no-repeat;
+	width: 72px;
+	height: 29px;
+}
+
+.form .join-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .purchase-button
+{
+	background: url(../images/forms/buttons/purchase.png) no-repeat;
+	width: 132px;
+	height: 29px;
+}
+
+.form .purchase-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .apply-button {
+    background: url(../images/forms/buttons/apply.png) no-repeat;
+    width: 75px;
+    height: 29px;
+}
+
+.form .apply-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .download-button {
+	background: url(../images/forms/buttons/download.png) no-repeat;
+	width: 125px;
+	height: 29px;
+}
+
+.form .download-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .download-pdf-button {
+	background: url(../images/forms/buttons/downloadpdf.png) no-repeat;
+	width: 144px;
+	height: 29px;
+}
+
+.form .download-pdf-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .verify-button {
+	background-image: url("../images/forms/buttons/verify.png");
+	width: 86px;
+	height: 28px;
+}
+
+.form .verify-button:hover {
+	background-position: 0 -28px;
+}
+
+.form .disable-button {
+	background-image: url("../images/forms/buttons/disable.png");
+	width: 100px;
+	height: 29px;
+}
+
+.form .disable-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .enable-button {
+	background-image: url("../images/forms/buttons/enable.png");
+	width: 93px;
+	height: 29px;
+}
+
+.form .enable-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .deactivate-button {
+	background-image: url("../images/forms/buttons/deactivate.png");
+	width: 117px;
+	height: 29px;
+}
+
+.form .deactivate-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .activate-button {
+	background-image: url("../images/forms/buttons/activate.png");
+	width: 100px;
+	height: 29px;
+}
+
+.form .activate-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .change-button {
+	background-image: url("../images/forms/buttons/change.png");
+	width: 97px;
+	height: 29px;
+}
+
+.form .change-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .add-button {
+    background: url(../images/forms/buttons/add.png) no-repeat;
+    width: 63px;
+    height: 29px;
+}
+
+.form .add-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .create-button {
+    background: url(../images/forms/buttons/create.png) no-repeat;
+    width: 90px;
+    height: 29px;
+}
+
+.form .create-button:hover {
+	background-position: 0 -29px;
+}
+
+.form .mini-light-x-button {
+    background-image: url(../images/forms/buttons/minilight/x.png);
+    float: left;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	display: block;
+	width: 14px;
+	height: 14px;
+}

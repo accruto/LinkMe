@@ -1,0 +1,14 @@
+create_Vertical.sql
+create_VerticalMember.sql
+
+data_Vertical_add.sql
+
+alter_CandidateNote_add_ownedById.sql
+alter_CandidateNote_add_isShared.sql
+alter_IX_CandiateNote_allow_multiple.sql
+
+create_EmailStats.sql
+create_EmailLinkStats.sql
+
+create_sp_RegisterEmailSend.sql
+create_sp_RegisterEmailLinkClick.sql

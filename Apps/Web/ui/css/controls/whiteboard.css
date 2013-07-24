@@ -1,0 +1,97 @@
+/*	whiteboard.css
+	
+	Style for WhiteboardDisplay.ascx which became both a Networking
+	and Groups control as at 8.8.*.
+*/
+
+.section {}			/* New look whiteboard */
+	.section .whiteboard_ascx {}
+		.section .whiteboard_ascx fieldset {
+			margin: 0;
+			margin-top: 5px;
+		}
+		
+		.right-half .section .whiteboard_ascx fieldset .multiline_textbox {
+			width: 318px;
+		}
+		
+		.whiteboard_ascx fieldset .multiline_textbox {
+			width: 322px;
+			font-family: Verdana;
+			font-size: 100%;
+			height: 51px;
+		}
+
+		.whiteboard_ascx fieldset .empty {
+			font-style: italic;
+			color: #999;
+		}
+		
+		.section .whiteboard_ascx .post_button_field {
+			padding-top: 5px;
+			padding-bottom: 12px;
+		}
+		
+		.section .whiteboard_ascx .post_button_control {
+			text-align: right;
+			padding-right: 0px;
+			line-height: 0;
+		}
+
+		.right-half .section .whiteboard_ascx .post_button_control {
+			padding-right: 5px;
+		}
+		
+.whiteboard_ascx {}
+
+	.whiteboard_ascx .toolbar_control {
+		text-align:right;
+		padding-right: 12px;
+	}
+
+	.whiteboard_ascx .message {
+		margin-bottom: 8px;
+		overflow-x: hidden;	/* Last resort treatment for REALLY long (basically, maliciously constructed) words */
+	}
+	
+	.whiteboard_ascx .message div p {		/* The actual message text */
+	}
+	
+	.whiteboard_ascx .message div p span.message-text {
+		font-size: 85%;
+		margin-right: 8px;
+		/* begin URL-breaking management */
+		white-space: pre-wrap;	/* CSS3 */
+		white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+		*word-wrap: break-word;	/* IE, also gets non-URL big words, and stops page layout wrecking in IE6 */
+	}
+
+	.whiteboard_ascx .message div.whiteboard-thumb {
+		float: left;
+		margin: 0 8px 10px 0;
+	}
+
+	.whiteboard_ascx .message-details {
+		font-size: 80%;
+		margin-bottom: 4px;
+		padding-left: 8px;
+		background: #557093;
+		color: #fff;
+		line-height: 21px;
+	}
+
+	.whiteboard_ascx .message-details .sender-name {
+		font-size: 100%;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	.whiteboard_ascx .message-details .post-time {
+		float: right;
+		margin-right: 12px;
+	}
+
+	.whiteboard_ascx .affordance {
+		font-size: 80%;
+		margin-right: 8px;
+	}

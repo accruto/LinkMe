@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_email_tables.sql,rollback_search_log_tables.sql,rollback_GetABNTransactionSummaryByDateRange_proc.sql,rollback_GetAccountTransactionSummaryByDateRange_proc.sql

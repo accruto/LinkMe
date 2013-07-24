@@ -1,0 +1,10 @@
+DELETE dbo.CountrySubdivisionAlias
+DELETE dbo.PostalSuburb
+DELETE dbo.PostalCode
+DELETE dbo.LocalityRegion
+DELETE dbo.Region
+DELETE dbo.LocalityCountrySubdivision
+DELETE dbo.CountrySubdivision
+DELETE dbo.Locality
+DELETE dbo.GeographicalArea
+DELETE dbo.Country

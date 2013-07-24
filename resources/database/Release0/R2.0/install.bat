@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:drop_user_profile_pending_invite_tables.sql,create_user_profile_pending_invite_tables.sql,add_columns_user_profile_table.sql,update_database_version_table.sql

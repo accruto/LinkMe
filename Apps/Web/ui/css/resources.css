@@ -1,0 +1,27 @@
+#featured-item{
+	margin-top: 10px;
+}
+
+#resources-search{
+	background: url(../images/resources/search-bg.png) no-repeat;
+	width: 303px;
+	height: 54px;
+	margin-top: 10px;
+}
+
+#resources-search table{
+	margin-left: 8px;
+}
+
+#featured-item h1{
+	font-size: 17px;
+	margin-bottom: 2px;
+	margin-top: 4px;
+
+}
+
+.date{
+	font-weight: bold;
+	color: #666;
+	font-size: 11px
+}

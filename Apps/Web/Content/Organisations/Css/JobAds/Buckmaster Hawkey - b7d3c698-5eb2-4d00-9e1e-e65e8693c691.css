@@ -1,0 +1,73 @@
+#JobAd #JobDescription #Ad {
+	width: 460px;
+	border: none;
+	background: url(buckmaster_hawkey_images/buckmaster_hawkey_bg.png) top left repeat-y;
+}
+
+#JobAd #JobDescription #JobAdHeading {
+	background: url(buckmaster_hawkey_images/buckmaster_hawkey_header.png) top left no-repeat;
+	padding-top: 125px;
+}
+
+#JobAd #JobDescription #LogoFooter {
+	background: url(buckmaster_hawkey_images/buckmaster_hawkey_footer.png) bottom left no-repeat;
+	height: 75px;
+}
+
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad .details *,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+}
+
+#JobAd #JobDescription #Ad label {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad h1,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol,
+#JobAd #JobDescription #Ad div {
+	padding-left: 51px;
+	padding-right: 50px;
+}
+
+#JobAd #JobDescription #JobAdHeading h1 {
+	font-size: 17pt;
+	color: #bc4f07;
+	margin-bottom: 10px;
+}
+
+#JobAd #JobDescription #JobAdHeading p {
+	font-size: 14pt;
+}
+
+#JobAd .bulletpoints {
+	margin-top: 1.25em;
+	margin-bottom: 1.5em;
+}
+
+#JobAd .bulletpoints li {
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 0.25em;
+	margin-left: -9px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	padding-left: 0;
+}
+
+#JobAd #JobDescription #Ad .details {
+	width: 400px !important;
+	position: relative;
+	left: 48px;
+	margin-bottom: 0;
+}

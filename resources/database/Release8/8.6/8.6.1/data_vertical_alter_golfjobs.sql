@@ -1,0 +1,11 @@
+
+DECLARE @id UNIQUEIDENTIFIER
+SET @id = '4E09AB28-27D5-41D6-9AA3-4A87B84413F6'
+
+UPDATE
+	dbo.Community
+SET
+	host = NULL
+WHERE
+	id = @id
+

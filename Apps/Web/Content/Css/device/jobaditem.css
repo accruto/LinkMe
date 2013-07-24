@@ -1,0 +1,109 @@
+﻿.row.jobad {
+	margin : 0 0.5em 0.5em;
+	font-size : 1.5em;
+	-webkit-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	-moz-box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	box-shadow : 0 0.1666666666666667em 0 rgba(192,195,210,0.4);
+	border : 0.0833333333333333em solid #C0C3D2;
+	background-color : #FCFAFA;
+	border-radius : 0.5em;
+	padding : 0.75em;
+	line-height : 1.5em;
+	cursor : pointer;
+}
+.row.jobad.featured {
+	border : 0.1666666666666667em solid #EDD260;
+	padding : 0.6666666666666667em;
+	background-color : #F9F5E4;
+}
+.row.jobad.active {
+	border : 0.0833333333333333em solid #1F6DB6;
+	padding : 0.75em;
+	background-color : #307EEC;
+}
+.row.jobad .titleline {
+	margin-bottom : 0.25em;
+}
+.row.jobad .icon.new {
+	background-image : url("../../images/device/IconNew.png");
+	width : 2.75em;
+	height : 1.375em;
+	background-size : 100% 100%;
+	display : none;
+	float : left;
+	margin : 0 0.25em 0 -1em;
+}
+.row.jobad .icon.new.active {
+	display : block;
+}
+.row.jobad .icon.jobtype {
+	width : 3.9166666666666667em;
+	height : 1.25em;
+	float : left;
+	background-size : 100% 100%;
+	margin-right : 0.4166666666666667em;
+}
+.row.jobad .icon.jobtype.FullTime {
+	background-image : url("../../images/device/IconJobTypeFullTime.png");
+}
+.row.jobad .icon.jobtype.PartTime {
+	background-image : url("../../images/device/IconJobTypePartTime.png");
+}
+.row.jobad .icon.jobtype.Contract {
+	background-image : url("../../images/device/IconJobTypeContract.png");
+}
+.row.jobad .icon.jobtype.Temp {
+	background-image : url("../../images/device/IconJobTypeTemp.png");
+}
+.row.jobad .icon.jobtype.JobShare {
+	background-image : url("../../images/device/IconJobTypeJobShare.png");
+}
+.row.jobad .icon.jobtype.None {
+	background-image : url("../../images/device/IconJobTypeNone.png");
+}
+.row.jobad .title {
+	font-size : 1.1666666666666667em;
+	line-height : 1.1785714285714286em;
+	font-weight : bold;
+	color : #307EEC;
+}
+.row.jobad.active .title {
+	color : white;
+}
+.row.jobad .icon.saved {
+	width : 3.3333333333333333em;
+	height : 2.4166666666666667em;
+	background-size : 100% 100%;
+	float : right;
+	background-image : url("../../images/device/IconSaved.png");
+	cursor : pointer;
+}
+.row.jobad .icon.saved.active {
+	background-image : url("../../images/device/IconSavedActive.png");
+}
+.row.jobad .company {
+	color : #00AD6E;
+	width : 80%;
+}
+.row.jobad.active .company {
+	color : white;
+}
+.row.jobad .location, .row.jobad .salary, .row.jobad .date {
+	color : #464646;
+	width : 80%;
+}
+.row.jobad.active .location, .row.jobad.active .salary, .row.jobad.active .date {
+	color : white;
+}
+.row.jobad .featured {
+	display : none;
+	float : right;
+	width : 3.8333333333333333em;
+	height : 0.625em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/TextFeatured.png");
+	margin-top : -0.625em;
+}
+.row.jobad.featured .featured {
+	display : block;
+}

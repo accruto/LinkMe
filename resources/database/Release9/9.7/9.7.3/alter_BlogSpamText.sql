@@ -1,0 +1,8 @@
+ALTER TABLE dbo.[BlogSpamText]
+ALTER COLUMN pattern NVARCHAR(256) NOT NULL
+GO
+
+ALTER TABLE BlogSpamText ADD CONSTRAINT PK_BlogSpamText
+PRIMARY KEY (pattern)
+GO
+

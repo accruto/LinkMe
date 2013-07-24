@@ -1,0 +1,13 @@
+alter_CandidateList.sql
+data_CommunicationDefinition_reengagement.sql
+data_Integrator_CareerOne.sql
+create_Channel.sql
+create_ChannelApp.sql
+data_Channel.sql
+alter_MemberViewing_add_columns.sql
+alter_MemberContact_add_columns.sql
+alter_ResumeSearch_add_columns.sql
+data_Product.sql
+create_UserAppleDevice.sql
+alter_SavedResumeSearchAlert.sql
+data_Move_AlertId.sql

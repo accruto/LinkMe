@@ -1,0 +1,26 @@
+HKCR
+{
+	LinkMe.Tools.Outlook.Addin.1 = s 'LinkMe Outlook AddIn'
+	{
+		CLSID = s '{F8E31DA7-4606-46B7-96C4-AC0B406004A8}'
+	}
+	LinkMe.Tools.Outlook.AddIn = s 'LinkMe Outlook AddIn'
+	{
+		CLSID = s '{F8E31DA7-4606-46B7-96C4-AC0B406004A8}'
+		CurVer = s 'LinkMe.Tools.Outlook.AddIn.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{F8E31DA7-4606-46B7-96C4-AC0B406004A8}' = s 'LinkMe Outlook AddIn'
+		{
+			ProgID = s 'LinkMe.Tools.Outlook.AddIn.1'
+			VersionIndependentProgID = s 'LinkMe.Tools.Outlook.AddIn'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{5E0390AB-8255-42B8-A9DE-F024CB872164}'
+		}
+	}
+}

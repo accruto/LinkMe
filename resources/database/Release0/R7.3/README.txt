@@ -1,0 +1,1 @@
+Since LinkMe_Owner does not have enough permissions to create a new database, you will need to create the LinkMeTags database before running the install script.

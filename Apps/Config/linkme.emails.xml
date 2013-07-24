@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linkMe>
+  <urls>
+    <url name="Default" url="~/" shortUrl="h" />
+    <url name="Activation" url="~/accounts/activation" shortUrl="a">
+      <parameters>
+        <parameter name="activationCode" shortName="a" />
+      </parameters>
+    </url>
+    <url name="InviteActivation" url="~/accounts/activation" shortUrl="i">
+      <parameters>
+        <parameter name="activationCode" shortName="a" />
+      </parameters>
+    </url>
+    <url name="Verification" url="~/activation" shortUrl="v">
+      <parameters>
+        <parameter name="activationCode" shortName="a" />
+      </parameters>
+    </url>
+    <url name="Join" url="~/Join.aspx" shortUrl="j">
+      <parameters>
+        <parameter name="inviteId" shortName="i" />
+      </parameters>
+    </url>
+    <url name="Password" secure="true" url="~/accounts/changepassword" shortUrl="w">
+    </url>
+    <url name="GroupJoin" url="~/Join.aspx" shortUrl="j/g">
+      <parameters>
+        <parameter name="groupInvitationId" shortName="i" />
+      </parameters>
+    </url>
+    <url name="AboutUs" url="~/ui/unregistered/common/AboutUs.aspx" shortUrl="u" />
+    <url name="PrivacyStatement" url="~/ui/unregistered/common/PrivacyStatement.aspx" shortUrl="p" />
+    <url name="TermsAndConditions" url="~/ui/unregistered/common/TermsAndConditions.aspx" shortUrl="t" />
+    
+    <!-- Jobs -->
+    
+    <url name="Job" url="~/jobs/Job.aspx" shortUrl="j/j">
+      <parameters>
+        <parameter name="jobAdId" shortName="j" />
+      </parameters>
+    </url>
+
+    <!-- Networking -->
+    
+    <url name="Invitations" secure="true" url="~/members/friends/Invitations.aspx" shortUrl="n/r" />
+    <url name="InviteContactsForm" secure="true" url="~/ui/registered/networkers/InviteContactsForm.aspx" shortUrl="n/i" />
+    <url name="FriendsProfile" secure="true" url="~/ui/registered/networkers/FriendsProfile.aspx" shortUrl="n/p">
+      <parameters>
+        <parameter name="friendId" shortName="f" />
+      </parameters>
+    </url>
+
+    <!-- Messaging -->
+
+    <url name="ViewThread" secure="true" url="~/ui/registered/messaging/ViewThread.aspx" shortUrl="m/t">
+      <parameters>
+        <parameter name="threadId" shortName="t" />
+      </parameters>
+    </url>
+    
+    <!-- Member -->
+
+    <url name="AboutMe" secure="true" url="~/members/profile" shortUrl="m/a" />
+    
+    <!-- Candidates -->
+
+    <url name="NetworkerMyResumeForm" secure="true" url="~/members/profile" shortUrl="c/r" />
+    <url name="SubmitFileCredentialsForm" secure="true" url="~/ui/registered/networkers/SubmitFileCredentialsForm.aspx" shortUrl="c/u" />
+
+    <!-- Search Resumes -->
+    
+    <url name="ViewResumeSearchResult" secure="true" url="~/ui/registered/employers/ViewResumeSearchResult.aspx" shortUrl="s/r/r">
+      <parameters>
+        <parameter name="resumeId" shortName="r" />
+      </parameters>
+    </url>
+    <url name="ResumesSearch" url="~/search/resumes/SimpleSearch.aspx" shortUrl="s/r" />
+    <url name="SavedResumeSearchAlerts" secure="true" url="~/ui/registered/employers/SavedResumeSearchAlerts.aspx" shortUrl="s/r/a" />
+    <url name="CreateResumeSearchAlert" secure="true" url="~/search/candidates" shortUrl="s/r/c" />
+    
+    <!-- Employers -->
+
+    <url name="Resources" url="~/employers/resources/" shortUrl="e/r" />
+    <url name="WelcomePack" url="~/employers/resources/EmployerWelcomePack.pdf" shortUrl="e/r/w" />
+
+    <!-- Search Jobs -->
+
+    <url name="JobSearchEmailAlerts" secure="true" url="~/ui/registered/networkers/JobSearchEmailAlerts.aspx" shortUrl="s/j/a" />
+    
+    <!-- Groups -->
+    
+    <url name="ViewGroup" secure="true" url="~/ui/registered/networkers/groups/ViewGroup.aspx" shortUrl="n/g/v">
+      <parameters>
+        <parameter name="groupId" shortName="g" />
+      </parameters>
+    </url>
+    <url name="GroupInvitation" secure="true" url="~/ui/registered/networkers/groups/ViewGroup.aspx" shortUrl="n/g/i">
+      <parameters>
+        <parameter name="invitationId" shortName="i" />
+      </parameters>
+    </url>
+    <url name="SendGroupInvitation" secure="true" url="~/ui/registered/networkers/groups/InviteFriendsToGroup.aspx" shortUrl="n/g/s">
+      <parameters>
+        <parameter name="requestedInvitationId" shortName="r" />
+      </parameters>
+    </url>
+	<url name="ViewUserContentItem" secure="true" url="~/administrators/ViewUserContentItem.aspx" shortUrl="c/v">
+		<parameters>
+          <parameter name="requestId" shortName="r" />
+		</parameters>		  
+	</url>
+    <!-- Events -->
+    <url name="ViewEvent" secure="true" url="~/ui/registered/networkers/groups/events/ViewEvent.aspx" shortUrl="n/g/e/v">
+      <parameters>
+        <parameter name="invitationId" shortName="i" />
+      </parameters>
+    </url>    
+
+  </urls>
+  <emails>
+    <!-- Free single-character IDs: h, l, o, s, y -->
+    
+    <email name="ActivationEmail" id="a" />
+    <email name="EmailVerificationEmail" id="v" />
+    <email name="ResumeGeneratedNewMemberEmail" id="g" />
+
+    <email name="ExistingMemberInvitationEmail" id="e" />
+    <email name="InvitationConfirmationEmail" id="t" />
+    <email name="InvitationEmail" id="i" />
+
+    <email name="JobSearchAlertEmail" id="j" />
+
+    <email name="NewEmployerWelcomeEmail" id="w" />
+    <email name="EmployerContactCandidateEmail" id="c" />
+    <email name="EmployerContactCandidateConfirmationEmail" id="d" />
+    <email name="MyCandidatesResumeEmail" id="k" />
+    <email name="ResumeSearchAlertEmail" id="r" />
+
+    <email name="UserMessageSentEmail" id="m" />
+    <email name="SendJobToFriendEmail" id="f" />
+
+    <email name="StatsEmail" id="p" />
+
+    <email name="InviteEmailContactToGroupEmail" id="z" />
+    <email name="InviteFriendToGroupEmail" id="u" />
+    <email name="EventInviteEmail" id="y" />
+
+
+
+
+    <email name="GroupInvitationRequestEmail" id="q" />
+
+	<email name="UserContentRemovalRequestEmail" id="b" />
+  </emails>
+  <keys>
+    <key name="Monash University Graduate School of Business" id="a" />
+    <key name="ITWire" id="b" />
+    <key name="golfjobs.com.au" id="c" />
+    <key name="Scouts Australia" id="d" />
+    <key name="RCSA Australia &amp; New Zealand" id="e" />
+    <key name="Crossroads Human Resources" id="f" />
+    <key name="Business Spectator" id="g" />
+  </keys>
+</linkMe>

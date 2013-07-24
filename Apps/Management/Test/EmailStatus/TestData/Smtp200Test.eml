@@ -1,0 +1,30 @@
+To: Alice@Pure-Heart.ORG
+From: postmaster@mail.Big-Bucks.COM
+Subject: Delivery Notification (success) for Bob@Big-Bucks.COM
+Content-Type: multipart/report; report-type=delivery-status;
+    boundary=abcde
+MIME-Version: 1.0
+
+--abcde
+Content-type: text/plain; charset=us-ascii
+
+Your message (id QQ314159) was successfully delivered to
+Bob@Big-Bucks.COM.
+
+--abcde
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; mail.Big-Bucks.COM
+Original-Envelope-ID: QQ314159
+
+Original-Recipient: rfc822;Bob@Big-Bucks.COM
+Final-Recipient: rfc822;Bob@Big-Bucks.COM
+Action: delivered
+Status: 2.0.0
+
+--abcde
+Content-type: message/rfc822
+
+(headers of returned message go here)
+
+--abcde--

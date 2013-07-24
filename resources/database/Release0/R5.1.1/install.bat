@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_new_linkme_resume_data_table.sql,update_database_version_table.sql

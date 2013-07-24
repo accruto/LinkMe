@@ -1,0 +1,1 @@
+run_scripts.vbs /l:rollback.log /f:rollback_viewstate_cleanup_job.sql

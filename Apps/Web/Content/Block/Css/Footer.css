@@ -1,0 +1,180 @@
+﻿#footer {
+	font-size: 80%;
+	line-height: 13px;
+    font-family: verdana;
+    margin: 0 auto;
+    text-align:center;
+    color: #214263;
+    position: absolute;
+    width: 100%;
+    height: 162px;
+    bottom: 0;
+    left: 0;
+}
+
+#footer-container {
+    background: #214263 url(../images/footer/bg.png) repeat;
+    width: 100%;
+    height: 162px;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 85%;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#footer-container a {
+    color: #FFFFFF;
+}
+
+#footer-container .footer-holder {
+    width: 934px;
+    min-width: 934px;
+    max-width: 934px;
+    margin: 0 auto;
+}
+
+#footer-container .footer-holder .footer-links-holder {
+    padding: 10px 5px 90px 5px;
+}
+
+#footer-container .footer-holder .footer-links-holder a {
+    text-decoration: none;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+#footer-container .footer-holder .left-section {
+    width: 40%;
+    float: left;
+    text-align: left;
+}
+
+#footer-container .footer-holder .right-section {
+    width: 57%;
+    float: right;
+    text-align: right;
+    padding: 20px 15px 0 0;
+}
+
+#footer-container .logo {
+    background: url(../images/footer/logo-linkme-tagline.png) no-repeat;
+    width: 160px;
+    max-width: 160px;
+    min-width: 160px;
+    height: 75px;
+    min-height: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    *display: inline;
+    float: left;
+    border: none;
+    cursor: pointer;
+}
+
+#footer-container .copyright {
+    padding: 25px 0 0 0;
+}
+
+#footer-container .main-links {
+    *min-width: 288px;
+    *max-width: 485px;
+}
+
+#footer-container .main-links div,
+#footer-container .sub-links div,
+#footer-container .seo-links div {
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    vertical-align: middle;
+}
+
+#footer-container .main-links .footer-link,
+#footer-container .sub-links .footer-link,
+#footer-container .seo-links .footer-link {
+    padding: 0 3px 0 0;
+}
+
+#footer-container .separator {
+    width: 3px;
+    height: 23px;
+    background: url(../images/footer/vertical-divider.png) no-repeat scroll left top transparent;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+}
+
+#footer-container .bullet {
+    width: 10px;
+    height: 11px;
+    background: url(../images/footer/bullet.png) no-repeat scroll left center transparent;
+    display: inline-block;
+    *display: inline;
+    *float: left;
+    margin: auto 5px auto 8px;
+}
+
+#footer-container .member-bullet {
+    background: url(../images/footer/member-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .employer-bullet {
+    background: url(../images/footer/employer-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .sub-links .bullet {
+    background: url(../images/footer/sub-bullet.png) no-repeat scroll left center transparent;
+}
+
+#footer-container .footer-holder .member-link a {
+    color: #85b218;
+}
+
+#footer-container .footer-holder .employer-link a {
+    color: #fe8a00;
+}
+
+#footer-container .footer-holder .sub-links {
+    padding: 5px 0 0 0;
+    *padding: 5px 0 0 260px;
+    float: right\9;
+}
+
+#footer-container .footer-holder .sub-links a {
+    color: #959595;
+}
+
+#footer-container .footer-holder .main-links a:hover,
+#footer-container .footer-holder .sub-links a:hover,
+#footer-container .seo-links .footer-link a:hover {
+    text-decoration: underline;
+}
+
+#footer-container .divider {
+    width: 927px;
+    height: 3px;
+    background: url(../images/footer/horizontal-divider.png) no-repeat scroll left top transparent;
+    margin: 0 auto;
+}
+
+#footer-container .seo-links {
+    padding: 10px 0 0 0;
+    font-size: 90%;
+}
+
+#footer-container .seo-links .footer-link {
+    padding: 0 0 0 15px;
+}
+
+#footer-container .seo-links .footer-link a {
+    color: #FFFFFF;
+	text-decoration : none;
+}
+body.IE7 #footer-container .seo-links {
+	width : 550px;
+}
+body.IE7 #footer-container .seo-links.candidates {
+	width : 250px;
+}

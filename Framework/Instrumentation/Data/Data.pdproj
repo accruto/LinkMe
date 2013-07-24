@@ -1,0 +1,243 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{7f5cfd93-46be-4bb8-9c23-3bd0f8022799}</ProjectGuid>
+    <Name>Data</Name>
+  </PropertyGroup>
+  <ItemGroup>
+    <Merge Include="Functions\LinkMe.Framework.Instrumentation.Data.Functions.txt">
+      <Link>Functions\LinkMe.Framework.Instrumentation.Data.Functions.txt</Link>
+    </Merge>
+    <Merge Include="Security\LinkMe.Framework.Instrumentation.Data.Security.txt">
+      <Link>Security\LinkMe.Framework.Instrumentation.Data.Security.txt</Link>
+    </Merge>
+    <Merge Include="StoredProcedures\LinkMe.Framework.Instrumentation.Data.StoredProcedures.txt">
+      <Link>StoredProcedures\LinkMe.Framework.Instrumentation.Data.StoredProcedures.txt</Link>
+    </Merge>
+    <Merge Include="Tables\LinkMe.Framework.Instrumentation.Data.Tables.txt">
+      <Link>Tables\LinkMe.Framework.Instrumentation.Data.Tables.txt</Link>
+    </Merge>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Functions\FiGetParentNameFromFullName.sql">
+      <Link>Functions\FiGetParentNameFromFullName.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\" />
+    <Folder Include="Security\" />
+    <Folder Include="StoredProcedures\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FiWriter.sql">
+      <Link>Security\FiWriter.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FiReader.sql">
+      <Link>Security\FiReader.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiNamespace.sql">
+      <Link>Tables\FiNamespace.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiNamespaceDelete.sql">
+      <Link>StoredProcedures\FiNamespaceDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiNamespaceEnsure.sql">
+      <Link>StoredProcedures\FiNamespaceEnsure.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiNamespacesGet.sql">
+      <Link>StoredProcedures\FiNamespacesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiNamespaceUpdate.sql">
+      <Link>StoredProcedures\FiNamespaceUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiSource.sql">
+      <Link>Tables\FiSource.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourceUpdate.sql">
+      <Link>StoredProcedures\FiSourceUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourceDelete.sql">
+      <Link>StoredProcedures\FiSourceDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourcesGet.sql">
+      <Link>StoredProcedures\FiSourcesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Functions\FiGetParentNameFromFullyQualifiedReference.sql">
+      <Link>Functions\FiGetParentNameFromFullyQualifiedReference.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiMessageHandlerType.sql">
+      <Link>Tables\FiMessageHandlerType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerTypeUpdate.sql">
+      <Link>StoredProcedures\FiMessageHandlerTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerTypeDelete.sql">
+      <Link>StoredProcedures\FiMessageHandlerTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerTypesGet.sql">
+      <Link>StoredProcedures\FiMessageHandlerTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiMessageReaderType.sql">
+      <Link>Tables\FiMessageReaderType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReaderTypeUpdate.sql">
+      <Link>StoredProcedures\FiMessageReaderTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReaderTypeDelete.sql">
+      <Link>StoredProcedures\FiMessageReaderTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReaderTypesGet.sql">
+      <Link>StoredProcedures\FiMessageReaderTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiSourceType.sql">
+      <Link>Tables\FiSourceType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourceTypeUpdate.sql">
+      <Link>StoredProcedures\FiSourceTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourceTypeDelete.sql">
+      <Link>StoredProcedures\FiSourceTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiSourceTypesGet.sql">
+      <Link>StoredProcedures\FiSourceTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiMessageReader.sql">
+      <Link>Tables\FiMessageReader.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReaderUpdate.sql">
+      <Link>StoredProcedures\FiMessageReaderUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReaderDelete.sql">
+      <Link>StoredProcedures\FiMessageReaderDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageReadersGet.sql">
+      <Link>StoredProcedures\FiMessageReadersGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiMessageHandler.sql">
+      <Link>Tables\FiMessageHandler.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerUpdate.sql">
+      <Link>StoredProcedures\FiMessageHandlerUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerDelete.sql">
+      <Link>StoredProcedures\FiMessageHandlerDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlersGet.sql">
+      <Link>StoredProcedures\FiMessageHandlersGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiMessageHandlerEnsure.sql">
+      <Link>StoredProcedures\FiMessageHandlerEnsure.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventDetailUpdate.sql">
+      <Link>StoredProcedures\FiEventDetailUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventDetailDelete.sql">
+      <Link>StoredProcedures\FiEventDetailDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventDetailsGet.sql">
+      <Link>StoredProcedures\FiEventDetailsGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiEventDetail.sql">
+      <Link>Tables\FiEventDetail.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FiEventType.sql">
+      <Link>Tables\FiEventType.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventTypeUpdate.sql">
+      <Link>StoredProcedures\FiEventTypeUpdate.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventTypeDelete.sql">
+      <Link>StoredProcedures\FiEventTypeDelete.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FiEventTypesGet.sql">
+      <Link>StoredProcedures\FiEventTypesGet.sql</Link>
+    </None>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Data.targets" />
+</Project>

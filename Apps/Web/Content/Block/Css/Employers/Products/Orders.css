@@ -1,0 +1,167 @@
+﻿#order-details .order,
+#order-compact-details .order {
+    font-size: 85%;
+}
+
+#order-details table.order,
+#order-compact-details table.order {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#order-details .order .header-quantity {
+    text-align: right;
+    padding-right: 7px;
+    width: 300px;
+}
+        
+#order-details .order .row-quantity {
+    text-align: right;
+}
+
+#order-details .order .row-quantity select {
+    border: 1px solid #8AC;
+    width: 4.5em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    height: 2em;
+    padding: 1px;
+    margin: -4px 0 -4px 0;
+}
+
+#order-details .order .order-row td,
+#order-compact-details .order .order-row td {
+    color: #003; 
+}
+    
+#order-details .order .header-price {
+    text-align: right;
+    padding-right: 7px;
+    width: 100px;
+}
+        
+#order-details .order .row-price,
+#order-compact-details .order .row-price {
+    width: 0;
+    white-space: nowrap;
+    text-align: right;
+    padding-left: 20px;
+}
+        
+#order-details .order .divider td,
+#order-compact-details .order .divider td {
+    border-bottom: 1px solid #D7D9DA;
+}
+        
+#order-details .order .discount_order-adjustment td {
+    font-weight: bold;
+    color: #4DA400; 
+}
+            
+#order-details .order .subtotal_order-row .row-title,
+#order-compact-details .order .subtotal_order-row .row-title,
+#order-details .order .order-adjustment .row-title,
+#order-compact-details .order .order-adjustment .row-title {
+    text-align: right;
+}
+
+#order-details .order .subtotal_order-row td,
+#order-compact-details .order .subtotal_order-row td,
+#order-details .order .last_order-adjustment td,
+#order-compact-details .order .last_order-adjustment td {
+    font-weight: bold;
+    color: #003; 
+}
+
+#order-details .order .last_order-adjustment .row-price,
+#order-compact-details .order .last_order-adjustment .row-price {
+    font-weight: bold;
+    color: #F00;
+}
+
+#order-compact-details .order {
+    margin-bottom: 10px;
+}
+#order-compact-details .order .order-row td {
+    padding-top: 0.75em;
+}
+#order-compact-details .order .order-row:first-child td,
+#order-compact-details .order .ie_firstlineitem td {
+    padding-top: 0;
+}
+#order-compact-details .order .divider td {
+    padding-bottom: 10px;
+}
+#order-compact-details .order .after-divider td {
+    padding-top: 10px;
+}
+#order-compact-details .order .discount_order-adjustment .row-title {
+    font-family: Tahoma, Verdana, Helvetica, sans-serif;
+}
+#order-compact-details .order .subtotal_order-row .row-title, 
+#order-compact-details .order .order-adjustment .row-title {
+    text-align: left;
+}
+
+#order-compact-details .payment-options {
+    padding-top: 14px;
+}
+
+.product ul.features {
+    margin: 0;
+    padding: 0;
+}
+
+.product li.feature {
+    padding-left: 20px;
+    background: url(../../../images/forms/lists/list-bullet-orange.png) 0 0.35em no-repeat;
+    margin-top: 0.66em;
+    list-style: none;
+}
+
+.product li.feature:first-child {
+    margin-top: 0;
+}
+
+.product .price {
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    bottom: 12px;
+}
+
+.product .price dl.price-total
+{
+    width: 90px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    padding-right: 25px;
+    margin-top: -0.6em;
+    right: 0;
+}
+.product .price dl.price-total dt {
+    color: #369;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.product .price dl.price-total dd {
+    font-weight: bold;
+    margin: 0;
+    padding:0;
+}
+.product .price dl.price-total dd .plus-gst {
+    font-weight: normal;
+    font-size: 80%;
+    color: #666;
+}
+
+.product .large-checkbox {
+    position: absolute;
+    left: 60px;
+    bottom: 45px;
+}
+

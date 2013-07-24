@@ -1,0 +1,39 @@
+<%@ Import Namespace="LinkMe.Framework.Utility.Urls"%>
+<%@ Import namespace="LinkMe.Apps.Asp"%>
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="HomeMasterPage.master.cs" Inherits="LinkMe.Web.Master.HomeMasterPage" MasterPageFile="~/master/StructureMasterPage.master" %>
+
+<asp:Content ContentPlaceHolderID="PromptProfileContent" runat="server">
+    <asp:ContentPlaceHolder ID="PromptProfileContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="FormContent" runat="server">
+
+    <div class="home-left-half">
+        <asp:ContentPlaceHolder ID="LeftContent" runat="server" />
+    </div>
+    
+    <div class="home-right-half">
+        <asp:ContentPlaceHolder ID="RightContent" runat="server" />
+    </div>
+
+    <div class="clearer"></div>
+    
+    <asp:ContentPlaceHolder ID="BottomContent" runat="server" />
+
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="Footer" runat="server">
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JavaScript" runat="server">
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="BodyTrackers" runat="server">
+    <asp:ContentPlaceHolder ID="BodyTrackers" runat="server" />
+</asp:Content>

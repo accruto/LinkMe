@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="ContactsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Users.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EmployerMemberAttachment" Member="EmployerMemberAttachmentEntities" AccessModifier="Internal">
+    <Type Name="EmployerMemberAttachmentEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="uploadedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="fileReferenceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="EmployerMemberAttachmentEntity_EmployerMemberMessageAttachmentEntity" Member="EmployerMemberMessageAttachmentEntities" ThisKey="id" OtherKey="attachmentId" Type="EmployerMemberMessageAttachmentEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployerMemberMessageAttachment" Member="EmployerMemberMessageAttachmentEntities" AccessModifier="Internal">
+    <Type Name="EmployerMemberMessageAttachmentEntity" AccessModifier="Internal">
+      <Column Name="messageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="attachmentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="EmployerMemberAttachmentEntity_EmployerMemberMessageAttachmentEntity" Member="EmployerMemberAttachmentEntity" ThisKey="attachmentId" OtherKey="id" Type="EmployerMemberAttachmentEntity" IsForeignKey="true" />
+      <Association Name="EmployerMemberMessageEntity_EmployerMemberMessageAttachmentEntity" Member="EmployerMemberMessageEntity" ThisKey="messageId" OtherKey="id" Type="EmployerMemberMessageEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployerMemberMessage" Member="EmployerMemberMessageEntities" AccessModifier="Internal">
+    <Type Name="EmployerMemberMessageEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="memberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="contactId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fromEmailAddress" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sendcopyToEmployer" Member="sendCopyToEmployer" Storage="_sendcopyToEmployer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="body" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="messageType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="representativeId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="EmployerMemberMessageEntity_EmployerMemberMessageAttachmentEntity" Member="EmployerMemberMessageAttachmentEntities" ThisKey="id" OtherKey="messageId" Type="EmployerMemberMessageAttachmentEntity" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

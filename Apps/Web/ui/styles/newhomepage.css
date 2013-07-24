@@ -1,0 +1,107 @@
+body, td {
+	margin: 0px;
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #474747;
+}
+
+a:link {color: #006699; text-decoration: underline;}
+a:visited {color: #006699; text-decoration: underline;}
+a:hover {color: #E76800; text-decoration: underline;}
+
+.rightpadding{margin-right:12}
+.rightaligned{text-align:right}
+.leftaligned{text-align:left}
+
+.nav {
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #474747;
+	font-weight: bold;
+}
+a.nav:link {color: #E76800; text-decoration: none;}
+a.nav:visited {color: #E76800; text-decoration: none;}
+a.nav:hover {color: #006699; text-decoration: none;}
+
+.footer {
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #E76800;
+	font-weight: normal;
+}
+a.footer:link {color:#474747; text-decoration: none;}
+a.footer:visited {color:#474747; text-decoration: none;}
+a.footer:hover {color:#E76800; text-decoration: none;}
+
+.footerbase {
+	font-family: tahoma, verdana, arial;
+	font-size: 10px;
+	color: #ccc;
+	font-weight: normal;
+}
+a.footerbase:link {color: #ccc; text-decoration: none;}
+a.footerbase:visited {color: #ccc; text-decoration: none;}
+a.footerbase:hover {color: #999; text-decoration: none;}
+
+.login {
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #E76800;
+	font-weight: normal;
+	width: 151px;
+}
+
+.signinforgotten {
+	font-family: tahoma, verdana, arial;
+	font-size: 9px;
+	color: #E76800;
+	font-weight: normal;
+}
+
+.signinheading {
+	font-family: arial, tahoma, verdana;
+	font-size: 16px;
+	color: #E76800;
+	font-weight: bold;
+	margin-top:10px
+}
+
+.modnetworkers {
+	font-family: tahoma, verdana, arial;
+	font-size: 11px;
+	color: #ffffff;
+	font-weight: normal;
+}
+
+.loginbggradient
+	{
+	BACKGROUND-IMAGE:url(img/bgsignin.gif)
+	}
+.loginbgblank 
+	{
+	BACKGROUND-IMAGE:url(img/blank.gif)
+	}
+div.sensis 
+	{
+	width:770px;
+	COLOR:black; 
+	TEXT-DECORATION:none;
+	BORDER-TOP-WIDTH: 1px; 
+	FONT-WEIGHT: bold; 
+	BORDER-LEFT-WIDTH: 1px; 
+	FONT-SIZE: 10px; 
+	BORDER-LEFT-COLOR: black; 
+	BORDER-BOTTOM-WIDTH: 1px; 
+	BORDER-BOTTOM-COLOR: black; 
+	PADDING-BOTTOM: 6px; 
+	BORDER-TOP-COLOR: black; 
+	PADDING-TOP: 6px; 
+	FONT-FAMILY: Verdana; 
+	BACKGROUND-COLOR: #eee; 
+	TEXT-ALIGN: center; 
+	BORDER-RIGHT-WIDTH: 1px; 
+	BORDER-RIGHT-COLOR: black
+	}
+div.sensis a:link {color:#777; text-decoration: none; display:inline}
+div.sensis a:visited {color:#777; text-decoration: none; display:inline;}
+div.sensis a:hover {color:#777; text-decoration: underline; display:inline;}

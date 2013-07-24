@@ -1,0 +1,7 @@
+alter_ResourceQuestion.sql
+data_ResourceArticle_AustralianResumeWriting.sql
+data_ResourceFeaturedArticle.sql
+data_ResourceArticle.sql
+alter_SavedJobSearchAlert.sql
+alter_TinyUrlMapping.sql
+create_IsResumeEmpty.sql

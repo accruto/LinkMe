@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="JobAd.xsd" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- CloseJobAds request version 1.0 -->
+  <xs:element name="CloseJobAdsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="JobAds">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobAd" type="tns:JobAdReference" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="jobPosterUserId" use="required" type="tns:UserId" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:CloseJobAdsRequestVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="CloseJobAdsRequestVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

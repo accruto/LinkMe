@@ -1,0 +1,31 @@
+#JobAd #JobDescription
+{
+	background: #cc9;
+	padding-left: 48px;
+	border: 1px solid #000;
+}
+
+#JobAd #JobDescription #Ad
+{
+	background: #fff url('Fingerprint Consulting_images/fingerprint_logo.gif') no-repeat center top;
+	padding-top: 130px;
+}
+
+#JobAd #JobDescription H1
+{
+	text-align: center;
+	font-family: Arial,helvetica,sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	color: #000;
+}
+
+#JobAd, #JobAd #InfoTop, #JobAd #Finish, #JobAd #Finish #InfoDownRight
+{
+	background: transparent;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: #fff;
+}

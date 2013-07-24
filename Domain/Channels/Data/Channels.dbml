@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="ChannelsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.App" Member="AppEntities" AccessModifier="Internal">
+    <Type Name="AppEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="AppEntity_ChannelAppEntity" Member="ChannelAppEntities" ThisKey="id" OtherKey="appId" Type="ChannelAppEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Channel" Member="ChannelEntities" AccessModifier="Internal">
+    <Type Name="ChannelEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ChannelEntity_ChannelAppEntity" Member="ChannelAppEntities" ThisKey="id" OtherKey="channelId" Type="ChannelAppEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChannelApp" Member="ChannelAppEntities" AccessModifier="Internal">
+    <Type Name="ChannelAppEntity" AccessModifier="Internal">
+      <Column Name="channelId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="appId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="AppEntity_ChannelAppEntity" Member="AppEntity" ThisKey="appId" OtherKey="id" Type="AppEntity" IsForeignKey="true" />
+      <Association Name="ChannelEntity_ChannelAppEntity" Member="ChannelEntity" ThisKey="channelId" OtherKey="id" Type="ChannelEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

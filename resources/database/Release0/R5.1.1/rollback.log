@@ -1,0 +1,27 @@
+Database name: 'linkme'
+Database user id: 'linkme_owner'
+Database password: 'linkme'
+Processing script: 'rollback_networker_profile_resume_xml.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_networker_profile_resume_xml.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 1> 
++++ End Command Output +++
+Processing script: 'rollback_new_networker_resume_update_errors_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_new_networker_resume_update_errors_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 1> 
++++ End Command Output +++
+Processing script: 'rollback_new_networker_resume_update_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_new_networker_resume_update_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 1> 
++++ End Command Output +++
+Processing script: 'rollback_alter_networker_profile_resume_id.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i rollback_alter_networker_profile_resume_id.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 1> 
++++ End Command Output +++

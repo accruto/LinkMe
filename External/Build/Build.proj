@@ -1,0 +1,63 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <PropertyGroup>
+    <AsmVersion>1.0.0.0</AsmVersion>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <ToolsDirectory>$(SourceRootDirectory)Tools\</ToolsDirectory>
+    <TlbimpPath>$(ToolsDirectory)tlbimp.exe</TlbimpPath>
+    <RegasmPath>$(ToolsDirectory)regasm.exe</RegasmPath>
+    <InteropAssembliesDirectory>$(SourceRootDirectory)InteropAssemblies\</InteropAssembliesDirectory>
+    <KeyFilePath>$(SourceRootDirectory)..\LinkMe.snk</KeyFilePath>
+    <GacutilPath>gacutil.exe</GacutilPath>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemPackage.proj" />
+  
+  <Target Name="Clean" />
+
+  <Target Name="Build">
+    <CallTarget Targets="Prepare; CreateInterops;" />
+  </Target>
+
+  <Target Name="CreateInterops">
+
+    <!-- Msado27 -->
+
+    <Message Text="$(InteropAssembliesDirectory)Msado27\Msado27.tlb" />
+    <Exec Command="&quot;$(TlbimpPath)&quot; &quot;$(InteropAssembliesDirectory)Msado27\Msado27.tlb&quot; /out:&quot;$(InteropAssembliesDirectory)Msado27\LinkMe.Interop.Msado27.dll&quot; /namespace:LinkMe.Interop.Adodb /asmversion:$(AsmVersion) /keyfile:&quot;$(KeyFilePath)&quot; /silent" />
+    <Exec Command="&quot;$(RegasmPath)&quot; &quot;$(InteropAssembliesDirectory)Msado27\LinkMe.Interop.Msado27.dll&quot;" />
+    <Exec Command="&quot;$(GacutilPath)&quot; /nologo /if &quot;$(InteropAssembliesDirectory)Msado27\LinkMe.Interop.Msado27.dll&quot;" />
+
+    <!-- Oledb32 -->
+
+    <Message Text="$(InteropAssembliesDirectory)Oledb32\Oledb32.dll" />
+    <Exec Command="&quot;$(TlbimpPath)&quot; &quot;$(InteropAssembliesDirectory)Oledb32\Oledb32.dll&quot; /out:&quot;$(InteropAssembliesDirectory)Oledb32\LinkMe.Interop.Oledb32.dll&quot; /namespace:LinkMe.Interop.Msdasc /asmversion:$(AsmVersion) /keyfile:&quot;$(KeyFilePath)&quot; /silent" />
+    <Exec Command="&quot;$(RegasmPath)&quot; &quot;$(InteropAssembliesDirectory)Oledb32\LinkMe.Interop.Oledb32.dll&quot;" />
+    <Exec Command="&quot;$(GacutilPath)&quot; /nologo /if &quot;$(InteropAssembliesDirectory)Oledb32\LinkMe.Interop.Oledb32.dll&quot;" />
+
+    <!-- Msscript -->
+
+    <Message Text="$(InteropAssembliesDirectory)Msscript\Msscript.ocx" />
+    <Exec Command="&quot;$(TlbimpPath)&quot; &quot;$(InteropAssembliesDirectory)Msscript\Msscript.ocx&quot; /out:&quot;$(InteropAssembliesDirectory)Msscript\LinkMe.Interop.Msscript.dll&quot; /namespace:LinkMe.Interop.Msscriptcontrol /asmversion:$(AsmVersion) /keyfile:&quot;$(KeyFilePath)&quot; /silent" />
+    <Exec Command="&quot;$(RegasmPath)&quot; &quot;$(InteropAssembliesDirectory)Msscript\LinkMe.Interop.Msscript.dll&quot;" />
+    <Exec Command="&quot;$(GacutilPath)&quot; /nologo /if &quot;$(InteropAssembliesDirectory)Msscript\LinkMe.Interop.Msscript.dll&quot;" />
+
+    <!-- Msado15 -->
+
+    <Message Text="$(InteropAssembliesDirectory)Msado15\Msado15.dll" />
+    <Exec Command="&quot;$(TlbimpPath)&quot; &quot;$(InteropAssembliesDirectory)Msado15\Msado15.dll&quot; /out:&quot;$(InteropAssembliesDirectory)Msado15\LinkMe.Interop.Msado15.dll&quot; /namespace:LinkMe.Interop.Adodb /asmversion:$(AsmVersion) /keyfile:&quot;$(KeyFilePath)&quot;" />
+    <Exec Command="&quot;$(RegasmPath)&quot; &quot;$(InteropAssembliesDirectory)Msado15\LinkMe.Interop.Msado15.dll&quot;" />
+    <Exec Command="&quot;$(GacutilPath)&quot; /nologo /if &quot;$(InteropAssembliesDirectory)Msado15\LinkMe.Interop.Msado15.dll&quot;" />
+    
+    <!-- Cdosys -->
+
+    <Message Text="$(InteropAssembliesDirectory)Cdosys\Cdosys.dll" />
+    <Exec Command="&quot;$(TlbimpPath)&quot; &quot;$(InteropAssembliesDirectory)Cdosys\Cdosys.dll&quot; /out:&quot;$(InteropAssembliesDirectory)Cdosys\LinkMe.Interop.Cdosys.dll&quot; /namespace:LinkMe.Interop.Cdo /asmversion:$(AsmVersion) /keyfile:&quot;$(KeyFilePath)&quot; /tlbreference:&quot;$(InteropAssembliesDirectory)Msado15\Msado15.dll&quot; /reference:&quot;$(InteropAssembliesDirectory)Msado15\LinkMe.Interop.Msado15.dll&quot; /strictref /silent" />
+    <Exec Command="&quot;$(RegasmPath)&quot; &quot;$(InteropAssembliesDirectory)Cdosys\LinkMe.Interop.Cdosys.dll&quot;" />
+    <Exec Command="&quot;$(GacutilPath)&quot; /nologo /if &quot;$(InteropAssembliesDirectory)Cdosys\LinkMe.Interop.Cdosys.dll&quot;" />
+
+  </Target>
+  
+</Project>

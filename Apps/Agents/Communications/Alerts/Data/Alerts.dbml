@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="AlertsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Apps.Agents.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Candidate" Member="CandidateEntities" AccessModifier="Internal">
+    <Type Name="CandidateEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="desiredJobTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredJobTypes" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="desiredSalaryLower" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredSalaryUpper" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="desiredSalaryRateType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="desiredJobSavedSearchId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="relocationPreference" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="diaryId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedResumeSearch" Member="SavedResumeSearchEntities" AccessModifier="Internal">
+    <Type Name="SavedResumeSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SavedResumeSearchEntity_SavedResumeSearchAlertEntity" Member="SavedResumeSearchAlertEntities" ThisKey="id" OtherKey="savedResumeSearchId" Type="SavedResumeSearchAlertEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedResumeSearchAlert" Member="SavedResumeSearchAlertEntities" AccessModifier="Internal">
+    <Type Name="SavedResumeSearchAlertEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sendUpdatedResults" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastRunTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="alertType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="savedResumeSearchId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="SavedResumeSearchAlertEntity_SavedSearchAlertResultEntity" Member="SavedSearchAlertResultEntities" ThisKey="id" OtherKey="savedSearchAlertId" Type="SavedSearchAlertResultEntity" />
+      <Association Name="SavedResumeSearchEntity_SavedResumeSearchAlertEntity" Member="SavedResumeSearchEntity" ThisKey="savedResumeSearchId" OtherKey="id" Type="SavedResumeSearchEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedSearchAlertResult" Member="SavedSearchAlertResultEntities" AccessModifier="Internal">
+    <Type Name="SavedSearchAlertResultEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="savedSearchAlertId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="searchResultId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="viewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SavedResumeSearchAlertEntity_SavedSearchAlertResultEntity" Member="SavedResumeSearchAlertEntity" ThisKey="savedSearchAlertId" OtherKey="id" Type="SavedResumeSearchAlertEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedJobSearch" Member="SavedJobSearchEntities" AccessModifier="Internal">
+    <Type Name="SavedJobSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="alertId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="displayText" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SavedJobSearchAlert_SavedJobSearchEntity" Member="SavedJobSearchAlertEntity" ThisKey="alertId" OtherKey="id" Type="SavedJobSearchAlertEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedJobSearchAlert" Member="SavedJobSearchAlertEntities" AccessModifier="Internal">
+    <Type Name="SavedJobSearchAlertEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastRunTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="searchCreated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SavedJobSearchAlert_SavedJobSearchEntity" Member="SavedJobSearchEntities" ThisKey="id" OtherKey="alertId" Type="SavedJobSearchEntity" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

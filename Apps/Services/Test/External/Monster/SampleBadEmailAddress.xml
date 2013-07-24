@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Body>
+      <QueriesResponse xmlns="http://schemas.monster.com/Monster">
+        <Jobs>
+          <Job allowExpiredUpdates="false" inventoryType="transactional" enforceUniqueness="true" jobComplete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <RecruiterReference userId="190121648">
+              <UserName>xc1man_beamountx001</UserName>
+              <PersonName>
+                <GivenName>Carolyne</GivenName>
+                <FamilyName>Burns</FamilyName>
+              </PersonName>
+              <EmailAddress>carolyne.burns@expr3ss.com</EmailAddress>
+            </RecruiterReference>
+            <CompanyReference companyId="23253199">
+              <CompanyXCode>xc1man_beamountx</CompanyXCode>
+              <CompanyName>Beaumont Tiles</CompanyName>
+            </CompanyReference>
+            <FolderReference folderId="129095321">
+              <FolderName>DYNAMIC SALES CONSULTANTS - Full-Time (Lilydale)</FolderName>
+            </FolderReference>
+            <Channel monsterId="168" />
+            <JobInformation>
+              <JobTitle>DYNAMIC SALES CONSULTANTS - Full-Time</JobTitle>
+              <JobShortDescription />
+              <JobType monsterId="1">Employee</JobType>
+              <JobStatus monsterId="4">Fulltime</JobStatus>
+              <IsHandinamic>false</IsHandinamic>
+              <ProDiversity>false</ProDiversity>
+              <Replacement>false</Replacement>
+              <Salary>
+                <Currency monsterId="4">AUD</Currency>
+                <CompensationType monsterId="1">Per Year</CompensationType>
+                <SalaryDescription>Attractive pay rate for the right person</SalaryDescription>
+              </Salary>
+              <Contact hideAll="false" hideAddress="false" hideStreetAddress="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideCompanyName="false" hideEmailAddress="true" hideFax="true" hideName="true" hidePhone="true" hideStreetAddress2="true">
+                <CompanyName>Beaumont Tiles</CompanyName>
+                <Address />
+                <E-mail>https://www.expr3ss.com/?cc=beaumont&amp;j=219&amp;s=2&amp;ppt=92fac240</E-mail>
+              </Contact>
+              <PhysicalAddress>
+                <StreetAddress />
+                <StreetAddress2 />
+                <City>Lilydale</City>
+                <State>VIC</State>
+                <CountryCode>AU</CountryCode>
+                <PostalCode>3140</PostalCode>
+              </PhysicalAddress>
+              <DisableApplyOnline>true</DisableApplyOnline>
+              <HideCompanyInfo>false</HideCompanyInfo>
+              <DisableFilters>false</DisableFilters>
+              <JobBody>&lt;p style="" align="center"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Life &amp;amp; Sales Experience an Advantage&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;ul&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Join the tile industry leader that sets the standards&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Benefit from in-house training to grow your skills&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Opportunities to develop a career within the business&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Be a vital part of a dynamic, supportive &amp;amp; successful team&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Share our vision of Customer Service excellence&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Full Time Position &lt;/b&gt;&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Take advantage of a diverse role&lt;/b&gt;&lt;/font&gt;&lt;/li&gt; &lt;/ul&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;&lt;br&gt; &lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;This is an exciting opportunity for a results-oriented person with good people and sales skills to become a vital part of Australia's leading tile group. A group recognised as setting &lt;i&gt;new&lt;/i&gt; standards in the tile industry.&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt; &lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Beaumont Tiles is Australia's largest tile retailer, wholesaler and importer. It has 80 branches, plus commercial distributors and wholesale warehouses throughout Australia. Beaumont Tiles specialises in tiles - tiles from around the world for homes, architectural designs, commercial applications - tiles for those looking to set new standards.&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt; &lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;Beaumont&lt;/b&gt;&lt;b&gt; Tiles is an organisation that understands the importance of people and quality within its business and provides a unique opportunity for the right person to work within its modern display showroom environment and versatile team.&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt; &lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;We are seeking a person who desires to be part of a team of enthusiastic sales consultants, where their talents will be recognised and nurtured.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt; &lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;In order to be successful you will need to be an enthusiastic, reliable, flexible and pro-active person who enjoys close customer service and sales in a collaborative and supportive team environment.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt; &lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;You will need to have a confident approach to customers, both in person in our showroom and on the telephone. In this diverse role you will be involved in sales, marketing, customer service, stock control and ordering, general accounting (including invoicing and banking) and maintaining the overall look of the showroom.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt; &lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;The successful applicant will have the following attributes:&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;ul style="text-align: justify;"&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;A great personality&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;Excellence in customer service&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;Good administration knowledge and ability&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;Displays excellent interpersonal and communication skills&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;Computer literacy&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;Previous experience in tiles is desirable but not essential&lt;/font&gt;&lt;/li&gt;     &lt;li style="font-size: small;"&gt;&lt;font style="font-size: 14px;"&gt;A willingness to work flexible hours, including Saturdays&lt;/font&gt;&lt;/li&gt; &lt;/ul&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;br&gt; &lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;Ideally you will have worked in a similar sales, customer service or retail sales environment.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt; &lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt;We have an attractive hourly rate/salary for the right person.&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;&lt;b&gt; &lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;Please include a &lt;u&gt;covering letter&lt;/u&gt; as the first page of your resume.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt; &lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;p style="" align="justify"&gt;&lt;font style="font-size: 14px;"&gt;If you are a highly motivated, energetic person who is flexible, enjoys customer service and sales with a confident and professional manner wanting a diverse role within a supportive team environment, then we would like to hear from you.&lt;/font&gt;&lt;/p&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;&lt;center&gt;&lt;font style="font-size: 14px;"&gt;&lt;small&gt;&lt;b&gt;&lt;br&gt; No Recruitment Agencies please&lt;/b&gt;&lt;/small&gt;&lt;/font&gt;&lt;/center&gt;&lt;font style="font-size: 14px;"&gt; &lt;/font&gt;</JobBody>
+              <YearsOfExperience monsterId="0" />
+              <JobSourceId monsterId="6" />
+              <CustomApplyOnlineURL>https://www.expr3ss.com/?cc=beaumont&amp;j=223&amp;s=2&amp;ppt=8c20feb6</CustomApplyOnlineURL>
+            </JobInformation>
+            <JobPostings>
+              <JobPosting jobPostingState="active" bold="true" desiredDuration="30" postingId="118203455">
+                <InventoryPreference>
+                  <Autorefresh desired="true">
+                    <Frequency>7</Frequency>
+                  </Autorefresh>
+                </InventoryPreference>
+                <RecruiterReference userId="190121648">
+                  <UserName>xc1man_beamountx001</UserName>
+                  <PersonName>
+                    <GivenName>Carolyne</GivenName>
+                    <FamilyName>Burns</FamilyName>
+                  </PersonName>
+                  <EmailAddress>carolyne.burns@expr3ss.com</EmailAddress>
+                </RecruiterReference>
+                <Location locationId="137">
+                  <City>Melbourne</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                </Location>
+                <Locations>
+                  <Location locationId="137">
+                    <City>Melbourne</City>
+                    <State>VIC</State>
+                    <CountryCode>AU</CountryCode>
+                  </Location>
+                </Locations>
+                <JobCategory monsterId="15428">Retail</JobCategory>
+                <JobCategories>
+                  <JobCategory monsterId="15428">Retail</JobCategory>
+                </JobCategories>
+                <JobOccupations>
+                  <JobOccupation categoryId="15428" monsterId="11950">
+                    <Name>Retail/Counter Sales and Cashier</Name>
+                  </JobOccupation>
+                  <JobOccupation categoryId="15428" monsterId="15508">
+                    <Name>General/Other: Retail</Name>
+                  </JobOccupation>
+                </JobOccupations>
+                <JobCity>Lilydale</JobCity>
+                <BoardName monsterId="1">Monster</BoardName>
+                <JobPostingDates>
+                  <JobPostDate>2013-01-15T23:02:22.5300000-05:00</JobPostDate>
+                  <JobActiveDate>2013-01-16T04:12:41.4370000-05:00</JobActiveDate>
+                  <JobExpireDate>2013-02-14T23:02:23.3270000-05:00</JobExpireDate>
+                  <JobModifiedDate>2013-01-16T04:13:00.0000000-05:00</JobModifiedDate>
+                </JobPostingDates>
+                <PostingStats increment="false">
+                  <Views>81</Views>
+                  <SeekerApps>0</SeekerApps>
+                  <EmailApps>0</EmailApps>
+                  <TotalClicks>0</TotalClicks>
+                </PostingStats>
+                <ApplyOnlineURL>https://www.expr3ss.com/?cc=beaumont&amp;j=223&amp;s=2&amp;ppt=8c20feb6</ApplyOnlineURL>
+                <PhysicalAddress>
+                  <StreetAddress />
+                  <StreetAddress2 />
+                  <City>Lilydale</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                  <PostalCode>3140</PostalCode>
+                </PhysicalAddress>
+                <DisplayTemplate monsterId="12438" />
+                <Industries>
+                  <Industry>
+                    <IndustryName monsterId="17">Retail</IndustryName>
+                  </Industry>
+                  <Industry>
+                    <IndustryName monsterId="30">Architectural and Design Services</IndustryName>
+                  </Industry>
+                  <Industry>
+                    <IndustryName monsterId="78">Construction - Residential &amp; Commercial/Office</IndustryName>
+                  </Industry>
+                </Industries>
+              </JobPosting>
+            </JobPostings>
+          </Job>
+        </Jobs>
+      </QueriesResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

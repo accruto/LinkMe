@@ -1,0 +1,1 @@
+run_scripts.vbs /l:install.log /f:install_viewstate_cleanup_job.sql

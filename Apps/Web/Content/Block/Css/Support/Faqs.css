@@ -1,0 +1,431 @@
+#body-container, #subheader, #main-body {
+	width : 972px;
+}
+#main-body div, #main-body span, #main-body label, #main-body li, #main-body p {
+    float: left;
+	font : 12px Arial;
+	color : #333333;
+}
+#main-body a {
+	float : left;
+	cursor : pointer;
+	color : #1155EE;
+}
+#subheader .header {
+	font : Bold 24px Arial;
+	color : #333333;
+}
+.breadcrumbs .keywords .red {
+	color : red;
+}
+
+/* Faqs */
+
+.faqs #looking {
+	font : Bold 22px Arial;
+	color : #646F75;
+	margin-bottom : 10px;
+}
+.faqs .categories .topbar {
+	background-image : url("../../images/support/faqs/categories-top-bar.png");
+	width : 943px;
+	height : 4px;
+}
+.faqs .categories .bg {
+	background-image : url("../../images/support/faqs/categories-bg.png");
+	background-repeat : repeat-y;
+	width : 943px;
+}
+.faqs .categories .bg > div {
+	width : 314px;
+}
+.faqs .categories .icon {
+	width : 128px;
+	height : 90px;
+	margin : 18px 93px 16px 93px;
+}
+.faqs .categories .candidates .icon {
+	background-image : url("../../images/support/faqs/icons/for-candidates.png");
+}
+.faqs .categories .employers .icon {
+	background-image : url("../../images/support/faqs/icons/for-employers.png");
+}
+.faqs .categories .onlinesecurity .icon {
+	background-image : url("../../images/support/faqs/icons/online-security.png");
+}
+.faqs .categories .button {
+	margin : 0px 61px 17px 60px;
+}
+.faqs .categories li {
+	width : 210px;
+	margin-left : 52px;
+}
+.faqs .categories .bottombar {
+	background-image : url("../../images/support/faqs/categories-bottom-bar.png");
+	width : 943px;
+	height : 5px;
+}
+.faqs #reportissues {
+	float : right;
+	margin : 5px 30px 10px 800px;
+}
+.faqs #reportissues span {
+	margin-top : 5px;
+}
+.faqs #reportissues .icon {
+	background-image : url("../../images/support/faqs/icons/issue.png");
+	width : 26px;
+	height : 27px;
+	margin-left : 5px;
+}
+.faqs #top5c,
+.faqs #top5e {
+	width : 471px;
+	margin-bottom : 50px;
+}
+.faqs #top5c > .title,
+.faqs #top5e > .title {
+	font : Bold 18px Arial;
+	color : #646F75;
+	margin-bottom : 10px;
+}
+.faqs #top5c .faqitem,
+.faqs #top5e .faqitem {
+	width : 450px;
+	height : 49px;
+	border-bottom : 1px solid #D9D9D9;
+}
+.faqs #top5c .faqitem.item4,
+.faqs #top5e .faqitem.item4 {
+	border : none;
+}
+.faqs #top5c .faqitem .title,
+.faqs #top5e .faqitem .title {
+	font : Bold 14px Arial;
+	width : 424px;
+	margin-top : 8px;
+	color : #333333;
+	text-decoration : none;
+}
+.faqs #top5c .faqitem .icon,
+.faqs #top5e .faqitem .icon {
+	background-image : url("../../images/support/faqs/icons/note.png");
+	width : 12px;
+	height : 15px;
+	margin : 10px 14px 0px 0px;
+}
+
+/* SearchBar */
+
+.faqs #searchbar .textbox_field .control .bg .icon {
+	background-image : url("../../images/support/faqs/icons/search.png");
+	width : 13px;
+	height : 12px;
+	margin : 14px 7px 0px 6px;
+}
+.faqs #searchbar .button.search {
+	margin : 2px 0px 0px 13px;
+}
+.faqs #searchbar {
+	margin-bottom : 7px;
+}
+.faqs #searchbar .dropdown_field {
+	width : 269px;
+	margin : 3px 9px 0px 0px;
+}
+.faqs #searchbar .dropdown_field .control {
+	width : 260px;
+}
+body.IE7 .faqs #searchbar .dropdown_field .control {
+	margin-top : -16px;
+}
+.faqs #searchbar .dropdown_field .bg {
+	width : 250px;
+}
+.faqs #searchbar .dropdown_field .bg .icon,
+.faqs #searchbar .dropdown_field .dropdown-item .icon {
+	background-image : url("../../images/support/faqs/icons/categories.png");
+	width : 13px;
+	height : 13px;
+}
+.faqs #searchbar .dropdown_field .bg .icon {
+	margin : 10px 5px 0px 5px;
+}
+.faqs #searchbar .dropdown_field .dropdown-item .icon {
+	margin-right : 5px;
+}
+/* Employers */
+.faqs #searchbar .dropdown_field .bg .icon.employers,
+.faqs #searchbar .dropdown_field .dropdown-item.employers .icon {
+	background-position : 0px -13px;
+}
+.faqs #searchbar .dropdown_field .dropdown-item.employers:hover .icon {
+	background-position : -13px -13px;
+}
+/* Candidates */
+.faqs #searchbar .dropdown_field .bg .icon.candidates,
+.faqs #searchbar .dropdown_field .dropdown-item.candidates .icon {
+	background-position : 0px 0px;
+}
+.faqs #searchbar .dropdown_field .dropdown-item.candidates:hover .icon {
+	background-position : -13px 0px;
+}
+/* Online Security */
+.faqs #searchbar .dropdown_field .bg .icon.online-security,
+.faqs #searchbar .dropdown_field .dropdown-item.online-security .icon  {
+	background-position : 0px -26px;
+}
+.faqs #searchbar .dropdown_field .dropdown-item.online-security:hover .icon {
+	background-position : -13px -26px;
+}
+.faqs #searchbar .textbox_field {
+	width : 536px;
+}
+.faqs #searchbar .textbox_field .control .bg {
+	width : 522px;
+}
+body.IE7 .faqs #searchbar .textbox_field .control {
+	margin-left : -13px;
+}
+.faqs #searchbar #Keywords {
+	width : 494px;
+}
+body.IE10 .faqs #searchbar #Keywords,
+body.IE9 .faqs #searchbar #Keywords,
+body.IE8 .faqs #searchbar #Keywords,
+body.IE7 .faqs #searchbar #Keywords {
+	width : 493px;
+}
+
+/* LeftBar */
+
+.faqs #leftbar {
+	width : 260px;
+}
+.faqs #leftbar .title {
+	background-image : url("../../images/support/faqs/leftbar-title-bg.png");
+	width : 248px;
+	height : 32px;
+	padding : 17px 0px 0px 12px;
+}
+.faqs #leftbar .subcategory {
+	background-image : url("../../images/support/faqs/subcategory-bg.png");
+	width : 266px;
+	height : 33px;
+	padding : 20px 0px 0px 12px;
+	text-decoration : none;
+	font-weight : bold;
+	color : #333333;
+}
+.faqs #leftbar .subcategory:hover {
+	background-position : 0px -53px;
+}
+.faqs #leftbar .subcategory.current,
+.faqs #leftbar .subcategory.current:hover {
+	background-position : 0px -106px;
+	cursor : default;
+}
+.faqs #leftbar .bottombar {
+	background-image : url("../../images/support/faqs/leftbar-bottom-bar.png");
+	width : 260px;
+	height : 5px;
+}
+.faqs #leftbar .report {
+	background-image : url("../../images/support/faqs/leftbar-report-bg.png");
+	width : 246px;
+	height : 30px;
+	margin-top : 10px;
+	padding : 16px 0px 0px 14px;
+}
+
+/* Results */
+
+.faqs #results {
+	width : 661px;
+	margin-left : 20px;
+}
+.faqs #results > .topbar {
+	background-image : url("../../images/support/faqs/main-top-bar.png");
+	width : 661px;
+	height : 5px;
+}
+.faqs #results > .bg {
+	background-image : url("../../images/support/faqs/main-bg.png");
+	width : 641px;
+	background-repeat : repeat-y;
+	padding : 15px 0px 15px 20px;
+}
+.faqs #results > .bottombar {
+	background-image : url("../../images/support/faqs/main-bottom-bar.png");
+	width : 661px;
+	height : 5px;
+}
+.faqs #results .subcategory-faqlist .title,
+.faqs #results .subcategory-faqlist .faqitem,
+.faqs #results .subcategory-faqlist .bottombar,
+.faqs #results .faq .titlebar,
+.faqs #results .faq .bottombar,
+.faqs #results .search-faqlist > .title,
+.faqs #results .search-faqlist .bottombar {
+	background-image : url("../../images/support/faqs/faq-list-bg.png");
+}
+.faqs #results .subcategory-faqlist .title,
+.faqs #results .search-faqlist > .title {
+	height : 21px;
+	width : 609px;
+	font-weight : bold;
+	padding : 8px 0px 0px 11px;
+}
+.faqs #results .subcategory-faqlist .faqitem {
+	width : 571px;
+	background-position : 0px -29px;
+	font : Bold 14px Arial;
+	color : #333333;
+	text-decoration : none;
+	padding : 19px 10px 0px 39px;
+}
+.faqs #results .subcategory-faqlist .faqitem:hover {
+	background-position : 0px -81px;
+}
+.faqs #results .subcategory-faqlist .bottombar,
+.faqs #results .faq .bottombar,
+.faqs #results .search-faqlist .bottombar {
+	height : 5px;
+	width : 620px;
+	background-position : 0px -184px;
+}
+.faqs #results .faq .titlebar {
+	height : 22px;
+	width : 609px;
+	padding : 8px 0px 0px 11px;
+	background-position : 0px 0px;
+}
+.faqs #results .faq .titlebar.twolines {
+	height : 37px;
+	background-position : 0px -189px;
+}
+.faqs #results .faq .titlebar .title {
+	font-weight : bold;
+	width : 540px;
+	margin-right : 10px;
+}
+.faqs #results .faq .titlebar .back {
+	background-image : url("../../images/support/faqs/icons/back.png");
+	width : 26px;
+	height : 14px;
+	padding-left : 20px;
+	line-height : 11px;
+}
+.faqs #results .faq .content,
+.faqs #results .faq .feedback,
+.faqs #results .search-faqlist .noresult {
+	background-image : url("../../images/support/faqs/faq-bg.png");
+	width : 598px;
+	background-repeat : repeat-y;
+	padding : 19px 10px 15px 12px;
+}
+.faqs #results .faq .content p {
+	line-height : 20px;
+	width : 598px;
+	margin : 0px 0px 10px 0px;
+}
+.faqs #results .faq .content p.noluck {
+	margin-top : 20px;
+}
+.faqs #results .faq .content p a {
+	float : none;
+}
+.faqs #results .noluck .link.contactus {
+	margin-left : 5px;
+}
+.faqs #results .faq .divider {
+	background-image : url("../../images/support/faqs/faq-divider.png");
+	width : 620px;
+	height : 2px;
+}
+.faqs #results .faq .helpful .icon {
+	background-image : url("../../images/support/faqs/icons/help.png");
+	width : 22px;
+	height : 23px;
+	margin-right : 10px;
+}
+.faqs #results .faq .helpful .title {
+	font : Bold 14px Arial;
+	width : 500px;
+}
+.faqs #results .faq .helpful .button.yes,
+.faqs #results .faq .helpful .button.no {
+	margin-top : 15px;
+	margin-right : 10px;
+}
+.faqs #results .faq .answer {
+	display : none;
+	height : 66px;
+}
+.faqs #results .faq .answer .icon {
+	background-image : url("../../images/support/faqs/icons/tick.png");
+	width : 20px;
+	height : 17px;
+	margin-right : 10px;
+}
+.faqs #results .faq .answer .title {
+	font : Bold 14px Arial;
+	color : #117B0C;
+	margin-top : 2px;
+}
+.faqs #results .search-faqlist .noresult .prompt {
+	margin-bottom : 10px;
+}
+.faqs #results .search-faqlist .noresult .prompt .bold {
+	font-weight : bold;
+	float : none;
+}
+.faqs #results .search-faqlist .noresult .suggestions .title {
+	font-weight : bold;
+	width : 500px;
+	margin-bottom : 10px;
+}
+.faqs #results .search-faqlist .noresult .suggestions li {
+	width : 500px;
+}
+.faqs #results .search-faqlist .faqitem {
+	background-image : url("../../images/support/faqs/faq-results-bg.png");
+	width : 620px;
+	height : 101px;
+	text-decoration : none;
+}
+.faqs #results .search-faqlist .faqitem:hover {
+	background-position : 0px -101px;
+}
+.faqs #results .search-faqlist .faqitem .title {
+	font : Bold 14px Arial;
+	margin : 18px 0px 0px 35px;
+	width : 570px;
+}
+.faqs #results .search-faqlist .faqitem .content {
+	height : 48px;
+	margin : 8px 10px 14px 12px;
+	overflow : hidden;
+	line-height : 16px;
+}
+.faqs #results .search-faqlist .faqitem .title .highlighted-word {
+	color : #EE5F00;
+	font : Bold 14px Arial;
+	float : none;
+}
+.faqs #results .faq .titlebar .title .highlighted-word,
+.faqs #results .faq .content .highlighted-word,
+.faqs #results .search-faqlist .faqitem .content .highlighted-word {
+	color : #EE5F00;
+	font-weight : bold;
+	float : none;
+}
+
+/* Contact us */
+
+.faqs a.link.contactus {
+	font-weight : bold;
+	margin-right : 5px;
+	text-decoration : underline;
+	float : none;
+}

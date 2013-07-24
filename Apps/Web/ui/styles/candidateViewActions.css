@@ -1,0 +1,64 @@
+﻿.CandidateViewActions
+{
+	border: 1px solid #ccc;
+	margin: 10px;
+	padding: 0px;
+	width: 541px; 
+	height: 102px;
+}
+
+div.CandidateViewActionsUpper
+{
+	background: #e8e8e8;
+	padding: 10px 10px 5px 10px;
+	margin: 0px;
+	height: 60px;
+}
+
+div.CandidateViewActionsLower
+{
+	background: #f4f4f4;
+	padding: 5px 10px 5px 10px;
+	margin: 0px;
+	height: 17px;
+}
+
+.CandidateViewActions a
+{
+	padding: 0em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+a.PrevNextLink
+{
+	font-weight: bold;
+}
+
+div.MoreLikeThisLink 
+{
+	display: inline;
+	float: left;
+}
+
+div.PrevNextAllLinks 
+{
+	display: inline;
+	float: right;
+}
+
+div.CandidateViewActionsUpper a.ShortlistLink
+{
+	font-weight: bold;
+	text-decoration: underline;
+	background: transparent url(../img/shortlist_icon.gif) left no-repeat;
+	padding-left: 16px;
+}
+
+div.CandidateViewActionsUpper a.RejectLink
+{
+	font-weight: bold;
+	text-decoration: underline;
+	background: transparent url(../img/reject_icon.gif) left no-repeat;
+	padding-left: 16px;
+}

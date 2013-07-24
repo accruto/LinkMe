@@ -1,0 +1,146 @@
+div {
+	font-family: tahoma, verdana, arial;
+	font-size: 13px;
+	color: #000;
+	background: transparent;
+/*	border: 1px solid #ccc; */
+}
+
+#col1 {
+	
+}
+
+a:link {
+	color: #00f;
+}
+
+a:visited {
+	color: #00f;
+}
+
+a:hover {
+	color: #00f;
+	text-decoration: none;
+}
+
+.breadcrumb {
+/*	width: 100%; */
+	text-align: right; 
+	padding: 0px;
+	font-size: 11px;
+	margin: 10px;
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+ul {
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+/*	list-style-position: inside; */
+}
+
+ul li {
+	list-style-image: url(../img/small_orange_bullet.gif);
+}
+
+h3 {
+	background: url(../img/blobarrow23x20.png) no-repeat left 50%;
+	font-size: 15px;
+	font-weight: bold;
+	color: #E76800;
+	padding: 0px;
+	padding-left: 25px;
+	padding-top: 3px;
+	margin: 10px;
+	margin-left: 0px;
+}
+
+h4 {
+	font-family: tahoma, verdana, arial;
+	font-size: 13px; 
+	padding: 0px;
+	margin: 0px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	color: #E76800;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 13px;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div.section {
+	padding: 0px;
+	margin: 0px;
+/*	border: solid 1px #ccc; */
+}
+
+.imgLink {
+	border: solid 1px #ccc;
+	margin-left: 25px;
+}
+
+.event {
+	list-style-type: none;
+	padding: 0px;
+	padding-bottom: 10px;
+	margin: 0px;
+}
+
+.blogLinks {
+	padding: 0px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin: 0px;
+}
+
+li.blogs {
+	padding-bottom: 5px;
+	padding-left: 0px;
+	font-size: 13px;
+}
+
+#manBG {
+	background: url(../img/man_sky_blue.gif) no-repeat;
+	padding-left: 90px;
+}
+
+/* Cleaning up existing template */
+.pageheading {
+/*	Borrowed from original template CSS */
+	font-family: arial,tahoma,verdana;
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#Table1 {
+	background: #E76800;
+	width: 770px;
+	border: 0px;
+}
+
+#Table1 tr {
+	vertical-align: middle;
+}
+
+#Table1 td {
+	padding: 0px;
+	margin: 0px;
+}
+
+#footer {
+	font-size: 11px;
+	color: #474747
+}

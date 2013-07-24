@@ -1,0 +1,20 @@
+﻿/* -------- Browse job ads ASCX --------- */
+
+.browse-job-ads_ascx:after {		/* Modern-browser self-clearing */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.browse-job-ads_ascx {		/* IE6,7 self-clearing */
+	zoom: 1;				/* Invalid CSS, hasLayout trigger */
+}
+
+    .browse-job-ads_ascx .columns {}    		
+        .browse-job-ads_ascx .columns .column {
+            margin:0;
+	        float: left;
+	        width: 49.5%;
+        }

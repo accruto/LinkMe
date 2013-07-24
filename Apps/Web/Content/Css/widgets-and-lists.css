@@ -1,0 +1,778 @@
+﻿/* -------------------------
+   List styles
+   MF (moved here 8/12/2008)
+   ------------------------
+
+   Lists are tables with a striped appearance.
+   1 row represents 1 object.
+
+   Copy-paste:
+   
+   <table class="list">
+       <thead>									<!-- thead is optional -->
+           <tr>
+               <th></th>						<!-- could be td instead -->
+               <th></th>
+               <th></th>
+           </tr>
+       </thead>
+       <tbody>									<!-- tbody is not optional -->
+           <tr class="item_odd item">
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr class="item_even item">
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+       </tbody>
+   </table>
+
+   Note that the "item" class is not useless: converting a list into a minilist is made
+   much simpler - just replace all replace "table", "tr" and "td" with "div", and scratch
+   everything else. Class and style innermost divs as appropriate.
+
+   
+   Listing controls/pages:
+   - GroupList control (GroupList.ascx)
+   - "View Events" (ViewEvents.aspx)
+   and more...
+*/
+
+table.list {
+	border-collapse: separate;
+	border-spacing: 0px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #DDD;
+}
+
+table.list {
+	*border-collapse: collapse !important;	/* IE (6,7) hack - IE ignores border-spacing */
+}
+
+table.list th,
+table.list td {
+	*position: relative; /* IE (6,7) hack - use another IE bug to jump to separated w/0px cellspacing */
+	vertical-align: top;
+}
+
+table.list td.radio-only,
+table.list td.checkbox-only {
+	vertical-align: middle;
+	width: 0;
+}
+
+table.list td.actions ul.action-list li {
+	white-space: nowrap;
+}
+
+table.list td.actions {
+	width: 12em;
+}
+
+.section table.list {
+	border-top: none;	/* FF seems to ignore this until position becomes not relative */
+	top: 0;
+}
+
+	table.list thead th,
+	table.list thead td {
+		background-color: #E8E8E8;
+		border-bottom: 1px solid #DADADA;
+		padding: 5px 20px 5px 7px;
+		font-weight: bold;
+	}
+	
+	table.list thead th {
+		border-left: 1px solid #E4E4E4;
+	}
+	
+	table.list tbody th, 
+	table.list tbody td {
+		font-weight: normal;
+		padding: 7px;
+	}
+		table.list tbody tr.item {}
+		
+		table.list tbody tr.item th,
+		table.list tbody tr.item td {
+			border-bottom: 1px solid #DDD;
+		}
+	
+		table.list tbody tr.item_odd th,
+		table.list tbody tr.item_odd td {
+			background-color: #F5F5F5;
+		}
+			
+		table.list tbody tr.item_odd td:first-child {
+		    border-left: 1px solid #F0F0F0;
+		}
+		table.list tbody tr.item_odd td:last-child {
+		    border-right: 1px solid #F0F0F0;
+		}
+		table.list tbody tr.item_even td:first-child {
+			border-left: 1px solid #F8F8F8;
+		}
+		table.list tbody tr.item_even td:last-child {
+		    border-right: 1px solid #F8F8F8;
+		}
+				
+		table.list tbody tr.item_odd td	{		/* IE6/7 hack: put this border on all td */
+			*border-right: 1px solid #F0F0F0;
+		}	
+		table.list tbody tr.item_even td {		/* IE6/7 hack: put this border on all td */
+			*border-right: 1px solid #F8F8F8;
+		}
+		
+		table.list tbody tr.item td {				/* IE6/7 hack: leave only outermost td borders */
+			*border-left-style: expression(this.previousSibling==null?'solid':'none');
+		    *border-right-style: expression(this.nextSibling==null?'solid':'none');
+			*border-left-width: expression(this.previousSibling==null?'1':'0');
+		    *border-right-width: expression(this.nextSibling==null?'1':'0');
+		}
+			
+			table.list tr.item .thumbnail img {
+				max-width: 66px;
+				max-height: 66px;
+				border: 1px solid #DDD !important /* override asp:Image element style */;
+			}
+
+			* html table.list tr.item .thumbnail img {	/* IE6 true max-width hack */
+				width: expression(this.width > 66 ? 66 : true);
+				height: expression(this.height > 66 ? 66 : true);
+			}
+
+			table.list tr.item td.name {}
+			table.list tr.item td.location {}
+			table.list tr.item td.description {
+				font-size: 85%;
+			}
+
+			table.list tr.item td.time_and_place {
+				margin-right: 20px;
+				margin-left: 10px;
+				width: 140px;
+				font-size: 85%;
+			}
+			
+	table.list tfoot td {}	
+	
+	table.list tbody th {
+		/*width: 150px;*/
+	}
+	
+	table.list tbody th.thumbnail {
+		width: 66px;
+	}
+	
+	/* Sort headers */
+	table.attendees_list thead tr a {
+		text-decoration: none;
+	}
+
+table.list tr.item td.time_and_place .location {
+	margin-top: 6px;
+}	
+
+/* -------------------------
+   Minilist styles
+   MF (moved here 8/12/2008)
+   ------------------------
+
+   Minilists are like lists but tend to have more idiosyncratic layouts
+   because they are designed to be compact.
+
+   Copy-paste:
+
+   <div class="minilist-header">			<!-- optional -->
+       <div class="att1"></div>
+       <div class="att2"></div>
+       <div class="att3"></div>
+   </div>
+   <div class="minilist">
+       <div class="item_odd item">
+           <div class="att1"></div>
+           <div class="att2"></div>
+           <div class="att3"></div>
+       </div>
+       <div class="item_even item">
+           <div class="att1"></div>
+           <div class="att2"></div>
+           <div class="att3"></div>
+       </div>
+   </div>
+
+   Used by DiscussionsMiniList.aspx and more...
+*/
+
+.minilist-header {
+	font-size: 80%;
+	font-weight: bold;
+	border-left: #e4e4e4 solid 1px;
+	border-bottom: #dadada solid 1px;
+	background: #e8e8e8;
+	padding: 5px;
+}
+
+.minilist {
+	margin: 0;
+	padding: 0;
+}
+
+.section-content .minilist {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px solid #EAEAEA;
+}
+
+.section .minilist_section-content,
+.section .list_section-content {
+    padding: 0;
+}
+    .section .minilist_section-content .minilist {
+        margin: 0;
+        border-top: none;
+    }
+
+	.minilist h1,
+	.minilist h2,
+	.minilist h3,
+	.minilist h4,
+	.minilist h5,
+	.minilist h6 {
+		margin-top: 0;
+	}
+	
+	.minilist .item {
+		margin: 0;
+		padding:6px;
+		clear: both;
+		list-style: none;
+		background: #FFF;
+		padding-bottom: 7px;
+		border: 1px solid #F8F8F8;
+		border-top: none;
+		border-bottom: 1px solid #EEE;
+	}
+
+	.minilist .item_odd {
+		background: #F5F5F5;
+		border: 1px solid #F0F0F0;
+		border-top: none;
+		border-bottom: 1px solid #E1E1E1;
+	}
+
+	.minilist .item_even {
+		border-bottom: 1px solid #E1E1E1;
+	}
+	
+		.minilist .item .title {}
+
+		.minilist .item .status {
+			display: block;
+			font-size: 85%;
+		}
+		
+		.minilist .item .date {
+			font-size: 85%;
+			float: right;
+		}
+
+		.minilist .item .description {
+			display: block;
+			font-size: 85%;
+			width: 100%;    /* Ensure IE6 doesn't go wild */
+			overflow: hidden;
+		}
+		
+		.minilist .item .member-count {
+			font-size: 85%;
+			float: right;
+			display: block;
+		}
+
+		.minilist .item .header {}
+		.minilist .item .details {}
+		.minilist .item .details_button {}
+
+/* ------------------
+   Action list styles
+   MF 18/08/2008
+   ------------------
+
+   Action lists are groups | of | things | you | do (horizontal),
+   Or alternatively:
+   • groups
+   • of
+   • things
+
+   Can be used directly in a section-title; will then adopt inline layout.
+*/
+
+/* Note: to use icons, ALSO add the "icon-bulleted_action-list" class to your list. */
+
+ul.action-list
+{
+	margin:0;
+	padding:0;
+	margin-left: 0px;
+	clear: left;
+}
+
+ul.action-list label {					/* XHTML2 working draft proposed using <label> as modern <lh> element */
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+ul.action-list:after {					/* Container-clearing - no need for for <br class="clearer" />	*/
+	content: ".";						/* after child floated elements.								*/
+	display: block; 
+	height: 0;							/* (Container-clearing is only needed for elements which aren't		*/
+	clear: both;						/* floated themselves, but have floated children.)				*/
+	visibility: hidden;						
+}
+
+ul.action-list li
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	list-style: none;
+	padding-left: 13px;
+	background: url(../images/universal/action-list-bullet.gif) left 0.2em no-repeat;
+}
+
+.helptext ul.action-list li {
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+ul.action-list {
+	*display: inline-block;		/* IE (6,7) hack - container-clearing. */
+}
+
+	/*	------------------
+		Plain action lists
+		------------------
+		Removes action-list bullets. Useful for preventing the "> [icon] Action" look.
+	*/
+
+	ul.plain_action-list li {
+		padding-left: 0;
+		background: none;
+	}
+
+/*	-------------------
+	Button action lists
+	-------------------
+
+    Briefly: can contain <button>, <input type="button">, <a>
+
+	These are lists of a mix of:
+	• Button form elements (big, normal buttons, with class="xxxx_button button")
+		• A class must be defined for each different button label.
+	• Hyperlinks (which take on a mini-button look, with class="xxxx")
+		• A class must be defined for each different mini-button label.
+*/
+
+ul.button_action-list {
+	margin: 4px 0 4px 0;
+	padding:0;
+}
+
+	ul.button_action-list li {
+		float: left;
+		background: none;
+		margin: 0;
+		padding-left: 4px;
+		list-style: none;
+	}
+	
+	ul.button_action-list li:first-child,
+	ul.button_action-list li.ie_firstchild {
+		padding-left: 0;
+	}
+	
+	/* -----------------------------------
+	   Full buttons in button action lists
+	   -----------------------------------
+	   Run-of-the-mill input type="button" class="... button"
+	*/
+	
+	ul.button_action-list input.button {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	/* -----------------------------------
+       Mini buttons in button action lists
+	   -----------------------------------
+	   These are links that become miniature buttons when parented by a button action list.
+	*/
+	
+	.button_action-list a  {
+		display: block;
+		height: 14px;
+		text-indent: -9999px;
+		font-size: 0;
+		background-repeat: no-repeat;
+		background-position: left top;
+	}
+	.button_action-list a:hover {
+		background-position: left center;
+	}
+	.button_action-list a:active {
+		background-position: left bottom;
+	}
+	
+	.button_action-list a.reply  {
+		width: 40px;
+		background-image: url(../images/buttons/mini/reply.png);
+	}
+	.button_action-list a.delete  {
+		width: 44px;
+		background-image: url(../images/buttons/mini/delete.png);
+	}
+	.button_action-list a.cancel  {
+		width: 44px;
+		background-image: url(../images/buttons/mini/cancel.png);
+	}
+	
+/* -----------------------
+   Horizontal action lists 
+   -----------------------
+
+   This is an | example of a | horizontal action list.
+*/
+
+ul.horizontal_action-list
+{
+	padding-left: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+	ul.horizontal_action-list li 
+	{
+		float: left;
+		background: url(../images/universal/action-list-divider.png) no-repeat center left;
+		padding-left: 11px;
+		margin-left: 10px;
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	ul.horizontal_action-list li:first-child,
+	ul.horizontal_action-list li.ie_firstchild {
+		background-image: none;
+		padding-left: 0px;
+		margin-left: 0px;
+	}
+
+	ul.horizontal_action-list li {		/* Make IE (6,7) magically remove empty list items */
+		*display: expression(this.innerHTML.length == 0 ? "none" : "list-item");
+	}
+	
+	/*	-----------------------------
+		Corner horizontal action-list
+		-----------------------------
+
+		This action-list moves itself to the upper-right-hand corner of its 'least ancestral' anchor div.
+		In addition, it shows | no | dividers.
+	*/
+	
+	ul.corner_horizontal_action-list {
+		position: absolute;
+		right: 8px;
+		top: 1px;
+		line-height: 2em;
+		z-index: 1;			/* Just in case some transparent div covers it :( */
+	}
+	
+	.section .section-title ul.corner_horizontal_action-list {
+	    top: 1px;
+	    *top: 0;    /* IE7 hack: move up 1px */
+	    _top: 1px;  /* IE6 hack: don't move up 1px */
+	}
+	
+	/*	-----------------------------
+		Plain horizontal action lists
+		-----------------------------
+		Removes | these | delimiters. Useful for horizontal action lists with icons within.
+	*/
+
+	ul.plain_horizontal_action-list li {
+		padding-left: 0;
+		background: none;
+	}
+
+/*	-------------------
+	Inline action lists
+	-------------------
+
+	Inline action lists are those which appear at the end of a line 
+	of text, or even in the middle of text.
+
+	Text within appears a little smaller.
+
+	An inline_action-list in a section-title automatically right-aligns.
+*/
+
+ul.inline_action-list {
+	margin: 0;
+	display: inline;
+	float: none;
+	font-size: 85%;
+}
+ul.inline_action-list li {
+	display: inline;
+	float: none;
+	list-style: none;
+	padding-left: 7px;
+	margin-left: 3px;
+	background: url(../images/universal/action-list-divider.png) no-repeat center left;
+}
+
+ul.inline_action-list li:first-child,
+ul.inline_action-list li.ie_firstchild {
+	padding-left: 0px;
+	margin-left: 0;
+	background-image: none;
+}
+
+	/*	------------------------
+		Plain inline action-list
+		------------------------
+
+		No | dividers.
+	*/
+	
+	ul.plain_inline_action-list li {
+		background: none;
+	}
+
+	/*	-------------------------
+		Corner inline action-list
+		--------------------------
+
+		This action-list moves itself to the upper-right-hand corner of its 'least ancestral' anchor div.
+		In addition, it shows | no | dividers.
+	*/
+	
+	ul.corner_inline_action-list {
+		font-size: 85%;
+		position: absolute;
+		right: 8px;
+		top: 1px;
+		line-height: 2em;
+		z-index: 1;			/* Just in case some transparent div covers it :( */
+	}
+	
+	.section .section-title ul.corner_inline_action-list {
+	    top: 1px;
+	    *top: 0;    /* IE7 hack: move up 1px */
+	    _top: 1px;  /* IE6 hack: don't move up 1px */
+	}
+
+	ul.corner_inline_action-list li {
+		background-image: none;
+	}
+	
+	ul.corner_inline_action-list li {
+		background: none;
+	}
+	
+	/*	------------
+		Action icons
+		------------
+    */
+      
+    .action-list .edit-action             { background: url(../images/universal/action-icons/edit.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .save-action             { background: url(../images/universal/action-icons/save.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .cancel-action           { background: url(../images/universal/action-icons/cancel.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .delete-action           { background: url(../images/universal/action-icons/delete.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .email-action            { background: url(../images/universal/action-icons/email.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .download-action         { background: url(../images/universal/action-icons/download.png)               left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .add-action              { background: url(../images/universal/action-icons/add.png)                    left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .add-folder-action       { background: url(../images/universal/action-icons/folder.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .copy-to-folder-action   { background: url(../images/universal/action-icons/copy-to-folder.png)         left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .move-to-folder-action   { background: url(../images/universal/action-icons/move-to-folder.png)         left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .phone-action            { background: url(../images/universal/action-icons/phone.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .shortlist-action        { background: url(../images/universal/action-icons/shortlist.png)              left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .reject-action           { background: url(../images/universal/action-icons/reject.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .remove-candidate-action { background: url(../images/universal/action-icons/remove-candidate.png)       left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .candidate-alert-action  { background: url(../images/universal/action-icons/candidate-email-alerts.png) left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .close-action            { background: url(../images/universal/action-icons/close.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .edit-action             { background: url(../images/universal/action-icons/edit.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .execute-job-ad-action   { background: url(../images/universal/action-icons/suggested-candidates.png)   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .repost-action           { background: url(../images/universal/action-icons/repost.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .manage-folders-action   { background: url(../images/universal/action-icons/manage-folder.png)          left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .action-list .go-to-folder-action     { background: url(../images/universal/action-icons/folder.png)                 left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    
+/* -------------
+   Ribbon styles
+   MF 16/02/2009
+   -------------
+
+   For the moment, ribbon = toolbar. If toolbars get huge, then more classes
+   will be created, so we'll have a ribbon/chunk/group/action-list structure.
+*/
+
+.ribbon {
+	background: #F5F5F5 url(../images/controls/ribbon/ribbon_bg.png) top left repeat-x;
+	border: 1px solid #DDD;
+}
+
+.ribbon_inner {
+	background: url(../images/controls/ribbon/ribbon_bg-bottom.png) bottom left repeat-x;
+	padding: 8px 6px;
+	padding-bottom: 3px;	/* 8px - 5px "inter-line" margin */
+}
+
+.section .ribbon {
+	border-right: none;
+	margin-top: -1px;
+}
+	.section .ribbon_inner {
+		padding: 5px 6px;
+		padding-bottom: 0px;
+	}
+
+.section-title .ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	border-left: none;
+	border-top: 1px solid #E6E6E6;
+	border-bottom: 1px solid #CCC;
+	background-image: url(../images/controls/ribbon/ribbon_bg_in-section-title.png);
+	*float: right;
+}
+	.section-title .ribbon_inner {
+		padding:0;
+		*float: left;
+		height: 100%;
+		background-image: url(../images/controls/ribbon/ribbon_bg_bottom_in-section-title.png);
+	}
+	
+	.section-title .ribbon ul.horizontal_action-list {
+		padding: 5px 6px;
+		padding-right: 8px;
+		padding-bottom: 0;
+		*float: left;
+		_padding-bottom: 5px;
+	}
+	.section-title .ribbon ul.horizontal_action-list li {
+		margin-left: 15px;
+		margin-right: 0;
+	}
+	
+	.section-title .ribbon ul.horizontal_action-list li:first-child,
+		.section-title .ribbon ul.horizontal_action-list li.ie_firstchild {
+			margin-left: 2px;
+		}
+
+.ribbon ul.action-list li {
+	margin:0;
+	font-size: 85%;
+	margin-bottom: 5px;     /* 5px "inter-line" margin */
+}
+
+	.ribbon ul.horizontal_action-list li,
+	.ribbon ul.inline_action-list li {
+		margin-right: 10px;
+	}
+
+/* ------------------
+   Field-list styles
+   MF 09/09/2008
+   ------------------
+
+   MF 23/09/2008: The fieldset * suite of definitions, as currently defined in forms_v2.css,
+                  is a cross-browser CSS implementation over form fields in a fieldset. Be
+                  warned though, the markup is a bit class-heavy :)
+
+   This structure:
+	<dl class="fields">
+		<div class="field"><dt>...</dt><dd>...</dd></div>
+		<div class="field"><dt>...</dt><dd>...</dd></div>
+		...
+	</dl>
+
+   and this one too:
+   <fieldset>
+		<div class="field"><label>...</label><div class="control" ... ></div></div>
+		<div class="field"><label>...</label><div class="control" ... ></div></div>
+		...
+   </fieldset>
+
+	Are field lists, and are a generic way of presenting lists of
+	fields, whether read-only (first structure) or on a form
+	(second structure).
+
+	Currently, these styles cover only the first structure.
+*/
+
+	dl.fields:after,		/* Self-clearing - modern-browser solution */
+	dl.fields .field:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	dl.fields,			    /* Self-clearing - IE6,7 solution */
+	dl.fields .field {
+		zoom: 1;				/* Invalid CSS, hasLayout trigger */
+	}
+
+    dl.fields {
+	    margin: 0;
+	    padding: 0;
+    }
+
+        dl.fields .field {
+            margin-top: 6px;
+        }
+        
+        dl.fields .field:first-child,
+        dl.fields .ie_firstchild {
+            margin-top: 0;
+        }
+        
+	        dl.fields .field dt {
+		        font-weight: bold;
+		        width: 100px;
+		        float: left;
+	        }
+	        dl.fields .field dd {
+		        margin: 0;
+		        float: left;
+		        width: 198px;
+		        min-height: 1em;
+		        _height: 1em;       /* IE6 min-height hack */
+	        }
+
+	        /* support unlabeled fields */
+	        dl.fields .unlabeled dt {
+		        display: none;
+	        }
+	        dl.fields .unlabeled dd {
+		        padding-left: 0;
+	        }
+        	
+	        /* compact lists in fields */
+	        dl.fields ul {
+		        margin: 0;
+		        margin-left: 14px;
+	        }
+		        dl.fields ul li {
+			        margin-bottom: 0;
+		        }
+

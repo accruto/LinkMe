@@ -1,0 +1,124 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, 
+#JobDescription table, #JobDescription th, #JobDescription td, 
+#JobDescription ul, #JobDescription li, 
+#JobDescription label, #JobDescription span {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #bcbdc0 url(austcorp_executive_images/austcorp_03.gif) repeat-y left top;
+	margin-bottom: 1em;
+	position: relative;
+	width: 500px;
+}
+
+#JobAd div#JobDescription div#Ad {
+/* 	margin: 0 30px 0 28px; aligns with banner, footer and #JobDescription bg images */ 
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 0 30px 1em 30px;	
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad td,
+#JobAd #JobDescription #Ad li {
+	line-height: 1.3em;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: #fff url(austcorp_executive_images/austcorp_01.gif) no-repeat top center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 120px;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	padding: 122px 0 0 0;
+	margin-bottom: 0;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #036;
+	font-size: 200%;
+	font-size: 20pt;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin: 0;
+	padding: 5px 5px 1em 5px;	
+	text-align: center;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-top: 1em;
+	text-align: left;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 80% !important;
+}
+#JobAd #JobDescription #Ad table td {
+	font-weight: bold;
+}
+
+#JobAd #JobDescription #Ad table label {
+	background: #fff url(austcorp_executive_images/bullet.gif) no-repeat left center;
+	font-weight: bold;
+	height: 1.5em;
+	padding-left: 25px;
+	vertical-align: middle;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	margin-left: 3em;	
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading ul li {
+	margin-left: 3em;	
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	margin-bottom: 0;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: #454d7d url(austcorp_images/austcorp_04.gif) no-repeat center center;
+	height: 100px;
+}

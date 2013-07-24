@@ -1,0 +1,403 @@
+/* overwrites */
+
+label{
+padding-right:6px;
+
+}
+
+
+
+h1
+{
+	color: #004A6F;
+	font-size: 163%;
+	letter-spacing: 1px;
+	font-family: "Tahoma";
+	letter-spacing:0px;
+	margin-top:5px;
+
+}
+h2
+{
+	color: #6F0011;
+	font-size: 130%;
+	border-bottom: solid 1px #ccc;
+	width: 100%;
+	margin-bottom: 2px;
+	font-family: "Tahoma";
+	letter-spacing:0px
+}
+
+h2.plain 
+{ 
+	border: none; 
+	font-size:80%;
+}
+
+h4 { color: #004A6F; font-size: 120%; margin-bottom: 2px; padding: 0px; display: inline;}
+h3, h5, h6
+{
+	color: #004A6F;
+	font-size: 120%;
+	margin-bottom: 2px;
+	padding: 0px;
+}
+p
+{
+	margin: 3px 0px;
+}
+dl
+{
+	padding: 5px 20px 0px 0px;
+}
+dd
+{
+	margin: 0px;
+	padding-bottom: 10px;
+}
+dt
+{
+	font-size: 100%;
+	font-weight: bold;
+}
+dt.line
+{
+	float: left;
+	width: 90px;
+	font-size: 110%;
+	padding-top: 3px;
+	text-align: right;
+	margin-right: 5px;
+}
+dt.longLine
+{
+	float: left;
+	width: 140px;
+	font-size: 110%;
+	padding-top: 3px;
+	text-align: right;
+	margin-right: 5px;
+}
+dt.veryLongLine
+{
+	float: left;
+	width: 200px;
+	font-size: 110%;
+	padding-top: 3px;
+	text-align: right;
+	margin-right: 5px;
+}
+dd.liner
+{
+	margin-left: 100px;
+}
+dd.longLiner
+{
+	margin-left: 140px;
+}
+fieldset
+{
+	border: solid 1px #ccc;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+legend
+{
+	font: bold 110% verdana;
+	color: #336699;
+}
+ul { list-style-type:square; color: #000; }
+ul.plain { list-style:none; color: #000; margin: 0; padding: 0;}
+ol { margin: 3px; padding: 5px 0 0 20px; margin-left: 20px; }
+ol li { padding-bottom: 15px; } 
+
+/* links */
+.aux
+{
+	color: #1f8101;
+}
+.subhead
+{
+	padding: 10px;
+	font-size: medium;
+}
+
+div.action
+{
+	width: 100%;
+	margin-top: 5px;
+	text-align: right;
+}
+
+div.center
+{
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.sub
+{
+	color: #777;
+	font-weight: normal;
+	font-size: 80%;
+}
+
+.new
+{
+	font-size: 80%;
+	position: relative;
+	top: -4px;
+	color: Red;
+}
+
+.result
+{
+	float: left;
+	display: block;
+	clear: both;
+	width: 500px;
+	margin-bottom: 10px;
+	border: dashed 2px #e76800;
+	padding: 5px;
+}
+.result .name
+{
+	float: left;
+	color: #336699;
+	font-size: 90%;
+	font-weight: bold;
+}
+.result .info
+{
+	float: right;
+	color: #555;
+	font-size: 80%;
+}
+.result .info span
+{
+	color: #f33;
+}
+.result .message
+{
+	float: left;
+	clear: both;
+	width: 500px;
+	border-top: solid 1px #ccc;
+}
+
+.result
+{
+	float: left;
+	display: block;
+	clear: both;
+	width: 500px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+.result .name
+{
+	float: left;
+	color: #336699;
+	font-size: 90%;
+	font-weight: bold;
+}
+.result .info
+{
+	float: right;
+	color: #555;
+	font-size: 80%;
+}
+.result .info span
+{
+	color: #f33;
+}
+.result .message
+{
+	float: left;
+	clear: both;
+	width: 500px;
+	border-top: solid 1px #ccc;
+}
+
+#errorMsg 
+{
+	color: #000; text-align:left; background: #ffe8d9 url("../img/ErrorU.gif") no-repeat top left; width: 540px; margin: 10px; 
+}
+
+#errorMsg div
+{
+	margin: 0; background: url("../img/ErrorD.gif") no-repeat bottom left;
+}
+
+#errorMsg div div
+{
+	padding:20px 15px; padding-left: 50px; background: url("../img/ErrorL.gif") no-repeat 10px 10px;
+}
+
+#infoMsg 
+{
+	color: #000; text-align:left; background: #ecf2ff url("../img/InfoU.gif") no-repeat top left; width: 540px; margin: 10px; 
+}
+
+#infoMsg div
+{
+	margin: 0; background: url("../img/InfoD.gif") no-repeat bottom left;
+}
+
+#infoMsg div div
+{
+	padding:20px 15px; 
+}
+
+#confirmMsg 
+{
+	color: #000; text-align:left; background: #F9F7C6 url("../img/confirmTop.gif") no-repeat top left; width: 540px;
+}
+
+#confirmMsg div
+{
+	margin: 0px; background: url("../img/confirmBottom.gif") no-repeat bottom left;
+}
+
+#confirmMsg div div
+{
+	padding: 20px 15px;
+}
+
+.box
+{
+	width: 400px;
+	float: left;
+	border: solid 1px #e76800;
+	padding: 5px;
+	margin: 5px;
+}
+
+.sideNote h1, .sideNote h2, .sideNote h3
+{
+	color: #474747;
+	font-weight: bold;
+	font-size: 90%;
+	border: none;
+	margin: 5px 0px;
+	padding-bottom: 0px;
+}
+.sideNote table
+{
+	border-collapse: collapse;
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	width: 100%;
+}
+.sideNote table td
+{
+	color: #AAA;
+	font-size: 75%;
+	margin-right: 5px;
+}
+.sideNote table .num
+{
+	text-align: right;
+	color: #000;
+}
+
+a.more
+{
+	font-size: 80%;
+}
+a.title
+{
+	font-size: 120%;
+}
+
+.button
+{
+	font: 110%;
+	height: 25px;
+	padding-bottom: 3px;
+}
+.bigButton
+{
+	font-weight: bold;
+	font-size: 110%;
+	height: 25px;
+	padding-bottom: 2px;
+}
+
+/* float hack */
+hr.clearer
+{
+	display: block;
+	clear: both;
+	margin: -0.66em 0;
+	visibility: hidden;
+}
+div.clearer
+{
+	clear: both;
+	line-height: 0;
+	height: 0;
+}
+.debugNote
+{
+	background-color: #ffffcc;
+}
+
+
+/* experience */
+.jobTitle
+{
+	width:170px;
+	font-weight:bold;
+	color: #000;
+	font-size: 110%;
+}
+
+.employer
+{
+	font-size: 110%;
+	color: #000;
+}
+
+.leftFrame
+{
+	float: left;
+}
+.rightFrame
+{
+	float: right;
+}
+
+.textBoxVeryLong{ width: 300px; }
+.textBoxLong	{ WIDTH: 200px; }
+.textBoxShort	{ WIDTH: 111px; }
+.textBoxTiny	{ WIDTH: 60px;  }
+
+.sidenote-boxes{
+border:#CCC 1px solid; padding:5px; margin-top:8px; width:160px; margin-top:90px;
+}
+.sidenote-box-2{
+border:#CCC 1px solid; padding:5px; margin-top:8px; width:160px; margin-top:25px;
+}
+
+.recommended {
+font-weight:normal;
+color:#FF0000;
+margin-left:4px;
+}
+
+	.long {width: 230px;}
+	.short {width: 230px;}
+	.tiny {width: 50px;}
+	dt.longLine { float: left; width: 160px; font-size: 110%; padding-top: 3px; text-align: right; margin-right: 5px;}
+	dd.longLiner { margin-left: 170px; }
+
+.noDisplay 
+{
+	display:none;
+}
+.doDisplay 
+{
+	display:inline;
+}

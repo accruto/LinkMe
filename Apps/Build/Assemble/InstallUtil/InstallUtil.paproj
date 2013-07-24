@@ -1,0 +1,21 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{2E083026-E908-4bc1-BB56-81F70552A94B}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.InstallUtil.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{F7CCAE6A-F429-4aed-B335-E748BA7DCCC3}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\InstallUtil\LinkMe.InstallUtil.exe">
+      <Guid>{8E9653AC-1EA5-4b0e-A489-425FCBBA7E54}</Guid>
+      <Link>InstallUtil\LinkMe.InstallUtil.exe</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

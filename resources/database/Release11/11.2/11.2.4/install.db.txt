@@ -1,0 +1,6 @@
+alter_CandidateNote_index.sql
+alter_JobAd_index.sql
+alter_RegisteredUser_index.sql
+alter_ResumeSearch_index.sql
+create_PurchaseTransaction.sql
+

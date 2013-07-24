@@ -1,0 +1,1 @@
+run_scripts.vbs /l:install.log /f:update_content_privacy.sql

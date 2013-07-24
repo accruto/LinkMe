@@ -1,0 +1,10 @@
+.ruler50{ border: 0; background: url(../../../images/controls/slider/ruler_50.png) no-repeat; top:-2px; position:relative; z-index:0;}
+.ruler10{ border: 0; background: url(../../../images/controls/slider/ruler_10.png) no-repeat; top:-2px; position:relative; z-index:0;}
+.ruler8{ border: 0; background: url(../../../images/controls/slider/ruler_8.png) no-repeat; top:-1px; position:relative; z-index:0;}
+.ui-slider { position: relative; width:204px; height:9px; margin-top:5px; z-index:1; cursor:pointer; background: url(../../../images/controls/slider/slider_bg.png) repeat-x scroll 50% 50% #FFFFFF; border: 1px solid #AAAAAA;}
+.ui-slider .ui-slider-handle { background:url(../../../images/controls/slider/slider_handle.png) no-repeat; position: absolute; width:13px; height:21px; left:0px; top:-2px; border:none; cursor:pointer; outline:none;}
+.range{ width:100%;}
+.slider-holder{ padding:0px 5px 5px 10px;}
+.slider-limits{ width:210px; height:15px; padding:5px 5px 0px 5px; font-size:85%; font-weight:bold;}
+.minrange{ width:50%; float:left; text-align:left;}
+.maxrange{ width:50%; float:right; text-align:right;}

@@ -1,0 +1,160 @@
+#letter-layout a:hover {
+	color: #E76800;
+	text-decoration: none;
+}
+#letter-layout div.signature a:link  {
+	color:cornflowerblue;
+}
+#letter-layout div.signature a:hover  {
+	color: #E76800;
+	text-decoration: none;
+}
+#letter-layout div.signature a:visited  {
+	color:purple;
+}
+#letter-layout div.unsubscribe a:link  {
+	color:cornflowerblue;
+}
+#letter-layout div.unsubscribe a:hover  {
+	color: #E76800;
+	text-decoration: none;
+}
+#letter-layout div.unsubscribe a:visited  {
+	color:purple;
+}
+#letter-layout div.terms a:link  {
+	color:cornflowerblue;
+}
+#letter-layout div.terms a:hover  {
+	color: #E76800;
+	text-decoration: none;
+}
+#letter-layout div.terms a:visited  {
+	color:purple;
+}
+#letter-layout hr {
+	height:1px;
+	color: #999;
+}
+
+.sub
+{
+	color: #777;
+	font-weight: normal;
+	font-size: 80%;
+}
+
+ol
+{
+	margin:3px 3px 3px 20px;
+	padding:5px 0pt 0pt 20px;
+}
+
+ol li
+{
+	padding-bottom: 15px;
+}
+
+dl.jobRole
+{
+	margin: 3px 0px;
+	padding: 0px;
+}
+
+dl.jobRole dt
+{
+	color: #aaa;
+	float: left;
+	text-align: left;
+	width: 95px;
+	margin: 0px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	padding: 0px;
+}
+
+dl.jobRole dd
+{
+	margin-bottom: 3px;
+	padding: 0px;
+}
+
+div.clearer
+{
+	clear:both;
+	height:0pt;
+	line-height:0pt;
+}
+
+.jobAdTitle
+{
+	font-size: large;
+	font-weight:bold;
+}
+
+.floatingTextLeftOfAction
+{
+	float: left;
+	width: 80%;
+}
+
+.floatingActionRightOfText
+{
+	float: right;
+	min-width: 60px;
+}
+
+.alert-container
+{
+	border-top:1px solid #DDDDDD;
+	margin-top:10px;
+	padding-top:15px;
+	border-bottom:1px solid #DDDDDD;
+	margin-bottom:10px;
+	padding-bottom:15px;
+}
+
+.alert-title
+{
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+}
+
+dl.alert-item
+{
+	position:relative;
+	top:-10px;
+}
+
+dl.alert-item dt
+{
+	color:#333333;
+	float:left;
+	font-weight:bold;
+	font-size:80%;
+	margin:0px 3px 3px 0px;
+	padding:0px;
+	text-align:left;
+	width:130px;
+}
+
+dl.alert-item dd
+{
+	color:#333333;
+	font-size:80%;
+	margin-bottom:3px;
+	padding:0px;
+	text-align:left;
+}
+
+.alert-content
+{
+	position:relative;
+	top:-20px;
+	color:#333333;
+	font-size:80%;
+	margin-bottom:3px;
+	padding:0px;
+	text-align:left;
+}

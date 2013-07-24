@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="LinkMeDataSource">
+      <rd:DataSourceID>2c5c5579-ab2e-4959-a750-11c230d6e1ec</rd:DataSourceID>
+      <DataSourceReference>LinkMeDataSource</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Line Name="line1">
+        <Top>2.25cm</Top>
+        <Width>18.25397cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="Heading">
+        <Top>1cm</Top>
+        <Width>13.25cm</Width>
+        <Style>
+          <Color>MidnightBlue</Color>
+          <FontSize>16pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value />
+      </Textbox>
+      <Textbox Name="ReportName">
+        <Top>0.25cm</Top>
+        <Width>13.25cm</Width>
+        <Style>
+          <FontSize>13pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.25cm</Top>
+        <Width>4.49735cm</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <Left>13.75cm</Left>
+        <Height>1.69312cm</Height>
+        <Value>linkme_logo</Value>
+      </Image>
+    </ReportItems>
+    <Height>2.5cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>7a4f7ec7-c0ca-41ff-ab90-984eedc4bfdf</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="linkme_logo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="Providers">
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalOfferings">
+          <DataField>TotalOfferings</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>LinkMeDataSource</DataSourceName>
+        <CommandText>SELECT
+	P.name AS Name, COUNT(*) AS TotalOfferings
+FROM
+	OfferProvider AS P
+INNER JOIN
+	Offering AS O ON O.providerId = P.id
+GROUP BY
+	P.name
+ORDER BY
+	P.name</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>18.4cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>Providers</DataSetName>
+        <Top>0.25cm</Top>
+        <Width>16.27646cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Name">
+                      <rd:DefaultName>Name</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TotalOfferings">
+                      <rd:DefaultName>TotalOfferings</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TotalOfferings.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>MidnightBlue</Color>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>MidnightBlue</Color>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total Offerings</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>11.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.77646cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.25cm</Height>
+        <Left>0.5cm</Left>
+      </Table>
+    </ReportItems>
+    <Height>12cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>10.25cm</Left>
+        <Value>="Page " + Globals!PageNumber.ToString() + " of " + Globals!TotalPages.ToString()</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>9cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Value>=Format(Globals!ExecutionTime, "U")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.88492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

@@ -1,0 +1,2 @@
+alter_Campaign_add_columns.sql
+data_CommunicationDefinition.sql

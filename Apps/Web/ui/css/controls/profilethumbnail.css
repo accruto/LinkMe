@@ -1,0 +1,45 @@
+﻿.profile_thumbnail {
+	float: left;
+	width: 48px;
+	height: 48px;
+	margin-right: 4px;
+}
+
+	.profile_thumbnail .frame {
+		float: left;
+		position: absolute;				/* IE6 hack */
+		_filter: expression(LinkMeUI.IE6Alpha("/ui/images/universal/frame_48.png"));
+	}
+	
+		* html .profile_thumbnail .frame img {		/* IE6 hack */
+			filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		}
+					
+	.profile_thumbnail .crop {
+		float: left;
+		overflow: hidden;
+		width: 48px;
+		height: 48px;
+		position: absolute;
+	}
+	
+		.profile_thumbnail .crop table {
+			position: relative;
+			top: -72px;
+			height: 192px;
+			left: -72px;
+			width: 192px;
+			display: table;
+			border: none;
+			border-collapse: collapse;
+		}
+	
+			.profile_thumbnail .crop table td {
+				text-align: center;
+				vertical-align: middle;
+				border: none;
+			}
+			
+		a .profile_thumbnail img {
+			border: none;
+		}

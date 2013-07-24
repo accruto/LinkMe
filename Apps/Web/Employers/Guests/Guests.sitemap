@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <!-- The pages under this directory already have a login control in the body - no need for one in the sidebar. -->
+  <siteMapNode sidebar="employers-guests-nologin">
+
+    <!-- Pages -->
+    
+    <siteMapNode url="~/employers/guests/PostJobAd.aspx"
+                 title="Job listings | IT Jobs | Melbourne Jobs | Sydney Jobs | Brisbane Jobs | Employers"
+                 description="Post a job ad on LinkMe."
+                 keywords="post job ad, job ad, job ad creation, create a job ad, upload a job ad" />
+    <siteMapNode url="~/employers/guests/Account.aspx"
+                 title="Account | Employers" />
+
+    <siteMapNode url="~/employers/guests/SavedSearches.aspx" title="Account | Employers" sidebar="employers-guests-folders" />
+    <siteMapNode url="~/employers/guests/CandidateAlerts.aspx" title="Account | Employers" sidebar="employers-guests-folders" />
+    <siteMapNode url="~/employers/guests/SavedCandidates.aspx" title="Account | Employers" sidebar="employers-guests-folders" />
+    <siteMapNode url="~/employers/guests/LoginRequired.aspx" title="Account | Employers" />
+    
+  </siteMapNode>
+</siteMap>

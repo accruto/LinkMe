@@ -1,0 +1,30 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <MSTestPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\</MSTestPath>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Test-->
+
+  <Target Name="Test" Inputs="@(TestAssemblies)" Outputs="%(Directory)%(Filename).trx">
+    <Message Text="Test assembly: %(TestAssemblies.FullPath)" />
+    <Delete Files="%(TestAssemblies.RootDir)%(TestAssemblies.Directory)%(TestAssemblies.Filename).trx" />
+    <Exec IgnoreExitCode="true" Command="&quot;$(MSTestPath)MSTest.exe&quot; /testcontainer:%(TestAssemblies.FullPath) /resultsfile:%(TestAssemblies.RootDir)%(TestAssemblies.Directory)%(TestAssemblies.Filename).trx" />
+    <Message Text="##teamcity[importData type='mstest' path='%(TestAssemblies.RootDir)%(TestAssemblies.Directory)%(TestAssemblies.Filename).trx']"/>
+  </Target>
+
+</Project>

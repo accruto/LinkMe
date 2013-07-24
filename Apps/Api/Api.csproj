@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A81F9A51-A534-488D-BCD6-4C3A3AB5C9C0}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Apps.Api</RootNamespace>
+    <AssemblyName>LinkMe.Apps.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Apps.Services">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Services\bin\LinkMe.Apps.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Reports\bin\LinkMe.Query.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\Engine\bin\LinkMe.Query.Search.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utility\bin\LinkMe.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Accounts\Models\LoginModel.cs" />
+    <Compile Include="Areas\Accounts\Models\SavedSearchResultsModel.cs" />
+    <Compile Include="Areas\Accounts\Routes\AccountsRoutes.cs" />
+    <Compile Include="Areas\Dev\Controllers\DevApiController.cs" />
+    <Compile Include="Areas\Dev\DevAreaRegistration.cs" />
+    <Compile Include="Areas\Dev\Routes\DevRoutes.cs" />
+    <Compile Include="Areas\Employers\Controllers\Accounts\AccountsApiController.cs" />
+    <Compile Include="Areas\Employers\Controllers\CandidateListApiController.cs" />
+    <Compile Include="Areas\Employers\Controllers\Purchases\PurchasesController.cs" />
+    <Compile Include="Areas\Employers\Controllers\Search\SearchesApiController.cs" />
+    <Compile Include="Areas\Employers\EmployersAreaRegistration.cs" />
+    <Compile Include="Areas\Employers\Models\Accounts\EmployerJoinModelConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Accounts\EmployerJoinModelJavaScriptConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Candidates\CandidateModelConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Candidates\CandidateModelJavaScriptConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Purchases\VerifyModel.cs" />
+    <Compile Include="Areas\Employers\Models\Search\MemberSearchModelJavaScriptConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Search\MemberSearchModelConverter.cs" />
+    <Compile Include="Areas\Employers\Models\Search\MemberSearchesModel.cs" />
+    <Compile Include="Areas\Employers\Routes\AccountsRoutes.cs" />
+    <Compile Include="Areas\Employers\Routes\CandidatesRoutes.cs" />
+    <Compile Include="Areas\Employers\Routes\PurchaseRoutes.cs" />
+    <Compile Include="Areas\Employers\Routes\SearchRoutes.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Employers\Controllers\Candidates\CandidatesApiController.cs" />
+    <Compile Include="Areas\Employers\Controllers\Candidates\FoldersApiController.cs" />
+    <Compile Include="Areas\Accounts\Controllers\AccountsApiController.cs" />
+    <Compile Include="Areas\Employers\Controllers\Search\SearchApiController.cs" />
+    <Compile Include="Areas\Accounts\AccountsAreaRegistration.cs" />
+    <Compile Include="Areas\Employers\Models\Candidates\CandidateModel.cs" />
+    <Compile Include="Areas\Employers\Models\Accounts\EmployerJoinModel.cs" />
+    <Compile Include="Areas\Accounts\Models\ChangePasswordModel.cs" />
+    <Compile Include="Areas\Employers\Models\Accounts\ProfileModel.cs" />
+    <Compile Include="Modules\AuthenticationModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agents\Agents.csproj">
+      <Project>{29B2CC57-2147-424E-BEF6-D86A4B5C8A70}</Project>
+      <Name>Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Asp\Asp.csproj">
+      <Project>{4430078D-3F59-472A-8B0A-F2515609570D}</Project>
+      <Name>Asp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation\Presentation.csproj">
+      <Project>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57190</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

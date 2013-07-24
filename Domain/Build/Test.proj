@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Test">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TestAssemblies Include="$(SourceRootDirectory)Test\bin\LinkMe.Domain.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Roles\Test\bin\LinkMe.Domain.Roles.Test.dll" />
+    <TestAssemblies Include="$(SourceRootDirectory)Users\Test\bin\LinkMe.Domain.Users.Test.dll" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemTest.proj" />
+
+</Project>

@@ -1,0 +1,173 @@
+.checkboxmenu_ascx {}
+	.checkboxmenu_ascx .minilist .item,
+	.checkboxmenu_ascx .minilist .item:first-child,
+	.checkboxmenu_ascx .minilist .ie_firstchild {
+		padding: 8px 7px;
+	}
+	
+	.checkboxmenu_ascx .minilist-header {
+		border: none;
+		padding: 4px 5px 5px 5px;
+		background: url(../../images/controls/checkboxmenu/menu-heading.png) bottom right;
+		border-left: 1px solid #f8f8f8;
+		border-top: 1px solid #eeeeee;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 75%;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #000033;
+	}
+		.section-content .checkboxmenu_ascx .minilist-header {
+			border-top: none;
+		}
+		
+    .checkboxmenu_ascx fieldset .field {
+        padding-top: 0;
+    }
+	
+	.checkboxmenu_ascx .minilist-header .close_button {
+		background:transparent url(../../images/buttons/mini_light/x.png) no-repeat scroll left top;
+		display:block;
+		float:right;
+		font-size:0;
+		height:14px;
+		margin:0;
+		padding:0;
+		text-indent:-9999px;
+		width:14px;
+		line-height: 14px; /* Temporary override of faulty forms_v2 rule for buttons */
+	}
+	.checkboxmenu_ascx .minilist-header .close_button:hover {
+		background-position:left center;
+	}
+	.checkboxmenu_ascx .minilist-header .close_button:active {
+		background-position:left bottom;
+	}
+	
+	.checkboxmenu_ascx input.checkbox {
+		margin-left: 0.5px;	/* Stops Firefox blurring semi-transparent checkboxes */
+	}
+	
+	.checkboxmenu_ascx .minilist .item_has-children {
+		background-image: url(../../images/controls/checkboxmenu/item-has-children.png);
+		background-position: right 0px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}		
+		.checkboxmenu_ascx .minilist .item_has-children label {
+			font-weight: bold;
+			color: #555555;
+		}
+	
+	.checkboxmenu_ascx .minilist .highlighted_item,
+	.checkboxmenu_ascx .minilist .highlighted_item:first-child {
+		background: #6BF;
+		color: #FFF;		/* In case there's non-label text in an item in future */
+		background-image: url(../../images/controls/checkboxmenu/item-has-children.png);
+		background-position: right -200px;
+		border-left: none;
+		border-right: none;
+		padding: 8px 8px;
+	}
+		.checkboxmenu_ascx .minilist .highlighted_item label {
+			color: #FFF;
+		}
+		
+	.checkboxmenu_ascx .minilist .hovered_item,
+	.checkboxmenu_ascx .minilist .hovered_item:first-child {
+		background: #6BF;
+		color: #FFF;		/* In case there's non-label text in an item in future */
+		background-image: url(../../images/controls/checkboxmenu/item-has-children.png);
+		background-position: right -400px;
+		border-left: none;
+		border-right: none;
+		padding: 8px 8px;
+		border-bottom: 1px solid #C3D4E5;
+	}
+		.checkboxmenu_ascx .minilist .hovered_item label {
+			color: #112233;
+		}
+		
+	.checkboxmenu_ascx .minilist .highlighted_hovered_item,
+	.checkboxmenu_ascx .minilist .highlighted_hovered_item:first-child {
+		background: #6BF;
+		color: #FFF;		/* In case there's non-label text in an item in future */
+		background-image: url(../../images/controls/checkboxmenu/item-has-children.png);
+		background-position: right -600px;
+		border-left: none;
+		border-right: none;
+		padding: 8px 8px;
+	}
+		.checkboxmenu_ascx .minilist .highlighted_hovered_item label {
+			color: #FFF;
+		}
+		
+	.checkboxmenu_ascx .minilist .disabled_item,
+	.checkboxmenu_ascx .minilist .disabled_item:first-child,
+	.checkboxmenu_ascx .minilist .disabled_item label {
+		color: #888 !important;
+		text-decoration: none !important;
+		cursor: default;
+	}
+	
+	.checkboxmenu_ascx .checkbox_control * {
+		cursor: pointer;
+	}
+	
+	.checkboxmenu_ascx .checkbox_control .checkbox {
+		float: left;
+		margin-right: 5px;
+	}
+	
+	.checkboxmenu_ascx .checkbox_control label {
+		float: left;
+		top: -1px;
+	}
+		.checkboxmenu_ascx .checkbox_control:hover label {
+			text-decoration: underline;
+		}
+		.checkboxmenu_ascx .item_has-children:hover label {
+			text-decoration: none;
+		}	
+	.checkboxmenu_ascx .column {
+		float: left;
+		width: 238px;
+	}
+	
+	.checkboxmenu_ascx:after,
+	.checkboxmenu_ascx .column:after {	/* Modern-browser self-clearing */
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.checkboxmenu_ascx,
+	.checkboxmenu_ascx .column {	/* IE6,7 solution */
+		zoom: 1;					/* Invalid CSS, hasLayout trigger */
+	}
+	
+	.checkboxmenu_ascx .column .checkbox_control {}
+		.checkboxmenu_ascx .column .checkbox_control label {
+			font-size: 85%;
+			width: 193px;
+		}
+		
+	.checkboxmenu_ascx .column0 {
+		width: 202px;
+		margin-right: 10px;
+	}
+		.checkboxmenu_ascx .column0 .checkbox_control label {
+			width: 157px;
+			font-size: 90%;
+			font-weight: bold;
+		}
+	
+	.checkboxmenu_ascx .column1 {
+		width: 218px;
+		margin-right: 10px;
+	}
+		.checkboxmenu_ascx .column1 .checkbox_control label {
+			width: 173px;
+		}

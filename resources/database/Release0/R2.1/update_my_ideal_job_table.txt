@@ -1,0 +1,3 @@
+INSERT into linkme_owner.user_profile_ideal_job
+(id, currentBenefitsPhone, currentBenefitsCar)
+SELECT id, 0, 0 from linkme_owner.networker_profile;

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="http://rpc.xml.coldfusion" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://component" xmlns:intf="http://component" targetNamespace="http://component" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rpc.xml.coldfusion">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="CFCInvocationException">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CFCInvocationException">
+    <wsdl:part name="fault" type="tns1:CFCInvocationException" />
+  </wsdl:message>
+  <wsdl:message name="syncRequest">
+    <wsdl:part name="xmlData" type="xsd:string" />
+    <wsdl:part name="provider" type="xsd:string" />
+    <wsdl:part name="pwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="syncResponse">
+    <wsdl:part name="syncReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="Syndicate">
+    <wsdl:operation name="sync" parameterOrder="xmlData provider pwd">
+      <wsdl:input name="syncRequest" message="intf:syncRequest" />
+      <wsdl:output name="syncResponse" message="intf:syncResponse" />
+      <wsdl:fault name="CFCInvocationException" message="intf:CFCInvocationException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="syndicate.cfcSoapBinding" type="intf:Syndicate">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="sync">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="syncRequest">
+        <wsdlsoap:body use="encoded" namespace="http://component" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="syncResponse">
+        <wsdlsoap:body use="encoded" namespace="http://component" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://component" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Syndication">
+    <wsdl:port name="syndicate.cfc" binding="intf:syndicate.cfcSoapBinding">
+      <wsdlsoap:address location="http://www.hrcareers.com.au/component/syndicate.cfc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

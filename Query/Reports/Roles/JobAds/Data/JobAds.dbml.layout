@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 12" name="JobAds">
+  <DataContextMoniker Name="/JobAdsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2ede1d68-2f56-4045-a83d-e21fd41c0bcd" absoluteBounds="5.625, 1.375, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/JobAdsDataContext/JobAdEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3318205-fe39-4261-8ef5-d17a127e70de" absoluteBounds="5.64, 1.835, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c7b2424-e42c-41e2-976c-0cd9b6c90543" absoluteBounds="9.375, 8.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/JobAdsDataContext/JobApplicationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="490df90d-7ed4-4a92-9031-ed489263a5f3" absoluteBounds="9.39, 9.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32d44d88-578c-4a4d-9649-faa967bcca18" absoluteBounds="5.75, 10, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/JobAdsDataContext/ExternalApplicationEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d284f324-6394-4426-8124-b37ebcc27bf8" absoluteBounds="5.765, 10.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7baf3189-2150-4176-aa75-852537172ada" absoluteBounds="1.875, 7.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/JobAdsDataContext/JobAdStatusEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb5cd5ab-2ca7-442d-b88e-15c008cad522" absoluteBounds="1.8899999999999997, 7.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 8.20746988932292); (3.875 : 8.20746988932292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JobAdsDataContext/JobAdEntity/JobAdEntity_JobAdStatus" />
+      <nodes>
+        <classShapeMoniker Id="2ede1d68-2f56-4045-a83d-e21fd41c0bcd" />
+        <classShapeMoniker Id="7baf3189-2150-4176-aa75-852537172ada" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3303ee93-da55-48ad-806b-830f42cb34af" absoluteBounds="2.25, 10.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JobAdsDataContext/JobAdViewingEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a84b0a6b-0dc8-445c-ad7f-f4d8df9c7739" absoluteBounds="2.2649999999999997, 10.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

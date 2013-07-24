@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<poll>
+  <question text="What is the main reason to begin searching for a new job?" />
+  <answer text="Change in Career" number="0"></answer>
+  <answer text="More Money" number="1"></answer>
+  <answer text="Promotional Opportunities" number="2"></answer>
+  <answer text="Dislike Your Boss" number="3"></answer>
+  <answer text="Fear of Losing Your Job" number="4"></answer>
+</poll>

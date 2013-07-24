@@ -1,0 +1,39 @@
+body
+{
+}
+
+ol.resume {
+	float:left;
+	width:224px;
+	padding-left:25px;
+}
+ul.resume {
+	float:left;
+	width:224px;
+	padding-left:1.5em;
+	margin:1em 0 0 1em;
+}
+ul.resume li {
+	padding-bottom:1em;
+}
+h2 {
+	float:left;
+	width:249px;
+}
+.captioned-image {
+	width:280px;
+	margin-right:13px;
+	float:left;
+}
+.captioned-image img {
+	border:1px solid #004A6F;
+}
+.captioned-image div{
+	padding: 3px 0px 3px 0px;
+	color:#999;
+}
+table.resume {
+	float:left;
+	margin-right:13px;
+	margin-top:10px;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Thomas Sewell (JobServe Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://job8.com/messages" xmlns:ns1="http://jobg8.com/" xmlns:ns2="http://jobg8.com/messages" targetNamespace="http://jobg8.com/messages" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:import namespace="http://jobg8.com/" schemaLocation="AdvertPostSchema.xsd"/>
+   <xs:import namespace="http://jobg8.com/" schemaLocation="AdvertAmendSchema.xsd"/>
+   <xs:import namespace="http://jobg8.com/" schemaLocation="AdvertDeleteSchema.xsd"/>
+   <!-- complex types-->
+	<xs:complexType name="PostAdvertResponse">
+		<xs:sequence>
+			<xs:element name="Success" type="xs:string" fixed="" minOccurs="1"/>			
+		</xs:sequence>
+	</xs:complexType>	
+	<xs:element name="PostAdvert" type="ns1:PostAdvertType">
+		<xs:annotation>
+			<xs:documentation>The request to the web service</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PostAdvertResponse" type="ns2:PostAdvertResponse">
+		<xs:annotation>
+			<xs:documentation>The response from the web service</xs:documentation>
+		</xs:annotation>			
+	</xs:element>
+   <xs:complexType name="AmendAdvertResponse">
+      <xs:sequence>
+         <xs:element name="Success" type="xs:string" fixed="" minOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="AmendAdvert" type="ns1:AmendAdvertType">
+      <xs:annotation>
+         <xs:documentation>The request to the web service</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="AmendAdvertResponse" type="ns2:AmendAdvertResponse">
+      <xs:annotation>
+         <xs:documentation>The response from the web service</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DeleteAdvertResponse">
+      <xs:sequence>
+         <xs:element name="Success" type="xs:string" fixed="" minOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="DeleteAdvert" type="ns1:DeleteAdvertType">
+      <xs:annotation>
+         <xs:documentation>The request to the web service</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="DeleteAdvertResponse" type="ns2:DeleteAdvertResponse">
+      <xs:annotation>
+         <xs:documentation>The response from the web service</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+</xs:schema>

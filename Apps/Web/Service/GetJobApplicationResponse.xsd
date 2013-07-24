@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- GetJobApplication response version 1.0 -->
+  <xs:element name="GetJobApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ReturnCode" type="tns:WebServiceReturnCode" />
+        <xs:element name="JobApplication" type="tns:JobApplication" minOccurs="0" />
+        <xs:element name="Errors" type="tns:Errors" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:GetJobApplicationResponseVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="GetJobApplicationResponseVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="JobApplication">
+    <xs:sequence>
+      <xs:element name="Applicant">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Address" type="tns:ApplicantAddress" minOccurs="0" />
+          </xs:sequence>
+          <xs:attribute name="email" use="required" type="tns:EmailAddress" />
+          <xs:attribute name="firstName" use="required" type="tns:PersonName"/>
+          <xs:attribute name="lastName" use="required" type="tns:PersonName"/>
+          <xs:attribute name="contactPhoneNumber" type="tns:PhoneNumber"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Resume" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="name" use="required" type="tns:FileName" />
+          <xs:attribute name="uri" use="required" type="xs:anyURI"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicantAddress">
+    <xs:attribute name="state" type="tns:AddressState" />
+    <xs:attribute name="postcode" type="tns:Postcode" />
+  </xs:complexType>
+</xs:schema>

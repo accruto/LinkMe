@@ -1,0 +1,64 @@
+#wizardLocus {
+	margin:1em 0em 1em 0em;
+	padding:0px;
+	list-style-type:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:110%;
+	float:left;
+	width:100%;
+}
+#wizardLocus li{
+	margin:0px;
+	padding:10px 1em 10px 28px;
+	float:left;
+}
+#wizardLocus li span {
+	background-image:url(../img/arrow.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+	padding-right:1.5em;
+}
+#one {
+	background-image:url(../img/one.gif);
+}
+#two {
+	background-image:url(../img/two.gif);
+}
+#three {
+	background-image:url(../img/three.gif);
+}
+#four {
+	background-image:url(../img/four.gif);
+}
+#five {
+	background-image:url(../img/five.gif);
+}
+#wizardLocus a {
+	color:#999;
+}
+#one, #two, #three, #four, #five {
+	
+	color:#999;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+#oneOn, #twoOn, #threeOn, #fourOn, #fiveOn {
+	color: #004A6F;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+#oneOn {
+	background-image:url(../img/oneOn.gif);
+}
+#twoOn {
+	background-image:url(../img/twoOn.gif);
+}
+#threeOn {
+	background-image:url(../img/threeOn.gif);
+}
+#fourOn {
+	background-image:url(../img/fourOn.gif);
+}
+#fiveOn {
+	background-image:url(../img/fiveOn.gif);
+}

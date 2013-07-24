@@ -1,0 +1,112 @@
+/* CSS Document */
+/*
+Balance Sheet Styles
+*/
+#balanceSheet {
+	width:565px;
+	margin:auto;
+}
+#productsTable {
+	border:1px solid #CCCCCC;
+	border: 1px 0px 0px 1px;
+	width:100%;
+}
+#productsTable tr td, #productsTable tr th  {
+	padding:0px 3px 0px 3px;
+	border:1px solid #CCCCCC;
+	vertical-align:text-top;
+}
+#productsTable tr th {
+	background-color:#E8E8E8;
+	text-align:left;
+}
+
+#productsTable .addInfo
+{
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	width:380px;
+}
+
+#productsTable .unitPriceCol {
+	width:80px;
+}
+#productsTable .qtyCol {
+	width:30px;
+}
+
+#productsTable .totalCol {
+	width:80px;
+}
+
+#totalsTable {
+	float:right;
+}
+#totalsTable .labelCol {
+	width:137px;
+	text-align: right;
+}
+#totalsTable .totalCol {
+	width:80px;
+}
+#totalsTable tr td{
+	border:1px solid #CCCCCC;
+	padding:0px 3px 0px 3px;
+	border:1px solid #CCCCCC;
+	border-top:0px;
+	vertical-align:text-top;
+	
+}
+
+#balanceSheet table {
+	border-collapse: collapse;
+	margin:0px;
+	padding:0px;
+}
+
+dt.billing
+{
+	float: left;
+	width: 150px;
+	padding-top: 3px;
+	text-align: right;
+	margin-right: 5px;
+}
+dd.billing
+{
+	margin-left: 160px;
+}
+
+.longerText
+{
+	width: 250px;
+}
+
+.longestText
+{
+	width: 330px;
+}
+
+.shorterText
+{
+	width: 50px;
+}
+
+#BillingMsg 
+{
+	color: #000; text-align:left; background: #F9F7C6 url("../img/confirmTop.gif") no-repeat top left; width: 540px; margin: 10px; 
+}
+
+#BillingMsg div
+{
+	margin: 0; background: url("../img/confirmBottom.gif") no-repeat bottom left;
+}
+
+#BillingMsg div div
+{
+	padding:20px 15px; padding-left: 50px; background: url("../img/confirm.gif") no-repeat 10px 10px; 	
+}
+
+/*
+End of Balance Sheet Styles
+*/

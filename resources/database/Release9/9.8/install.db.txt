@@ -1,0 +1,16 @@
+alter_NetworkLink.sql
+alter_NetworkerEvent.sql
+alter_IgnoredNetworkMatch.sql
+
+alter_EmailVerification.sql
+
+alter_Member_EthnicFlags.sql
+
+create_CandidateDiary.sql
+create_CandidateDiaryEntry.sql
+alter_Candidate_Diary.sql
+
+alter_ResumeView.sql
+create_UQ_ResumeFilter.sql
+
+create_Spammer.sql

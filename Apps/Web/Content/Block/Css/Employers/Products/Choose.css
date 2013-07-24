@@ -1,0 +1,105 @@
+﻿.search-resumes-section .section-body {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+.search-resumes-section .section-icon {
+    background: url(../../../images/employers/products/find-candidates.png) top left no-repeat;
+    font-size: 0;
+    text-indent: -9999px;
+    position: absolute;
+    width: 76px;
+    height: 82px;
+    top: 27px;
+    right: 350px;
+    cursor: default;
+}
+
+.search-resumes-section .section-title h2 {
+    background: url(../../../images/employers/products/h2_search-resumes.png) top left no-repeat;
+    font-size: 0;
+    text-indent: -9999px;
+    height: 30px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.search-resumes-section .section-title .tagline {
+    height: 33px;
+    margin-left: 0px;
+    margin-bottom: 18px;
+    width: 240px;
+    color: #4488BB;
+}
+
+.product-cost {
+    background: url(../../../images/employers/products/product-cost-bg.png) top left no-repeat;
+    width: 297px;
+    height: 54px;
+    position: relative;
+    left: 305px;
+    margin-top: 12px;
+    margin-bottom: -20px;
+    padding: 15px;
+}
+
+.product-cost h3 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #369;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7px;
+}
+
+.product-cost select {
+    border: 1px solid #ABABAB;
+    width: 3.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #333;
+    font-size: 130%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.product-cost .at-n-each {
+    font-size: 85%;
+    color: #369;
+}
+
+.product-cost .product-price {
+    font-size: 117%;    /* Undoes the 85% size -> puts it to "100%" */
+    color: #333;
+}
+
+.product-cost dl.total {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    padding-right: 25px;
+    margin-top: -0.6em;
+    right: 0;
+}
+
+.product-cost dl.total dt {
+    color: #369;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.product-cost dl.total dd {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.product-cost dl.total dd .plus-gst {
+    font-weight: normal;
+    font-size: 80%;
+    color: #666;
+}

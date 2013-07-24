@@ -1,0 +1,5 @@
+drop_MemberIndexing_FK.sql
+MemberSetModified.sql
+drop_JobAdIndexing_FK.sql
+JobAdSetModified.sql
+ResourceSetModified.sql

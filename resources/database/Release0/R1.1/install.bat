@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:add_columns_employer_profile_table.sql,update_employer_profile_table.sql,add_columns_user_profile_table.sql,update_database_version_table.sql

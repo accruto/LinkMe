@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "App", "App\App.wixproj", "{A97341C6-DA97-4553-8ACF-DFB7E92F925B}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Web", "Web\Web.wixproj", "{BA2B89DA-69A5-45d5-9A8B-C97E918D97B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A97341C6-DA97-4553-8ACF-DFB7E92F925B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97341C6-DA97-4553-8ACF-DFB7E92F925B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97341C6-DA97-4553-8ACF-DFB7E92F925B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97341C6-DA97-4553-8ACF-DFB7E92F925B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2B89DA-69A5-45d5-9A8B-C97E918D97B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2B89DA-69A5-45d5-9A8B-C97E918D97B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2B89DA-69A5-45d5-9A8B-C97E918D97B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2B89DA-69A5-45d5-9A8B-C97E918D97B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

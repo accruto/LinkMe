@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+
+    <!-- Includes -->
+    
+    <siteMapNode url="~/landing/Join.aspx"
+                 title="Jobs | IT Jobs | Accounting Jobs | Finance Jobs | Engineering Jobs | Health Jobs"
+                 description="A place to find a job or connect with friends and colleagues to find a job. Enhance your job prospects by connecting with friends and colleagues in your current job and previous jobs."
+                 crawlable="false" />
+
+    <siteMapNode url="~/landing/SampleJoin.aspx" />
+
+  	<siteMapNode url="~/landing/Login.aspx" />
+
+  </siteMapNode>
+
+</siteMap>

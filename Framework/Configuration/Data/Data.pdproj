@@ -1,0 +1,182 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{f8ab413f-df7b-4796-bdd5-45212b34859f}</ProjectGuid>
+    <Name>Data</Name>
+  </PropertyGroup>
+  <ItemGroup>
+    <Merge Include="Functions\LinkMe.Framework.Configuration.Data.Functions.txt">
+      <Link>Functions\LinkMe.Framework.Configuration.Data.Functions.txt</Link>
+    </Merge>
+    <Merge Include="Security\LinkMe.Framework.Configuration.Data.Security.txt">
+      <Link>Security\LinkMe.Framework.Configuration.Data.Security.txt</Link>
+    </Merge>
+    <Merge Include="StoredProcedures\LinkMe.Framework.Configuration.Data.StoredProcedures.txt">
+      <Link>StoredProcedures\LinkMe.Framework.Configuration.Data.StoredProcedures.txt</Link>
+    </Merge>
+    <Merge Include="Tables\LinkMe.Framework.Configuration.Data.Tables.txt">
+      <Link>Tables\LinkMe.Framework.Configuration.Data.Tables.txt</Link>
+    </Merge>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FcDomain.sql">
+      <Link>Tables\FcDomain.sql</Link>
+    </None>
+    <None Include="Tables\FcModule.sql">
+      <Link>Tables\FcModule.sql</Link>
+    </None>
+    <None Include="Tables\FcRepositoryType.sql">
+      <Link>Tables\FcRepositoryType.sql</Link>
+    </None>
+    <None Include="Tables\FcRepository.sql">
+      <Link>Tables\FcRepository.sql</Link>
+    </None>
+    <None Include="Tables\FcStoreType.sql">
+      <Link>Tables\FcStoreType.sql</Link>
+    </None>
+    <None Include="Tables\FcStore.sql">
+      <Link>Tables\FcStore.sql</Link>
+    </None>
+    <None Include="Tables\FcDomainVariable.sql">
+      <Link>Tables\FcDomainVariable.sql</Link>
+    </None>
+    <None Include="Tables\FcModuleVariable.sql">
+      <Link>Tables\FcModuleVariable.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FcGetDomains.sql">
+      <Link>StoredProcedures\FcGetDomains.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateDomain.sql">
+      <Link>StoredProcedures\FcUpdateDomain.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteDomain.sql">
+      <Link>StoredProcedures\FcDeleteDomain.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetModules.sql">
+      <Link>StoredProcedures\FcGetModules.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateModule.sql">
+      <Link>StoredProcedures\FcUpdateModule.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteModule.sql">
+      <Link>StoredProcedures\FcDeleteModule.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetRepositoryTypes.sql">
+      <Link>StoredProcedures\FcGetRepositoryTypes.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateRepositoryType.sql">
+      <Link>StoredProcedures\FcUpdateRepositoryType.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteRepositoryType.sql">
+      <Link>StoredProcedures\FcDeleteRepositoryType.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetRepositories.sql">
+      <Link>StoredProcedures\FcGetRepositories.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetVariables.sql">
+      <Link>StoredProcedures\FcGetVariables.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateRepository.sql">
+      <Link>StoredProcedures\FcUpdateRepository.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteRepository.sql">
+      <Link>StoredProcedures\FcDeleteRepository.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateVariable.sql">
+      <Link>StoredProcedures\FcUpdateVariable.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteVariable.sql">
+      <Link>StoredProcedures\FcDeleteVariable.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetStoreTypes.sql">
+      <Link>StoredProcedures\FcGetStoreTypes.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateStoreType.sql">
+      <Link>StoredProcedures\FcUpdateStoreType.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteStoreType.sql">
+      <Link>StoredProcedures\FcDeleteStoreType.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetStores.sql">
+      <Link>StoredProcedures\FcGetStores.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateStore.sql">
+      <Link>StoredProcedures\FcUpdateStore.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteStore.sql">
+      <Link>StoredProcedures\FcDeleteStore.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetDomainVariables.sql">
+      <Link>StoredProcedures\FcGetDomainVariables.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateDomainVariable.sql">
+      <Link>StoredProcedures\FcUpdateDomainVariable.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteDomainVariable.sql">
+      <Link>StoredProcedures\FcDeleteDomainVariable.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcGetModuleVariables.sql">
+      <Link>StoredProcedures\FcGetModuleVariables.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcUpdateModuleVariable.sql">
+      <Link>StoredProcedures\FcUpdateModuleVariable.sql</Link>
+    </None>
+    <None Include="StoredProcedures\FcDeleteModuleVariable.sql">
+      <Link>StoredProcedures\FcDeleteModuleVariable.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Functions\FcGetParentNameFromFullName.sql">
+      <Link>Functions\FcGetParentNameFromFullName.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\" />
+    <Folder Include="Security\" />
+    <Folder Include="StoredProcedures\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FcComputer.sql">
+      <Link>Tables\FcComputer.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FcUpdateComputer.sql">
+      <Link>StoredProcedures\FcUpdateComputer.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FcDeleteComputer.sql">
+      <Link>StoredProcedures\FcDeleteComputer.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcedures\FcGetComputers.sql">
+      <Link>StoredProcedures\FcGetComputers.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FcWriter.sql">
+      <Link>Security\FcWriter.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\FcReader.sql">
+      <Link>Security\FcReader.sql</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\FcVariable.sql">
+      <Link>Tables\FcVariable.sql</Link>
+    </None>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Data.targets" />
+</Project>

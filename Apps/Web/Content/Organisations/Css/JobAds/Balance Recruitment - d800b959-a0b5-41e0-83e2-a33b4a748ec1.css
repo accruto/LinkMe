@@ -1,0 +1,77 @@
+#JobAd #JobDescription #Ad {
+	width: 460px;
+	border: none;
+	background: url(balance_recruitment_images/balance_recruitment_border.png) top left repeat-y;
+}
+
+#JobAd #JobDescription #JobAdHeading {
+	background: url(balance_recruitment_images/balance_recruitment_header.png) top left no-repeat;
+	padding-top: 222px;
+}
+
+#JobAd #JobDescription #LogoFooter {
+	background: url(balance_recruitment_images/balance_recruitment_footer.png) bottom left no-repeat;
+	height: 40px;
+}
+
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad .details *,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+}
+
+#JobAd #JobDescription #Ad label {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad h1,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol,
+#JobAd #JobDescription #Ad div {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#JobAd #JobDescription #JobAdHeading h1 {
+	font-size: 19pt;
+	color: #a30303;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+#JobAd #JobDescription #JobAdHeading p {
+	font-size: 14pt;
+}
+
+#JobAd .bulletpoints {
+	margin-top: 1.25em;
+	margin-bottom: 1.5em;
+}
+
+#JobAd .bulletpoints li {
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 0.25em;
+	margin-left: -9px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	padding-left: 0;
+}
+
+#JobAd #JobDescription #Ad .details {
+	width: 400px !important;
+	position: relative;
+	left: 28px;
+	margin-bottom: 0;
+}
+
+
+

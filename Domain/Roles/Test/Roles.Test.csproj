@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{530111B7-2ED9-4934-9745-66D6C60CD578}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Domain.Roles.Test</RootNamespace>
+    <AssemblyName>LinkMe.Domain.Roles.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Affiliations\Communities\CommunityTests.cs" />
+    <Compile Include="Affiliations\Communities\CommunitiesTestExtensions.cs" />
+    <Compile Include="Affiliations\Communities\CreateCommunityTests.cs" />
+    <Compile Include="Affiliations\Verticals\CreateVerticalTests.cs" />
+    <Compile Include="Affiliations\Verticals\VerticalsTestExtensions.cs" />
+    <Compile Include="Affiliations\Verticals\VerticalTests.cs" />
+    <Compile Include="Candidates\CandidatesTests.cs" />
+    <Compile Include="Candidates\Lens\DeserializeSampleTests.cs" />
+    <Compile Include="Candidates\Mocks\TestResume.cs" />
+    <Compile Include="Candidates\Mocks\TestResumeTests.cs" />
+    <Compile Include="Candidates\Properties\RecentProfessionTests.cs" />
+    <Compile Include="Candidates\Properties\VisaStatusTests.cs" />
+    <Compile Include="Candidates\Properties\HighestEducationLevelTests.cs" />
+    <Compile Include="Candidates\Properties\IndustriesTests.cs" />
+    <Compile Include="Candidates\Properties\PropertiesTests.cs" />
+    <Compile Include="Candidates\Resumes\CandidateResumeFilesTests.cs" />
+    <Compile Include="Candidates\Resumes\CandidateResumesTests.cs" />
+    <Compile Include="Candidates\CandidatesTestExtensions.cs" />
+    <Compile Include="Candidates\Diaries\DiariesTests.cs" />
+    <Compile Include="Candidates\Mocks\MockLensParseResumeDataCommand.cs" />
+    <Compile Include="Candidates\Properties\RecentSeniorityTests.cs" />
+    <Compile Include="Candidates\Properties\RelocationTests.cs" />
+    <Compile Include="Candidates\Resumes\ResumesTests.cs" />
+    <Compile Include="Candidates\Resumes\ValidateResumeFilesTests.cs" />
+    <Compile Include="Candidates\Workflows\StatusWorkflowTests.cs" />
+    <Compile Include="Communications\Mocks\IMockEmailServer.cs" />
+    <Compile Include="Communications\Mocks\IMockEmailService.cs" />
+    <Compile Include="Communications\Mocks\MockEmail.cs" />
+    <Compile Include="Communications\Mocks\MockEmailClient.cs" />
+    <Compile Include="Communications\Mocks\MockEmailServer.cs" />
+    <Compile Include="Communications\Mocks\MockEmailService.cs" />
+    <Compile Include="Communications\Settings\CategoryTests.cs" />
+    <Compile Include="Contenders\ExternalApplicationsTests.cs" />
+    <Compile Include="Contenders\InternalApplicationsTests.cs" />
+    <Compile Include="Integration\LinkedIn\LinkedInTests.cs" />
+    <Compile Include="JobAds\JobAdRefreshTests.cs" />
+    <Compile Include="JobAds\JobAdExpiryTimeTests.cs" />
+    <Compile Include="JobAds\JobAdsTests.cs" />
+    <Compile Include="JobAds\JobAdStatusTests.cs" />
+    <Compile Include="TestAssembly.cs" />
+    <Compile Include="JobAds\JobAdTestExtensions.cs" />
+    <Compile Include="JobAds\JobAdViewsTests.cs" />
+    <Compile Include="Orders\CouponOrderTests.cs" />
+    <Compile Include="Orders\CouponsTests.cs" />
+    <Compile Include="Recruiters\ContactDetailsTests.cs" />
+    <Compile Include="Resumes\OrderedSchoolsTests.cs" />
+    <Compile Include="Resumes\Data\Resumes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resumes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidates\Lens\DeserializeTests.cs" />
+    <Compile Include="Resumes\MockParseTests.cs" />
+    <Compile Include="Resumes\OrderedJobsTests.cs" />
+    <Compile Include="Candidates\Lens\PropertiesTests.cs" />
+    <Compile Include="Networking\InvitationsTests.cs" />
+    <Compile Include="Orders\MockAdjustmentPersister.cs" />
+    <Compile Include="Orders\MockPurchasesCommand.cs" />
+    <Compile Include="Orders\OrdersTests.cs" />
+    <Compile Include="Orders\PurchaseProductsTests.cs" />
+    <Compile Include="Orders\PurchaseTransactionsTests.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Recruiters\Affiliations\AffiliationTests.cs" />
+    <Compile Include="Recruiters\Affiliations\OrganisationAffiliationsTests.cs" />
+    <Compile Include="Representatives\RepresentativesTests.cs" />
+    <Compile Include="Communications\Campaigns\CampaignsCommandTests.cs" />
+    <Compile Include="Communications\Campaigns\CreateCampaignTest.cs" />
+    <Compile Include="Communications\Campaigns\Data\CampaignsRepositoryTests.cs" />
+    <Compile Include="Communications\Campaigns\Data\CreateCampaignTest.cs" />
+    <Compile Include="Communications\Campaigns\Data\GetCampaignsStatusFilterTest.cs" />
+    <Compile Include="Communications\Campaigns\Data\GetCampaignsTest.cs" />
+    <Compile Include="Communications\Campaigns\Data\UpdateCampaignTest.cs" />
+    <Compile Include="Communications\Campaigns\Data\UpdateTemplateTest.cs" />
+    <Compile Include="Communications\Mocks\MockEmailTestExtensions.cs" />
+    <Compile Include="Communications\Campaigns\Mocks\MockCampaignCategoriesCommand.cs" />
+    <Compile Include="Communications\Campaigns\Mocks\MockCriteriaPersister.cs" />
+    <Compile Include="Communications\Campaigns\UpdateCampaignStatusTest.cs" />
+    <Compile Include="Communications\Campaigns\UpdateCampaignTest.cs" />
+    <Compile Include="Communications\Campaigns\UpdateTemplateTest.cs" />
+    <Compile Include="Integration\IntegrationTestExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recruiters\CircularHierarchyTests.cs" />
+    <Compile Include="Recruiters\OrganisationAddressTests.cs" />
+    <Compile Include="Recruiters\OrganisationHierarchyTests.cs" />
+    <Compile Include="Recruiters\OrganisationNameTests.cs" />
+    <Compile Include="Recruiters\OrganisationsTestExtensions.cs" />
+    <Compile Include="Recruiters\OrganisationsTests.cs" />
+    <Compile Include="Recruiters\VerifyOrganisationTests.cs" />
+    <Compile Include="Resumes\ParsedResumesTests.cs" />
+    <Compile Include="Resumes\ResumesTests.cs" />
+    <Compile Include="Resumes\SaveResumesTests.cs" />
+    <Compile Include="TestClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain.csproj">
+      <Project>{822187F9-5344-443C-83B8-1A26CE492157}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test\Domain.Test.csproj">
+      <Project>{DB53996F-95A9-4091-9FD6-76A564C59D9A}</Project>
+      <Name>Domain.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Roles.csproj">
+      <Project>{84CAB40C-210E-4CDD-85D9-7BFBA7C51670}</Project>
+      <Name>Roles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resumes\Data\Resumes.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Resumes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resumes\Data\Resumes.dbml.layout">
+      <DependentUpon>Resumes.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\build\killbydll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

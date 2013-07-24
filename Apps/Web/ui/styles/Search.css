@@ -1,0 +1,82 @@
+#search {
+	text-align: left;
+	float: left;
+}
+#control {
+	text-align:left;
+	padding-bottom:3px;
+	font-weight: bold;	
+}
+#control a{
+	font-weight: normal;	
+}
+#control a, #control span {
+	margin-right:1.4em;
+}
+#search div.item
+{
+	float:left;
+	margin-right: 2px;
+}
+
+#search label
+{
+	color: #000;
+	font-weight: bold;
+	display: block;
+	text-align:left;
+}
+
+#search .salary
+{
+	float:left;
+	margin-right: 2px;
+}
+
+#search .input
+{
+	width: 150px;
+}
+
+#search .long
+{
+	width: 210px;
+}
+
+#search .longer
+{
+	width: 305px;
+}
+
+#search .location
+{
+	width: 150px;
+}
+
+#search .salaryInput
+{
+	width: 65px;
+}
+
+#search .submit
+{
+	margin-top: 14px;
+}
+
+#search .links
+{
+	margin-top: 7px;
+}
+#header form {
+	padding:0px;
+	margin:0px;
+}
+
+#search .sub {
+	text-align:left;
+	white-space:nowrap;
+}
+/* layout */
+#info {
+	text-align:right;
+}

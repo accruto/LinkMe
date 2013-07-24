@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:drop_my_ideal_job_table.sql,create_my_ideal_job_table.sql,update_my_ideal_job_table.txt,add_columns_networker_profile_table.sql,update_columns_networker_profile_table.sql,drop_columns_networker_profile_table.sql,drop_invoice_tables.sql,create_invoice_tables.sql,update_database_version_table.sql

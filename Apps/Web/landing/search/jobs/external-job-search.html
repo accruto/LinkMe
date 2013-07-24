@@ -1,0 +1,62 @@
+<!-- 
+	LR: This is an example of how an external search form should work. The most important part here is the "name" attribute of the <input> tags 
+	Note that cross-browser compatibility is particularly important here, because we don't know which browsers are most likely to view 
+	this on external sites.
+-->
+
+<html>
+	<head></head>
+	
+	<body>
+	<!-- LinkMe off-site job search -->
+		<style type="text/css">
+			#linkme-external-job-search { 
+				background: #fff url(http://www.linkme.com.au/ui/images/universal/logo.png) 180px 5px no-repeat;
+				font-family: Verdana, Arial, sans-serif;
+				font-size: 12px;
+				margin: 5px 0px;
+				padding: 7px;
+				overflow: hidden;
+			}
+			#linkme-external-job-search form { 
+				margin-bottom: 0; 
+				border-bottom: 1px solid #ccc; 
+				*padding-bottom: 4px; /* IE hack */
+			}
+			#linkme-external-job-search hr { 
+				width: 100%; 
+				height: 0px;
+				border-top: none; 
+				border-left: none; 
+				margin: 0px; 
+			}
+			#linkme-external-job-search label { display: block; font-weight: bold; margin: 0; padding: 0; }
+			#linkme-external-job-search .linkme-text-input { width: 185px; border: 1px solid #ccc; margin: 0; }
+			#linkme-external-job-search .linkme-search-button { 
+				background: url(http://www.linkme.com.au/ui/images/buttons/search.png); 
+				width: 65px;
+			    height: 21px;
+				padding-left:5px;
+				padding-right:5px;
+				margin-bottom:7px;
+				*margin-bottom:0px; /* IE hack */
+				border: 0px;
+			}
+			#linkme-job-search-blurb { font-size: 14px; margin-top: 0px; padding: 0px; }
+			#linkme-job-search-blurb strong { font-weight: bold; }
+		</style>
+		<div id="linkme-external-job-search">
+			<form method="POST" action="http://www.linkme.com.au/landing/search/jobs/SimpleSearch.aspx">
+				<label for="LinkMeKeywords">Job Search</label>
+				<input type="text" name="LinkMeKeywords" class="linkme-text-input" />
+				<label for="LinkMeLocation" style="margin-top: 5px;">Location</label>
+				<input type="text" name="LinkMeLocation" class="linkme-text-input" />
+				<input type="submit" value="" class="linkme-search-button" />
+			</form>
+			<div id="linkme-job-search-blurb">
+				Upload your <strong>resume</strong>, be found for jobs. <strong>Free</strong> on LinkMe
+			</div>
+		</div>
+		<!-- END LinkMe off-site job search -->
+	</body>
+</html>

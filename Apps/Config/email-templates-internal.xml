@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="InternalEmail">
+      <VerticalContentItem>
+          <ViewContentItem MimeType="text/html">
+            <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+          </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="StatsEmail">
+      <VerticalContentItem>
+          <Subject>LinkMe Daily Stats</Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;">
+
+        <h2>Statistics for <%=ReportDate.ToShortDateString()%></h2>
+
+        <h3>Members</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Total members:</td>
+            <td style="text-align:left;"><%=MemberReport.Total%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Enabled members:</td>
+            <td style="text-align:left;"><%=MemberReport.Enabled%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Active members:</td>
+            <td style="text-align:left;"><%=MemberReport.Active%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">New members:</td>
+            <td style="text-align:left;"><%=MemberReport.New%></td>
+          </tr>
+        </table>
+
+        <h3>Resumes</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Total resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Total%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Searchable resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Searchable%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">New resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.New%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Updated resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Updated%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Uploaded resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Uploaded%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Reloaded resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Reloaded%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Edited resumes:</td>
+            <td style="text-align:left;"><%=ResumeReport.Edited%></td>
+          </tr>
+        </table>
+
+        <h3>Candidate searches</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr>
+            <td style="text-align:right;width:200px;"></td>
+            <td style="text-align:right;width:80px;"><strong>Web</strong></td>
+            <td style="text-align:right;width:80px;"><strong>API</strong></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;"><strong>Total searches:</strong></td>
+            <td style="text-align:right;"><strong><%=WebMemberSearchBreakdownReport.TotalSearches%></strong></td>
+            <td style="text-align:right;"><strong><%=ApiMemberSearchBreakdownReport.TotalSearches%></strong></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">New searches:</td>
+            <td style="text-align:right;"><%=WebMemberSearchBreakdownReport.TotalSearches - WebMemberSearchBreakdownReport.FilterSearches - WebMemberSearchBreakdownReport.SavedSearches%></td>
+            <td style="text-align:right;"><%=ApiMemberSearchBreakdownReport.TotalSearches - ApiMemberSearchBreakdownReport.FilterSearches - ApiMemberSearchBreakdownReport.SavedSearches%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Filter searches:</td>
+            <td style="text-align:right;"><%=WebMemberSearchBreakdownReport.FilterSearches%></td>
+            <td style="text-align:right;"><%=ApiMemberSearchBreakdownReport.FilterSearches%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Saved searches:</td>
+            <td style="text-align:right;"><%=WebMemberSearchBreakdownReport.SavedSearches%></td>
+            <td style="text-align:right;"><%=ApiMemberSearchBreakdownReport.SavedSearches%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Non-anonymous searches:</td>
+            <td style="text-align:right;"><%=WebMemberSearchBreakdownReport.TotalSearches - WebMemberSearchBreakdownReport.AnonymousSearches%></td>
+            <td style="text-align:right;"><%=ApiMemberSearchBreakdownReport.TotalSearches - ApiMemberSearchBreakdownReport.AnonymousSearches%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Anonymous searches:</td>
+            <td style="text-align:right;"><%=WebMemberSearchBreakdownReport.AnonymousSearches%></td>
+            <td style="text-align:right;"><%=ApiMemberSearchBreakdownReport.AnonymousSearches%></td>
+          </tr>
+        </table>
+
+        <h3>Candidate viewings</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr>
+            <td style="text-align:right;width:200px;"></td>
+            <td style="text-align:right;width:80px;"><strong>Web</strong></td>
+            <td style="text-align:right;width:80px;"><strong>API</strong></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;"><strong>Total viewings:</strong></td>
+            <td style="text-align:right;"><strong><%=WebMemberViewingBreakdownReport.TotalViewings%></strong></td>
+            <td style="text-align:right;"><strong><%=ApiMemberViewingBreakdownReport.TotalViewings%></strong></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Distinct viewings:</td>
+            <td style="text-align:right;"><%=WebMemberViewingBreakdownReport.DistinctViewings%></td>
+            <td style="text-align:right;"><%=ApiMemberViewingBreakdownReport.DistinctViewings%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Non-anonymous viewings:</td>
+            <td style="text-align:right;"><%=WebMemberViewingBreakdownReport.TotalViewings - WebMemberViewingBreakdownReport.AnonymousViewings%></td>
+            <td style="text-align:right;"><%=ApiMemberViewingBreakdownReport.TotalViewings - ApiMemberViewingBreakdownReport.AnonymousViewings%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Anonymous viewings:</td>
+            <td style="text-align:right;"><%=WebMemberViewingBreakdownReport.AnonymousViewings%></td>
+            <td style="text-align:right;"><%=ApiMemberViewingBreakdownReport.AnonymousViewings%></td>
+          </tr>
+        </table>
+
+        <h3>Candidate accesses</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr>
+            <td style="text-align:right;width:200px;"></td>
+            <td style="text-align:right;width:80px;"><strong>Web</strong></td>
+            <td style="text-align:right;width:80px;"><strong>API</strong></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;"><strong>Total accesses:</strong></td>
+            <td style="text-align:right;"><strong><%=WebMemberAccessBreakdownReport.TotalAccesses%></strong></td>
+            <td style="text-align:right;"><strong><%=ApiMemberAccessBreakdownReport.TotalAccesses%></strong></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Distinct accesses:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.DistinctAccesses%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.DistinctAccesses%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Messages sent:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.MessagesSent%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.MessagesSent%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Phone numbers viewed:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.PhoneNumbersViewed%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.PhoneNumbersViewed%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Resumes downloaded:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.ResumesDownloaded%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.ResumesDownloaded%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Resumes sent:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.ResumesSent%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.ResumesSent%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Unlockings:</td>
+            <td style="text-align:right;"><%=WebMemberAccessBreakdownReport.Unlockings%></td>
+            <td style="text-align:right;"><%=ApiMemberAccessBreakdownReport.Unlockings%></td>
+          </tr>
+        </table>
+
+        <h3>Online sales</h3>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Client</td>
+            <td>Company</td>
+            <td>Product</td>
+            <td>Price</td>
+          </tr>
+<%foreach (LinkMe.Query.Reports.Roles.Orders.OrderReport report in OrderReports) {%>
+          <tr>
+            <td><%=report.ClientName%></td>
+            <td><%=report.OrganisationName%></td>
+            <td><%=string.Join(", ", report.Products)%></td>
+            <td><%=GetPrice(report.Price, Currency.AUD)%></td>
+          </tr>
+<%}%>
+        </table>
+
+        <h3>Integration</h3>
+
+        <h4>Export Feed</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdExportFeedReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ExportFeedReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h4>Export Feed Id</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdExportFeedIdReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ExportFeedIdReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h4>Export Post</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+            <td style="text-align:center;">Failed</td>
+            <td style="text-align:center;">Posted</td>
+            <td style="text-align:center;">Updated</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdExportPostReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ExportPostReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+            <td style="text-align:center;"><%=report.Failed %></td>
+            <td style="text-align:center;"><%=report.Posted %></td>
+            <td style="text-align:center;"><%=report.Updated %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h4>Export Close</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+            <td style="text-align:center;">Failed</td>
+            <td style="text-align:center;">Closed</td>
+            <td style="text-align:center;">Not Found</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdExportCloseReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ExportCloseReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+            <td style="text-align:center;"><%=report.Failed %></td>
+            <td style="text-align:center;"><%=report.Closed %></td>
+            <td style="text-align:center;"><%=report.NotFound %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h4>Import Post</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+            <td style="text-align:center;">Failed</td>
+            <td style="text-align:center;">Posted</td>
+            <td style="text-align:center;">Closed</td>
+            <td style="text-align:center;">Updated</td>
+            <td style="text-align:center;">Duplicates</td>
+            <td style="text-align:center;">Ignored</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdImportPostReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ImportPostReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+            <td style="text-align:center;"><%=report.Failed %></td>
+            <td style="text-align:center;"><%=report.Posted %></td>
+            <td style="text-align:center;"><%=report.Closed %></td>
+            <td style="text-align:center;"><%=report.Updated %></td>
+            <td style="text-align:center;"><%=report.Duplicates %></td>
+            <td style="text-align:center;"><%=report.Ignored %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h4>Import Close</h4>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Integrator</td>
+            <td style="text-align:center;">Events</td>
+            <td style="text-align:center;">Successes</td>
+            <td style="text-align:center;">Job Ads</td>
+            <td style="text-align:center;">Failed</td>
+            <td style="text-align:center;">Closed</td>
+            <td style="text-align:center;">Not Found</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in JobAdIntegrationReports) {
+    LinkMe.Query.Reports.Roles.Integration.JobAdImportCloseReport report = ((LinkMe.Query.Reports.Roles.Integration.JobAdIntegrationReport)entry.Value).ImportCloseReport;
+    if (report.Events > 0) { %>
+          <tr>
+            <td><%= entry.Key %></td>
+            <td style="text-align:center;"><%=report.Events %></td>
+            <td style="text-align:center;"><%=report.Successes %></td>
+            <td style="text-align:center;"><%=report.JobAds %></td>
+            <td style="text-align:center;"><%=report.Failed %></td>
+            <td style="text-align:center;"><%=report.Closed %></td>
+            <td style="text-align:center;"><%=report.NotFound %></td>
+          </tr>
+<%     }
+   }%>
+        </table>
+
+        <h3>Other</h3>
+
+        <table cellspacing="0" cellpadding="2">
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Returning users today:</td>
+            <td style="text-align:left;"><%=LoggedInUniqueDaily%> (<%=LoggedInUniquePercentageDaily%>%) (<%=LoggedInUniqueMembersDaily%> Members, <%=LoggedInUniqueEmployersDaily%> Employers,
+            <%=LoggedInUniqueAdministratorsDaily%> Administrators, <%=LoggedInUniqueCustodiansDaily%> Community Administrators)</td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Returning users week to date:</td>
+            <td style="text-align:left;"><%=LoggedInUniqueWeekly%> (<%=LoggedInUniqueWeeklyPercentage%>%) (<%=LoggedInUniqueMembersWeekly%> Members, <%=LoggedInUniqueEmployersWeekly%> Employers,
+            <%=LoggedInUniqueAdministratorsWeekly%> Administrators, <%=LoggedInUniqueCustodiansWeekly%> Community Administrators)</td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Returning users month to date:</td>
+            <td style="text-align:left;"><%=LoggedInUniqueMonthly%> (<%=LoggedInUniqueMonthlyPercentage%>%) (<%=LoggedInUniqueMembersMonthly%> Members, <%=LoggedInUniqueEmployersMonthly%> Employers,
+            <%=LoggedInUniqueAdministratorsMonthly%> Administrators, <%=LoggedInUniqueCustodiansMonthly%> Community Administrators)</td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Total candidate search alerts:</td>
+            <td style="text-align:left;"><%=ResumeSearchAlerts%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Total job search alerts:</td>
+            <td style="text-align:left;"><%=JobSearchAlerts%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Job searches:</td>
+            <td style="text-align:left;"><%=JobSearches%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Total open job ads:</td>
+            <td style="text-align:left;"><%=OpenJobAds%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Job applications:</td>
+            <td style="text-align:left;"><%=JobApplications%> on LinkMe, <%=ExternalJobRedirects%> redirects to external form</td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Invitations sent:</td>
+            <td style="text-align:left;"><%=InvitationsSent%></td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Invitations accepted:</td>
+            <td style="text-align:left;"><%=InvitationsAccepted%></td>
+          </tr>
+          <tr style="background-color: #E5E5E5;">
+            <td style="text-align:right;">Invite acceptances over previous 48 hours:</td>
+            <td style="text-align:left;"><%=AcceptanceRateLast48Hours%> %</td>
+          </tr>
+          <tr>
+            <td style="text-align:right;">Invite acceptances last month:</td>
+            <td style="text-align:left;"><%=AcceptanceRatePreviousMonth%> %</td>
+          </tr>
+        </table>
+
+        <h3>Communications breakdown</h3>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Communication</td>
+            <td style="text-align:center;">Sent</td>
+            <td style="text-align:center;">Opened</td>
+            <td style="text-align:center;">Links Clicked</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in CommunicationReports) {
+    string definition = (string)entry.Key;
+    LinkMe.Query.Reports.Roles.Communications.CommunicationReport report = (LinkMe.Query.Reports.Roles.Communications.CommunicationReport) entry.Value; %>
+  <%if (!string.IsNullOrEmpty(definition)) {%>
+          <tr>
+            <td><%=definition%></td>
+            <td style="text-align:center;"><%=report.Sent%></td>
+            <td style="text-align:center;"><%=report.Opened%></td>
+            <td style="text-align:center;"><%=report.LinksClicked%></td>
+          </tr>
+  <%}%>
+<%}%>
+        </table>
+
+        <h3>Promotion code breakdown</h3>
+
+        <table cellspacing="0" cellpadding="6">
+          <tr style="background-color: #E5E5E5;">
+            <td>Promotion code</td>
+            <td style="text-align:center;">New members</td>
+            <td style="text-align:center;">New resumes</td>
+          </tr>
+<%foreach (System.Collections.DictionaryEntry entry in PromotionCodeReports) {
+    string promotionCode = (string)entry.Key;
+    LinkMe.Query.Reports.Roles.Registration.PromotionCodeReport report = (LinkMe.Query.Reports.Roles.Registration.PromotionCodeReport)entry.Value; %>
+          <tr>
+            <td><%if (string.IsNullOrEmpty(promotionCode)) {%>&lt;None&gt;<%} else {%><%=promotionCode%><%}%></td>
+            <td style="text-align:center;"><%=report.NewMembers%></td>
+            <td style="text-align:center;"><%=report.NewResumesForNewMembers%></td>
+          </tr>
+<%}%>
+        </table>
+
+      </div>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="ContactUsEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject><![CDATA[Feedback from <%= From.UserType.ToString().ToLower() %> <%= From.EmailAddress %>]]></Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  <table cellspacing="0" cellpadding="2">
+    <tr>
+      <td>User's name:</td>
+      <td><%=From.FullName%></td>
+    </tr>
+    <tr>
+      <td>User's email address:</td>
+      <td><%=From.EmailAddress%></td>
+    </tr>
+    <tr>
+      <td>User's phone number:</td>
+      <td><%=PhoneNumber%></td>
+    </tr>
+    <tr>
+      <td>Type of enquiry:</td>
+      <td><%=EnquiryType%></td>
+    </tr>
+  </table>
+</p>
+<p><%=Content%></p>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="AdministratorEmployerEnquiryEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject><![CDATA[Employer Access Request to the '<%=Community.Name%>' Community]]></Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Access Request Submitted</p>
+<p>
+  Id: <%=Enquiry.Id%><br />
+  Company Name: <%=Enquiry.CompanyName%><br />
+  Email Address: <%=Enquiry.EmailAddress%><br />
+  First Name: <%=Enquiry.FirstName%><br />
+  Last Name: <%=Enquiry.LastName%><br />
+  Job Title: <%=Enquiry.JobTitle%><br />
+  Phone Number: <%=Enquiry.PhoneNumber%><br />
+</p>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="FeedbackEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject>User feedback</Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<%=Content%>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="RejectCandidateEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject><![CDATA[<%=Subject%>]]></Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<%=Content%>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="EmployerRequestAccessEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject>Employer access request</Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  An employer or recruiter is requesting access to the LinkMe database.
+  Their details are below:
+</p>
+<dl>
+  <dt>Contact name:</dt>
+  <dd><%=ContactName%></dd>
+  <dt>Contact phone:</dt>
+  <dd><%=ContactPhone%></dd>
+  <dt>Email address:</dt>
+  <dd><%=ContactEmail%></dd>
+  <dt>Company name:</dt>
+  <dd><%=CompanyName%></dd>
+</dl>
+<%if (Message != "") {%>
+<p>The following message was entered by the user:</p>
+<p><%=Message%></p>
+<%}%>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="UserContentRemovalRequestEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject>URGENT: Report of inappropriate content on our site!</Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  <%= From.FullName %> (<%= From.EmailAddress %>) has reported
+  the following as inappropriate content:
+</p>
+<blockquote>
+	<%= Content %>
+</blockquote>
+<p>
+	<a href="<%=TinyUrls.Register(true, "~/administrators/ViewUserContentItem.aspx", "requestId", Request.Id.ToString()) %>">View the page</a>
+	on which this content appears and instruct the support team to remove it if 
+	necessary.
+</p>
+<p>
+	Reporter's explanation:
+</p>
+<blockquote>
+	<%= Request.Text %>
+</blockquote>
+<p>
+	If appropriate please respond to the member and thank them for their support.
+</p>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupAbandonedEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject><![CDATA[The <%=GroupName%> group has been abandoned and has no administrator]]></Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>
+  The last remaining administrator of the
+  <%=GroupName%> group has left the group.
+  Please add a message to the group's home page
+  inviting existing members to nominate themselves as the
+  group's new administrator by contacting us.
+</p>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="AccountManagerReportEmail" Master="InternalEmail">
+      <VerticalContentItem>
+          <Subject>
+            <![CDATA[<% if (!string.IsNullOrEmpty(NoActivity)) { %><%= NoActivity %><% } else { %>LinkMe usage report<% } %> for <%= OrgName %> for <%= ReportPeriod %>]]>
+          </Subject>
+          <ViewContentItem MimeType="text/html">
+            <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi <%= To.FirstName %></p>
+<p>
+<% if (!string.IsNullOrEmpty(NoActivity)) { %>
+<%= NoActivity %> recorded for <%= OrgName %> for <%= ReportPeriod %>.
+<% } else if (HaveAttachments) { %>
+Please find attached the activity report for <%= OrgName %> for <%= ReportPeriod %>.
+<% } %>
+<br />
+<%= CustomHtmlSnippets %>
+</p>
+]]>
+            </ViewPartContentItem>
+            <ViewPartContentItem Name="Footer" />
+          </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="NewResourceQuestionEmail" Master="InternalEmail">
+      <VerticalContentItem>
+        <Subject>New Question from a LinkMe User</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+Asker's email: <%=AskerEmailAddress%>
+<br />
+Asker's name: <%=AskerName%>
+<br />
+Category: <%=ResourceCategory%>
+<br />
+<%=Question%>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

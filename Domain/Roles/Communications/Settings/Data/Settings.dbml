@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="SettingsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CommunicationCategorySettings" Member="CommunicationCategorySettingEntities" AccessModifier="Internal">
+    <Type Name="CommunicationCategorySettingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="categoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="settingsId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="frequency" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="CommunicationSettingEntity_CommunicationCategorySettingEntity" Member="CommunicationSettingEntity" ThisKey="settingsId" OtherKey="id" Type="CommunicationSettingEntity" IsForeignKey="true" />
+      <Association Name="CommunicationCategoryEntity_CommunicationCategorySettingEntity" Member="CommunicationCategoryEntity" ThisKey="categoryId" OtherKey="id" Type="CommunicationCategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunicationDefinition" Member="CommunicationDefinitionEntities" AccessModifier="Internal">
+    <Type Name="CommunicationDefinitionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="categoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="CommunicationDefinitionEntity_CommunicationDefinitionSettingEntity" Member="CommunicationDefinitionSettingEntities" ThisKey="id" OtherKey="definitionId" Type="CommunicationDefinitionSettingEntity" />
+      <Association Name="CommunicationCategoryEntity_CommunicationDefinitionEntity" Member="CommunicationCategoryEntity" ThisKey="categoryId" OtherKey="id" Type="CommunicationCategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunicationDefinitionSettings" Member="CommunicationDefinitionSettingEntities" AccessModifier="Internal">
+    <Type Name="CommunicationDefinitionSettingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="definitionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="settingsId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="lastSentTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CommunicationDefinitionEntity_CommunicationDefinitionSettingEntity" Member="CommunicationDefinitionEntity" ThisKey="definitionId" OtherKey="id" Type="CommunicationDefinitionEntity" IsForeignKey="true" />
+      <Association Name="CommunicationSettingEntity_CommunicationDefinitionSettingEntity" Member="CommunicationSettingEntity" ThisKey="settingsId" OtherKey="id" Type="CommunicationSettingEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunicationSettings" Member="CommunicationSettingEntities" AccessModifier="Internal">
+    <Type Name="CommunicationSettingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="sendPlainTextOnly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CommunicationSettingEntity_CommunicationCategorySettingEntity" Member="CommunicationCategorySettingEntities" ThisKey="id" OtherKey="settingsId" Type="CommunicationCategorySettingEntity" />
+      <Association Name="CommunicationSettingEntity_CommunicationDefinitionSettingEntity" Member="CommunicationDefinitionSettingEntities" ThisKey="id" OtherKey="settingsId" Type="CommunicationDefinitionSettingEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NonMemberSettings" Member="NonMemberSettingEntities" AccessModifier="Internal">
+    <Type Name="NonMemberSettingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="flags" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunicationCategory" Member="CommunicationCategoryEntities" AccessModifier="Internal">
+    <Type Name="CommunicationCategoryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="type" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="defaultFrequency" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="roles" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="availableFrequencies" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CommunicationCategoryEntity_CommunicationCategorySettingEntity" Member="CommunicationCategorySettingEntities" ThisKey="id" OtherKey="categoryId" Type="CommunicationCategorySettingEntity" />
+      <Association Name="CommunicationCategoryEntity_CommunicationDefinitionEntity" Member="CommunicationDefinitionEntities" ThisKey="id" OtherKey="categoryId" Type="CommunicationDefinitionEntity" />
+    </Type>
+  </Table>
+</Database>

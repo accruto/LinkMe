@@ -1,0 +1,128 @@
+﻿.savedsearches {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.savedsearches > .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	color : #464646;
+	margin-bottom : 0.5em;
+}
+.savedsearches .row {
+	font-size : 1.75em;
+	font-weight : Bold;
+	color : #307EEC;
+	line-height : 1.2em;
+	text-decoration : none;
+	background-color : white;
+	border-left : 0.0714285714285714em solid #959799;
+	border-right : 0.0714285714285714em solid #959799;
+	border-bottom : 0.0714285714285714em solid #959799;
+	padding : 0.7142857142857143em;
+	-webkit-box-shadow : 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+	-moz-box-shadow : 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+	box-shadow: 0.1071428571428571em 0.2142857142857143em 0.1071428571428571em rgba(0,0,0,0.2);
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	display : inline-table;
+	width : 100%;
+}
+.savedsearches .row:first-of-type {
+	border-top-left-radius : 0.5em;
+	border-top-right-radius : 0.5em;
+	border-top : 0.0714285714285714em solid #959799;
+}
+.savedsearches .row:last-of-type {
+	border-bottom-left-radius : 0.5em;
+	border-bottom-right-radius : 0.5em;
+}
+.savedsearches .row:active {
+	color : white;
+	background-color : #3991E2;
+}
+.savedsearches .row .icon.rightarrow {
+	width : 0.5714285714285714em;
+	height : 0.9285714285714286em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconRightArrowBlack.png");
+	float : right;
+	margin-top : 0.1428571428571429em;
+}
+.savedsearches .row:active .icon.rightarrow {
+	background-image : url("../../images/device/IconRightArrowWhite.png");
+}
+.savedsearches .row .count {
+	color : white;
+	background-color : #C55C5C;
+	border : 0.0357142857142857em solid #A62B2B;
+	border-radius : 0.5em;
+	padding : 0.0714285714285714em 0.25em;
+	margin-right : 0.25em;
+	float : right;
+	display : none;
+}
+.savedsearches .row:active .count {
+	color : #307EEC;
+	background-color : white;
+	border : 0.0357142857142857em solid white;
+}
+.savedsearches .row .title {
+	width : 100%;
+	display : inline-block;
+}
+.savedsearches .row .icon.alert {
+	width : 1.2857142857142857em;
+	height : 1.4285714285714286em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconAlert.png");
+	margin : 0 0.5em 0.5em 0;
+}
+.savedsearches .row .icon.alert.active {
+	background-image : url("../../images/device/IconAlertActive.png");
+}
+.savedsearches .row .icon.delete {
+	width : 1.2857142857142857em;
+	height : 1.4285714285714286em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconTrash.png");
+}
+.savedsearches .row:active .icon.delete {
+	background-image : url("../../images/device/IconTrashHover.png");
+}
+.savedsearches .row .criteria {
+	color : #464646;
+	font-weight : normal;
+}
+.savedsearches .row .column {
+	display : table-cell;
+	vertical-align : top;
+}
+.savedsearches .row .column.one {
+	width : 1.7857142857142857em;
+}
+.savedsearches .noresults .desc {
+	font-size : 1.875em;
+	color : #464646;
+	margin : 2em 0 1.5em 0;
+}
+.savedsearches .noresults ul li {
+	font-size : 1.875em;
+	color : #307EEC;
+	list-style-position : inside;
+	line-height : 1.5em;
+}
+.savedsearches .noresults ul li a {
+	font-weight : Bold;
+	color : #307EEC;
+	display : inline;
+}
+.savedsearches .noresults ul li span {
+	color : #464646;
+}

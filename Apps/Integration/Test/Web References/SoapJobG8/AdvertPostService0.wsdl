@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://jobg8.com" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://jobg8.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://jobg8.com/Imports">
+      <xsd:import schemaLocation="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd0" namespace="http://jobg8.com/messages" />
+      <xsd:import schemaLocation="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd2" namespace="http://jobg8.com/postadvertheaders" />
+      <xsd:import schemaLocation="http://dev15.armadale.linkme.net.au/Integration126/JobG8/AdvertPostService.svc?xsd=xsd1" namespace="http://jobg8.com/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PostAdvertRequestMessage">
+    <wsdl:part xmlns:q1="http://jobg8.com/messages" name="PostAdvert" element="q1:PostAdvert" />
+  </wsdl:message>
+  <wsdl:message name="PostAdvertRequestMessage_Headers">
+    <wsdl:part xmlns:q2="http://jobg8.com/postadvertheaders" name="UserCredentials" element="q2:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="PostAdvertResponseMessage">
+    <wsdl:part xmlns:q3="http://jobg8.com/messages" name="PostAdvertResponse" element="q3:PostAdvertResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmendAdvertRequestMessage">
+    <wsdl:part xmlns:q4="http://jobg8.com/messages" name="AmendAdvert" element="q4:AmendAdvert" />
+  </wsdl:message>
+  <wsdl:message name="AmendAdvertRequestMessage_Headers">
+    <wsdl:part xmlns:q5="http://jobg8.com/postadvertheaders" name="UserCredentials" element="q5:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="AmendAdvertResponseMessage">
+    <wsdl:part xmlns:q6="http://jobg8.com/messages" name="AmendAdvertResponse" element="q6:AmendAdvertResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAdvertRequestMessage">
+    <wsdl:part xmlns:q7="http://jobg8.com/messages" name="DeleteAdvert" element="q7:DeleteAdvert" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAdvertRequestMessage_Headers">
+    <wsdl:part xmlns:q8="http://jobg8.com/postadvertheaders" name="UserCredentials" element="q8:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAdvertResponseMessage">
+    <wsdl:part xmlns:q9="http://jobg8.com/messages" name="DeleteAdvertResponse" element="q9:DeleteAdvertResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdvertPostServiceInterface">
+    <wsdl:operation name="PostAdvert">
+      <wsdl:input wsaw:Action="http://jobg8.com:postAdvertIn" name="PostAdvertRequestMessage" message="tns:PostAdvertRequestMessage" />
+      <wsdl:output wsaw:Action="http://jobg8.com/AdvertPostServiceInterface/PostAdvertResponse" name="PostAdvertResponseMessage" message="tns:PostAdvertResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AmendAdvert">
+      <wsdl:input wsaw:Action="http://jobg8.com:amendAdvertIn" name="AmendAdvertRequestMessage" message="tns:AmendAdvertRequestMessage" />
+      <wsdl:output wsaw:Action="http://jobg8.com/AdvertPostServiceInterface/AmendAdvertResponse" name="AmendAdvertResponseMessage" message="tns:AmendAdvertResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvert">
+      <wsdl:input wsaw:Action="http://jobg8.com:deleteAdvertIn" name="DeleteAdvertRequestMessage" message="tns:DeleteAdvertRequestMessage" />
+      <wsdl:output wsaw:Action="http://jobg8.com/AdvertPostServiceInterface/DeleteAdvertResponse" name="DeleteAdvertResponseMessage" message="tns:DeleteAdvertResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdvertPostServiceInterface" type="tns:AdvertPostServiceInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PostAdvert">
+      <soap:operation soapAction="http://jobg8.com:postAdvertIn" style="document" />
+      <wsdl:input name="PostAdvertRequestMessage">
+        <soap:header message="tns:PostAdvertRequestMessage_Headers" part="UserCredentials" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PostAdvertResponseMessage">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendAdvert">
+      <soap:operation soapAction="http://jobg8.com:amendAdvertIn" style="document" />
+      <wsdl:input name="AmendAdvertRequestMessage">
+        <soap:header message="tns:AmendAdvertRequestMessage_Headers" part="UserCredentials" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AmendAdvertResponseMessage">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvert">
+      <soap:operation soapAction="http://jobg8.com:deleteAdvertIn" style="document" />
+      <wsdl:input name="DeleteAdvertRequestMessage">
+        <soap:header message="tns:DeleteAdvertRequestMessage_Headers" part="UserCredentials" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteAdvertResponseMessage">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

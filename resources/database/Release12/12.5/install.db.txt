@@ -1,0 +1,11 @@
+alter_Candidate.sql
+alter_CandidateList.sql
+GetAnnualSalary.sql
+GetCandidateStatusDisplayText.sql
+GetRelocationPreferenceDisplayText.sql
+GetSalaryDisplayText.sql
+IsResumeEmpty.sql
+data_FeaturedEmployer.sql
+data_FeaturedEmployer_GreenLight.sql
+alter_JobAd_add_isFeatured.sql
+alter_JobAdViewing.sql

@@ -1,0 +1,21 @@
+#JobAd #JobDescription #Ad
+{
+	background: #fff url('Robert%20Half_images/header.jpg') no-repeat top left;
+	padding-top: 75px;
+}
+
+#JobAd #JobDescription H2
+{
+	color: #B72E2F;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: transparent url('Robert%20Half_images/footer.gif') no-repeat left bottom;
+	height: 40px;
+}
+
+#JobAd #JobDescription #AdContactDetais
+{
+	visibility: hidden;
+}

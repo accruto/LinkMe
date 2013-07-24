@@ -1,0 +1,84 @@
+#JobAd {
+}
+
+	#JobAd #JobDescription {
+		background: transparent url(quadrant_recruitment_images/quadrant_bg.png) no-repeat right center;
+		margin-bottom: 1em;
+		width: 456px;
+		border: 2px solid #000;
+	}
+	
+		#JobAd #JobDescription #Ad {
+		}
+			/* Covers all content of ad, including prescribed fields as well as
+			the free-form user input in the middle section, unless overridden */
+			#JobAd #JobDescription #Ad div,
+			#JobAd #JobDescription #Ad p {
+				color: #000;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 1.3em;
+				margin-left: 35px;
+				margin-right: 35px;
+			}
+			/* override margins of above decl. for nested containers */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				margin-left: 0; 
+				margin-right: 0;
+			}	
+			#JobAd #JobDescription #Ad div#JobAdHeading {}	
+			#JobAd #JobDescription #Ad div#AdContactDetails {}
+			
+			/* Used as subheading in main body of the advert - will also apply
+			   to subheading in the #JobAdHeading unless overridden below */
+			#JobAd #JobDescription #Ad p strong {}
+			
+			/* Usual placeholder for header graphic */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				background: transparent url(quadrant_recruitment_images/quadrant_logo.gif) no-repeat 10px 10px;
+/*				background: transparent url(quadrant_recruitment_images/quadrant_logo.jpg) no-repeat 10px 10px; */
+				height: 145px;
+			}
+					
+			/* Contains content that comes from prescribed fields */
+			#JobAd #JobDescription #Ad div#JobAdHeading {}
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading h1 {
+					font-size: 200%;
+					line-height: 1.3em;
+					padding-top: 1em;
+					padding-bottom: 1em;
+				}		
+					
+				/* This element is unfortunately used as a subheading  */
+				#JobAd #JobDescription #Ad div#JobAdHeading p strong {
+				}
+	
+				#JobAd #JobDescription #Ad div#JobAdHeading table {
+					width: 90% !important; /* overrides setting from text-links-headings.css */
+				}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td {
+						font-family: Arial, Helvetica, sans-serif;
+						padding-left: 0;
+						vertical-align: top;
+					}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td label {
+						color: #000;
+						font-family: Arial, Helvetica, sans-serif;
+						margin-left: 0; /* overrides setting from forms.css */
+					}
+				#JobAd #JobDescription #Ad div#JobAdHeading ul {}
+					#JobAd #JobDescription #Ad div#JobAdHeading ul li {}
+			
+			/* Last div for textual content inside div#Ad */
+			#JobAd #JobDescription #Ad div#AdContactDetails {
+			margin-bottom: 0px;
+			}
+				
+		/* Usual placeholder for footer graphic -- N.B. is outside div#Ad */
+		#JobAd #JobDescription #LogoFooter {
+/*			background: #000 url(quadrant_recruitment_images/quadrant_base.gif) no-repeat center bottom; */
+			background: #fff url(quadrant_recruitment_images/quadrant_footer.png) no-repeat center bottom; 
+			height: 128px;
+		}
+	
+	

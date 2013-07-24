@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- SetJobApplicationStatus request version 1.0 -->
+  <xs:element name="SetJobApplicationStatusRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="JobApplications">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobApplication" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" type="tns:Guid" use="optional" />
+                  <xs:attribute name="uri" type="xs:anyURI" use="optional" />
+                  <xs:attribute name="status" type="tns:ExternalJobApplicationStatus" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:SetJobApplicationStatusRequestVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="SetJobApplicationStatusRequestVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ExternalJobApplicationStatus">
+    <xs:restriction base="xs:string">
+      <!-- The candidate has submitted the job poster's application form. Nothing else needs to be done
+       by the candidate for their application to be processed. -->
+      <xs:enumeration value="Submitted" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

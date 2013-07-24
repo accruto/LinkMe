@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_endorsement.sql,install_administrator.sql,install_employer_purchases.sql,install_content.sql,install_ideal_job_info_index.sql,update_database_version_table.sql

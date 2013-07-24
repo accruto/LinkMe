@@ -1,0 +1,1232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NUnitAsp</name>
+    </assembly>
+    <members>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListItemCollectionTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.ListItemCollection
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListItemCollectionTester.Contains(NUnit.Extensions.Asp.AspTester.ListItemTester)">
+            <summary>
+            Determines whether the collection contains the specified item.
+            </summary>
+            <param name="item">A System.Web.UI.WebControls.ListItem to search for in the collection.</param>
+            <returns>true if the collection contains the specified item; otherwise, false.</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListItemCollectionTester.FindByText(System.String)">
+            <summary>
+            Searches the collection for a ListItemTester with whose Text property contains the specified text.
+            </summary>
+            <param name="text">The text to search for.</param>
+            <returns>A ListItemTester that contains the text specified by the text parameter.</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListItemCollectionTester.FindByValue(System.String)">
+            <summary>
+            Searches the collection for a ListItemTester with whose Value property contains the specified value.
+            </summary>
+            <param name="value"> The value to search for.</param>
+            <returns>A ListItemTester that contains the value specified by the value parameter.</returns>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListItemCollectionTester.Item(System.Int32)">
+            <summary>
+            Gets ListItemTesters contained in this collection by zero-based index.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.DataGridTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.DataGrid
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.AspControlTester">
+            <summary>
+            Base class for all ASP.NET server controls.  Extend this class
+            if you're creating a tester for a custom control.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.ControlTester">
+            <summary>
+            Base class for all tag-based controls.  Most people should
+            extend <see cref="T:NUnit.Extensions.Asp.AspTester.AspControlTester"/> or <see cref="T:NUnit.Extensions.Asp.HtmlTester.HtmlControlTester"/>.
+            
+            The API for this class will change in future releases.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.Tester">
+             <summary>
+             Base class for all NUnitAsp testers.  To create your own tester 
+             classes, you should usually extend ControlTester instead.
+            
+             Not intended for third-party use.  The API for this class will change 
+             in future releases.  
+             </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.Tester.GetChildElementHtmlId(System.String)">
+            <summary>
+            Returns the HTML ID of a child control.  Useful when implementing
+            testers for container controls that do HTML ID mangling.  This method
+            is very likely to change in a future release.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.Tester.Submit">
+            <summary>
+            Post this page to the server.  (That is, the page that contains the thing being tested.)
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.Tester.Description">
+            <summary>
+            A human-readable description of the location of the control.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.Tester.Browser">
+            <summary>
+            The browser instance used to load the page containing the thing being tested.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.ControlTester.AspId">
+            <summary>
+            The ASP.NET ID of the control being tested.  It corresponds to the
+            ID in the ASP.NET source code.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.GetChildElementHtmlId(System.String)">
+            <summary>
+            Returns the HTML ID of a child control.  Useful when implementing
+            testers for container controls that do HTML ID mangling.  This method
+            is very likely to change in a future release.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.Submit">
+            <summary>
+            Post this page to the server.  (That is, the page that contains the control being tested.)
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.OptionalPostBack(System.String)">
+            <summary>
+            Like <see cref="M:NUnit.Extensions.Asp.ControlTester.PostBack(System.String)"/>, but doesn't fail if <see cref="!:candidatePostBackScript"/>
+            doesn't contain a post-back script.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.IsPostBack(System.String)">
+            <summary>
+            Checks a string to see if it contains a post-back script.
+            Typically you should just use <see cref="M:NUnit.Extensions.Asp.ControlTester.OptionalPostBack(System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.PostBack(System.String)">
+            <summary>
+            Trigger a post-back.  ASP.NET has a post-back idiom that often shows up
+            as a Javascript "__doPostBack" call.  This method exists to make it easy to write
+            testers for controls that do so.  Just take the string that contains the post-
+            back script and pass it to this method.  Use <see cref="!:optionalPostBack"/>
+            if the script isn't always present.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.ControlTester.PostBack(System.String,System.String)">
+            <summary>
+            Trigger a post-back.  If you don't have a post-back script but need to trigger a
+            post-back, call this method with the appropriate event target and argument.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.Tag">
+            <summary>
+            The HTML tag this tester corresponds to.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.Visible">
+            <summary>
+            Returns true if the control is visible on the current page.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.Element">
+            <summary>
+            Deprecated--do not use.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.Browser">
+            <summary>
+            The browser instance used to load the page containing the form being tested.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.HtmlIdAndDescription">
+            <summary>
+            A human-readable description of the location of the form being tested.
+            This property describes the location of the form in the ASP.NET source
+            code as well as in the HTML page rendered by the server.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.Description">
+            <summary>
+            A human-readable description of the location of the control.  Unlike
+            <see cref="P:NUnit.Extensions.Asp.ControlTester.HtmlIdAndDescription"/>, this property only describes the
+            location of the control in the ASP.NET source code.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.HtmlId">
+            <summary>
+            The HTML ID of the control being tested.  It corresponds to the
+            ID of the HTML tag rendered by the server.  It's useful for looking at 
+            raw HTML while debugging.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.ControlTester.IsDisabled">
+            <summary>
+            True if the control is disabled.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.AspControlTester.Enabled">
+            <summary>
+            Gets or sets a value indicating wheither the control is enabled.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.GetHeaderRow">
+            <summary>
+            The data grid's header row.  The first row is always assumed to be the header row.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.GetRow(System.Int32)">
+            <summary>
+            Returns a row from the data grid.  Row number zero is the first row <b>after</b>
+            the header row.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.GetRowByCellValue(System.Int32,System.String)">
+            <summary>
+            Returns a row containing a specific cell.
+            </summary>
+            <param name="columnNumber">The column containing the cell to look for (zero-based).</param>
+            <param name="trimmedValue">The cell to look for.</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.Sort(System.Int32)">
+            <summary>
+            Click a column heading link that was generated with the "allowSorting='true'" attribute.
+            </summary>
+            <param name="columnNumberZeroBased">The column to sort (zero-based)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.DataGridTester.RowCount">
+            <summary>
+            The number of rows in the data grid, not counting the header.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.DataGridTester.TrimmedCells">
+            <summary>
+            An array of string arrays containing the contents of the data grid, 
+            not counting the header.  The outer array represents rows and the inner arrays
+            represents cells within the rows.  Whitespace has been trimmed from the front and
+            back of the cells.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.DataGridTester.Row">
+            <summary>
+            Tests a row within a data grid.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DataGridTester.Row.#ctor(System.Int32,NUnit.Extensions.Asp.AspTester.DataGridTester)">
+            <summary>
+            Create the tester and link it to a row in a specific data grid.
+            </summary>
+            <param name="rowNumberWhereZeroIsHeader">The row to test.</param>
+            <param name="container">The data grid that contains the row.</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.DataGridTester.Row.TrimmedCells">
+            <summary>
+            The cells in the row.  Whitespace has been trimmed from the front and back
+            of the cells.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ContainerMustBeRowException">
+            <summary>
+            Exception: The container of the control being tested was a DataGridTester, but
+            it should be a Row.  Change "new MyTester("foo", datagrid)" to 
+            "new MyTester("foo", datagrid.getRow(rowNum))".
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.DropDownListTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.DropDownList
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListControlTester">
+            <summary>
+            Base class for list testers.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListControlTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListControlTester.Items">
+            <summary>
+            The items in the list.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListControlTester.SelectedItem">
+            <summary>
+            The currently-selected item in the list.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListControlTester.SelectedIndex">
+            <summary>
+            The index of the currently-selected item in the list.  If this is changed and 
+            auto post-back is turned on, the form will be submitted.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListControlTester.IllegalInputException">
+            <summary>
+            The index of the list was set to a value that doesn't correspond to a
+            list item.  Fix the test so that it sets the value correctly, or fix the production
+            code so that it generates the correct number of list items.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListControlTester.NoSelectionException">
+            <summary>
+            The test asked a list what item was selected when no items were selected.
+            Fix the test so that it doesn't ask the question, or fix the production code so
+            that a list item is selected.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListControlTester.MultipleSelectionException">
+            <summary>
+            The test asked a list what item was selected when multiple items were selected.
+            Modify the test to look at the Selected property of individual list items, or
+            fix the production code so that only one item is selected.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.DropDownListTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.LabelTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.Label
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.LabelTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.LabelTester.Text">
+            <summary>
+            The text of the label.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ValidationSummaryTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.ValidationSummary
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ValidationSummaryTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ValidationSummaryTester.Messages">
+            <summary>
+            The messages in the validation summary.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ImageButtonTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.ImageButton
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ImageButtonTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ImageButtonTester.Click(System.Int32,System.Int32)">
+            <summary>
+            Click the button in a particular location.
+            <param name="x">The 'x' coordinate of the simulated mouse click.</param>
+            <param name="y">The 'y' coordinate of the simulated mouse click.</param>
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ImageButtonTester.Click">
+            <summary>
+            Click the button at no particular location. Same as Click(0, 0).
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.WebFormTestCase">
+            <summary>
+            Base class for NUnitAsp test fixtures.  Extend this class to use NUnitAsp.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.WebAssertion">
+            <summary>
+            Assertions specific to NUnitAsp's web testers.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertVisibility(NUnit.Extensions.Asp.ControlTester,System.Boolean)">
+            <summary>
+            Asserts that a specific control is on the current web page, with the "Visible"
+            parameter set to "true."  This method does not assert that the control is actually
+            visible to the user.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertEquals(System.String[],System.String[])">
+            <summary>
+            Asserts that two "rows" of strings are identical.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertEquals(System.String,System.String[],System.String[])">
+            <summary>
+            Asserts that two "rows" of strings are identical.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertEquals(System.String[][],System.String[][])">
+            <summary>
+            Asserts that two "tables" of strings are identical.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertEquals(System.String,System.String[][],System.String[][])">
+            <summary>
+            Asserts that two "tables" of strings are identical.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertEqualsIgnoreOrder(System.String,System.String[][],System.String[][])">
+            <summary>
+            Asserts that two "tables" of strings are identical, but permits ordering
+            differences.  Individual rows in the tables must match, but the order of the
+            rows may differ.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebAssertion.AssertSortOrder(System.String,System.String[][],System.Int32,System.Boolean,NUnit.Extensions.Asp.DataType)">
+            <summary>
+            Asserts that the "rows" in a "table" of strings are sorted.
+            </summary>
+            <param name="message">A noun to display if the assertion fails.</param>
+            <param name="data">The table to check.</param>
+            <param name="column">The column that must be sorted.</param>
+            <param name="isAscending">'true' if the table should be sorted from low to high; 'false' if the table should be sorted from high to low.</param>
+            <param name="type">The type of data in the column that's sorted.</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebFormTestCase.BaseSetUp">
+            <summary>
+            Do not call.  For use by NUnit only.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebFormTestCase.SetUp">
+            <summary>
+            Executed before each test method is run.  Override in subclasses to do subclass
+            set up.  NOTE: [SetUp] attribute cannot be used in subclasses because it is already
+            in use.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebFormTestCase.BaseTearDown">
+            <summary>
+            Do not call.  For use by NUnit only.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebFormTestCase.TearDown">
+            <summary>
+            Executed after each test method is run.  Override in subclasses to do subclass
+            clean up.  NOTE: [TearDown] attribute cannot be used in subclasses because it is
+            already in use.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebFormTestCase.CurrentWebForm">
+            <summary>
+            The web form currently loaded by the browser.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebFormTestCase.Browser">
+            <summary>
+            The web browser.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTester.AnchorTester">
+            <summary>
+            This class is obsolete and will be dropped in future releases
+            of NUnitAsp. Please use <see cref="T:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester"/> instead.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester">
+            <summary>
+            Tester for System.Web.UI.HtmlControls.HtmlAnchor
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTester.HtmlControlTester">
+            <summary>
+            Base class for all testers in HtmlTester namespace
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlControlTester.#ctor(System.String,NUnit.Extensions.Asp.Tester,System.Boolean)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+            <param name="runAtServer">Tells tester whether the control under test is running on the server side.</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTester.HtmlControlTester.Disabled">
+            <summary>
+            Gets or sets a value indicating wheither the control is disabled.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTester.HtmlControlTester.HtmlId">
+            <summary>
+            The HTML ID of the control being tested.  It corresponds to the
+            ID of the HTML tag rendered by the server.  It's useful for looking at 
+            raw HTML while debugging.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester.#ctor(System.String,NUnit.Extensions.Asp.Tester,System.Boolean)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+            <param name="runAtServer">Tells tester whether the control under test is running on the server side.</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester.Click">
+            <summary>
+            Click the link.  Supports postback and pop-up windows.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester.HRef">
+            <summary>
+            The HRef of the link.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTester.HtmlAnchorTester.PopupLink">
+            <summary>
+            The HRef of the pop-up window's link.  Null if this anchor doesn't have 
+            a recognizable pop-up link.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.AnchorTester.#ctor(System.String,NUnit.Extensions.Asp.Tester,System.Boolean)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+            <param name="runAtServer">Tells tester whether the control under test is running on the server side.</param>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTag">
+            <summary>
+            An HTML tag.  This class performs some of the magic that 
+            allows NUnitAsp to construct testers before pages are loaded.
+            When using the methods on this class, check the API documentation
+            before caching the results.  The API of this class may 
+            change in future releases.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.#ctor(NUnit.Extensions.Asp.HttpClient,System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Construct a dynamic HTML tag using an ID.  The state of the tag will reflect the page 
+            currently loaded by the browser, even as it changes.
+            </summary>
+            <param name="browser">The browser to look at for the current page.</param>
+            <param name="id">The HTML ID of the tag.</param>
+            <param name="owner">The tester that corresponds to this tag (for error reporting).</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.#ctor(NUnit.Extensions.Asp.HttpClient,System.String,System.String)">
+            <summary>
+            Construct a dynamic HTML tag using an XPath description.  The state of the tag will reflect
+            the page currently loaded by the browser, even as it changes.
+            </summary>
+            <param name="browser">The browser to look at for the current page.</param>
+            <param name="xpath">The XPath description of the tag.</param>
+            <param name="description">A description of this tag (for error reporting).</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.#ctor(System.String,System.String,System.String)">
+            <summary>
+            For NUnitAsp's test suite only.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.#ctor(System.String,System.String)">
+            <summary>
+            For NUnitAsp's test suite only.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.#ctor(System.Xml.XmlElement,System.String)">
+            <summary>
+            A static HTML tag constructed for temporary use.  It will not reflect the page currently
+            loaded by the browser and shouldn't be cached.
+            </summary>
+            <param name="element"></param>
+            <param name="description">A description of this tag (for error reporting).</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.Attribute(System.String)">
+            <summary>
+            Returns the value of an attribute on this tag or throws an exception if the attribute isn't present.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <returns>The value of the attribute</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.OptionalAttribute(System.String)">
+            <summary>
+            Returns the value of an attribute on this tag or null if the attribute isn't present.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <returns>The value of the attribute or null if not present.</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.HasAttribute(System.String)">
+            <summary>
+            Returns true if this tag has the specified attribute.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <returns>True if the attribute is present (even if it has no value); false otherwise</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTag.Children(System.String)">
+            <summary>
+            Returns the immediate children of this tag that match a particular type (such as &lt;tr&gt;).
+            Does not return "grand-children" -- i.e., calling <c>table.Children("tr")</c> will work, but
+            calling <c>table.Children("td")</c> will typically return nothing.
+            Don't cache the results of this call.
+            </summary>
+            <param name="tag">The type of tag to return.  Don't include angle brackets.</param>
+            <example>To get all rows in a table: <code>HtmlTag[] rows = table.Children("tr");</code></example>
+            <returns>The tags.</returns>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTag.Visible">
+            <summary>
+            Returns true if the tag is visible on the current page.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTag.Name">
+            <summary>
+            Returns the name of the tag.  For example, the tag "&lt;a href='foo'&gt;" will return "a".
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTag.Body">
+            <summary>
+            Returns the contents of the tag, but not the tag itself.  For example, &lt;a href='foo'&gt;My Link&lt;/a&gt;
+            will return "My Link".
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTag.BodyNoTags">
+            <summary>
+            A temporary hack--this method WILL GO AWAY!
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTag.Parent">
+            <summary>
+            Returns the tag that contains this one.  Don't cache it.  Don't use 
+            this on the root element.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.CheckBoxTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.CheckBox
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.CheckBoxTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.CheckBoxTester.Checked">
+            <summary>
+            True if the checkbox is checked, false if not.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.CheckBoxTester.Text">
+            <summary>
+            Gets the text label associated with the checkbox.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.CheckBoxTester.IsDisabled">
+            <summary>
+            True if the control is disabled.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.DataType">
+            <summary>
+            The data type of a column (use with AssertSortOrder)
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlFileInfo">
+            <summary>
+            Summary description for HtmlFileInfo.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ButtonTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.Button
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ButtonTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ButtonTester.Click">
+            <summary>
+            Click the button.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ButtonTester.Text">
+            <summary>
+            Get the text on the button
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTester.HtmlInputFileTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.TextBox
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlInputFileTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlInputFileTester.#ctor(System.String,NUnit.Extensions.Asp.Tester,System.Boolean)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HtmlTester.HtmlInputFileTester.Filename">
+            <summary>
+            The text in the text box.
+            </summary>
+        </member>
+        <member name="T:Sgml.SgmlReader">
+            <summary>
+            SgmlReader is an XmlReader API over any SGML document (including built in support for HTML).  
+            </summary>
+        </member>
+        <member name="M:Sgml.SgmlReader.SetBaseUri(System.String)">
+            <summary>
+            The base Uri is used to resolve relative Uri's like the SystemLiteral and
+            Href properties.  This is a method because BaseURI is a read-only
+            property on the base XmlReader class.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.Dtd">
+            <summary>
+            Specify the SgmlDtd object directly.  This allows you to cache the Dtd and share
+            it across multipl SgmlReaders.  To load a DTD from a URL use the SystemLiteral property.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.DocType">
+            <summary>
+            The name of root element specified in the DOCTYPE tag.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.PublicIdentifier">
+            <summary>
+            The PUBLIC identifier in the DOCTYPE tag
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.SystemLiteral">
+            <summary>
+            The SYSTEM literal in the DOCTYPE tag identifying the location of the DTD.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.InternalSubset">
+            <summary>
+            The DTD internal subset in the DOCTYPE tag
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.InputStream">
+            <summary>
+            The input stream containing SGML data to parse.
+            You must specify this property or the Href property before calling Read().
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.WebProxy">
+            <summary>
+            Sometimes you need to specify a proxy server in order to load data via HTTP
+            from outside the firewall.  For example: "itgproxy:80".
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.Href">
+            <summary>
+            Specify the location of the input SGML document as a URL.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.ErrorLog">
+            <summary>
+            DTD validation errors are written to this stream.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.ErrorLogFile">
+            <summary>
+            DTD validation errors are written to this log file.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.UserControlTester">
+            <summary>
+            Tester for System.Web.UI.UserControl
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.UserControlTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.UserControlTester.Visible">
+            <summary>
+            Visibility of user controls cannot be determined.  This method always throws an
+            exception.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.UserControlTester.VisibilityException">
+            <summary>
+            Exception: The test tried to check the visibility of a user control.  There's no way to 
+            directly check user control visibility because they don't generate any HTML of
+            their own.  Change the test to check the visibility of a control inside the user
+            control instead.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.WebForm">
+            <summary>
+            A tester for an ASP.NET form.  Most of the methods in this class aren't meant to
+            be called by third parties.
+            
+            The API for this class will change in future releases.  
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebForm.#ctor(NUnit.Extensions.Asp.HttpClient)">
+            <summary>
+            Create the tester and link it to an ASP.NET web form.
+            </summary>
+            <param name="browser">The browser used to load this page.</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebForm.GetChildElementHtmlId(System.String)">
+            <summary>
+            Returns the HTML ID of a child control.  Useful when implementing
+            testers for container controls that do HTML ID mangling.  This method
+            is very likely to change in a future release.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.WebForm.Submit">
+            <summary>
+            Post this page to the server.  (That is, the page that contains the form being tested.)
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.Browser">
+            <summary>
+            The browser instance used to load the page containing the thing being tested.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.Tag">
+            <summary>
+            The HTML tag this tester corresponds to.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.Action">
+            <summary>
+            The "action" attribute of this form.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.Method">
+            <summary>
+            The "method" attribute of this form.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.Description">
+            <summary>
+            A human-readable description of the location of the control.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.WebForm.AspId">
+            <summary>
+            The ASP.NET ID of the form being tested.  It corresponds to the
+            ID in the ASP.NET source code.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.LinkButtonTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.LinkButton
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.LinkButtonTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.LinkButtonTester.Click">
+            <summary>
+            Click the link.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.LinkButtonTester.Text">
+            <summary>
+            The text of the link.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.DoctypeDtdException">
+            <summary>
+            Problems with the DOCTYPE DTD; probably that it was incorrect.  Correct it.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HtmlTester.HtmlInputCheckBoxTester">
+            <summary>
+            Tester for the System.Web.UI.HtmlControls.HtmlInputCheckBox control.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HtmlTester.HtmlInputCheckBoxTester.#ctor(System.String,NUnit.Extensions.Asp.Tester,System.Boolean)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+            <param name="runAtServer">Tells tester whether the control under test is running on the server side.</param>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.PanelTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.Panel
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.PanelTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListBoxTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.ListBox
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListBoxTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListBoxTester.Rows">
+            <summary>
+            Gets the number of rows displayed in the System.Web.UI.WebControls.ListBox control.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListBoxTester.SelectionMode">
+            <summary>
+            Gets the selection mode of the System.Web.UI.WebControls.ListBox control.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.ListItemTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.ListItem
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.ListItemTester.ToString">
+            <summary>
+            Returns a string that represents the current ListItemTester.
+            </summary>
+            <returns>ListItemTester's Text property.</returns>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListItemTester.Text">
+            <summary>
+            Gets the text displayed in a list control for the item represented by the ListItemTester.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListItemTester.Value">
+            <summary>
+            Gets the value associated with the ListItemTester.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.ListItemTester.Selected">
+            <summary>
+            Gets a value indicating whether the item is selected.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.TextBoxTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.TextBox
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.TextBoxTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.TextBoxTester.Text">
+            <summary>
+            The text in the text box.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.TextBoxTester.TextMode">
+            <summary>
+            The kind of text box.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.TextBoxTester.MaxLength">
+            <summary>
+            Maximum number of characters to display in the text box.  
+            Returns 0 if there is no max length.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient">
+            <summary>
+            A web client, capable of communicating with a web server.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.UserAgent">
+            <summary>
+            The user-agent string to send to the server. Useful if you want to pretend to
+            be a specific browser.
+            EP 28/02/07: Pretend to be IE 6, otherwise ASP.NET 2.0 doesn't return the __EVENTTARGET and
+            __EVENTARGUMENT hidden field at all on some pages.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.UserLanguages">
+            <summary>
+            The language-tag elements to send to the server (null if none). These appear 
+            in the Request.UserLanguages array in the target page.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.Credentials">
+            <summary>
+            Username and password (null if none). Set automatically if the username and
+            password are supplied in the URL (i.e., "http://username:password@host").
+            Can be used with both "basic" and "Windows Integrated" (NTLM) authentication
+            methods. Set this property to <c>CredentialCache.DefaultCredentials</c> 
+            to use your current Windows login.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.Proxy">
+            <summary>
+            The proxy server information to use to proxy HTTP requests.
+            If this property is set to null, the default value returned by
+            GlobalProxySelection.Select is used.
+            </summary>
+            <example>
+            Browser.Proxy = new WebProxy("http://myproxy:8080");
+            </example>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.UrlReferrer">
+            <summary>
+            URL containing the hyperlink or form that caused the browser to
+            load the current url (null if none).  Fragments aren't included
+            (the part of the URL that comes after a '#').
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.GetPage(System.String)">
+            <summary>
+            Retrieves a page from a web server.
+            </summary>
+            <param name="url">The URL of the page to get.</param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.HasCookie(System.String)">
+            <summary>
+            Checks to see if a cookie has been set.
+            </summary>
+            <param name="cookieName">The name of the cookie.</param>
+            <returns>'true' if the cookie has been set.</returns>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.CookieValue(System.String)">
+            <summary>
+            Returns the value of a cookie.  Throws exception if the cookie hasn't been set.
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.WriteRequestBody(System.Net.HttpWebRequest,System.Collections.Hashtable)">
+            <summary>
+            Edit this method to use the new form type
+            </summary>
+            <param name="request"></param>
+            <param name="formVariables"></param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.WriteRequestBodyUrlEncoded(System.Net.HttpWebRequest,System.Collections.Hashtable)">
+            <summary>
+            Edit this method to use the new form type
+            </summary>
+            <param name="request"></param>
+            <param name="formVariables"></param>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.HttpClient.ParseStackTrace(System.String)">
+            <summary>
+            Returns null if stack trace couldn't be found.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HttpClient.CurrentUrl">
+            <summary>
+            URL the browser most recently retrieved (null if none).  Fragments aren't
+            included (the part of the URL that comes after a '#').
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HttpClient.Cookies">
+            <summary>
+            The cookies sent to the server.  These are usually set by the server but
+            your test can add cookies to the container and they'll be sent too.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HttpClient.CurrentPageText">
+            <summary>
+            The raw contents of the current page.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.HttpClient.ElapsedServerTime">
+            <summary>
+            The total time this object has spent waiting for web servers to respond.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient.NoPageException">
+            <summary>
+            Exception: A request has been made that requires a page to have been loaded, but no
+            page has been loaded yet.  Call GetPage() before calling the method that
+            threw this exception.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient.NotFoundException">
+            <summary>
+            Exception: The requested URL was not found.  Correct the URL or determine what's wrong
+            with the server.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient.AspServerException">
+            <summary>
+            Exception: The requested URL caused an unhandled exception on the ASP.NET server.
+            Fix the production code so it doesn't throw the exception.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient.BadStatusException">
+            <summary>
+            Exception: The server returned an unexpected status code.  Determine what's wrong with
+            the server.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.BadStatusException.Status">
+            <summary>
+            The HTTP status code returned by the server
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.HttpClient.RedirectLoopException">
+            <summary>
+            Exception: Too many HTTP redirects were detected. Check for infinite redirection loop.
+            </summary>
+        </member>
+        <member name="F:NUnit.Extensions.Asp.HttpClient.RedirectLoopException.TargetUrl">
+            <summary>
+            The target URL of the failed redirect
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.ParseException">
+            <summary>
+            Exception: The tester has a bug: it was looking for some HTML and didn't find it.
+            Report this exception to the author of the tester.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.ControlDisabledException">
+            <summary>
+            Exception: The test is trying to perform a UI operation on a disabled control.
+            Enable the control in your production code or don't change it in the test.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.RadioButtonTester">
+            <summary>
+            Tester for System.Web.UI.WebControls.RadioButton
+            </summary>
+        </member>
+        <member name="M:NUnit.Extensions.Asp.AspTester.RadioButtonTester.#ctor(System.String,NUnit.Extensions.Asp.Tester)">
+            <summary>
+            Create the tester and link it to an ASP.NET control.
+            </summary>
+            <param name="aspId">The ID of the control to test (look in the page's ASP.NET source code for the ID).</param>
+            <param name="container">A tester for the control's container.  (In the page's ASP.NET
+            source code, look for the tag that the control is nested in.  That's probably the
+            control's container.  Use CurrentWebForm if the control is just nested in the form tag.)</param>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.RadioButtonTester.GroupName">
+            <summary>
+            The name of the group that the radio button is part of.
+            </summary>
+        </member>
+        <member name="P:NUnit.Extensions.Asp.AspTester.RadioButtonTester.Checked">
+            <summary>
+            True if the radio button is checked, false if not.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.AspTester.RadioButtonTester.CannotUncheckException">
+            <summary>
+            Test attempted to set RadioButton's Checked property to false.
+            But radio buttons cannot be unchecked directly, check another 
+            radio button in the same group instead.
+            </summary>
+        </member>
+        <member name="T:NUnit.Extensions.Asp.PageWithoutForm">
+            <summary>
+            Allows the entire page to act as a "container" for other ControlTesters, which is useful if
+            there are controls on a page without a form.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+﻿<%@ ServiceHost 
+        Language="C#" 
+        Debug="true" 
+        Service="LinkMe.Apps.Management.EmailStatus.EmailStatusService" 
+        Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+        CodeBehind="EmailStatusService.svc.cs" %>

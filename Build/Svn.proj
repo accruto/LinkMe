@@ -1,0 +1,98 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <SourceRootDir>..</SourceRootDir>
+    <SvnCheckoutDir Condition=" '$(SvnCheckoutDir)' == '' ">$(SourceRootDir)</SvnCheckoutDir>
+    <SvnTagsPath>http://files/svn/linkme/dev/LinkMe/tags</SvnTagsPath>
+    <SvnUsername>build</SvnUsername>
+    <SvnPassword>brickinwall</SvnPassword>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <Target Name="Setup" DependsOnTargets="GetVersions; GetRootUrl; CheckFirstTag; CreateLabels;">
+    <MSBuild Projects="@(SvnProjects)" Targets="Setup" StopOnFirstFailure="true" Properties="BuildVersion=$(BuildVersion)" />
+  </Target>
+
+  <Target Name="GetVersions">
+    <GetVersions BuildVersion="$(BuildVersion)">
+      <Output TaskParameter="ProductVersion" PropertyName="ProductVersion" />
+      <Output TaskParameter="BuildVersionComma" PropertyName="BuildVersionComma" />
+    </GetVersions>
+
+    <Message Text="Build Version: $(BuildVersion)" />
+    <Message Text="Product Version: $(ProductVersion)" />
+  </Target>
+
+  <Target Name="GetRootUrl">
+    <Message Text="Checkout Directory: $(SvnCheckoutDir)" />
+
+    <!-- On the build server the "checkout" directory isn't actually an SVN working copy, so we have to do a bit
+     of a hack here - use the current (build) directory and go to get to the checkout root. This of course assumes
+     that the checked out directory tree mirrors the SVN directory tree. -->
+
+    <SvnInfo LocalPath="$(SvnCheckoutDir)\Build" Username="$(SvnUsername)" Password="$(SvnPassword)">
+      <Output TaskParameter="RepositoryPath" PropertyName="RepositoryPath" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnInfo>
+
+    <Message Text="Repository Path: $(RepositoryPath)" />
+    <Message Text="Revision: $(Revision)" />
+
+    <GetAbsolutePath RelativePath="$(SourceRootDir)" RelativeToFolder="$(RepositoryPath)">
+      <Output TaskParameter="AbsolutePath" PropertyName="RootUrl" />
+    </GetAbsolutePath>
+
+    <Message Text="Root Url: $(RootUrl)" />
+  </Target>
+
+  <Target Name="CheckFirstTag" DependsOnTargets="GetVersions">
+
+    <Message Text="Checking for first tag: $(SvnTagsPath)/$(ProductVersion)_first" />
+    
+    <SvnPathExists RepositoryPath="$(SvnTagsPath)/$(ProductVersion)_first" Username="$(SvnUsername)" Password="$(SvnPassword)">
+      <Output TaskParameter="PathExists" PropertyName="FirstTagExists" />
+    </SvnPathExists>
+
+    <Message Condition="$(FirstTagExists) != 'true'" Text="First tag for $(ProductVersion) does not exist" />
+    <Message Condition="$(FirstTagExists) == 'true'" Text="First tag for $(ProductVersion) exists" />
+    
+  </Target>
+
+  <Target Name="CreateLabels" DependsOnTargets="GetRootUrl; CheckFirstTag">
+
+    <!-- Delete the existing last tag, ignoring the error if it doesn't exist. -->
+    
+    <SvnDelete RepositoryPath="$(SvnTagsPath)/$(ProductVersion)_last" IgnoreError="true"
+               Message="Deleting 'last' tag for release $(ProductVersion)"
+               Username="$(SvnUsername)" Password="$(SvnPassword)" />
+
+    <!-- Create the last tag. -->
+
+    <Message Text="Tagging $(RootUrl) at revision $(Revision) as last build: $(SvnTagsPath)/$(ProductVersion)_last" />
+    <SvnCopy SourcePath="$(RootUrl)" DestinationPath="$(SvnTagsPath)/$(ProductVersion)_last"
+             Message="Tagging $(RootUrl) at revision $(Revision) as last build: $(SvnTagsPath)/$(ProductVersion)_last"
+             Username="$(SvnUsername)" Password="$(SvnPassword)" />
+
+    <!-- Also create the first tag if it doesn't exist. -->
+    
+    <Message Condition="$(FirstTagExists) != 'true'"
+             Text="Tagging $(RootUrl) at revision $(Revision) as first build for release $(ProductVersion)" />
+    <SvnCopy Condition="$(FirstTagExists) != 'true'"
+             SourcePath="$(RootUrl)" DestinationPath="$(SvnTagsPath)/$(ProductVersion)_first"
+             Message="Tagging $(RootUrl) at revision $(Revision) as first build for release $(ProductVersion)"
+             Username="$(SvnUsername)" Password="$(SvnPassword)" />
+    
+  </Target>
+
+</Project>

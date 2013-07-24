@@ -1,0 +1,167 @@
+.saved-searches {}
+	.saved-searches .saved-search {}
+		.saved-searches div.saved-search a,
+		.saved-searches li.saved-search a,
+		.saved-searches tr.saved-search td.description a {
+			padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1;
+		}
+		.saved-searches tr.saved-search .search-terms {
+			padding-left: 17px;
+		}
+		
+		.saved-searches div.hotlist_saved-search a.execute,
+		.saved-searches li.hotlist_saved-search a.execute,
+		.saved-searches tr.hotlist_saved-search td.description a.execute {
+			background: url(../../images/controls/SavedResumeSearchesControl/hotlist.png) left top no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1;
+		}
+		
+		.saved-searches div.alert_saved-search a,
+		.saved-searches li.alert_saved-search a,
+		.saved-searches tr.alert_saved-search td.description a {
+			background: url(../../images/employer/candidate-email-alerts.png) left 4px no-repeat; padding: 1px 0 2px 21px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1;
+		}
+			.saved-searches tr.alert_saved-search .search-terms {
+				padding-left: 21px;
+			}
+
+/* Not really for hotlists.css -- move to widgets_and_lists.css */
+.minilist_section-content .columns .column {
+	width: 333px;
+}
+
+table.saved-searches .textbox_control {
+    background: url(../../images/controls/SavedResumeSearchesControl/hotlist.png) left top no-repeat;
+    padding-left: 16px;
+}
+
+table.saved-searches .saved-search .textbox {
+    width: 430px;
+}
+.minilist .saved-search .textbox {
+    width: 170px;
+}
+
+table.saved-searches tbody tr.item td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Should be for all tables -- move to widgets_and_lists.css */
+table.saved-searches .action-list {
+	
+}
+	table.saved-searches .action-list li {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+table.saved-searches tr.saved-search td.description {
+	font-size: 100%;
+}
+
+.saved-search .search-terms {
+	font-size: 85%;
+	color: #BBB;
+	display: block;
+}
+	.saved-search .search-terms b {
+		font-weight: normal;
+		color: #888;
+	}
+
+.saved-search a.search-terms {
+	font-size: 100%;
+	color: #69F;
+}
+.saved-search a.search-terms:hover {
+	color: #FA4;
+}
+	.saved-search a.search-terms b {
+		font-weight: normal;
+		color: #1155EE;
+	}
+	.saved-search a.search-terms:hover b {
+		color: #FF8800;
+	}
+
+.minilist .unnamed_saved-search {
+	background-position: center right;
+	background-image: url(../../images/universal/ellipsis-for-hover.png);
+	background-repeat: no-repeat;
+}
+.minilist .unnamed_saved-search a.search-terms {
+	margin-right: 25px;
+	width: 276px;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-bottom: -3px;
+}
+
+.minilist .saved-search {
+    position: relative;
+}
+	
+.minilist .unnamed_saved-search_hover {
+	background-image: none;
+}
+
+    .minilist .unnamed_saved-search_hover a.search-terms,
+    .minilist .named_saved-search_hover a.search-name {
+	    width: 200px;
+	    white-space: normal;
+	    margin-right: 0;
+    }
+    
+	.minilist .saved-search .action-list {
+		display: none;
+	}
+	
+	.minilist .saved-search_hover .action-list {
+	    display: block;
+	}
+	
+	.minilist .saved-search_hover .delete_button {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		display: inline;
+		display: -moz-inline-box;
+		display: inline-block;
+		zoom: 1;
+		width: 14px;
+		height: 14px;
+		line-height: 14px;  /* For IE 6-8 */
+		vertical-align: middle; /* For IE 6-8 */
+		*position: relative; /* For IE 6-7 */
+		*top: -2px;          /* For IE 6-7 */
+		text-indent: -9999px;
+		background: url("../../images/buttons/mini_light/x.png") top left no-repeat;
+	}
+	.minilist .saved-search .delete_button:hover {
+		background-position: left center;
+	}
+	.minilist .saved-search .delete_button:active {
+		background-position: left bottom;
+	}
+
+.saved-search .alert-created {
+	color: #BBB;
+	padding-top: 5px;
+	font-size: 85%;
+	display: block;
+	clear: left;
+}
+	.saved-searches .item-odd .alert-created {
+		color: #AAA;
+	}
+.saved-search .create-alert_action-list {
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+	.saved-search .create-alert_action-list a {
+		color: #79F;
+	}
+	.saved-search .create-alert_action-list a:hover {
+		color: #F80;
+	}

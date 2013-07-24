@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<ContentItems>
+  <MasterTemplateContentItems>
+    <MasterTemplateContentItem Name="MemberEmail">
+      <VerticalContentItem VerticalId="1ad1d2ec-2442-4360-9e10-f07512281fc9">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <p>Cheers,</p>
+        <p>
+          The Finsia Career Network team.<br />
+          <a href="mailto:careernetwork@finsia.com">careernetwork@finsia.com </a>
+        </p>
+      </div>
+      <div class="body"><%=Footer%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <p>This service is provided by
+          <img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="LinkMe" />
+        </p>
+        <p>
+          Copyright 2008 Finsia - Financial Services Institute of Australasia.
+          All rights reserved
+        </p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+      <VerticalContentItem VerticalId="f2494b48-7ffd-4be7-86e0-82148e443d27">
+        <ViewContentItem MimeType="text/html">
+          <![CDATA[
+<html>
+  <head>
+    <link href="<%=GetUrl(false, "~/Email/emails.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=GetUrl(false, "~/Email/print-emails.css")%>" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body style="margin: 0px; padding: 0px;">
+    <div id="letter-layout" style="font-family: Arial, Helvetica, sans-serif; color: #474747;">
+      <div class="body" style="padding-top: 20px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;"><%=Body%>      </div>
+      <div class="signature" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 9pt; padding-top:1em;">
+        <br />Thanks,
+        <br />Your LinkMe team and Finsia
+        <br/><img height="62" width="76" src="<%=GetUrl(false, "~/themes/communities/finsia/img/email-logo.png")%>" alt="Finsia" />
+        <br />
+        <br />For support please
+        <a href="<%=TinyUrls.Register(false, "~/contactus")%>">contact us</a>.
+        <p>This service brought to you by</p>
+        <p>
+          <img src="<%=GetUrl(false, "~/Email/logo-for-emails.gif")%>" alt="LinkMe" />
+        </p>
+      </div>
+<%if (IncludeUnsubscribe && To.UserType != LinkMe.Domain.Contacts.UserType.Anonymous) {%>
+      <div class="unsubscribe" style="padding-left: 9px; font-family: Arial, Helvetica, sans-serif; color: gray; font-size: 8pt; padding-top:1em; margin-left: 20px;">
+        <p>
+          Receiving too many emails?
+          <br />
+          <a href="<%=TinyUrls.Register(true, "~/members/settings")%>">
+            Log in
+          </a>
+          to choose the emails you receive from us.
+        </p>
+        <p>
+          Alternatively, you can
+          <a href="<%=TinyUrls.Register(false, "~/accounts/settings/unsubscribe", "userId", To.Id.ToString("n"), "category", Category)%>">
+            unsubscribe
+          </a>
+          from this type of email entirely.
+        </p>
+      </div>
+<%}%>
+    </div>
+    <img src="<%=GetTrackingPixelUrl(Id) %>" width="1" height="1" />
+  </body>
+</html>
+]]>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </MasterTemplateContentItem>
+  </MasterTemplateContentItems>
+  <TemplateContentItems>
+    <TemplateContentItem Name="ActivationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="1ad1d2ec-2442-4360-9e10-f07512281fc9">
+        <Subject>Activate your Finsia Career Networking account</Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  Welcome to the Finsia Career Network,
+  your online financial services community.
+  We hope you enjoy the many benefits it provides,
+  including our industry networking forums,
+  career management tools and resources,
+  and access to the hidden jobs market.
+</p>
+<p>
+  To activate your account, please 
+  <a href="<%=TinyUrls.Register(false, "~/accounts/activation", "activationCode", VerificationCode)%>">
+    verify your email address is correct
+  </a>
+   by clicking on the link.
+</p>
+<p>
+  We've included below some housekeeping tips to help
+  you make the most of your profile.
+  If you run into any trouble or have any questions,
+  please send an email to 
+  <a href="mailto:careernetwork@finsia.com">careernetwork@finsia.com</a>
+  and we'll get back to you as soon as we can.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer">
+            <![CDATA[
+<p>***************************************************</p>
+<p><strong>Your profile</strong></p>
+<p>
+  Once you verify your email,
+  you will be asked to update your career profile.
+  This includes your employment history,
+  desired job and salary,
+  career objectives and your education and qualifications.<br />
+  You can add as much or as little detail in these fields as you choose.
+  Just remember, the more information you provide,
+  and the more often you update it,
+  the more chance you have for employers finding you.
+</p>
+<p><strong>Your security</strong></p>
+<p>
+  You control whether your resume is accessible
+  to potential employers by selecting or changing
+  your visibility at any time.
+  Hide personal information including your name
+  and current and previous employers,
+  or make these public to your network - it's your choice.
+</p>
+<p>
+  Select "Actively looking"; "Not looking, but happy to talk";
+  or "Not looking" to ensure your profile receives the attention
+  you desire from potential employers.
+  The Finsia Career Network will never reveal your personal
+  address or email address to employers unless you actually
+  apply for a job they have advertised.
+</p>
+<p>
+  You're also free to join and un-join networking groups,
+  job alerts and updates quickly and easily via your profile.
+</p>
+<p><strong>Support</strong></p>
+<p>
+  If you need help with your profile,
+  would like to report any inappropriate activity
+  or have any questions about Finsia's Career Network, please
+  email <a href="mailto:careernetwork@finsia.com">careernetwork@finsia.com</a>.
+</p>
+<p>***************************************************</p>
+]]>
+          </ViewPartContentItem>
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupFriendInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="1ad1d2ec-2442-4360-9e10-f07512281fc9">
+        <Subject><![CDATA[Join the <%=Group.Name%> group]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Dear <%=To.FirstName%>,</p>
+<p>
+  <%=From.FullName%> would like to invite you to join the <%=Group.Name%> group.
+</p>
+<p>
+  <strong>Group description:</strong>
+  <br/>
+  <%=Group.Description%>
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <strong><%=MakeNamePossessive(From.FirstName)%> message:</strong>
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/ViewGroup.aspx", "invitationId", Invitation.Id.ToString("n"))%>">Log in</a>
+  to join the <%=Group.Name%> group.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+    <TemplateContentItem Name="GroupContactInvitationEmail" Master="MemberEmail">
+      <VerticalContentItem VerticalId="1ad1d2ec-2442-4360-9e10-f07512281fc9">
+        <Subject><![CDATA[Join the <%=Group.Name%> group]]></Subject>
+        <ViewContentItem MimeType="text/html">
+          <ViewPartContentItem Name="Body">
+            <![CDATA[
+<p>Hi,</p>
+<p>
+  <%=From.FullName%> would like to invite you to join the <%=Group.Name%> group.
+</p>
+<p>
+  <strong>Group description:</strong>
+  <br />
+  <%=Group.Description%>
+</p>
+<%if (MessageText != "") {%>
+<p>
+  <strong><%=MakeNamePossessive(From.FirstName)%> message:</strong>
+  <br />
+  <%=MessageText%>
+</p>
+<%}%>
+<p>
+  To join this group you must first create a profile
+  on the Finsia Career Network.
+</p>
+<p>
+  Follow this
+  <a href="<%=TinyUrls.Register(false, "~/Join.aspx", "groupInvitationId", Invitation.Id.ToString("n"))%>">link</a>
+  to create a profile after which you will be automatically
+  registered as a group member and directed to the group page.
+</p>
+<p>
+  If you have already registered on the Finsia Career Network,
+  <a href="<%=TinyUrls.Register(true, "~/ui/registered/networkers/groups/ViewGroup.aspx", "groupId", Group.Id.ToString("n"))%>">log in</a>
+  to join the <%=Group.Name%> group.
+</p>
+<p>
+  In addition to becoming part of our groups,
+  a profile can help your career and allow prospective employers to find you.
+</p>
+]]>
+          </ViewPartContentItem>
+          <ViewPartContentItem Name="Footer" />
+        </ViewContentItem>
+      </VerticalContentItem>
+    </TemplateContentItem>
+  </TemplateContentItems>
+</ContentItems>

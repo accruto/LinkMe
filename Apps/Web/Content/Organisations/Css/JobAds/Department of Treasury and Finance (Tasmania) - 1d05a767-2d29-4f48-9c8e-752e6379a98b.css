@@ -1,0 +1,93 @@
+#JobAd {}
+
+	#JobAd #JobDescription {
+		background: #fff url(dept_tas_treasury_images/bg.gif) repeat-y left top;
+		margin-bottom: 1em; /* separates ad contents from Apply btn and links */
+		width: 460px;
+	}
+	
+		#JobAd #JobDescription #Ad {
+			background: url(dept_tas_treasury_images/header.jpg) no-repeat left top;
+			padding-top: 231px;
+		}
+			/* Covers all content of ad, including prescribed fields as well as
+			the free-form user input in the middle section, unless overridden */
+			#JobAd #JobDescription #Ad div,
+			#JobAd #JobDescription #Ad p {
+				color: #000;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 1.3em;
+				margin-left: 35px;
+				margin-right: 35px;
+			}
+			/* override margins of above decl. for nested containers */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				margin-left: 35px; 
+				margin-right: 35px;
+				text-align: center;
+			}	
+			#JobAd #JobDescription #Ad div#JobAdHeading {}	
+			#JobAd #JobDescription #Ad div#AdContactDetails {}
+			
+			/* Usual placeholder for header graphic */
+			#JobAd #JobDescription #Ad div#brandingLogo {
+			}
+					
+			/* Contains content that comes from prescribed fields */
+			#JobAd #JobDescription #Ad div#JobAdHeading {}
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading h1 {
+					color: #8c9c3c;
+					font-size: 200%;
+					margin-top: 25px;
+					text-align: center;
+				}		
+					
+				/* This element is unfortunately used as a subheading  */
+				#JobAd #JobDescription #Ad div#JobAdHeading p strong {
+					display: block;
+					color: #005966;
+					font-size: 150%;
+					font-weight: 400;
+					margin-bottom: 20px;
+					margin-top: 20px;
+					text-align: center;
+				}
+	
+				#JobAd #JobDescription #Ad div#JobAdHeading table {
+					width: 90% !important; /* overrides setting from text-links-headings.css */
+				}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td {
+						font-family: Arial, Helvetica, sans-serif;
+						padding-left: 0;
+						vertical-align: top;
+					}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td label {
+						color: #000;
+						font-family: Arial, Helvetica, sans-serif;
+						margin-left: 0; /* overrides setting from forms.css */
+					}
+				#JobAd #JobDescription #Ad div#JobAdHeading ul {}
+					#JobAd #JobDescription #Ad div#JobAdHeading ul li {}
+			
+			/* Last div for textual content inside div#Ad */
+			#JobAd #JobDescription #Ad div#AdContactDetails {
+				padding-bottom: 100px;
+			}
+		
+		#JobAd #JobDescription #Ad {
+			position: relative;
+		}
+		
+		/* Usual placeholder for footer graphic -- N.B. is INSIDE div#Ad */
+		#JobAd #JobDescription #Ad #LogoFooter {
+			position: absolute;
+			bottom: -1px;	/* IE6 does some weird rounding so cover for it */
+			right: 0;
+			background: #fff url(dept_tas_treasury_images/footer.gif) no-repeat left bottom;
+			width: 100%;
+			margin: 0;
+			height: 90px;
+		}
+	
+	

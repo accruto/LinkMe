@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+
+    <!-- Includes -->
+
+    <siteMapNode siteMapFile="unregistered/Unregistered.sitemap" />
+    <siteMapNode siteMapFile="registered/Registered.sitemap" />
+
+    <!-- Nodes -->
+
+    <siteMapNode sidebar="empty">
+      <siteMapNode url="~/ui/UploadTooLargeError.aspx" />
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

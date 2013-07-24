@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ************************************************************
+  Copyright 2006, Burning Glass Technologies
+  Job Posting Content Model
+  ************************************************************
+  
+  Include using:
+  <!DOCTYPE posting SYSTEM "posting.dtd">
+-->
+<!-- ************************************************************ -->
+<!-- Root Element -->
+<!--
+  sic is the industry code for the employer.  It is used during 
+  the scoring process.
+  
+  title is the canonicalized job title.  It is used during the
+  scoring process.
+-->
+<xs:schema targetNamespace="http://www.burning-glass.com/Posting/1.0" xmlns:pd="http://www.burning-glass.com/Posting/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="posting">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:title"/>
+				<xs:element ref="pd:benefits"/>
+				<xs:element ref="pd:duties"/>
+				<xs:element ref="pd:background"/>
+				<xs:element ref="pd:contact"/>
+				<xs:element ref="pd:qualifications"/>
+			</xs:choice>
+			<xs:attributeGroup ref="pd:attlist.posting"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.posting">
+		<xs:attribute name="status" default="new">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="new"/>
+					<xs:enumeration value="clean"/>
+					<xs:enumeration value="tagged"/>
+					<xs:enumeration value="other"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="sic" type="xs:NMTOKEN"/>
+		<xs:attribute name="title" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 1 Elements -->
+	<!-- benefits -->
+	<xs:element name="benefits">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="pd:salary" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- duties -->
+	<xs:element name="duties">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:title"/>
+				<xs:element ref="pd:company"/>
+				<xs:element ref="pd:location"/>
+				<xs:element ref="pd:jobtype"/>
+				<xs:element ref="pd:area"/>
+				<xs:element ref="pd:skill"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- background -->
+	<xs:element name="background">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:title"/>
+				<xs:element ref="pd:company"/>
+				<xs:element ref="pd:location"/>
+				<xs:element ref="pd:department"/>
+				<xs:element ref="pd:url"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- contact -->
+	<xs:element name="contact">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:name"/>
+				<xs:element ref="pd:company"/>
+				<xs:element ref="pd:address"/>
+				<xs:element ref="pd:phone"/>
+				<xs:element ref="pd:fax"/>
+				<xs:element ref="pd:email"/>
+				<xs:element ref="pd:url"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- qualifications -->
+	<xs:element name="qualifications">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:required"/>
+				<xs:element ref="pd:preferred"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 2 Elements -->
+	<!-- address -->
+	<!--
+    lat/lon are latitude and longitude calculated from the 
+    address fields.  Currently, only the postalcode is used to
+    calculate the values.  They are used during the match process.     
+  -->
+	<xs:element name="address">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:city"/>
+				<xs:element ref="pd:state"/>
+			</xs:choice>
+			<xs:attributeGroup ref="pd:attlist.address"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.address">
+		<xs:attribute name="lat"/>
+		<xs:attribute name="lon"/>
+	</xs:attributeGroup>
+	<!-- required -->
+	<xs:element name="required">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:interval"/>
+				<xs:element ref="pd:area"/>
+				<xs:element ref="pd:skill"/>
+				<xs:element ref="pd:certification"/>
+				<xs:element ref="pd:education"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- preferred -->
+	<xs:element name="preferred">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:interval"/>
+				<xs:element ref="pd:area"/>
+				<xs:element ref="pd:skill"/>
+				<xs:element ref="pd:certification"/>
+				<xs:element ref="pd:education"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Level 3 Elements -->
+	<!-- interval -->
+	<xs:element name="duration">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:duration"/>
+				<xs:element ref="pd:area"/>
+				<xs:element ref="pd:skill"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- education -->
+	<xs:element name="education">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="pd:degree"/>
+				<xs:element ref="pd:major"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- Other Elements -->
+	<!-- salary -->
+	<xs:element name="salary" type="xs:string"/>
+	<!-- name -->
+	<xs:element name="name" type="xs:string"/>
+	<!-- phone -->
+	<xs:element name="phone">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="pd:attlist.phone"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.phone">
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="home"/>
+					<xs:enumeration value="work"/>
+					<xs:enumeration value="pager"/>
+					<xs:enumeration value="cell"/>
+					<xs:enumeration value="fax"/>
+					<xs:enumeration value="voicemail"/>
+					<xs:enumeration value="voice"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- title -->
+	<xs:element name="title" type="xs:string"/>
+	<!-- jobtype -->
+	<xs:element name="jobtype" type="xs:string"/>
+	<!-- interval -->
+	<xs:element name="interval" type="xs:string"/>
+	<!-- company -->
+	<xs:element name="company" type="xs:string"/>
+	<!-- location -->
+	<xs:element name="location" type="xs:string"/>
+	<!-- skill -->
+	<xs:element name="skill" type="xs:string"/>
+	<!-- department -->
+	<xs:element name="department" type="xs:string"/>
+	<!-- url -->
+	<xs:element name="url" type="xs:string"/>
+	<!-- fax -->
+	<xs:element name="fax" type="xs:string"/>
+	<!-- city -->
+	<xs:element name="city" type="xs:string"/>
+	<!-- state -->
+	<xs:element name="state" type="xs:string"/>
+	<!-- postalcode -->
+	<xs:element name="postalcode" type="xs:string"/>
+	<!-- country -->
+	<xs:element name="country" type="xs:string"/>
+	<!-- area -->
+	<xs:element name="area" type="xs:string"/>
+	<!-- email -->
+	<xs:element name="email" type="xs:string"/>
+	<!-- certification -->
+	<xs:element name="certification" type="xs:string"/>
+	<!-- degree -->
+	<xs:element name="degree" type="xs:string"/>
+	<!-- major -->
+	<xs:element name="major" type="xs:string"/>
+</xs:schema>

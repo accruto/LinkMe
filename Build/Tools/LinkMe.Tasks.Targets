@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<LinkMeTasksLib>LinkMe.Tasks.dll</LinkMeTasksLib>
+  </PropertyGroup>
+
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.GetReleaseFromBuildNumber" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.GetDbReleasesFromBuildNumber" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.GetScriptListForDbBuild" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.BackupDatabase" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.RestoreDatabase" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.KillDatabaseConnections" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.RunSqlScript" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.RunSqlScriptList" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.WaitUntilFileExists" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.DeleteDirectoryContents" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.SearchFiles" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.MakePathAbsolute" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.SvnDelete" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.SvnPathExists" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.GetMsiProductIds" />
+  <UsingTask AssemblyFile="$(LinkMeTasksLib)" TaskName="LinkMe.Tasks.SetEnvVariable" />
+</Project>

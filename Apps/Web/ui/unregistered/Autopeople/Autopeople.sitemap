@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="~/ui/unregistered/autopeople" crawlable="false">
+
+    <siteMapNode url="~/ui/unregistered/Autopeople/APAutoLogin.aspx">
+      <siteMapNode redirect="true" url="~/Autopeople/APAutoLogin.aspx"/>
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

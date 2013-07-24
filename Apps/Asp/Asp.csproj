@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4430078D-3F59-472A-8B0A-F2515609570D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Apps.Asp</RootNamespace>
+    <AssemblyName>LinkMe.Apps.Asp</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Content">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Content\bin\LinkMe.Framework.Content.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Reports\bin\LinkMe.Query.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Workflow.Runtime">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caches\CacheManager.cs" />
+    <Compile Include="Caches\ICacheManager.cs" />
+    <Compile Include="Caches\IRefreshCacheManager.cs" />
+    <Compile Include="ContentTypes.cs" />
+    <Compile Include="Content\BundleUrl.cs" />
+    <Compile Include="Content\ContentUrl.cs" />
+    <Compile Include="Content\StylesExtensions.cs" />
+    <Compile Include="Content\FaviconReference.cs" />
+    <Compile Include="Content\JavaScriptReference.cs" />
+    <Compile Include="Content\RssFeedReference.cs" />
+    <Compile Include="Content\ScriptsExtensions.cs" />
+    <Compile Include="Content\StyleSheetReference.cs" />
+    <Compile Include="Content\VersionedUrl.cs" />
+    <Compile Include="Context\ContextualContent.cs" />
+    <Compile Include="Context\ContextualPlaceHolder.cs" />
+    <Compile Include="Cookies\HttpCookieCollectionExtensions.cs" />
+    <Compile Include="Files\HttpPostedFileContents.cs" />
+    <Compile Include="Json\JsonHttpExtensions.cs" />
+    <Compile Include="Json\Models\JsonBlocklistModel.cs" />
+    <Compile Include="Json\Models\JsonFolderModel.cs" />
+    <Compile Include="Json\Models\JsonListModel.cs" />
+    <Compile Include="Json\Models\JsonNoteModel.cs" />
+    <Compile Include="Json\Models\JsonRequestModel.cs" />
+    <Compile Include="Json\Models\JsonResponseModel.cs" />
+    <Compile Include="Modules\LogModule.cs" />
+    <Compile Include="Modules\HttpModule.cs" />
+    <Compile Include="Mvc\ButtonClickedAttribute.cs" />
+    <Compile Include="Mvc\Controllers\ApiEnsureAuthorizedAttribute.cs" />
+    <Compile Include="Mvc\Controllers\CompressActionFilter.cs" />
+    <Compile Include="Mvc\Controllers\Controller.cs" />
+    <Compile Include="Mvc\Controllers\AuthorizedAttribute.cs" />
+    <Compile Include="Mvc\Controllers\EnsureHttpsAttribute.cs" />
+    <Compile Include="Mvc\Controllers\EnsureHttpAttribute.cs" />
+    <Compile Include="Mvc\Controllers\MobileController.cs" />
+    <Compile Include="Mvc\Controllers\ViewController.cs" />
+    <Compile Include="Elements\HeadInfo.cs" />
+    <Compile Include="Elements\MetaTag.cs" />
+    <Compile Include="Mvc\Controllers\ApiController.cs" />
+    <Compile Include="Mvc\Controllers\ApiEnsureNotAuthorizedAttribute.cs" />
+    <Compile Include="Mvc\Controllers\ErrorsApiController.cs" />
+    <Compile Include="Mvc\Controllers\ControllerExtensions.cs" />
+    <Compile Include="Mvc\Controllers\ErrorsControllerExtensions.cs" />
+    <Compile Include="Mvc\Controllers\JsonResponseResult.cs" />
+    <Compile Include="Mvc\Controllers\NoCacheAttribute.cs" />
+    <Compile Include="Mvc\Html\ErrorSummaryExtensions.cs" />
+    <Compile Include="Mvc\Html\RouteExtensions.cs" />
+    <Compile Include="Mvc\Html\TagBuilderTree.cs" />
+    <Compile Include="Mvc\HttpPostedFileBaseExtensions.cs" />
+    <Compile Include="Mvc\Models\Binders\ModelBinderErrors.cs" />
+    <Compile Include="Mvc\Models\Converters\JobAdSearchCriteriaAdSenseConverter.cs" />
+    <Compile Include="Mvc\Models\JavaScriptConverters\PaginationJavaScriptConverter.cs" />
+    <Compile Include="Mvc\Models\Binders\IntArrayBinder.cs" />
+    <Compile Include="Mvc\Models\Binders\ModelBinderValues.cs" />
+    <Compile Include="Mvc\Models\Converters\PaginationConverter.cs" />
+    <Compile Include="Mvc\Models\Converters\PartialDateConverter.cs" />
+    <Compile Include="Mvc\Models\JavaScriptConverters\MemberSearchCriteriaJavaScriptConverter.cs" />
+    <Compile Include="Mvc\Models\PageflowModel.cs" />
+    <Compile Include="Mvc\Results\TextResult.cs" />
+    <Compile Include="Mvc\Results\XmlResult.cs" />
+    <Compile Include="Mvc\Results\DocFileResult.cs" />
+    <Compile Include="Mvc\Controllers\NotificationActionFilter.cs" />
+    <Compile Include="Mvc\Controllers\RedirectToUrlResult.cs" />
+    <Compile Include="Mvc\Controllers\UnityActionInvoker.cs" />
+    <Compile Include="Mvc\Controllers\PageflowController.cs" />
+    <Compile Include="Mvc\Results\ZipFileResult.cs" />
+    <Compile Include="Mvc\Fields\ButtonsField.cs" />
+    <Compile Include="Mvc\Fields\CheckBoxesField.cs" />
+    <Compile Include="Mvc\Fields\CheckBoxField.cs" />
+    <Compile Include="Mvc\Fields\ControlsField.cs" />
+    <Compile Include="Mvc\Fields\DateTimeField.cs" />
+    <Compile Include="Mvc\Fields\DropDownListField.cs" />
+    <Compile Include="Mvc\Fields\EmailLinkField.cs" />
+    <Compile Include="Mvc\Fields\Field.cs" />
+    <Compile Include="Mvc\Fields\LinkField.cs" />
+    <Compile Include="Mvc\Fields\ListBoxField.cs" />
+    <Compile Include="Mvc\Models\NullModelValidatorProvider.cs" />
+    <Compile Include="Mvc\Html\IHaveId.cs" />
+    <Compile Include="Mvc\Models\Binders\EnumBinder.cs" />
+    <Compile Include="Mvc\Models\Pagination.cs" />
+    <Compile Include="Mvc\Models\PaginationKeys.cs" />
+    <Compile Include="Mvc\ValueProviderDictionary.cs" />
+    <Compile Include="Mvc\ViewDataExtensions.cs" />
+    <Compile Include="Mvc\Views\ContainerViewEngine.cs" />
+    <Compile Include="Mvc\Views\JavaScripts.cs" />
+    <Compile Include="Mvc\Views\StyleSheets.cs" />
+    <Compile Include="Mvc\Widgets\TooltipIcon.cs" />
+    <Compile Include="Mvc\Fields\ValueField.cs" />
+    <Compile Include="Mvc\Fields\NamedField.cs" />
+    <Compile Include="Mvc\Fields\PartialField.cs" />
+    <Compile Include="Mvc\Fields\PasswordField.cs" />
+    <Compile Include="Mvc\Fields\RadioButtonsField.cs" />
+    <Compile Include="Mvc\Fields\RouteLinkField.cs" />
+    <Compile Include="Mvc\Fields\TextBoxField.cs" />
+    <Compile Include="Mvc\Fields\MultiPartField.cs" />
+    <Compile Include="Mvc\Html\EmailLinkExtensions.cs" />
+    <Compile Include="Mvc\Html\FormExtensions.cs" />
+    <Compile Include="Mvc\Html\ImageExtensions.cs" />
+    <Compile Include="Mvc\Models\Binders\CreditCardBinder.cs" />
+    <Compile Include="Mvc\Models\Binders\ModelBinder.cs" />
+    <Compile Include="Mvc\Models\Binders\CheckBoxBinder.cs" />
+    <Compile Include="Mvc\Models\Binders\GuidArrayBinder.cs" />
+    <Compile Include="Mvc\Models\CheckBoxValue.cs" />
+    <Compile Include="Mvc\Models\SelectList.cs" />
+    <Compile Include="Mvc\Models\ModelStateExtensions.cs" />
+    <Compile Include="Mvc\Views\CacheViewEngine.cs" />
+    <Compile Include="Sessions\SessionWrapper.cs" />
+    <Compile Include="Notifications\Notification.cs" />
+    <Compile Include="Notifications\NotificationsExtensions.cs" />
+    <Compile Include="Profiles\ProfileWrapper.cs" />
+    <Compile Include="Referrals\Constants.cs" />
+    <Compile Include="Referrals\IReferralsManager.cs" />
+    <Compile Include="Referrals\ReferralsManager.cs" />
+    <Compile Include="Routing\AreaRegistrationContextExtensions.cs" />
+    <Compile Include="Routing\AuthorizedConstraint.cs" />
+    <Compile Include="Routing\QueryStringConstraint.cs" />
+    <Compile Include="Routing\MobileConstraint.cs" />
+    <Compile Include="Routing\RedirectUrlHandler.cs" />
+    <Compile Include="Routing\JsonHttpHandler.cs" />
+    <Compile Include="Routing\JsonNotFoundRouteHandler.cs" />
+    <Compile Include="Routing\RedirectRouteHandler.cs" />
+    <Compile Include="Routing\RouteConstraint.cs" />
+    <Compile Include="Security\CookieManager.cs" />
+    <Compile Include="Security\DevAuthenticationManager.cs" />
+    <Compile Include="Security\EmployerAccount.cs" />
+    <Compile Include="Security\ExternalCookieData.cs" />
+    <Compile Include="Security\IAuthenticationManager.cs" />
+    <Compile Include="Security\ICookieManager.cs" />
+    <Compile Include="Security\IAccountsManager.cs" />
+    <Compile Include="Security\AccountsManager.cs" />
+    <Compile Include="Security\IDevAuthenticationManager.cs" />
+    <Compile Include="Security\AccountLoginCredentials.cs" />
+    <Compile Include="Security\Login.cs" />
+    <Compile Include="Security\MemberAccount.cs" />
+    <Compile Include="Security\SessionKeys.cs" />
+    <Compile Include="Security\RegisteredUserIdentityExtensions.cs" />
+    <Compile Include="Templates\ManagementTemplateEngine.cs" />
+    <Compile Include="Templates\WebSiteTemplateEngine.cs" />
+    <Compile Include="Templates\WebSiteTextTemplateEngine.cs" />
+    <Compile Include="Mvc\Html\ButtonExtensions.cs" />
+    <Compile Include="Mvc\Html\FieldExtensions.cs" />
+    <Compile Include="Mvc\Html\HeadExtensions.cs" />
+    <Compile Include="Mvc\Html\HtmlUtilsHelper.cs" />
+    <Compile Include="Mvc\Html\LinkExtensions.cs" />
+    <Compile Include="Mvc\Html\PartialExtensions.cs" />
+    <Compile Include="Mvc\Html\TextExtensions.cs" />
+    <Compile Include="Mvc\Models\PaginatedItemParts.cs" />
+    <Compile Include="Mvc\Models\PaginatedList.cs" />
+    <Compile Include="Navigation\AutoSiteMapProvider.cs" />
+    <Compile Include="Routing\AreaRoute.cs" />
+    <Compile Include="UI\EmptyMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\IMasterPage.cs" />
+    <Compile Include="UI\MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\NestedMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvc\Controllers\UnityControllerFactory.cs" />
+    <Compile Include="Mvc\Views\ViewMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvc\Views\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvc\Views\ViewUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Exceptions\ExceptionManager.cs" />
+    <Compile Include="Modules\AuthenticationModule.cs" />
+    <Compile Include="Modules\NavigationModule.cs" />
+    <Compile Include="Security\AuthenticationManager.cs" />
+    <Compile Include="UI\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SecondaryForm.cs" />
+    <Compile Include="Navigation\DynamicSiteMapProvider.cs" />
+    <Compile Include="Navigation\NavigationManager.cs" />
+    <Compile Include="Navigation\NavigationSiteMapNavigator.cs" />
+    <Compile Include="Navigation\NavigationSiteMapNode.cs" />
+    <Compile Include="Navigation\NavigationSiteMapProvider.cs" />
+    <Compile Include="Navigation\PatternSiteMapProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unity\AspConfigurator.cs" />
+    <Compile Include="Urls\NavigationLink.cs" />
+    <Compile Include="Content\Reference.cs" />
+    <Compile Include="Urls\UrlsExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agents\Agents.csproj">
+      <Project>{29B2CC57-2147-424E-BEF6-D86A4B5C8A70}</Project>
+      <Name>Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pageflows\Pageflows.csproj">
+      <Project>{A64D8F7A-D974-4537-814C-0A51B1A3579C}</Project>
+      <Name>Pageflows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation\Presentation.csproj">
+      <Project>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{23BDC76F-D52E-4F6D-8AE4-33224D02A6FA}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{48F7E3B6-D00D-45DA-9AB2-148779E0B949}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

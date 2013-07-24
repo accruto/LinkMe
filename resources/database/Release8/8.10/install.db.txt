@@ -1,0 +1,58 @@
+; Location
+alter_LocationAlias_rename_LocationAbbreviation.sql
+data_LocationAbbreviation.sql
+create_RelativeLocation.sql
+data_RelativeLocation.sql
+
+create_NetworkMatchCategory.sql
+create_IgnoredNetworkMatch.sql
+
+;UserContentItem refactoring
+
+alter_UserContentItem.sql
+data_migrate_admins.sql
+alter_UserContentRemovalRequest.sql
+
+;WhiteboardMessage refactoring
+data_migrate_hidden_messages.sql
+alter_WhiteboardMessage.sql
+
+; Communications
+alter_rename_Email.sql
+create_CommunicationCategoryType.sql
+create_CommunicationFrequency.sql
+alter_CommunicationCategory_add_columns.sql
+alter_CommunicationCategorySettings_add_columns.sql
+create_sp_CommunicationSetSendPlainTextOnly.sql
+create_sp_CommunicationSetFrequency.sql
+create_sp_CommunicationSetLastSentTime.sql
+data_CommunicationCategory.sql
+data_CommunicationDefinition.sql
+
+; TinyUrls
+create_TinyUrlMapping.sql
+
+; Update createadminuser script
+alter_sp_CreateAdminUser.sql
+
+; JobG8
+alter_JobAd_add_jobg8.sql
+
+;Discussions
+drop_everything_discussion.sql
+DiscussionBoard.SQL
+alter_group.sql
+DiscussionFlags.SQL
+Discussion.SQL
+DiscussionBoardModerator.sql
+DiscussionBoardSubscriber.sql
+DiscussionSubscriber.SQL
+DiscussionPost.SQL
+migrate_discussionboards_data.sql
+
+alter_discussion.sql
+alter_discussionpost.sql
+
+data_fix_PostalCodes.sql
+
+alter_CandidateList_alter_name_constraint.sql

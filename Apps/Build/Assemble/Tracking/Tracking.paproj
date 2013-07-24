@@ -1,0 +1,23 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{73EFD493-5FC7-4412-972F-78942941325B}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.Tracking.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{08E12FBC-CF6D-487e-9043-75940DCC098B}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Tracking\LinkMe.Apps.Tracking.dll">
+      <Guid>{5C58CAFD-4981-4a5a-BBF0-2515B297A9BE}</Guid>
+      <Link>Bin\LinkMe.Apps.Tracking.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B7865B15-E78E-48f2-B972-36E5E1A7C98E}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

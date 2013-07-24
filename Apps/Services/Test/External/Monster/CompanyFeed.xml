@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Body>
+      <QueriesResponse xmlns="http://schemas.monster.com/Monster">
+      <Jobs>
+        <Job allowExpiredUpdates="false" inventoryType="transactional" enforceUniqueness="true" jobComplete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <RecruiterReference userId="181654795">
+              <UserName>mokafoods</UserName>
+              <PersonName>
+                <GivenName>Harry</GivenName>
+                <FamilyName>Saris</FamilyName>
+              </PersonName>
+              <EmailAddress>management@mokafoods.com.au</EmailAddress>
+            </RecruiterReference>
+            <CompanyReference companyId="20501026">
+              <CompanyXCode>xw181654795wx</CompanyXCode>
+              <CompanyName>MOKA FOODS</CompanyName>
+            </CompanyReference>
+            <FolderReference folderId="118090334">
+              <FolderName>Accountant (Melbourne)</FolderName>
+            </FolderReference>
+            <Channel monsterId="168" />
+            <JobInformation>
+              <JobTitle>Accountant</JobTitle>
+              <JobShortDescription />
+              <JobType monsterId="1">Employee</JobType>
+              <JobStatus monsterId="5">Parttime</JobStatus>
+              <IsHandinamic>false</IsHandinamic>
+              <ProDiversity>false</ProDiversity>
+              <Replacement>false</Replacement>
+              <Salary>
+                <Currency monsterId="4">AUD</Currency>
+                <CompensationType monsterId="1">Per Year</CompensationType>
+              </Salary>
+              <Contact hideAll="false" hideAddress="false" hideStreetAddress="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideCompanyName="false" hideEmailAddress="true" hideFax="true" hideName="true" hidePhone="true" hideStreetAddress2="true">
+                <CompanyName>MOKA FOODS</CompanyName>
+                <Address />
+                <E-mail>management@mokafoods.com.au</E-mail>
+              </Contact>
+              <PhysicalAddress>
+                <StreetAddress />
+                <StreetAddress2 />
+                <City>Melbourne</City>
+                <State>VIC</State>
+                <CountryCode>AU</CountryCode>
+                <PostalCode>3026</PostalCode>
+              </PhysicalAddress>
+              <DisableApplyOnline>false</DisableApplyOnline>
+              <HideCompanyInfo>true</HideCompanyInfo>
+              <DisableFilters>false</DisableFilters>
+              <JobBody>&lt;p class="MsoNormal"/&gt;&lt;p class="MsoNormal"&gt;&lt;span style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white; background-position: initial initial; background-repeat: initial initial; "&gt;A family owned company in Laverton North who manufacture frozen goods are seeking a &lt;/span&gt;&lt;span lang="EN-US" style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white; background-position: initial initial; background-repeat: initial initial; "&gt;permanent part time accountant to join their team.&lt;/span&gt;&lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;span lang="EN-US" style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white; background-position: initial initial; background-repeat: initial initial; "&gt; &lt;/span&gt;&lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;span lang="EN-US" style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white; background-position: initial initial; background-repeat: initial initial; "&gt;On offer, is a position with flexible hours ideal for someone with family commitments or a person who is looking to step back their hours to suit lifestyle. (ie 3-4 days per week or 5 short days per week). &lt;/span&gt;&lt;span style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: white; background-position: initial initial; background-repeat: initial initial; "&gt;You will be an active member of a small team that requires flexibility, focus, a keen eye on detail and attention to deadlines. Onsite parking is available. &lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;u&gt;&lt;br/&gt;&lt;/u&gt;&lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;u&gt;&lt;br/&gt;&lt;/u&gt;&lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;u&gt;Job Scope&lt;/u&gt;&lt;/p&gt;  &lt;p class="MsoListParagraph" style="text-indent:-18.0pt;mso-list:l0 level1 lfo1"/&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Prepare monthly financial report&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Quarterly BAS&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Monthly I.A.S&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Superannuation&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Payroll tax&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Bank Rec’s&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Balance Sheet rec (year end)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Process payroll&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Keeping full set of a/c&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;!-- [if !supportLists] --&gt;&lt;p/&gt;                  &lt;p class="MsoNormal"&gt; &lt;/p&gt;  &lt;p class="MsoNormal"&gt;&lt;u&gt;&lt;span style="color:#1A1A1A;background:white"&gt;Essential requirements of applicants:&lt;/span&gt;&lt;/u&gt;&lt;/p&gt;  &lt;p class="MsoListParagraph" style="text-indent:-18.0pt;mso-list:l1 level1 lfo2"/&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;A good understanding of MYOB AccountRight Plus&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="text-indent: -18pt; font-family: Symbol; "&gt;•&lt;span style="font-family: 'Times New Roman'; font-size: 7pt; "&gt;         &lt;/span&gt;&lt;/span&gt;&lt;span style="text-indent: -18pt; "&gt;Experience with Microsoft Word and Excel&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;!-- [if !supportLists] --&gt;&lt;p/&gt;    &lt;p class="MsoNormal"&gt; &lt;/p&gt;  &lt;p class="MsoNormal" style="background:white"&gt;This team prides themselves on being professional, friendly and enthusiastic and are looking for another friendly, enthusiastic person to join their team.&lt;/p&gt;  &lt;p class="MsoNormal" style="background:white"&gt; &lt;/p&gt;  &lt;p class="MsoNormal" style="background:white"&gt;If you think that this role is for you, please don’t hesitate to ‘&lt;b&gt;&lt;i&gt;Apply Now'&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p/&gt;</JobBody>
+              <YearsOfExperience monsterId="0" />
+              <JobSourceId monsterId="6" />
+              <CustomApplyOnlineURL>http://my.monster.com/applyStart.asp?jobid=109430983</CustomApplyOnlineURL>
+            </JobInformation>
+            <JobPostings>
+              <JobPosting jobPostingState="active" bold="true" desiredDuration="30" postingId="109430983">
+                <InventoryPreference>
+                  <Autorefresh desired="true">
+                    <Frequency>7</Frequency>
+                  </Autorefresh>
+                </InventoryPreference>
+                <RecruiterReference userId="181654795">
+                  <UserName>mokafoods</UserName>
+                  <PersonName>
+                    <GivenName>Harry</GivenName>
+                    <FamilyName>Saris</FamilyName>
+                  </PersonName>
+                  <EmailAddress>management@mokafoods.com.au</EmailAddress>
+                </RecruiterReference>
+                <Location locationId="137">
+                  <City>Melbourne</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                </Location>
+                <Locations>
+                  <Location locationId="137">
+                    <City>Melbourne</City>
+                    <State>VIC</State>
+                    <CountryCode>AU</CountryCode>
+                  </Location>
+                </Locations>
+                <JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+                <JobCategories>
+                  <JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+                </JobCategories>
+                <JobOccupations>
+                  <JobOccupation categoryId="1" monsterId="11711">
+                    <Name>Accounts Payable/Receivable</Name>
+                  </JobOccupation>
+                  <JobOccupation categoryId="1" monsterId="14867">
+                    <Name>Corporate Accounting</Name>
+                  </JobOccupation>
+                </JobOccupations>
+                <JobCity>Melbourne</JobCity>
+                <BoardName monsterId="1">Monster</BoardName>
+                <JobPostingDates>
+                  <JobPostDate>2012-05-01T22:36:34.3670000-05:00</JobPostDate>
+                  <JobActiveDate>2012-05-08T00:31:30.8530000-05:00</JobActiveDate>
+                  <JobExpireDate>2012-05-31T22:36:10.7070000-05:00</JobExpireDate>
+                  <JobModifiedDate>2012-05-08T00:32:00.0000000-05:00</JobModifiedDate>
+                </JobPostingDates>
+                <PostingStats increment="false">
+                  <Views>185</Views>
+                  <SeekerApps>9</SeekerApps>
+                  <EmailApps>0</EmailApps>
+                  <TotalClicks>0</TotalClicks>
+                </PostingStats>
+                <ApplyOnlineURL>http://my.monster.com/applyStart.asp?jobid=109430983</ApplyOnlineURL>
+                <PhysicalAddress>
+                  <StreetAddress />
+                  <StreetAddress2 />
+                  <City>Melbourne</City>
+                  <State>VIC</State>
+                  <CountryCode>AU</CountryCode>
+                  <PostalCode>3026</PostalCode>
+                </PhysicalAddress>
+                <DisplayTemplate monsterId="12438" />
+                <Industries>
+                  <Industry>
+                    <IndustryName monsterId="82">Food and Beverage Production</IndustryName>
+                  </Industry>
+                </Industries>
+              </JobPosting>
+            </JobPostings>
+          </Job>
+      </Jobs>
+    </QueriesResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Location.Country" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEgAAAAAQAAAAAAIAAAAAEAAAAAAA=</HashCode>
+      <FileName>Location\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.CountrySubdivision" Collapsed="true">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAEAAAACEAIAAIAAAAAAAEAgAAA=</HashCode>
+      <FileName>Location\CountrySubdivision.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Country" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LinkMe.Domain.Location.CountrySubdivisionAlias" Collapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Location\CountrySubdivisionAlias.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.GeographicalArea" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Location\GeographicalArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.Locality" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAIAAAAAAAAAAAAAAAAAABAAAAAAgQAA=</HashCode>
+      <FileName>Location\Locality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.LocationReference" Collapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAACAgAAABAgMoABAgAAgkAIIAIAACCGAAEAAABA=</HashCode>
+      <FileName>Location\LocationReference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LinkMe.Domain.Location.NamedLocation" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAACAAACAEgAAAAAQAAAAAAIAAACAAAAAgAAA=</HashCode>
+      <FileName>Location\NamedLocation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LinkMe.Domain.Location.PostalCode" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAAAAAAAAAgAAAgAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Location\PostalCode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Locality" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.PostalSuburb" Collapsed="true">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <AssociationLine Name="CountrySubdivision" Type="LinkMe.Domain.Location.CountrySubdivision" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="3.441" />
+        <Point X="13" Y="5.94" />
+        <Point X="6.688" Y="5.94" />
+        <Point X="6.688" Y="4.691" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACQAACAAAAAAIAAAAAAAAAAAAAAAACCAAAAgAAA=</HashCode>
+      <FileName>Location\PostalSuburb.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PostalCode" />
+      <Property Name="CountrySubdivision" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Domain.Location.Region" Collapsed="true">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAACAAAAAAAAACAAIAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Location\Region.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,35 @@
+#JobAd #JobDescription #Ad
+{
+	background: url('KISS Recruitment_images/mid_bg.gif') repeat-y;
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 70%;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo
+{
+	width: 520px;
+	margin-left: -20px;
+	height: 34px;
+	background: url('KISS Recruitment_images/header.gif') repeat-y;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+	background: transparent url('KISS Recruitment_images/footer.gif') left bottom no-repeat;
+	height: 102px;
+}
+
+#JobAd #JobDescription #Ad h1
+{
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 22pt;
+	color: #000;
+	text-align: center;
+}
+
+#JobAd #JobDescription #Ad h2
+{
+	color: #000;
+}

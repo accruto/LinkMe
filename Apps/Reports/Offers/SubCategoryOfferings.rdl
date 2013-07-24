@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="LinkMeDataSource">
+      <rd:DataSourceID>57894fc0-cdfa-40c3-81df-28811710930b</rd:DataSourceID>
+      <DataSourceReference>LinkMeDataSource</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="categoryId">
+      <DataType>String</DataType>
+      <Prompt>categoryId</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>39d27ad8-3816-407e-8ed4-0ffbabee7737</rd:ReportID>
+  <CodeModules>
+    <CodeModule>LinkMe.Framework.Reports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6</CodeModule>
+    <CodeModule>LinkMe.Apps.Reports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6</CodeModule>
+  </CodeModules>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="CategoryOfferings">
+      <Fields>
+        <Field Name="Provider">
+          <DataField>Provider</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Offering">
+          <DataField>Offering</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Enabled">
+          <DataField>Enabled</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>LinkMeDataSource</DataSourceName>
+        <CommandText>SELECT
+    p.name AS Provider, o.name AS Offering, o.enabled AS Enabled
+FROM
+    OfferProvider AS P
+INNER JOIN
+    Offering AS O ON O.providerId = P.id
+INNER JOIN
+    OfferCategoryOffering AS CO ON CO.offeringId = O.id
+WHERE
+    CO.categoryId = @categoryId
+ORDER BY
+    P.name, O.name</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@categoryId">
+            <Value>=Parameters!categoryId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>15cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>CategoryOfferings</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=LinkMe.Framework.Reports.Format.JoinIgnoreNullOrEmpty(" ", IIF(Fields!Enabled.Value, "", "[Disabled]"), LinkMe.Framework.Reports.Format.JoinIgnoreNullOrEmpty(": ", Fields!Provider.Value, Fields!Offering.Value))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>15cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.63492cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>0.75cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

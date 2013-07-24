@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+
+    <siteMapNode>
+      <siteMapNode url="~/employers/previews/ViewEmailedCandidate.aspx" title="Emailed candidate's resume | Employers" sidebar="employers-guests-folders" />
+    </siteMapNode>
+
+  </siteMapNode>
+
+</siteMap>

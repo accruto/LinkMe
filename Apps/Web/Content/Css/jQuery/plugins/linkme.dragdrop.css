@@ -1,0 +1,40 @@
+.draggable {
+    cursor: url(../images/grab.cur), auto;
+}
+
+.ui-draggable-dragging {
+	opacity: 0.7;
+	cursor: url(../images/grabbing.cur), move;
+	width:150px;
+	height:20px;
+	font-size:85%;
+	color: #333333;
+	border: solid 1px #CCCCCC;
+	background:none;
+	background-color: #FFFFFF;
+	padding: 5px 0 0 5px;
+	z-index: 6;
+}
+
+.personal-folders_section .section-content ul li.active, .organisation-wide-folders_section .section-content ul li.active, .open-jobads_section .section-content ul li.active, .closed-jobads_section .section-content ul li.active {
+    background-color: #4477AA;
+    padding: 3px 0 0 3px;
+}
+
+.personal-folders_section .section-content ul.flagged-folder-list li.active, .organisation-wide-folders_section .section-content ul.flagged-folder-list li.active {
+    padding: 0 0 0 3px;
+    margin: 3px 0 0 0;
+}
+
+.personal-folders_section .section-content ul li.active a, .organisation-wide-folders_section .section-content ul li.active a, .open-jobads_section .section-content ul li.active a, .closed-jobads_section .section-content ul li.active a {
+    color: #FFFFFF;
+}
+
+.personal-folders_section .section-content ul li.active .count-holder, .organisation-wide-folders_section .section-content ul li.active .count-holder, .open-jobads_section .section-content ul li.active .count-holder, .closed-jobads_section .section-content ul li.active .count-holder {
+    color: #FFFFFF;
+}
+
+.personal-folders_section .section-content ul li.active a.empty-link {
+    font-size: 85%;
+    font-weight: normal;
+}

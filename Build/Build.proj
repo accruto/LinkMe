@@ -1,0 +1,42 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Item groups. -->
+
+  <ItemGroup>
+    <BuildProjects Include="..\External\Build\Build.proj" />
+    <BuildProjects Include="..\Framework\Build\Build.proj" />
+    <BuildProjects Include="..\Domain\Build\Build.proj" />
+    <BuildProjects Include="..\Query\Build\Build.proj" />
+    <BuildProjects Include="..\Apps\Build\Build.proj" />
+  </ItemGroup>
+
+  <!-- Clean -->
+
+  <Target Name="Clean">
+    <MSBuild Projects="@(BuildProjects)" Targets="Clean" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+
+  <!-- Build -->
+  
+  <Target Name="Build">
+    <MSBuild Projects="@(BuildProjects)" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+  
+</Project>

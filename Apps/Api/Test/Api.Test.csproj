@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE30FC8D-F38B-44CD-9E3E-95A30084C67A}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Apps.Api.Test</RootNamespace>
+    <AssemblyName>LinkMe.Apps.Api.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Roles\Test\bin\LinkMe.Domain.Roles.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Test">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Test\bin\LinkMe.Domain.Test.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Content">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Content\bin\LinkMe.Framework.Content.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Host">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Host\bin\LinkMe.Framework.Host.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Query\Reports\bin\LinkMe.Query.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search.Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Query\Search\Engine\bin\LinkMe.Query.Search.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestAssembly.cs" />
+    <Compile Include="Employers\Accounts\JoinTests.cs" />
+    <Compile Include="Accounts\LoginTests.cs" />
+    <Compile Include="Employers\CandidateListsTests.cs" />
+    <Compile Include="Employers\Candidates\CandidateTests.cs" />
+    <Compile Include="Employers\Candidates\GetCandidateTests.cs" />
+    <Compile Include="Employers\Candidates\MemberViewingsTests.cs" />
+    <Compile Include="Employers\Candidates\MobileFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\CreditsTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\MemberAccessesTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\NoneHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\NoneHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\LimitedHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\LimitedHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\UnlimitedHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\PhoneNumbersTests.cs" />
+    <Compile Include="Employers\Candidates\PhoneNumbers\UnlimitedHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\CreditTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\LimitedHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\LimitedHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\MemberAccessesTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\NoneHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\NoneHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\UnlockTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\UnlimitedHasAccessedTests.cs" />
+    <Compile Include="Employers\Candidates\Unlock\UnlimitedHasNotAccessedTests.cs" />
+    <Compile Include="Employers\Purchase\PurchaseTests.cs" />
+    <Compile Include="Employers\Searches\DeleteSearchTests.cs" />
+    <Compile Include="Employers\Searches\EditSearchTests.cs" />
+    <Compile Include="Employers\Searches\GetSearchesTests.cs" />
+    <Compile Include="Employers\Searches\MemberSearchRequestModel.cs" />
+    <Compile Include="Employers\Searches\NewSearchTests.cs" />
+    <Compile Include="Employers\Searches\SearchesTests.cs" />
+    <Compile Include="Employers\Search\Criteria\CandidateStatusTests.cs" />
+    <Compile Include="Employers\Search\Criteria\JobTypesTests.cs" />
+    <Compile Include="Employers\Search\Criteria\DistanceTests.cs" />
+    <Compile Include="Employers\Search\Criteria\HasViewedTests.cs" />
+    <Compile Include="Employers\Search\Criteria\JobTitleTests.cs" />
+    <Compile Include="Employers\Search\Criteria\KeywordsTests.cs" />
+    <Compile Include="Employers\Search\Criteria\LocationTests.cs" />
+    <Compile Include="Employers\Search\Criteria\RecencyTests.cs" />
+    <Compile Include="Employers\Search\Criteria\SalaryTests.cs" />
+    <Compile Include="Employers\Search\LoggedInTests.cs" />
+    <Compile Include="Employers\Search\PaginationTests.cs" />
+    <Compile Include="Employers\Search\Results\JobsTests.cs" />
+    <Compile Include="Employers\Search\Results\SalaryTests.cs" />
+    <Compile Include="Employers\Search\SearchTests.cs" />
+    <Compile Include="Employers\Search\SortOrderTests.cs" />
+    <Compile Include="Errors\ErrorsTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebTestClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Agents\Agents.csproj">
+      <Project>{29B2CC57-2147-424E-BEF6-D86A4B5C8A70}</Project>
+      <Name>Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Agents\Test\Agents.Test.csproj">
+      <Project>{E91FED87-821E-4CE1-89E4-C0C127E3C228}</Project>
+      <Name>Agents.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asp\Asp.csproj">
+      <Project>{4430078D-3F59-472A-8B0A-F2515609570D}</Project>
+      <Name>Asp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asp\Test\Asp.Test.csproj">
+      <Project>{036C23EC-BD70-4278-B34A-54FF05312FB7}</Project>
+      <Name>Asp.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mocks\Mocks.csproj">
+      <Project>{4809C1EE-0984-4F32-8633-F571012BEEAA}</Project>
+      <Name>Mocks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\Presentation.csproj">
+      <Project>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\Services.csproj">
+      <Project>{23BDC76F-D52E-4F6D-8AE4-33224D02A6FA}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Utility.csproj">
+      <Project>{48F7E3B6-D00D-45DA-9AB2-148779E0B949}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Api.csproj">
+      <Project>{A81F9A51-A534-488D-BCD6-4C3A3AB5C9C0}</Project>
+      <Name>Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Employers\Search\Results\TestData\Primary.eml" />
+    <None Include="Employers\Search\Results\TestData\Secondary.eml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Employers\Purchase\VerificationString2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

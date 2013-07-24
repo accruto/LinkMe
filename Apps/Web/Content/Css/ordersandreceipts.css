@@ -1,0 +1,378 @@
+﻿.blurb {
+    margin: 5px 0 25px 0;
+}
+
+.payment-options {
+    padding-top: 14px;
+}
+.bundle-discount {
+    margin:0;padding:0;
+    width: 58px;
+    height: 56px;
+    float: right;
+    margin-right: -3px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../images/employers/orders-and-receipts/bundle-discount.png) top left no-repeat;
+}
+
+.features {
+    margin:0;padding:0;
+}
+
+    .feature {
+        padding-left: 20px;
+        background: url(../images/universal/list-bullet_orange.png) 0 0.35em no-repeat;
+        margin-top: 0.66em;
+        list-style: none;
+    }
+	.ie_firstfeature,
+	.feature:first-child {
+	    margin-top: 0;
+	}
+        .feature ul {
+            margin:0;padding:0;
+            margin-top: 0.5em;
+            margin-bottom: 1.25em;
+        }
+        .feature ul li {
+            margin:0;padding:0;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            list-style: none;
+            padding-left: 10px;
+            background: url(../images/universal/list-dash.png) 0 0.6em no-repeat;
+        }
+
+.search-resumes_section .section-body,
+.post-job-ads_section .section-body {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 33px;
+    padding-right: 33px;
+}
+.search-resumes_section {}
+    .search-resumes_section .section-icon {
+        background:                        url(../images/employers/home/splash/find-candidates.png) top left no-repeat;
+        _filter:expression(LinkMeUI.IE6Alpha("/ui/images/employers/home/splash/find-candidates.png"));
+        _background:none; font-size:0; text-indent: -9999px;
+        position: absolute;
+        width: 76px;
+        height: 82px;
+        top: 27px;
+        right: 15px;
+		cursor : default;
+    }
+    .search-resumes_section .section-title h2 {
+        background:                        url(../images/employers/home/splash/text/h2_search-resumes.png) top left no-repeat;
+        _filter:expression(LinkMeUI.IE6Alpha("/ui/images/employers/home/splash/text/h2_search-resumes.png"));
+        _background:none; font-size:0; text-indent: -9999px;
+        height: 30px;
+       margin-left: 0px;
+       margin-bottom: 5px;
+    }
+    .search-resumes_section .section-title .tagline {
+        height: 33px;
+        margin-left: 0px;
+        margin-bottom: 18px;
+		width : 240px;
+		color : #4488BB;
+    }
+    
+.post-job-ads_section {}
+    .post-job-ads_section .section-icon {
+        background:                        url(../images/employers/home/splash/job-board.png) top left no-repeat;
+        _filter:expression(LinkMeUI.IE6Alpha("/ui/images/employers/home/splash/job-board.png"));
+        _background:none; font-size:0; text-indent: -9999px;
+        position: absolute;
+        width: 80px;
+        height: 68px;
+        top: 22px;
+        right: 25px;
+		cursor : default;
+    }
+    .post-job-ads_section .section-title h2 {
+        background:                        url(../images/employers/home/splash/text/h2_post-job-ads.png) top left no-repeat;
+        _filter:expression(LinkMeUI.IE6Alpha("/ui/images/employers/home/splash/text/h2_post-job-ads.png"));
+        _background:none; font-size:0; text-indent: -9999px;
+        height: 30px;
+        margin-left: 0px;
+        margin-bottom: 5px;
+    }
+    .post-job-ads_section .section-title .tagline {
+        height: 13px;
+        margin-left: 0px;
+        margin-bottom: 38px;
+		width : 240px;
+		color : #4488BB;
+    }
+    
+.ordering-affordances {
+    background: url(../images/employers/orders-and-receipts/ordering-affordance-bg.png) top left no-repeat;
+    width: 297px;
+    height: 54px;
+    position: relative;
+    left: -26px;
+    margin-top: 12px;
+    margin-bottom: -23px;
+    padding: 15px;
+}
+    .ordering-affordances h3 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 100%;
+        color: #369;
+        margin:0;padding:0;
+        margin-bottom: 7px;
+    }
+    
+    .ordering-affordances select {
+        border: 1px solid #ABABAB;
+        width: 3.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #333;
+        font-size: 130%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 2px;
+    }
+    .ordering-affordances .at-n-each {
+        font-size: 85%;
+        color: #369;
+    }
+    .ordering-affordances .product-price {
+        font-size: 117%;    /* Undoes the 85% size -> puts it to "100%" */
+        color: #333;
+    }
+    .ordering-affordances dl.total {
+        margin:0;padding:0;
+        position: absolute;
+        padding-right: 25px;
+        margin-top: -0.6em;
+        right: 0;
+    }
+        .ordering-affordances dl.total dt {
+            color: #369;
+            margin:0;padding:0;
+            display: inline;
+        }
+        .ordering-affordances dl.total dd {
+            font-weight: bold;
+            margin:0;padding:0;
+        }
+        .ordering-affordances dl.total dd .plus-gst {
+            font-weight: normal;
+            font-size: 80%;
+            color: #666;
+        }
+
+ul.conditions {
+    padding-top: 1em;
+    color: #666;
+}
+
+span.stars {
+    color: #777;
+}
+
+.order {
+    font-size: 85%;
+}
+
+table.order {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#left-sidebar .order {
+    margin-bottom: 10px;
+}
+
+        .order .row-quantity select {
+            border: 1px solid #8AC;
+            width: 4.5em;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            height: 2em;
+            padding: 1px;
+            margin: -4px 0 -4px 0;
+        }
+
+    #left-sidebar .order .order-row td {
+        padding-top: 0.75em;
+    }
+    
+    .order-summary 
+    {
+        padding-bottom: 1em;
+    }
+    
+    .print-receipt
+    {
+        float: right;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+    }
+    
+    .order .order-row td {
+        color: #003; 
+    }
+    
+    #left-sidebar .order .order-row:first-child td,
+    #left-sidebar .order .ie_firstlineitem td {
+        padding-top: 0;
+    }
+        .order .order-row .row-title {}
+        
+        .order .header-price {
+            text-align: right;
+            padding-right: 7px;
+        }
+        
+        .order .row-price {
+            width: 0;
+            white-space: nowrap;
+            text-align: right;
+            padding-left: 20px;
+        }
+        
+        /* Divider */
+        
+        #left-sidebar .order .divider td {
+            padding-bottom: 10px;
+        }
+        
+        .order .divider td {
+            border-bottom: 1px solid #D7D9DA;
+        }
+        
+        #left-sidebar .order .after-divider td {
+            padding-top: 10px;
+        }
+        
+        .order .discount_order-adjustment td {
+            font-weight: bold;
+            color: #4DA400; 
+        }
+            #left-sidebar .order .discount_order-adjustment .row-title {
+                
+                /* Sidebar only: use Tahoma to reduce letter-spacing compared to Verdana */
+                font-family: Tahoma, Verdana, Helvetica, sans-serif;    
+                
+            }
+            
+        .order .tax_order-adjustment td {}
+        
+        .order .subtotal_order-row .row-title, 
+        .order .order-adjustment .row-title {
+            text-align: right;
+        }
+            #left-sidebar .order .subtotal_order-row .row-title, 
+            #left-sidebar .order .order-adjustment .row-title {
+                text-align: left;
+            }
+
+        .order .subtotal_order-row td,
+        .order .last_order-adjustment td {
+            font-weight: bold;
+            color: #003; 
+        }
+            .order .last_order-adjustment .row-price {
+                font-weight: bold;
+                color: #F00;
+            }
+
+
+.join_section .forms_v2 .join_button {
+	background-image: url(../images/buttons/join-next.png);
+	width: 67px;
+}
+
+.login_section .forms_v2 .login_button {
+    background-image: url(../images/buttons/login-next.png);
+    width: 72px;
+}
+
+
+/* Old ordering process markup, left here temporarily for my sense of security :) */
+
+.receipt_section {
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    width: auto;
+}
+    .receipt_section .section-title {
+        border: none;
+        background: none;
+        margin:0;padding:0;
+    }
+        .receipt_section .section-title h1 {
+            margin:0;padding:0;
+            font-size: 175%;
+            color: #214263;
+        }
+    
+    .receipt_section .list {
+        margin-top: 30px;
+    }
+
+    .section-content .receipt-details {
+        float: right;
+    }
+        .vcard {}
+        .seller-details {}
+            .seller-details .org {
+                font-weight: bold;
+            }
+            .seller-details .adr {}
+                .receipt-details .seller-details .adr .type {
+                    display: none;
+                }
+                .seller-details .adr .street-address {}
+                .seller-details .adr .locality {}
+                .seller-details .adr .region {}
+                .seller-details .adr .postal-code {}
+            .business-registration {}
+                .business-registration .type {}
+                .business-registration .number {}
+                
+    .section-content .buyer-details {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+        .buyer-details .to {}
+        .buyer-details .fn {
+            font-weight: bold;
+        }
+            .buyer-details .adr .street-address {}
+                .buyer-details .adr .locality {}
+                .buyer-details .adr .region {}
+                .buyer-details .adr .postal-code {}
+                
+    .receipt_section fieldset .textbox_field label {
+        font-size: 100%;
+        margin-top: 3px;
+    }
+    
+    .receipt_section fieldset .textbox_control .textbox {
+        width: 20em;
+    }
+
+.next-steps {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.action-list .print-receipt-action 
+{
+    background: url(../images/resume/icons/print-resume.png) left center no-repeat;
+    padding: 1px 0 2px 17px;
+    display: inline-block;
+    min-height: 13px;
+    *display: inline;
+    *zoom: 1;
+}

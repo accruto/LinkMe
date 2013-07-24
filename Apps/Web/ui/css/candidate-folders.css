@@ -1,0 +1,106 @@
+
+
+.section-title {}
+
+#divFolderName {}
+
+	/* imitates a h2 heading in the ViewFolder page -- needs to a label for JScript */
+	#lblFolderName {
+	    font-size: 125%;
+	    font-family: Arial, Helvetica, sans-serif;
+	    color: #000033;
+	    margin:0;padding:0;
+	    padding-right: 200px;
+	}
+	
+/* Section Contents */	
+.section-content {
+	line-height: 1.5em;
+}
+	.section-content div.cfolder_display {
+		margin-bottom: 0.5em;
+	}
+		.section-content div.cfolder_display .folder-title 
+		{
+			margin-right: 10px;
+			width: 300px;
+			line-height: normal;
+			display: inline-block;
+			*display: inline; *zoom: 1;	/* IE6,7 hack, inline-block emulation */
+		}
+		html>/**/body .section-content div.cfolder_display .folder-title , x:-moz-any-link {
+			float: left;	/* Firefox 2 hack making up for the lack of inline block */
+		}
+		html>/**/body .section-content div.cfolder_display .folder-title , x:-moz-any-link, x:default {
+			float: none;	/* Firefox 3, undo the above */
+		}
+			
+			/* counteract padding for first links,
+               add link-style colors to label inside link */
+				.section-content div.cfolder_display span.first a label {
+					margin: 0;
+					padding: 0;
+				}
+				.section-content div.cfolder_display span.first a:link label,
+				.section-content div.cfolder_display span.first a:visited label {
+					 color: #1155EE;	
+				}
+				.section-content div.cfolder_display span.first a:hover label {
+					color: #FF6600	
+				}
+			.section-content div.cfolder_display a.edit-link {
+				background:transparent url(../images/employer/write-notes.png) no-repeat scroll 0% 0%;
+				padding-left:24px;
+			}
+			
+	.section-content div.cfolder_editable {
+		margin-bottom: 1em;	
+	}
+		/* Fix for text box vert alignment in ie6 - line up the buttons with the text */
+		* html body .section-content div.cfolder_editable input.save-button,
+		* html body .section-content div.cfolder_editable input.cancel-button {
+			margin-bottom: 0;
+		}
+	
+	/* Currently, the below only apply to the ViewFolders page */
+	.section-content .repeater-container {}
+		.section-content .repeater-details-container 
+		{
+			width: 450px;
+		}
+		
+			.section-content .repeater-details-container div.title-line {}
+			
+			.section-content .repeater-details-container div dl.jobRole {
+				margin-bottom: 1em;
+				float: left;
+			}
+				.section-content .repeater-details-container div dl.jobRole dt 
+				{
+					display: block;
+					float: left;
+					width: 115px;
+					margin: 0;
+					padding: 0;
+					margin-right: 10px;
+				}
+				.section-content .repeater-details-container div dl.jobRole dd {
+					float: left;
+					margin: 0;
+					padding: 0;
+					width: 325px;
+				}
+	
+		.section-content .repeater-actions-container {
+			float: right;
+			margin-left: 10px;
+		}
+			.section-content .repeater-actions-container .remove-candidate-action
+			{
+				display: block;	
+			}
+
+input.rename-folder
+{
+	width: 300px;
+}

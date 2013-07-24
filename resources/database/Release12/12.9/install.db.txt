@@ -1,0 +1,6 @@
+alter_FrequentlyAskedQuestion.sql
+data_ResourceArticle.sql
+data_ResourceAnsweredQuestion.sql
+data_ResourceVideo.sql
+data_FrequentlyAskedQuestion.sql
+create_RegionAlias.sql

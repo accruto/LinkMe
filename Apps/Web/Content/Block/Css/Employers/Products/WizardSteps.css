@@ -1,0 +1,59 @@
+﻿#wizardsteps {
+    margin: 0;
+    padding: 8px 5px;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+#wizardsteps ol {
+    margin: 0;
+    padding: 0;
+}
+
+#wizardsteps ol li {
+    margin: 0;
+    padding: 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: block;
+    float: none;
+    color: #666;
+}
+#wizardsteps ol li {
+    background-image: url('../../../images/employers/products/wizardsteps/middle-item.png');
+}
+#wizardsteps ol li.selected {
+    background-image: url('../../../images/employers/products/wizardsteps/middle-item-filled.png');
+}
+#wizardsteps ol li.done {
+    background-image: url('../../../images/employers/products/wizardsteps/middle-item-filled-below-is-filled.png');
+}
+
+#wizardsteps ol li.first {
+    margin-top: -6px;
+    background-image: url('../../../images/employers/products/wizardsteps/first-item.png');
+}
+#wizardsteps ol li.first-selected {
+    background-image: url('../../../images/employers/products/wizardsteps/first-item-filled.png');
+}
+#wizardsteps ol li.first-done {
+    background-image: url('../../../images/employers/products/wizardsteps/first-item-filled-below-is-filled.png');
+}
+
+#wizardsteps ol li.last {
+    background-image: url('../../../images/employers/products/wizardsteps/last-item.png');
+    margin-bottom: -6px;
+}
+#wizardsteps ol li.last-selected {
+    background-image: url('../../../images/employers/products/wizardsteps/last-item-filled.png');
+}
+
+#wizardsteps ol li.done {
+    color: #333;
+}
+#wizardsteps ol li.selected {
+    color: #47A;
+}

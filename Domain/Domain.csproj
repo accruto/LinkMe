@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{822187F9-5344-443C-83B8-1A26CE492157}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Domain</RootNamespace>
+    <AssemblyName>LinkMe.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Content">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Framework\Content\bin\LinkMe.Framework.Content.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Text">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Framework\Text\bin\LinkMe.Framework.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Constants.cs" />
+    <Compile Include="Accounts\UserAccountAction.cs" />
+    <Compile Include="Accounts\Data\Accounts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Data\Mappings.cs" />
+    <Compile Include="Accounts\Data\UserAccountsRepository.cs" />
+    <Compile Include="Accounts\DeactivationReason.cs" />
+    <Compile Include="Accounts\Commands\IUserAccountsCommand.cs" />
+    <Compile Include="Accounts\IUserAccountsRepository.cs" />
+    <Compile Include="Accounts\Commands\UserAccountsCommand.cs" />
+    <Compile Include="Accounts\PublishedEvents.cs" />
+    <Compile Include="Accounts\Queries\IUserAccountsQuery.cs" />
+    <Compile Include="Accounts\Queries\UserAccountsQuery.cs" />
+    <Compile Include="CandidateStatus.cs" />
+    <Compile Include="Channels\Channel.cs" />
+    <Compile Include="Channels\Data\Channels.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Channels.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Channels\Data\ChannelsRepository.cs" />
+    <Compile Include="Channels\Data\Mappings.cs" />
+    <Compile Include="Channels\IChannelsRepository.cs" />
+    <Compile Include="Channels\Queries\ChannelsQuery.cs" />
+    <Compile Include="Channels\Queries\IChannelsQuery.cs" />
+    <Compile Include="CompletionTime.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Contacts\Administrator.cs" />
+    <Compile Include="Contacts\Constants.cs" />
+    <Compile Include="Contacts\IAnonymousUser.cs" />
+    <Compile Include="Contacts\ICommunicationUser.cs" />
+    <Compile Include="Contacts\IUser.cs" />
+    <Compile Include="Contacts\AnonymousUser.cs" />
+    <Compile Include="Credits\Allocation.cs" />
+    <Compile Include="Data\DataContextFactory.cs" />
+    <Compile Include="Data\IDataContextFactory.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Devices\Apple\AppleDevice.cs" />
+    <Compile Include="Contacts\CanContactStatus.cs" />
+    <Compile Include="Contacts\Custodian.cs" />
+    <Compile Include="Contacts\EmailAddress.cs" />
+    <Compile Include="Contacts\EmployerSubRole.cs" />
+    <Compile Include="Devices\Apple\IAppleDevice.cs" />
+    <Compile Include="Contacts\IHaveEmailAddress.cs" />
+    <Compile Include="Contacts\IHavePhoneNumber.cs" />
+    <Compile Include="Contacts\MemberExtensions.cs" />
+    <Compile Include="Contacts\PermissionsException.cs" />
+    <Compile Include="Contacts\RegisteredUser.cs" />
+    <Compile Include="Contacts\Employer.cs" />
+    <Compile Include="Contacts\IAdministrator.cs" />
+    <Compile Include="Contacts\ICustodian.cs" />
+    <Compile Include="Contacts\IEmployer.cs" />
+    <Compile Include="Contacts\IHaveContactDetails.cs" />
+    <Compile Include="Contacts\IMember.cs" />
+    <Compile Include="Credits\Commands\AllocationsCommand.cs" />
+    <Compile Include="Data\Mappings.cs" />
+    <Compile Include="Devices\Apple\Commands\AppleDevicesCommand.cs" />
+    <Compile Include="Devices\Apple\Commands\IAppleDevicesCommand.cs" />
+    <Compile Include="Devices\Apple\Data\AppleDevices.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppleDevices.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Devices\Apple\Data\AppleDevicesRepository.cs" />
+    <Compile Include="Devices\Apple\Data\Mappings.cs" />
+    <Compile Include="Devices\Apple\IAppleDevicesRepository.cs" />
+    <Compile Include="Devices\Apple\Queries\AppleDevicesQuery.cs" />
+    <Compile Include="Devices\Apple\Queries\IAppleDevicesQuery.cs" />
+    <Compile Include="EducationLevel.cs" />
+    <Compile Include="Files\FileContents.cs" />
+    <Compile Include="HierarchyPath.cs" />
+    <Compile Include="Credits\ExercisedCredit.cs" />
+    <Compile Include="Credits\Commands\IAllocationsCommand.cs" />
+    <Compile Include="Credits\ICreditOwner.cs" />
+    <Compile Include="Credits\Commands\IExercisedCreditsCommand.cs" />
+    <Compile Include="Credits\InsufficientCreditsException.cs" />
+    <Compile Include="Credits\Commands\ExercisedCreditsCommand.cs" />
+    <Compile Include="Credits\PublishedEvents.cs" />
+    <Compile Include="Credits\Queries\AllocationsQuery.cs" />
+    <Compile Include="Credits\Queries\CreditsQuery.cs" />
+    <Compile Include="Credits\Queries\ExercisedCreditsQuery.cs" />
+    <Compile Include="Credits\Queries\IAllocationsQuery.cs" />
+    <Compile Include="Credits\Queries\ICreditsQuery.cs" />
+    <Compile Include="Credits\Queries\IExercisedCreditsQuery.cs" />
+    <Compile Include="Criterias\GenericCriteria.cs" />
+    <Compile Include="Donations\Donation.cs" />
+    <Compile Include="Donations\Queries\DonationsQuery.cs" />
+    <Compile Include="Donations\Queries\IDonationsQuery.cs" />
+    <Compile Include="Files\Queries\FilesQuery.cs" />
+    <Compile Include="Files\Queries\IFilesQuery.cs" />
+    <Compile Include="Gender.cs" />
+    <Compile Include="Industries\Queries\IIndustriesQuery.cs" />
+    <Compile Include="Industries\Queries\IndustriesQuery.cs" />
+    <Compile Include="Location\RegionAlias.cs" />
+    <Compile Include="Location\IHaveAddress.cs" />
+    <Compile Include="Location\Queries\ILocationResetQuery.cs" />
+    <Compile Include="Location\Queries\LocationResetQuery.cs" />
+    <Compile Include="Location\LocationString.cs" />
+    <Compile Include="Location\Queries\WorldIndex.cs" />
+    <Compile Include="NamesExtensions.cs" />
+    <Compile Include="PartialDate.cs" />
+    <Compile Include="Contacts\PhoneNumber.cs" />
+    <Compile Include="PhoneNumbers\Queries\IPhoneNumbersQuery.cs" />
+    <Compile Include="PhoneNumbers\Queries\PhoneNumbersQuery.cs" />
+    <Compile Include="Images\Commands\IImagesCommand.cs" />
+    <Compile Include="Images\Commands\ImagesCommand.cs" />
+    <Compile Include="Images\ImagesException.cs" />
+    <Compile Include="Products\Constants.cs" />
+    <Compile Include="Products\Queries\CreditCardsQuery.cs" />
+    <Compile Include="Products\Queries\ICreditCardsQuery.cs" />
+    <Compile Include="Products\Queries\IProductsQuery.cs" />
+    <Compile Include="Products\Queries\ProductsQuery.cs" />
+    <Compile Include="Products\RegularExpressions.cs" />
+    <Compile Include="Products\Validation.cs" />
+    <Compile Include="Profession.cs" />
+    <Compile Include="RegularExpressions.cs" />
+    <Compile Include="Contacts\Member.cs" />
+    <Compile Include="Contacts\ContactDetails.cs" />
+    <Compile Include="Contacts\Data\Mappings.cs" />
+    <Compile Include="Contacts\PersonalContactDegree.cs" />
+    <Compile Include="Contacts\PersonalVisibility.cs" />
+    <Compile Include="Contacts\PersonalVisibilitySettings.cs" />
+    <Compile Include="Contacts\IRegisteredUser.cs" />
+    <Compile Include="Contacts\ProfessionalContactDegree.cs" />
+    <Compile Include="Contacts\ProfessionalVisibility.cs" />
+    <Compile Include="Contacts\ProfessionalVisibilitySettings.cs" />
+    <Compile Include="Contacts\VisibilitySettings.cs" />
+    <Compile Include="Credits\Credit.cs" />
+    <Compile Include="Credits\Data\Credits.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Credits\Data\CreditsRepository.cs" />
+    <Compile Include="Credits\Data\Mappings.cs" />
+    <Compile Include="Credits\ICreditsRepository.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Resources\Commands\PollsCommand.cs" />
+    <Compile Include="Resources\Commands\IPollsCommand.cs" />
+    <Compile Include="Resources\FeaturedResource.cs" />
+    <Compile Include="Resources\QnA.cs" />
+    <Compile Include="Resources\ResourceRating.cs" />
+    <Compile Include="Resources\Category.cs" />
+    <Compile Include="Resources\Commands\FaqsCommand.cs" />
+    <Compile Include="Resources\Commands\IFaqsCommand.cs" />
+    <Compile Include="Resources\Commands\IResourcesCommand.cs" />
+    <Compile Include="Resources\Commands\ResourcesCommand.cs" />
+    <Compile Include="Resources\Constants.cs" />
+    <Compile Include="Resources\Data\Mappings.cs" />
+    <Compile Include="Resources\Data\RandomFunction.cs" />
+    <Compile Include="Resources\Data\Resources.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Faq.cs" />
+    <Compile Include="Resources\IResourcesRepository.cs" />
+    <Compile Include="Resources\Article.cs" />
+    <Compile Include="Resources\Poll.cs" />
+    <Compile Include="Resources\PublishedEvents.cs" />
+    <Compile Include="Resources\Queries\PollsQuery.cs" />
+    <Compile Include="Resources\Queries\IPollsQuery.cs" />
+    <Compile Include="Resources\Queries\FaqsQuery.cs" />
+    <Compile Include="Resources\Queries\IFaqsQuery.cs" />
+    <Compile Include="Resources\Queries\IResourcesQuery.cs" />
+    <Compile Include="Resources\Queries\ResourcesQuery.cs" />
+    <Compile Include="Resources\Question.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Resources\Data\ResourcesRepository.cs" />
+    <Compile Include="Resources\ResourceType.cs" />
+    <Compile Include="Resources\ResourceViewing.cs" />
+    <Compile Include="Resources\Subcategory.cs" />
+    <Compile Include="Resources\Video.cs" />
+    <Compile Include="TimeRange.cs" />
+    <Compile Include="Donations\Data\Donations.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Donations.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\Data\DonationsRepository.cs" />
+    <Compile Include="Donations\Data\Mappings.cs" />
+    <Compile Include="Donations\DonationRecipient.cs" />
+    <Compile Include="Donations\DonationRequest.cs" />
+    <Compile Include="Donations\Commands\DonationsCommand.cs" />
+    <Compile Include="Donations\Commands\IDonationsCommand.cs" />
+    <Compile Include="Donations\IDonationsRepository.cs" />
+    <Compile Include="EthnicStatus.cs" />
+    <Compile Include="Files\Data\Files.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Files\Data\FilesRepository.cs" />
+    <Compile Include="Files\Data\Mappings.cs" />
+    <Compile Include="Files\FileData.cs" />
+    <Compile Include="Files\FileReference.cs" />
+    <Compile Include="Files\Commands\FilesCommand.cs" />
+    <Compile Include="Files\FilesStorageRepository.cs" />
+    <Compile Include="Files\FileType.cs" />
+    <Compile Include="Files\Commands\IFilesCommand.cs" />
+    <Compile Include="Files\IFilesRepository.cs" />
+    <Compile Include="Files\IFilesStorageRepository.cs" />
+    <Compile Include="Industries\Data\Industries.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Industries.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Industries\Data\IndustriesRepository.cs" />
+    <Compile Include="Industries\Data\Mappings.cs" />
+    <Compile Include="Industries\IIndustriesRepository.cs" />
+    <Compile Include="Industries\Industry.cs" />
+    <Compile Include="Accounts\IUserAccount.cs" />
+    <Compile Include="JobTypes.cs" />
+    <Compile Include="Location\Address.cs" />
+    <Compile Include="Location\Country.cs" />
+    <Compile Include="Location\CountryFinder.cs" />
+    <Compile Include="Location\CountrySubdivision.cs" />
+    <Compile Include="Location\CountrySubdivisionAlias.cs" />
+    <Compile Include="Location\Data\Location.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Location.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\Data\LocationRepository.cs" />
+    <Compile Include="Location\Data\Mappings.cs" />
+    <Compile Include="Location\GeoCoordinates.cs" />
+    <Compile Include="Location\GeographicalArea.cs" />
+    <Compile Include="Location\IFilter.cs" />
+    <Compile Include="Location\Queries\ILocationQuery.cs" />
+    <Compile Include="Location\ILocationRepository.cs" />
+    <Compile Include="Location\IUrlNamedLocation.cs" />
+    <Compile Include="Location\Locality.cs" />
+    <Compile Include="Location\LocalityInitialisationException.cs" />
+    <Compile Include="Location\LocationAbbreviation.cs" />
+    <Compile Include="Location\Queries\LocationQuery.cs" />
+    <Compile Include="Location\LocationFinder.cs" />
+    <Compile Include="Location\LocationReference.cs" />
+    <Compile Include="Location\LocationResolver.cs" />
+    <Compile Include="Location\NamedLocation.cs" />
+    <Compile Include="Location\PostalCode.cs" />
+    <Compile Include="Location\PostalSuburb.cs" />
+    <Compile Include="Location\Region.cs" />
+    <Compile Include="Location\RelativeLocation.cs" />
+    <Compile Include="Location\World.cs" />
+    <Compile Include="Products\CreditCard.cs" />
+    <Compile Include="Products\Data\Mappings.cs" />
+    <Compile Include="Products\Data\Products.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Data\ProductsRepository.cs" />
+    <Compile Include="Products\Commands\IProductsCommand.cs" />
+    <Compile Include="Products\IProductsRepository.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\Commands\ProductsCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\Data\Mappings.cs" />
+    <Compile Include="Requests\Invitation.cs" />
+    <Compile Include="Requests\Request.cs" />
+    <Compile Include="Requests\RequestStatus.cs" />
+    <Compile Include="Contacts\UserType.cs" />
+    <Compile Include="Salary.cs" />
+    <Compile Include="SalaryRate.cs" />
+    <Compile Include="Criterias\Criteria.cs" />
+    <Compile Include="Criterias\ICriteriaPersister.cs" />
+    <Compile Include="Criterias\Data\Mappings.cs" />
+    <Compile Include="Seniority.cs" />
+    <Compile Include="Spam\Data\Mappings.cs" />
+    <Compile Include="Spam\Data\Spam.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spam.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Spam\Data\SpamRepository.cs" />
+    <Compile Include="Spam\Commands\ISpamCommand.cs" />
+    <Compile Include="Spam\ISpamRepository.cs" />
+    <Compile Include="Spam\Queries\ISpamQuery.cs" />
+    <Compile Include="Spam\Queries\SpamQuery.cs" />
+    <Compile Include="Spam\Commands\SpamCommand.cs" />
+    <Compile Include="Spam\Spammer.cs" />
+    <Compile Include="Unity\DomainConfigurator.cs" />
+    <Compile Include="Validation\FileExceptions.cs" />
+    <Compile Include="Validation\DailyLimitException.cs" />
+    <Compile Include="Validation\Validation.cs" />
+    <Compile Include="VisaStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+    <None Include="Donations\Data\Donations.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Donations.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Donations\Data\Donations.dbml.layout">
+      <DependentUpon>Donations.dbml</DependentUpon>
+    </None>
+    <None Include="Industries\Data\Industries.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Industries.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Industries\Data\Industries.dbml.layout">
+      <DependentUpon>Industries.dbml</DependentUpon>
+    </None>
+    <None Include="Spam\Data\Spam.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Spam.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Location\Data\Location.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Location.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Spam\Data\Spam.dbml.layout">
+      <DependentUpon>Spam.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\Data\Files.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Files.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Location\Data\Location.dbml.layout">
+      <DependentUpon>Location.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\Data\Files.dbml.layout">
+      <DependentUpon>Files.dbml</DependentUpon>
+    </None>
+    <None Include="Products\Data\Products.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Products.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Credits\Data\Credits.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Credits.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Products\Data\Products.dbml.layout">
+      <DependentUpon>Products.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accounts\Data\Accounts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Accounts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Domain.cd" />
+    <None Include="Credits\Data\Credits.dbml.layout">
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </None>
+    <None Include="Location\Location.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accounts\Data\Accounts.dbml.layout">
+      <DependentUpon>Accounts.dbml</DependentUpon>
+    </None>
+    <None Include="Channels\Data\Channels.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Channels.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contacts\Contacts.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Channels\Data\Channels.dbml.layout">
+      <DependentUpon>Channels.dbml</DependentUpon>
+    </None>
+    <None Include="Devices\Apple\Data\AppleDevices.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AppleDevices.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Devices\Apple\Data\AppleDevices.dbml.layout">
+      <DependentUpon>AppleDevices.dbml</DependentUpon>
+    </None>
+    <None Include="Resources\Data\Resources.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Resources.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data\Resources.dbml.layout">
+      <DependentUpon>Resources.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\build\killbydll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

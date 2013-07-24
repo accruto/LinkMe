@@ -1,0 +1,20 @@
+create_DatabaseScript.sql
+
+; Communities
+data_Community_LiveInAustralia.sql
+data_Content_LiveInAustralia.sql
+
+; Groups
+create_GroupIndustry.sql
+
+; JobG8
+data_IndustryAlias_for_JobG8.sql
+alter_JobAd_add_contactCompanyName.sql
+
+; Communications
+data_CommunicationDefinition_add.sql
+alter_TinyUrlMapping_add_columns.sql
+
+data_EquivalentTerms.sql
+
+data_disable_former_admins.sql

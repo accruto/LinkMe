@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<linkmeMenus>
+		<!-- menu configuration -->
+		<menuConfig>
+			<pageMenus> <!-- Note: Page Level Supercedes Role level -->
+				<page pageId="AboutUsForm" menuGroups="AboutUsMenu" />
+			</pageMenus>
+			<roleMenus>
+				<role roleName="Networker_Old" menuGroups="NetworkerMyNetworkMenu,NetworkerResumeMenu,NetworkerMyProfile,NetworkerBlog" />
+				<role roleName="Employer_Old" menuGroups="EmployerMenu" />
+				<role roleName="Administrator" menuGroups="AdministratorManageData,AdministratorManageContent,AdministratorManageProfile,AdministratorManageBlog" />
+			</roleMenus>
+		</menuConfig>
+		
+		<!-- Networker Menus -->
+		<menuGroup menuGroupId="NetworkerMyNetworkMenu" headerImage="sidetab_mynetwork.gif">
+			<menuItem menuId="hypMyNetwork" text="My Network" url="viewnetworkform" toolTip="View/edit my network" menuType="Link" imageUrl="icon_network.gif" />
+			<menuItem menuId="hypCompanySearchResume" text="Find Contacts by Company" url="networkercompanysearchform" toolTip="Search for contacts by company" menuType="Link" imageUrl="icon_findco.gif" />
+			<menuItem menuId="hypContactSearchResume" text="Find Contacts by Name" url="networkercontactnamesearchform" toolTip="Search for contacts by name" menuType="Link" imageUrl="icon_findco.gif" />
+			<menuItem menuId="hypSearchResumes" text="Search Resumes" url="networkersearchskillsform" toolTip="Search resumes" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypAssessMe" text="AssessMe" url="assessmeform" toolTip="AssessMe" menuType="PopupWindow" imageUrl="icon_careerprofile.gif" />
+		</menuGroup>
+		
+		<menuGroup menuGroupId="NetworkerResumeMenu" headerImage="sidetab_myresume.gif">
+			<menuItem menuId="hypMyResume" text="My Resume" url="networkermyresumeform" toolTip="View/edit my resume" menuType="Link" imageUrl="icon_resume_view.gif" />
+			<menuItem menuId="hypMyResume" text="Resume Critique" url="resumecritique" toolTip="Critique my resume" menuType="Link" imageUrl="icon_resume_view.gif" />
+			<menuItem menuId="hypIdealJob" text="My Ideal Job" url="idealjobform" toolTip="Define my ideal job" menuType="Link" imageUrl="icon_ideal.gif" />
+			<menuItem menuId="hypMyEndorsements" text="My Endorsements" url="endorsementsviewreceivedform" toolTip="Provide/request endorsements" menuType="Link" imageUrl="icon_endorse.gif" />
+			<!-- Deleted MyResumeResults -->
+			<menuItem menuId="hypResumeRequest" text="Resume Requests" url="NetworkerResumeRequestsForm" toolTip="Resume Requests" menuType="Link" imageUrl="icon_resume_requests.gif" />
+			
+		</menuGroup>
+		
+		<menuGroup menuGroupId="NetworkerMyProfile" headerImage="sidetab_myprofile.gif">
+			<menuItem menuId="hypEditProfile" text="Edit Profile" url="networkeredituserprofileform" toolTip="View/edit my details" menuType="Link" imageUrl="icon_edit.gif" />
+		</menuGroup>
+		
+		<menuGroup menuGroupId="NetworkerBlog" headerImage="sidetab_myblog.gif">
+			<menuItem menuId="hypMyBlog" text="My Blog" url="BlogRegistered" toolTip="View My Blog" menuType="Link" imageUrl="icon_resume_view.gif" />
+			<menuItem menuId="hypAddPost" text="Add Post" url="BlogPostAddRegistered" toolTip="Add a Post to my blog" menuType="Link" imageUrl="icon_edit.gif" />
+			<menuItem menuId="hypSettings" text="Settings" url="BlogSettingRegistered" toolTip="My Blog Settings" menuType="Link" imageUrl="icon_edit.gif" />
+			<menuItem menuId="hypAllBlog" text="View All Blogs" url="BlogMainRegistered" toolTip="View All Blog" menuType="Link" imageUrl="icon_resume_view.gif" />
+		</menuGroup>
+		
+		<!-- Employer Menus -->
+		<menuGroup menuGroupId="EmployerMenu">
+			<menuItem menuId="hypMyAlerts" text="My News Alerts" url="employeralertsform" toolTip="" menuType="Link" imageUrl="icon_emp_alerts-homenew2.gif" />
+			<menuItem menuId="hypSavedSearches" text="My Saved Resume Searches" url="employerviewsavedsearchesform" toolTip="" menuType="Link" imageUrl="icon_emp_search_save.gif" /> -->
+			<menuItem menuId="hypSearchResumes" text="Candidate Search" url="employersearch" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypSearchResumes" text="Advanced Search" url="employersearchadvanced" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypResumeRequests" text="Passive Resume Status" url="employerviewresumerequestsform" toolTip="" menuType="Link" imageUrl="icon_resume_requests.gif" />
+			<menuItem menuId="hypMyAccount" text="My Purchases" url="employeryearlypurchasesummaryform" toolTip="" menuType="Link" imageUrl="icon_myaccount.gif" />
+			<menuItem menuId="hypEditProfile" text="Edit My Profile" url="employeredituserprofileform" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+		</menuGroup>
+		
+		<!-- Administrator Menus -->
+		<menuGroup menuGroupId="AdministratorManageData" headerImage="sidetab_managedata.gif">
+			<menuItem menuId="hypSearchResumes" text="Search Resumes" url="administratorsearchcustomform" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypViewStatistics" text="View Statistics" url="administratorviewstatisticsform" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypSearchUsers" text="Search Users" url="administratorsearchusersform" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+			<menuItem menuId="hypDownloadTransactions" text="Download Transactions" url="administratordownloadtransactionsform" toolTip="" menuType="Link" imageUrl="icon_search.gif" />
+		</menuGroup>	
+		
+		<menuGroup menuGroupId="AdministratorManageContent" headerImage="sidetab_managecontent.gif">	
+			<menuItem menuId="hypEditFAQ" text="FAQ" url="administratoreditfaqform" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+			<menuItem menuId="hypEditWelcome" text="Welcome / Home Page" url="administratoreditwelcomepageform" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+			<menuItem menuId="hypEditDidYouKnow" text="Did You Know" url="administratoreditdidyouknowform" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+		</menuGroup>
+		
+		<menuGroup menuGroupId="AdministratorManageProfile" headerImage="sidetab_manageprofile.gif">	
+			<menuItem menuId="hypEditPassword" text="Change Password" url="passwordform" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+		</menuGroup>
+		
+		<menuGroup menuGroupId="AdministratorManageBlog" headerImage="sidetab_manageblog.gif">	
+			<menuItem menuId="hypEditBlog" text="Manage Blog" url="AdministratorManageBlog" toolTip="" menuType="Link" imageUrl="icon_edit.gif" />
+		</menuGroup>
+
+</linkmeMenus>

@@ -1,0 +1,69 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="StructureMasterPage.master.cs" Inherits="LinkMe.Web.Master.StructureMasterPage" MasterPageFile="~/master/SiteMasterPage.master" %>
+<%@ Register TagPrefix="uc" TagName="Header" Src="~/ui/controls/common/navs/PageHeader.ascx" %>
+<%@ Register TagPrefix="uc" TagName="SideBarContainer" Src="~/ui/controls/common/SideBarContainer.ascx" %>
+<%@ Register TagPrefix="uc" TagName="Footer" Src="~/ui/controls/common/navs/PageFooter.ascx" %>
+<%@ Register TagPrefix="wc" Namespace="LinkMe.WebControls" Assembly="LinkMe.WebControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6" %>
+<%@ Register TagPrefix="nv" Namespace="LinkMe.Web.Manager.Navigation" Assembly="LinkMe.Web" %>
+<%@ Register TagPrefix="cm" Namespace="LinkMe.Web.Cms" Assembly="LinkMe.Web" %>
+<%@ Register TagPrefix="cv" Namespace="LinkMe.Web.Cms.ContentDisplayViews" Assembly="LinkMe.Web" %>
+
+<asp:Content ContentPlaceHolderID="Body" runat="server">
+
+    <cv:CommunityHeaderContextualContentDisplayView ID="cmCommunityHeader" runat="server" />
+
+    <div id="container">
+    
+        <div id="header">
+            <uc:Header id="ucHeader" runat="server" />
+        </div>
+
+        <div id="body-container">
+            <asp:ContentPlaceHolder ID="PromptProfileContent" runat="server" />
+            <div id="main-body">
+            
+                <asp:PlaceHolder ID="phForm" runat="server">
+	                <nv:NavigationForm id="Form" name="Form" runat="server">
+                        <wc:LinkMeValidationSummary id="wcValidationSummary" runat="server" />
+                        
+                        <wc:ExplicitClientIdHtmlControl Tag="div" id="wcFormContainer" runat="server">
+                            <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+	                        <asp:ContentPlaceHolder ID="FormContent" runat="server" />
+	                    </wc:ExplicitClientIdHtmlControl>
+	                    
+                    </nv:NavigationForm>
+                </asp:PlaceHolder>
+                
+                <asp:ContentPlaceHolder ID="NonFormContent" runat="server" />
+                <asp:PlaceHolder ID="phNonFormContent" runat="server" />
+    	        
+            </div>
+
+            <div id="sidebar">
+                <uc:SidebarContainer ID="ucSidebarContainer" runat="server" />
+            </div>
+
+            <div class="clearer"></div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="Footer" runat="server" />
+        <div id="footer">
+            <uc:Footer id="ucFooter" runat="server" />
+        </div>
+
+    </div>
+    
+    <cv:CommunityFooterContextualContentDisplayView ID="cmCommunityFooter" runat="server" />
+
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JavaScript" runat="server">
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="BodyTrackers" runat="server">
+    <asp:ContentPlaceHolder ID="BodyTrackers" runat="server" />
+</asp:Content>

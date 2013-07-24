@@ -1,0 +1,82 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, #JobDescription table, #JobDescription th, #JobDescription td, #JobDescription ul, #JobDescription li, #JobDescription label, #JobDescription span {
+	color: #fff;
+	background: transparent;
+	font-family: Verdana, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd #JobDescription #Ad {	
+	padding-bottom: 1em;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 0 1em 1em 1em;	
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd div#JobDescription,
+#JobAd div#JobDescription #Ad,
+#JobAd div#brandingLogo,
+#JobAd div#JobAdHeading {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad {
+	background: #0080c5 url('wyndham_images/wyndham_bg.gif') no-repeat left 17em;
+	width: 460px;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: #fff url('wyndham_images/wyndham_logo.gif') no-repeat left top;
+	height: 60px; /* Simple way of getting white space btw this and h1 */
+	width: 100%;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	background: #fff url('wyndham_images/wyndham_banner.jpg') no-repeat left bottom;
+	border-bottom: 2px solid #fff;
+	color: #0070BC;
+	font-size: 200%;
+	padding-bottom: 133px;
+	text-align: right;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-top: 2em;
+}
+
+#JobAd #JobDescription #Ad table {
+		width: 90% !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	display: none;
+}

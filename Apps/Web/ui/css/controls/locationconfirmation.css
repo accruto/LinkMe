@@ -1,0 +1,32 @@
+﻿.locationconfirmation_ascx {
+	border: 1px solid #A4B97F;
+	background: #FFC;
+	padding: 8px;
+	width: 210px;
+	font-size: 85%;
+	position: relative;	/* make this an anchor for absolute positioning */
+}
+	.locationconfirmation_ascx .question {
+		margin:0;
+	}
+	.locationconfirmation_ascx .button_action-list {
+		margin:0;
+		margin-top: 10px;
+		margin-left: 55px;
+	}
+		.locationconfirmation_ascx .button_action-list a.yes {
+			background-image: url(../../images/buttons/mini_light/yes.png);
+			width: 44px;
+		}
+		.locationconfirmation_ascx .button_action-list a.no {
+			background-image: url(../../images/buttons/mini_light/no.png);
+			width: 44px;
+		}
+		.locationconfirmation_ascx .speecharrow {
+			position: absolute;
+			left: 100px;
+			top: -7px;
+			width: 13px;
+			height: 8px;
+			background: url(../../images/controls/locationconfirmation/speech-arrow.png) top left no-repeat;
+		}

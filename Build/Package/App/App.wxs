@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <?define ProductName="LinkMe App" ?>
+  <?define Major="1" ?>
+  <?define Minor="0" ?>
+  <?define Build="0" ?>
+  <?define Revision="0" ?>
+  <?define UpgradeId="CCDDFF2D-F892-49bc-93FF-0BF82BF7F801" ?>
+
+  <!-- The Product GUID gets changed at every build, but the Upgrade GUID should always stay the same.
+       This allows MSI to automatically uninstall a previous version when installing. -->
+
+  <Product
+    Name="$(var.ProductName) $(var.Major).$(var.Minor)"
+    Id="*"
+    Language="1033"
+    Codepage="1252"
+    Version="$(var.Major).$(var.Minor).$(var.Build).$(var.Revision)"
+    Manufacturer="LinkMe"
+    UpgradeCode="$(var.UpgradeId)">
+    
+    <Package
+      Keywords="Installer"
+      Description="$(var.ProductName) $(var.Major).$(var.Minor) Installer"
+      Comments="$(var.ProductName) $(var.Major).$(var.Minor) Installer"
+      Manufacturer="LinkMe"
+      InstallerVersion="200"
+      Languages="1033"
+      Compressed="yes"
+      SummaryCodepage="1252"
+      Platforms="x64" />
+    
+    <Media Id="1" Cabinet="LinkMe.App.cab" EmbedCab="yes" DiskPrompt="Media" />
+    
+    <Property Id="ALLUSERS" Value="1" />
+    <Property Id="DiskPrompt" Value="$(var.ProductName) $(var.Major).$(var.Minor).$(var.Build).$(var.Revision) Installation [1]" />
+    
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      
+      <Directory Id="INSTALLDIR" Name="LinkMe">
+        <Merge Id="LinkMe.Environment.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Environment\Build\Package\Module\LinkMe.Environment.x64.msm" />
+        <Merge Id="LinkMe.Framework.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Framework\Build\Package\Module\LinkMe.Framework.x64.msm" />
+        <Merge Id="LinkMe.External.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\External\Build\Package\Module\LinkMe.External.x64.msm" />
+        <Merge Id="LinkMe.Domain.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Domain\Build\Package\Module\LinkMe.Domain.x64.msm" />
+        <Merge Id="LinkMe.Query.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Query\Build\Package\Module\LinkMe.Query.x64.msm" />
+        <Merge Id="LinkMe.Apps.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Module\LinkMe.Apps.x64.msm" />
+        <Merge Id="LinkMe.Apps.Management.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Management\Module\LinkMe.Apps.Management.x64.msm" />
+        <Merge Id="LinkMe.Apps.TaskRunner.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\TaskRunner\Module\LinkMe.Apps.TaskRunner.x64.msm" />
+        <Merge Id="LinkMe.Apps.Search.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Search\Module\LinkMe.Apps.Search.x64.msm" />
+        <Merge Id="LinkMe.Apps.Workflow.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Workflow\Module\LinkMe.Apps.Workflow.x64.msm" />
+        <Merge Id="LinkMe.Apps.Reports.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Reports\Module\LinkMe.Apps.Reports.x64.msm" />
+        <Merge Id="LinkMe.Apps.Tracking.x64.msm" FileCompression="yes" DiskId="1" Language="1033" SourceFile="..\..\..\Apps\Build\Package\Tracking\Module\LinkMe.Apps.Tracking.x64.msm" />
+      </Directory>
+
+      <!-- Registry entry for the installation directory -->
+      
+      <Component Id="InstallPath" Guid="ACC2CDA2-6D44-4227-80AC-020E28325710" Win64="yes">
+        <RegistryKey Id="InstallPathReg" Action="createAndRemoveOnUninstall" Root="HKLM" Key="SOFTWARE\LinkMe\$(var.Major).$(var.Minor)">
+          <RegistryValue Id="InstallPathValue" KeyPath="yes" Action="write" Type="string" Name="InstallDir" Value="[INSTALLDIR]" />
+        </RegistryKey>
+      </Component>
+      
+      <!-- IIS -->
+
+      <Component Id="StopIIS" Guid="{F10A5A38-506A-4943-B0AB-C7CA88DE1E6B}" KeyPath="yes">
+        <ServiceControl Id="StopIISService" Name="W3SVC" Stop="both" />
+      </Component>
+
+      <Component Id="StartIIS" Guid="{BCB20DA8-4656-4b94-9E99-04EACB2A5096}" KeyPath="yes">
+        <ServiceControl Id="StartIISService" Name="W3SVC" Start="both" />
+      </Component>
+
+    </Directory>
+
+    <Feature
+      Id="Runtime"
+      Title="$(var.ProductName) $(var.Major).$(var.Minor)"
+      Description="$(var.ProductName) $(var.Major).$(var.Minor) runtime"
+      AllowAdvertise="no"
+      Absent="disallow"
+      TypicalDefault="install"
+      Display="expand"
+      Level="1"
+      ConfigurableDirectory="INSTALLDIR">
+
+      <ComponentRef Id="StopIIS" Primary="yes" />
+      <MergeRef Id="LinkMe.Environment.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Framework.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.External.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Domain.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Query.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.Management.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.TaskRunner.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.Search.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.Workflow.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.Reports.x64.msm" Primary="yes" />
+      <MergeRef Id="LinkMe.Apps.Tracking.x64.msm" Primary="yes" />
+      <ComponentRef Id="InstallPath" Primary="yes" />
+      <ComponentRef Id="StartIIS" Primary="yes" />
+
+    </Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <UIRef Id="WixUI_InstallDir" />
+
+    <Upgrade Id="$(var.UpgradeId)">
+      <UpgradeVersion Minimum="1.0.0.0" Property="ALREADYINSTALLED" IncludeMinimum="yes" />
+      <Property Id="ALREADYINSTALLED" Secure="yes" />
+    </Upgrade>
+
+    <!-- Performing some custom actions to ensure everything is registred, put in GAC etc. Should already be done by the install but just in case ... -->
+
+    <CustomAction Id="QtExecEnvSetup.CmdLine" Property="QtExecCmdLine" Value="&quot;[INSTALLDIR]Bin\LinkMe.Environment.Util.exe&quot; /setup" />
+    <CustomAction Id="QtExecEnvSetup" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="check" />
+
+    <InstallExecuteSequence>
+      <RemoveExistingProducts Before="InstallInitialize">ALREADYINSTALLED</RemoveExistingProducts>
+      <Custom Action="QtExecEnvSetup.CmdLine" After="InstallFinalize">NOT Installed</Custom>
+      <Custom Action="QtExecEnvSetup" After="QtExecEnvSetup.CmdLine">NOT Installed</Custom>
+    </InstallExecuteSequence>
+
+  </Product>
+</Wix>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="LinkMe.Domain.Spam.SpamCommand" Collapsed="true">
+    <Position X="2.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAABAAAAIAAAAIAAAAAAAAgAAAIAAAAAAAAQ=</HashCode>
+      <FileName>Spam\SpamCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Spam.Data.SpamRepository" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAAAAAAAAAAAACAAiAAAAICEAAAAABAAAABAAA=</HashCode>
+      <FileName>Spam\Data\SpamRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Location.LocationQuery" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABEgAEAQCJEAQAAIAAAAAAAQAAAAgAEAAABAAAAEAA=</HashCode>
+      <FileName>Location\LocationQuery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Location.Data.LocationRepository" Collapsed="true">
+    <Position X="7.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAARAAAAAAQAAEBAAQAA=</HashCode>
+      <FileName>Location\Data\LocationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Industries.IndustriesCommand" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAEAABAAAIAIQAAAEAAAACADCAAAAIAIAAAAEA=</HashCode>
+      <FileName>Industries\IndustriesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Industries.Data.IndustriesRepository" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAgAAAAADAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Industries\Data\IndustriesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Files.FilesCommand" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAABAEABAAIAAAAAAIAAIAAAAAIAAAAAAAIA=</HashCode>
+      <FileName>Files\FilesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+      <Field Name="_storageRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Files.FilesStorageRepository" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAQBAIAAAAAAAQABAAAAAAABAAAAIAAAAA=</HashCode>
+      <FileName>Files\FilesStorageRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Files.Data.FilesRepository" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQIAgCACAAAAAAEAAAAACAAAAABAgQAAADAAAAAAIY=</HashCode>
+      <FileName>Files\Data\FilesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Donations.DonationsCommand" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgABAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>Donations\DonationsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Donations.Data.DonationsRepository" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAoAEAAAAAABAACCAAAAAAAAAAACAIAAAQEA=</HashCode>
+      <FileName>Donations\Data\DonationsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Credits.CreditsCommand" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAABADBQAEAQAAASAAAAGACAAAAAAKCAAAEEDA=</HashCode>
+      <FileName>Credits\CreditsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Credits.Data.CreditsRepository" Collapsed="true">
+    <Position X="7.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAASABAMAASQACAAUCBAIIAAAAAAAAABAAkAgEA=</HashCode>
+      <FileName>Credits\Data\CreditsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Spam.ISpamRepository" Collapsed="true">
+    <Position X="5.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAgCAAAAAAAAAEAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Spam\ISpamRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Location.ILocationRepository" Collapsed="true">
+    <Position X="5.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Location\ILocationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Industries.IIndustriesRepository" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Industries\IIndustriesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Files.IFilesRepository" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACCAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAIA=</HashCode>
+      <FileName>Files\IFilesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Files.IFilesStorageRepository" Collapsed="true">
+    <Position X="5.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABCAAAAAAAAA=</HashCode>
+      <FileName>Files\IFilesStorageRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Donations.IDonationsRepository" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAABAAACAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Donations\IDonationsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Credits.ICreditsRepository" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQABAEAASAAAAAAAAAEAEAAAAAAgAAAAgAAAA=</HashCode>
+      <FileName>Credits\ICreditsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Spam.ISpamCommand" Collapsed="true">
+    <Position X="1" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Spam\ISpamCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Location.ILocationQuery" Collapsed="true">
+    <Position X="1" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIIBCABAAAAIAgBAAACAAAAAAAAABIgAAA=</HashCode>
+      <FileName>Location\ILocationQuery.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Industries.IIndustriesCommand" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAggQAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Industries\IIndustriesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Files.IFilesCommand" Collapsed="true">
+    <Position X="1" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAABCBAAAAAAAA=</HashCode>
+      <FileName>Files\IFilesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Donations.IDonationsCommand" Collapsed="true">
+    <Position X="1" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAABAAACAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Donations\IDonationsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Credits.ICreditsCommand" Collapsed="true">
+    <Position X="1" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACQABAEAASAAAAAAAAAAAAAEACAAACAAAgAEAA=</HashCode>
+      <FileName>Credits\ICreditsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

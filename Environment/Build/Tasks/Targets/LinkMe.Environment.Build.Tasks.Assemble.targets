@@ -1,0 +1,91 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Assemble.AssembleFiles"
+    AssemblyFile="..\Bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Assemble.AssembleFolder"
+    AssemblyFile="..\Bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <UsingTask
+    TaskName="LinkMe.Environment.Build.Tasks.Assemble.AssembleClean"
+    AssemblyFile="..\Bin\LinkMe.Environment.Build.Tasks.dll"
+    />
+
+  <!-- Assemble -->
+  
+  <Target Name="Assemble">
+    
+    <AssembleFiles
+      ProjectFullPath="$(MSBuildProjectFullPath)"
+      CatalogueFile="$(CatalogueFile)" 
+      CatalogueFileGuid="$(CatalogueFileGuid)" 
+      OutputPath="$(OutputPath)"
+      Configuration="$(Configuration)" 
+      Assembles="@(Assemble)"
+      CopyOnBuilds="@(CopyOnBuild)"
+      />
+
+  </Target>
+
+  <Target Name="AssembleClean">
+
+    <AssembleClean
+      ProjectFullPath="$(MSBuildProjectFullPath)"
+      CatalogueFile="$(CatalogueFile)" 
+      OutputPath="$(OutputPath)"
+      Assembles="@(Assemble)"
+      CopyOnBuilds="@(CopyOnBuild)"
+      />
+
+  </Target>
+
+  <!-- Build -->
+  
+  <PropertyGroup>
+    <BuildDependsOn>
+      Assemble
+    </BuildDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Build"
+    DependsOnTargets="$(BuildDependsOn)"
+    />
+
+  <!-- Clean -->
+  
+  <PropertyGroup>
+    <CleanDependsOn>
+      AssembleClean
+    </CleanDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Clean"
+    DependsOnTargets="$(CleanDependsOn)"
+    />
+
+  <!-- ReBuild -->
+
+  <PropertyGroup>
+    <RebuildDependsOn>
+      Clean;
+      Build;
+    </RebuildDependsOn>
+
+    <RebuildDependsOn Condition=" '$(MSBuildProjectDefaultTargets)' == 'Rebuild' " >
+      Clean;
+      Build;
+    </RebuildDependsOn>
+  </PropertyGroup>
+
+  <Target
+    Name="Rebuild"
+    DependsOnTargets="$(RebuildDependsOn)"
+    />
+
+</Project>

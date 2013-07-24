@@ -1,0 +1,7 @@
+﻿#left-sidebar .new-search-action,
+#left-sidebar .change-search-action,
+#left-sidebar .save-search-action,
+#left-sidebar .new-candidate-alert-action,
+#left-sidebar .manage-folders-action {
+    padding-left: 21px;
+}

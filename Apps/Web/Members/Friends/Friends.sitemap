@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+    <siteMapNode url="~/members/friends/ViewFriends.aspx" title="Friends list | Friends | Members" sidebar="members-feedback">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/FriendsList.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/FindFriends.aspx" title="Find friends | Friends | Members">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/FindFriends.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/InviteFriends.aspx" title="Invite friends | Friends | Members" expires="true">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/InviteContactsForm.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/Invitations.aspx" title="Invitations | Friends | Members">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/ReceivedInvitations.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/ViewFriend.aspx" title="{0} Profile | Friends | Members">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/FriendsProfile.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/ViewFriendsFriends.aspx" title="Friends List">
+      <siteMapNode redirect="true" url="~/ui/registered/networkers/ViewFriendsFriends.aspx" />
+    </siteMapNode>
+    <siteMapNode url="~/members/friends/ViewRepresentative.aspx" title="Nominate Representative" />
+    <siteMapNode url="~/members/friends/ViewRepresentees.aspx" title="Nominated Representative" />
+  </siteMapNode>
+
+</siteMap>

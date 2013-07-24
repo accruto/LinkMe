@@ -1,0 +1,22 @@
+﻿.whatimdoing_ascx {}
+	.whatimdoing_ascx a.what-im-doing {
+		color: #333333;
+		text-decoration: none;
+	}
+	.whatimdoing_ascx a.what-im-doing:hover {
+		text-decoration: underline;
+	}
+
+.autocompletewhatimdoingeditor_ascx {}
+	.autocompletewhatimdoingeditor_ascx .suggestion-button {
+		background-image: url(../../images/buttons/dropdown.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		clear:right;
+		float:left;
+		height:22px;
+		margin-left:-25px;
+		margin-top: 1px;
+		position:relative;
+		width:23px;
+	}

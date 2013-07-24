@@ -1,0 +1,142 @@
+﻿.wizardsteps_ascx:after {		/* Modern-browser self-clearing solution */
+    content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.wizardsteps_ascx {			/* IE6,7 self-clearing solution */
+	zoom: 1;				/* Invalid CSS, hasLayout trigger */
+}
+
+/* ----------------- */
+/* Horizontal layout */
+/* ----------------- */
+
+/* Used when displayed as part of the page content */
+
+.wizardsteps_ascx {
+    margin-bottom: 15px;
+}
+
+.section .wizardsteps_ascx {
+    margin:0;
+}
+		
+.wizardsteps_ascx span {
+	display: none;
+}
+
+.wizardsteps_ascx ol {
+	margin:0; padding: 15px 0px;
+}
+
+.wizardsteps_ascx ol li {
+	color: #333;
+	display: inline;
+	font-weight: bold;
+	padding: 4px 12px 4px 26px;
+}
+
+.wizardsteps_ascx ol li.selected {
+	color: #f60;
+}
+
+.wizardsteps_ascx ol li#item_0 {
+    background: url('../../img/one.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li.selected#item_0 {
+	background: url('../../img/oneOn.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li#item_1 {
+    background: url('../../img/two.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li.selected#item_1 {
+	background: url('../../img/twoOn.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li#item_2 {
+    background: url('../../img/three.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li.selected#item_2  {
+	background: url('../../img/threeOn.gif') no-repeat left center;
+}	
+
+.wizardsteps_ascx ol li#item_3 {
+    background: url('../../img/four.gif') no-repeat left center;
+}
+
+.wizardsteps_ascx ol li.selected#item_3  {
+	background: url('../../img/fourOn.gif') no-repeat left center;
+}
+
+
+
+/* --------------- */
+/* Vertical layout */
+/* --------------- */
+
+/* Used when displayed as part of the left sidebar */
+
+#left-sidebar .wizardsteps_ascx {
+    margin: 0;
+    padding: 8px 5px;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+#left-sidebar .wizardsteps_ascx ol {
+    margin:0; padding:0;
+}
+
+#left-sidebar .wizardsteps_ascx ol li {
+    margin:0;padding:0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: block;
+    float: none;
+    color: #666;
+}
+#left-sidebar .wizardsteps_ascx ol li {
+    background-image: url('../../images/controls/WizardSteps/middle-item.png');
+}
+#left-sidebar .wizardsteps_ascx ol li.selected {
+    background-image: url('../../images/controls/WizardSteps/middle-item_filled.png');
+}
+#left-sidebar .wizardsteps_ascx ol li.done {
+    background-image: url('../../images/controls/WizardSteps/middle-item_filled_below-is-filled.png');
+}
+
+#left-sidebar .wizardsteps_ascx ol li.first {
+    margin-top: -6px;
+    background-image: url('../../images/controls/WizardSteps/first-item.png');
+}
+#left-sidebar .wizardsteps_ascx ol li.first-selected {
+    background-image: url('../../images/controls/WizardSteps/first-item_filled.png');
+}
+#left-sidebar .wizardsteps_ascx ol li.first-done {
+    background-image: url('../../images/controls/WizardSteps/first-item_filled_below-is-filled.png');
+}
+
+#left-sidebar .wizardsteps_ascx ol li.last {
+    background-image: url('../../images/controls/WizardSteps/last-item.png');
+    margin-bottom: -6px;
+}
+#left-sidebar .wizardsteps_ascx ol li.last-selected {
+    background-image: url('../../images/controls/WizardSteps/last-item_filled.png');
+}
+
+
+#left-sidebar .wizardsteps_ascx ol li.done {
+    color: #333;
+}
+#left-sidebar .wizardsteps_ascx ol li.selected {
+    color: #47A;
+}

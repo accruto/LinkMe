@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:add_user_profile_password_flags.sql,update_database_version_table.sql

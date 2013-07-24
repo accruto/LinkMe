@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<poll>
+  <question text="What are the 5 hardest problems people face when writing their resume?" />
+  <answer text="What information to include" number="0"></answer>
+  <answer text="Listing Achievements" number="1"></answer>
+  <answer text="Formatting and Presentation" number="2"></answer>
+  <answer text="The length of the Resume" number="3"></answer>
+  <answer text="Spelling and Grammar" number="4"></answer>
+</poll>

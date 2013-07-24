@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Deploy">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ReportFolders Include="$(SourceRootDirectory)Reports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DataSources Include="/Data Sources/LinkMeDataSource" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemReports.proj" />
+
+</Project>

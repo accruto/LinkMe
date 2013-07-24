@@ -1,0 +1,119 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets"/>
+
+  <PropertyGroup>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BackupDirectory>\\INTRANET2\DBBuilds</BackupDirectory>
+    <DatabaseServer Condition=" '$(DatabaseServer)' == '' ">(LOCAL)</DatabaseServer>
+    <DatabaseName>Build</DatabaseName>
+    <SqlDataDirectory>C:\SqlBuildData</SqlDataDirectory>
+    <ScriptRootDirectory>..\resources\database</ScriptRootDirectory>
+  </PropertyGroup>
+
+  <Target Name="BuildDatabase" DependsOnTargets="GetDatabaseVersions; DeleteLastBackup; RestoreBaseline; GetDatabaseScriptListFiles; UpdateDatabase; BackupLatest" />
+
+  <Target Name="GetDatabaseVersions">
+
+    <GetVersions BuildVersion="$(BuildVersion)">
+      <Output TaskParameter="ProductVersion" PropertyName="ProductVersion" />
+      <Output TaskParameter="ProductVersionComma" PropertyName="ProductVersionComma" />
+      <Output TaskParameter="BuildVersionComma" PropertyName="BuildVersionComma" />
+    </GetVersions>
+    <Message Text="Product version: $(ProductVersion)" />
+
+    <GetBaselineVersion BuildVersion="$(BuildVersion)">
+      <Output TaskParameter="BaselineVersion" PropertyName="BaselineVersion" />
+    </GetBaselineVersion>
+    <Message Text="Baseline version: $(BaselineVersion)" />
+
+    <CreateProperty Value="$(BackupDirectory)\Build_$(ProductVersion)$(BuildSuffix)_latest.bak">
+      <Output TaskParameter="Value" PropertyName="LastBackupFilePath" />
+    </CreateProperty>
+    <Message Text="Last backup: $(LastBackupFilePath)" />
+
+    <CreateProperty Value="$(SqlDataDirectory)\Build_$(ProductVersion)$(BuildSuffix)_latest.bak">
+      <Output TaskParameter="Value" PropertyName="LocalLastBackupFilePath" />
+    </CreateProperty>
+    <Message Text="Local last backup: $(LocalLastBackupFilePath)" />
+
+    <CreateProperty Value="$(BackupDirectory)\Build_$(BaselineVersion)$(BuildSuffix)_release.bak">
+      <Output TaskParameter="Value" PropertyName="BaselineBackupFilePath" />
+    </CreateProperty>
+    <Message Text="Baseline backup: $(BaselineBackupFilePath)" />
+
+    <CreateProperty Value="$(SqlDataDirectory)\Build_$(BaselineVersion)$(BuildSuffix)_release.bak">
+      <Output TaskParameter="Value" PropertyName="LocalBaselineBackupFilePath" />
+    </CreateProperty>
+    <Message Text="Local baseline backup: $(LocalBaselineBackupFilePath)" />
+
+  </Target>
+
+  <Target Name="DeleteLastBackup" DependsOnTargets="GetDatabaseVersions">
+    <CreateItem Include="$(LastBackupFilePath)">
+      <Output TaskParameter="Include" ItemName="BackupToDelete" />
+    </CreateItem>
+    <Delete Files="@(BackupToDelete)" />
+  </Target>
+
+  <Target Name="RestoreBaseline" DependsOnTargets="GetDatabaseVersions">
+    <KillDatabaseConnections ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" />
+
+    <!-- Restore from a local copy to avoid access denied errors -->
+
+    <Copy SourceFiles="$(BaselineBackupFilePath)" DestinationFolder="$(SqlDataDirectory)" />
+    <RestoreDatabase ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" BackupFilePath="$(LocalBaselineBackupFilePath)" SqlDataDirectory="$(SqlDataDirectory)" />
+    <Delete Files="$(LocalBaselineBackupFilePath)" />
+  </Target>
+
+  <Target Name="GetDatabaseScriptListFiles" DependsOnTargets="GetDatabaseVersions">
+    <GetDatabaseScriptListFiles ScriptRootDirectory="$(ScriptRootDirectory)" ProductVersion="$(ProductVersion)" BaselineVersion="$(BaselineVersion)">
+      <Output TaskParameter="ScriptListFiles" ItemName="ScriptListFiles" />
+    </GetDatabaseScriptListFiles>
+  </Target>
+
+  <Target Name="UpdateDatabase" DependsOnTargets="GetDatabaseScriptListFiles">
+    <!--
+      If the current release is a MAJOR release (eg. 3.1, 3.2) then the baseline would be for the last release.
+      First run any hotfix scripts for the last release, then the scripts for the current release.
+      If the current release is a MINOR/HOTFIX release (eg. 3.1.1, 3.1.1.1) then the baseline would be for the current
+      major release. Just run all the hotfix scripts for this release.
+    -->
+
+    <Message Text="Running script files: @(ScriptListFiles)" />
+    <RunDatabaseScriptList ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" ScriptListFiles="@(ScriptListFiles)" />
+  </Target>
+
+  <Target Name="BackupLatest" DependsOnTargets="GetDatabaseVersions">
+    <!-- Compact the database to make the backup smaller. -->
+    <RunDatabaseScript ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" ScriptFile="$(ScriptRootDirectory)\Truncate log and shrink DB.sql" />
+
+    <!-- Back up to a temporary file and then move it to the network share. -->
+
+    <CreateProperty Value="Build_$(BuildVersion)$(BuildSuffix)_temp.bak">
+      <Output TaskParameter="Value" PropertyName="TempBackupFilePath" />
+    </CreateProperty>
+    <BackupDatabase ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" BackupFilePath="$(SqlDataDirectory)\$(TempBackupFilePath)" />
+    <Exec Command="move &quot;$(SqlDataDirectory)\$(TempBackupFilePath)&quot; &quot;$(BackupDirectory)\&quot;" />
+
+    <!-- Now that it's on the network share rename it to the proper name. -->
+    <Exec Command="move /y &quot;$(BackupDirectory)\$(TempBackupFilePath)&quot; &quot;$(LastBackupFilePath)&quot;" />
+  </Target>
+
+  <Target Name="RestoreLatestDatabase" DependsOnTargets="GetDatabaseVersions">
+    <KillDatabaseConnections ServerName="$(DatabaseServer)"  DatabaseName="$(DatabaseName)" />
+
+    <!-- Restore from a local copy to avoid access denied errors -->
+
+    <Copy SourceFiles="$(LastBackupFilePath)" DestinationFolder="$(SqlDataDirectory)" />
+    <RestoreDatabase ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" BackupFilePath="$(LocalLastBackupFilePath)" SqlDataDirectory="$(SqlDataDirectory)" />
+    <Delete Files="$(LocalLastBackupFilePath)" />
+
+    <!-- Fix up the DB user-login mapping, as the backup could have been created on a different server. -->
+    <RunDatabaseScript ServerName="$(DatabaseServer)" DatabaseName="$(DatabaseName)" ScriptFile="$(ScriptRootDirectory)\Fix orphaned DB users.sql" />
+  </Target>
+
+</Project>

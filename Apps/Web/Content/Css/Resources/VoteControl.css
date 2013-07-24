@@ -1,0 +1,98 @@
+﻿#main-body .rightpart .vote .titlebar .icon {
+	background-position : -10px -270px;
+	width : 23px;
+	height : 21px;
+	margin : -2px 10px 0px 0px;
+	float : right;
+}
+.rightpart .vote > .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAAABCAYAAABQQVI1AAAAM0lEQVQ4T2M8fvz4Z3V1dZ7nz58zaGlpMYyC0RAYDYHREBhKIXDt2jUGSUlJhps3b34BAKf7DUqElOLhAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+	width : 308px;
+}
+.rightpart .vote .bottombar {
+	background-position : 0px -2100px;
+	width : 308px;
+	height : 7px;
+}
+#main-body .VoteControlQuestion {
+	margin : 20px 10px 10px 10px;
+	color : #0D0E0D;
+	font-weight : Bold;
+}
+body.IE7 #TestQuestionList {
+	margin-bottom : 10px;
+}
+.vote .divider {
+	background-position : 0px -2098px;
+	width : 289px;
+	height : 1px;
+	margin : 0px 0px 10px 10px;
+}
+.VoteControl ul {
+	list-style-type : none;
+	margin-left : 10px;
+}
+.VoteControlNormalRow, .VoteControlAlternateRow {
+	width : 290px;
+}
+.radiobutton {
+	background-position : -350px 0px;
+	width : 16px;
+	height : 16px;
+	cursor : pointer;
+}
+body.IE9 .radiobutton, body.IE8 .radiobutton {
+	margin-top : -1.5px;
+}
+.radiobutton:hover {
+	background-position : -330px 0px;
+}
+.radiobutton.checked, .radiobutton.checked:hover {
+	background-position : -390px 0px;
+}
+.VoteControlRadioButton {
+	display : none;
+}
+.vote .buttonarea {
+	width : 290px;
+	margin : 5px 0px 0px 10px;
+}
+#main-body .vote .buttonarea .button.vote {
+	background-position : -400px -95px;
+	width : 76px;
+	height : 29px;
+	cursor : pointer;
+	float : right;
+	margin-top : -7px;
+}
+body.IE7 #main-body .vote .buttonarea .button.vote {
+	margin-top : -20px;
+}
+#main-body .vote .buttonarea .button.vote:hover {
+	background-position : -400px -130px;
+}
+.VoteControlPollLabel {
+	width : 180px;
+	margin : 0px 5px 0px 0px;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+}
+.VoteControlPollBar {
+	height : 10px;
+	width : 39px;
+	margin : 2px 5px 0px 0px;
+}
+.VoteControlPollBar .bg {
+	width : 39px;
+	margin-right : -39px;
+	height : 10px;
+	border-radius : 4px;
+	background-position : -400px -175px;
+}
+.VoteControlPollBar .fg {
+	height : 10px;
+	border-radius : 4px;
+	background-position : -400px -165px;
+}

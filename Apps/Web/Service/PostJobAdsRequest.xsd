@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="JobAd.xsd" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- PostJobAds request version 1.1 -->
+  <xs:element name="PostJobAdsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="JobAds">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobAd" type="tns:JobAd" maxOccurs="unbounded" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="jobPosterUserId" use="required" type="tns:UserId" />
+            <!-- If 'closeAllOtherAds' is true all existing job ads for the specified job poster that
+            were previously submitted though the service are closed, unless they are listed in this request.
+            This provides an easy way to "synchronise" the entire list of job ads for a job poster. -->
+            <xs:attribute name="closeAllOtherAds" use="required" type="xs:boolean" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:PostJobAdsRequestVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="PostJobAdsRequestVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.1" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

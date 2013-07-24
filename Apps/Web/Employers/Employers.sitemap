@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+	<siteMapNode>
+
+		<!-- Change the anonymous default from member to employer -->
+
+		<siteMapNode roles="Anonymous"
+                 sidebar="employers-guests" />
+
+		<!-- Includes -->
+
+		<siteMapNode siteMapFile="guests/Guests.sitemap" />
+		<siteMapNode siteMapFile="previews/Previews.sitemap" />
+
+		<!-- Home -->
+
+		<siteMapNode url="~/employers/"
+					 title="Filling jobs | Candidate database | Resumes online | Employers"
+					 description="LinkMe turns the traditional job board upside down. We provide recruiters and employees with a candidate board - the reversal of the usual job board system. Resumes can also upload their resumes, offer information about their ideal jobs, and also search for jobs."
+					 keywords="candidates, candidate board, candidate search, candidate sourcing, recruitment"
+           sidebar="employers-guests-front">
+      <siteMapNode redirect="true" url="~/employers/Employer.aspx" />
+      <siteMapNode redirect="true" url="~/Employer.aspx" />
+		</siteMapNode>
+
+	</siteMapNode>
+
+</siteMap>

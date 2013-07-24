@@ -1,0 +1,13 @@
+﻿.large-checkbox {
+    background-position: top left;
+    width: 16px;
+    height: 17px;
+    background-image: url(../images/forms/large-checkbox.png);
+    cursor: pointer;
+}
+
+.large-checkbox-hover         { background-position: left 20%; }
+.large-checkbox-down          { background-position: left 40%; }
+.large-checkbox-checked       { background-position: left 60%; }
+.large-checkbox-checked-hover { background-position: left 80%; }
+.large-checkbox-checked-down  { background-position: left 100%; }

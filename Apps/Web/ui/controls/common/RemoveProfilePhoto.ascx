@@ -1,0 +1,3 @@
+<%@ Control Language="c#" AutoEventWireup="False" Codebehind="RemoveProfilePhoto.ascx.cs" Inherits="LinkMe.Web.UI.Controls.Common.RemoveProfilePhoto" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+<%@ Register TagPrefix="cc1" Namespace="LinkMe.WebControls" Assembly="LinkMe.WebControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6" %>
+<CC1:LinkMeOneClickButton id="btnRemove" text="Remove My Photo" runat="server" />

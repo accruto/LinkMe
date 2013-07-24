@@ -1,0 +1,4 @@
+sp_CreateOfferProvider.sql
+sp_CreateOfferCategory.sql
+sp_CreateOffering.sql
+

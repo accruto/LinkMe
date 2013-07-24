@@ -1,0 +1,64 @@
+﻿.login_ascx {}
+
+	.login_ascx .login-box {} 
+		.login_ascx .login-box-content {}
+		.login_ascx .login-box-bottom {}
+
+	.login_ascx .username_textbox_field {}
+		.login_ascx .username_textbox_control {}
+			.login_ascx .username_textbox {}
+			
+	.login_ascx fieldset .password_textbox_field {
+		padding-top: 3px;
+	}
+		.login_ascx .password_textbox_control {}
+			.login_ascx .password_textbox {}
+	
+
+	.login_ascx .layout_control {
+		margin-top: 10px;
+		width: 200px;
+	}
+	
+		.login_ascx .login_button_control {
+			float: right;
+		}		
+		
+		.login_ascx .sublayout_control {
+			float: left;
+			width: 125px;	/* IE6 needs this layout hint */
+		}
+		
+			.rememberme_checkbox_control {}
+				.rememberme_checkbox {}
+					.forms_v2 .rememberme_checkbox label {
+						font-size: 85%;
+					}
+			
+			.forms_v2 .forgotpassword_link_control {
+				margin-top: 3px;
+			}
+				.forgotpassword_link {
+					font-size: 85%;
+				}
+		
+	.login_ascx .textbox {
+		width: 198px;
+	}
+	
+	.login_ascx .login-join-links {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+/*	-----------------
+	sidebar variation
+	-----------------
+*/
+#sidebar {}
+	#sidebar .login_ascx .textbox {
+		width: 218px;
+	}
+	#sidebar .login_ascx .layout_control {
+		width: 220px;
+	}

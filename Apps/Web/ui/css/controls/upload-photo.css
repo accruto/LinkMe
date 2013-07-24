@@ -1,0 +1,82 @@
+.uploadphoto_ascx {}
+
+	.uploadphoto_ascx .member-photo-container {
+		border: 1px solid #D0D7E0;
+		float: left;
+	}
+	.uploadphoto_ascx .member-photo-container-inner {
+		border: 1px solid white;
+		background: #F0F2F4;
+		padding: 7px;
+		float: left;
+	}
+	.uploadphoto_ascx .member-photo {
+		border:1px solid white !important;
+	}
+		
+		.uploadphoto_ascx .photo-controls {
+			position: relative;	/* used for AP anchoring (of the browse-form) */
+			clear: left;
+		}
+		
+		.uploadphoto_ascx .photo-controls .action-list-holder {
+			padding-top: 4px;
+		}
+				.uploadphoto_ascx .upload-photo-action {
+					background: url(../../images/resume/icons/upload-photo.png)     left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1;
+				}
+				.uploadphoto_ascx .delete-action {
+					background: url(../../images/resume/icons/delete.png)       left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1;
+				}
+		.uploadphoto_ascx .photo-controls .browse-form {
+			position: absolute;
+			top: 0; left: 0;
+			border: 1px solid #A4B97F;
+			background: #FFC;
+			padding: 8px;
+			font-size: 85%;
+			float: left;
+			min-width: 160px;
+			z-index: 1;
+		}
+		* html .uploadphoto_ascx .photo-controls .browse-form {
+			width: 160px;	/* Shrink-wrap to the no-wrap */
+		}
+		
+			.uploadphoto_ascx .photo-controls .browse-form .no-file-selected {
+				white-space: nowrap;
+			}
+				.uploadphoto_ascx .photo-controls .browse-form .photo-input-container {
+					overflow: hidden;
+					width: 67px;
+					height: 22px;
+					background: transparent url(../../images/buttons/light/choose.png) top left no-repeat;
+				}
+				.uploadphoto_ascx .photo-controls .browse-form .photo-input-container:hover {
+					background-position: left -22px;
+				}
+					.uploadphoto_ascx .photo-controls .browse-form .photo-input-container .photo-input {
+						position: relative; /* Make clickable in IE despite filter */
+						-moz-opacity: 0;
+						filter:alpha(opacity: 0);
+						opacity: 0;
+						width: 67px;	/* Same as the button, this input is really just a click-zone */
+						height: 22px;
+						cursor: pointer;
+					}
+				html>/**/body .uploadphoto_ascx .photo-controls .browse-form .photo-input-container .photo-input, x:-moz-any-link {
+					text-indent: -150px;
+				}
+			
+			.uploadphoto_ascx .photo-controls .browse-form .button_action-list {
+				margin-top: 10px;
+				margin-bottom: 0;
+			}
+		.uploadphoto_ascx .photo-controls .uploading {
+			position: absolute;
+			top: 0; left: 0;
+			border: 1px solid #A4B97F;
+			background: #FFC url(../../images/universal/loading.gif) 8px center no-repeat;
+			padding: 10px 8px 10px 28px;
+			font-size: 85%;
+		}

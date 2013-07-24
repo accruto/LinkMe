@@ -1,0 +1,112 @@
+/* div#JobAd is the outer wrapper. This applies to all nested DIVs including
+   #JobDescription and the subsequent controls and links (unless overrideen) */
+#JobAd {
+} 
+
+/* div#JobDescription is where the job ad really begins
+   - it contains #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	border: 1px solid #000000;
+	margin: 0;
+	width: 458px;
+} 
+
+#JobDescription #Ad {
+	background: #FFFFFF url("wrigley_images/wrigley_side.gif") repeat-y left top;
+}
+
+#JobDescription #Ad div,
+#JobDescription #Ad p,
+#JobDescription #Ad ul,
+#JobDescription #Ad center {
+	margin-left: 140px;
+	margin-right: 15px;
+}
+
+#JobDescription #Ad p {
+	margin-bottom: 0; /* counteracts LinkMe text-links-headings.css */
+}
+#JobDescription #Ad br {
+	display: none;
+}
+#JobDescription #Ad div br,
+#JobDescription #Ad p br {
+	display: block;
+}
+
+/* Reset areas where client cannot inject html */
+/*#JobDescription #Ad #brandingLogo,*/
+#JobDescription #Ad #JobAdHeading,
+#JobDescription #Ad #JobAdHeading h1,
+#JobDescription #Ad #JobAdHeading p, 
+#JobDescription #Ad #JobAdHeading table,
+#JobDescription #Ad #JobAdHeading th, 
+#JobDescription #Ad #JobAdHeading td, 
+#JobDescription #Ad #JobAdHeading ul, 
+#JobDescription #Ad #JobAdHeading li, 
+#JobDescription #Ad #JobAdHeading label,
+#JobDescription #Ad #AdContactDetails,
+#JobAd #JobDescription #LogoFooter {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	padding: 0;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	display: none;
+}
+
+/* #JobAdHeading section */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	text-align: left;	
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #000000;
+	font-size: 200%;
+	font-weight: bolder;
+	line-height: 1.3em;
+	margin-bottom: 0em;
+	text-align: center;
+	padding: 0.5em;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	display: block; 
+	font-weight: bold; /* acts as sub-heading in the #JobAdHeading section */
+	margin-bottom: 1em;
+	margin-left: -10.6em;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table {
+	margin-bottom: 1em;
+	width: 80% !important;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading ul li {
+	margin-left: -10em;	
+}
+
+#JobAd #JobDescription #Ad center {
+	margin-bottom: 1em;
+}
+
+/* AdContactDetails just before the #LogoFooter */
+#JobAd #JobDescription #Ad #AdContactDetails {
+	background: #FFFFFF url("wrigley_images/wrigley_globe.gif") no-repeat center top;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	text-align: left;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	display: none;
+}

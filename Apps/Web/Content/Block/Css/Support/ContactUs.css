@@ -1,0 +1,122 @@
+.overlay.contactus div, .overlay.contactus label {
+	float : left;
+}
+.overlay.contactus .dropdown-item {
+	float : none;
+	text-align : left;
+}
+.contactus-dialog.ui-widget {
+	font : Bold 12px Arial;
+}
+.contactus-dialog.ui-dialog.ui-widget-content {
+	padding : 0;
+	border : 1px solid #B8BBBD;
+	color : #333333;
+}
+.contactus-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.ui-dialog .overlay.contactus.ui-dialog-content.ui-widget-content {
+	overflow : hidden;
+	padding : 0;
+	color : #333333;
+	background-color : #F4F4F4;
+}
+.overlay.contactus > .title {
+	background-image : url("../../images/support/contactus/title-bg.png");
+	width : 609px;
+	height : 24px;
+	font : Bold 12px Arial;
+	text-align : left;
+	padding : 6px 0px 0px 9px;
+}
+.overlay.contactus .section {
+	width : 619px;
+	margin-top : 15px;
+	clear : none;
+}
+.overlay.contactus .section.bymail, .overlay.contactus .section.byphone {
+	width : 309px;
+}
+.overlay.contactus .section .titlebar {
+	width : 609px;
+	margin-bottom : 15px;
+}
+.overlay.contactus .section .titlebar .title {
+	font : Bold 14px Arial;
+}
+.overlay.contactus .section .titlebar .icon {
+	width : 13px;
+	height : 13px;
+	margin : 2px 5px 0px 9px;
+}
+.overlay.contactus .section.byemail .titlebar .icon {
+	background-image : url("../../images/support/contactus/icons/by-email.png");
+}
+.overlay.contactus .section.bymail .titlebar .icon {
+	background-image : url("../../images/support/contactus/icons/by-mail.png");
+}
+.overlay.contactus .section.byphone .titlebar .icon {
+	background-image : url("../../images/support/contactus/icons/by-phone.png");
+}
+.overlay.contactus .section.byemail .divider {
+	width : 619px;
+	height : 1px;
+	background-color : #D9D9D9;
+}
+.overlay.contactus .section.byemail .divider.light {
+	background-color : #FFFFFF;
+}
+.overlay.contactus .section .detail .title {
+	width : 309px;
+	margin-left : 10px;
+	text-align : left;
+}
+.overlay.contactus .section .detail .desc {
+	font-weight : normal;
+	margin : 0px 10px 0px 10px;
+	text-align : left;
+	line-height : 18px;
+}
+.overlay.contactus .section.bymail .detail .desc {
+	margin-left : 20px;
+}
+.overlay.contactus .section.byemail .field {
+	width : 530px;
+	margin-bottom : 10px;
+}
+.overlay.contactus .section.byemail .field label {
+	width : 120px;
+	margin : 5px 0px 0px 10px;
+}
+.overlay.contactus .section.byemail .field label[for='PhoneNumber'], body.IE7 .overlay.contactus .section.byemail .field.phone_textbox_field label {
+	width : 135px;
+}
+.overlay.contactus .section.byemail .field .mandatory {
+	margin-right : 5px;
+}
+.overlay.contactus .section.byemail .field.dropdown_field .mandatory {
+	margin-right : 7px;
+}
+.overlay.contactus .section.byemail .field.textbox_field .textbox_control .bg {
+	width : 361px;
+}
+.ui-widget .overlay.contactus .section.byemail .field.textbox_field input, .ui-widget .overlay.contactus .section.byemail .field.dropdown_field .control .dropdown input[type='text'] {
+	width : 360px;
+	font : 12px Arial;
+}
+.overlay.contactus .section.byemail .dropdown_field .control {
+	width : 371px;
+}
+.overlay.contactus .section.byemail .dropdown_field .bg {
+	width : 361px;
+}
+.overlay.contactus .section.byemail #Message {
+	height : 115px;
+}
+.overlay.contactus .section.byemail .buttons {
+	margin : -7px 0px 10px 136px;
+}
+body.IE7 .overlay.contactus .section.byemail .buttons {
+	margin-top : 0px;
+}

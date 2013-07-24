@@ -1,0 +1,13 @@
+/* CSS Document */
+.included {
+	background-image:none;
+}
+.included span {
+	visibility:visible;
+}
+.excluded span {
+	visibility:visible;
+}
+.excluded {
+	background-image:none;
+}

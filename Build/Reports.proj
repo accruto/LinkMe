@@ -1,0 +1,42 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="DevBuild">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <ReportServer Condition=" '$(DatabaseServer)' == '' ">http://localhost/ReportServer</ReportServer>
+  </PropertyGroup>
+
+  <!-- Build properties. -->
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <ReportServerUrl>$(ReportServer)/reportservice2005.asmx</ReportServerUrl>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Item groups. -->
+
+  <ItemGroup>
+    <ReportProjects Include="..\Apps\Build\Reports.proj" />
+  </ItemGroup>
+
+  <!-- Deploy -->
+
+  <Target Name="Deploy">
+<!--
+    <MSBuild Projects="@(ReportProjects)" Targets="Deploy" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform);ReportServerUrl=$(ReportServerUrl)" />
+-->    
+  </Target>
+
+</Project>

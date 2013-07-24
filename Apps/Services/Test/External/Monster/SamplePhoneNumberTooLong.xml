@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Body>
+      <QueriesResponse xmlns="http://schemas.monster.com/Monster">
+        <Jobs>
+          <Job allowExpiredUpdates="false" inventoryType="transactional" enforceUniqueness="true" jobComplete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <RecruiterReference userId="191402428">
+              <UserName>terryforsyth</UserName>
+              <PersonName>
+                <GivenName>Terry</GivenName>
+                <FamilyName>Forsyth</FamilyName>
+              </PersonName>
+              <EmailAddress>info@mrmechanic.com.au</EmailAddress>
+            </RecruiterReference>
+            <CompanyReference companyId="23911503">
+              <CompanyXCode>xw191402428wx</CompanyXCode>
+              <CompanyName>Mr Mechanic Mobile Mechanics</CompanyName>
+            </CompanyReference>
+            <FolderReference folderId="129139755">
+              <FolderName>Mechanic (Brisbane)</FolderName>
+            </FolderReference>
+            <Channel monsterId="168" />
+            <JobInformation>
+              <JobTitle>Mechanic</JobTitle>
+              <JobShortDescription />
+              <JobType monsterId="1">Employee</JobType>
+              <JobStatus monsterId="4">Fulltime</JobStatus>
+              <IsHandinamic>false</IsHandinamic>
+              <ProDiversity>false</ProDiversity>
+              <Replacement>false</Replacement>
+              <Salary>
+                <Currency monsterId="4">AUD</Currency>
+                <SalaryMin>28</SalaryMin>
+                <SalaryMax>33</SalaryMax>
+                <CompensationType monsterId="2">Per Hour</CompensationType>
+              </Salary>
+              <Contact hideAll="false" hideAddress="false" hideStreetAddress="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="false" hideCompanyName="false" hideEmailAddress="false" hideFax="true" hideName="true" hidePhone="false" hideStreetAddress2="true">
+                <CompanyName>Mr Mechanic Mobile Mechanics</CompanyName>
+                <Address />
+                <Phones>
+                  <Phone phoneType="contact">3298-5533 or 0412528584</Phone>
+                </Phones>
+                <E-mail>info@mrmechanic.com.au</E-mail>
+              </Contact>
+              <PhysicalAddress>
+                <StreetAddress />
+                <StreetAddress2 />
+                <City>Brisbane</City>
+                <State>QLD</State>
+                <CountryCode>AU</CountryCode>
+                <PostalCode>4000</PostalCode>
+              </PhysicalAddress>
+              <DisableApplyOnline>false</DisableApplyOnline>
+              <HideCompanyInfo>false</HideCompanyInfo>
+              <DisableFilters>false</DisableFilters>
+              <JobBody>&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;We are seeking a Fully Qualified and Experienced Motor Mechanic &amp;nbsp;to join our team of Mobile Mechanics.&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;RWC Examiner licence an advantage&amp;nbsp;or willing to&amp;nbsp;become&amp;nbsp;licenced.&lt;br&gt;&amp;nbsp;&lt;br&gt;The applicant needs to have a high standard of work and experience on Australian vehicles.&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;Optional overtime.&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;If you are:&lt;/div&gt;&lt;ul style="PADDING-BOTTOM: 0px; WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); LIST-STYLE-TYPE: none; TEXT-INDENT: 0px; MARGIN: 8px 0px 9px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; PADDING-TOP: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="x_ULInsideAd"&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Reliable&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Have an Unrestricted Drivers Licience&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Been qualified for at least 4 years&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Self motivated&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Neat and tidy&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Can work un-supervised&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Enjoy meeting people&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Looking to get out of that workshop&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;After Job Security&lt;/li&gt;&lt;li style="LIST-STYLE-TYPE: disc; MARGIN-LEFT: 14px"&gt;Want to earn decent money for your efforts&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;We want to talk to you !&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;Be recognised and rewarded for your efforts.&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;37.50&amp;nbsp; hour week plus optional O/T&lt;br&gt;&amp;nbsp;&lt;font class="Apple-converted-space"&gt;&amp;nbsp;&lt;/font&gt;&lt;br&gt;A fully equip van is supplied which you take home at nights.&lt;br&gt;&amp;nbsp;&lt;br&gt;The position is Brisbane&amp;nbsp;&lt;font class="Apple-converted-space"&gt;&amp;nbsp;&lt;/font&gt;&lt;b style="FONT-WEIGHT: bold"&gt;North or South-side&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&amp;nbsp;&lt;/div&gt;&lt;div style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(26,26,26); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;This is&amp;nbsp;a secure job for the right person. &lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;We have been operating for 18 years&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;This is NOT a franchise/contract position. You are employed by Mr Mechanic and&amp;nbsp;get paid every week.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;* Australian residents only thanks.&lt;br&gt;&lt;font style="FONT-SIZE: 13px"&gt;&lt;font style="widows: 2; text-transform: none; background-color: rgb(255, 255, 255); text-indent: 0px; display: inline ! important; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: normal; font-size-adjust: none; font-stretch: normal; -moz-font-feature-settings: normal; -moz-font-language-override: normal; white-space: normal; orphans: 2; float: none; letter-spacing: normal; word-spacing: 0px;" color="#000000" face="Helvetica,Arial,sans-serif"&gt;&lt;br&gt;Contact Terry&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;font style="widows: 2; text-transform: none; background-color: rgb(255, 255, 255); text-indent: 0px; display: inline ! important; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: normal; font-size-adjust: none; font-stretch: normal; -moz-font-feature-settings: normal; -moz-font-language-override: normal; white-space: normal; orphans: 2; float: none; letter-spacing: normal; word-spacing: 0px;" color="#000000" face="Helvetica,Arial,sans-serif"&gt;Phone (07) 3298 5533&lt;font class="Apple-converted-space"&gt;&amp;nbsp;&lt;/font&gt;&lt;/font&gt;&lt;br style="WIDOWS: 2; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 11px Helvetica, Arial, sans-serif; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"&gt;&lt;font style="widows: 2; text-transform: none; background-color: rgb(255, 255, 255); text-indent: 0px; display: inline ! important; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: normal; font-size-adjust: none; font-stretch: normal; -moz-font-feature-settings: normal; -moz-font-language-override: normal; white-space: normal; orphans: 2; float: none; letter-spacing: normal; word-spacing: 0px;" color="#000000" face="Helvetica,Arial,sans-serif"&gt;Mobile 0412 528 584&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;</JobBody>
+              <EducationLevel monsterId="12">Some High School Coursework</EducationLevel>
+              <YearsOfExperience monsterId="5">7+ to 10 Years</YearsOfExperience>
+              <JobSourceId monsterId="6" />
+              <CustomApplyOnlineURL>http://my.monster.com/applyStart.asp?jobid=118254914</CustomApplyOnlineURL>
+            </JobInformation>
+            <JobPostings>
+              <JobPosting jobPostingState="active" bold="true" desiredDuration="30" postingId="118254914">
+                <InventoryPreference>
+                  <Autorefresh desired="true">
+                    <Frequency>7</Frequency>
+                  </Autorefresh>
+                </InventoryPreference>
+                <RecruiterReference userId="191402428">
+                  <UserName>terryforsyth</UserName>
+                  <PersonName>
+                    <GivenName>Terry</GivenName>
+                    <FamilyName>Forsyth</FamilyName>
+                  </PersonName>
+                  <EmailAddress>info@mrmechanic.com.au</EmailAddress>
+                </RecruiterReference>
+                <Location locationId="132">
+                  <City>Brisbane</City>
+                  <State>QLD</State>
+                  <CountryCode>AU</CountryCode>
+                </Location>
+                <Locations>
+                  <Location locationId="132">
+                    <City>Brisbane</City>
+                    <State>QLD</State>
+                    <CountryCode>AU</CountryCode>
+                  </Location>
+                </Locations>
+                <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+                <JobCategories>
+                  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+                </JobCategories>
+                <JobOccupations>
+                  <JobOccupation categoryId="553" monsterId="12000">
+                    <Name>Vehicle Repair and Maintenance</Name>
+                  </JobOccupation>
+                </JobOccupations>
+                <JobCity>Brisbane</JobCity>
+                <BoardName monsterId="1">Monster</BoardName>
+                <JobPostingDates>
+                  <JobPostDate>2013-01-16T17:59:12.6030000-05:00</JobPostDate>
+                  <JobActiveDate>2013-01-16T17:59:12.9200000-05:00</JobActiveDate>
+                  <JobExpireDate>2013-02-15T17:59:12.9200000-05:00</JobExpireDate>
+                  <JobModifiedDate>2013-01-16T17:59:00.0000000-05:00</JobModifiedDate>
+                </JobPostingDates>
+                <PostingStats increment="false">
+                  <Views>8</Views>
+                  <SeekerApps>0</SeekerApps>
+                  <EmailApps>0</EmailApps>
+                  <TotalClicks>0</TotalClicks>
+                </PostingStats>
+                <ApplyOnlineURL>http://my.monster.com/applyStart.asp?jobid=118254914</ApplyOnlineURL>
+                <PhysicalAddress>
+                  <StreetAddress />
+                  <StreetAddress2 />
+                  <City>Brisbane</City>
+                  <State>QLD</State>
+                  <CountryCode>AU</CountryCode>
+                  <PostalCode>4000</PostalCode>
+                </PhysicalAddress>
+                <DisplayTemplate monsterId="12438" />
+                <Industries>
+                  <Industry>
+                    <IndustryName monsterId="7">Automotive and Parts Mfg</IndustryName>
+                  </Industry>
+                </Industries>
+              </JobPosting>
+            </JobPostings>
+          </Job>
+        </Jobs>
+      </QueriesResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

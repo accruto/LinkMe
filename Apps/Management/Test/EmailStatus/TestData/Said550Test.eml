@@ -1,0 +1,319 @@
+Received: by ns1.linkme.net.au (Postfix)
+	id F3E075D261; Fri, 22 Aug 2008 11:05:10 +1000 (EST)
+Date: Fri, 22 Aug 2008 11:05:10 +1000 (EST)
+From: MAILER-DAEMON@ns1.linkme.net.au (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: emailme@linkme.net.au
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="0DFDD61534.1219367110/ns1.linkme.net.au"
+Content-Transfer-Encoding: 8bit
+Message-Id: <20080822010510.F3E075D261@ns1.linkme.net.au>
+
+This is a MIME-encapsulated message.
+
+--0DFDD61534.1219367110/ns1.linkme.net.au
+Content-Description: Notification
+Content-Type: text/plain
+
+This is the Postfix program at host ns1.linkme.net.au.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to <postmaster>
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+			The Postfix program
+
+<suzanne.douglas7@ntlworld.com>: host smtpin.ntlworld.com[81.103.221.10] said:
+    550 Invalid recipient: <suzanne.douglas7@ntlworld.com> (in reply to RCPT TO
+    command)
+
+--0DFDD61534.1219367110/ns1.linkme.net.au
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; ns1.linkme.net.au
+X-Postfix-Queue-ID: 0DFDD61534
+X-Postfix-Sender: rfc822; emailme@linkme.net.au
+Arrival-Date: Fri, 22 Aug 2008 11:00:38 +1000 (EST)
+
+Final-Recipient: rfc822; suzanne.douglas7@ntlworld.com
+Action: failed
+Status: 5.0.0
+Diagnostic-Code: X-Postfix; host smtpin.ntlworld.com[81.103.221.10] said: 550
+    Invalid recipient: <suzanne.douglas7@ntlworld.com> (in reply to RCPT TO
+    command)
+
+--0DFDD61534.1219367110/ns1.linkme.net.au
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+
+Received: by ns1.linkme.net.au (Postfix, from userid 1056)
+	id 0DFDD61534; Fri, 22 Aug 2008 11:00:38 +1000 (EST)
+To: suzanne.douglas7@ntlworld.com
+Subject: LinkMe Newsletter - Politically savvy or saboteur?
+From: LinkMe <EmailMe@linkme.net.au>
+Reply-To: LinkMe <EmailMe@linkme.net.au>
+Message-ID: <1219366838TheSystem@>
+X-Mailer: PHP v5.2.5
+X-emailme: WAgBDBgMDAMJFV5VCkQCAAcIUgEJQw1YX1VZEFlSAAsbVlJQVFEFBlRWVQQDVgRSAgRWV1pQUlBXV1NaAFRQU1gQCEs=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="10a44716b1c1dfa868a2ac8a4b209c7d"
+Date: Fri, 22 Aug 2008 11:00:38 +1000 (EST)
+
+
+--10a44716b1c1dfa868a2ac8a4b209c7d
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>LinkMe Newsletter - Politically savvy or saboteur?</title>
+<style type="text/css">
+<!--
+.red {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+</head>
+<body>
+  <center>If you can't read this click <a href='http://emailme.linkme.net.au/view.php?tag=WAgBDBgMDAMJFV5VCkQCAAcIUgEJQw1YX1VZEFlSAAsbVlJQVFEFBlRWVQQDVgRSAgRWV1pQUlBXV1NaAFRQU1gQCEs='>here</a> or cut and paste the url.</center>
+<div align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+    <table width="620" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="177" align="left" valign="top" background="http://marketing.linkme.com.au/newsletter/issues/20080822/sidebar_bg.gif"><br />
+          <div align="center"><a href="http://emailme.linkme.net.au/url.php?url=053cafca66a4dcb41fc90adfa2737c86cdaf7435f01f305b745bb1da2319c5bba"><img src="http://marketing.linkme.com.au/20080808/100k_or_ipod_touch.png" width="150" height="107" style="border: none"/></a></div>
+            <table width="177" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="10">&nbsp;</td>
+                <td width="157"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; padding-top: 0px; padding-bottom: 8px; margin:0;">More chances<br />
+                	to <a href="http://emailme.linkme.net.au/url.php?url=053cafca66a4dcb41fc90adfa2737c86cdaf7435f01f305b745bb1da2319c5bba">WIN $100,000</a>!</div>
+                  <table width="157" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="13" valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;</div></td>
+                      <td width="144" valign="top">                        <div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0650a80836c4dd8905003847fc8aaced9daf7435f01f305b745bb1da2319c5bba">Upload your resume</a><br />
+                      = 3 chances to win</div></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                      </div></td>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;"><span style="padding-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=0650a80836c4dd8905003847fc8aaced9daf7435f01f305b745bb1da2319c5bba">Update your resume</a><br />
+= 3  chances to win</span></div></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                      </div></td>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;"><span style="padding-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=0a5b7a3b4803c518733c757b37b138d38daf7435f01f305b745bb1da2319c5bba">Invite a friend</a><br />
+= 1 extra chance</span></div></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                      </div></td>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;"><span style="padding-bottom: 5px"><a href="http://emailme.linkme.net.au/url.php?url=0a5b7a3b4803c518733c757b37b138d38daf7435f01f305b745bb1da2319c5bba">Invite multiple friends</a><br />
+= multiple extra chances</span></div></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                      </div></td>
+                      <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">                        <a href="http://emailme.linkme.net.au/url.php?url=0cae24e15a0c1e87f0f97561c24d85840daf7435f01f305b745bb1da2319c5bba">Accept invite</a><br />
+                        = 1 extra chance</div></td>
+                    </tr>
+                  </table>
+                  <div align="right" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 15px; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=053cafca66a4dcb41fc90adfa2737c86cdaf7435f01f305b745bb1da2319c5bba">Read More</a></div>
+           		  <div style="padding-top: 8px; padding-bottom: 8px;"><img src="http://marketing.linkme.com.au/newsletter/issues/20080822/naveen-deepa.jpg" alt="Naveen &amp; Deepa" name="marketing2" width="150" height="120" border="0" id="marketing2" /></div>
+           		   <div style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; padding-top: 8px; padding-bottom: 8px;">Naveen &amp; Deepa's success story</div>
+               	  <div style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px;">&quot;Our luck changed when we joined LinkMe...&quot;</div>
+           	    <div align="right" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 0px;"><a href="http://emailme.linkme.net.au/url.php?url=00e78359a4cc103863a18eb8c6fa97b1cdaf7435f01f305b745bb1da2319c5bba">Read More</a></div></td>
+                <td width="10">&nbsp;</td>
+              </tr>
+              </table>
+<div align="center" style="padding-top: 15px">
+              	<div align="center" style="font-size: 8.5pt; padding: 0; padding-top: 0px; padding-bottom: 6px; color: #888">Sponsored Link</div>
+              	<a href="http://emailme.linkme.net.au/url.php?url=0f27c2080bc0bba8dcde8e1b993ce3a7adaf7435f01f305b745bb1da2319c5bba"><img src="http://marketing.linkme.com.au/need_work_visaB.gif" name="marketing2" width="150" height="150" border="0" /></a>
+              </div></td>
+        <td width="443" align="left" valign="top" background="http://marketing.linkme.com.au/newsletter/issues/20080822/content_bg.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="163" background="http://marketing.linkme.com.au/newsletter/issues/20080822/header_1.png">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="40" align="left" valign="top" style="padding-left: 30px; color: #FFF;" background="http://marketing.linkme.com.au/newsletter/issues/20080822/header_2.png"><div style="padding: 0; font-size: 9pt">Connecting with Steve Coulson</div></td>
+          </tr>
+          </table>
+          	<table width="443" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+				<td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+           	<td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Politically savvy or saboteur?</div></td>
+           	  </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; padding-top: 10px; padding-bottom: 10px; margin: 0px;">How not to stymie your career</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Do you engage in politics at work or are you just politically savvy?  Politics at work can destroy a career, but avoiding it or taking an apolitical stance can equally be bad.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">To navigate the complex maze within organisations you&rsquo;ll need to become politically savvy.</div>
+              <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0f959358642717e0b0039aa0bfd77696ddaf7435f01f305b745bb1da2319c5bba">Read our tips to accelerate your political savviness</a></div></td>
+            </tr>
+            <tr>
+				<td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+           	  <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Guaranteed 1st interview question, but...</div></td>
+           	  </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; padding-top: 10px; padding-bottom: 10px; margin: 0px;">Will you be able to handle it?</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">You know you&rsquo;re going to be asked this question at interview and yet when it comes around you freeze and don&rsquo;t know where to start or how much information to give away.</div>
+              <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0px;"><a href="http://emailme.linkme.net.au/url.php?url=0b61d8e5d07229e63dff5b264ca44ca94daf7435f01f305b745bb1da2319c5bba">Find out the question and never have this happen to you again</a></div></td>
+            </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 15pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Got an interview question that stumps you?</div></td>
+            </tr>
+            <tr>
+				<td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+            	<td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0px;">Why trawl through  pages and pages of interview questions and responses many of which are  irrelevant to you and your situation?</div>
+           	  <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0882750fa11a6ace5262a44a1ad104ca5daf7435f01f305b745bb1da2319c5bba">Have your say</a> and we&rsquo;ll feature the ideal response in our  newsletter.</div></td>
+           	  </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Did you know?</div></td>
+            </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Twice as many* LinkMe members successfully <strong>secured</strong> their dream job through our resume database than from the job board!</div>
+              <div style="padding-top: 8px; padding-bottom: 8px; font-size: 8pt; margin: 0;"> *Source Member Satisfaction Survey, July 2008</div>
+              <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0e970dc76c468c6d2422ad1846cf24078daf7435f01f305b745bb1da2319c5bba">Upload/update your resume now to get your dream job</a></div></td>
+            </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Noticed the changes on our homepage?</div></td>
+            </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 17px; padding-bottom: 20px; font-size: 8.5pt; float: right; padding-left: 10px; text-align: right; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0075ecb562426e6ce64930a5f4c832a68daf7435f01f305b745bb1da2319c5bba"><img src="http://marketing.linkme.com.au/newsletter/issues/20080822/linkme_survey_block.png" width="150" height="104" border="0"/></a></div>
+              <div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Is LinkMe's new homepage better than before?</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0075ecb562426e6ce64930a5f4c832a68daf7435f01f305b745bb1da2319c5bba"> Vote on the LinkMe survey</a></div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Celebrate your LinkMe success</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Celebrate your own success by telling us about it - we would <a href="mailto:marketing@linkme.com.au?subject=LinkMe Success Story">love to hear from you</a>! We'll even <strong>give you a surprise gift to celebrate your success</strong>*.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=00432c344560e37d5afa7c3610ca6931bdaf7435f01f305b745bb1da2319c5bba">
+                Read recent success stories from other LinkMe members</a></div>
+                <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">*Success will need to be proven to qualify for the surprise gift. Members need to reside and work in Australia.</div>
+                <div align="center" style="font-size: 8.5pt; padding: 0; padding-bottom: 6px; color: #888; margin: 0;">Sponsored Link</div>
+              <div align="center" style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt;"><a href="http://emailme.linkme.net.au/url.php?url=07ee31458dfc694a6931d9717cf5fa49ddaf7435f01f305b745bb1da2319c5bba"><img src="http://marketing.linkme.com.au/20080722/girlsweekendaway.jpg" width="220" height="60" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Stay in touch with LinkMe</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Find out what your friends and colleagues are up to in their careers' with our new &lsquo;What's Happening&rsquo; feature. Build stronger, more effective connections by keeping up to date with the people in your network and their current work situation.&nbsp; You should also use their networks to identify opportunities for your career.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">&nbsp; <img src="http://marketing.linkme.com.au/whats-happening.gif" alt="LinkMe website - &quot;What's happening with my friends" width="400" height="485" /></div>
+                <table width="413" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="16" valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;</div></td>
+                    <td width="397" valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">Identify networking opportunities among your connections </div></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                    </div></td>
+                    <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">Help friends and past or present colleagues find jobs and grow their networks </div></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">&#8226;<br />
+                    </div></td>
+                    <td valign="top"><div style="padding-top: 2px; padding-bottom: 2px; font-size: 8.5pt; margin: 0;">Find out about new companies your friends are working for </div></td>
+                  </tr>
+                </table>
+                <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=049fb3f34d35426177c3f448341b4954adaf7435f01f305b745bb1da2319c5bba">Log in now to see what's happening with your network</a></div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Fancy a change of scene?</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Have you got an itch to uproot and change locations for work? Maybe you need to be closer to family or want a change of scene? Now you can let employers know where you would consider moving to for work in Australia or a variety of international locations by updating your Desired Job details.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Simply <a href="http://emailme.linkme.net.au/url.php?url=049fb3f34d35426177c3f448341b4954adaf7435f01f305b745bb1da2319c5bba">log in to your LinkMe account</a> and go to your resume and select to edit the Desired Job section.</div>
+              <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;">Select multiple states, cities, regions or countries to be found for opportunities in your specified locations. </div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Get jobs emailed to you</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Create job alerts and have jobs delivered straight to your inbox as they are posted by employers and recruiters.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">                  <a href="http://emailme.linkme.net.au/url.php?url=049fb3f34d35426177c3f448341b4954adaf7435f01f305b745bb1da2319c5bba">Just login</a>, run a job search and create your job alert.</div>
+                <div align="center" style="font-size: 8.5pt; padding: 0; padding-top: 6px; padding-bottom: 6px; color: #888; margin: 0;">Sponsored Link</div>
+              <div align="center" style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=0324567c7483cbc254b1d3637923df3afdaf7435f01f305b745bb1da2319c5bba"><img src="http://marketing.linkme.com.au/newsletter/issues/20080822/brandleaders_ad.jpg" alt="BrandLeaders: Tell us about your *ultimate doughnut!*" width="413" height="113" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">We're here to help</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="padding-top: 15px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">Following the complete overhaul of the LinkMe site, there have been a couple of glitches that we should let you know about.</div>
+              <div style="padding-top: 0px; padding-bottom: 8px; font-size: 8.5pt; margin: 0;">If you're <b>experiencing any problems logging in to your LinkMe account</b>, we may need to reactivate your account. Please contact us to have this issue resolved.</div>
+              <div style="padding-top: 8px; padding-bottom: 30px; font-size: 8.5pt; margin: 0;"> If you've <b>forgotten your password</b> and have had a new one automatically generated and sent to you by LinkMe, it's fine to cut and paste this when you attempt to login. However, please note that <b>passwords are both case and space sensitive</b>.</div></td>
+            </tr>
+            <tr>
+              <td width="30" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg.png">&nbsp;</td>
+              <td width="413" background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_bg_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: normal; color: #037394; padding: 8px 0 8px 0; margin: 0;">Need a new job?</div></td>
+            </tr>
+            <tr>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline.png">&nbsp;</td>
+              <td background="http://marketing.linkme.com.au/newsletter/issues/20080822/heading_underline_noedge.png"><div style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; padding-top: 15px; padding-bottom: 8px; margin: 0;">Find one here!</div>
+          <form action="http://www.linkme.com.au/ui/unregistered/JobSearchForm.aspx" method="get" name="linkmeJobSearch" target="_blank" id="linkmeJobSearch" style="margin: 0;">
+        <table width="100%" bgcolor="#DFE5E6" style="background: #F4F1F0; border: 1px solid #DAE2EB; padding: 0;">
+                      <tr>
+                        <td><div style="font-size: 8.5pt; margin: 0;"><strong>Keywords</strong></div></td>
+                        <td><div style="font-size: 8.5pt; margin: 0;"><strong>Location</strong></div></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><input id="txtKeywords" type="text" value="" name="Keywords" maxlength="265" /></td>
+                        <td><input id="txtLocality" type="text" value="" name="Locality" maxlength="100" /></td>
+                        <td><input id="btnSearchJobs" type="submit" value="Find Jobs" name="btnSearchJobs" />
+                            <input value="True" type="hidden" id="hidden1" name="performSearch" /></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td><div style="font-size: 8.5pt; margin: 0;">e.g.: Armadale, VIC</div></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" align="center"><div style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px; margin: 0;">If this form does not work for you, <a href="http://emailme.linkme.net.au/url.php?url=0eb0267c99fcfeef37f5844c10eb1c261daf7435f01f305b745bb1da2319c5bba">search for jobs at LinkMe</a></div></td>
+                      </tr>
+                    </table></form><div align="center" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=030486a8d3ca4047bb015d4a365ed62e7daf7435f01f305b745bb1da2319c5bba">Get help with using LinkMe's job search</a></div>
+                <div align="center" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px; margin: 0;"><a href="http://emailme.linkme.net.au/url.php?url=00f444eadd3b38d623c091f69dbf2603bdaf7435f01f305b745bb1da2319c5bba">Terms of Use</a> | <a href="http://emailme.linkme.net.au/url.php?url=012d188c34186a4afc49dc5462b588945daf7435f01f305b745bb1da2319c5bba">Privacy Statement</a></div>
+                <div align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal; color: #275363; margin: 0;">Powered by email<img src="http://emailme.linkme.net.au/logo.php?id=WAgBDBgMDAMJFV5VCkQCAAcIUgEJQw1YX1VZEFlSAAsbVlJQVFEFBlRWVQQDVgRSAgRWV1pQUlBXV1NaAFRQU1gQCEs=" alt="me" width="24" height="12" border="0" /></div>
+                <div align="center" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px; margin: 0;">Click to <a href='http://emailme.linkme.net.au/bye.php?id=daf7435f01f305b745bb1da2319c5bba'>unsubscribe</a> from future LinkMe communications.</div>
+              <div align="center" style="font-size: 8.5pt; padding-top: 8px; padding-bottom: 8px; margin: 0;">Copyright &copy; 2008 LinkMe Pty Ltd</div></td>
+            </tr>
+        </table></td>
+      </tr>
+        </table>
+</div>
+</body>
+</html>
+
+--10a44716b1c1dfa868a2ac8a4b209c7d--
+
+
+
+--0DFDD61534.1219367110/ns1.linkme.net.au--

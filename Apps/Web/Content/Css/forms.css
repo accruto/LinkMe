@@ -1,0 +1,1019 @@
+/* THIS SHEET DEFINES ALL STYLES USE FOR FORMS */
+
+form {
+	margin: 0;
+}
+
+/* ------- Search Recovery -------*/
+
+.search-recovery
+{
+	background:url(../images/universal/summary_bg.png) repeat-x;	
+	margin-right:20px;
+	border:1px solid #DAE2EB;
+	margin-bottom: 15px;
+}
+
+.recovery-title
+{
+	font-family:Arial;
+	font-size:16px;
+	color:#366696;
+}
+
+/* ------- Inputs -------*/
+
+textarea
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+select
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+	width:210px;
+}
+
+/* ------- Labels -------*/
+
+label
+{
+	text-align:left;
+	color:#333;
+	font-size:12px;
+	margin-left:3px;
+	margin-right:10px;
+	font-family:Verdana;
+	font-weight:bold;
+}
+
+.small-form-label
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+	font-family:Verdana;
+	_position: relative;
+	_z-index: 1;
+}
+
+.compulsory-small-form-label
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+	background-image:url(../images/universal/compulsory-star.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	padding-right:7px;
+	font-family:Verdana;
+}
+
+.generic-form-input,
+.dropdown-form-input,
+.find-friends-input,
+.global-search-input,
+.industry-list,
+.salary-input,
+.job-type-list,
+.within-distance,
+.login-input,
+.small-salary-input
+{
+	width:200px;
+	height:20px;
+	font-size:14px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+#page._Employer .generic-form-input {
+    width: 35em;
+}
+
+select.dropdown-form-input
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 28px;
+}
+
+.find-friends-input
+{
+	width:240px;
+}
+
+.global-search-input
+{
+	width: 140px;
+}
+
+#join-form-holder td
+{
+	padding-bottom:7px;
+}
+
+.small-form-input
+{
+	width:160px;
+	height:23px;
+	font-size:16px;
+	padding-top:4px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Verdana;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+.wide-form-input, .email-text-area
+{
+	width:400px;
+	height:23px;
+	font-size:16px;
+	padding-top:4px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+.email-label
+{
+}
+
+.email-label-right
+{
+	position:relative;
+	left:312px;
+}
+
+.email-preamble
+{
+	width:430px;
+}
+
+.email-addressbook-box
+{
+	width:200px;
+}
+
+.email-addressbook-results
+{
+	border:1px solid #A4B97F;
+	padding:5px;
+	width:600px;
+	table-layout:fixed;
+	overflow:scroll;
+	padding-top:4px;
+	padding-bottom:3px;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:600;
+	color:#444444;
+}
+
+.email-invite-box
+{
+	width:428px;
+	height:80px;
+}
+
+.email-text-area
+{
+	height:170px;
+}
+
+.industry-list
+{
+	width:300px;
+	height:150px;
+}
+
+.industry-dropdownlist
+{
+	font-size:16px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+	width:208px;
+}
+
+.job-type-list
+{
+	height:110px;
+}
+
+.title
+{
+}
+
+.login-input
+{
+	width:210px;
+	font-size:16px;
+	padding-left:3px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+	float:right;
+}
+
+/* ------- Post Job Ad -------*/
+
+.job-ad-section-title
+{
+	background:url(../images/employer/post-job-ad-title.png) no-repeat;
+	padding-left:25px;
+	height:30px;
+	font-family:"arial";
+	font-size:15px;
+	font-weight:bold;
+	color:#366696;
+	padding-top:3px;
+	margin-top:9px;
+}
+
+.small-text-area
+{
+	width:100%;
+	height:80px;
+	padding-left:6px;
+	padding-top:6px;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+.large-text-area
+{
+	width:100%;
+	height:150px;
+	padding-left:6px;
+	padding-top:6px;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+#info-message .purchase {
+	font-weight : normal;
+}
+
+/* ------- LOGIN BOX -------*/
+
+.remember-me {
+    font-size:10pt;
+    color:#666666;
+    margin: 2pt 0;
+}
+
+.compulsory {
+	background-image:url(../images/universal/compulsory-star.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	padding-right:7px;
+}
+
+/* ------- BUTTONS -------*/
+
+.action
+{
+	text-align:right;
+	margin-right:40px;
+}
+
+.affordance-link-button /* MF (2009-03-06): This style magically satisfies the */
+{						/* LinksAndCSSClass test for .affordance-link (!!)     */
+	background:url(../images/universal/affordance-link-arrow.png) left no-repeat;
+	padding-left:11px;
+	margin:2px;
+	border:none;
+}
+
+.button,
+.ok-button,
+.accept-button,
+.apply-for-job-button,
+.back-button,
+.cancel-button,
+.skip-this-step-button,
+.clear-form-button,
+.deactivate-button,
+.done-button,
+.find-friends-button,
+.ignore-button,
+.login-sidebar-button,
+.next-button,
+.no-button,
+.post-button,
+.repost-button,
+.reopen-button,
+.preview-button,
+.previous-button,
+.save-button,
+.save-alert-button,
+.save-and-search-button,
+.search-button,
+.send-button,
+.preview-button,
+.send-invitation-button,
+.add-to-invitation-button,
+.update-button,
+.update-reopen-button,
+.update-repost-button,
+.find-friends-button,
+.join-button,
+.yes-button,
+.no-button,
+.add-button,
+.add-comment-button,
+.register-button,
+.apply-now-button,
+.resend-verification-email-button,
+.resend-activation-email-button,
+.verify-organisation-button,
+.upload-button,
+.edit-button,
+.vote-button,
+.leave-button,
+.remove-button,
+.save-draft-button,
+.revoke-membership-button,
+.join-this-group-button,
+.watch-button,
+.stop-watching-button
+{
+    background: url(../images/buttons/button-background.png) repeat-x;
+    height: 21px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:White;
+	font-size:11px;
+	font-weight:bold;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:7px;
+	margin-top:7px;
+	border: 0px;
+	cursor: pointer;
+}
+
+.accept-button
+{
+	background: url(../images/buttons/accept.png) no-repeat;
+    width: 75px;
+}
+
+.ok-button
+{
+	background: url(../images/buttons/ok.png) no-repeat;
+    width: 50px;
+}
+
+.apply-for-job-button
+{
+	background: url(../images/buttons/apply-for-job.png) no-repeat;
+	width: 151px;
+}
+
+.back-button
+{
+    background: url(../images/buttons/back.png) no-repeat;
+    width: 65px;
+}
+
+.cancel-button
+{
+    background: url(../images/buttons/cancel.png) no-repeat;
+    width: 65px;
+}
+
+.skip-this-step-button
+{
+    background: url(../images/buttons/skip-this-step.png) no-repeat;
+    width: 111px;
+}
+
+.clear-form-button
+{
+    background: url(../images/buttons/clear-form.png) no-repeat;
+    width: 92px;
+}
+
+.deactivate-button
+{
+    background: url(../images/buttons/deactivate-account.png) no-repeat;
+    width: 173px;
+}
+
+.verify-organisation-button
+{
+    background: url(../images/buttons/verify-organisation.png) no-repeat;
+    width: 173px;
+}
+
+.find-friends-button
+{
+	background: url(../images/buttons/find-friends.png) no-repeat;
+	width: 107px;
+}
+
+.ignore-button 
+{
+	background: url(../images/buttons/ignore.png) no-repeat;
+	width: 70px;
+}
+
+.login-sidebar-button
+{
+    background: url(../images/buttons/login-sidebar.png) no-repeat;
+    width: 70px;
+}
+
+.next-button
+{
+	background: url(../images/buttons/next.png) no-repeat;
+	width:65px;
+	height: 21px;
+}
+
+.no-button
+{
+    background: url(../images/buttons/no.png) no-repeat;
+    width: 65px;
+}
+
+.repost-button
+{
+    background: url(../images/buttons/repost.png) no-repeat;
+    width:71px;
+}
+
+.reopen-button
+{
+    background: url(../images/buttons/reopen.png) no-repeat;
+    width:80px;
+}
+
+.preview-button
+{
+    background: url(../images/buttons/preview.png) no-repeat;
+    width:84px;
+}
+
+.previous-button
+{
+    background: url(../images/buttons/previous.png) no-repeat;
+    width:88px;
+}	
+
+.save-button
+{
+	background: url(../images/buttons/save.png) no-repeat;
+	width: 65px;
+}
+
+.save-alert-button
+{
+	background: url(../images/buttons/save-alert.png) no-repeat;
+	width: 90px;
+}
+
+.save-and-search-button
+{
+	background: url(../images/buttons/save-and-search.png) no-repeat;
+	width: 132px;
+}
+
+.save-draft-button
+{
+	background: url(../images/buttons/save-draft.png) no-repeat;
+	width: 100px;
+}
+
+.search-button
+{
+    background: url(../images/buttons/search.png) no-repeat;
+    width: 65px;
+}
+
+.send-button
+{
+	background: url(../images/buttons/send.png) no-repeat;
+    width:65px;
+}
+
+.send-invitation-button
+{
+	background: url(../images/buttons/send-invitation.png) no-repeat;
+	width: 122px;
+}
+
+.add-to-invitation-button
+{
+	background: url(../images/buttons/add-to-invitation.png) no-repeat;
+	width: 134px;
+}
+
+.join-button
+{
+	background: url(../images/buttons/join.png) no-repeat;
+	height: 21px;
+	width: 65px;
+	border:0px;
+}
+
+.login-sidebar-button
+{
+    background: url(../images/buttons/login-sidebar.png) no-repeat;
+    width: 70px;
+    height: 21px;
+}
+
+.preview-button
+{
+    background: url(../images/buttons/preview.png) no-repeat;
+    width:84px;
+    height:21px;
+    border:0px;
+}
+.update-button
+{
+    background: url(../images/buttons/update.png) no-repeat;
+    width:70px;
+}
+
+.update-reopen-button
+{
+    background: url(../images/buttons/update-reopen.png) no-repeat;
+    width:136px;
+    height:21px;
+}
+
+.update-repost-button
+{
+    background: url(../images/buttons/update-repost.png) no-repeat;
+    width:135px;
+    height:21px;
+}
+	
+.send-button
+{
+    background: url(../images/buttons/send.png) no-repeat;
+    width:65px;
+    height:21px;
+    border:0px;
+}
+
+.unsubscribe-button
+{
+    background: url(../images/buttons/unsubscribe.png) no-repeat;
+    width:98px;
+    height:21px;
+    border:0px;
+}
+
+.done-button {
+    background: url(../images/common/ButtonDone.png) no-repeat;
+    width:93px;
+    height:29px;
+}
+
+.post-button {
+    background: url(../images/common/ButtonPost.png) no-repeat;
+    width:93px;
+    height:29px;
+	float : left;
+	margin-right : 10px;
+}
+
+.previous-button
+{
+    background: url(../images/buttons/previous.png) no-repeat;
+    width:88px;
+    height:21px;
+    border:0px;
+}	
+
+.yes-button
+{
+    background: url(../images/buttons/yes.png) no-repeat;
+    width: 65px;
+}
+
+.add-button
+{
+	background: url(../images/buttons/add.png) no-repeat;
+	width: 49px;
+	margin-bottom: 0;
+}
+
+.add-comment-button
+{
+	background: url(../images/buttons/add-comment.png) no-repeat;
+	width: 112px;
+}
+
+.register-button
+{
+	background: url(../images/buttons/register.png) no-repeat;
+	width: 75px;
+}
+.apply-now-button
+{
+	background: url(../images/buttons/apply-now.png) no-repeat;
+	width: 86px;
+}
+
+.resend-verification-email-button
+{
+	background: url(../images/buttons/resend-verification-email.png) no-repeat;
+	width: 185px;
+}
+
+.resend-activation-email-button
+{
+	background: url(../images/buttons/resend-activation-email.png) no-repeat;
+	width: 185px;
+}
+
+.upload-button
+{
+	background: url(../images/buttons/upload.png) no-repeat;
+	width: 75px;
+}
+
+.edit-button {
+	background: url(../images/common/ButtonEdit.png) no-repeat;
+	width : 93px;
+	height : 29px;
+	float : left;
+}
+.edit-button:hover {
+	background-position : 0px -29px;
+}
+.edit-button.draft {
+	background: url(../images/common/ButtonEditBlue.png) no-repeat;	
+}
+.edit-button.draft.purchase {
+	background: url(../images/common/ButtonEditThisJobAd.png) no-repeat;
+	width : 132px;
+}
+.purchase-button {
+	background: url(../images/common/ButtonPurchase.png) no-repeat;
+	width : 132px;
+	height : 29px;
+	float : left;
+}
+.purchase-button:hover {
+	background-position : 0px -29px;
+}
+.purchase {
+	width : 140px;
+	float : left;
+	margin-top : 15px;
+}
+.purchase .text {
+	text-align : center;
+	float : left;
+	width : 140px;
+	font : 12px Verdana, Arial;
+	color : #000000;
+}
+.or {
+	float : left;
+	margin : 13px 10px 0px 0px;
+	font : Bold Italic 20px Myriad Pro, Arial;
+	color : #B3DCE6;
+}
+.vote-button
+{
+	background: url(../images/buttons/vote.png) no-repeat;
+	width: 65px;
+}
+
+.remove-button
+{
+	background: url(../images/buttons/remove.png) no-repeat;
+	width: 71px;
+}
+
+.revoke-membership-button
+{
+	background: url(../images/buttons/revoke-membership.png) no-repeat;
+	width: 157px;
+}
+
+.join-this-group-button
+{
+	background: url(../images/buttons/join-this-group.png) no-repeat;
+	width: 120px;
+}
+
+.watch-button 
+{
+	background: url(../images/buttons/watch.png) no-repeat;
+	width: 60px;
+}
+
+.stop-watching-button 
+{
+	background: url(../images/buttons/stop-watching.png) no-repeat;
+	width: 114px;
+}
+
+
+/* ------- Candidate Search -------*/
+
+.small-salary-input
+{
+	width:68px;
+	padding-top:4px;
+	padding-left:2px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+.list-form-input
+{
+	width:200px;
+	height:23px;
+	font-size:16px;
+	padding-top:4px;
+	padding-left:20px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+	background:url(../images/universal/list-dot.png) no-repeat;
+}
+
+.within-distance
+{
+	width:35px;
+	font-size:16px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+.salary-input
+{
+	width:84px;
+	font-size:16px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+	border-style:solid;
+	border-width:1px;
+	border-color:#A4B97F;
+}
+
+
+/* ------- Job Search BOX -------*/
+
+.job-search-input{
+	width:170px;
+	height:23px;
+	font-size:16px;
+	padding-top:3px;
+	padding-left:6px;
+	font-weight:600;
+	color:#444444;
+	font-family:Arial;
+}
+
+#job-search select{
+	width:180px;
+	height:24px;
+}
+
+.search-section-title
+{
+	padding-left:25px;
+	height:15px;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	color:#366696;
+}
+
+/* ------- Join Forms -------*/
+
+.join-section-title
+{
+	background:url(../images/universal/search-form-title-bg.png) no-repeat;
+	padding-left:25px;
+	height:30px;
+	font-family:"arial";
+	font-size:15px;
+	font-weight:bold;
+	color:#366696;
+	padding-top:3px;
+	margin-top:9px;
+}
+
+/* ------- Employer Privacy Page -------*/
+ul.input-list
+{
+	list-style-image: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-list li
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-list li p
+{
+    margin-left: 20px;
+}
+
+
+/* ------- Other Random Stuff For AJAX -------*/
+
+.noDisplay 
+{
+	display:none;
+}
+.doDisplay 
+{
+	display:inline;
+}
+
+/* ------- About Me edit forms -------*/
+
+.about-me-profile-input
+{
+	width:100%;
+	margin-bottom:5px;
+	padding:2px;
+}
+
+.about-me-input
+{
+	font-family: Verdana, Helvetica, Sans-Serif;
+	padding:2px;
+	width:14em;
+}
+
+.about-me-day-input
+{
+	width:52px;
+}
+
+.about-me-year-input
+{
+	width:40px;
+}
+
+.about-me-month-input
+{
+	width:65px;
+}
+
+/* ------------- Miscellaneous -------------- */
+
+.login-failure
+{
+    border: solid 1px #ff9999;
+    text-align: center;
+    color: #cc0000;
+    background-color: #ffcccc;
+    margin-bottom: 4pt;
+    margin-right: 6pt;
+    padding: 3px 0;
+}
+
+.join-failure
+{
+    border: solid 1px #ff9999;
+    text-align: center;
+    color: #cc0000;
+    background-color: #ffcccc;
+    margin-bottom: 4pt;
+    margin-right: 6pt;
+    padding: 3px 0;
+}
+
+/*------- Email alert styles -------*/
+
+.top-email-alert-right
+{
+	float: left;
+	height: 36px;
+	background: url(../images/universal/email-alert-right-bg.gif) no-repeat;
+	width: 12px;
+	line-height: 24px
+}
+
+.top-email-alert-left
+{
+	float:left;
+	background: url(../images/universal/email-alert-left-bg.gif) no-repeat;
+	height: 36px;
+	padding-left: 10px;
+	line-height: 24px;
+	font-size: 12px;
+	font-family: Verdana;
+	text-align: left;
+	font-weight: bold;
+}
+
+.top-email-alert-message
+{
+	background:#F5AC5F;
+	height:24px;
+	float:left;
+	display:inline;
+	margin-left:19px;
+}
+
+.mock-validator
+{
+	float:left;
+	color:Red;
+}
+
+.search-links
+{
+	float:left;
+	padding-left: 4px;
+	font-size: 10px;
+	padding-top: 4px;
+}
+
+.candidate-search-table input
+{
+	padding-top:0px;
+	padding-bottom:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.grey-table-seperators table
+{
+	margin-bottom:2px;
+	padding-bottom:2px;
+	border-bottom:1px solid #DDDDDD;
+}
+
+.job-type-checkboxes label
+{
+	font-size:10px;
+}
+
+/* MF (2008-09-25) */
+/* Appease the CSS-definition gods with blank CSS selectors */
+/* for classes added in preparation for 'new look' CSS. */
+
+.textbox {}
+.textbox_field {}
+.textbox_control {}
+.multiline_textbox_field {}
+.multiline_textbox_control {}
+.dropdown_field {}
+.dropdown_control {}
+.dropdown_field {}
+.autocomplete_textbox_field {}
+.autocomplete_textbox_control {}
+.url_textbox_field {}
+.url_textbox_control {}
+.file_control {}
+.actions {}					/* At the moment, just used for sets of wizard nav buttons */
+.button_control {}
+.post_button_control {}

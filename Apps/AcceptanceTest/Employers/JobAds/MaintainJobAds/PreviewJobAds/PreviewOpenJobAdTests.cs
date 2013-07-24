@@ -1,0 +1,89 @@
+﻿using System;
+using LinkMe.Domain.Roles.JobAds;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace LinkMe.AcceptanceTest.Employers.JobAds.MaintainJobAds.PreviewJobAds
+{
+    [TestClass]
+    public class PreviewOpenJobAdTests
+        : PreviewJobAdTests
+    {
+        [TestMethod]
+        public void TestOpenZeroCreditsEdit()
+        {
+            var employer = CreateEmployer(1);
+            var jobAd = CreateJobAd(employer, JobAdStatus.Open, DateTime.Now.AddDays(-5), DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+
+            LogIn(employer);
+            Get(GetJobAdUrl(jobAd.Id));
+            _previewButton.Click();
+            AssertExpiryTime(DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+
+            Assert.IsFalse(_publishButton.IsVisible);
+            Assert.IsFalse(_reopenButton.IsVisible);
+            Assert.IsFalse(_repostButton.IsVisible);
+            Assert.IsTrue(_editButton.IsVisible);
+            Assert.IsFalse(_baseFeaturePack.IsVisible);
+            Assert.IsFalse(_featurePack1.IsVisible);
+            Assert.IsFalse(_featurePack2.IsVisible);
+
+            _editButton.Click();
+            AssertUrlWithoutQuery(GetJobAdUrl(jobAd.Id));
+            AssertNoMessages();
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+        }
+
+        [TestMethod]
+        public void TestOpenSomeCreditsEdit()
+        {
+            var employer = CreateEmployer(10);
+            var jobAd = CreateJobAd(employer, JobAdStatus.Open, DateTime.Now.AddDays(-5), DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+
+            LogIn(employer);
+            Get(GetJobAdUrl(jobAd.Id));
+            _previewButton.Click();
+            AssertExpiryTime(DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+
+            Assert.IsFalse(_publishButton.IsVisible);
+            Assert.IsFalse(_reopenButton.IsVisible);
+            Assert.IsFalse(_repostButton.IsVisible);
+            Assert.IsTrue(_editButton.IsVisible);
+            Assert.IsFalse(_baseFeaturePack.IsVisible);
+            Assert.IsFalse(_featurePack1.IsVisible);
+            Assert.IsFalse(_featurePack2.IsVisible);
+
+            _editButton.Click();
+            AssertUrlWithoutQuery(GetJobAdUrl(jobAd.Id));
+            AssertNoMessages();
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+        }
+
+        [TestMethod]
+        public void TestOpenUnlimitedCreditsEdit()
+        {
+            var employer = CreateEmployer(null);
+            var jobAd = CreateJobAd(employer, JobAdStatus.Open, DateTime.Now.AddDays(-5), DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+
+            LogIn(employer);
+            Get(GetJobAdUrl(jobAd.Id));
+            _previewButton.Click();
+            AssertExpiryTime(DateTime.Now.AddDays(12).Date.AddDays(1).AddSeconds(-1));
+
+            Assert.IsFalse(_publishButton.IsVisible);
+            Assert.IsFalse(_reopenButton.IsVisible);
+            Assert.IsFalse(_repostButton.IsVisible);
+            Assert.IsTrue(_editButton.IsVisible);
+            Assert.IsFalse(_baseFeaturePack.IsVisible);
+            Assert.IsFalse(_featurePack1.IsVisible);
+            Assert.IsFalse(_featurePack2.IsVisible);
+
+            _editButton.Click();
+            AssertUrlWithoutQuery(GetJobAdUrl(jobAd.Id));
+            AssertNoMessages();
+            AssertJobAd(jobAd.Id, JobAdStatus.Open, DateTime.Now.Date.AddDays(12).AddDays(1).AddSeconds(-1));
+        }
+    }
+}

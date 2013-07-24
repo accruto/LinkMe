@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_save_viewstate_sp.sql,install_get_viewstate_sp.sql,update_database_version_table.sql

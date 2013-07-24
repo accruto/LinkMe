@@ -1,0 +1,1598 @@
+/*
+#######################
+#                     #
+#    DOCUMENTATION    #
+#                     #
+#######################
+*/
+
+/*	===================
+
+	Nesting hierarchies
+
+	===================
+*/
+
+	fieldset {}
+		.field {}
+			label {}
+			.control {}
+				.control {}
+					.control {}	/* etc ... */
+				.description {}
+			.helptext {}
+
+		.textbox_field {}
+			.textbox_control {}
+				.textbox {}
+		.mutliline_textbox_field {}
+			.multiline_textbox_control {}
+				.multiline_textbox {}
+				
+		.dropdown_field {}
+			.dropdown_control {}
+				.dropdown {}
+				
+		.listbox_field {}
+			.listbox_control {}
+				.listbox {}
+				
+		.checkbox_field {}
+			.checkbox_control {}
+				.checkbox {}			/* asp:Checkbox */
+					input {}
+					label {}
+				/* or */
+				input.checkbox {}		/* Clean style */
+				label {}
+				
+		.radio_field {}
+			.radio_control {}
+				.radio {}				/* asp:RadioButton */
+					input {}
+					label {}
+				/* or */
+				input.radio {}			/* Clean style */
+				label {}
+				
+		.horizontal_radiolist_field {}			/* ASP.NET-control wrapper */
+			.horizontal_radiolist_control {}
+				.horizontal_radiolist {}			/* this class is not required */
+					span {}
+						span {}
+							input {}
+							label {}
+		
+		.radiolist_field {}						/* ASP.NET-control wrapper */
+			.radiolist_control {}
+				.radiolist {}						/* this class is not required */
+					table {}
+						tr {}
+							td {}
+								input {}
+								label {}
+		
+		.horizontal_checkboxlist_field {}		/* ASP.NET-control wrapper */
+			.horizontal_checkboxlist_control {}
+				.horizontal_checkboxlist {}			/* this class is not required */
+					span {}
+						span {}
+							input {}
+							label {}
+						
+		.checkboxlist_field {}					/* ASP.NET-control wrapper */
+			.checkboxlist_control {}
+				.checkboxlist {}					/* this class is not required */
+					table {}
+						tr {}
+							td {}
+								input {}
+								label {}
+								
+		.button_field {}					/* Clean style */
+			.button_control {}
+				
+		.buttons_field {}					/* Clean style */
+			.buttons_control {}
+				
+		.radiobuttons_field {}					/* Clean style */
+			.radiobuttons_control {}
+				.radio_control {}
+								
+		.horizontal_radiobuttons_field {}		/* Clean style */
+			.horizontal_radiobuttons_control {}
+				.radio_control {}
+
+		.checkboxes_field {}					/* Clean style */
+			.checkboxes_control {}
+				.checkbox_control {}
+
+		.horizontal_checkboxes_field {}			/* Clean style */
+			.horizontal_checkboxes_control {}
+				.checkbox_control {}
+
+		.file_field {}
+			.file_control {}
+				.file {}
+				
+		.link_field {}					        /* Clean style */
+			.link_control {}
+				
+
+	/*	----------------
+		Type hierarchies
+		----------------
+	*/
+
+
+/*
+#############################
+#                           #
+#    ACTUAL STYLES BEGIN    #
+#                           #
+#############################
+
+To "activate" these styles, surround your markup in <span class="forms_v2">...</span>
+
+This is necessary now that this stylesheet is automatically imported by controls which
+need their appearance reliably rendered. Since the website is large, class name conflicts
+could arise and some "scoping" device was needed to "contain the damage" of CSS selectors
+here acting unintentionally.
+
+*/
+
+/*	==========================
+
+	forms_v2 "framework rules"
+
+	==========================
+*/
+
+	.forms_v2 .field * {
+		line-height:14px;	/* This is not possible to pixel-perfect across browsers (Close to 1.2 ems) :-( */
+							/* 99.7% of users don't change text size and those who do in FF will get expected
+							   behaviour anyway. Those who do in IE(x) won't notice any problem since the text
+							   sizes are so limited :-) */
+	}
+
+	.forms_v2 .field p {
+		margin-bottom: 0.75em;
+		color: #333333;
+	}
+
+	/*	----------------------
+		Self-clearing elements
+		----------------------
+		Everything but a field is a freeform content area
+	*/
+
+		.forms_v2 .field:after,		/* Modern-browser solution */
+		.forms_v2 .control:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.forms_v2 .field,			/* IE6,7 solution */
+		.forms_v2 .control {
+			zoom: 1;				/* Invalid CSS, hasLayout trigger */
+		}
+
+
+
+/*	=========
+
+	fieldsets
+
+	=========
+
+	Provides a grouping element for fieldsets.
+	
+    Fieldsets don't need a ".fieldsets" container, but won't render vertical spacing
+    between eachother properly without one.
+*/
+
+    .forms_v2 .fieldsets {}
+        .forms_v2 .fieldsets fieldset {
+            margin-top: 30px;
+        }
+        
+        .forms_v2 .fieldsets .ie_firstchild,
+        .forms_v2 .fieldsets fieldset:first-child {
+            margin-top: 0;
+        }
+
+
+
+/*	========
+
+	fieldset
+
+	========
+
+	Provides a grouping element for fields.
+	
+	(Without a fieldset, fields cannot know which is the 'first-child' so vertical margins
+	can't be smartly determined.)
+
+*/
+	.forms_v2 fieldset {
+		margin:0;padding:0;
+		border:none;
+	}
+	.forms_v2 fieldset legend {
+		margin:0;padding:0;
+		*margin-left: -7px;
+		font-size: 130%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		line-height: 1.2em;
+		color: #FF6600;
+		width: 100%;
+		border-bottom: 1px solid #EEE;
+	}
+	
+/*	=====
+
+	field
+
+	=====
+
+	Fields typically contain a label, control, and helptext.
+	If a field is "with-labels-on-left", its children labels and controls will rearrange accordingly.
+
+	Fields usually have "types" which indicate what their controls contain (e.g. textbox_field) -
+	the point of this is to make fields aware of what's in them so that:
+
+	•	Labels can 'see what they're next to' and align correctly
+	•	Labels can look "compulsory" (show the required star *) when in a compulsory field
+	•	So they can be addressed individually "by name" or "by type".
+	•	etc.
+
+	When marking up a field, mark it up as:
+		<div class="[subtype_field] [type_field] [name_field] [attribute_field] field">
+	(class order doesn't matter).
+
+	Attributes can be:
+	•	read-only_field
+	•	compulsory_field
+
+*/
+
+	.forms_v2 fieldset .field {					/* Can only maintain spacing across all browsers including IE6  */
+												/* where the parent of the 'first-child' is known, in this case */
+		padding-top: 12px;						/* a fieldset. */
+		
+		/*margin:0;padding:0;*/					/* This attribute has too heavy precedence... removed */
+	}
+	
+	.forms_v2 .indented_field {
+	    padding-left: 20px;
+	}
+	
+	.forms_v2 .compact_field {
+		padding-top: 1px;
+	}
+	
+	.forms_v2 .control .field {
+		padding-top: 7px;
+	}
+	.forms_v2 .control .compact_field {
+		padding-top: 1px;
+	}
+
+	.forms_v2 fieldset .field:first-child,
+	.forms_v2 fieldset .ie_firstchild,
+	.forms_v2 .control .field:first-child,
+	.forms_v2 .control .ie_firstchild {			/* Assumption for this line: ie_firstchild points to a field (!) */
+		padding-top: 0;							/* above assumption must be made because can't write combination selectors for IE6 */
+	}
+	
+	.forms_v2 fieldset .forced-not-first_field,
+	.forms_v2 fieldset .forced-not-first_field:first-child {
+	    padding-top: 12px;
+	}
+	
+	.forms_v2 fieldset.row .field {
+	    float: left;
+	    padding-top: 0;
+	    margin-left: 10px;
+	}
+	    .forms_v2 fieldset.row .field .control {
+	        _float: left;   /* For IE6's benefit */
+	    }
+
+	.forms_v2 fieldset.row .field:first-child,
+	.forms_v2 fieldset.row .ie_firstchild {
+	    margin-left: 0px;
+	}
+
+	.debugging .forms_v2 .field {
+		background: #E0E0E0;
+		border-top: 4px solid #E8E8E8;
+		border-bottom: 4px solid #D8D8D8;
+	}
+
+	.forms_v2 .field .field {				/* field cannot be directly under a field */
+		border: 3px solid #FF0000;
+	}
+	.forms_v2 .field .control .field {		/* field must be under a field using a control intermediate */
+		border: none;
+	}
+
+
+
+/*	=====
+
+	label
+
+	=====
+	
+	Labels display the purpose of a field as you'd expect.
+
+	What's special here is that they arrange themselves according to a parent
+	having "with-labels-on-left" or not.
+
+*/
+
+	.forms_v2 .field label,
+	.forms_v2 .control .field label,
+	.forms_v2 .field .label,
+	.forms_v2 .control .field .label {
+		margin:0;padding:0;
+		font-size: 85%;			/* Shrink for fields */
+		color: #47A;
+		font-weight: bold;
+	}
+
+	.forms_v2 .control label, 
+	.forms_v2 .control .label {
+		margin:0;padding:0;
+		font-size: 95%;		/* Keep large for controls (they might not expect the shrinking) */
+		color: #333;
+		font-weight: normal;
+	}
+
+	.forms_v2 .with-labels-on-left label,
+	.forms_v2 .with-labels-on-left fieldset.with-labels-on-left label,
+	.forms_v2 .with-labels-on-left .label,
+	.forms_v2 .with-labels-on-left fieldset.with-labels-on-left .label {
+		width: 175px;
+		position: absolute;
+		text-align: right;
+	}
+	
+	.forms_v2 .wider_with-labels-on-left label,
+	.forms_v2 .wider_with-labels-on-left fieldset.with-labels-on-left label,
+	.forms_v2 .wider_with-labels-on-left .label,
+	.forms_v2 .wider_with-labels-on-left fieldset.with-labels-on-left .label {
+		width: 225px;
+	}
+	
+    .forms_v2 .with-labels-on-left fieldset label,  /* Undo the above for fieldsets in fieldsets */
+	.forms_v2 .control label,	                    /* And also for controls with labels inside */
+    .forms_v2 .with-labels-on-left fieldset .label,
+	.forms_v2 .control .label {	                   
+		width: auto;
+		text-align: left;
+		position: static;
+		padding-right: 0;
+	}
+
+	.forms_v2 .compulsory_field label,
+	.forms_v2 .compulsory_field .label {	/* "Compulsory" is a field property */
+		padding-right: 7px;
+		background: url(../images/universal/compulsory-star.png) top right no-repeat;
+	}
+	.forms_v2 .compulsory_field .control label,
+	.forms_v2 .compulsory_field .control .label {	/* "Compulsory" should only travel 1 level deep... */
+		padding-right: 0px;
+		background: none;
+	}
+	.forms_v2 .compulsory_field .checkbox_control label,
+	.forms_v2 .compulsory_field .checkbox_control .label {	/* ...unless we're talking about a checkbox. */
+		padding-right: 7px;
+		background: url(../images/universal/compulsory-star.png) top right no-repeat;
+	}
+
+
+
+/*	=======
+
+	control
+
+	=======
+
+	The purpose of this class is to designate the part of a field which will
+	is treated as "the stuff that's not the label and not the help text".
+
+	Inside a field "with-labels-on-left", it moves to the right to make way.
+
+	No floats are used by control, but they are self-clearing and cope well with
+	floated children.
+
+	WARNING:
+	IE6 and IE7 will propagate the "with-labels-on-left" margin-left from here
+	to some types of child inputs (at least type=text and type=button). So that's
+	why position: left: x / margin-right: (negative x) is used instead (same effect).
+*/
+
+	.forms_v2 .control {
+		margin:0;padding:0;
+	}
+	
+	.forms_v2 .indented_control {
+	    padding-left: 20px;
+	}
+	
+	.forms_v2 .with-labels-on-left .control {
+		position: relative;
+		left: 190px;
+		margin-right: 190px;
+		
+	}
+	.forms_v2 .wider_with-labels-on-left .control {
+		position: relative;
+		left: 240px;
+		margin-right: 240px;
+		
+	}
+	
+	.forms_v2 .with-labels-on-left fieldset .control,   /* Undo the above for further nested fieldsets */
+	.forms_v2 .control .control {	                    /* and also for further nested controls */
+		left: 0;
+		margin-right: 0;
+	}
+
+	.debugging .forms_v2 .control {
+		background: #E4E4C8;
+		border-top: 2px solid #F4F4D8;
+		border-bottom: 2px solid #D0D0B4; 
+	}
+	
+	/*	___________________________
+
+		Structures inside a control
+		___________________________
+	*/
+	
+		/*	-----------
+			description
+			-----------
+		*/
+			.debugging .forms_v2 .description {
+				background: #FFC;
+			}
+
+			.forms_v2 .description {			/* Description can't be outside a control */
+				margin:0;padding:0;
+			}
+
+			.forms_v2 .control .description {	/* Description is only for inside a control */
+				border: none;
+				font-size: 85%;
+				padding-top: 1px;
+				padding-bottom: 1px;
+			}
+
+			.forms_v2 .control .description,
+			.forms_v2 .control .description * {
+				color: #888;
+			}
+
+			.forms_v2 .control .description ul {
+				margin:0;padding:0;
+				list-style: none;
+			}
+
+			* html .forms_v2 .control .description ul {	/* IE6 hack: hasLayout fixes bullets under a control inside       */
+				position: relative;						/* .with-labels-on-left (using left: x / margin-right: -x method) */
+			}
+
+			.forms_v2 .control .description ul li {
+				margin:0;padding:0;
+				padding-left: 10px;
+				background: url(../images/universal/list-bullet_description.png) left 0.4em no-repeat;
+			}
+
+	/*	________________________
+
+		Common types of controls
+		________________________
+	*/
+	
+		/*	-----------------
+			Bordered controls
+			-----------------
+		*/
+			.forms_v2 .textbox, .forms_v2 .dropdown, .forms_v2 .listbox {
+				margin:0;padding:1px;
+				border: 1px solid #8AC;
+				line-height: 16px;
+				font-family: Verdana, Arial, sans-serif;	/* Bordered inputs don't inherit font in any browser */
+				color: #333333;
+			}
+			.debugging .forms_v2 .textbox, .forms_v2 .dropdown, .forms_v2 .listbox {
+			}
+			
+		/*	-------
+			textbox
+			-------
+		*/
+			.forms_v2 .textbox {}
+			
+			.forms_v2 .read-only_field .textbox {
+				border: none;
+				padding: 2px;
+			}
+			
+			.forms_v2 .field input.textbox,
+			.forms_v2 .field textarea.textbox {	/* Only applies to real textboxes/areas */
+				*margin-top: -1px;
+				*margin-bottom: -1px;
+				*line-height: 17px;	/* Make IE6,7 textboxes match heights */
+				*padding-top: 0;	/* Kill extra padding in IE7 only (IE6 will ignore textbox border customisation) */
+			}
+			
+			.forms_v2 .field input.textbox {	/* Only applies to real textboxes */
+				height: 1.3em;
+			}
+			
+			.forms_v2 .read-only_field input.textbox {	/* Only applies to real textboxes */
+				*padding-top: 1px;	/* Kill extra padding in IE7 only (IE6 will ignore textbox border customisation) */
+			}
+			
+			html>/**/body .forms_v2 .field input.textbox,
+			html>/**/body .forms_v2 .field textarea.textbox, x:-moz-any-link {	/* FF hack, only real textboxes */
+				padding-bottom: 0px;	/* Counteract FF's added bottom/left 1px padding */
+				padding-left: 0px;
+			}
+			
+			html>/**/body .forms_v2 .read-only_field input.textbox, x:-moz-any-link {	/* FF hack, only real textboxes */
+				padding-bottom: 1px;
+				padding-left: 1px;
+			}
+			
+			/*	Read-only visibility switching (between faux input and real input) */
+			
+				.forms_v2 .field .textbox {				/* read/write: hide presumed faux input */
+					/*display: none;*/
+				}
+				
+				.forms_v2 .field input.textbox,			/* read/write: show known real inputs */
+				.forms_v2 .field textarea.textbox {		/* read/write: show known real inputs */
+					/*display: inline;*/
+				}
+				
+				.forms_v2 .read-only_field .textbox {			/* read-only: show presumed faux inputs */
+					/*display: block;*/
+				}
+				
+				.forms_v2 .read-only_field input.textbox,		/* read-only: hide known real inputs */
+				.forms_v2 .read-only_field textarea.textbox {	/* read-only: hide known real inputs */
+					/*display: none;*/
+				}
+				
+				div#lblObjective.multiline_textbox.textbox, div#lblSummary.multiline_textbox.textbox, div#lblSkills.multiline_textbox.textbox
+				{
+				    width : 590px;
+				}
+				
+		/*	-----------------
+			multiline textbox
+			-----------------
+		*/
+			.forms_v2 .multiline_textbox {
+				width: 20em;
+				font-size: 100%;	/* Firefox needs this for some reason, otherwise it enlarges the font-size (!) */
+			}
+			
+		/*	--------
+			dropdown
+			--------
+		*/
+			.forms_v2 .dropdown {
+				height: 1.65em;
+			}
+			
+			.forms_v2 .read-only_field .dropdown {
+				border: none;
+				padding: 2px 1px;
+			}
+			
+			html>/**/body .forms_v2 .field select.dropdown , x:-moz-any-link {	/* FF hack, real dropdowns */
+				padding:0;
+			}
+			
+			html>/**/body .forms_v2 .read-only_field .dropdown , x:-moz-any-link {	/* FF hack */
+				padding-left: 5px;
+				margin-bottom: -3px;
+			}
+			
+			.forms_v2 .read-only_field .dropdown { /* IE6,7 appearance */
+				*margin-bottom: -3px;
+				*padding-left: 5px;
+				*padding-top: 3px;
+				*padding-bottom: 1px;
+			}
+			
+			/*	Read-only visibility switching (between faux input and real input) */
+			
+				.forms_v2 .field .dropdown {			/* read/write: hide presumed faux inputs */
+					display: none;
+				}
+				
+				.forms_v2 .field select.dropdown {		/* read/write: show known real inputs */
+					display: inline;
+				}
+				
+				.forms_v2 .read-only_field .dropdown {			/* read-only: show presumed faux inputs */
+					display: inline-block;		/* If this read-only "dropdown" is a DIV, force it inline (block). */
+					*display: inline; *zoom: 1; /* IE6,7 inline-block hack */
+					/* FF2 inline-block not supported */
+				}
+				
+				.forms_v2 .read-only_field select.dropdown {	/* read-only: hide known real inputs */
+					display: none;
+				}
+		
+		/*	----------------
+			checkbox & radio
+			----------------
+		*/
+			.forms_v2 .radiobuttons_control .radio_control,
+			.forms_v2 .checkboxes_control .checkbox_control {
+				margin:0;padding:0;
+				padding-top: 7px;
+			}
+			
+			.forms_v2 .radiobuttons_control .radio_control:first-child,
+			.forms_v2 .radiobuttons_control .ie_firstchild,
+			.forms_v2 .checkboxes_control .checkbox_control:first-child,
+			.forms_v2 .checkboxes_control .ie_firstchild {
+				padding-top: 0px;
+			}
+				
+			.forms_v2 span.checkbox, .forms_v2 span.radio {
+				margin:0;padding:0;
+				display: block;		/* Allow vertical margins to be altered */
+				margin-top: 0px;	/* Remove line-height-originated margin (none cos I fixed the line-height) */
+				*margin-top: 0px;	/* IE6,7 variation on the above */
+				*margin-bottom: -2px/* IE6,7 remove 1px from the bottom because label is shifted up 1px */
+			}
+			
+			.forms_v2 input.checkbox,  .forms_v2 .checkbox input,  .forms_v2 .checkboxlist_control input,
+			.forms_v2 input.radio,     .forms_v2 .radio input,     .forms_v2 .radiolist_control    input {
+				margin:0;padding:0;
+				width: 13px; height: 13px;
+				position: relative;
+				vertical-align: middle;
+				margin-right: 0.6ex;	/* Size-of-a-space right-margin */
+			}
+			
+			.forms_v2 .checkbox_control label,  .forms_v2 .checkbox label,  .forms_v2 .checkboxlist_control label,
+			.forms_v2 .radio_control label,     .forms_v2 .radio label,     .forms_v2 .radiolist_control    label,
+			.forms_v2 .checkbox_control .label, .forms_v2 .checkbox .label,
+			.forms_v2 .radio_control .label,    .forms_v2 .radio .label {
+				position: relative;
+				vertical-align: middle;
+				top: 0px;
+				*top: -1px;
+			}
+			.forms_v2 .radiolist_control table {
+				margin:0;padding:0;
+				border-collapse : collapse;			/* Emulate cell-spacing 0 */
+			}
+			.forms_v2 .radiolist_control label {
+				top: -1px;							/* Fix alignment in non-IE (i.e. Firefox) */
+			}
+			
+			.forms_v2 .horizontal_radiolist_control span span,		/* For ASP.NET's dirtily marked up */
+			.forms_v2 .horizontal_checkboxlist_control span span {	/* radio/checkboxlist controls     */
+				/*padding-right: 1em;*/
+			}
+			
+			.forms_v2 .horizontal_radiolist_control span label,		/* (2010/05/31) ASP.NET no longer renders      */
+			.forms_v2 .horizontal_checkboxlist_control span label {	/* spans in spans for radio/checkbox lists (!) */
+			    padding-right: 1em;
+			}
+		    .forms_v2 .horizontal_radiolist_control table,          /* ASP.NET preferred solution: use  */
+		    .forms_v2 .horizontal_checkboxlist_control table {      /* 'table' RepeatLayout, not 'flow' */
+		        display: block;
+		        margin:0;padding:0;border-spacing:0;border-collapse:collapse;
+		    }
+			    .forms_v2 .horizontal_radiolist_control table tr,
+			    .forms_v2 .horizontal_checkboxlist_control table tr {
+			        display: block;
+			        float: left;
+			        margin:0;padding:0;border-spacing:0;border-collapse:collapse;
+			    }
+			        .forms_v2 .horizontal_radiolist_control table td,
+			        .forms_v2 .horizontal_checkboxlist_control table td {
+			            display: block;
+			            float: left;
+			            margin:0;padding:0;border-spacing:0;border-collapse:collapse;
+			            padding-right: 10px;
+			            padding-bottom: 2px;
+			            *padding-bottom: 0;     /* IE6/7 provide their own "special" padding */
+			            *vertical-align: top;
+			        }
+			
+			.forms_v2 .horizontal_radiobuttons_control .radio_control,	
+			.forms_v2 .horizontal_checkboxes_control .checkbox_control {
+			    display: inline;		/* Note - inline layouts are sensitive to spaces!     */
+				padding-right: 0em;		/* So, typical markup (i.e. with spaces) is expected. */
+				*padding-right: 1em;	/* Which IE6,7 doesn't actually space. */
+			}
+				.forms_v2 .horizontal_radiobuttons_control .radio_control .radio,	
+				.forms_v2 .horizontal_checkboxes_control .checkbox_control .checkbox {
+					display: inline;
+				}
+			
+			/* Overrides to make up for mysterious failure of horizontal_radiobuttons
+               radio controls to line up in a row... */
+               
+			.forms_v2 .horizontal_radiobuttons_control {}
+			    .forms_v2 .horizontal_radiobuttons_control .radio_control {
+			        float: left;
+			        display: block;
+			        margin:0;padding:0;
+			        padding-right: 1em;  /* Padding is on RHS so all LHS's line up when wrapping */
+			    }
+			
+			.forms_v2 .checkbox_control .description,	/* Indent description/inner control/field to match label */
+			.forms_v2 .checkbox_control .control,
+			.forms_v2 .checkbox_control .field,
+			.forms_v2 .radio_control .description,
+			.forms_v2 .radio_control .control,
+			.forms_v2 .radio_control .field {
+				padding-left: 14px;
+				*padding-left: 15px;/* IE falls short 1px */
+				margin-left: 0.6ex;	/* Equals the space between a radio/check and its label */
+			}
+			
+			.forms_v2 .checkbox_control .control .control,	/* Undo the above for further nested controls etc. */
+			.forms_v2 .checkbox_control .field .control,
+			.forms_v2 .radio_control .control .control,
+			.forms_v2 .radio_control .field .control {
+				padding-left: 0;
+				margin-left: 0;
+			}
+	
+/*	========
+
+	helptext
+
+	========
+*/
+	.forms_v2 .control .helptext {	/* don't put helptext in a control */
+		border: 3px solid red;
+	}
+
+	.forms_v2 .field .helptext	{	/* put it in a field */
+		margin:0;padding:0;
+		border: none;
+		font-size: 85%;
+		max-width: none;	/* Override base helptext style */
+		width: auto;		/* Override base helptext style */
+		background: none;	/* Override base helptext style */
+		color: #888;
+	}
+	
+	.forms_v2 .field .helptext p {
+	    margin:0;padding:0;
+	    margin-top: 0.3em;
+	    color: #888;
+	}
+	
+	.forms_v2 .field .helptext p:first-child,
+	.forms_v2 .field .helptext .ie_firstchild, {
+	    margin-top:0;
+	}
+
+	.forms_v2 .with-labels-on-left .field .helptext {
+		margin-left: 190px;
+	}
+	.forms_v2.with-labels-on-left .textbox_field.email_textbox_field.field .example_helptext.helptext {
+		margin-left : 140px;
+	}
+	.forms_v2 .wider_with-labels-on-left .field .helptext {
+		margin-left: 240px;
+	}
+	.forms_v2 .with-labels-on-left fieldset .field .helptext,
+	.forms_v2 .with-labels-on-left .field .field .helptext {
+		margin-left: 0;
+	}
+
+	.forms_v2 .example_helptext {
+		font-style: italic;
+		color: #888;
+	}
+
+	.forms_v2 .with-labels-on-left .example_helptext {
+	}
+
+/*	===================
+
+	Additional controls
+
+	===================
+*/
+
+    /*  -----------
+        salaryrange
+        -----------
+    */
+    
+	.forms_v2 .salaryrange_field {}
+		.forms_v2 .salaryrange_control {}
+		
+		/* Two varieties of salaryrange - one with full textbox subfields, and one with only textboxes. */
+		
+		.forms_v2 .salaryrange_control .field {
+		    float: left;
+		    margin:0;padding:0;
+		}
+		.forms_v2 .salaryrange_control .field .control {
+		    _float: left;   /* IE6 width hand-holding */
+		}
+		.forms_v2 .salaryrange_control .field .textbox {
+		    _margin-top: 0px;
+		}
+		.forms_v2 .salaryrange_control .field label,
+		.forms_v2 .salaryrange_control .field .label,
+		.forms_v2 .salaryrange_control .field .helptext {
+		    _clear: left;   /* To do with IE6 width hand-holding */
+		}
+		.forms_v2 .salaryrange_field .helptext {
+		    margin-top: 0.3em;
+		}
+		
+		.forms_v2 .salaryrange_control .field label,
+		.forms_v2 .salaryrange_control .field .label {
+			position: relative;
+			top: 3px;
+			padding-left: 1ex;
+			padding-right: 1ex;
+			color: #888;
+		}
+			
+		.forms_v2 .salaryrange_control .textbox_field .textbox {
+		    width: 5.5em;
+		}
+	
+	/* Expected salary range should be emphasised */
+	.forms_v2 .expected_salaryrange_field {
+	    position: relative; /* For AP of helptext */
+	}
+	    .forms_v2 .expected_salaryrange_control {}
+            .forms_v2 .expected_salaryrange_control .textbox {}
+        .forms_v2 .expected_salaryrange_field .helptext strong {
+            color: #FF5533;
+            font-weight: bold;
+        }
+        .forms_v2 .expected_salaryrange_field .helptext {
+        }
+            .forms_v2 .with-labels-on-left .expected_salaryrange_field .helptext {
+                position: absolute;
+                z-index: 0;
+                display: block;
+                top: 10px; right: 0;
+                margin-left: 17em;
+                padding-left: 210px;
+                padding-right: 10px;
+                margin-top: 0;
+                *margin-left: 0;     /* IE6,7 hack to handle some strange  */
+                *left: 18em;
+                *right: 10px;
+            }
+            .forms_v2 .expected_salaryrange_field:first-child .helptext {
+                top: 0;
+            }
+            .forms_v2 .expected_salaryrange_field .expected_salaryrange_control,
+            .forms_v2 .expected_salaryrange_field .textbox {
+                position: relative; /* Don't let helptext 'cover' the textbox from mouse access */
+                z-index: 10;
+            }
+            .forms_v2 .expected_salaryrange_field .expected_salaryrange_control .helptext {
+                position: static;
+                display: block;
+                width: auto;
+                margin-top: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+    
+	/*	---------
+		monthyear
+		---------
+	*/
+
+	.forms_v2 .monthyear_field {}
+		.forms_v2 .monthyear_control {}
+			.forms_v2 .monthyear_control .dropdown {
+				width: 6em;
+			}
+			.forms_v2 .monthyear_control .month_dropdown {
+				width: 4em;
+			}
+			.forms_v2 .monthyear_control .year_dropdown {
+				width: 4em;
+			}
+
+
+
+	/*	-----
+		image
+		-----
+	*/
+		.forms_v2 .image_field {}
+			.forms_v2 .image_control {}
+				.forms_v2 .image {}
+	
+
+	/*	-----------
+		url textbox
+		-----------
+	*/
+	
+		.forms_v2 .url_textbox_field {}
+			.forms_v2 .url_textbox_control {}
+				.forms_v2 .url_textbox {
+					width: 15em;
+				}
+
+	/*	--------------------
+		autocomplete textbox
+		--------------------
+	*/
+	
+		.forms_v2 .autocomplete_textbox_field {}
+			.forms_v2 .autocomplete_textbox_control {}
+				.forms_v2 .autocomplete_textbox {
+					background: #FFFFEC;
+				}
+				.forms_v2 .read-only_field .autocomplete_textbox {
+					background: transparent;	/* Intended to undo the above for read-only auto-complete fields */
+				}
+
+	/*	-------------------------------
+		location (autocomplete) textbox
+		-------------------------------
+	*/
+	
+		.forms_v2 .location_autocomplete_textbox_field {}
+			.forms_v2 .location_autocomplete_textbox_control {}
+				.forms_v2 .location_autocomplete_textbox {
+					width: 15em;
+				}
+				.forms_v2 .location_autocomplete_textbox_control .description {
+					width: 18.5em;	/* Oddly, this is ~15em/0.8 (not 15em/0.85 as one might expect) */
+				}
+
+	/*	----------------
+		email-at textbox
+		----------------
+	*/
+
+		.forms_v2 .control .email-at_textbox_field label,
+		.forms_v2 .control .email-at_textbox_field .label {
+			display: inline;
+			vertical-align: middle;
+		}
+		.forms_v2 .control .email-at_textbox_control {
+			display: inline;
+			vertical-align: middle;
+		}
+		.forms_v2 .read-only_field .control .email-at_textbox_control input.textbox {
+			display: none;
+		}
+		.forms_v2 .read-only_field .control .email-at_textbox_control .textbox {
+			display: inline-block;
+		}
+		* html .forms_v2 .read-only_field .control .email-at_textbox_control .textbox {	/* IE6 hack */
+			display: inline;	/* emulate inline-block in IE6 */
+			zoom: 1;			/* emulate inline-block in IE6 */
+		}
+
+	/*	-----------------
+		industry listbox
+		-----------------
+	*/
+	
+	.forms_v2 .industry_listbox_field {}
+		.forms_v2 .industry_listbox_control {}
+			.forms_v2 .industry_listbox {
+				width: 19.5em;
+			}
+			
+	.forms_v2 .industries_listbox_field {}
+		.forms_v2 .industries_listbox_control {}
+			.forms_v2 .industries_listbox {
+				width: 19.5em;
+			}
+			
+	/*	----------------
+		country dropdown
+		----------------
+	*/
+	
+	.forms_v2 .country_dropdown_field {}
+		.forms_v2 .country_dropdown_control {}
+			.forms_v2 .country_dropdown {}
+
+	/*	-------------
+		wider textbox
+		-------------
+	*/
+	
+	.forms_v2 .textbox_field {}
+		.forms_v2 .textbox_control {}
+			.forms_v2 .wider_textbox {
+			    width: 20em;
+			}
+
+	.forms_v2 .textbox_field {}
+		.forms_v2 .textbox_control {}
+			.forms_v2 .widest_textbox {
+			    width: 30em;
+			}
+	
+	.forms_v2 .textbox_field {}
+		.forms_v2 .textbox_control {}
+			.forms_v2 .shorter_textbox {
+			    width: 7em;
+			}
+
+	/*	-------------
+		phone textbox
+		-------------
+	*/
+	
+	.forms_v2 .phone_textbox_field {}
+		.forms_v2 .phone_textbox_control {}
+			.forms_v2 .phone_textbox {
+			    width: 10em;
+			}
+
+	/*	-------------
+		email textbox
+		-------------
+	*/
+	
+	.forms_v2 .email_textbox_field {}
+		.forms_v2 .email_textbox_control {}
+			.forms_v2 .email_textbox {
+			    width: 20em;
+			}
+	
+	/*	----------------
+		password textbox
+		----------------
+	*/
+		.forms_v2 .password_textbox_field {}
+			.forms_v2 .password_textbox_control {}
+				.forms_v2 .password_textbox {}
+
+	/*	----
+		link
+		----
+
+		(In a form, as a control.)
+		(e.g. the "Forgot Password" link in Login.ascx)
+	*/
+
+		.link_field {}
+			.link_control {}
+				.link {}
+
+	/*	-----------------------
+		within-distance_textbox
+		-----------------------
+	*/
+	
+	.forms_v2 .within-distance_textbox_field {}
+		.forms_v2 .within-distance_textbox_control {}
+			.forms_v2 .within-distance_textbox {
+			    width: 3em;
+			}
+	
+	
+
+/*	=====================
+
+	Groups pages controls
+
+	=====================
+*/
+
+	/*	---------
+		adminlist
+		---------
+	*/
+	
+		.forms_v2 .adminlist_ascx {
+			margin-bottom: 20px;
+		}
+	
+
+/*	==============================
+
+	Groups & Events pages controls
+
+	==============================
+*/
+
+	/*	-------------------
+		Invite-list control
+		-------------------
+	*/	
+
+	.forms_v2 .invitelist_field {
+		display: inline-block;
+		zoom: 1;				/* Inline-block for IE (hasLayout...) */
+		*display: inline;		/* Inline-block for IE (...on inline) */
+		width: 42%;
+		margin-right: 20px;
+		padding-top: 0 !important;
+		vertical-align: top;	/* Stop spaces between fields simulating more v-margin */
+	}
+	
+	.forms_v2 .invitelist_control {
+		margin-top: 5px;
+	}
+		
+		.forms_v2 .invitelist_control .checkboxlist_control {
+			position: relative;
+			height: 200px;
+			overflow-y: scroll;
+			margin-top: 5px;
+			padding-left: 18px;
+			width: 85%;
+			border: 1px solid #DDD;
+		}	
+		
+			.invitelist_control .checkboxlist_control .checkboxlist {}
+
+
+	.forms_v2 .emaillist_multiline_textbox_field {}
+		.forms_v2 .emaillist_multiline_textbox_control {}
+			.forms_v2 .emaillist_multiline_textbox {
+				width: 80%;
+				height: 5em;
+			}	
+	
+	.forms_v2 .message_multiline_textbox_field {}
+		.forms_v2 .message_multiline_textbox_control {}
+			.forms_v2 .message_multiline_textbox {
+				width: 80%;
+			}
+			
+
+/*	=====================
+
+	Events pages controls
+
+	=====================
+*/
+	
+	/*	-----------------
+		Date-time control
+		-----------------
+	*/
+	
+		.forms_v2 .datetime_control {}
+		
+			.forms_v2 .datetime_control .dropdown {
+				clear: left;
+				float: left;
+				width: 7em;
+				margin-right: 4px;
+			}
+		
+			.forms_v2 .datetime_control .jscalendar_ascx {
+				position: relative;	/* Gives the scal something to anchor its absolute position to */
+				float: left;    /* Firefox 3.5+ - ensure this ascx's div doesn't cover anything it shouldn't */
+			}
+				
+				.forms_v2 .datetime_control .jscalendar_ascx .textbox {
+					width: 6.25em;
+					display: inline-block;
+					*display: inline;	/* Inline-block for IE6,7 */
+					zoom: 1;			/* Inline-block for IE6,7 */
+					vertical-align: middle;
+				}
+				
+				.forms_v2 .datetime_control .jscalendar_ascx .button {
+					display: inline-block;
+					*display: inline;	/* Inline-block for IE6,7 */
+					zoom: 1;			/* Inline-block for IE6,7 */
+					border: none;
+					margin:0;padding:0;
+					background: url("../images/controls/JSCalendar/calendar_18px.png") no-repeat top left;
+					width: 18px;
+					height: 18px;
+					cursor: pointer;
+					vertical-align: middle;
+				}
+				.forms_v2 .datetime_control .jscalendar_ascx .button:hover {
+					background-position: left center;
+				}
+				.forms_v2 .datetime_control .jscalendar_ascx .button:active {
+					background-position: left bottom;
+				}
+				
+	
+	/*	------------------
+		Attendance control
+		------------------
+	*/
+	
+		.forms_v2 .attendance_control .radiolist_control,
+		.forms_v2 .attendance_control .status {
+			border: 1px solid #CCC;
+			background: #F8F8F8;
+			text-align: center;
+			padding: 10px;
+			line-height: 0;		/* Prevents weird top-margin when using inline layout techniques. */
+		}
+		
+		.forms_v2 .attendance_control .radiolist_control .radio_control {
+			display: inline;
+		}
+		.forms_v2 .attendance_control .radiolist_control span.radio {
+			display: inline;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		
+			.forms_v2 .attendance_control .radiolist_control input {
+			}
+			.forms_v2 .attendance_control .radiolist_control label {
+				font-size: 85%;
+			}
+
+		 table.list .forms_v2 .attendance_control .radiolist_control,
+		 table.list .forms_v2 .attendance_control .status {
+			margin: 0;
+			border: none;
+			background: none;
+			padding: 0;
+			text-align: left;
+			width: 200px;
+			margin-bottom: 5px;
+		}
+		
+		table.list .forms_v2 .attendance_control .action-list {
+			font-size: 85%;
+		}
+		
+		table.list .forms_v2 .attendance_control .status {
+			font-size: 85%;
+		}
+			
+		table.list .forms_v2 .attendance_control .radiolist_control {
+		}
+		
+			table.list .forms_v2 .attendance_control .radiolist_control span.radio {
+				display: block;
+			}
+
+/*	========================
+
+	Payment-related controls
+
+	========================
+*/
+
+	/*	------------------------
+		Credit-card type control
+		------------------------
+	*/
+	
+	.credit-card-type_dropdown_field {}
+    	.credit-card-type_dropdown_control {}
+    	    .credit-card-type_dropdown_control img {
+    	        vertical-align: middle;
+    	        padding-left: 30px;
+    	    }
+	
+	
+/*	=======
+
+	buttons
+
+	=======
+*/
+
+	.forms_v2 .button_control .button,
+	.forms_v2 .buttons_control .button {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.forms_v2 .buttons_control .button {
+	    float: left;
+	    margin-left: 5px;
+	}
+
+	.forms_v2 .buttons_control .button:first-child,
+	.forms_v2 .buttons_control .ie_firstchlid {
+	    margin-left: 0;
+	}
+
+	.forms_v2 .button {         /* Intended to apply to <button>, <input type="button">, or <a> - but may apply to any element */
+		font-size: 0;
+		*line-height: 240px;	/* Kills text nicely in IE 6,7 */
+
+		height: 21px;
+		padding: 0 5px;
+		margin: 7px 0;
+		
+		background-position: top left;
+		background-repeat: no-repeat;
+		
+		cursor: pointer;
+	}
+	.forms_v2 .button:hover {
+		background-position: left center;
+	}
+	.forms_v2 .button:active {
+		background-position: left bottom;
+	}
+	
+	.forms_v2 a.button {        /* Tweaks intended for use on <a> */
+        padding: 0;
+        zoom:1;                     /* IE 6,7 */
+        display:-moz-inline-box;    /* FF2 */
+        display:inline-block;       /* Modern browsers */
+        overflow: hidden;
+        *line-height:0;
+	}
+	
+    .forms_v2 .large_button {
+        height: 36px;
+        *overflow: hidden !important;
+    }
+	
+	/*	____________
+		
+		Button types
+		____________
+	*/
+
+        .forms_v2 .add_button
+        {
+            background: url(../images/buttons/add.png);
+            width: 49px;
+        }
+
+		.forms_v2 .apply-now_button {
+			background-image: url(../images/buttons/apply-now.png);
+			width: 86px;
+		}
+
+		.forms_v2 .search_button {
+			background-image: url(../images/buttons/search.png);
+			width: 65px;
+		}
+
+		.forms_v2 .login_button {
+			background-image: url(../images/buttons/login-sidebar.png);
+			width: 70px;
+		}
+
+		.forms_v2 .post_button {
+			background-image: url(../images/buttons/post.png);
+			width: 65px;
+		}
+
+		.forms_v2 .update_button {
+			background-image: url(../images/buttons/update.png);
+			width:70px;
+		}
+		
+		.forms_v2 .back_button {
+			background-image: url(../images/buttons/back.png);
+			width: 65px;
+		}
+		
+        .forms_v2 .create_button {
+	        background: url(../images/buttons/create.png) no-repeat;
+            width: 62px;
+        }
+
+		.forms_v2 .next_button {
+			background-image: url(../images/buttons/next.png);
+			width:65px;
+		}
+		
+		.forms_v2 .previous_button {
+			background-image: url(../images/buttons/previous.png);
+			width:88px;
+		}
+		
+		.forms_v2 .save-button {
+			background-image: url(../images/buttons/save.png);
+			width: 65px;
+		}
+		
+		.forms_v2 .cancel-button {
+			background-image: url(../images/buttons/cancel.png);
+			width: 65px;
+		}
+		
+		.forms_v2 .upload_button {
+			background-image: url(../images/buttons/upload.png);
+			width: 75px;
+		}
+		
+		.forms_v2 .submit-suggestion_button {
+			background-image: url(../images/buttons/submit-suggestion.png);
+			width: 138px;
+		}
+
+		.forms_v2 .preview_button {
+			background-image: url(../images/buttons/preview.png);
+			width: 84px;
+		}
+		
+		.forms_v2 .send_button {
+			background-image: url(../images/buttons/send.png);
+			width: 65px;
+		}
+
+		.forms_v2 .yes_button {
+			background-image: url(../images/buttons/yes.png);
+			width: 65px;
+		}
+
+		.forms_v2 .accept_button {
+			background-image: url(../images/buttons/accept.png);
+			width: 75px;
+		}
+
+		.forms_v2 .clear_button {
+			background-image: url(../images/buttons/light/clear.png);
+			width: 67px;
+			height: 22px;
+		}
+		
+		.forms_v2 .save-search_button {
+			background-image: url(../images/buttons/light/save-search.png);
+			width: 198px;
+			height: 22px;
+		}
+
+		.forms_v2 .create-new-email-alert_button {
+			background-image: url(../images/buttons/light/create-new-email-alert.png);
+			width: 183px;
+			height: 22px;
+		}
+
+		.forms_v2 .email-me-updates-to-results_button {
+			background-image: url(../images/buttons/light/email-me-updates-to-results.png);
+			width: 251px;
+			height: 22px;
+		}
+
+		.forms_v2 .post-job-ad_button {
+			background-image: url(../images/buttons/light/post-job-ad.png);
+			width: 110px;
+			height: 22px;
+		}
+
+        .download-as-excel_button {
+			background-image: url(../images/buttons/download-as-excel.png);
+			width:138px;
+        }
+        .download-as-pdf_button {
+			background-image: url(../images/buttons/download-as-pdf.png);
+			width:128px;
+        }
+
+		.forms_v2 .mini-light-x_button {
+			background-image: url(../images/buttons/mini-light/x.png);
+            float: left;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			display: block;
+			width: 14px;
+			height: 14px;
+		}
+		
+		.forms_v2 .play-video_button {
+			background-image: url(../images/buttons/light/play-video.png);
+			width: 31px;
+			height: 28px;
+		}
+		
+		.forms_v2 .join_button {
+			background-image: url(../images/buttons/join.png);
+			width: 65px;
+		}
+
+        .forms_v2 .login_large_button {
+            background-image: url(../images/buttons/large/login.png);
+            width: 60px;
+            height: 31px;
+        }
+
+        .forms_v2 .buy-now_large_button {
+            background-image:                  url(../images/buttons/large/buy-now.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/buy-now.png"));
+            _background:none;
+            width: 97px;
+            
+            /* center the button */
+            margin: 0 auto;
+            display: block;
+        }
+
+        .forms_v2 .pay-now_large_button {
+            background-image:                  url(../images/buttons/large/pay-now.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/pay-now.png"));
+            _background:none;
+            width: 97px;
+            
+            /* center the button */
+            margin: 0 auto;
+            display: block;
+        }
+
+        .forms_v2 .purchase_large_button {
+            background-image:                  url(../images/buttons/large/purchase.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/purchase.png"));
+            _background:none;
+            width: 107px;
+        }
+        
+        .forms_v2 .try_large_button {
+            background-image:                  url(../images/buttons/large/try.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/try.png"));
+            _background:none;
+            width: 57px;
+        }
+        
+        .forms_v2 .go_large_button {
+            background-image:                  url(../images/buttons/large/go-yellow.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/go-yellow.png"));
+            _background:none;
+            width: 57px;
+        }
+        
+        .forms_v2 .demo_large_button {
+            background-image:                  url(../images/buttons/large/demo.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/demo.png"));
+            _background:none;
+            width: 77px;
+        }
+        
+        .forms_v2 .reveal_large_button {
+            background-image:                  url(../images/buttons/large/reveal.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/reveal.png"));
+            _background:none;
+            width: 31px;
+            height: 31px;
+        }
+
+        .forms_v2 .hide_large_button {
+            background-image:                  url(../images/buttons/large/hide.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/hide.png"));
+            _background:none;
+            width: 31px;
+            height: 31px;
+        }
+
+/*	-----------------------	LinksAndCSSClassTest satisfaction guaranteed :)	--------------------
+	2009-02-27: These need to be checked for usage 	and moved to the appropriate section above.*/
+	
+	.industry_dropdown {}
+	
+	
+	
+	.browsegroups_ascx {}
+	.browseevents_ascx {}

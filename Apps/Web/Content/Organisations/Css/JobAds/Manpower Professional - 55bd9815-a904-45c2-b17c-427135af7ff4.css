@@ -1,0 +1,82 @@
+#JobAd #JobDescription
+{
+background: #000 url(Manpower%20Professional_images/MPPLogo.gif) no-repeat 97% 100%;
+color: #fff;
+}
+
+#JobAd #JobDescription #Ad
+{
+background: transparent url(Manpower%20Professional_images/whatdoyoudo.gif) no-repeat 3% 100%;
+padding: 30px;
+padding-bottom: 50px;
+}
+
+#JobAd #JobDescription #Ad h1
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 27px;
+color: #C8504F;
+font-weight: bold;
+margin-top: 0px;
+}
+
+
+#JobAd #JobDescription #Ad h2
+{
+color: #6597C2;
+}
+
+#JobDescription #Ad .metaTitle, #JobDescription #Ad .sub, #JobDescription #Ad .screenNote
+{
+color: #ccc;
+}
+
+#JobAd #JobDescription a:link
+{
+font-size: 12px;
+color: #6698c2;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-decoration: underline;
+line-height: 17px;
+}
+
+#JobAd #JobDescription a:visited
+{
+font-size: 12px;
+color: #6698c2;
+line-height: 17px;
+font-family: verdana, arial;
+text-decoration: underline
+}
+
+#JobAd #JobDescription a:hover
+{
+font-size: 12px;
+color: #878684;
+line-height: 17px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-decoration: underline;
+}
+
+#JobAd #JobDescription a:active
+{
+font-size: 12px;
+color: #878684;
+line-height: 17px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-decoration: underline;
+}
+
+#JobAd #JobDescription ul {
+list-style-type: disc;
+padding-left: 6px;
+margin-left: 10px;
+}
+
+#JobAd #JobDescription ul li {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+text-transform: capitalize;
+color: #fff;
+}

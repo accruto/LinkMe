@@ -1,0 +1,39 @@
+#JobAd div { margin-left: 20px; }
+#JobAd #ucViewJobAd_pnlLocalApplicationsOnly, #JobAd #AdContactDetails { margin-left: 0px; }
+
+#JobAd #pnPreviousPage
+{
+	background: transparent url('Shortlist%20Consulting_images/bottom.png') no-repeat bottom left;
+	padding-bottom: 110px;
+	margin-left: 0px;
+}
+
+#JobAd #JobDescription #Ad
+{
+	padding-top: 100px;
+	padding-left: 20px;
+	width: 450px;
+}
+
+#JobAd #JobDescription
+{
+	background: transparent url('Shortlist%20Consulting_images/top.png') no-repeat top left;
+	width: 500px;
+	margin: 0px;
+}
+
+#JobAd
+{
+	background: #fff url('Shortlist%20Consulting_images/borderbggrey.gif') repeat-y top left;
+}
+
+#JobAd #JobDescription #Ad h1
+{
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold; 
+	font-size: 24px;
+	text-align: center;
+	width: 500px;
+	margin-left: -40px;
+	padding-left: 0px;
+}

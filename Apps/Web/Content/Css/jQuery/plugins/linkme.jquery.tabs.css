@@ -1,0 +1,142 @@
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 8px 4px 0 4px;
+}
+.tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+.tabs-nav li {
+    float: left;
+    margin: 0 0 0 1px;
+    min-width: 50px; /* be nice to Opera */
+}
+
+.tabs-nav li.right-tab {
+	float: right;
+}
+
+.tabs-nav .tab-content-outer {
+    display: block;
+    padding: 0 8px;
+    background: url(../../../images/controls/Tabs/tab.png) no-repeat;
+}
+.tabs-selected .tab-content-outer,
+.tabs-selected .tab-content-inner,
+.tabs-nav .tab-content-inner {
+    display: block;
+    padding: 0 8px;
+    background: url(../../../images/controls/Tabs/tab.png) no-repeat;
+}
+.tabs-nav .tab-content-outer {
+    /*position: relative;*/
+    top: 1px;
+    z-index: 2;
+    padding-left: 0;
+    color: #000;
+    font-size: 100%;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; /* required in IE 6 */    
+}
+.tabs-nav .tabs-selected .tab-content-outer {
+    color: #000;	
+    font-weight: bold;
+}
+.tabs-nav .tab-content-outer:hover,
+.tabs-nav .tab-content-outer:focus,
+.tabs-nav .tab-content-outer:active {
+    background-position: 100% -120px;
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.tabs-nav .tabs-selected .tab-content-outer,
+.tabs-selected .tab-content-outer:hover,
+.tabs-selected .tab-content-outer:focus,
+.tabs-selected .tab-content-outer:active {
+    background-position: 100% -120px;
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.tabs-nav .tab-content-outer,
+.tabs-nav .tabs-disabled .tab-content-outer:hover,
+.tabs-nav .tabs-disabled .tab-content-outer:focus,
+.tabs-nav .tabs-disabled .tab-content-outer:active {
+    background-position: 100% -80px;
+}
+.tabs-nav .tab-content-inner {
+    width: 64px; /* IE 6 treats width as min-width */
+    min-width: 30px;
+    height: 25px; /* IE 6 treats height as min-height */
+    min-height: 25px;
+    padding-top: 15px;
+    padding-right: 0;
+}
+*>.tabs-nav .tab-content-inner { /* hide from IE 6 */
+    width: auto;
+    height: auto;
+}
+.tabs-selected .tab-content-inner {
+	height: 27px; /* IE 6 treats height as min-height */
+    min-height: 27px;
+}
+.tabs-nav .tabs-selected .tab-content-inner {
+    padding-top: 15px;
+}
+.tabs-nav .tabs-selected .tab-content-inner,
+.tabs-nav .tab-content-outer:hover .tab-content-inner,
+.tabs-nav .tab-content-outer:focus .tab-content-inner,
+.tabs-nav .tab-content-outer:active .tab-content-inner {
+    background-position: 0 -40px;
+}
+.tabs-nav .tab-content-inner,
+.tabs-nav .tabs-disabled .tab-content-outer:hover .tab-content-inner,
+.tabs-nav .tabs-disabled .tab-content-outer:focus .tab-content-inner,
+.tabs-nav .tabs-disabled .tab-content-outer:active .tab-content-inner {
+    background-position: 0 0;
+}
+.tabs-nav .tabs-selected .tab-content-outer:link,
+.tabs-nav .tabs-selected .tab-content-outer:visited,
+.tabs-nav .tabs-disabled .tab-content-outer:link,
+.tabs-nav .tabs-disabled .tab-content-outer:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.tabs-nav .tab-content-outer:hover,
+.tabs-nav .tab-content-outer:focus,
+.tabs-nav .tab-content-outer:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+.tabs-nav .tabs-disabled {
+    opacity: .4;
+}
+.tabs-container {
+    border-top: 1px solid #B6C3CF;
+    margin: -3px 0 0 0;
+    padding: 10px 0;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+}
+.tabs-container.IE7 {
+	margin : 39px 0px 0px 0px;
+	padding : 8px 0px 0px 0px;
+}
+.tabs-loading em {
+    padding: 0 0 0 20px;
+    background: url(loading.gif) no-repeat 0 50%;
+}

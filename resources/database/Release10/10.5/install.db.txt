@@ -1,0 +1,15 @@
+alter_SavedResumeSearch.sql
+alter_SavedResumeSearch_add_name.sql
+create_CampaignSearch.sql
+alter_CampaignCriteriaSet.sql
+alter_CampaignCriteriaSet_add_campaignId.sql
+drop_CandidateSearcher.sql
+drop_JobHunter.sql
+alter_Candidate.sql
+create_OfferingCriteriaSet.sql
+create_OfferingCriteria.sql
+data_Migrate_OfferingLocation.sql
+data_EquivalentTerms.sql
+data_Locality_148.sql
+data_Community_localgovernment.sql
+data_Community_medicalpractitioner.sql

@@ -1,0 +1,36 @@
+﻿.employers_list {}
+	.employers_list .user {}
+	.employers_list .enabled_user {}
+		.employers_list .enabled_user th,
+		.employers_list .enabled_user td {
+		}
+		
+	.employers_list .disabled_user {}
+		.employers_list .disabled_user th,
+		.employers_list .disabled_user td {
+			color: #B0B0B0;
+		}
+		.employers_list .disabled_user a {
+			color: #6060FF;
+		}
+		.employers_list .disabled_user a:hover {
+			color: #FF6600;
+		}
+
+
+.organisations_list {}
+	.organisations_list .organisation {}
+	.organisations_list .verified_organisation {}
+	.organisations_list .unverified_organisation {}
+	
+	.organisations_list .unverified_organisation {}
+		.organisations_list .unverified_organisation th,
+		.organisations_list .unverified_organisation td {
+			color: #B0B0B0;
+		}
+		.organisations_list .unverified_organisation a {
+			color: #6060FF;
+		}
+		.organisations_list .unverified_organisation a:hover {
+			color: #FF6600;
+		}

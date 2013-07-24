@@ -1,0 +1,162 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+	width: 460px;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, 
+#JobDescription table, #JobDescription th, #JobDescription td, 
+#JobDescription ul, #JobDescription li, 
+#JobDescription label, #JobDescription span {
+	color: #000;
+	background-color: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: transparent url('hamilton_james_bruce_images/hjb_bg.gif') repeat-y top left; 
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad center {
+	margin-left: 52px;	
+	margin-right: 42px;
+}
+
+#JobAd #JobDescription #Ad table {
+	background: transparent url('hamilton_james_bruce_images/hjb_bg.gif') repeat-y top left; 
+	padding-left: 0;
+	padding-right: 80px;
+}
+
+#JobAd #JobDescription #Ad ul {
+	margin: 1em 32px;	
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad td,
+#JobAd #JobDescription #Ad li {
+	font-size: 100%;
+}
+
+#JobAd #JobDescription #Ad p {
+	margin-left: 42px;
+	margin-right: 62px;
+	margin-bottom: 12px;
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+
+/* blue border around the whole ad */
+#JobAd #JobDescription #Ad {
+	background: transparent url('hamilton_james_bruce_images/hjb_newShell_header.gif') no-repeat top left; 
+}
+
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: transparent url('hamilton_james_bruce_images/hjb_newShell_header.gif') no-repeat top left; 
+	height: 75px;
+}
+
+div#JobAd div#JobDescription div#Ad div#_ctl0__ctl0__ctl0__ctl0_Body_Structure_Form_Content_ucViewJobAd_pnlLocalApplicationsOnly {
+/*	display:none; */
+	text-align: left;
+	margin-top: 0px;
+	margin-left: 42px;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo p {
+	text-align: left;
+	margin-left: 0px;
+}
+
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	margin-top: 0px;
+}
+ 
+div#JobAd div#JobDescription div#Ad div#JobAdHeading div#_ctl0__ctl0__ctl0__ctl0_Body_Structure_Form_Content_ucViewJobAd_pnlExternalReference, 
+div#JobAd div#JobDescription div#Ad div#JobAdHeading div#_ctl0__ctl0__ctl0__ctl0_Body_Structure_Form_Content_ucViewJobAd_pnlCompanyName,
+div#JobAd div#JobDescription div#Ad div#JobAdHeading div#_ctl0__ctl0__ctl0__ctl0_Body_Structure_Form_Content_ucViewJobAd_pnlAdvertiser {
+	margin-top: 0px;
+	padding: 0px;
+	display: none;
+}
+
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	background: transparent url('hamilton_james_bruce_images/hjb_newShell_jtbg.gif') repeat-y top left; 
+	color: #fff;
+	font-weight: bold;
+	font-size: 200%;
+	padding-left: 32px;
+	padding-right: 180px;
+	margin-top: 0px;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	background: transparent url('hamilton_james_bruce_images/hjb_newShell_jtbase.gif') no-repeat top left; 
+	padding: 45px 30px 0px 42px;
+	margin-left: -42px;
+	margin-right: -32px;
+	display: block;
+}
+
+#JobAd #JobDescription #Ad table {
+	margin-top: 0px;
+	width: 460px;
+	margin-bottom: 20px;
+/*		border: 1px solid #000; */
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+	padding-left: 42px;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 32px;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+/*
+.screenNote {
+	font-style: normal;
+	color: #FFFFFF;
+}
+*/
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	padding-left: 42px; 
+	margin-left: 0px;
+	color: #000;
+	font-weight: normal;
+	height: 158px;
+	background: transparent url('hamilton_james_bruce_images/hjb_newShell_basetop.gif') no-repeat top left; 
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	display: none;
+}

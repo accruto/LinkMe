@@ -1,0 +1,83 @@
+/* THIS SHEET IS EXPLICITLY FOR THE 2 MEMBER HOME PAGES */
+/* MF (2010-06-24) - it appears the only page on the entire website which uses this
+   (via HomeMasterPage.master) is NetworkerHome.aspx. */
+
+#body-container
+{
+	background:url(../images/home/home-bg-tile.png) repeat-y;
+}
+
+.home-left-half
+{
+	width:287px;
+	float:left;
+}
+
+.home-right-half
+{
+	float:right;
+	width:386px;
+}
+
+#seo-footer
+{
+	font-size: 60%;
+	text-align: center;
+}
+
+#seo-footer ul
+{
+	list-style-type: none;
+	margin-bottom: 0;
+}
+
+#seo-footer li
+{
+	display:inline;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.home-section-title, .home-editable-section-title
+{
+	width:100%;
+	height:26px;
+	line-height:26px;
+	margin-bottom:5px;
+	background: url(../images/universal/home-h1-bg.png) repeat-x;
+}
+
+
+.home-section-title h1, .home-editable-section-title h1
+{
+	height: 26px;
+	border-left: 1px solid #DAE2EB;
+	line-height: 26px;
+	font-family:arial;
+	font-size:16px;
+	font-weight:bold;
+	color:#000033;
+	margin-bottom:4px;
+	text-align: left;
+	padding-left: 8px;
+	width:97%;
+}
+
+.anon-home-left
+{
+	width:287px;
+	float:left;
+}
+
+.anon-home-centre
+{
+	float:left;
+	width:386px;
+}
+
+.anon-home-right
+{
+	float:right;
+	width:386px;
+}
+

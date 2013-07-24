@@ -1,0 +1,9 @@
+FiEventDetail.sql
+FiEventType.sql
+FiMessageHandlerType.sql
+FiMessageHandler.sql
+FiMessageReaderType.sql
+FiMessageReader.sql
+FiNamespace.sql
+FiSourceType.sql
+FiSource.sql

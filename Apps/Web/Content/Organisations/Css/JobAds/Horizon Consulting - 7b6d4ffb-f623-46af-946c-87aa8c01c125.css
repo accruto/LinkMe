@@ -1,0 +1,99 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, 
+#JobDescription table, #JobDescription th, #JobDescription td, 
+#JobDescription ul, #JobDescription li, 
+#JobDescription label, #JobDescription span {
+	color: #000;
+	background-color: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #e3e6eb;
+	margin-bottom: 1em;
+	width: 460px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad center {
+	margin: 0 32px 1em 32px;	
+}
+
+#JobAd #JobDescription div#Ad {
+	margin: 0 0 1em 0;
+}
+
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 1em 32px;	
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad td,
+#JobAd #JobDescription #Ad li {
+	font-size: 100%;
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: url('horizon_images/horizon_header.gif') no-repeat left top;
+	height: 100px;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #000;
+	font-size: 200%;
+	font-weight: bold;
+	margin: 32px;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 380px !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	display: none;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: url('horizon_images/horizon_footer.gif') no-repeat center 99%;
+	height: 64px;
+}

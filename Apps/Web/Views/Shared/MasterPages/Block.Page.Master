@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" Inherits="LinkMe.Apps.Asp.Mvc.Views.ViewMasterPage" MasterPageFile="~/Views/Shared/MasterPages/Block.Site.master" %>
+<%@ Import Namespace="LinkMe.Apps.Asp.Content" %>
+<%@ Import Namespace="LinkMe.Web.Content" %>
+
+<asp:Content ContentPlaceHolderID="Body" runat="server">
+
+    <div id="fb-root"></div>
+
+    <% Html.RenderPartial("BannerHeader"); %>
+
+    <div id="container">
+    
+        <div id="header">
+            <% Html.RenderPartial("PageHeader"); %>
+        </div>
+        <div id="subheader">
+            <asp:ContentPlaceHolder ID="BreadCrumbs" runat="server" />
+            <asp:ContentPlaceHolder ID="PageSubHeader" runat="server" />
+            <% Html.RenderPartial("PageSubHeader"); %>
+        </div>
+
+        <div id="body-container">
+        
+            <div id="left-sidebar">
+                <asp:ContentPlaceHolder ID="LeftSidebarContent" runat="server" />
+            </div>
+
+            <div id="main-body">
+                <div id="form-container">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+
+            <div id="sidebar">
+            </div>
+
+            <div class="clearer"></div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="Footer" runat="server" />
+        <div id="footer">
+            <% Html.RenderPartial("PageFooter"); %>
+        </div>
+
+    </div>
+    
+    <% Html.RenderPartial("BannerFooter"); %>
+
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PageTitle" runat="server">
+    <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+        <% Page.Title = "Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia"; %>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MetaTags" runat="server">
+    <%= Html.RenderStyles(StyleBundles.Block.Page) %>
+    <%= Html.RenderStyles(StyleBundles.Block.Elements) %>
+    <asp:ContentPlaceHolder ID="MetaTags" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JavaScript" runat="server">
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="BodyTrackers" runat="server">
+    <asp:ContentPlaceHolder ID="BodyTrackers" runat="server" />
+</asp:Content>

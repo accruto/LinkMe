@@ -1,0 +1,297 @@
+﻿/* THIS SHEET IS FOR ALL STYLES RELATING TO THE EMPLOYER SITE*/
+
+/* -------- "Nav Ribbon" ---------- */
+.nav_ribbon {}
+	.nav_ribbon_inner {}
+
+/* ---------- Video list ----------- */
+
+.videos:after,
+.video:after,
+.video .description:after {   /* Self-clearing for modern browsers */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.videos,
+.video,
+.video .description {         /* Self-clearing for IE6,7 */
+    zoom: 1;
+}
+
+.videos {}
+
+    .videos .video {
+        width: 100%;
+        margin-top: 10px;
+        float: left;
+        clear: left;
+    }
+    
+    .videos .ie_firstvideo,
+    .videos .video:first-child {
+        margin-top: 0;
+    }
+    
+    .minilist .video {
+        margin-top: 0;
+        float: none;
+        width: auto;
+    }
+    
+        .videos .video .preview {
+            float: left;
+            margin-right: 15px;
+        }
+        .videos .video .preview img {
+            border: none;
+        }
+        .videos .video .description {
+            float: left;
+            padding-top: 30px;
+            margin-top: -1em;
+            font-size: 100%;    /* Minilist override */
+            overflow: visible;  /* Minilist override */
+            width: auto;        /* Minilist override */
+        }
+            .videos .video .description a {
+                display: block;
+                margin-bottom: 0.2em;
+            }
+            .videos .video span.details {
+                display: block;
+                font-size: 85%;
+                color: #808080;
+            }
+            
+        .videos .nopreview_video .play-video_button {
+            margin: 0; padding: 0;
+            margin-right: 10px;
+            position: absolute !important;
+        }
+        .videos .nopreview_video .description {
+            float: none;
+            padding-top: 0;
+            margin-top: 0;
+            font-size: 85%;
+            padding-left: 35px;
+            white-space: nowrap;    /* IE6 idiocy insurance */
+        }
+        .videos .nopreview_video .details {
+            float: none;
+            padding-left: 35px;
+            white-space: nowrap;    /* IE6 idiocy insurance */
+        }
+
+.add-and-save-candidate-status {
+	color: #888;
+	font-size: 100%;
+}
+
+.invisible-action
+{
+	visibility:hidden;
+}
+
+.new-folder a {
+	font-weight: bold;
+	text-decoration: none;
+	background: url(../images/employer/folder-new-bg.gif) left bottom repeat-x;
+}
+.new-folder a:hover {
+	text-decoration: underline;
+}
+
+/* -------  Candidate Search Result Display -------*/
+
+#search-results
+{
+	padding-top:15px;
+	width:100%;
+}
+
+.search-result-container
+{
+	border-top: solid 1px #DDD;
+	margin-top: 10px;
+	padding-top:15px
+}
+
+.search-result-data
+{
+	float:left;
+	width:60%;
+}
+
+.search-result-actions
+{
+	float:right;
+	width:35%;
+}
+
+.title
+{
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.title-line
+{
+	margin-bottom:9px;
+}
+
+/* -------  Candidate Alerts & Saved Searches (Hotlist) -------*/
+
+.table-heading{
+	width: 330px;
+	border-bottom: 3px solid #366696;
+	color: #366696;
+	font-family:arial;
+	font-weight:bold;
+	font-size: 16px;
+}
+
+.table-row{
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #C5CDDC;
+}
+
+/*---- Tool headings ------ */
+.download-outlook-toolbar
+{
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	color:Blue;
+	padding-left:30px;
+	background: url(../images/employer/tool-icons/outlook.png) no-repeat 0px 10px;
+	margin-top:10px;
+	height:40px;
+}
+
+.saved-candidate-tool
+{
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	color:Blue;
+	padding-left:30px;
+	background: url(../images/employer/tool-icons/saved-candidates.png) no-repeat;
+	margin-top:10px;
+	height:22px;
+}
+
+.create-alert-tool
+{
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	color:Blue;
+	padding-left:30px;
+	background: url(../images/employer/tool-icons/candidate-email-alerts.png) no-repeat;
+	margin-top:10px;
+	height:22px;
+}
+
+.post-job-tool
+{
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	color:Blue;
+	padding-left:30px;
+	background: url(../images/employer/tool-icons/post-job-ad.png) no-repeat;
+	margin-top:10px;
+	height:22px;
+}
+
+/* ---------- Saved Candidates, Searches, Open, Closed, Draft Job Ad repeater containers ------- */
+.divider.createemailalert {
+	height : 1px;
+	background-color : #CCCCCC;
+	margin-top : 10px;
+	width: 96%;
+}
+.repeater-container
+{
+	border-bottom:solid 1px #ccc;
+	padding-bottom: 10px;
+	padding-top: 5px;
+	width:96%;
+}
+
+.repeater-container h2 
+{
+	margin-top:0px;
+	padding-top:0px;
+}
+
+.repeater-details-container
+{
+	float:left;
+	width: 400px;
+}
+
+.repeater-actions-container
+{
+	float:left;
+	margin-left:20px;
+}
+
+/* ---------- Testimonials ------- */
+.testimonial-container
+{
+	border:solid 1px #F0F0F7;
+	border-top: solid 1px  #B0E0A0;
+	background:#EFFFE2;
+	margin-top:20px;
+	padding:10px;
+}
+
+/*    LR: This IE6 hack gets the specified elements to appear
+ *    on top of their parent (like you'd assume they should) */
+.testimonial-container p, .alternate-testimonial-container p
+{
+	_position: relative;
+	_z-index: 1;
+}
+
+.alternate-testimonial-container
+{
+	border:solid 1px #F0F0F7;
+	border-top: solid 1px #A9D4ED;
+	background:#F6F9FF;
+	margin-top:20px;
+	padding:10px;
+}
+
+.testimonial-details
+{
+	padding-left:150px;
+	float:left;
+}
+
+.testimonial-logo
+{
+	float:left;
+	padding-left:30px;
+}
+
+.row-heading
+{
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.record_id {
+    display: none;
+}
+
+/* Suggested candidates (job ads) */
+.search-suggestions{}

@@ -1,0 +1,2266 @@
+.search-results_ascx {
+    position: relative; /* Anchor for AP (for results-loading-overlay) */
+}
+	.search-results_ascx:after,
+	.search-results_ascx .search-result .search-result-body:after,
+	.search-results_ascx .search-result .search-result-header:after,
+	.search-results_ascx .candidate-search_result .basic-details:after,
+	.search-results_ascx .candidate-search_result .additional-details:after,
+	.search-results_ascx .candidate-search_result .additional-details .detail:after,
+	.search-results_ascx .candidate-search_result .additional-details .detail-content:after,
+	.search-results_ascx .candidate-search_result .additional-details .jobs:after,
+	.search-results_ascx .candidate-search_result .additional-details .jobs .job:after,
+	.search-results_ascx .candidate-search_result .additional-details .jobs .job .description:after,
+	.search-results_ascx .candidate_search-result .status-icons:after,
+	.search-results_ascx .candidate_search-result .client-activity:after,
+	.search-results_ascx .candidate_search-result .unlocking-and-phones:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+	.search-results_ascx,
+	.search-results_ascx .search-result .search-result-body,
+	.search-results_ascx .search-result .search-result-header,
+	.search-results_ascx .candidate-search_result .basic-details,
+	.search-results_ascx .candidate-search_result .additional-details,
+	.search-results_ascx .candidate-search_result .additional-details .detail,
+	.search-results_ascx .candidate-search_result .additional-details .detail-content,
+	.search-results_ascx .candidate-search_result .additional-details .jobs,
+	.search-results_ascx .candidate-search_result .additional-details .jobs .job,
+	.search-results_ascx .candidate-search_result .additional-details .jobs .job .description,
+	.search-results_ascx .candidate_search-result .status-icons,
+	.search-results_ascx .candidate_search-result .client-activity,
+	.search-results_ascx .candidate_search-result .unlocking-and-phones {
+		zoom: 1;
+		*zoom: 0;
+	}
+		
+	.search-results_ascx .search-result {
+		border: 1px solid #EFEFEE;
+		background: #FBFBFB url(../../images/controls/search-results/search-result_bg.gif) 0px top repeat-y;
+		padding: 1px;
+		zoom: 1;
+		margin-top: 10px;
+		position: relative; /* For AP anchor (e.g. compact view checkbox) */
+	}
+	.search-results_ascx .search-result.IE7 {
+		padding-top : 3px;
+		background : #FFFFFF;
+	}
+	.search-results_ascx .search-result:first-child {
+	}
+	.search-results_ascx .search-result:hover {
+		border: 2px solid #CCE6FF;
+		padding: 0px;
+	}
+	.search-results_ascx .IE7.search-result:hover {
+		padding-top : 3px;
+	}
+    .search-results_ascx .search-result em {
+        font-style: normal;
+        font-weight: bold;
+    }
+    
+    /* -------------------
+       Selected appearance
+       -------------------
+    */
+        .search-results_ascx .selected_search-result, .search-results_ascx .selected_search-result.IE7 {
+            border: 1px solid #ABC0EC;
+            background: #EBEFF5 url(../../images/controls/search-results/search-result_bg.gif) -800px top repeat-y;
+        }
+	    .search-results_ascx .selected_search-result:hover {
+		    border: 1px solid #8BB4F1;
+		    -moz-box-shadow:    inset 0px 0px 0px 1px rgba(139,180,241,0.33);
+		    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(139,180,241,0.33);
+		    box-shadow:         inset 0px 0px 0px 1px rgba(139,180,241,0.33);
+		    padding: 1px;
+	    }
+    
+/* ---------------------
+   Criteria-used display
+   ---------------------
+*/
+    .search-results_ascx .search-criteria {}
+        .search-results_ascx .search-criteria .search-criterion {
+            display: block;
+            
+        }
+        .search-results_ascx .search-criteria .search-criterion-separator {
+            display: none;
+        }
+    
+/* --------------------
+   Expanded view layout
+   --------------------
+*/ 
+	.expanded_search-results .search-result .search-result-header {
+		/*background: #FFFFFF url(../../images/controls/search-results/search-result-header_bg.gif) 0px bottom no-repeat;*/
+		background-color : #FFFFFF;
+		margin: -1px -1px 0px -1px;
+		padding: 1px 1px 0px 1px;
+		position: relative; /* Anchor for AP */
+		border-bottom : 1px solid #EEEEED;
+	}
+	.expanded_search-results .search-result .search-result-header.IE7 {
+		margin-top : -2px;
+		padding-bottom : 2px;
+		display : inline-block;
+	}
+	.expanded_search-results .search-result .search-result-header.candidate-source-applied.IE7, .expanded_search-results .search-result .search-result-header.candidate-source-shortlisted.IE7 {
+		padding-bottom : 1px;
+	}
+	
+	.expanded_search-results .search-result:hover .search-result-header {
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+	.expanded_search-results .search-result:hover .search-result-header.IE7 {
+		margin-top : -2px;
+		/*margin-bottom : -5px;*/
+	}
+	.expanded_search-results .selected_search-result:hover .search-result-header.IE7 {
+		padding-top : 1px;
+	}
+
+	.expanded_search-results .search-result .search-result-body {
+		padding: 10px;
+	}
+	.expanded_search-results .search-result .search-result-body.IE7 {
+		padding-bottom : 30px;
+		display : inline-block;
+		background-color : #FBFBFB;
+	}
+	.expanded_search-results .selected_search-result .search-result-body.IE7 {
+		background-color : transparent;
+	}
+	.expanded_search-results .search-result:hover .search-result-body.IE7 {
+		margin-top : 0px;
+	}
+	
+	.expanded_search-results .search-result .search-result-header.candidate-source-applied {
+		background-color : #F8FEFC;
+	}
+	
+	.expanded_search-results .search-result .search-result-header.candidate-source-shortlisted {
+		background-color : #FEFBF8;
+	}
+	
+	.expanded_search-results .search-result .search-result-body.candidate-source-applied {
+		background-color : #E6FAF6;
+		margin : -1px -1px -1px -1px;
+	}
+	
+	.expanded_search-results .search-result:hover .search-result-body.candidate-source-applied {
+		margin : -1px 0px 0px 0px;
+		padding : 10px 9px 9px 9px;
+	}
+
+	.expanded_search-results .search-result .search-result-body.candidate-source-shortlisted {
+		background-color : #FAF3E8;
+		margin : -1px -1px -1px -1px;
+	}
+	
+	.expanded_search-results .search-result:hover .search-result-body.candidate-source-shortlisted {
+		margin : -1px 0px 0px 0px;
+		padding : 10px 9px 9px 9px;
+	}
+	.expanded_search-results .search-result.IE7 .search-result-body.candidate-source-shortlisted, .expanded_search-results .search-result.IE7 .search-result-body.candidate-source-applied {
+		margin : -1px -1px -1px -1px;
+		padding : 10px 13px 10px 9px;
+	}	
+	.expanded_search-results .search-result.IE7:hover .search-result-body.candidate-source-shortlisted, .expanded_search-results .search-result.IE7:hover .search-result-body.candidate-source-applied {
+		margin : -1px -1px 0px 0px;
+		padding : 10px 12px 9px 8px;
+	}	
+	.expanded_search-results .search-result.IE7 .notes-content {
+		position : relative;
+	}
+	.expanded_search-results .search-result.IE7 .notes-content .notes-action_holder {
+		margin-top : -15px;
+	}
+	.expanded_search-results .search-result.IE7 .notes-content .notes-detail_holder {
+		width : 670px;
+	}
+	
+    /* -------------------------------------
+       Selected appearance for expanded view
+       -------------------------------------
+    */ 
+        .expanded_search-results .selected_search-result .search-result-header {
+            background: #EFF3F9 url(../../images/controls/search-results/search-result-header_bg.gif) -800px bottom no-repeat;
+        }
+        
+        .expanded_search-results .selected_search-result .search-result-header .flag-holder-flagged{
+            background: #FFD1D3;
+        }
+	
+
+/* -------------------
+   Compact view layout
+   -------------------
+*/
+	.compact_search-results_ascx .search-result {
+		padding : 0px 0px 0px 0px;
+	}
+	.compact_search-results_ascx .search-result .candidate-source-applied {
+		background-color : #D4F7F1;
+	}
+	.compact_search-results_ascx .search-result:hover .candidate-source-applied{
+		padding : 7px 0px 7px 7px;
+	}
+	.compact_search-results_ascx .search-result .candidate-source-shortlisted {
+		background-color : #F7EAD7;
+	}
+	.compact_search-results_ascx .search-result:hover .candidate-source-shortlisted {
+		padding : 7px 0px 7px 7px;
+	}
+	.compact_search-results_ascx .search-result .search-result-body {
+		padding: 8px 0px 8px 8px;
+		position: relative; /* Anchor for AP (e.g. expando uses it) */
+		/*position: inherit;
+		*zoom: 1;*/
+	}
+	.compact_search-results_ascx .search-result .search-result-body.expanded.IE9 {
+		padding-bottom : 8px;
+	}
+	.compact_search-results_ascx .search-result .search-result-body.IE7, .compact_search-results_ascx .selected_search-result .search-result-body.IE7 {
+		padding-top : 5px;
+	}
+	.compact_search-results_ascx .search-result .search-result-body.candidate-source-shortlisted.IE7, .compact_search-results_ascx .search-result .search-result-body.candidate-source-applied.IE7 {
+		display : inline-block;
+		margin-top : -3px;
+		padding-top : 8px;
+		padding-bottom : 0px;
+	}
+	.compact_search-results_ascx .search-result:hover .search-result-body.candidate-source-shortlisted.IE7, .compact_search-results_ascx .search-result:hover .search-result-body.candidate-source-applied.IE7 {
+		padding-top : 7px;
+	}
+	.compact_search-results_ascx .search-result.selected_search-result:hover .search-result-body.IE7 {
+		padding-top : 5px;
+	}
+	.compact_search-results_ascx .search-result:hover .search-result-body.expanded.IE9 {
+		padding-bottom : 7px;
+	}
+	.compact_search-results_ascx .search-result:hover .search-result-body {
+		padding : 7px 0px 7px 7px;
+	}
+	.compact_search-results_ascx .search-result:hover .search-result-body.IE9 {
+		padding-bottom : 7px;
+	}
+	.compact_search-results_ascx .search-result:hover .search-result-body.IE7 {
+		padding-top : 4px;
+	}
+    .compact_search-results_ascx .search-result .search-result-extension {
+        padding: 0px 8px 8px 8px;
+    }
+	.compact_search-results_ascx .search-result:hover .search-result-extension {
+		padding : 1px 7px 7px 7px;
+	}
+    .compact_search-results_ascx .search-result.IE7 .search-result-extension {
+        padding-bottom : 0px;
+		margin-top : 29px;
+    }
+	.compact_search-results_ascx .search-result.IE7:hover .search-result-extension {
+		padding-bottom : 0px;
+		margin-top : 65px;
+	}
+    .compact_search-results_ascx .search-result .result-selected-checkbox {
+        top: 50%;
+        float: left;
+        margin: 16px 0 0 0;
+        /*position: absolute;*/
+    }
+    .compact_search-results_ascx .search-result .columns .column:first-child {
+        margin-left: -8px; /*13px;*/
+    }
+    .compact_search-results_ascx .search-result .columns .column {
+        margin-left: 10px;
+    }
+    .compact_search-results_ascx .search-result .columns .header_column {
+        width: 265px;
+        margin-top: -8px;
+    }
+	.compact_search-results_ascx .search-result .columns.IE7 .header_column {
+		margin-top : -5px;
+		padding-bottom : 11px;
+	}
+	.compact_search-results_ascx .search-result:hover .columns.IE7 .header_column {
+		padding-bottom : 10px;
+	}
+    .compact_search-results_ascx .search-result .columns .jobs_column {
+        width: 268px;
+        font-size: 85%;
+    }
+    .compact_search-results_ascx .search-result .columns .desired-salary_column {
+        width: 78px;
+        font-size: 85%;
+    }
+	.compact_search-results_ascx .search-result:hover .notes-content {
+		margin : 1px -1px -1px -1px;
+	}
+	.compact_search-results_ascx .search-result.IE7 .notes-content {
+		display : inline-block;
+	}
+	.compact_search-results_ascx .search-result.IE7 .notes-content .notes-action_holder {
+		margin-top : -15px;
+		padding-bottom : 31px;
+	}
+	.compact_search-results .search-result.IE7 .notes-content .notes-detail_holder {
+		width : 670px;
+	}
+	.compact_search-results_ascx .search-result .notes-content.candidate-source-shortlisted, .compact_search-results_ascx .search-result .notes-content.candidate-source-applied {
+		padding : 0px 0px 1px 1px;
+		margin : -1px 0px 0px 0px;
+	}
+	.compact_search-results_ascx .search-result:hover .notes-content.candidate-source-shortlisted, .compact_search-results_ascx .search-result:hover .notes-content.candidate-source-applied {
+		padding : 0px 0px 0px 0px;
+		margin : 0px 0px 0px 0px;
+	}
+/*  --------------------------------
+    Candidate result - basic details
+    --------------------------------
+*/
+	.search-results_ascx .candidate_search-result .basic-details {
+		float: left;
+		position: relative; /* AP anchor */
+		padding: 9px 7px;
+		padding-right: 29px;
+		cursor: default;
+		margin-bottom: -1px;
+		width: 250px;
+		width: 253px\9; /* IE8 and below only hack */
+		*width: 250px\9; /* IE7 and below only hack */
+	}
+		.search-results_ascx .candidate_search-result .basic-details .result-selected-checkbox {
+			float: left;
+			margin-top: 16px;
+			margin-left: 0px;
+			margin-right: 7px;
+			margin-top: 13px\9; /* IE8 and below only hack */
+			margin-left: -3px\9; /* IE8 and below only hack */
+		}
+
+		.search-results_ascx .candidate_search-result .basic-details .job-hunter-status {
+			float: left;
+			background: url(../../images/controls/search-results/job-hunter-statuses.png) top left no-repeat;
+			width: 51px;
+			height: 45px;
+			text-indent: -9999px;
+			overflow: hidden;
+			margin-right: 9px;
+		}
+		
+		.search-results_ascx .candidate_search-result .basic-details .immediately-available_job-hunter-status {
+			background-position: top left;
+		}
+		.search-results_ascx .candidate_search-result .basic-details .actively-looking_job-hunter-status {
+			background-position: -51px top;
+		}
+		.search-results_ascx .candidate_search-result .basic-details .happy-to-talk_job-hunter-status {
+			background-position: -102px top;
+		}
+		.search-results_ascx .candidate_search-result .basic-details .not-looking_job-hunter-status {
+			background-position: -153px top;
+		}
+		.search-results_ascx .candidate_search-result .basic-details .not-specified_job-hunter-status {
+			background-position: top right;
+		}
+		
+		.search-results_ascx .candidate_search-result .basic-details-sublayout {
+			float: left;
+			white-space: nowrap;
+		}
+		.search-results_ascx .candidate_search-result .basic-details-sublayout.IE9 {
+			font-size : 12.9px;
+		}
+			.search-results_ascx .candidate_search-result .basic-details .candidate-name a {
+		        overflow: hidden;
+		        width: 170px;
+			}
+			.search-results_ascx .candidate_search-result .basic-details .location {
+				color: #808080;
+		        overflow: hidden;
+			}
+			.search-results_ascx .candidate_search-result .basic-details .last-updated, .search-results_ascx .candidate_search-result .basic-details .date-applied {
+		        overflow: hidden;
+			}
+    /*  ---------------------------
+        Expanded view basic details
+        ---------------------------
+    */
+		.expanded_search-results .candidate_search-result .basic-details .candidate-name a {
+			display: block;
+			font-size: 130%;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+	        max-width: 170px;
+	        width: 168px\9;
+	        max-width: 168px\9;
+		}
+		.expanded_search-results .candidate_search-result .basic-details .location {
+			display: block;
+			font-size: 85%;
+			color: #808080;
+			padding-top: 2px;
+	        max-width: 170px;
+	        width: 168px\9;
+	        max-width: 168px\9;
+		}
+		.expanded_search-results .candidate_search-result .basic-details .last-updated, .expanded_search-results .candidate_search-result .basic-details .date-applied {
+			display: block;
+			font-size: 70%;
+	        max-width: 170px;
+	        width: 168px\9;
+	        max-width: 168px\9;
+		}
+    /*  --------------------------
+        Compact view basic details
+        --------------------------
+    */
+	    .compact_search-results_ascx .candidate_search-result .basic-details {
+		    padding: 5px 5px;
+		    padding-right: 27px;
+	    }
+		.compact_search-results_ascx .candidate_search-result .basic-details .candidate-name a {
+			display: block;
+			font-size: 100%;
+			font-weight: bold;
+	        max-width: 140px;
+		}
+		.compact_search-results_ascx .candidate_search-result .basic-details .location {
+			display: block;
+			font-size: 85%;
+			color: #808080;
+			padding-top: 2px;
+	        max-width: 140px;
+		}
+		.compact_search-results_ascx .candidate_search-result .basic-details .last-updated,  .compact_search-results_ascx .candidate_search-result .basic-details .date-applied {
+			display: block;
+			font-size: 70%;
+	        max-width: 140px;
+		}
+			
+/*  -------------------------------
+    Candidate result - status icons
+    -------------------------------
+*/
+	.expanded_search-results .candidate_search-result .unlocking-and-phones, .contact-locked-icon, .contact-unlocked-icon, .compact_search-results_ascx .candidate_search-result .status-icons ul, .compact_search-results_ascx .candidate_search-result .status-icons .contact-locked-icon {
+		background-image : url("../../images/employers/icons/UnlockingAndPhones.png");
+	}
+
+    /* Icons intended to measure 16x16px; width may be a few pixels wider due to generous horizontal spacing */
+
+    .in-folders-icon            { background: url(../../images/employers/icons/folder.png)                left center no-repeat; padding: 1px 0 2px 21px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .has-notes-icon             { background: url(../../images/employers/icons/note.png)                  left center no-repeat; padding: 1px 0 2px 21px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .viewed-icon                { background: url(../../images/employers/icons/viewed.png)                left center no-repeat; padding: 1px 0 2px 21px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+    .expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li .contact-unlocked-icon {
+		background-position : -1px -30px;
+		width : 31px;
+		height : 29px;
+		display : block;
+		margin : 0px 0px 0px 1px;
+	}
+    .expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li .contact-locked-icon {
+		background-position : -35px -30px;
+		width : 118px;
+		height : 29px;
+		display : block;
+		margin : 0px 0px 0px 1px;
+	}
+    .phone-mobile-icon {
+		background : url(../../images/employers/icons/phone-mobile.png) left center no-repeat;
+		padding : 1px 0 2px 21px;
+		display : inline-block;
+		min-height : 13px;
+		margin-top : 6px;
+	}
+    .phone-landline-icon {
+		background : url(../../images/employers/icons/phone-landline.png) left center no-repeat;
+		padding : 1px 0 2px 21px;
+		display : inline-block;
+		min-height : 13px;
+		margin-top : 6px;
+	}
+    .phone-mobile-dimmed-icon {
+		background : url(../../images/employers/icons/phone-mobile-dimmed.png)   left center no-repeat;
+		padding : 1px 0 2px 21px;
+		display : inline-block;
+		min-height : 13px;
+		margin-top : 6px;
+	}
+    .phone-landline-dimmed-icon {
+		background : url(../../images/employers/icons/phone-landline-dimmed.png) left center no-repeat;
+		padding : 1px 0 2px 21px;
+		display : inline-block;
+		min-height : 13px;
+		margin-top : 6px;
+	}
+    .is-flagged-icon            { background: url(../../images/universal/action-icons/flagged.png)         left center no-repeat; padding: 1px 0 2px 21px; display: inline-block; min-height: 13px; *display: inline; *zoom: 1; }
+
+    /* --------------------------
+       Expanded view status icons
+       --------------------------
+    */
+	    .expanded_search-results .candidate_search-result .status-icons {
+	        float: right;
+	        *float: none;
+	        width: 325px;
+	        *width: 326px;
+	        margin-top: 7px 10px 9px 10px;
+	        font-size: 85%;
+	        color: #A0A0A0;
+	        padding: 0 0 0 5px;
+	    }
+	    .expanded_search-results .candidate_search-result .status-icons .locking {
+	        *width: auto;
+	        *min-width: 80px;
+	        *display:inline-block;
+	        *text-align:center;
+	    }
+	    .expanded_search-results .candidate_search-result .client-activity a:link  { color: #779EF5; }
+	    .expanded_search-results .candidate_search-result .client-activity a:hover { color: #FF6600; }
+	    
+	    .expanded_search-results .candidate_search-result:hover .status-icons {
+	        left: 299px;
+	    }
+	    
+	        .expanded_search-results .candidate_search-result .status-icons ul {
+	            float: left;
+	            *float: none;
+	            clear: left;
+	            *clear: none;
+	            *zoom: 1;
+	        }
+	        
+            .expanded_search-results .candidate_search-result .status-icons ul li {
+                float: left;
+                margin:0;padding:0;
+                margin-left: 15px;
+                min-height: 16px;
+            }
+            .expanded_search-results .candidate_search-result .status-icons ul li:first-child {
+                margin-left:0;
+            }
+            
+	        .expanded_search-results .candidate_search-result .phone-number {
+	            color: #333333;
+	        }
+	            
+	        .expanded_search-results .candidate_search-result .client-activity {
+	            margin:0;padding:0;
+	            list-style: none;
+	            padding: 3px 5px;
+	            margin-bottom: 2px;
+	        }
+			.expanded_search-results .candidate_search-result .unlocking-and-phones {
+	            margin : 0;
+				padding : 0;
+	            list-style : none;
+				width : 299px;
+				height : 29px;
+	        }
+	        .expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li {
+				margin : 0px 8px 0px 0px;
+			}
+			.expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li .emptynumber {
+				display : inline-block;
+				margin-top : 8px;
+			}
+			.expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li.withdivider {
+				list-style-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAAjElEQVQIW2NkYGBgZGxoaGBiTJt5hpUxd9I2dsaS7ovcjA19V4UYW2eekWRsmHZJibFtxlUtxqbZl4wZ26ZfsWZsm3XJnrF59lUnxuaZl90Ym2dc9YASIG7rjKvOjM3TLzswtsy6bMXYMuOyCWPr9Is6IMXKjPWTz0lBjIdY1HCVjTE0dBUzxBkgBwEAkUw4EHflxicAAAAASUVORK5CYII=);
+				margin-left : 6px;
+			}
+			.expanded_search-results .candidate_search-result .status-icons ul.unlocking-and-phones li.withdivider span {
+				position : absolute;
+				margin-left : 0px;
+			}
+	        .expanded_search-results .basic-details_holder, .compact_search-results_ascx .basic-details_holder {
+	            float:left;
+	        }
+			.expanded_search-results .basic-details_holder.IE7 {
+				padding-top : 2px;
+			}
+	        
+	        /* --------------------------------------------------
+               Flagged view for expanded and compact views
+               --------------------------------------------------
+            */
+	        .expanded_search-results .flag-holder {
+	            float:right;
+	            width: 26px;
+	            text-align: center;
+	            height: 64px;
+                margin: -1px -1px 0 0;  
+	        }
+			.expanded_search-results .search-result .flag-holder.IE9 {
+				height : 74px;
+			}
+			.expanded_search-results .search-result .flag-holder.IE8 {
+				height : 64px;
+			}
+			.expanded_search-results .IE7.search-result .flag-holder .flag {
+				margin : 2px 2px 0px 2px;
+			}
+			.expanded_search-results .search-result.IE7 .flag-holder.flagged {
+				height : 67px;
+				margin-top : -2px;
+				margin-bottom : -2px;
+			}
+			.expanded_search-results .search-result.IE7 .flag-holder.manage-candidate {
+				height : 77px;
+				margin-bottom : -1px;
+			}
+	        .expanded_search-results .search-result:hover .flag-holder {
+		        width: 25px;
+				height : 64px;
+                margin: 0px 0px 0px 0px;
+	        }
+			.expanded_search-results .search-result:hover .flag-holder.IE9 {
+				height : 73px;
+			}
+			.expanded_search-results .search-result:hover .flag-holder.IE8 {
+				height : 63px;
+			}
+			.expanded_search-results .IE7.search-result:hover .flag-holder {
+				margin-top : -1px;
+				height : 66px;
+			}
+			.expanded_search-results .search-result.IE7:hover .flag-holder.flagged {
+				height : 66px;
+				margin-top : -1px;
+				margin-bottom : 0px;
+			}
+			.expanded_search-results .search-result.IE7:hover .flagged .flag {
+				margin-top : 2px;
+			}
+			.expanded_search-results .search-result:hover .flag-holder.manage-candidate{
+				height : 76px;
+			}
+			.expanded_search-results .search-result:hover .flag-holder.manage-candidate.IE9 {
+				height : 73px;
+			}
+			.expanded_search-results .search-result .flag-holder.manage-candidate.IE8 {
+				height : 76px;
+			}
+			.expanded_search-results .search-result:hover .flag-holder.manage-candidate.IE8 {
+				height : 75px;
+			}
+			.expanded_search-results .search-result.IE7:hover .flag-holder.manage-candidate {
+				margin-bottom : -1px;
+				height : 77px;
+			}
+			.expanded_search-results .search-result.IE7:hover .flag-holder.flagged.manage-candidate {
+				margin-bottom : -1px;
+				height : 76px;
+			}
+	        
+	        .compact_search-results_ascx .flag-holder {
+	            float:right;
+	            width: 30px;
+	            text-align: center;
+	            height: 88px;
+                margin: -8px 0px -9px 0px;  
+	        }
+			
+			.compact_search-results_ascx .search-result:hover .flag-holder.manage-candidate {
+				height : 95px;
+			}
+			.compact_search-results_ascx .search-result:hover .expanded .flagged.manage-candidate {
+				height : 96px;
+				margin-bottom : -8px;
+			}
+			.compact_search-results_ascx .search-result:hover .flag-holder.manage-candidate.IE9 {
+				height : 89px;
+			}
+			.compact_search-results_ascx .search-result .flag-holder.manage-candidate.IE8 {
+				height : 94px;
+				margin-bottom : -7px;
+			}
+			.compact_search-results_ascx .search-result .search-result-body.expanded .flag-holder.manage-candidate.IE8 {
+				height : 93px;
+			}
+			.compact_search-results_ascx .search-result:hover .search-result-body.expanded .flag-holder.manage-candidate.flagged.IE8 {
+				height : 92px;
+			}
+			.compact_search-results_ascx .search-result:hover .search-result-body.expanded .flag-holder.manage-candidate.IE8 {
+				height : 91px;
+			}
+			.compact_search-results_ascx .search-result:hover .flag-holder.manage-candidate.IE8 {
+				height : 92px;
+			}
+			.compact_search-results_ascx .flag-holder.manage-candidate {
+				height : 97px;
+				margin-bottom : -8px;
+			}
+	        
+	        .expanded_search-results .flagged {
+                background: #FFD1D3;
+				height : 65px;
+            }
+	        .expanded_search-results .flagged.manage-candidate {
+				height : 77px;
+            }
+	        .compact_search-results_ascx .flagged.manage-candidate {
+				height : 97px;
+            }
+			.compact_search-results_ascx .falgged.manage-candidate.IE9 {
+				height : 91px;
+			}
+			.compact_search-results_ascx .search-result-body.expanded .flagged.manage-candidate.IE9 {
+				height : 89px;
+			}
+			.compact_search-results_ascx  .search-result:hover .search-result-body.expanded .flagged.manage-candidate.IE9 {
+				height : 88px;
+			}
+            .compact_search-results_ascx .flagged {
+                background: #FFD1D3;
+				margin-bottom : -8px;
+				height : 96px;
+            }
+			.compact_search-results_ascx .expanded .flagged {
+				height : 86px;
+				margin-bottom : -7px;
+			}
+			.compact_search-results_ascx .expanded .flag-holder.IE9 {
+				margin-bottom : -9px;
+			}
+			.compact_search-results_ascx .flagged.manage-candidate {
+				height : 97px;
+			}
+			.compact_search-results_ascx .expanded .flagged.manage-candidate {
+				height : 97px;
+				margin-bottom : -7px;
+			}
+            .expanded_search-results .flag-holder:hover, .compact_search-results_ascx .flag-holder:hover {
+                background: #FFDFEF;
+            }
+            
+            .compact_search-results_ascx .search-result:hover .flag-holder {
+                margin: -7px 0px -9px 0;
+				width : 29px;
+				height : 94px;
+            }
+			.compact_search-results_ascx .flag-holder.IE9 {
+				height : 91px;
+			}
+			.compact_search-results_ascx .flag-holder.IE8 {
+				height : 85px;
+			}
+			.compact_search-results_ascx .flag-holder.flagged.IE8 {
+				height : 84px;
+			}
+			.compact_search-results_ascx .search-result:hover .flag-holder.IE9, .compact_search-results_ascx .search-result:hover .flag-holder.IE8 {
+				height : 82px;
+			}
+			.compact_search-results_ascx .search-result:hover .search-result-body.expanded .flag-holder.flagged.IE8 {
+				height : 84px;
+			}
+			.compact_search-results_ascx .search-result.IE7:hover .flag-holder.manage-candidate {
+				height : 97px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .flag-holder .flag {
+				padding-left : 3px;
+			}
+	        
+	        .expanded_search-results .flag-holder .flag, .compact_search-results_ascx .flag-holder .flag {
+	            width: 16px;
+                height: 16px;
+                background: url(../../images/employers/icons/icons.png) no-repeat -48px -32px;
+                margin: 1px 0px 0px 3px;
+                outline: none;
+                cursor: pointer;
+				border-style : solid;
+				border-color : white;
+				border-width : 3px 0px 3px 3px;
+	        }
+			.expanded_search-results .candidate-source-applied .flag-holder .flag {
+				border-color : #F8FEFC;
+			}
+			.compact_search-results_ascx .candidate-source-applied .flag-holder .flag {
+				border-color : #D4F7F1;
+			}
+			.expanded_search-results .candidate-source-shortlisted .flag-holder .flag {
+				border-color : #FEFBF8;
+			}
+			.compact_search-results_ascx .candidate-source-shortlisted .flag-holder .flag {
+				border-color : #F7EAD7;
+			}
+			.expanded_search-results .candidate-source-applied .flagged .flag, .expanded_search-results .candidate-source-applied .flagged .flag, .compact_search-results_ascx .candidate-source-applied .flagged .flag, .compact_search-results_ascx .candidate-source-applied .flagged .flag, .expanded_search-results .candidate-source-shortlisted .flagged .flag, .expanded_search-results .candidate-source-shortlisted .flagged .flag, .compact_search-results_ascx .candidate-source-shortlisted .flagged .flag, .compact_search-results_ascx .candidate-source-shortlisted .flagged .flag {
+				border-color : #FFD1D3;
+			}
+	        
+	        .expanded_search-results .flagged .flag, .compact_search-results_ascx .flagged .flag {
+                background: url(../../images/employers/icons/icons.png) no-repeat -48px 0px;
+				border-color : #FFD1D3;
+	        }
+			
+			.expanded_search-results .flag-holder.flagged:hover .flag, .compact_search-results_ascx .flag-holder.flagged:hover .flag {
+                background: url(../../images/employers/icons/icons.png) no-repeat -48px 0px;
+	        }
+	        
+	        .expanded_search-results .flag-holder:hover .flag, .compact_search-results_ascx .flag-holder:hover .flag {
+	            background: url(../../images/employers/icons/icons.png) no-repeat -48px -16px;
+				border-color : #FFDFEF;
+	        }
+	        	
+			.shortlist-link_holder {
+	            width: 16px;
+                height: 16px;
+				background: url(../../images/employers/icons/icons.png) no-repeat 0px -32px;
+                margin: 2px auto auto 6px;
+                outline: none;
+                cursor: pointer;
+			}
+			
+			.flag-holder:hover .shortlist-link_holder {
+				background: url(../../images/employers/icons/icons.png) no-repeat 0px -16px;
+			}
+			
+			.reject-link_holder {
+	            width: 16px;
+                height: 16px;
+				background: url(../../images/employers/icons/icons.png) no-repeat -16px -32px;
+                margin: 5px auto auto 6px;
+                outline: none;
+                cursor: pointer;
+			}
+			
+			.flag-holder:hover .reject-link_holder {
+				background: url(../../images/employers/icons/icons.png) no-repeat -16px -16px;
+			}
+			
+			.remove-link_holder {
+	            width: 16px;
+                height: 16px;
+				background: url(../../images/employers/icons/icons.png) no-repeat -32px -32px;
+                margin: 5px 6px auto 7px;
+                outline: none;
+                cursor: pointer;
+			}
+			
+			.flag-holder:hover .remove-link_holder {
+				background: url(../../images/employers/icons/icons.png) no-repeat -32px -16px;
+			}
+	        
+	        .expanded_search-results .search-result:hover .flag {
+                margin-top: 0px;
+	        }
+	        .compact_search-results_ascx .search-result.IE7 .manage-candidate .flag {
+				margin-left : 5px;
+			}
+	        .compact_search-results_ascx .search-result:hover .flag {
+                margin : 0px 0px 0px 3px;
+	        }
+			.compact_search-results_ascx .search-result.IE7 .shortlist-link_holder {
+				margin : 3px 3px 0px 7px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .manage-candidate .shortlist-link_holder {
+				margin-left : 9px;
+			}
+			.compact_search-results_ascx .search-result:hover .shortlist-link_holder {
+				margin : 2px auto auto 6px;
+			}
+			.compact_search-results_ascx .search-result.IE7:hover .shortlist-link_holder {
+				margin : 3px 6px 0px 9px;
+			}
+			.compact_search-results_ascx .search-result:hover .reject-link_holder {
+				margin : 5px auto auto 6px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .reject-link_holder {
+				margin : 3px 5px 0px 8px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .manage-candidate .reject-link_holder {
+				margin-left : 9px;
+			}
+			.compact_search-results_ascx .search-result.IE7:hover .reject-link_holder {
+				margin : 3px 5px 0px 9px;
+			}
+			.compact_search-results_ascx .search-result:hover .remove-link_holder {
+				margin : 5px 6px auto 7px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .remove-link_holder {
+				margin : 3px 5px 0px 6px;
+			}
+			.compact_search-results_ascx .search-result.IE7 .manage-candidate .remove-link_holder {
+				margin-left : 9px;
+			}
+	        
+            /* --------------------------------------------------
+               Selected appearance for expanded view status icons
+               --------------------------------------------------
+            */ 
+	       .expanded_search-results .selected_candidate_search-result .unlocking-and-phones {
+	           border: 1px solid #DEE1E7;
+	           background: #EBEFF5;
+	       }
+
+	        
+    /* -------------------------
+       Compact view status icons
+       -------------------------
+    */
+    .compact_search-results_ascx .candidate_search-result .status-icons {
+        float: left;
+        margin-left: 25px;
+        margin-top: 5px;
+    }
+	.compact_search-results_ascx .candidate_search-result.IE7 .status-icons {
+		margin-top : 1px;
+		margin-left : 29px;
+	}
+        .compact_search-results_ascx .candidate_search-result .status-icons ul {
+            margin : 0;
+			padding : 0;
+			list-style : none;
+			background-position : 0px -60px;
+			width : 199px;
+			height : 29px;
+            float: left;
+        }
+            .compact_search-results_ascx .candidate_search-result .status-icons ul li {
+                margin:0;padding:0;list-style:none;
+                float: left;
+            }
+			.compact_search-results_ascx .candidate_search-result .status-icons ul li.notes {
+				position : absolute;
+				margin : 6px 0px 0px 121px;
+			}
+			body.IE7 .compact_search-results_ascx .candidate_search-result .status-icons ul li.notes {
+				left : 0px;
+				top : -29px;
+				display : block;
+				position : relative;
+			}
+			.compact_search-results_ascx .candidate_search-result .status-icons ul li.folder {
+				position : absolute;
+				margin : 6px 0px 0px 146px;
+			}
+			body.IE7 .compact_search-results_ascx .candidate_search-result .status-icons ul li.folder {
+				left : 0px;
+				top : -54px;
+				display : block;
+				position : relative;
+				width : 21px;
+				height : 19px;
+			}
+			.compact_search-results_ascx .candidate_search-result .status-icons ul li.viewed {
+				position : absolute;
+				margin : 6px 0px 0px 171px;
+			}
+			body.IE7 .compact_search-results_ascx .candidate_search-result .status-icons ul li.viewed {
+				left : 0px;
+				top : -79px;
+				display : block;
+				position : relative;
+			}
+        .compact_search-results_ascx .candidate_search-result .status-icons .contact-locked-icon {
+			background-position : -55px -90px;
+			width : 51px;
+			height : 29px;
+			display : block;
+			margin-right : 12px;
+        }
+		.compact_search-results_ascx .candidate_search-result .status-icons .contact-unlocked-icon {
+			background-position : -1px -90px;
+			width : 51px;
+			height : 29px;
+			display : block;
+			margin-right : 12px;
+		}
+			
+/*  -------------------------------------
+    Candidate result - additional details
+    -------------------------------------
+*/
+    .search-results_ascx .candidate_search-result .additional-details {
+        margin-top: 0.75em;
+        float:left;
+    }
+        .compact_search-results_ascx .candidate_search-result .additional-details {
+            float:none;
+        }
+		.compact_search-results_ascx .candidate_search-result.IE7 .additional-details {
+			float : left;
+		}
+    .search-results_ascx .candidate_search-result .additional-details:first-child {
+        margin-top: 0;
+    }
+        .search-results_ascx .candidate_search-result .additional-details .detail {
+            font-size: 85%;
+            margin-top: 0.75em;
+        }
+        .search-results_ascx .candidate_search-result .additional-details .detail:first-child {
+            margin-top: 0em;
+        }
+            .search-results_ascx .candidate_search-result .additional-details .detail-title {
+                position: absolute;
+            }
+                .search-results_ascx .candidate_search-result .static_additional-details .detail-title, .search-results_ascx .candidate_search-result .dynamic_additional-details .detail-title {
+                    color: #24639E;
+                }
+				.compact_search-results_ascx .candidate_search-result.IE7 .static_additional-details .detail-title {
+					margin-left : -8px;
+				}
+                .expanded_search-results .candidate_search-result .dynamic_additional-details .detail-title {
+                    color: #74B773;
+                }
+				.compact_search-results_ascx .candidate_search-result.IE7 .dynamic_additional-details {
+					padding-bottom : 8px;
+				}
+				.compact_search-results_ascx .candidate_search-result.IE7:hover .dynamic_additional-details.has-content {
+					padding-bottom : 7px;
+					margin-top : 9px;
+				}
+				.compact_search-results_ascx .candidate_search-result.IE7:hover .dynamic_additional-details.has-content.empty-static {
+					margin-top : 1px;
+				}
+				.compact_search-results_ascx .candidate_search-result.IE7:hover .dynamic_additional-details {
+					padding-bottom : 7px;
+				}
+            .search-results_ascx .candidate_search-result .additional-details .detail-content {
+                padding-left: 11em;
+            }
+            .search-results_ascx .candidate_search-result .additional-details .detail-content .empty {
+                color: #A0A0A0;
+            }
+                .search-results_ascx .candidate_search-result .dynamic_additional-details .detail-content {
+                    color: #808080;
+                }
+				.compact_search-results_ascx .candidate_search-result.IE7 .static_additional-details .detail .detail-content {
+					margin-top : -12px;
+				}
+			
+
+    /*  ----------------------------------
+        Expanded result additional details
+        ----------------------------------
+    */
+        /*.expanded_search-results .candidate_search-result .additional-details .detail-title {
+            width: 11em;
+        }
+        .expanded_search-results .candidate_search-result .additional-details .detail-content {
+            padding-left: 11em;
+        }*/
+        
+    /*  ----------------------------------
+        Compact result additional details
+        ----------------------------------
+    */
+        .expanded_search-results .candidate_search-result .additional-details .detail-title, .compact_search-results_ascx .candidate_search-result .additional-details .detail-title {
+        }
+        .expanded_search-results .candidate_search-result .additional-details .detail-content, .compact_search-results_ascx .candidate_search-result .additional-details .detail-content {
+             width: 550px; /*overflow: hidden;*/
+        }
+        .expanded_search-results .candidate_search-result .dynamic_additional-details .detail {
+            padding: 0 0 0 0;
+        }
+        .expanded_search-results .candidate_search-result .dynamic_additional-details .detail-content {
+            padding-left: 11em;
+        }
+        .expanded_search-results .search-result .expando, .compact_search-results_ascx .search-result .expando {
+            display: none;
+        }
+        .expanded_search-results .search-result:hover .expando, .compact_search-results_ascx .search-result:hover .expando {
+            display: block;
+            width: 19px;
+            height: 19px;
+            padding: 2px;
+            background: url(../../images/buttons/mini-glassy/expand-contract.png) top left no-repeat;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            outline: none;
+        }
+        .expanded_search-results .search-result:hover .open_expando, .compact_search-results_ascx .search-result:hover .open_expando {
+            background-position: left 0;
+			
+        }
+        .expanded_search-results .search-result:hover .open_expando:hover, .compact_search-results_ascx .search-result:hover .open_expando:hover,
+        .expanded_search-results .search-result:hover .open_expando:focus, .compact_search-results_ascx .search-result:hover .open_expando:focus {
+            background-position: left -23px;
+        }
+        .expanded_search-results .search-result:hover .open_expando:active, .compact_search-results_ascx .search-result:hover .open_expando:active {
+            background-position: left -46px;
+        }
+        .expanded_search-results .search-result:hover .close_expando, .compact_search-results_ascx .search-result:hover .close_expando {
+            background-position: left -69px;
+        }
+        .expanded_search-results .search-result:hover .close_expando:hover, .compact_search-results_ascx .search-result:hover .close_expando:hover,
+        .expanded_search-results .search-result:hover .close_expando:focus, .compact_search-results_ascx .search-result:hover .close_expando:focus {
+            background-position: left -92px;
+        }
+        .expanded_search-results .search-result:hover .close_expando:active, .compact_search-results_ascx .search-result:hover .close_expando:active {
+            background-position: left -115px;
+        }
+        
+/*  ----------
+    Jobs table
+    ----------
+*/
+    .search-results_ascx .candidate_search-result .jobs {
+        padding-bottom: 0.6em;
+        border: none;
+        border-collapse: collapse;
+    }
+        .search-results_ascx .candidate_search-result .job td {
+            vertical-align: top;
+            padding-top: 0.4em;
+        }
+        .search-results_ascx .candidate_search-result .job {
+            position: relative; /* For AP anchoring */
+            *position: inherit;
+        }
+        .search-results_ascx .candidate_search-result .job:first-child td {
+            padding-top: 0;
+        }
+        .search-results_ascx .candidate_search-result .empty_job {
+            color: #A2A2A2;
+        }
+            .search-results_ascx .candidate_search-result .job .description {
+                width: 100%;
+            }
+                .search-results_ascx .candidate_search-result .job .description .title {}
+                .search-results_ascx .candidate_search-result .job .description .hyphen {}
+                .search-results_ascx .candidate_search-result .job .description .company {
+                    color: #1C8E1D;
+                    font-style: oblique;
+                }
+                    .search-results_ascx .candidate_search-result .job .description .company .empty {
+                        color: #82C683;
+                        font-style: oblique;
+                    }
+                    .search-results_ascx .candidate_search-result .job .description .company .hyphen {
+                        color: #333333;
+                    }
+            .search-results_ascx .candidate_search-result .job .tenure {
+                color: #5E5E5E;
+                margin-right: 10px;
+            }
+                .search-results_ascx .candidate_search-result .empty_job .tenure {
+                    color: #B6B6B6;
+                }
+            .search-results_ascx .candidate_search-result .job .date-range {
+                color: #969696;
+                font-size: 80%;
+                text-transform: uppercase;
+                width: 14.6em;
+                display: block;
+            }
+            .search-results_ascx .candidate_search-result .empty_job .date-range {
+                color: #CCCCCC;
+            }
+                .search-results_ascx .candidate_search-result .job .date-range .start-date {
+                    width: 6.5em;
+                    float: left;
+                    text-align: right;
+                }
+                .search-results_ascx .candidate_search-result .job .date-range .hyphen {
+                    width: 1.5em;
+                    float: left;
+                    text-align: center;
+                }
+                .search-results_ascx .candidate_search-result .job .date-range .end-date {
+                    width: 6.5em;
+                    float: left;
+                }
+                
+    /*  ------------------------
+        Expanded view jobs table
+        ------------------------
+    */
+    .expanded_search-results .candidate_search-result .additional-details .jobs {
+        width: 100%;
+    }
+    .expanded_search-results .candidate_search-result .additional-details .job .tenure {
+        width: 6em;
+        display: block;
+    }
+    
+    /*  -----------------------
+        Compact view jobs table
+        -----------------------
+    */
+    .compact_search-results_ascx .candidate_search-result .job .description .title {
+        display: block;
+    }
+    .compact_search-results_ascx .candidate_search-result .job .description .company {
+        display: block;
+    }
+    .compact_search-results_ascx .candidate_search-result .job .tenure {
+        width: 6em;
+        display: block;
+    }
+    
+
+/*  -----------------------------
+    Candidate action-menu toggler
+    -----------------------------
+*/
+
+	.search-results_ascx .candidate_search-result .candidate-menu-toggler {
+	}
+	.search-results_ascx .search-result.IE7 .candidate-menu-toggler {
+		margin-top : -3px;
+		padding-bottom : 7px;
+	}
+	.search-results_ascx .search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler, .search-results_ascx .search-result.IE7 .candidate-source-applied .candidate-menu-toggler {
+		padding-bottom : 9px;
+	}
+		.search-results_ascx .candidate-menu-toggler input[type='checkbox'] {
+			cursor: pointer;
+		}
+
+	.search-results_ascx .candidate_search-result .candidate-menu-toggler-hover {
+		padding: 8px 6px;
+		padding-right: 28px;
+		border: 1px solid #B4BCC7;
+		-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		background: url(../../images/controls/search-results/candidate-menu-toggler-contents.png) right top no-repeat;
+	}
+	.search-results_ascx .search-result.IE7 .candidate-menu-toggler-hover {
+		margin-bottom : -3px;
+		padding-bottom : 10px;
+	}
+	.search-results_ascx .search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler-hover, .search-results_ascx .search-result.IE7 .candidate-source-applied .candidate-menu-toggler-hover {
+		padding-bottom : 10px;
+		margin-bottom : -3px;
+	}
+	.search-results_ascx .candidate_search-result .candidate-menu-toggler-down {
+		position: relative;
+		padding: 9px 7px;
+		border: 1px solid #B4BCC7;
+		padding-bottom: 8px;
+		padding-right: 27px;
+		border-bottom: none;
+		margin-bottom: -1px;
+		background: url(../../images/controls/search-results/candidate-menu-toggler-contents.png) right -400px no-repeat;
+		z-index: 1;
+	}
+	.search-results_ascx .search-result.IE7 .candidate-menu-toggler-down, .search-results_ascx .search-result.IE7 .candidate-menu-toggler-hover-down {
+		padding : 8px 28px 9px 6px;
+	}
+	.search-results_ascx .candidate_search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler-down-hover, .search-results_ascx .candidate_search-result.IE7 .candidate-source-applied .candidate-menu-toggler-down-hover {
+		padding-bottom : 11px;
+	}
+
+    /*  --------------------------------
+        Compact view action-menu toggler
+        --------------------------------
+    */
+	    .compact_search-results_ascx .candidate_search-result .candidate-menu-toggler-hover {
+		    padding: 4px 4px;
+		    padding-right: 26px;
+		    background-position: right -3px;
+	    }
+		.compact_search-results_ascx .candidate_search-result.IE7 .candidate-menu-toggler-hover {
+			padding-top : 4px;
+			padding-bottom : 4px;
+			margin-bottom : 1px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler-hover, .compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-applied .candidate-menu-toggler-hover {
+			margin-top : -2px;
+			padding-top : 3px;
+			padding-bottom : 10px;
+		}
+	    .compact_search-results_ascx .candidate_search-result .candidate-menu-toggler-down {
+		    position: relative;
+		    padding: 5px 5px;
+		    padding-bottom: 4px;
+		    padding-right: 25px;
+		    background-position: right -403px;
+	    }
+		.compact_search-results_ascx .candidate_search-result.IE7 .candidate-menu-toggler-down {
+			padding : 5px 25px 6px 5px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7:hover .candidate-menu-toggler-down {
+			padding-bottom : 6px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler-down, .compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-applied .candidate-menu-toggler-down {
+			margin-top : -2px;
+			padding-top : 3px;
+			padding-bottom : 10px;
+			margin-bottom : -2px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-shortlisted .candidate-menu-toggler-down-hover, .compact_search-results_ascx .candidate_search-result.IE7 .candidate-source-applied .candidate-menu-toggler-down-hover {
+			padding-bottom : 11px;
+			margin-top : -2px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7:hover .candidate-source-shortlisted .candidate-menu-toggler-down, .compact_search-results_ascx .candidate_search-result.IE7:hover .candidate-source-applied .candidate-menu-toggler-down {
+			padding-bottom : 12px;
+			margin-top : -2px;
+			margin-bottom : -4px;
+		}
+		.compact_search-results_ascx .candidate_search-result.IE7:hover .candidate-menu-toggler-down-hover {
+			padding-bottom : 4px;
+		}
+		
+/*  ---------------------
+    Candidate action-menu
+    ---------------------
+*/
+	.search-results-action-menu {
+		z-index : 1;
+	}
+	.search-results-action-menu .menu-panel {
+		margin-top: -1px;
+	}
+	
+    /*  ---------------------------
+        Candidate action-menu icons
+        ---------------------------
+    */
+	.desktop-menu-item-content {
+		display : inline;
+	}
+        .search-results-action-menu .view-phone-number .icon  {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px -32px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		
+	    .search-results-action-menu .send-message  .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -50px -16px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		.search-results-action-menu .send-rejection-message .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -49px -31px;
+			height : 16px;
+			width : 16px;
+			margin : 0px 0px -4px -21px;
+			display : inline-block;
+		}
+		#hlBulkDownloadResume .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -49px -48px;
+			height : 16px;
+			width : 17px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		#hlBulkEmailResume .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px 0px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -22px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .save-as-doc  .icon, #hlSaveResume .icon, #hlBulkSaveResume .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -49px -48px;
+			height : 16px;
+			width : 17px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .save-to-email .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px 0px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -22px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .add-to-new-folder .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -48px 0px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -23px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .add-to-folder  .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -32px 0px;
+			height : 15px;
+			width : 16px;
+			margin : 1px 5px -4px -22px;
+			display : inline-block;
+		}
+		.search-results-action-menu .add-to-folder-disabled .icon {
+			background : url(../../images/employers/icons/action-menu-icon.png) no-repeat -31px -15px;
+			height : 16px;
+			width : 19px;
+			margin : 1px 5px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .add-to-jobad .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -32px -32px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .add-to-jobad-disabled .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -16px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		#hlAddToJobAd .icon, #hlBulkAddToJobAd .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -16px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -5px -22px;
+			display : inline-block;
+		}
+		.menu-item-private-folder-header, .menu-item-shared-folder-header  {
+			color : #47A;
+			/*background : url("../../images/employers/section-heading-icons/folders.png") no-repeat scroll left center transparent;*/
+			font-weight : bold;
+			padding-left : 24px;
+			min-width : 210px;
+		}
+
+		.menu-item-jobads-Open-header, .menu-item-jobads-Closed-header  {
+			color : #47A;
+			/*background : url("../../images/employers/icons/folder-job-ad.png") no-repeat scroll left center transparent;*/
+			font-weight : bold;
+			padding-left : 24px;
+		}
+		.menu-item-jobads-Open-header .desktop-menu-item-content.IE7, .menu-item-jobads-Closed-header .desktop-menu-item-content.IE7 {
+			width : 170px;
+		}
+	    .search-results-action-menu .view-resume .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -16px -16px;
+			height : 16px;
+			width : 16px;
+			margin : 2px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .add-note .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -32px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		#hlBlockFromSearch .icon, #hlBulkBlockFromSearch .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    #hlBlockFromAllSearches .icon, #hlBulkBlockFromAllSearches .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .child-block-from-current .icon, .search-results-action-menu .child-block-from-all .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat 0px -48px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .remove-from-folder .icon, .search-results-action-menu .remove-from-flaglist .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -16px -32px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+	    .search-results-action-menu .remove-from-blocklist .icon {
+			background: url(../../images/employers/icons/action-menu-icon.png) no-repeat -16px 0px;
+			height : 16px;
+			width : 16px;
+			margin : 1px 0px -4px -21px;
+			display : inline-block;
+		}
+		body.IE7 .view-resume .icon, body.IE7 .view-phone-number .icon, body.IE7 .send-message .icon, body.IE7 .send-rejection-message .icon, body.IE7 .add-to-new-folder .icon, body.IE7 .remove-from-folder .icon, body.IE7 .remove-from-flaglist .icon, body.IE7 #hlBulkAddToJobAd.add-to-jobad .icon, body.IE7 #hlAddToJobAd.add-to-jobad .icon, body.IE7 #hlBulkSaveResume .icon, body.IE7 #hlSaveResume .icon, body.IE7 #hlBulkDownloadResume .icon, body.IE7 #hlDownloadResume .icon, body.IE7 #hlBulkEmailResume .icon, body.IE7 #hlEmailResume .icon, body.IE7 .save-as-doc .icon, body.IE7 .add-note .icon, body.IE7 #hlBulkBlockFromSearch .icon, body.IE7 #hlBlockFromSearch .icon, body.IE7 .block-from-all .icon, body.IE7 #hlBulkChildBlockFromCurrentSearch .icon, body.IE7 #hlChildBlockFromCurrentSearch .icon, body.IE7 #hlBulkChildBlockFromAllSearches .icon, body.IE7 #hlChildBlockFromAllSearches .icon, body.IE7 .remove-from-blocklist .icon, body.IE7 .add-to-folder-disabled .icon, body.IE7 .add-to-folder .icon {
+			margin-bottom : -18px;
+		}
+	    
+	/*  --------------------------
+        Filter by activity filter
+        --------------------------
+    */
+    
+    .filter-by-activity_table {
+        width: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .filter-by-activity_table td {
+        width: 20%;
+        text-align: center;
+    }
+    
+    .filter-by-activity_table td:first-child {
+        width: 40%;
+        text-align: left;
+    }
+    
+    /*  -----------------------------
+    Bulk action-menu toggler
+    -----------------------------
+*/
+
+	.bulk-menu-toggler {
+	}
+	
+	    .bulk-selected .bulk-menu-toggler {
+		padding: 0 28px 0 0;
+		border: 1px solid #B4BCC7;
+		-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		background: url(../../images/controls/search-results/candidate-menu-toggler-contents.png) right -20px no-repeat;
+	}
+	
+	.bulk-selected .bulk-menu-toggler .bulk-select-text_holder {
+        border: none;
+        border-right: solid 1px #BFD5E2;
+        background: url("../../images/employers/icons/bulk-select-action.png") no-repeat scroll left center #FBFBFB;
+        color: #000000;
+		white-space : nowrap;
+    }
+		.bulk-menu-toggler input[type='checkbox'] {
+			cursor: pointer;
+		}
+
+	.bulk-menu-toggler-hover, .bulk-selected .bulk-menu-toggler-hover {
+		padding: 0 28px 0 0;
+		border: 1px solid #B4BCC7;
+		-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.75);
+		background: url(../../images/controls/search-results/candidate-menu-toggler-contents.png) right -20px no-repeat;
+		cursor: pointer;
+	}
+    
+	.bulk-menu-toggler-down, .bulk-selected .bulk-menu-toggler-down {
+		position: relative;
+		padding: 0 27px 0 0;
+		border: 1px solid #B4BCC7;
+		border-bottom: none;
+		background: url(../../images/controls/search-results/candidate-menu-toggler-contents.png) right -420px no-repeat;
+		z-index: 1;
+		margin-bottom: -1px;
+		cursor: pointer;
+	}
+	
+	.bulk-menu-toggler-hover .bulk-select-text_holder, .bulk-menu-toggler-down .bulk-select-text_holder, .bulk-selected .bulk-menu-toggler-hover .bulk-select-text_holder, .bulk-selected .bulk-menu-toggler-down .bulk-select-text_holder {
+        border: none;
+        border-right: solid 1px #BFD5E2;
+        background: url("../../images/employers/icons/bulk-select-action.png") no-repeat scroll left center #FBFBFB;
+        color: #000000;
+    }
+    .bulk-menu-toggler-down .bulk-select-text_holder, .bulk-selected .bulk-menu-toggler-down .bulk-select-text_holder {
+        border-bottom: solid 1px #BFD5E2;
+    }
+    
+	.bulk-menu-toggler-down-hover {
+	}
+	
+    /*  --------------------------------
+        Compact view bulk action-menu toggler
+        --------------------------------
+    */
+	    /*.compact_search-results_ascx .bulk-menu-toggler-hover {
+		    padding: 4px 4px;
+		    padding-right: 26px;
+		    background-position: right -3px;
+	    }
+	    .compact_search-results_ascx .bulk-menu-toggler-down {
+		    position: relative;
+		    padding: 5px 5px;
+		    padding-bottom: 4px;
+		    padding-right: 25px;
+		    background-position: right -403px;
+	    }*/
+	    
+	    
+/* Bulx Select Action */
+    
+    .bulk-select_holder {
+        *padding: 0 0 30px 0;
+    }
+
+    .bulk-select-checkbox_holder {
+        background-color: #FBFBFB;
+        border: solid 1px #EFEFEE;
+        height: 14px;
+        width: 25px;
+        float: left;
+        padding: 6px 1px 10px 5px;
+    }
+    
+    .bulk-select-text_outer-holder {
+        height: 26px;
+        border: solid 1px #EFEFEE;
+        margin: 0 0 0 2px;
+        padding: 2px;
+        display: inline-block;
+        *float: left;
+    }
+    
+    .bulk-select-text_holder {
+        border: solid 1px #EFEFEE;
+        padding: 4px 8px 4px 22px;
+        background: url("../../images/employers/icons/bulk-select-action_default.png") no-repeat scroll left center #FBFBFB;
+        display: inline-block;
+        min-height: 16px;
+        color: #808080;
+    }
+    
+    .bulk-selected .bulk-select-text_outer-holder {
+        border: solid 1px #86AEE7;
+        background-color: #E6F1FA;
+    }
+    
+    .bulk-selected .bulk-select-text_holder {
+        border: solid 1px #BFD5E2;
+        background: url("../../images/employers/icons/bulk-select-action.png") no-repeat scroll left center #FBFBFB;
+        color: #000000;
+    }
+    
+    .clear-all{
+        background: url("../../images/employers/icons/clear.png") no-repeat scroll left center transparent;
+        display: inline-block;
+        float: left;
+        font-size: 85%;
+        margin: 0 0 0 0;
+        min-height: 20px;
+        padding: 5px 0 2px 21px;
+        outline: none;
+    }
+
+/* Results count header */
+
+.results-count_save-search_header{
+    padding: 10px 0 10px 8px;
+    float:none;
+    height: 15px;
+}
+
+.results-count_save-search_header .results-count{
+    font-weight: bold;
+    float: left;
+}
+
+.results-count_save-search_header .save-search{
+    padding: 0px 0px 0px 10px;
+    display: none;
+    float:left;
+}
+
+.results_aspx .results-count_save-search_header .save-search{
+    display: block;
+}
+.results_aspx .results-count_save-search_header .save-search div {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -60px -29px no-repeat;
+	width : 15px;
+	height : 13px;
+	display : inline-block;
+	margin : -6px 1px -2px 0px;
+	padding : 0px 0px 0px 0px;
+}
+body.IE7 .results_aspx .results-count_save-search_header .save-search div {
+	margin : 2px 6px -2px 0px;
+	float : left;
+}
+
+.spelling-container {
+    padding: 10px 10px 10px 8px;
+    float:none;
+}
+
+.spelling-container .did-you-mean {
+    color: #cc0000;
+}
+
+/* Block and Restore action for Search results */
+
+.search-results_ascx .search-result .block-link_holder{
+	display: none;
+}
+
+.results_aspx .search-results_ascx .search-result:hover .block-link_holder{
+	display: block;
+}
+	
+.candidate_search-result_blocked, .candidate_search-result_shortlisted, .candidate_search-result_rejected, .candidate_search-result_removed {
+    background-color: #FFFED5;
+    border: 1px solid #EFEFEE;
+    font-size: 100%;
+    margin-top: 10px;
+    padding: 10px 10px 15px 10px;
+    position: relative;
+    display:none;
+}
+
+.candidate_search-result_blocked .blocked-text {
+    margin: 0;
+    padding: 0 0 8px 0;
+}
+
+.candidate_search-result_blocked .not-enough {
+    margin: 0;
+    padding: 0;
+    font-size: 85%;
+    color: #808080;
+}
+
+.candidate_search-result_blocked .not-enough .block-link {
+    margin: 0;
+    padding: 0;
+}
+
+.candidate_search-result_blocked .restore-holder, .candidate_search-result_shortlisted .restore-holder, .candidate_search-result_rejected .restore-holder, .candidate_search-result_removed .restore-holder  {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.candidate_search-result_blocked .restore-holder .restore-icon, .candidate_search-result_shortlisted .restore-holder .restore-icon, .candidate_search-result_rejected .restore-icon, .candidate_search-result_removed .restore-icon {
+    background: url("../../images/employers/icons/restore.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    font-size: 85%;
+}
+
+.candidate_search-result .block-link_holder {
+    float:left;
+}
+
+.candidate_search-result .block-icon {
+    background: url("../../images/employers/icons/block.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 18px;
+    font-size: 78%;
+    margin: 3px 0 0 0;
+    padding-top: 30px\9;
+    padding-left: 0px\9;
+    margin-top: -10px\9;
+    margin-left: 3px\9;
+    *padding-top: 1px;
+    *padding-left: 18px;
+    *margin-top: 3px;
+    *margin-left: 0px;
+}
+.expanded_search-results .candidate_search-result .block-icon.IE {
+	width: 26px;
+	height: 42px;
+	margin-left: -1px;
+	margin-top: -26px;
+	padding-left: 18px;
+	padding-top: 30px;
+}
+
+.candidate_search-result_shortlisted {
+	display : none;
+}
+
+.compact_search-results_ascx .candidate_search-result .block-icon {
+    padding: 30px 0 2px 0px;
+    font-size: 68%;
+    font-size: 60%\9;
+    margin: -18px 0 0 0;
+}
+
+.back-action {
+    background: url("../../images/employers/view-resume/back.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 16px;
+    padding: 1px 0 2px 17px;
+}
+
+/* Restore action in Blocklists */
+
+.search-results_ascx .search-result .restore-link_holder{
+	display: none;
+	float:left;
+}
+
+.blocklist_aspx .search-results_ascx .search-result:hover .restore-link_holder{
+	display: block;
+}
+
+.candidate-restored {
+    background-color: #FFFED5;
+    border: 1px solid #EFEFEE;
+    font-size: 100%;
+    color: #808080;
+    margin: 5px 0 10px 0;
+    padding: 10px 10px 15px 10px;
+    position: relative;
+    display:none;
+}
+
+.candidate_search-result .restore-icon {
+    display: inline-block;
+    min-height: 13px;
+    padding: 30px 0 2px 0px;
+    font-size: 78%;
+    margin: -10px 0 0 3px;
+}
+
+.blocklist-current_aspx .candidate_search-result .restore-icon {
+    background: url("../../images/employers/icons/restore.png") no-repeat scroll left center transparent;
+    font-size: 68%;
+}
+
+.blocklist-all_aspx .candidate_search-result .restore-icon {
+    background: url("../../images/employers/icons/restore-from-all.png") no-repeat scroll left center transparent;
+    font-size: 68%;
+}
+
+.blocklist_aspx .compact_search-results_ascx .search-result .columns .jobs_column {
+    width: 262px;
+}
+.blocklist_aspx .compact_search-results_ascx .search-result .columns .desired-salary_column {
+    width: 70px;
+}
+
+.blocklist_aspx .compact_search-results_ascx .candidate_search-result .restore-icon {
+    margin: -18px 0 0 3px;
+}
+
+/**/
+.results-count_save-search_header .restore-blocklist{
+    padding: 0 0 0 20px;
+    display: none;
+}
+
+.blocklist_aspx .results-count_save-search_header .restore-blocklist{
+    display: block;
+    float: left;
+}
+
+.blocklist_aspx .results-count_save-search_header .restore-blocklist .restore-icon{
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    font-size: 96%;
+}
+
+.blocklist-current_aspx .results-count_save-search_header .restore-blocklist .restore-icon {
+    background: url("../../images/employers/icons/restore.png") no-repeat scroll left center transparent;
+}
+
+.blocklist-all_aspx .results-count_save-search_header .restore-blocklist .restore-icon{
+    background: url("../../images/employers/icons/restore-from-all.png") no-repeat scroll left center transparent;
+}
+
+/* Clear flags in current search */
+.clear-current-flags{
+    display: none;
+}
+
+.results_aspx .clear-current-flags{
+    display: block;
+    float: right;
+    font-size: 85%;
+    *width: 150px;
+    margin: 0;
+}
+
+.results_aspx .clear-current-flags .text{
+    *float: right;
+}
+
+.results_aspx .clear-current-flags .sub-text{
+    float: right;
+    font-size: 90%;
+    color:#808080;
+}
+
+/* Help text on initial search */
+
+.help-text_anchor {
+    position: relative;
+    *position: inherit;
+}
+
+.help-text_container {
+    position: absolute;
+    width: 216px;
+    z-index: 4;
+    display: none;
+    left: 245px;
+    top: -12px;
+    *top: auto;
+    *left: auto;
+    *margin: -10px 0 0 245px;
+}
+
+.help-text_container .arrow {
+    background-image: url("../../images/employers/float/arrow.png");
+    height: 22px;
+    left: -8px;
+    position: absolute;
+    top: 18px;
+    width: 12px;
+    z-index: 6;
+}
+
+.help-text_container .holder {
+    background-image: url("../../images/employers/float/float-bg.png");
+    margin-top: 8px;
+    position: absolute;
+    width: 216px;
+    z-index: 3;
+}
+
+.help-text_container .content {
+    background: url("../../images/employers/float/float-bottom-bg.png") no-repeat scroll left bottom transparent;
+    border-bottom: medium none;
+    color: #4477AA;
+    line-height: 3px;
+    padding: 18px 18px 24px 18px;
+}
+
+.help-text_container .content .text{
+    float: left;
+    *float: none;
+}
+
+.help-text_container .content .close-icon{
+    background-image: url("../../images/buttons/mini-light/x.png");
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 0;
+    height: 14px;
+    margin: -5px 0 0 5px;
+    padding: 0;
+    width: 14px;
+    *margin: -30px 15px 0 0;
+}
+
+/* Status */
+.indigenous-status_text,
+.visa-status_text {
+    padding: 3px 0 5px 0;
+}
+
+/* Fix for IE */
+.results_aspx .tabs-container .results_section, .blocklist_aspx .tabs-container .results_section {
+    *clear: none;
+}
+
+.indigenous-status_section .checkboxes_field,
+.visa-status_section .checkboxes_field {
+    font-size: 85%;
+}
+
+.communities_section select {
+    font-size: 85%;
+}
+
+.bulk-select_holder .column-heading {
+    float: right;
+    font-size: 90%;
+    color: #336699;
+    margin: 10px 0 0;
+}
+
+.bulk-select_holder .most-recent-jobs {
+    width: 190px;
+}
+
+.bulk-select_holder .tenure {
+    width: 86px;
+}
+
+.bulk-select_holder .desired-salary {
+    width: 110px;
+}
+
+.bulk-select_holder .flag {
+    width: 30px;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .description {
+    padding: 0 0 0 10px;
+    background: url("../../images/employers/icons/list-black.png") no-repeat scroll left 5px transparent;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .latter {
+    padding: 0 0 0 10px;
+    background: url("../../images/employers/icons/list-grey.png") no-repeat scroll left 5px transparent;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .latter .title{
+    color: #666666;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .latter .company{
+    color: #66CC66;
+}
+
+.communities_section select.select_dropdown {
+    color: #808080;
+}
+
+.communities_section select.select_dropdown option {
+    color: #000000;
+}
+
+.communities_section option:first-child, .communities_section select.select_dropdown option:first-child{
+    color: #808080;
+}
+
+/*.desired-salary_section .forms_v2 .checkbox_control {
+    *position: relative;
+}
+
+.desired-salary_section .forms_v2 fieldset {
+    *position: absolute;
+}
+
+.slider-holder {
+    *position: absolute;
+}*/
+
+.compact_search-results_ascx .candidate_search-result .jobs {
+    width: 268px;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .description {
+    width: 88px !important;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .description {
+    width: 180px !important;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.compact_search-results_ascx .candidate_search-result .job .description .title, .compact_search-results_ascx .candidate_search-result .job .description .company {
+    width: 175px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.compact_search-results_ascx .search-result .expando, .compact_search-results_ascx .search-result:hover .expando {
+    *position: relative;
+    *top: 38px;
+    *right: auto;
+    *bottom: auto;
+    *left: 0px;
+}
+.compact_search-results_ascx .search-result.IE7:hover .expando {
+	left : 1px;
+	top : 41px;
+}
+.compact_search-results_ascx.suggest-candidate .search-result.IE7:hover .expando {
+	left : 1px;
+	top : 22px;
+}
+
+.compact_search-results_ascx .candidate_search-result .basic-details {
+    width: 232px;
+}
+
+.filters_ascx .section {
+    *overflow: visible;
+    *zoom: 0;
+}
+
+.filters_ascx .reset-all-filters {
+    *overflow: auto;
+}
+
+.employer_section .section-content .forms_v2 .control label {
+    font-size: 100%\9;
+}
+
+.desired-salary_section .section-collapsible-title small {
+    font-size: 78%\9;
+    *font-size:80%;
+}
+
+.count_holder {
+    width: 225px;
+}
+
+.job-hunter-status-count_holder {
+    min-width: 51px;
+    text-align: center;
+    display: inline-block;
+    font-size: 68%;
+    *width: 25%;
+    *float: left;
+}
+
+.job-type-count_holder {
+    min-width: 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 65%;
+    *width: 20%;
+    *float: left;
+}
+
+.industries-count_holder {
+    font-size: 85%;
+    color: #808080;
+}
+
+.disabled-industry {
+    display: none;
+}
+
+.filter-by-activity_section .section-content {
+    font-size: 85%;
+}
+
+.js_clear-current-flags {
+	padding: 1px 0px 2px 21px;
+	display: inline-block;
+	min-height: 13px;
+}
+.clear-current-flags .text div {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -71px -60px no-repeat;
+	margin : 0px -14px -4px 0px;
+	display: inline-block;
+	width : 14px;
+	height : 15px;
+}
+body.IE7 .clear-current-flags .text div {
+	margin : 0px -13px -14px -10px;
+	float : left;
+}
+
+.js_clear-current-flags.IE7 {
+	margin-left : -10px;
+}
+
+.tabs-nav.IE7 {
+	border-bottom : 1px solid #B6C3CF;
+	padding-bottom : 39px;
+}
+
+.categories-tab-container {
+	border-top : 1px solid #B6C3CF;
+	margin-top : -3px;
+	margin-bottom : -3px;
+	padding-top : 2px;
+}
+.categories-tab-container.IE7 {
+	border-top : 0px;
+	display : inline-block;
+}
+
+.categories-tab {
+	margin : 2px 2px 0px 2px;
+	width : 150px;
+	padding : 12px 0px 10px 0px;
+	height : 16px;
+	text-align : center;
+	cursor : pointer;
+	float : left;
+}
+.categories-tab.active {
+	font-weight : bold;
+}
+
+.categories-tab .new-candidates-count, .categories-tab .shortlisted-candidates-count, .categories-tab .rejected-candidates-count {
+	background : url();
+	color : black;
+	padding : 0px 0px 0px 0px;
+}
+
+.new-category-tab {
+	background : url(../../images/employers/icons/categories.png) no-repeat 0px -39px;
+}
+
+.new-category-tab:hover, .new-category-tab.active:hover{
+	background : url(../../images/employers/icons/categories.png) no-repeat 0px -78px;
+}
+
+.new-category-tab.active {
+	background : url(../../images/employers/icons/categories.png) no-repeat 0px 0px;
+}
+
+.shortlisted-category-tab {
+	background : url(../../images/employers/icons/categories.png) no-repeat -152px -39px;
+}
+
+.shortlisted-category-tab:hover , .shortlisted-category-tab.active:hover{
+	background : url(../../images/employers/icons/categories.png) no-repeat -152px -78px;
+}
+
+.shortlisted-category-tab.active {
+	background : url(../../images/employers/icons/categories.png) no-repeat -152px 0px;
+}
+
+.rejected-category-tab {
+	background : url(../../images/employers/icons/categories.png) no-repeat -304px -39px;
+}
+
+.rejected-category-tab:hover, .rejected-category-tab.active:hover {
+	background : url(../../images/employers/icons/categories.png) no-repeat -304px -78px;
+}
+
+.rejected-category-tab.active {
+	background : url(../../images/employers/icons/categories.png) no-repeat -304px 0px;
+}
+
+/*support for css3 browser*/
+.categories-description :not(.active) {
+	font-weight : bold;
+	display : none;
+}
+/*support for non-css3 browser*/
+.categories-description span {
+	display : none;
+}
+
+.categories-description .active {
+	font-weight : bold;
+	display : block;
+	margin : -44px 15px 10px 470px;
+}
+.categories-description.IE7 .active {
+	display : inline-block;
+	position : absolute;
+	width : 223px;
+}
+.category-indicator {
+	background : url(../../images/universal/collapse_triangle.png);
+	width : 16px;
+	height : 16px;
+	display : block;
+	margin-top : 32px;
+}
+.category-indicator.IE7 {
+	position : relative;
+	margin : -9px 232px 0px 66px;
+}
+.category-indicator[currentCategory='New'] {
+	margin-left : 67px;
+}
+
+.category-indicator[currentCategory='Shortlisted'] {
+	margin-left : 227px;
+}
+
+.category-indicator[currentCategory='Rejected'] {
+	margin-left : 379px;
+}
+
+.tabs-container.search-result.manage-candidate.IE7 {
+	margin-top : 0px;
+}
+.tabs-container.search-result.IE7 {
+	margin-top : 39px;
+}
+
+#results-header.no-result-in-current-category {
+	padding-bottom : 35px;
+}

@@ -1,0 +1,5 @@
+create_JobAdViewing.sql
+create_JobAdStatus.sql
+create_GetJobAdLastOpenedTime.sql
+create_GetJobAdLastClosedTime.sql
+data_EquivalentTerms.sql

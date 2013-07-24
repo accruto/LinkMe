@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<linkMe>
+
+	<performanceMonitors>
+	
+		<monitorCategory name="LinkMeSearch" help="Search Related Performance Counters For LinkMe">
+		
+			<monitor name="EmployerSearchesPerSecond" help="Number of Employer Searches Per Second" type="RateOfCountsPerSecond32" />
+			<monitor name="EmployerSearchLength" help="Length Of Employer Search" type="AverageTimer32" />
+			<monitor name="EmployerSearchLengthBase" help="Length Of Employer Search Base" type="AverageBase" baseFor="EmployerSearchLength" />
+			<monitor name="NetworkerSearchesPerSecond" help="Number of employer searches per second" type="RateOfCountsPerSecond32" />
+			<monitor name="NetworkerSearchesLength" help="Number of Member searches" type="AverageTimer32" />
+			<monitor name="NetworkerSearchesLengthBase" help="Number of Member searches base" type="AverageBase" />
+			
+			<monitor name="NetworkerCompanySearchesPerSecond" help="Number of Member Company searches Per second" type="RateOfCountsPerSecond32" />
+			<monitor name="NetworkerCompanySearchesLength" help="Average Time Taken (ms) of Member Company searches" type="AverageTimer32" />
+			<monitor name="NetworkerCompanySearchesLengthBase" help="Average Time Taken (ms) of Member Company searches Base" type="AverageBase" />
+			
+			<monitor name="NetworkerContactNameSearchesPerSecond" help="Number of Networker ContactName searches Per second" type="RateOfCountsPerSecond32" />
+			<monitor name="NetworkerContactNameSearchLength" help="Average Time Taken (ms) of Member contact name searches" type="AverageTimer32" />
+			<monitor name="NetworkerContactNameSearchLengthBase" help="Average Time Taken (ms) of Member contact name searches Base" type="AverageBase" />
+			
+			
+		</monitorCategory>
+		
+		<monitorCategory name="LinkMeLogins" help="Login Related Counters For LinkMe">
+		
+			<monitor name="NetworkerLogins" help="Cummulative total of Member Logins Since last counter restart" type="NumberOfItems32" />
+			<monitor name="EmployerLogins" help="Cummulative total of Employer Logins Since last counter restart" type="NumberOfItems32" />
+			<monitor name="AdministratorLogins" help="Cummulative total of Admin Logins Since last counter restart" type="NumberOfItems32" />
+			
+		</monitorCategory>
+	
+    <monitorCategory name="LinkMePages" help="Performance Counters for Individual LinkMe Web Pages" type="MultiInstance">
+
+      <monitor name="Hits" help="Cummulative total of hits to the web page" type="NumberOfItems32" />
+      <monitor name="HitsPerSecond" help="Number of hits to the web page per second" type="RateOfCountsPerSecond32" />
+      <monitor name="Duration" help="Average duration of requests (ms)" type="AverageTimer32" />
+      <monitor name="DurationBase" help="Average duration of requests (ms) base" type="AverageBase" />
+
+    </monitorCategory>
+		
+	</performanceMonitors>
+
+</linkMe>

@@ -1,0 +1,5 @@
+create_ProductOrderAdjustment.sql
+alter_CommunityMember.sql
+alter_CommunityAssociation.sql
+create_GetOrganisationAffiliateId.sql
+alter_ProductOrder_drop_column.sql

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Communities.CommunitiesCommand" Collapsed="true">
+    <Position X="4" Y="1.75" Width="3" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Affiliations.Communities.ICommunitiesRepository" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="2.031" />
+        <Point X="8.25" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAIAABgCABAABAEgAAAAAABAAAIABACAAAIIAA=</HashCode>
+      <FileName>Affiliations\Communities\CommunitiesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Communities.Data.CommunitiesRepository" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAECQAAAEYBAICgAAAQAAWAgAAgAEAQAiCgAAQCAQQA=</HashCode>
+      <FileName>Affiliations\Communities\Data\CommunitiesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Verticals.VerticalsCommand" Collapsed="true">
+    <Position X="4" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQADAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Affiliations\Verticals\VerticalsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Verticals.Data.VerticalsRepository" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ARQAAAAAAAAAIAAAAACAACAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Affiliations\Verticals\Data\VerticalsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Offers.OfferCategoriesCommand" Collapsed="true">
+    <Position X="4" Y="5.5" Width="3" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Affiliations.Offers.IOffersRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="5.781" />
+        <Point X="7.375" Y="5.781" />
+        <Point X="7.375" Y="6.062" />
+        <Point X="8.25" Y="6.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACCACQAAQIDAAIAACAAAAAAAAQGAwAAEAAAAAAAAAAE=</HashCode>
+      <FileName>Affiliations\Offers\OfferCategoriesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Offers.OfferRequestsCommand" Collapsed="true">
+    <Position X="4" Y="6.5" Width="3" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Affiliations.Offers.IOffersRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="6.781" />
+        <Point X="7.375" Y="6.781" />
+        <Point X="7.375" Y="6.062" />
+        <Point X="8.25" Y="6.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgBIAAEAQABAAAAAAAAAAEAAAAAAAAAAAAACgACAAEA=</HashCode>
+      <FileName>Affiliations\Offers\OfferRequestsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+      <Field Name="_categoriesCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Affiliations.Offers.Data.OffersRepository" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>JAECCCgAAABAgAAgAAgACCCAAQAEABAAQAAkIAAISAA=</HashCode>
+      <FileName>Affiliations\Offers\Data\OffersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Communities.ICommunitiesRepository" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAIAAgAAABCAAAAIAAAAIAAAAACgAAACAAQA=</HashCode>
+      <FileName>Affiliations\Communities\ICommunitiesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Verticals.IVerticalsRepository" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Affiliations\Verticals\IVerticalsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Offers.IOffersRepository" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAEAAAACAAAAAAAAAACECRAAABAQAAAEAAAAABA=</HashCode>
+      <FileName>Affiliations\Offers\IOffersRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Offers.IOfferCategoriesCommand" Collapsed="true">
+    <Position X="1" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAACAAAAAAAAAAAECRAAgAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Affiliations\Offers\IOfferCategoriesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Communities.ICommunitiesCommand" Collapsed="true">
+    <Position X="1" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABEIAAgAAABAAAAAIAAAAIAAAAACgAAACAAQA=</HashCode>
+      <FileName>Affiliations\Communities\ICommunitiesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Affiliations.Verticals.IVerticalsCommand" Collapsed="true">
+    <Position X="1" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Affiliations\Verticals\IVerticalsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

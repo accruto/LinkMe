@@ -1,0 +1,62 @@
+#left-nav
+{
+	width: 175px;
+	float: left;
+	background-color: #E6EFF0;
+	padding: 7px;
+}
+
+#left-nav-content
+{
+	width: 472px;
+	float: right;
+	color: #000000;
+	text-align: left;
+}
+
+#left-nav-content li
+{
+	margin-bottom:10px;
+}
+
+a:link
+{
+	color: #1155EE;
+}
+
+a:visited
+{
+	color: #1155EE;
+}
+
+a:hover
+{
+	color: #FF9900;
+}
+
+/* PARTNERS PAGE */
+
+.partner_logo_float
+{
+	float:right;
+	padding-right:13px;
+	padding-bottom:7px;
+	margin-right:8px;
+}
+
+.partner_margin
+{
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.partner_blurb
+{
+	width:500px;
+}
+
+.partner_logo_margin
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}

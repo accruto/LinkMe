@@ -1,0 +1,1 @@
+﻿function arf(){var a=null,b=10;function e(e){if(e==a){d(a);c(b)}}function d(b){b!=a&&alert(b)}function c(b){b==a&&alert(a)}e()}function foo(b){var a="undefined";if(typeof b==a)return a;else{var ack;try{ack=b.foo();with(ack)alert(ack.bar+"undefined")}catch(c){ack=a}ack==a&&alert(a);return ack}}

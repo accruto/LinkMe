@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" Inherits="LinkMe.Apps.Asp.Mvc.Views.ViewMasterPage" MasterPageFile="~/Views/Shared/MasterPages/Site.master" %>
+
+<asp:Content ContentPlaceHolderID="Body" runat="server">
+
+    <div id="print-body-container">
+    
+        <div id="main-body">
+
+            <div id="form-container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            
+        </div>
+
+        <div class="clearer"></div>
+    </div>
+    
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="StyleSheet" runat="server">
+    <asp:ContentPlaceHolder ID="StyleSheet" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JavaScript" runat="server">
+    <script language="javascript">
+        window.print();
+    </script>
+</asp:Content>
+

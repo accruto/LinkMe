@@ -1,0 +1,361 @@
+
+.fakewindowcontain{ position: relative; overflow:hidden; }
+.show{ display:block; }
+.hide{ display:none; }
+.overlay-bg{ background:#AAAAAA; opacity:.30; filter:Alpha(Opacity=30); z-index:2003; height:100%; position:absolute; width:100%; top:0; left:0;}
+.overlay-container{ /* position:absolute; */
+	/* Modern-browser solution */
+    content: "."; display: block; height: 0; clear: both;
+	/* IE6,7 solution */
+	zoom: 1; /* Invalid CSS, hasLayout trigger */
+
+ }
+.shadow{ background:#CCCCCC; position: absolute; z-index:2004;}
+.overlay{ position: relative; left: -4px; top: -4px; width: 300px; z-index:2005; background: #FFFFFF; border:1px solid #88AACC;}
+.overlay-arrow{ position: absolute; left: -15px; top: 32px; z-index:2006;  width: 16px; height: 16px;}
+.overlay-title{	margin: 0; padding: 5px 8px; background: url(../images/controls/Overlay/overlay-title-bg.png) top left repeat-x; color: #FFFFFF; font-weight: bold;}
+.overlay-sub-title{	margin: 0; padding: 5px 0 7px 0; color: #000033; font-weight: normal; font-size: 130%;}
+.close-icon{ margin-top:0px; margin-right:8px; cursor:pointer; width: 16px; height: 16px; background-image: url(../images/controls/Overlay/close.png);	display: block; float:right; border:none; outline:none;}
+.close-icon.IE7, body.IE7 .close-icon {
+	margin-top : -20px;
+}
+.overlay-content{ color:#222222; padding: 10px; }
+.overlay-content .buttons-holder .button { margin-left: 10px; }
+
+.cancel-button { background-image: url(../images/buttons/cancel.png); border:0; width: 65px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:right; *margin:0 8px 8px 0;}
+.ok_button { background-image: url(../images/buttons/ok.png); border:0; width: 65px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:right; }
+
+
+.entire-body{ top:0px; left:0;  }
+
+.key_loc-overlay { top: -52px; left: 256px; }
+.key_loc-overlay .overlay{ width: 690px; }
+.key_loc-overlay .overlay-arrow, .createemailalertprompt .overlay-arrow{ left: -15px; top: 32px; background-image: url(../images/controls/Overlay/arrow-left.png); }
+
+.unlock-overlay { top: 28px; left: 0px; }
+.unlock-overlay .overlay{ width: 450px; }
+.unlock-overlay .overlay-arrow{ left: 210px; top: -15px; background-image: url(../images/controls/Overlay/arrow-up.png); }
+
+.overlay-content .main_columns .column {
+	width:335px;
+}
+.overlay-content .main_columns .column .search_btn_holder{
+	width:85px;
+}
+
+#left-sidebar .overlay-content .main_columns .column .advanced_search_box .section {
+	background:url("../images/controls/section/new-search/bg.png") no-repeat scroll left top transparent;
+	margin:0 0 9px;
+	padding:0;
+}
+
+#left-sidebar .overlay-content .main_columns .column .advanced_search_box .section .section-content {
+	background:url("../images/controls/section/new-search/bg-bottom.png") no-repeat scroll left bottom transparent;
+	margin:0;
+	padding:8px 8px 25px;
+}
+
+#left-sidebar .overlay-content .main_columns .column .advanced_search_box .section .section-content .section {
+	background:none repeat scroll 0 0 transparent;
+	border-top:1px solid #D7D9DA;
+	margin:10px 0 0;
+	padding:0;
+}
+
+#left-sidebar .overlay-content .main_columns .column .advanced_search_box .section .section .section-content {
+	background:none repeat scroll 0 0 transparent;
+	margin:0;
+	padding:0;
+}
+
+.overlay-content .buttons-holder {
+    padding:0 0 25px 0;
+}
+body.IE7 .overlay-content .buttons-holder {
+	padding : 0;
+}
+
+.folder-overlay .overlay{ width: 450px; }
+
+.custom-overlay .overlay{ width: 370px; }
+
+.save-new-search_button { background-image: url(../images/buttons/save-search_button.png); border:0; width: 95px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:right; }
+
+.create-email-alert_button { background-image: url(../images/buttons/create-email-alert_button.png); border:0; width: 135px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:0; padding:0 5px; float:right; }
+
+.custom-overlay .overlay-text {    
+    color: #000000;
+}
+
+.custom-overlay .overlay-text .sub-text {
+    color: #666666;
+    padding: 8px 0 0 0;
+}
+
+.custom-overlay .overlay-type {
+    font-size: 85%;
+    padding: 8px 0 0 0;
+}
+
+.custom-overlay .overlay-type .save-search-email-txt {
+    padding: 0 0 5px 0;
+}
+
+.custom-overlay .overlay-text .paragraph {
+    font-size: 85%;
+    padding: 8px 0 8px 0;
+}
+
+.custom-overlay .save-search-txt 
+{
+    background-image:url('../images/employers/icons/save-search.png');
+    background-repeat:no-repeat;
+    padding-left:20px;
+}
+
+.custom-overlay .save-alert-txt {
+    background-image:url('../images/universal/action-icons/candidate-email-alerts.png');
+    background-repeat:no-repeat;
+    padding-left:20px;
+}
+
+.credits-overlay .overlay{ width: 450px; }
+
+.login-overlay .overlay{ width: 350px; }
+
+.overlay-container .tips-overlay{ z-index:2011; }
+
+.tips-overlay .overlay{ z-index:2012; }
+
+#only-tips-overlay{ z-index:2010; }
+
+.tips-overlay .overlay{ width: 400px; }
+
+.tips-overlay .link-to-pdf{ padding: 0 0 10px 10px; }
+
+.tips-overlay .overlay-content{ padding: 10px 10px 20px 10px; font-size: 85%; }
+
+.send-message-overlay .overlay{ width: 690px; }
+
+.send-message-overlay .overlay-text{ font-size: 85%; }
+
+.send-message-overlay .send-message-credits-alert {
+    background-color: #FFFED5;
+    border: solid 1px #EFEFEE;
+    padding: 8px 8px 0 8px;
+    margin: 0 0 10px 0;
+}
+
+.send-message-overlay .send-message-credits-alert div { padding: 0 0 8px 0; }
+
+.send-message-overlay .email-container {
+    padding: 0;
+    margin: 0;
+}
+
+.send-message-overlay .email-holder {
+    border: solid 1px #CCCCCC;
+    padding: 8px;
+    margin: 0 10px 5px 0;
+    width: 476px;
+}
+
+.send-message-overlay .email-holder .email-metadata-holder {
+    padding: 0 0 5px 0;
+}
+
+.send-message-overlay .email-holder .email-metadata {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.send-message-overlay .email-holder .email-metadata tr td {
+    width: 90%;
+    padding: 0 0 3px 0;
+    margin: 0;
+    font-size: 85%;
+}
+
+.send-message-overlay .email-holder .email-metadata tr td:first-child {
+    width: 10%;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.send-message-overlay .email-holder .email-metadata #sendMessageTo {
+    width: 370px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.send-message-overlay .email-holder .email-metadata input[type=text] {
+    width: 250px;
+    border: 1px solid #88AACC;
+    color: #333333;
+    font-size: 100%;
+}
+
+.send-message-overlay .email-holder .email-metadata #attach-link {
+    background: url("../images/employers/icons/clip.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 18px;
+}
+
+.send-message-overlay .email-holder .email-metadata input[type=file] {
+    border: 1px solid #88AACC;
+    font-size: 100%;
+}
+
+.send-message-overlay .email-holder textarea {
+    border: 1px solid #88AACC;
+    color: #333333;
+    font-size: 110%;
+}
+
+.send-message-overlay .toggle-link-holder {
+    float:right;
+    display:none;
+}
+
+.send-message-overlay .toggle-link {
+    float:left;
+    text-decoration: none;
+}
+
+.send-message-overlay .icon {
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 6px;
+    margin-left: 5px;
+    margin-top: 5px;
+    outline: medium none;
+    width: 7px;
+}
+
+.send-message-overlay .down-icon {
+    background-image: url("../images/universal/more-details-triangle.gif");
+}
+
+.send-message-overlay .up-icon {
+    background-image: url("../images/universal/less-details-triangle.gif");
+}
+
+.send-message-overlay .toggle-link-holder:hover .down-icon {
+    background-image: url("../images/universal/more-details-triangle_over.gif");
+}
+
+.send-message-overlay .toggle-link-holder:hover .up-icon {
+    background-image: url("../images/universal/less-details-triangle_over.gif");
+}
+
+.send-message-overlay .personalization-holder {
+    border: solid 1px #CCCCCC;
+    padding: 8px;
+    margin: 0 0 5px 0;
+    width: 150px;
+    float: right;
+    height: 100%;
+    font-size: 85%;
+}
+
+.send-message-overlay .personalization-holder .heading {
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+
+.send-message-overlay .personalization-holder .content {
+    padding: 0 0 8px 0;
+}
+
+.send-message-overlay .personalization-holder .personalization-field-list-holder {
+    padding: 0 0 8px 0;
+}
+
+.send-message-overlay .personalization-holder .personalization-field-list {
+    border: 1px solid #88AACC;
+    font-size: 100%;
+    width: 150px;
+}
+
+.send-message-overlay .personalization-holder .button-holder {
+    padding: 0 0 10px 0;
+}
+
+.send-message-overlay .personalization-holder .button-holder .insert_button{
+    margin: 5px 0 99px 0;
+    margin-bottom: 97px\9;
+    padding:0;
+    border: 0 none;
+    background-image: url("../images/buttons/mini-light/insert.png");
+    float: right;
+    width: 40px;
+    height: 15px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.send-message-overlay .send_button { background-image: url(../images/buttons/send.png); border:0; width: 65px;background-position:left top; background-repeat:no-repeat; cursor:pointer; font-size:0; height:21px; margin:7px 0 0 0; padding:0 5px; float:right; }
+
+#rmw-cancel, #rmw-ok {
+	margin-left : 0px;
+}
+
+.rejectionMessageWarningOverlay .overlay {
+	width : 700px;
+}
+.needhelpfindingcandidates {
+	display : none;
+}
+.needhelpfindingcandidates-dialog.ui-widget-content {
+	padding : 0;
+	border : 0;
+}
+.needhelpfindingcandidates-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.needhelpfindingcandidates-dialog.ui-dialog .ui-dialog-content {
+	padding : 0;
+	overflow : hidden;
+}
+.needhelpfindingcandidates .top, .needhelpfindingcandidates .middle, .needhelpfindingcandidates .bottom {
+	background-image : url("../images/employers/NeedHelpFindingCandidates.png");
+	width : 506px;
+}
+.needhelpfindingcandidates .top {
+	height : 134px;
+}
+.needhelpfindingcandidates .middle {
+	height : 100px;
+	background-position : 0px -134px;
+}
+.needhelpfindingcandidates .bottom {
+	height : 107px;
+	background-position : 0px -234px;
+}
+.needhelpfindingcandidates .top .close {
+	width : 10px;
+	height : 10px;
+	cursor : pointer;
+	float : left;
+	margin : 7px 0px 0px 485px;
+}
+.needhelpfindingcandidates .link {
+	font : Bold 14px Arial;
+	color : #1155EE;
+	text-decoration : none;
+	cursor : pointer;
+	outline : none;
+	margin : 5px 150px 0px 80px;
+	float : left;
+	text-align : left;
+}
+.needhelpfindingcandidates .link.purchase {
+	width : auto;
+}
+.needhelpfindingcandidates .link.features, .needhelpfindingcandidates .link.contact {
+	margin-top : 32px;
+}

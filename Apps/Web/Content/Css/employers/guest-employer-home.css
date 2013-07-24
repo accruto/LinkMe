@@ -1,0 +1,209 @@
+/*
+ *	This stylesheet is specific to the custom Employer homepage for the Monash Business and Economics community.
+ */
+
+ 
+/*	---------------------------------
+	Resets against global stylesheets
+	---------------------------------
+*/
+	#main-body {
+		font-size: 79%;								/* Reset base size to from browser default (16px) to 10px */
+													/* MF: can't work out for the life of me why this has to be sqrt(62.5%) but there it is...
+		color: #214263;								/* Reset base font colour */
+		font-family: Arial, Helvetica, sans-serif;	/* Reset base font */
+	}
+	#main-body p {
+		font-family: Arial, Helvetica, sans-serif;	/* Reset base font */
+	}
+
+/*	------------------------------
+	Pre-embedding & testing styles
+	------------------------------
+*/
+/*	#body-container {
+		width: 694px;
+		margin-left: auto; margin-right: auto;
+	}*/
+
+/*	--------------------
+	Page-specific styles
+	--------------------
+*/
+	#body-content {
+		width: 598px;
+		background: #FFF url(../../images/employers/enquiries/bg_gradient-top.png) top left repeat-x;
+		padding: 32px 48px;
+		overflow: hidden;	/* For IE6's benefit */
+	}
+	
+		#body-content a,
+		#body-content a:visited {
+			color: #339;
+		}
+		#body-content a:hover {
+			color: #77D;
+		}
+		#body-content a:active {
+			color: #222288;
+		}
+		
+		#body-content a.offsite {
+			padding-right: 13px;
+			background: url(../../images/employers/enquiries/a-offsite.png) right 25% no-repeat;
+		}
+	
+		#body-content .inner {
+			width: 100%;	/* DIV exists to force IE6,7 to exclude padding from 100% width */
+							/* Hence, positioning by N% width will now work accurately in IE. */
+		}
+		
+			#body-content a img {
+				border: none;
+			}
+		
+			#body-content p {
+				margin:0;padding:0;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				line-height: 1.5;
+				font-size: 160%;
+			}
+			
+			#body-content p em {
+				color: #0371ac;
+				font-style: normal;
+			}
+			
+			#body-content small {
+				font-size: 0.7em;
+			}
+			
+			#body-content #heading-icon {
+				position: absolute;
+				margin-left: -40px;
+			}
+
+			#body-content h1.join-the-monash-gsb-career-portal {
+				margin:0;padding:0;
+				margin-left: 60px;
+				text-indent: -9999px;
+				overflow: hidden;
+				height: 106px;
+				background: url(../../images/employers/enquiries/h1_join-the-monash-gsb-career-portal.png) top left no-repeat;
+				margin-bottom: 40px;
+			}
+			
+			#body-content h2.our-students-and-graduates-include {
+				margin:0;padding:0;
+				text-indent: -9999px;
+				overflow: hidden;
+				height: 19px;
+				background: url(../../images/employers/enquiries/h2_our-students-and-graduates-include.png) top left no-repeat;
+				margin-top: 30px;
+				margin-bottom: 10px;
+			}
+			
+			#body-content .checklist-columns {}
+			
+				
+			#body-content .checklist-columns:after {	/* Add clearer after me */
+				content: ".";					
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			#body-content .checklist-columns {
+				*zoom: 1;						/* Add clearer after me for IE<8 */
+			}
+						
+				#body-content ul.checklist {
+					margin:0;padding:0;
+					list-style: none;
+					float: left;
+					margin-right: 30px;
+				}
+				
+				#body-content ul.last_checklist {
+					margin-right: 0;
+				}
+				
+					#body-content ul.checklist li {
+						font-size: 160%;
+						float: left;	/* For IE6's benefit: stops list */
+						clear: left;	/* items assuming full-width */
+						white-space: nowrap;
+						margin:0;padding:0;
+						margin-left: -2px;
+						position: relative;	/* Stops IE6 clipping the left-side of the checkbox icons */
+						list-style: none;
+						padding-top: 0.4em;
+						padding-bottom: 0.4em;
+						padding-left: 25px;
+						background: url(../../images/employers/enquiries/ul-checklist_li_bullet.png) left 50% no-repeat;
+						min-height: 18px;
+						_height: 18px;	/* IE6 min-height hack */
+					}
+				
+			#body-content .boxed-actions-container:after {	/* Add clearer after me */
+				content: ".";					
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			
+			#body-content .boxed-actions-container {
+				*zoom: 1;							/* Add clearer after me for IE<8 */
+			}
+			
+			#body-content ul.boxed-actions {
+				margin:0;padding:0;list-style:none;
+				float: left;
+				position: relative;
+				left: 50%;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+				#body-content ul.boxed-actions li {
+					font-size: 140%;
+					position: relative;
+					left: -50%;
+					margin:0;padding:0;list-style:none;
+					border: 1px solid #63a2c3;
+					margin-left: 11px;
+					margin-right: 11px;
+					padding: 11px;
+					float: left;
+				}
+				
+				#body-content ul.boxed-actions li.apply-now {
+					position: relative;		/* Absolute-positioning anchor */
+					padding-left: 38px;
+				}
+				
+				#body-content ul.boxed-actions li.apply-now img.boxed-action-icon {
+					position: absolute;
+					left: 10px;
+					top: 9px;
+				}
+			
+			#body-content .boxed-action {
+				padding: 27px 20px 31px 20px;
+				border: 1px solid #63a2c3;
+				font-size: 160%;
+				margin-top: 1.5em;
+				margin-bottom: 1.5em;
+			}
+			
+			#body-content .apply-now_boxed-action {
+				padding-left: 80px;
+				position: relative; 	/* Absolute-positioning anchor */
+			}
+			#body-content .apply-now_boxed-action img.boxed-action-icon {
+				position: absolute;
+				left: 21px;
+				_left: -59px;	/* Workaround for: IE6 mistakenly absolutely positions from the inside of the padding instead of inside of the element. */
+				top: 18px;
+			}

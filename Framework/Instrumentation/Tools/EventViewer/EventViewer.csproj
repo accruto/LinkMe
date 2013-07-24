@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{247AEB1D-2B3F-4A5F-B358-7655ADD56D1E}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Source\Icons\EventViewer.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.Framework.Instrumentation.Tools.EventViewer</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LinkMe.Framework.Instrumentation.Tools.EventViewer</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ConnectMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\Constants.cs" />
+    <Compile Include="Source\ExceptionWrapper.cs" />
+    <Compile Include="Source\CopyMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\DetailPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\DetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\EventDetailGenericWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\EventDetailMemberWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\EventViewerSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ListViewCacheManager.cs" />
+    <Compile Include="Source\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\LogPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\MessageHandlerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\MessageReaderInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Modules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\NavigateDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ParameterWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\FiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\TimeZoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Source\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\CopyMenuItem.resx">
+      <DependentUpon>CopyMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\DetailPanes.resx">
+      <DependentUpon>DetailPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\DetailsForm.resx">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\LogPanes.resx">
+      <DependentUpon>LogPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\FiltersForm.resx">
+      <DependentUpon>FiltersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\TimeZoneForm.resx">
+      <DependentUpon>TimeZoneForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Configuration\Configuration.csproj">
+      <Project>{1F7A6A11-F8B9-4000-B5D5-8EC2E68D0842}</Project>
+      <Name>Configuration %28Configuration\Configuration%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Connection\Connection.csproj">
+      <Project>{91C6E2E0-512E-4BC5-92DD-C7E02352631F}</Project>
+      <Name>Connection %28Configuration\Connection%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\Tools.csproj">
+      <Project>{8C5E942B-33DD-430F-99B7-B2F296D7837C}</Project>
+      <Name>Tools %28Tools\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Type\Tools\Tools.csproj">
+      <Project>{671C4C96-AA6F-4938-9835-5847FE4E4C9D}</Project>
+      <Name>Tools %28Type\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Type\Type.csproj">
+      <Project>{EA220628-98C7-40C7-8290-52D638D537AB}</Project>
+      <Name>Type %28Type\Type%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utility\Utility.csproj">
+      <Project>{6860E675-45B5-4558-8EE7-FDD55A8A0A20}</Project>
+      <Name>Utility %28Utility\Utility%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Instrumentation.csproj">
+      <Project>{7ADACC53-E241-4A8B-B965-3B13A6E59BD9}</Project>
+      <Name>Instrumentation %28Instrumentation\Instrumentation%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Management\Management.csproj">
+      <Project>{D8F98A71-2256-46B2-B4A3-B2D78A0B2F0B}</Project>
+      <Name>Management %28Instrumentation\Management%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>xcopy /y $(ProjectDir)..\Config\LinkMe.Framework.Instrumentation.Tools.EventViewer.Modules.config $(TargetDir)
+if errorlevel 1 goto fail
+
+exit 0
+
+:fail
+exit 1</PostBuildEvent>
+  </PropertyGroup>
+</Project>

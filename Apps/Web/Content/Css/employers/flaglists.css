@@ -1,0 +1,22 @@
+﻿.flaglist-header div h1 {
+    background: url("../../images/employers/large-section-heading-icons/flaglists.png") no-repeat scroll 5px 5px transparent;
+    padding-left: 36px;
+    height: 20px;
+}
+
+.flaglist-header div h1 .action-list a {
+    font-size: 68%;
+}
+
+.flaglist-header .flaglist-header-title {
+    font-weight: bold;
+    float:left;
+}
+
+.flaglist-header .flaglist-header-title-separator {
+    font-weight: normal;
+    color: #000033;
+    float:left;
+}
+
+

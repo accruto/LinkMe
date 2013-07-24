@@ -1,0 +1,48 @@
+//**************************************************************************
+// Version: 1.0.0.0
+//**************************************************************************
+
+
+#pragma classflags("forceupdate")
+#pragma namespace ("\\\\.\\root\\LinkMe")
+
+
+[abstract]
+class LinkMe_InstrumentationElement
+{
+};
+
+
+class LinkMe_InstrumentationEventType
+:	LinkMe_InstrumentationElement
+{
+	[key] string Name;
+	[not_null] boolean IsEnabled = false;
+};
+
+
+class LinkMe_InstrumentationNamespace
+:	LinkMe_InstrumentationElement
+{
+	[key] string Parent;
+	[key] string Name;
+	string EnabledEvents;
+	string MixedEvents;
+};
+
+
+class LinkMe_InstrumentationSource
+:	LinkMe_InstrumentationElement
+{
+	[key] string Parent;
+	[key] string Name;
+	string EnabledEvents;
+};
+
+
+class LinkMe_InstrumentationEventStatusChange
+:	LinkMe_InstrumentationElement
+{
+	string FullName;	// The full name of the element (Namespace or Source) that has changed.
+	sint32 ElementType;	// The type of the element that has changed, specified by the CatalogueElements enum.
+};

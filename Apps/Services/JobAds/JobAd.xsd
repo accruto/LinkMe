@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <xs:complexType name="JobAdBase">
+    <xs:sequence>
+      <!-- Title of the job ad. -->
+      <xs:element name="Title" type="tns:Title" />
+      <!-- Position title of the role to be filled. -->
+      <xs:element name="PositionTitle" type="tns:Title" />
+      <!-- Bullet points that job hunters see at top of ad. -->
+      <xs:element name="BulletPoints" type="tns:BulletPoints" minOccurs="0" />
+      <!-- A summary shown at top of ad and in search results. -->
+      <xs:element name="Summary" type="tns:Summary" minOccurs="0" />
+      <!-- The main text of the ad. -->
+      <xs:element name="Content" type="tns:Content" />
+      <!-- Company providing the job. -->
+      <xs:element name="EmployerCompanyName" type="tns:CompanyName" minOccurs="0" />
+      <!-- Full time, part time, etc. - see enum definition for valid values. -->
+      <xs:element name="JobTypes" type="tns:JobTypes" />
+      <!-- Location of the job. -->
+      <xs:element name="Location" type="tns:Location" minOccurs="0" maxOccurs="1" />
+      <!-- Annual salary. Either minimum, maximum or both may be specified. -->
+      <xs:element name="Salary" type="tns:SalaryRange" minOccurs="0" />
+      <!-- Additional details about the salary package. -->
+      <xs:element name="PackageDetails" type="tns:PackageDetails" minOccurs="0" />
+      <!-- Optional postcode if not included in Location. -->
+      <xs:element name="Postcode" type="tns:Postcode" minOccurs="0" maxOccurs="1" />
+      <!-- True if Australian residency is required to apply for the job. -->
+      <xs:element name="ResidencyRequired" type="xs:boolean" />
+      <!-- Person to contact about the job. --> 
+      <xs:element name="ContactPerson" type="tns:Person" minOccurs="0" />
+      <!-- Contact details of the above person (in relation to this ad). Note that email is required. -->
+      <xs:element name="ContactDetails" type="tns:ContactDetails" />
+      <!-- One or more industries related to the job. -->
+      <xs:element name="Industries" type="tns:Industries" />
+    </xs:sequence>
+    <!-- An identifying string specified by the job poster. Displayed to the job hunter at the top of the ad. -->
+    <xs:attribute name="externalReferenceId" type="tns:ExternalReferenceId" />
+  </xs:complexType>
+  
+  <xs:complexType name="JobAd">
+    <xs:complexContent>
+      <xs:extension base="tns:JobAdBase">
+        <xs:sequence>
+          <!-- A URL external to LinkMe which can be used to submit an application for this job directly to the job poster. -->
+          <xs:element name="ExternalApplyUrl" type="xs:anyURI" minOccurs="0" />
+          <!--The file name for the template to be used-->
+          <xs:element name="CssFilename" type="tns:CssFilename" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>      
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FeedJobAd">
+    <xs:complexContent>
+      <xs:extension base="tns:JobAdBase">
+        <xs:sequence>
+          <xs:element name="RecruiterCompanyName" type="tns:CompanyName" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="viewJobAdUrl" type="xs:anyURI" use="required" />
+        <xs:attribute name="applyJobAdUrl" type="xs:anyURI" use="required" />
+        <xs:attribute name="featured" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="JobAdId">
+    <xs:attribute name="id" type="xs:string" />
+  </xs:complexType>
+
+  <!-- A reference to an existing job ad. -->
+  <xs:complexType name="JobAdReference">
+    <xs:attribute name="externalReferenceId" type="tns:ExternalReferenceId" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="ExternalReferenceId">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Title">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="BulletPoints">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="3" name="BulletPoint">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="255" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Summary">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="300" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Content">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <!-- Seek's maximum is 32,000 characters -->
+      <xs:maxLength value="35000" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PackageDetails">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Person">
+    <xs:attribute name="firstName" type="tns:PersonName" />
+    <xs:attribute name="lastName" type="tns:PersonName" />
+    <xs:attribute name="title">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="1" />
+          <xs:maxLength value="4" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ContactDetails">
+    <xs:attribute name="email" type="tns:EmailAddress" use="required" />
+    <xs:attribute name="faxNumber" type="tns:PhoneNumber" use="optional" />
+    <xs:attribute name="phoneNumber" type="tns:PhoneNumber" use="optional" />
+  </xs:complexType>
+</xs:schema>

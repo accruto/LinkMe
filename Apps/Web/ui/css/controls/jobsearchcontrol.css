@@ -1,0 +1,78 @@
+﻿/* ------- Job search control -------- */
+
+.jobsearch_ascx:after {		/* Modern-browser self-clearing solution */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.jobsearch_ascx {			/* IE6,7 self-clearing solution */
+	zoom: 1;				/* Invalid CSS, hasLayout trigger */
+}
+
+    .jobsearch_ascx .keywords_field {}
+    .jobsearch_ascx .location_field {}
+
+    .horizontal_jobsearch_ascx fieldset .field {
+        float: left;
+        padding-top: 0;
+        margin-left: 10px;
+    }
+
+    .horizontal_jobsearch_ascx fieldset .field:first-child,
+    .horizontal_jobsearch_ascx fieldset .ie_firstchild {
+        margin-left: 0;
+    }
+
+    .horizontal_jobsearch_ascx .search-and-links_control {
+        padding-top: 1em;
+        *margin-top: 2px;
+    }
+
+    .horizontal_jobsearch_ascx .field .textbox_control {
+        _float: left;   /* For IE6's benefit */
+    }
+    .horizontal_jobsearch_ascx .keywords_field .helptext {
+        clear: left;   /* For IE6's benefit */
+    }
+
+    .vertical_jobsearch_ascx fieldset .field {
+        float: none;
+        margin-left: 0;
+        padding-top: 12px;
+    }
+
+    .vertical_jobsearch_ascx fieldset .field:first-child,
+    .vertical_jobsearch_ascx fieldset .ie_firstchild {
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+    .vertical_jobsearch_ascx .search-and-links_control {
+        padding-top: 0;
+    }
+
+.jobsearch_ascx fieldset {
+	width: 100%;
+}
+
+	.jobsearch_ascx .search-and-links_control {}
+		.jobsearch_ascx .search-and-links_control .button {
+			float: left;
+			margin: 0;
+			margin-right: 10px;
+		}
+		.jobsearch_ascx .search-and-links_control .action-list {
+			float: left;
+			clear: none;
+			font-size: 80%;
+		}
+		.jobsearch_ascx .search-and-links_control .action-list li {
+			margin: 0;
+			margin-top: -3px;
+		}
+			.jobsearch_ascx .search-and-links_control .action-list li a {
+				
+			}

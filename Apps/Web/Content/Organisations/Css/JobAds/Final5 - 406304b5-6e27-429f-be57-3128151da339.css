@@ -1,0 +1,53 @@
+#JobAd #JobDescription
+{
+	font-family: Tahoma,Arial,Verdana,sans;
+	color: #7C8387;
+
+}
+
+#JobAd #JobDescription h1
+{
+	background: #EBEBEB;
+	color: #69972F;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+#JobAd #JobDescription H2
+{
+	background: #EBEBEB;
+	color: #69972F;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	border: none;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#JobAd #JobDescription span.metaTitle
+{
+	font-weight: bold;
+	margin-left: 10px;
+	color: #7C8387;
+}
+
+#JobAd #JobDescription p, #AdContactDetais, #JobAd #JobDescription a
+{
+	font-size: 11px;
+}
+
+#JobAd #JobDescription ul
+{
+	color: #69972F;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#JobAd #JobDescription #LogoFooter
+{
+}

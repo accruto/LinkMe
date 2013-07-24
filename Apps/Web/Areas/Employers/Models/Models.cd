@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Web.Areas.Employers.Models.CandidateListModel">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACCAAAAAAAAAIACIAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\CandidateListModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Basis" />
+      <Property Name="Recovery" />
+      <Property Name="Results" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Candidates.BlockListListModel">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="LinkMe.Web.Areas.Employers.Models.CandidateListModel" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="2.988" />
+        <Point X="4.5" Y="4.263" />
+        <Point X="2.25" Y="4.263" />
+        <Point X="2.25" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAA=</HashCode>
+      <FileName>Areas\Employers\Models\Candidates\BlockListsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Candidates.FlagListListModel">
+    <Position X="3.5" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="LinkMe.Web.Areas.Employers.Models.CandidateListModel" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="2.988" />
+        <Point X="4.5" Y="4.242" />
+        <Point X="4.375" Y="4.242" />
+        <Point X="4.375" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACAA=</HashCode>
+      <FileName>Areas\Employers\Models\Candidates\FlagListsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Candidates.FolderListModel">
+    <Position X="5.75" Y="4.75" Width="2" />
+    <InheritanceLine Type="LinkMe.Web.Areas.Employers.Models.CandidateListModel" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="2.988" />
+        <Point X="4.5" Y="4.241" />
+        <Point X="6.75" Y="4.241" />
+        <Point X="6.75" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDAA=</HashCode>
+      <FileName>Areas\Employers\Models\Candidates\FoldersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Search.ManageCandidatesListModel">
+    <Position X="8.75" Y="4.75" Width="2.5" />
+    <InheritanceLine Type="LinkMe.Web.Areas.Employers.Models.CandidateListModel" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="2.988" />
+        <Point X="4.5" Y="4.221" />
+        <Point X="10" Y="4.221" />
+        <Point X="10" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\Search\JobAdsCandidatesListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Search.SearchListModel">
+    <Position X="11.75" Y="4.75" Width="2.25" />
+    <InheritanceLine Type="LinkMe.Web.Areas.Employers.Models.CandidateListModel" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="2.988" />
+        <Point X="4.5" Y="4.242" />
+        <Point X="12.875" Y="4.242" />
+        <Point X="12.875" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BEAAAACqAAAAAEgAAIAAAaAAAAEAAABAACBAAAAABAA=</HashCode>
+      <FileName>Areas\Employers\Models\Search\SearchListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Search.SuggestedCandidatesListModel">
+    <Position X="9" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\Search\JobAdsCandidatesListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.Search.BrowseListModel">
+    <Position X="14" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\Search\SearchListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.CandidateListBasisModel">
+    <Position X="7" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAEAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\CandidateListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.CandidateListRecoveryModel">
+    <Position X="7" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Areas\Employers\Models\CandidateListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkMe.Web.Areas.Employers.Models.CandidateListResultsModel">
+    <Position X="0.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAACAAQAAAAAAABAAQAAIAAACAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Employers\Models\CandidateListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

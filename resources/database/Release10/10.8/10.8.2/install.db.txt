@@ -1,0 +1,6 @@
+alter_Vertical_enabled.sql
+alter_OfferCategory_drop_deleted.sql
+alter_Member_DisabilityFlags.sql
+alter_Product_name.sql
+create_GetOfferRequestCategories.sql
+alter_ProductOrder_price.sql

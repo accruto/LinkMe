@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Employers">
+  <DataContextMoniker Name="/AppleDevicesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9f4502ce-017a-44df-ac69-d9bb6e72007b" absoluteBounds="1.375, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AppleDevicesDataContext/UserAppleDeviceEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01c984be-1f75-4d24-be18-5932171b6d86" absoluteBounds="1.3900000000000001, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

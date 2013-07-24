@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_endorsements_endorsedDate.sql,rollback_NetworkerPurchasedResult_table_new_field.sql,rollback_NetworkerProfile_new_field.sql,rollback_search_criteria_full_resume.sql,rollback_database_version_table.sql

@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <AssemblyPrefix>LinkMe.Framework.</AssemblyPrefix>
+    <VersionRcFiles>True</VersionRcFiles>
+    <VersionMofFiles>False</VersionMofFiles>
+    <VersionSqlFiles>False</VersionSqlFiles>
+    <OptimizePngFiles>False</OptimizePngFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CodeProjects Include="$(SourceRootDirectory)Framework.sln" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemBuild.proj" />
+
+</Project>

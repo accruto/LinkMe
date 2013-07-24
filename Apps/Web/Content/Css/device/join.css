@@ -1,0 +1,80 @@
+﻿#mainbody .join {
+	width : 100%;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+}
+#mainbody .join > .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	color : #464646;
+	line-height : 1.2em;
+	margin : 0 0.3333333333333333em 0.5em;
+}
+#mainbody .join > .title a {
+	text-decoration : none;
+	color : #307EEC;
+}
+#mainbody .join > .title .pink {
+	font-size : 0.7222222222222222em;
+	color : #F56C7E;
+}
+#mainbody .join .textbox_field .textbox_control .watermark .title {
+	width : 100%;
+}
+#mainbody .join .textbox_field .textbox_control .icon.tip {
+	width : 2.375em;
+	height : 2.4375em;
+	background-size : 100% 100%;
+	background-image : url("../../images/device/IconCorrect.png");
+	float : left;
+	margin-left : 30.625em;
+	margin-top : -3.6875em;
+	display : none;
+	position : relative;
+	z-index : 10;
+}
+#mainbody .join .textbox_field .textbox_control.success .icon.tip {
+	display : block;
+}
+#mainbody .join .textbox_field .textbox_control.error .icon.tip {
+	display : block;
+	background-image : url("../../images/device/IconIncorrect.png");
+}
+#mainbody .join .button.join {
+	font-size : 2.25em;
+	font-weight : bold;
+	color : white;
+	width : 100%;
+	height : 2.2222222222222222em;
+	border-radius : 0.3333333333333333em;
+	text-shadow : 0 -0.0555555555555555em 0 rgba(0,0,0,0.4);
+	background-image : -webkit-gradient(linear, center top, center bottom, from(#8CBB0E), to(#437904));
+	background-image : -webkit-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -moz-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -o-linear-gradient(top, #8CBB0E, #437904);
+	background-image : -ms-linear-gradient(top, #8CBB0E, #437904);
+	background-image : linear-gradient(to bottom, #8CBB0E, #437904);
+	-webkit-box-shadow : 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	-moz-box-shadow : 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	box-shadow: 0 0.0555555555555555em 0 rgba(0,0,0,0.2), inset 0 0 1.1111111111111111em 0.1666666666666666em rgba(0,0,0,0.4);
+	border : 0.0833333333333333em solid #437904;
+	float : left;
+	text-align : center;
+	line-height : 2.25em;
+	cursor : pointer;
+}
+#mainbody .join .tandc {
+	font-size : 1.875em;
+	font-weight : Bold;
+	line-height : 1.2em;
+	text-align : center;
+	color : #464646;
+	float : left;
+	margin-top : 1em;
+}
+#mainbody .join .tandc a {
+	display : inline;
+	color : #307EEC;
+}

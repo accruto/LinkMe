@@ -1,0 +1,92 @@
+#JobAd #JobDescription #Ad {
+	width: 460px;
+	border: none;
+	background: url(brooklyn_group_images/brooklyn_group_border.png) top left repeat-y;
+}
+
+#JobAd #JobDescription #JobAdHeading {
+	background: url(brooklyn_group_images/brooklyn_group_header.png) top left no-repeat;
+	padding-top: 30px;
+	position: relative; /* Anchor for AP (e.g. #JobAdHeading h1) */
+}
+
+#JobAd #JobDescription #LogoFooter {
+	background: url(brooklyn_group_images/brooklyn_group_footer.png) bottom left no-repeat;
+	height: 140px;
+}
+
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad .details *,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol
+{
+	font-family: "Microsoft Sans Serif", Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+	line-height: 1.5;
+}
+#JobAd #JobDescription #Ad strong {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading p,
+#JobAd #JobDescription #Ad #JobAdHeading ul,
+#JobAd #JobDescription #Ad #JobAdHeading ol,
+#JobAd #JobDescription #Ad #JobAdHeading .details * {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2;
+}
+
+#JobAd #JobDescription #Ad label {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad h1,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol,
+#JobAd #JobDescription #Ad div {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#JobAd #JobDescription #JobAdHeading h1 {
+	font-size: 22pt;
+	color: #0071bb;
+	margin-bottom: 25px;
+	font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+	padding-top: 30px;
+	line-height: 1.1;
+}
+
+#JobAd #JobDescription #JobAdHeading p {
+	font-size: 14pt;
+}
+
+#JobAd .bulletpoints {
+	margin-top: 1.25em;
+	margin-bottom: 1.5em;
+}
+
+#JobAd .bulletpoints li {
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 0.25em;
+	margin-left: -9px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	padding-left: 0;
+}
+
+#JobAd #JobDescription #Ad .details {
+	width: 400px !important;
+	position: relative;
+	left: 28px;
+	margin-bottom: 0;
+}
+
+
+

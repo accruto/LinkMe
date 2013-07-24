@@ -1,0 +1,2 @@
+alter_ParsedResume.sql
+alter_JobAdViewing.sql

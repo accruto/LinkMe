@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14.625" name="Integration">
+  <DataContextMoniker Name="/IntegrationDataContext" />
+  <nestedChildShapes>
+    <classShape Id="062f2115-8a2a-4f57-9b2b-706cef74e758" absoluteBounds="3.5, 5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdExportCloseEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61ae1dde-c833-4f1a-89d7-66031e0366d5" absoluteBounds="3.515, 5.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e1fde7e-9c2b-4123-8550-776d2f985817" absoluteBounds="3.5, 12, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdImportPostEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2256a594-cd91-4c94-9822-4ff2874997a2" absoluteBounds="3.515, 12.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d371ba5-1159-4bd5-9381-149e1a62abab" absoluteBounds="3.5, 1.5, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdExportFeedEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6118c25-a82c-423b-be8f-08721f611a6a" absoluteBounds="3.515, 1.96, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93b3e3d5-4369-41b2-91d1-5918befc0b6e" absoluteBounds="3.5, 3.25, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdExportFeedIdEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c623d35-4638-4921-ba8a-78680d717a68" absoluteBounds="3.515, 3.71, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e70674d5-3e95-4bf7-84e7-faea1b8f7e72" absoluteBounds="3.5, 7.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdExportPostEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54da964c-90b2-458a-b3cb-4826e66e64d8" absoluteBounds="3.515, 7.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae6d5dbd-4100-4a60-8447-f10ba1f0a1e5" absoluteBounds="3.5, 9.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdImportCloseEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c529c8e9-0bb7-4700-af3f-80814d9bc85c" absoluteBounds="3.515, 10.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" absoluteBounds="0.75, 7, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3cf241d8-b4be-4043-8dc8-eb65779b579f" absoluteBounds="0.765, 7.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 7); (1.75 : 5.78929768880208); (2.19791916666667 : 5.78929768880208 : JumpStart); (2.36458583333333 : 5.78929768880208 : JumpEnd); (3.5 : 5.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdExportCloseEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="062f2115-8a2a-4f57-9b2b-706cef74e758" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.77089680989583); (1.75 : 13.1739005533854); (3.5 : 13.1739005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdImportPostEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="4e1fde7e-9c2b-4123-8550-776d2f985817" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 7); (2.2812525 : 2.00084554036458); (3.5 : 2.00084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdExportFeedEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="6d371ba5-1159-4bd5-9381-149e1a62abab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 7); (1.2187475 : 3.75084554036458); (2.19791916666667 : 3.75084554036458 : JumpStart); (2.36458583333333 : 3.75084554036458 : JumpEnd); (3.5 : 3.75084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdExportFeedIdEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="93b3e3d5-4369-41b2-91d1-5918befc0b6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.01044840494792); (3.5 : 8.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdExportPostEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="e70674d5-3e95-4bf7-84e7-faea1b8f7e72" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 8.77089680989583); (2.2812525 : 10.4142976888021); (3.5 : 10.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/JobAdIntegrationEventEntity/JobAdIntegrationEvent_JobAdImportCloseEvent" />
+      <nodes>
+        <classShapeMoniker Id="b0728e80-f06a-4d13-8f2e-399fe7945c60" />
+        <classShapeMoniker Id="ae6d5dbd-4100-4a60-8447-f10ba1f0a1e5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a88a129e-44cb-4c29-aa03-f8ff7d61d310" absoluteBounds="6.875, 5.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/IntegrationDataContext/IntegratorUserEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad415de6-4434-44cc-82c3-dfe5cdc83215" absoluteBounds="6.8900000000000006, 5.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

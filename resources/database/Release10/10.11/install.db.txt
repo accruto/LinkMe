@@ -1,0 +1,7 @@
+alter_CandidateAccessPurchase.sql
+alter_CreditAllocation.sql
+create_GetCreditReport.sql
+create_MemberViewing.sql
+create_MemberViewingsByMember.sql
+create_MemberContact.sql
+create_MemberContactsByMember.sql

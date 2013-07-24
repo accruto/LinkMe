@@ -1,0 +1,5 @@
+drop_NonEmptyJobSearchCriteriaSets.sql
+create_IX_CommunicationCategorySettings_settingsId.sql
+
+
+

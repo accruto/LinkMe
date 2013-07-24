@@ -1,0 +1,68 @@
+﻿.validation-success, .validation-errors {
+	display : none;
+}
+.validation-success {
+	margin : 0px 0px 10px 10px;
+	border : 1px solid #9FD690;
+	border-radius : 4px;
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	background-color : #E6FEE3;
+	padding : 5px;
+	width : 496px;
+}
+.validation-success .icon {
+	background-image : url("../images/forms/icons/validation-success.png");
+	width : 14px;
+	height : 14px;
+	margin : 5px;
+}
+.validation-success .prompt {
+	width : 460px;
+	text-align : left;
+}
+.validation-errors {
+	margin : 0px 0px 10px 10px;
+	border : 1px solid #D69090;
+	border-radius : 4px;
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	background-color : #DD2649;
+	padding : 5px;
+	width : 496px;
+	color : white;
+}
+.validation-errors .icon {
+	background-image : url("../images/forms/icons/validation-alert.png");
+	width : 26px;
+	height : 20px;
+	margin : 5px;
+}
+.validation-errors .prompt {
+	margin-top : 8px;
+}
+.validation-errors ul {
+	margin-top : 5px;
+}
+.validation-errors li {
+	list-style : none;
+	float : left;
+	width : 496px;
+}
+.validation-errors li .listicon {
+	background-image : url("../images/forms/icons/validation-arrow-point.png");
+	width : 8px;
+	height : 8px;
+	margin : 4px 4px 0px 14px;
+}
+.validation-errors li .text {
+	width : 445px;
+	text-align : left;
+}
+.field .validation-error {
+	font-weight : bold;
+	color : red;
+	float : left;
+	margin-left : 148px;
+	text-align : left;
+}

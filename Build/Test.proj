@@ -1,0 +1,68 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="DevBuild">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <DatabaseServer Condition=" '$(DatabaseServer)' == '' ">(LOCAL)</DatabaseServer>
+    <DatabaseName>LinkMe</DatabaseName>
+  </PropertyGroup>
+
+  <!-- Build properties. -->
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <IsapiRewriteDirectory>$(SourceRootDirectory)External\ISAPI_Rewrite</IsapiRewriteDirectory>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Item groups. -->
+
+  <ItemGroup>
+    <TestProjects Include="..\Framework\Build\Test.proj" />
+    <TestProjects Include="..\External\Build\Test.proj" />
+    <TestProjects Include="..\Domain\Build\Test.proj" />
+    <TestProjects Include="..\Query\Build\Test.proj" />
+    <TestProjects Include="..\Apps\Build\Test.proj" />
+  </ItemGroup>
+
+  <!-- Test -->
+
+  <Target Name="RestoreLatestDatabase">
+    <MSBuild Projects="Database.proj"
+             Targets="RestoreLatestDatabase"
+             Properties="BuildVersion=$(BuildVersion); DatabaseServer=$(DatabaseServer); DatabaseName=$(DatabaseName)" />
+  </Target>
+
+  <Target Name="SetupIsapiRewrite">
+
+    <!-- Set the registry entry -->
+    
+    <Exec Command="FOR /F %%F IN ('cd') DO c:\Windows\System32\reg.exe add HKLM\SOFTWARE\Helicon\ISAPI_Rewrite /v InstallDir /f /d $(IsapiRewriteDirectory)" />
+
+    <!-- Restart IIS -->
+    
+    <Exec Command="iisreset.exe -stop" />
+    <Exec Command="iisreset.exe -start" />
+
+  </Target>
+
+  <Target Name="PurgeMsmqQueues">
+    <PurgeMsmqQueues />
+  </Target>
+
+  <Target Name="Test" DependsOnTargets="RestoreLatestDatabase; SetupIsapiRewrite; PurgeMsmqQueues;">
+    <MSBuild Projects="@(TestProjects)" Targets="Test" StopOnFirstFailure="false" ContinueOnError="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+
+</Project>

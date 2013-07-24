@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="FeaturedDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Apps.Agents.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FeaturedEmployer" Member="FeaturedEmployerEntities" AccessModifier="Internal">
+    <Type Name="FeaturedEmployerEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="logoUrl" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="logoOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeaturedStatistics" Member="FeaturedStatisticsEntities" AccessModifier="Internal">
+    <Type Name="FeaturedStatisticsEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdJobAds" Storage="_createdJobs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="members" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="memberSearches" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="memberAccesses" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeaturedJobAd" Member="FeaturedJobAdEntities" AccessModifier="Internal">
+    <Type Name="FeaturedJobAdEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeaturedCandidateSearch" Member="FeaturedCandidateSearchEntities" AccessModifier="Internal">
+    <Type Name="FeaturedCandidateSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

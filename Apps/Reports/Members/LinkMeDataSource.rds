@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>LinkMeDataSource</Name>
+  <DataSourceID>406aa348-182d-495f-86aa-1bea9b9583ad</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=devdb01;Initial Catalog=LinkMe</ConnectString>
+    <Prompt>Specify a user name and password for data source LinkMeDataSource</Prompt>
+  </ConnectionProperties>
+</RptDataSource>

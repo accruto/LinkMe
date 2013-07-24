@@ -1,0 +1,86 @@
+.errorable {
+    position: relative;
+    *position: inherit;
+    overflow: hidden;
+}
+
+.error-container {
+	position: absolute;
+	z-index: 4;
+	width: 290px;
+}
+
+.error-adv-keywords {
+	width : 290px;
+	position : absolute;
+}
+
+.error-adv-keywords .error-body {
+    background-image: url(../images/universal/error/error-bg.png);
+    z-index: 3;
+    width: 290px;
+}
+
+.error-adv-keywords .error-content {
+    color: #FF0000;
+    padding: 10px;
+    background: url("../images/universal/error/error-bg-bottom.png") no-repeat left bottom;
+    border-bottom: none;
+}
+
+.error-adv-keywords .error-alert-icon {
+    background-image: url(../images/universal/error/error.png);
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin: 2px 0px 0px 0px;
+    padding: 3px;
+    float: left;
+}
+
+.error-container .error-arrow {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    z-index: 6;
+    width: 15px;
+    height: 12px;
+    background-image: url(../images/universal/error/error-arrow.png);
+}
+
+.error-container .error-body {
+    background-image: url(../images/universal/error/error-bg.png);
+    z-index: 3;
+    position: absolute;
+    width: 290px;
+    margin-top: 8px;
+}
+
+.error-container .error-content {
+    color: #FF0000;
+    padding: 10px;
+    background: url("../images/universal/error/error-bg-bottom.png") no-repeat left bottom;
+    border-bottom: none;
+    line-height: 3px;
+}
+
+.error-container .error-alert-icon {
+    background-image: url(../images/universal/error/error.png);
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 3px;
+    float: left;
+}
+            
+.error-container .error-msg {
+}
+            
+.error-report {
+    color: #FF0000;
+}

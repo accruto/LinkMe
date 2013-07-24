@@ -1,0 +1,40 @@
+<%@ Import Namespace="LinkMe.Apps.Asp.Mvc.Html"%>
+<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="SiteMasterPage.master.cs" Inherits="LinkMe.Web.Master.SiteMasterPage" %>
+<%@ Register TagPrefix="cv" Namespace="LinkMe.Web.Cms.ContentDisplayViews" Assembly="LinkMe.Web" %>
+<%@ Register TagPrefix="vw" TagName="GoogleAnalyticsTracker" Src="~/Views/Shared/GoogleAnalyticsTracker.ascx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head runat="server">
+	
+	    <title>Jobs - Online Job Search for Jobs, Employment &amp; Careers in Australia</title>
+		
+		<%= Html.MetaTags(Head.MetaTags)%>
+		<%= Html.CanonicalLink(GetCanonicalUrl()) %>
+		<%= Html.Favicon(Head.FaviconReference)%>
+		<%= Html.RssFeeds(Head.RssFeedReferences)%>
+		
+		<%= Html.StyleSheets(Head.StyleSheetReferences)%>
+        <asp:ContentPlaceHolder id="StyleSheet" runat="server" />
+        
+        <script type="text/javascript" language="javascript" src="<%= GetJavascriptUrl() %>"></script>
+        <%= Html.JavaScripts(Head.JavaScriptReferences)%>
+        <asp:ContentPlaceHolder id="JavaScript" runat="server" />
+        
+        <cv:HtmlContextualContentDisplayView ID="cvCommunityHead" ItemName="Head" runat="server"></cv:HtmlContextualContentDisplayView>
+		
+        <vw:GoogleAnalyticsTracker runat="server" />
+	</head>
+	<body onload="Page_ValidationActive = false;">
+	
+        <asp:ContentPlaceHolder ID="Body" runat="server" />
+
+        <input type="text" id="txtPageIdentifier" value="<%= PageIdentifier %>" style="display: none" />
+
+        <asp:ContentPlaceHolder id="BodyTrackers" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderLogo" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderRight" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="LinkMeHeaderTitle" runat="server"></asp:ContentPlaceHolder>
+	
+	</body>
+</html>

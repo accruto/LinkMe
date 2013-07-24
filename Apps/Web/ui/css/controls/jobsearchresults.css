@@ -1,0 +1,195 @@
+﻿.job-search-results_section {}
+.job-search-results_ascx {}
+
+/*  ----------------------------
+    Full-size job search results
+    ----------------------------
+*/
+    
+.job-search-results_ascx .jobads {}
+
+    .job-search-results_ascx .jobad {
+        margin:0;padding:0;
+        width: 664px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+    }
+        .job-search-results_ascx .jobad_inner {
+            border-top: 1px solid #EEE;
+            border-bottom: 1px solid #EEE;
+        }
+            .job-search-results_ascx .jobad_innermost {
+                padding-top: 10px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+    .job-search-results_ascx .featured_jobad {
+        z-index: 1;
+        position: relative;
+    }
+    
+        .job-search-results_ascx .featured_jobad .jobad_inner {
+            padding:0;
+            background: white url(../../images/controls/JobSearchResults/search-result_featured_bg_top.gif) left top no-repeat;
+            border: none;
+            position: relative;
+        }
+
+            .job-search-results_ascx .featured_jobad .jobad_innermore {
+                background: url(../../images/controls/JobSearchResults/search-result_featured_bg_bottom_linkme.gif) bottom left no-repeat;
+                position: relative;
+            }
+
+                .job-search-results_ascx .featured_jobad .jobad_innermost {
+                    background: url(../../images/controls/JobSearchResults/search-result_featured_bg_overlay.gif) top right no-repeat;
+                    border: none;
+                    padding: 15px 20px;
+                    position: relative;
+                }
+
+    .job-search-results_ascx .jobad .title-line {
+        margin-bottom: 2px;
+    }
+        .job-search-results_ascx .jobad .title {
+            font-family:Arial;
+            font-size:16px;
+            font-weight:bold;
+        }
+
+    /* For additional "ads" within a job ad */
+    .job-search-results_ascx .extraJobAdText {
+        font-size: 70%;
+    }
+
+    .job-search-results_ascx .extraJobAdText font {
+        font-size: 100%;
+    }
+
+    .job-search-results_ascx .snippet-text {}
+        .job-search-results_ascx .snippet-text p {
+            margin:0;padding:0;
+        }
+
+    .job-search-results_ascx .snippet-text-additional {
+        display: block;
+        padding-top: 0.5em;
+        font-size: 85%;
+        line-height: 1.4em;
+    }
+    
+    .job-search-results_ascx .location {}
+    
+        .job-search-results_ascx .location strong {
+            margin-right: 10px;
+        }
+    
+        .job-search-results_ascx .jobad .location .showmaplink {
+            font-size: 85%;
+            color: #999999;
+            margin-right: 10px;
+        }
+
+        .job-search-results_ascx .jobad .location .showmaplink a {
+            color: #8080FF;
+        }
+        .job-search-results_ascx .jobad .location .showmaplink a:hover {
+            color: #FFB080;
+        }
+
+        .job-search-results_ascx .jobad .aux {
+            /*color: #1f8101;*/
+            color: #76C55E;
+        }
+
+    .job-search-results_ascx .postedDate {
+        font-size: 85%;
+        line-height: 1.35em;
+        color: #999999;
+    }
+
+/*  ------------------------------
+    Suggested jobs minified layout
+    ------------------------------
+
+    TODO: Separate suggested jobs control into a normal and mini control
+    should the differences become difficult to maintain.
+*/
+
+.mini_job-search-results_section .job-search-results_ascx {}
+    .mini_job-search-results_section .job-search-results_ascx .jobads,
+        .mini_job-search-results_section .job-search-results_ascx .jobad {
+            width: auto;
+            margin:0;padding:0;
+        }
+        
+            .mini_job-search-results_section .job-search-results_ascx .jobad_inner {
+                border-top: none;
+                border-bottom: none;
+                background: none;
+                margin: 0;
+            }
+                .mini_job-search-results_section .job-search-results_ascx .jobad .jobad_innermore {
+                    background: none;
+                }
+
+                    .mini_job-search-results_section .job-search-results_ascx .jobad .jobad_innermost {
+                        background: none;
+                        padding: 8px 0px;
+                        border: none;
+                    }
+                    
+                .mini_job-search-results_section .job-search-results_ascx .featured_jobad .jobad_innermost {
+                    background: url(../../images/controls/JobSearchResults/search-result_mini_featured_bg_overlay.gif) top right no-repeat;
+                    padding: 8px 0px;
+                }
+               
+        .mini_job-search-results_section .job-search-results_ascx .jobad {
+            padding-left: 30px;
+            background-image: url(../../images/controls/JobSearchResults/icons/job.png);
+            background-position: 8px 8px;
+            background-repeat:  no-repeat;
+        }
+        
+        .mini_job-search-results_section .job-search-results_ascx .jobad .title-line {
+            margin-bottom: 0.5em;
+        }
+            .mini_job-search-results_section .job-search-results_ascx .jobad .title-line a.title {
+                font-size: 100%;
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-weight: normal;
+            }
+        
+        .mini_job-search-results_section .job-search-results_ascx .jobad .location {
+            font-size: 85%;
+            color: #808080;
+        }
+        .job-search-results_ascx .jobad .location .showmaplink {
+            font-size: 100%;
+        }
+        .mini_job-search-results_section .job-search-results_ascx .jobad .location strong {
+            font-weight: normal;
+        }
+        .mini_job-search-results_section .job-search-results_ascx .jobad .aux {
+            color: #8FC080;
+        }
+        .mini_job-search-results_section .job-search-results_ascx .jobad .postedDate {
+            color: #A0A0A0;
+            margin-bottom: 0.8em;
+        }
+        
+        .mini_job-search-results_section .job-search-results_ascx .item_odd .highlighted-word {
+            background-color: #F8F8A0;
+        }
+        
+        .mini_job-search-results_section .job-search-results_ascx .snippet-text {
+            font-size: 85%;
+        }
+            .mini_job-search-results_section .job-search-results_ascx .snippet-text p {
+                margin:0;
+            }
+        
+        .mini_job-search-results_section .job-search-results_ascx .snippet-text-additional {
+            display: none;
+        }

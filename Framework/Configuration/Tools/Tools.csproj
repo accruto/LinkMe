@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AD1715E-DE31-4CA8-9C98-E3D28190C8C8}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LinkMe.Framework.Configuration.Tools</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinkMe.Framework.Configuration.Tools</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <AssemblyOriginatorKeyFile>..\..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Controls\DefaultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Forms\ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Icons\IconManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\ResultsRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Source\Controls\DefaultControl.resx">
+      <DependentUpon>DefaultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Forms\ResultsForm.resx">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\Icons\Catalogue.ico" />
+    <EmbeddedResource Include="Source\Icons\CatalogueLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\Directory.ico" />
+    <EmbeddedResource Include="Source\Icons\DirectoryLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\Domain.ico" />
+    <EmbeddedResource Include="Source\Icons\DomainDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\DomainLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\DomainLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\DomainReadOnlyDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\Environment.ico" />
+    <EmbeddedResource Include="Source\Icons\EnvironmentDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\EnvironmentLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\EnvironmentLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\EnvironmentReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\Folder.ico" />
+    <EmbeddedResource Include="Source\Icons\FolderLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\Module.ico" />
+    <EmbeddedResource Include="Source\Icons\ModuleReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\Namespace.ico" />
+    <EmbeddedResource Include="Source\Icons\Repository.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryReadOnlyDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryReadOnlyLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryReadOnlyLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryType.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryTypeLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\RepositoryTypeReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\Store.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreReadOnlyDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreReadOnlyLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreReadOnlyLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreType.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreTypeLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\StoreTypeReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\Subsystem.ico" />
+    <EmbeddedResource Include="Source\Icons\SubsystemLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\Variable.ico" />
+    <EmbeddedResource Include="Source\Icons\VariableReadOnly.ico" />
+    <EmbeddedResource Include="Source\Icons\Computer.ico" />
+    <EmbeddedResource Include="Source\Icons\ComputerDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\ComputerLarge.ico" />
+    <EmbeddedResource Include="Source\Icons\ComputerLargeDisconnected.ico" />
+    <EmbeddedResource Include="Source\Icons\ComputerReadOnlyDisconnected.ico" />
+    <Content Include="Source\Icons\MsmqQueue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tools\Tools.csproj">
+      <Project>{8C5E942B-33DD-430F-99B7-B2F296D7837C}</Project>
+      <Name>Tools %28Tools\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Type\Tools\Tools.csproj">
+      <Project>{671C4C96-AA6F-4938-9835-5847FE4E4C9D}</Project>
+      <Name>Tools %28Type\Tools%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Type\Type.csproj">
+      <Project>{EA220628-98C7-40C7-8290-52D638D537AB}</Project>
+      <Name>Type %28Type\Type%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Utility.csproj">
+      <Project>{6860E675-45B5-4558-8EE7-FDD55A8A0A20}</Project>
+      <Name>Utility %28Utility\Utility%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration.csproj">
+      <Project>{1F7A6A11-F8B9-4000-B5D5-8EC2E68D0842}</Project>
+      <Name>Configuration %28Configuration\Configuration%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

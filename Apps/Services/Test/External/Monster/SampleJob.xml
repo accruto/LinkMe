@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Body>
+      <QueriesResponse xmlns="http://schemas.monster.com/Monster">
+        <Jobs>
+          <Job allowExpiredUpdates="false" inventoryType="transactional" enforceUniqueness="true" jobRefCode="200116851" jobComplete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <RecruiterReference userId="128374546">
+              <UserName>c1b_rosshuman</UserName>
+              <PersonName>
+                <GivenName>CareerOne</GivenName>
+                <FamilyName>CareerOne</FamilyName>
+              </PersonName>
+              <EmailAddress>operations@careerone.com.au</EmailAddress>
+            </RecruiterReference>
+            <CompanyReference companyId="4058724">
+              <CompanyXCode>xc1b_rosshumanx</CompanyXCode>
+              <CompanyName>Ross Human Directions Limited</CompanyName>
+            </CompanyReference>
+            <FolderReference folderId="129097182">
+              <FolderName>Change Analyst / Process Analyst</FolderName>
+            </FolderReference>
+            <Channel monsterId="168" />
+            <OccupationalClassification occupationId="101419">
+              <Name>Software Change Control Specialist</Name>
+            </OccupationalClassification>
+            <JobInformation>
+              <JobTitle>Change Analyst / Process Analyst</JobTitle>
+              <JobShortDescription />
+              <JobType monsterId="2">Contract</JobType>
+              <JobStatus monsterId="26">Perdiem</JobStatus>
+              <IsHandinamic>false</IsHandinamic>
+              <ProDiversity>false</ProDiversity>
+              <Replacement>false</Replacement>
+              <Contact hideAll="false" hideAddress="false" hideStreetAddress="false" hideCity="false" hideState="false" hidePostalCode="false" hideCountry="false" hideContactInfoField="false" hideCompanyName="false" hideEmailAddress="true" hideFax="false" hideName="false" hidePhone="false" hideStreetAddress2="false">
+                <CompanyName>Ross Specialist</CompanyName>
+                <Address />
+                <E-mail>specialistsydney@rossjuliaross.com</E-mail>
+              </Contact>
+              <PhysicalAddress>
+                <StreetAddress />
+                <StreetAddress2 />
+                <City>Sydney</City>
+                <State />
+                <CountryCode />
+                <PostalCode />
+              </PhysicalAddress>
+              <DisableApplyOnline>false</DisableApplyOnline>
+              <HideCompanyInfo>false</HideCompanyInfo>
+              <DisableFilters>false</DisableFilters>
+              <JobBody>&lt;![CDATA[&lt;p&gt;This is a 3 month contract role with a large government agency based in Parramatta. The agency requires an experienced Process / Change Analyst to work in conjunction with the project team and with major users to ensure that business processes are developed and implemented  to support a TRIM electronic personnel file environment. &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Key Responsibilities:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ensure that relevant business analysis and process mapping and definition functions are undertaken to a professional standard and in accordance with the methodologies and protocols&lt;/li&gt;&lt;li&gt;Ensure that all processes are developed in compliance with all relevant legislation and NSW Government requirements&lt;/li&gt;&lt;li&gt;Drive the design, documentation, development and implementation of key business processes &lt;/li&gt;&lt;li&gt;Ensure that client needs, expectations and satisfaction are proactively met&lt;/li&gt;&lt;li&gt;Apply the principles, methodologies and practices of e-learning;&lt;/li&gt;&lt;li&gt;Work with the Project Manager and clients to determine project impact; carry out stakeholder identification &amp;amp; analysis; design &amp;amp; implement communication plans; produce documentation; and deliver training (as appropriate to target audience and budget);&lt;/li&gt;&lt;li&gt;Drive the design, documentation and development of change management documents that support organisational change; &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;In order to be successful in this role, you will need the following:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Extensive experience in TRIM particularly in implementing an Electronic Document Management solution&lt;/li&gt;&lt;li&gt;Demonstrated superior process management skills or qualifications &lt;/li&gt;&lt;li&gt;Formal training and/or experience in using a recognised OCM methodology to identify and apply effective organisational change management strategies;&lt;/li&gt;&lt;li&gt;Knowledge of the principles of e-learning and vocational training &lt;/li&gt;&lt;li&gt;Demonstrated capacity to develop and implement change programs including process and behavioural  and maintain sound working relationships with customers, other key stakeholders and suppliers.&lt;/li&gt;&lt;li&gt;Understanding of government and corporate information management policies and guidelines and legislation.&lt;/li&gt;&lt;li&gt;Highly developed skills in computer literacy, particularly in the area of business productivity products – Microsoft Word, Project, Excel and PowerPoint etc&lt;/li&gt;&lt;/ul&gt;]]&gt;</JobBody>
+              <YearsOfExperience monsterId="4">5+ to 7 Years</YearsOfExperience>
+              <DesiredLanguages>
+                <Language>
+                  <LanguageName monsterId="27">English</LanguageName>
+                </Language>
+              </DesiredLanguages>
+              <ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+              <JobSourceId monsterId="3" />
+              <CustomApplyOnlineURL>https://www.360.fasttrack.com.au/p.questionnaire/Questionnaire.page?Type=SbJobOrder&amp;Reference=200116851&amp;Jobsite=CareerOneMonster&amp;LicenceNo=FTESB-0528</CustomApplyOnlineURL>
+            </JobInformation>
+            <JobPostings>
+              <JobPosting jobPostingState="active" desiredDuration="30" postingId="118204981" jobPostingRefCode="200116851">
+                <RecruiterReference userId="128374546">
+                  <UserName>c1b_rosshuman</UserName>
+                  <PersonName>
+                    <GivenName>CareerOne</GivenName>
+                    <FamilyName>CareerOne</FamilyName>
+                  </PersonName>
+                  <EmailAddress>operations@careerone.com.au</EmailAddress>
+                </RecruiterReference>
+                <Location locationId="128">
+                  <City>Sydney</City>
+                  <State>NSW</State>
+                  <CountryCode>AU</CountryCode>
+                </Location>
+                <Locations>
+                  <Location locationId="128">
+                    <City>Sydney</City>
+                    <State>NSW</State>
+                    <CountryCode>AU</CountryCode>
+                  </Location>
+                </Locations>
+                <JobCategory monsterId="15431">Government, Defence &amp; Emergency</JobCategory>
+                <JobCategories>
+                  <JobCategory monsterId="15431">Government, Defence &amp; Emergency</JobCategory>
+                </JobCategories>
+                <JobOccupations>
+                  <JobOccupation categoryId="15431" monsterId="11926">
+                    <Name>Police-Law Enforcement</Name>
+                  </JobOccupation>
+                  <JobOccupation categoryId="15431" monsterId="15472">
+                    <Name>State Government</Name>
+                  </JobOccupation>
+                </JobOccupations>
+                <JobCity>Sydney</JobCity>
+                <BoardName monsterId="1">Monster</BoardName>
+                <JobPostingDates>
+                  <JobPostDate>2013-01-16T00:06:03.7500000-05:00</JobPostDate>
+                  <JobActiveDate>2013-01-16T00:06:03.7500000-05:00</JobActiveDate>
+                  <JobExpireDate>2013-02-15T00:06:03.7500000-05:00</JobExpireDate>
+                  <JobModifiedDate>2013-01-16T00:06:00.0000000-05:00</JobModifiedDate>
+                </JobPostingDates>
+                <PostingStats increment="false">
+                  <Views>33</Views>
+                  <SeekerApps>0</SeekerApps>
+                  <EmailApps>0</EmailApps>
+                  <TotalClicks>0</TotalClicks>
+                </PostingStats>
+                <ApplyOnlineURL>https://www.360.fasttrack.com.au/p.questionnaire/Questionnaire.page?Type=SbJobOrder&amp;Reference=200116851&amp;Jobsite=CareerOneMonster&amp;LicenceNo=FTESB-0528</ApplyOnlineURL>
+                <PhysicalAddress>
+                  <StreetAddress />
+                  <StreetAddress2 />
+                  <City>Sydney</City>
+                  <State />
+                  <CountryCode />
+                  <PostalCode />
+                </PhysicalAddress>
+                <DisplayTemplate monsterId="13334" />
+                <PostingOccupationalClassification occupationId="101419">
+                  <Name>Software Change Control Specialist</Name>
+                </PostingOccupationalClassification>
+                <Industries>
+                  <Industry>
+                    <IndustryName monsterId="50">Government and Military</IndustryName>
+                  </Industry>
+                </Industries>
+              </JobPosting>
+            </JobPostings>
+          </Job>
+        </Jobs>
+      </QueriesResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

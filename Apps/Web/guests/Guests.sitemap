@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+
+    <!-- Pages -->
+
+    <siteMapNode url="~/guests/Friends.aspx"
+                 title="Jobs through friends | Connecting people | Helping friends in work | Members"
+                 description="Give you job prospects a boost by enhancing your relationships with people in your current job or previous jobs."
+                 keywords="Jobs, colleagues, contacts, friends" />
+    <siteMapNode url="~/guests/MyJobApplications.aspx" title="Profile | Members" />
+    <siteMapNode url="~/guests/JobPreviousSearches.aspx" title="Profile | Members" />
+    <siteMapNode url="~/guests/JobEmailAlerts.aspx" title="Profile | Members" />
+
+  </siteMapNode>
+
+</siteMap>

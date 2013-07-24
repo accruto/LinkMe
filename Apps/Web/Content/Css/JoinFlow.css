@@ -1,0 +1,2322 @@
+﻿/* background image definition */
+.step, .upload-resume, .manually-create .topbar, .manually-create .bottombar, .manually-create .createbutton, .radiobutton, .filebox-bg, .textbox-bg, .browse-button, .upload-button, .upload-background, .upload-layer .progress-bar-bg, .upload-layer .progress-bar, .upload-layer .progress-bar-right, .upload-layer .check-icon, .upload-layer .ok-button, .tip-icon, .validation-error-msg .top-bar, .validation-error-msg .message-icon, .validation-error-msg .message-body ul div, .validation-error-msg .bottom-bar, .alert, .contact .edit, .contact .cancel, .contact.hover .content, .contact.cancel-hover .content, .contact.edit-mode .content, .contact .footer, .alert-icon, .username-callout, .contact .auto-extraction .icon, .mandatory, .help-icon, .availability-icon, .checkbox, .down-arrow, .save-button, .cancel-button, .confirm-button, .next-button, .salary-slider-bg, .salary-slider .ui-slider-range, .salary-slider .ui-slider-handle, .salary-slider-ruler, .jobtype-icon, .aus-map .state, .aus-map .region, .aus-map .hint, .dropdown-scrollbar .ui-slider-handle, .listbox-scrollbar .ui-slider-handle, .shoppinglist-item, .shoppinglist-item .delete-icon, .DOBMonth_control .right-edge, .DOBYear_control .right-edge, .finish-button, .thanks-for-signup .top-bar, .thanks-for-signup .bottom-bar, .thanks-for-signup .check-icon, .thanks-for-signup .mail-icon, .profile .star-icon, .profile .auto-extraction-icon, .view-profile-button, .profile .resume-icon, .complete-profile-button, .profile .list-icon {
+    background-image : url("../images/candidate/joinflow/joinflow.png");
+}
+
+body {
+	overflow-x : hidden;
+}
+
+#subheader {
+	display : none;
+}
+
+.joinflow-header {
+	font : bold 36px Arial;
+}
+
+.section-hide {
+	display : none;
+}
+
+.wizard-steps {
+	width : 953px;
+	padding-top : 8px;
+}
+
+.step {
+	cursor : pointer;
+	float : left;
+}
+
+.step.disabled {
+	cursor : auto;
+}
+
+.step.Join {
+	height : 56px;
+	width : 240px;
+	background-position : 0px 0px;
+}
+.step.Join.current, .step.Join.current:hover {
+	width : 242px;
+	background-position : 0px -112px;
+}
+.step.Join:hover {
+	background-position : 0px -56px;
+}
+.step.Join.disabled:hover {
+	background-position : 0px 0px;
+}
+.step.Join.manually {
+	background-position : -953px 0px;
+}
+.step.Join.current.manually, .step.Join.current.manually:hover {
+	width : 242px;
+	background-position : -953px -112px;
+}
+.step.Join.manually:hover {
+	background-position : -953px -56px;
+}
+.step.Join.disabled.manually {
+	background-position : -953px 0px;
+}
+
+.step.PersonalDetails {
+	height : 56px;
+	width : 241px;
+	background-position : -242px 0px;
+	margin-left : -3px;
+}
+.step.PersonalDetails.current, .step.PersonalDetails.current:hover {
+	width : 240px;
+	background-position : -242px -112px;
+}
+.step.PersonalDetails:hover {
+	background-position : -242px -56px;
+}
+.step.PersonalDetails.disabled:hover {
+	background-position : -242px 0px;
+}
+.step.PersonalDetails.manually {
+	background-position : -1195px 0px;
+}
+.step.PersonalDetails.current.manually, .step.PersonalDetails.current.manually:hover {
+	width : 240px;
+	background-position : -1195px -112px;
+}
+.step.PersonalDetails.manually:hover {
+	background-position : -1195px -56px;
+}
+.step.PersonalDetails.disabled.manually:hover {
+	background-position : -1195px 0px;
+}
+
+.step.JobDetails {
+	height : 56px;
+	width : 234px;
+	background-position : -483px 0px;
+	margin-left : -3px;
+}
+.step.JobDetails.current, .step.JobDetails.current:hover {
+	background-position : -483px -112px;
+}
+.step.JobDetails:hover {
+	background-position : -483px -56px;
+}
+.step.JobDetails.disabled:hover {
+	background-position : -483px 0px;
+}
+
+.step.Activate {
+	height : 56px;
+	width : 236px;
+	background-position : -717px 0px;
+	margin-left : -5px;
+}
+.step.Activate.current, .step.Activate.current:hover {
+	background-position : -717px -112px;
+}
+.step.Activate:hover {
+	background-position : -717px -56px;
+}
+.step.Activate.disabled:hover {
+	background-position : -717px 0px;
+}
+
+#joinflow-content fieldset {
+	border : none;
+	padding : 0px 0px 0px 0px;
+	float : left;
+}
+#joinflow-content .field {
+	margin : 0px 0px 10px 83px;
+	float : left;
+	width : 856px;
+}
+#joinflow-content .edit-mode .field {
+	margin-left : 0px;
+}
+#joinflow-content .field label {
+	font : bold 12px Arial;
+	color : black;
+	float : left;
+	width : 158px;
+	margin-top : 7px;
+}
+#joinflow-content .field.compulsory_field label {
+	width : 143px;
+}
+#joinflow-content .field .control {
+	float : left;
+}
+
+.step-content.upload, .step-content.manually {
+	float : left;
+	width : 942px;
+}
+.upload-resume {
+	width : 644px;
+	height : 122px;
+	background-position : -676px -168px;
+	float : left;
+	margin-top : 8px;
+	padding : 21px 0px 0px 31px;
+}
+.upload-resume:hover {
+	cursor : pointer;
+	background-position : 0px -168px;
+	width : 645px;
+}
+
+.divider {
+	width : 316px;
+	height : 1px;
+	background-color : #EEEEEE;
+	float : left;
+	margin : 12px 0px 0px 2px;
+}
+
+.or {
+	float : left;
+	font : bold italic 16px arial;
+	margin : 2px 11px 0px 11px;
+}
+
+.manually-create {
+	cursor : pointer;
+	float : left;
+	width : 677px;
+}
+.manually-create .topbar {
+	background-position : -676px -311px;
+	width : 677px;
+	height : 5px;
+	float : left;
+}
+.manually-create:hover .topbar {
+	background-position : 0px -311px;
+}
+.manually-create .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqUAAAABCAYAAADnytfjAAAAPUlEQVRIS2NkwARMf+/frWMSk2BgePcOi/So0GgIjIbAaAiMhsBoCIyGwGgIjIbAaAhQKQSEhBj+vXrBAABfkgg7cc0zuQAAAABJRU5ErkJggg==);
+	background-repeat : repeat-y;
+	width : 646px;
+	height : 82px;
+	padding : 16px 0px 0px 31px;
+	float : left;
+}
+.manually-create:hover .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqUAAAABCAYAAADnytfjAAAATElEQVRIS2M8XFLS8P/vX0brvJz/TGISDAzv3jGMgtEQGA2B0RAYDYHREBgNgdEQGA2B0RCgWQgICTH8e/WC4eikKYyMzMz/bXt6GgAqqBECRW3F+gAAAABJRU5ErkJggg==);
+}
+.manually-create.checked .bg {
+	height : 115px;
+}
+.manually-create .bottombar {
+	background-position : -676px -417px;
+	width : 677px;
+	height : 7px;
+	float : left;
+}
+.manually-create:hover .bottombar {
+	background-position : 0px -417px;
+}
+
+.radiobutton {
+	width : 16px;
+	height : 16px;
+	background-position : -1669px 0px;
+	float : left;
+	cursor : pointer;
+	margin-top : -1px;
+}
+.radiobutton:hover {
+	background-position : -1747px -70px;
+}
+.radiobutton[value='Citizen'], .radiobutton[value='UnrestrictedWorkVisa'], .radiobutton[value='RestrictedWorkVisa'] {
+	margin-top : 7px;
+}
+.radiobutton.checked, .radiobutton.checked:hover {
+	background-position : -1669px -16px;
+}
+
+.upload-resume-txt {
+	width : 160px;
+	margin : 0px 22px 0px 31px;
+	float : left;
+}
+.upload-resume-title {
+	font : bold 12px arial;
+	float : left;
+}
+.upload-resume-desc {
+	font : 12px arial;
+	float : left;
+	width : 165px;
+}
+.filebox-bg {
+	height : 34px;
+	width : 250px;
+	background-position : -1351px -170px;
+	float : left;
+}
+#ResumePath {
+	color : black;
+	height : 31px;
+	width : 235px;
+	border : none;
+	background : none;
+	cursor : pointer;
+	padding-left : 14px;
+}
+#ResumePath.mask {
+	color : #959595;
+}
+.browse-button {
+	height : 36px;
+	width : 111px;
+	background-position : -1603px -169px;
+	float : left;
+	margin-left : 9px;
+	cursor : pointer;
+	overflow : hidden;
+}
+.browse-button:hover {
+	background-position : -1718px -169px;
+}
+.browse-button input {
+	filter: alpha(opacity=0);
+	-o-transform: translate(250px, -50px) scale(1);
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	-moz-transform: translate(-203px, 107pt) scale(1.5);
+	border-color: transparent;
+	border-style: solid;
+	border-width: 0 0 100px 200px;
+	cursor: pointer;
+	direction: rtl;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left : -800px;
+}
+.FF .browse-button input {
+	left : 776px;
+	right : 0px;
+}
+.IE7 .browse-button input {
+	margin : 0px 0px 0px -426px;
+	border-top: 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-bottom : 17px solid transparent;
+	border-left : 200px solid transparent;
+	filter: alpha(opacity=0);
+	position: static;
+	cursor: pointer;
+	direction: ltr;
+	opacity: 0;
+	left : 0px;
+	right : 0px;
+}
+.nofileselected {
+	font : 14px Arial;
+	color : red;
+	display : none;
+}
+.upload-button {
+	height : 46px;
+	width : 162px;
+	background-position : -1351px -204px;
+	float : left;
+	margin-top : 3px;
+	display : none;
+}
+.upload-button:hover {
+	background-position : -2512px -603px;
+}
+.upload-tips {
+	float : right;
+	font : 12px arial;
+	color : #1155EE;
+	text-decoration : underline;
+	margin : 3px 88px 0px 0px;
+}
+.upload-resume:hover .upload-tips {
+	margin-right : 89px;
+}
+.manually-create-txt {
+	width : 470px;
+	margin : 0px 22px 0px 31px;
+	float : left;
+}
+.manually-create-title {
+	font : bold 12px arial;
+	float : left;
+	width : 500px;
+}
+.manually-create-desc {
+	font : 12px arial;
+	float : left;
+	margin-top : 2px;
+}
+.manually-create .createbutton {
+	background-position : -1955px -970px;
+	width : 174px;
+	height : 48px;
+	float : left;
+	cursor : pointer;
+	display : none;
+	margin : 10px 0px 10px 230px;
+}
+.manually-create .createbutton:hover {
+	background-position : -2130px -970px;
+}
+.helpful-tips {
+	font : 12px arial;
+	color : #1155EE;
+}
+.vertical-divider {
+	height : 271px;
+	width : 1px;
+	background-color : #E9EBEC;
+	margin : -158px 0px 0px 12px;
+	float : left;
+}
+.step-content.manually .vertical-divider {
+	height : 304px;
+}
+.right-side-tip {
+	float : left;
+	position : absolute;
+	margin : 10px 0px 0px 702px;
+	width : 250px;
+}
+body.IE7 .right-side-tip {
+	margin : -158px 0px 0px 10px;
+}
+.tips-title {
+	font : bold 18px arial;
+}
+.tip {
+	margin-top : 19px;
+	float : left;
+}
+.tip-icon, .tip-title, .tip-desc {
+	float : left;
+	width : 200px;
+}
+.tip-icon.quickly {
+	background-position : -1686px -1px;
+	width : 29px;
+	height : 28px;
+}
+.tip-icon.be-viewed {
+	background-position : -1715px -1px;
+	width : 31px;
+	height : 27px;
+}
+.tip-icon.reuse {
+	background-position : -1748px -1px;
+	width : 30px;
+	height : 30px;
+}
+.tip-title {
+	font : bold 14px arial;
+	margin-left : 16px;
+}
+.tip-desc {
+	font : 12px arial;
+	margin-left : 45px;
+}
+.find-out-more {
+	color : #1155EE;
+	text-decoration : underline;
+	cursor : pointer;
+}
+.find-out-more-layer {
+	display : none;
+	text-align : left;
+}
+.find-out-more-layer-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.upload-tips-layer {
+	display : none;
+	text-align : left;
+}
+.upload-tips-layer p, .upload-tips-layer li, .find-out-more-layer p {
+	font-size : 12px;
+}
+.upload-background {
+	background-position : -1870px -2px;
+	width : 742px;
+	height : 456px;
+	float : left;
+}
+.uploading-and-parsing {
+	width : 740px;
+	height : 107px;
+	float : left;
+	background-color : #EFF3F7;
+	border : 1px solid #87A5BD;
+	border-top : none;
+}
+.upload-layer-dialog {
+	padding : 0px 0px 0px 0px;
+	border : none;
+}
+.upload-layer-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.upload-layer-dialog .upload-layer {
+	padding : 0px 0px 0px 0px;
+	border : none;
+	overflow : hidden;
+}
+.upload-layer {
+	display : none;
+	width : 742px;
+	height : 564px;
+}
+.upload-layer .prompt-text {
+	float : left;
+	font : bold 12px Arial;
+	margin : 18px 0px 0px 18px;
+	width : 742px;
+	text-align : left;
+}
+.upload-layer .prompt-text span {
+	float : left;
+}
+.upload-layer .progress-bar-holder {
+	float : left;
+	width : 742px;
+}
+.upload-layer .filename {
+	float : left;
+	font : bold 12px Arial;
+	margin : 18px 0px 0px 18px;
+	width : 150px;
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	text-align : left;
+}
+.upload-layer .progress-bar-bg {
+	background-position : -1828px -603px;
+	width : 504px;
+	height : 30px;
+	float : right;
+	margin : 11px 20px;
+}
+.upload-layer .progress-bar {
+	background-position : -1828px -639px;
+	width : 0%;
+	height : 30px;
+	float : left;
+	margin-left : -1px;
+}
+.upload-layer .progress-bar-right {
+	background-position : -2319px -639px;
+	width : 12px;
+	height : 30px;
+	float : left;
+	display : none;
+}
+.upload-layer .percent {
+	font : bold 12px Arial;
+	margin : -33px 0px 0px 440px;
+	float : left;
+}
+.upload-layer .check-icon {
+	background-position : -1782px -33px;
+	width : 19px;
+	height : 16px;
+	display : none;
+	float : left;
+	margin : 18px 0px 0px 8px;
+}
+.upload-layer .button-holder {
+	float : left;
+	width : 740px;
+}
+.upload-layer .next-step {
+	float : right;
+	font : bold 12px Arial;
+	margin-right : 10px;
+}
+.upload-layer .ok-button {
+	background-position : -1716px -254px;
+	width : 80px;
+	height : 27px;
+	float : right;
+	margin-top : -8px;
+}
+.upload-layer .ok-button:hover {
+	background-position : -2625px -60px;
+}
+.upload-layer .auto-extraction {
+	float : left;
+	width : 740px;
+	height : 106px;
+	margin : -107px 0px 0px 1px;
+	background-color : #D6E9F4;
+	opacity : 0.8;
+	display : none;
+}
+.upload-layer .auto-extraction .icon {
+	width : 36px;
+	height : 36px;
+	float : left;
+	margin : 30px 0px 0px 300px;
+}
+.upload-layer .auto-extraction span {
+	font : bold 12px Arial;
+	float : left;
+	margin : 74px 0px 0px -77px;
+}
+.upload-layer .errorMsg {
+	float : left;
+	width : 740px;
+	height : 106px;
+	margin : -107px 0px 0px 1px;
+	background-color : #F6AAB5;
+	opacity : 0.8;
+	display : none;
+}
+.upload-layer .errorMsg span {
+	color : red;
+	font : bold 12px April;
+	float : left;
+	width : 740px;
+	height : 67px;
+	text-align : left;
+	padding : 18px 0px 0px 18px;
+}
+
+.validation-error-msg {
+	float : left;
+	margin-top : 9px;
+}
+.validation-error-msg .top-bar {
+	background-position : -1795px -686px;
+	width : 940px;
+	height : 7px;
+	float : left;
+}
+.validation-error-msg .message-body {
+	background-color : #DD2649;
+	float : left;
+	margin-top : -1px;
+	width :  940px;
+	min-height : 35px;
+}
+.validation-error-msg .message-icon {
+	background-position : -1781px -1px;
+	width : 26px;
+	height : 21px;
+	margin : 5px 0px 0px 25px;
+	float : left;
+}
+.validation-error-msg .error-summary {
+	font : 12px Arial;
+	color : white;
+	margin-left : 15px;
+	float : left;
+	width : 870px;
+}
+.validation-error-msg .message-body ul li {
+	list-style : none;
+	color : white;
+	font : 12px Arial;
+	margin : 0px 0px 5px 43px;
+}
+.validation-error-msg .message-body ul li:first-child {
+	margin-top : 25px;
+}
+.validation-error-msg .message-body ul div {
+	background-position : -1735px -51px;
+	width : 9px;
+	height : 9px;
+	float : left;
+	margin : 3px 0px 0px 5px;
+}
+.validation-error-msg .bottom-bar {
+	float : left;
+	background-position : -1795px -674px;
+	width : 940px;
+	height : 6px;
+}
+.alert {
+	height : 42px;
+	width : 880px;
+	background-position : 0px -424px;
+	float : left;
+	margin-top : 11px;
+	padding : 8px 0px 0px 59px;
+}
+.alert-text {
+	font : bold 12px arial;
+	float : left;
+	width : 900px;
+	margin-bottom : 1px;
+}
+.divider-2-1 {
+	width : 877px;
+	height : 1px;
+	background-color : #ECECEC;
+	float : left;
+	margin : 9px 0px 10px 60px;
+}
+.contact {
+	width : 944px;
+	float : left;
+}
+.contact .edit {
+	width : 62px;
+	height : 50px;
+	float : left;
+	background-position : 58px -474px;
+	background-color : white;
+	z-index : 2;
+	position : relative;
+	cursor : pointer;
+}
+.contact.hover .edit, .contact.edit-mode .edit {
+	background-position : -881px -524px;
+}
+.contact.cancel-hover .edit {
+	background-position : 0px -635px;
+}
+.contact .edit:hover {
+	background-position : -881px -474px;
+}
+.contact .cancel {
+	width : 62px;
+	height : 50px;
+	float : left;
+	margin : 50px 0px 0px -62px;
+	background-position : 58px -474px;
+	background-color : white;
+	z-index : 2;
+	position : relative;
+	cursor : pointer;
+}
+.contact.hover .cancel, .contact.edit-mode .cancel {
+	background-position : -881px -574px;
+}
+.contact.cancel-hover .cancel {
+	background-position : 0px -685px;
+}
+.contact .content {
+	width :881px;
+	float : left;
+	margin-left : -4px;
+	background-position : 881px 881px;
+	background-color : #F0F0F0;
+	z-index : 1;
+	position : relative;
+	cursor : pointer;
+}
+.contact.hover .content, .contact.cancel-hover .content, .contact.edit-mode .content {
+	background-position : -58px -635px;
+	background-color : transparent;
+}
+.contact .footer {
+	height : 2px;
+	width : 881px;
+	background-position : 881px 2px;
+	float : left;
+	margin-left : 58px;
+	cursor : pointer;
+}
+.contact.hover .footer, .contact.cancel-hover .footer, .contact.edit-mode .footer {
+	background-position : -58px -1071px;
+}
+.contact .content .view-mode {
+	display : block;
+	min-height : 100px;
+}
+.contact .content .edit-mode {
+	display : none;
+	min-height : 100px;
+}
+.contact.edit-mode .content .view-mode {
+	display : none;
+}
+.contact.edit-mode .content .edit-mode {
+	display : block;
+	padding : 15px 0px 0px 24px;
+}
+.contact .content .view-mode .left-table {
+	float : left;
+}
+.contact.edit-mode .content, .contact.edit-mode .footer {
+	cursor : default;
+}
+.contact .content .label {
+	width : 170px;
+	font : bold 12.36px arial;
+	color : black;
+}
+#joinflow-content .field label .desc {
+	font : 12px Arial;
+	float : left;
+}
+#joinflow-content .field label .desc.red {
+	color : red;
+	font-size : 11px;
+}
+#joinflow-content .field label .desc.red.more-space {
+	padding-top : 7px;
+}
+.contact .content .text {
+	color : black;
+	font : 12px arial;
+}
+.contact .content table {
+	margin : 11px 0px 0px 12px;
+}
+.contact .content td {
+	text-align : left;
+	vertical-align : top;
+	padding-bottom : 13px;
+}
+.contact .content .text span {
+	float : left;
+	margin-right : 5px;
+}
+.content .view-mode .location div {
+	float : left;
+}
+.content .view-mode .location.empty div {
+	color : red;
+}
+.alert-icon {
+	background-position : -1724px -59px;
+	width : 13px;
+	height : 13px;
+	float : left;
+	display : none;
+	margin : 2px 0px 0px 15px;
+}
+.content .view-mode .location.empty .alert-icon {
+	display : block;
+}
+.username-callout {
+	width : 158px;
+	height : 33px;
+	background-position : -1351px -251px;
+	float : left;
+	margin : 0px 0px 0px 15px;
+}
+.edit-mode .username-callout {
+	margin : -2px 0px 0px 12px;
+}
+.view-mode .username-callout {
+	margin-top : -8px;
+}
+.contact .auto-extraction {
+	float : right;
+	width : 251px;
+	margin : 48px 18px 0px 0px;
+}
+.contact .auto-extraction .icon {
+	background-position : -1667px -33px;
+	width : 34px;
+	height : 38px;
+	float : left;
+	margin-right : 11px;
+}
+.contact .auto-extraction .title {
+	font : bold 14px arial;
+	float : left;
+}
+.contact .auto-extraction .desc {
+	font : 12px arial;
+	float : left;
+}
+.contact .save-button {
+	background-position : -1511px -253px;
+	width : 90px;
+	height : 29px;
+	float : left;
+	margin-left : 189px;
+}
+.contact .save-button:hover {
+	background-position : -2625px 0px;
+}
+.contact .cancel-button {
+	background-position : -1614px -253px;
+	width : 90px;
+	height : 29px;
+	float : left;
+	margin-left : 10px;
+}
+.contact .cancel-button:hover {
+	background-position : -2625px -29px;
+}
+#joinflow-content .field label[for='Work'] {
+	width : 78px;
+}
+.help-icon[helpfor='Mobile'] {
+	margin-top : 1px;
+}
+.password-section table, .availability-details table, .salary-section table, .other-details table {
+	margin-left : 69px;
+	float : left;
+}
+.password-section .label, .availability-details .label, .salary-section .label, .other-details .label {
+	width : 160px;
+	font : bold 12px arial;
+	vertical-align : top;
+	padding-left : 17px;
+}
+.password-section .label span {
+	float : left;
+}
+.mandatory {
+	background-position : -1703px -34px;
+	width : 11px;
+	height : 11px;
+	float : left;
+	margin : 3px 3px 0px 0px;
+}
+td.label .mandatory {
+	float : right;
+	margin-right : -3px;
+}
+.textbox-bg {
+	height : 34px;
+	width : 385px;
+	background-position : -1354px -286px;
+	float : left;
+}
+.error .textbox-bg {
+	height : 34px;
+	width : 387px;
+	background-position : -1794px -704px;
+	float : left;
+}
+.password-section .edit-field {
+	padding : 3px 0px 7px 0px;
+}
+.contact input[type='text'], .password-section input[type='password'], #joinflow-content .control input[type='text'] {
+	color : #464646;
+	height : 31px;
+	width : 370px;
+	border : none;
+	background : none;
+	padding-left : 14px;
+	font : 12px Arial;
+}
+#joinflow-content .control .dropdown input[type='text'] {
+	cursor : pointer;
+}
+body.IE8 #ResumePath, body.IE8 .contact input[type='text'], body.IE8 .password-section input[type='password'], body.IE8 #joinflow-content .control input[type='text'], body.IE8 #joinflow-content .control #EmailAddress[readonly='readonly'], body.IE7 #ResumePath, body.IE7 .contact input[type='text'], body.IE7 .password-section input[type='password'], body.IE7 #joinflow-content .control input[type='text'], body.IE7 #joinflow-content .control #EmailAddress[readOnly] {
+	height : 18px;
+	padding : 9px 0px 7px 14px;
+}
+
+#joinflow-content .control #EmailAddress[readonly='readonly'] {
+	background-color : #E7EAEC;
+	margin : 1px 0px 0px 1px;
+	width : 369px;
+	height : 30px;
+}
+body.IE7 #joinflow-content .control #EmailAddress[readOnly] {
+	background-color : #E7EAEC;
+	margin : 1px 0px 0px 1px;
+	width : 369px;
+}
+.contact .phone span{
+	font : bold 12px Arial;
+	float : left;
+	margin : 0px 45px 0px 5px;
+}
+.contact .phone .radiobutton[value='Mobile'] {
+	clear : left;
+}
+.contact .phone .textbox-bg {
+	margin-bottom : 7px;
+}
+.help-icon {
+	background-position : -1717px -33px;
+	width : 14px;
+	height : 14px;
+	float : left;
+	margin : 8px 0px 0px 11px;
+	cursor : pointer;
+}
+.help-area {
+	float : left;
+	position : absolute;
+	display : none;
+}
+.help-area .triangle {
+	border-top : 9px solid transparent;
+	border-bottom : 9px solid transparent;
+	border-right : 9px solid #C3CDD6;
+	margin : 5px 0px 0px 10px;
+	float : left;
+	height : 0px;
+	width : 0px;
+}
+.help-area .help-text {
+	width : 239px;
+	background-color : #C3CDD6;
+	font : 12px arial;
+	float : left;
+	min-height : 30px;
+	padding : 5px 5px 5px 5px;
+}
+.help-area .help-text span {
+	width : 100%;
+	float : left;
+	color : black;
+	padding-bottom : 5px;
+}
+.help-area[helpfor='ResumeVisibility'] .help-text span {
+	font-weight : normal;
+}
+.help-area.error .triangle {
+	border-right : 9px solid #DD2649;
+}
+.help-area.error .help-text {
+	background-color : #DD2649;
+}
+.help-area.error .help-text span {
+	color : white;
+}
+.availability-icon {
+	width : 54px;
+	height : 52px;
+	float : left;
+	margin-right : 45px;
+	cursor : pointer;
+}
+.immediately-available {
+	background-position : -951px -425px;
+}
+.immediately-available.hover {
+	background-position : -951px -477px;
+}
+.immediately-available.mouse-down {
+	background-position : -951px -529px;
+}
+.immediately-available.checked {
+	background-position : -951px -581px;
+}
+.immediately-available.checked.hover {
+	background-position : -951px -633px;
+}
+.immediately-available.checked.mouse-down {
+	background-position : -951px -685px;
+}
+.actively-looking {
+	background-position : -1005px -425px;
+}
+.actively-looking.hover {
+	background-position : -1005px -477px;
+}
+.actively-looking.mouse-down {
+	background-position : -1005px -529px;
+}
+.actively-looking.checked {
+	background-position : -1005px -581px;
+}
+.actively-looking.checked.hover {
+	background-position : -1005px -633px;
+}
+.actively-looking.checked.mouse-down {
+	background-position : -1005px -685px;
+}
+.not-looking-but-happy-to-talk {
+	background-position : -1059px -425px;
+}
+.not-looking-but-happy-to-talk.hover  {
+	background-position : -1059px -477px;
+}
+.not-looking-but-happy-to-talk.mouse-down {
+	background-position : -1059px -529px;
+}
+.not-looking-but-happy-to-talk.checked {
+	background-position : -1059px -581px;
+}
+.not-looking-but-happy-to-talk.checked.hover {
+	background-position : -1059px -633px;
+}
+.not-looking-but-happy-to-talk.checked.mouse-down {
+	background-position : -1059px -685px;
+}
+.not-looking {
+	background-position : -1113px -425px;
+	margin-right : 33px;
+}
+.not-looking.hover  {
+	background-position : -1113px -477px;
+}
+.not-looking.mouse-down {
+	background-position : -1113px -529px;
+}
+.not-looking.checked {
+	background-position : -1113px -581px;
+}
+.not-looking.checked.hover {
+	background-position : -1113px -633px;
+}
+.not-looking.checked.mouse-down {
+	background-position : -1113px -685px;
+}
+.availability-desc-outer {
+	height : 30px;
+	width : 400px;
+	float : left;
+}
+.availability-desc {
+	width : 328px;
+	height : 18px;
+	background-color : #F6D2D9;
+	font : bold 10px arial;
+	float : left;
+	margin : 14px 0px 0px 170px;
+	display : none;
+	padding : 3px 0px 0px 7px;
+}
+.availability-error {
+	display : inline;
+	position : absolute;
+	z-index : -1;
+	background-color : #F7DCE1;
+	width : 390px;
+	height : 60px;
+	margin : -3px 0px 0px -3px;
+}
+.IE8 .availability-error {
+	margin-left : -412px;
+}
+.IE7 .availability-error {
+	margin : -56px 0px 0px -234px;
+}
+.checkbox {
+	width : 16px;
+	height : 16px;
+	background-position : -1747px -33px;
+	cursor : pointer;
+	float : left;
+	margin-right : 7px;
+}
+.checkbox:hover {
+	background-position : -1764px -70px;
+}
+.checkbox.checked, .error .checkbox.checked, .checkbox.checked:hover, .error .checkbox.checked:hover, .listbox-item.selected .checkbox {
+	background-position : -1764px -33px;
+}
+.checkbox.disabled, .checkbox.disabled:hover {
+	background-position : -1764px -90px;
+}
+.error .checkbox {
+	background-position : -1763px -51px;
+	width : 18px;
+	height : 18px;
+}
+#joinflow-content .other-details .field {
+	margin-left : 1px;
+	width : 420px;
+}
+#joinflow-content .other-details .field label[for='ResumeVisibility'] {
+	width : 210px;
+}
+.salary .edit-field .textbox_field {
+	display : none;
+}
+.t-and-c .edit-field {
+	padding-bottom : 12px;
+}
+.t-and-c .edit-field span {
+	font : bold 12px Arial;
+}
+.t-and-c .t-and-c-link {
+	font : bold 12px Arial;
+	cursor : pointer;
+}
+.privacy .label span {
+	float : left;
+	font : 12px Arial;
+	padding-top : 3px;
+}
+.privacy .label span.red {
+	font-size : 12px;
+}
+.privacy .label span.title {
+	font : bold 12px Arial;
+}
+body.IE7 .privacy .label .title {
+	width : 135px;
+}
+.label span.red {
+	color : red;
+	font-size : 11px;
+}
+.privacy .privacy-link {
+	font : bold 12px Arial;
+	cursor : pointer;
+}
+.label span.more-space {
+	padding-top : 7px;
+}
+.privacy .edit-field span {
+	float : left;
+	font : bold 12px Arial;
+	padding-bottom : 5px;
+}
+.privacy .edit-field span.allow-resume {
+	width : 362px;
+}
+body.IE7 #joinflow-content .privacy .checkbox_field.field>label {
+	width : 0px;
+}
+body.IE7 #joinflow-content .privacy .field.checkbox_field .control.checkbox_control label {
+	width : 199px;
+}
+.down-arrow {
+	float : left;
+	width : 12px;
+	height : 18px;
+	background-position: -1733px -32px;
+	margin : -3px 10px 0px 15px;
+}
+.allow-to-see-my {
+	width : 340px;
+	margin-top : 5px;
+}
+#joinflow-content .other-details .allow-to-see-my .field {
+	margin-left : 36px;
+}
+#joinflow-content .other-details .allow-to-see-my label[for='RecentEmployersVisibility'] {
+	width : 190px;
+}
+#joinflow-content .other-details .checkbox_field label[for='AcceptTerms'] {
+	width : 200px;
+}
+.help-icon[helpfor='ResumeVisibility'] {
+	margin : 1px 0px 0px 150px;
+}
+body.IE7 .help-icon[helpfor='ResumeVisibility'] {
+	margin-left : 148px;
+}
+.other-details .privacy {
+	min-height : 130px;
+}
+.other-details .t-and-c {
+	min-height : 40px;
+}
+body.IE7 .other-details .t-and-c .mandatory {
+	margin-top : -12px;
+}
+#joinflow-content .button-holder {
+	float : left;
+	margin-top : 5px;
+}
+.savefirst {
+	display : none;
+	margin : 5px 0px -21px 234px;
+	color : red;
+	float : left;
+	width : 525px;
+}
+.confirm-button {
+	background-position : -1525px -207px;
+	width : 171px;
+	height : 45px;
+	margin-left : 235px;
+	float : left;
+	cursor : pointer;
+}
+.confirm-button:hover {
+	background-position : -1957px -922px;
+}
+.next-button {
+	background-position : -1672px -122px;
+	width : 163px;
+	height : 45px;
+	margin-left : 235px;
+	float : left;
+	cursor : pointer;
+}
+.next-button:hover {
+	background-position : -2338px -604px;
+}
+.button-spliter {
+	background-color : #D7D7D7;
+	width : 1px;
+	height : 20px;
+	float : left;
+	margin : 10px -5px 0px 5px;
+}
+.back-link {
+	float : left;
+	margin : 12px 0px 0px 10px;
+	cursor : pointer;
+	font : Bold 12px Arial;
+}
+.dropdown-vline {
+	width : 1px;
+	height : 34px;
+	margin-left : -28px;
+	float : left;
+	background-color : #B2C4D4;
+	cursor : pointer;
+}
+.dropdown-arrow {
+	border-top : 4px solid #7794aa;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	margin : 16px 0px 0px -18px;
+	float : left;
+	cursor : pointer;
+}
+.listbox {
+	width : 385px;
+}
+.listbox-scrollpan {
+	position : absolute;
+	overflow : hidden;
+	background-color : white;
+}
+.dropdown-scrollpan {
+	position : absolute;
+	margin-top : 33px;
+	overflow : hidden;
+	background-color : white;
+}
+.dropdown-scrollbar-toparrow-border, .listbox-scrollbar-toparrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	top : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-toparrow, .listbox-scrollbar-toparrow {
+	position : absolute;
+	right : 3px;
+	top : 4px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-toparrow, body.IE7 .listbox-scrollbar-toparrow {
+	top : -12px;
+}
+.dropdown-scrollbar-bottomarrow-border, .listbox-scrollbar-bottomarrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	bottom : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-bottomarrow, .listbox-scrollbar-bottomarrow {
+	position : absolute;
+	right : 3px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-bottomarrow, body.IE7 .listbox-scrollbar-bottomarrow {
+	bottom : -12px;
+}
+.dropdown-scrollbar-wrap, .listbox-scrollbar-wrap {
+	position : absolute;
+	right : 0px;
+	width : 12px;
+	top : 11px;
+	border : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAIAAABlidhuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0OTMzODBDQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0OTMzODBEQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MzM4MEFDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MzM4MEJDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6WxLuLAAAAIUlEQVR42mK8ces2CwsLKysrgmRhYWZmZmJiYoABgAADAGHgAu32HnaBAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+}
+.dropdown-scrollbar, .listbox-scrollbar {
+	position : absolute;
+	margin-top : 24px;
+}
+.dropdown-scrollbar .ui-slider-handle, .listbox-scrollbar .ui-slider-handle {
+	width : 14px;
+	height : 49px;
+	background-position : -1355px -360px;
+	position : absolute;
+	margin : 0px 0px -25px -1px;
+	cursor : pointer;
+	outline : none;
+}
+.dropdown-items, .listbox-items {
+	position : absolute;
+}
+.dropdown-item, .listbox-item {
+	border : 1px solid #B3C6D6;
+	border-top : none;
+	height : 19px;
+	color : #807E7E;
+	font : 12px Arial;
+	background-color : #FFFFFF;
+	cursor : pointer;
+	padding : 6px 0px 0px 8px;
+}
+.dropdown-item:first-child , .listbox-item:first-child{
+	border : 1px solid #B3C6D6;
+}
+.dropdown-item:hover, .listbox-item:hover, .dropdown-item.selected {
+	color : #F0F6FB;
+	background-color : #207CD5;
+}
+.salary-section .label span {
+	float : left;
+	font : 12px Arial;
+	padding-top : 3px;
+	width : 145px;
+}
+.salary-section .salary .mandatory {
+	margin-right : -9px;
+}
+.IE7 .salary-section .salary .mandatory {
+	margin : -11px -2px 0px 0px;
+}
+.total-remuneration {
+	float : left;
+	width : 385px;
+}
+#joinflow-content .total-remuneration .field label {
+	width : 111px;
+	margin : 0px 10px 0px -80px;
+}
+#joinflow-content .total-remuneration .field .control label {
+	width : 90px;
+	margin : 0px 0px 0px 4px;
+}
+.total-remuneration span {
+	float : left;
+	font : bold 12px Arial;
+	margin : 0px 25px 0px 10px;
+}
+.total-remuneration span:first-child {
+	margin : 0px 10px 0px 0px;
+}
+.salary-range {
+	width : 276px;
+	float : left;
+	margin : 0px 0px 5px 3px;
+}
+.salary-range .left-range {
+	float : left;
+	font : bold 12px Arial;
+}
+.salary-range .right-range {
+	float : right;
+	font : bold 12px Arial;
+}
+.salary-slider-bg {
+	background-position : -1354px -348px;
+	width : 272px;
+	height : 9px;
+	position : absolute;
+	margin : 47px 0px 0px 3px;
+}
+body.IE9 .salary-slider-bg {
+	margin-top : 61px;
+}
+body.IE7 .salary-slider-bg {
+	margin : -38px 0px 0px -391px;
+}
+.salary-slider {
+	float : left;
+	position : relative;
+	width : 276px;
+	margin-left : 3px;
+}
+.salary-slider .ui-slider-range {
+	background-position : -1354px -321px;
+	width : 276px;
+	height : 13px;
+	cursor : pointer;
+	position : relative;
+}
+.salary-slider .ui-slider-handle {
+	background-position : -1703px -48px;
+	width : 18px;
+	height : 26px;
+	position : absolute;
+	cursor : pointer;
+	outline : none;
+	margin : -16px 0px 0px -8px;
+}
+.salary-slider-ruler {
+	background-position : -1356px -335px;
+	width : 271px;
+	height : 12px;
+	float : left;
+	margin-left : 3px;
+}
+.salary-desc {
+	float : left;
+	color : red;
+	font : 12px Arial;
+	width : 276px;
+	margin-right : 154px;
+}
+#joinflow-content .not-show-salary_field.field{
+	width : 200px;
+	margin : 10px 176px 0px 0px;
+}
+#joinflow-content .checkbox_field.field label[for='NotSalaryVisibility'] {
+	font-weight : normal;
+}
+.help-icon[helpfor='AvailableNow'] {
+	margin-left : 12px;
+}
+.help-icon[helpfor='DesiredSalary'] {
+	margin : 0px 0px 0px 3px;
+}
+body.IE7 .help-icon[helpfor='DesiredSalary'] {
+	margin : 0px 0px 0px -5px;
+}
+.help-icon[helpfor='not-show-salary'] {
+	margin : 0px 0px 0px 12px;
+}
+body.IE7 .help-icon[helpfor='not-show-salary'] {
+	margin : 0px 0px 0px 4px;
+}
+.salary .edit-field {
+	padding-left : 17px;
+}
+body.IE7 .salary .edit-field {
+	width : 250px;
+}
+.salary .edit-field span[textfor='not-show-salary'] {
+	float : left;
+	width : 362px;
+}
+.salary-error {
+	display : inline;
+	position : absolute;
+	z-index : -1;
+	background-color : #F7DCE1;
+	width : 388px;
+	height : 92px;
+	margin : -3px 0px 0px -10px;
+}
+.IE8 .salary-error {
+	margin-left : -412px;
+}
+.IE7 .salary-error {
+	margin: -80px 0px 0px -412px;
+}
+
+.alert-text .red {
+	color : red;
+}
+.job-details .suggested-job {
+	width : 944px;
+	float : left;
+}
+.job-details .suggested-job table {
+	margin-left : 69px;
+	width : 600px;
+}
+.job-details .suggested-job .label {
+	width : 170px;
+	font : bold 12px arial;
+	vertical-align : top;
+}
+.job-details .suggested-job .label span {
+	float : left;
+}
+.job-details .suggested-job .label .red {
+	font : 12px Arial;
+}
+.job-details input[type='text'] {
+	color : #464646;
+	height : 31px;
+	width : 370px;
+	border : none;
+	background : none;
+	padding-left : 14px;
+	font : 12px Arial;
+}
+.jobtype-icon {
+	width : 42px;
+	height : 42px;
+	float : left;
+	margin-right : 44px;
+	cursor : pointer;
+}
+.jobtype-icon.full-time {
+	background-position : -951px -739px;
+}
+.jobtype-icon.full-time.hover {
+	background-position : -951px -781px;
+}
+.jobtype-icon.full-time.mouse-down {
+	background-position : -951px -823px;
+}
+.jobtype-icon.full-time.checked {
+	background-position : -951px -865px;
+}
+.jobtype-icon.full-time.checked.hover {
+	background-position : -951px -907px;
+}
+.jobtype-icon.full-time.checked.mouse-down {
+	background-position : -951px -949px;
+}
+.jobtype-icon.part-time {
+	background-position : -994px -739px;
+}
+.jobtype-icon.part-time.hover {
+	background-position : -994px -781px;
+}
+.jobtype-icon.part-time.mouse-down {
+	background-position : -994px -823px;
+}
+.jobtype-icon.part-time.checked {
+	background-position : -994px -865px;
+}
+.jobtype-icon.part-time.checked.hover {
+	background-position : -994px -907px;
+}
+.jobtype-icon.part-time.checked.mouse-down {
+	background-position : -994px -949px;
+}
+.jobtype-icon.contract {
+	background-position : -1037px -739px;
+}
+.jobtype-icon.contract.hover {
+	background-position : -1037px -781px;
+}
+.jobtype-icon.contract.mouse-down {
+	background-position : -1037px -823px;
+}
+.jobtype-icon.contract.checked {
+	background-position : -1037px -865px;
+}
+.jobtype-icon.contract.checked.hover {
+	background-position : -1037px -907px;
+}
+.jobtype-icon.contract.checked.mouse-down {
+	background-position : -1037px -949px;
+}
+.jobtype-icon.temp {
+	background-position : -1080px -739px;
+}
+.jobtype-icon.temp.hover {
+	background-position : -1080px -781px;
+}
+.jobtype-icon.temp.mouse-down {
+	background-position : -1080px -823px;
+}
+.jobtype-icon.temp.checked {
+	background-position : -1080px -865px;
+}
+.jobtype-icon.temp.checked.hover {
+	background-position : -1080px -907px;
+}
+.jobtype-icon.temp.checked.mouse-down {
+	background-position : -1080px -949px;
+}
+.jobtype-icon.jobshare {
+	background-position : -1123px -739px;
+	margin-right : 0px;
+}
+.jobtype-icon.jobshare.hover {
+	background-position : -1123px -781px;
+}
+.jobtype-icon.jobshare.mouse-down {
+	background-position : -1123px -823px;
+}
+.jobtype-icon.jobshare.checked {
+	background-position : -1123px -865px;
+}
+.jobtype-icon.jobshare.checked.hover {
+	background-position : -1123px -907px;
+}
+.jobtype-icon.jobshare.checked.mouse-down {
+	background-position : -1123px -949px;
+}
+.gender-error {
+	display : inline;
+	position : absolute;
+	z-index : -1;
+	background-color : #F7DCE1;
+	width : 388px;
+	height : 30px;
+	margin : -3px 0px 0px -2px;
+}
+.IE8 .gender-error {
+	margin-left : -412px;
+}
+.IE7 .gender-error {
+	margin: -80px 0px 0px -412px;
+}
+.date-of-birth-error {
+	display : inline;
+	position : absolute;
+	z-index : -1;
+	background-color : #F7DCE1;
+	width : 388px;
+	height : 52px;
+	margin : -3px 0px 0px -2px;
+}
+.IE8 .date-of-birth-error {
+	margin-left : -412px;
+}
+.IE7 .date-of-birth-error {
+	margin: -80px 0px 0px -412px;
+}
+#joinflow-content .checkbox_field.field label, #joinflow-content .checkboxes_field.field label {
+	margin-top : 0px;
+}
+.checkbox_field .helptext {
+	font : bold 12px Arial;
+	float : left;
+}
+#joinflow-content .radio_control label {
+	margin-top : 0px;
+	width : 110px;
+}
+#joinflow-content .relocate-section .radiobuttons_field label {
+	margin-top : 0px;
+}
+#joinflow-content .relocate-section .radiobuttons_field .radio_control label {
+	width : 104px;
+}
+.help-icon[helpfor='TorresIslander'] {
+	margin : 0px 0px 0px 8px;
+}
+.EmailSuggestedJobs_field .helptext {
+	width : 363px;
+}
+.help-icon[helpfor='SendSuggestedJobs'] {
+	margin : 0px 0px 0px 229px;
+}
+#joinflow-content .radio_control label[for='WouldConsider'] {
+	width : 90px;
+}
+.help-icon[helpfor='RelocationPreferenceWouldConsider'] {
+	margin : 1px 0px 0px -3px;
+}
+.aus-map {
+	height : 290px;
+	width : 365px;
+	float : left;
+}
+.aus-map .state, .aus-map .region, .aus-map .hint {
+	position : absolute;
+}
+.aus-map .state[state='Western Australia'] {
+	background-position : -1168px -423px;
+	width : 120px;
+	height : 179px;
+	margin-top : 31px;
+}
+.aus-map .state[state='Western Australia'].hover {
+	background-position : -1168px -602px;
+	height : 180px;
+	width : 122px;
+}
+.aus-map .state[state='Western Australia'].active, .aus-map .state[state='Western Australia'].active.hover {
+	background-position : -1168px -782px;
+	height : 178px;
+	margin-top : 33px;
+}
+.aus-map .state[state='Northern Territory'] {
+	background-position : -1290px -449px;
+	width : 70px;
+	height : 126px;
+	margin : 11px 0px 0px 121px;
+}
+.aus-map .state[state='Northern Territory'].hover {
+	background-position : -1290px -624px;
+	height : 130px;
+	margin-top : 9px;
+}
+.aus-map .state[state='Northern Territory'].active, .aus-map .state[state='Northern Territory'].active.hover {
+	background-position: -1290px -806px;
+	height : 127px;
+	margin-top : 11px;
+}
+.aus-map .state[state='South Australia'] {
+	background-position : -1362px -473px;
+	width : 90px;
+	height : 102px;
+	margin : 139px 0px 0px 123px;
+}
+.aus-map .state[state='South Australia'].hover{
+	background-position : -1362px -647px;
+	height : 106px;
+	margin-top : 136px;
+}
+.aus-map .state[state='South Australia'].active, .aus-map .state[state='South Australia'].active.hover {
+	background-position : -1362px -827px;
+	height : 105px;
+	margin-top : 136px;
+}
+.aus-map .state[state='Queensland'] {
+	background-position : -1455px -420px;
+	width : 117px;
+	height : 154px;
+	margin : 7px 0px 0px 193px;
+}
+.aus-map .state[state='Queensland'].hover {
+	background-position : -1454px -596px;
+	width : 119px;
+	height : 157px;
+	margin : 6px 0px 0px 192px;
+}
+.aus-map .state[state='Queensland'].active, .aus-map .state[state='Queensland'].active.hover {
+	background-position : -1455px -777px;
+	margin : 7px 0px 0px 193px;
+}
+.aus-map .state[state='New South Wales'] {
+	background-position : -1575px -475px;
+	width : 94px;
+	height : 78px;
+	margin : 156px 0px 0px 216px;
+}
+.aus-map .state[state='New South Wales'].hover {
+	background-position : -1573px -645px;
+	width : 97px;
+	margin-left : 214px;
+}
+.aus-map .state[state='New South Wales'].active, .aus-map .state[state='New South Wales'].active.hover {
+	background-position : -1575px -830px;
+	margin-left : 216px;
+}
+.aus-map .state[state='Victoria'] {
+	background-position : -1672px -475px;
+	width : 68px;
+	height : 44px;
+	margin : 209px 0px 0px 215px;
+}
+.aus-map .state[state='Victoria'].hover {
+	background-position : -1670px -643px;
+	margin : 208px 0px 0px 213px;
+	width : 72px;
+	height : 46px;
+}
+.aus-map .state[state='Victoria'].active, .aus-map .state[state='Victoria'].active.hover {
+	background-position : -1673px -830px;
+	margin : 210px 0px 0px 216px;
+}
+.aus-map .state[state='Tasmania'] {
+	background-position : -1742px -477px;
+	width : 49px;
+	height : 36px;
+	margin : 251px 0px 0px 221px;
+}
+.aus-map .state[state='Tasmania'].hover {
+	background-position : -1742px -645px;
+	height : 38px;
+	width : 50px;
+	margin-top : 251px;
+}
+.aus-map .state[state='Tasmania'].active, .aus-map .state[state='Tasmania'].active.hover {
+	background-position : -1742px -830px;
+}
+.aus-map .region[region='Darwin'] {
+	background-position : -1169px -959px;
+	width : 53px;
+	height : 28px;
+	margin : 11px 0px 0px 107px;
+}
+.aus-map .region[region='Darwin'].hover {
+	background-position : -1186px -992px;
+	height : 33px;
+	width : 39px;
+	margin : 9px 0px 0px 125px;
+}
+.aus-map .region[region='Darwin'].active, .aus-map .region[region='Darwin'].active.hover {
+	background-position : -1169px -1029px;
+	height : 29px;
+	width : 54px;
+	margin : 10px 0px 0px 107px;
+}
+.aus-map .region[region='Perth'] {
+	background-position : -1224px -968px;
+	width : 31px;
+	height : 17px;
+	margin : 177px 0px 0px -1px;
+}
+.aus-map .region[region='Perth'].hover {
+	background-position : -1229px -999px;
+	width : 30px;
+	height : 23px;
+	margin : 174px 0px 0px 4px;
+}
+.aus-map .region[region='Perth'].active, .aus-map .region[region='Perth'].active.hover {
+	background-position : -1224px -1032px;
+	height : 18px;
+	width : 32px;
+	margin : 177px 0px 0px -1px;
+}
+.aus-map .region[region='Hobart'] {
+	background-position : -1264px -965px;
+	width : 39px;
+	height : 23px;
+	margin : 263px 0px 0px 249px;
+}
+.aus-map .region[region='Hobart'].hover {
+	background-position : -1260px -995px;
+	width : 46px;
+	height : 28px;
+	margin : 260px 0px 0px 245px;
+}
+.aus-map .region[region='Hobart'].active, .aus-map .region[region='Hobart'].active.hover {
+	background-position : -1263px -1029px;
+	width : 41px;
+	height : 25px;
+	margin : 262px 0px 0px 248px;
+}
+.aus-map .region[region='Melbourne'] {
+	background-position : -1305px -969px;
+	width : 63px;
+	height : 14px;
+	margin : 232px 0px 0px 240px;
+}
+.aus-map .region[region='Melbourne'].hover {
+	background-position : -1302px -999px;
+	width : 22px;
+	height : 17px;
+	margin : 230px 0px 0px 237px;
+}
+.aus-map .region[region='Melbourne'].active, .aus-map .region[region='Melbourne'].active.hover {
+	background-position : -1304px -1033px;
+	width : 64px;
+	height : 15px;
+	margin : 231px 0px 0px 239px;
+}
+.aus-map .region[region='Gold Coast'] {
+	background-position : -1369px -972px;
+	width : 68px;
+	height : 11px;
+	margin : 145px 0px 0px 296px;
+}
+.aus-map .region[region='Gold Coast'].hover {
+	background-position : -1365px -1000px;
+	width : 20px;
+	height : 18px;
+	margin : 141px 0px 0px 292px;
+}
+.aus-map .region[region='Gold Coast'].active, .aus-map .region[region='Gold Coast'].active.hover {
+	background-position : -1367px -1034px;
+	width : 71px;
+	height : 13px;
+	margin : 144px 0px 0px 294px;
+}
+.aus-map .region[region='Brisbane'] {
+	background-position : -1438px -966px;
+	width : 51px;
+	height : 15px;
+	margin : 129px 0px 0px 298px;
+}
+.aus-map .region[region='Brisbane'].hover {
+	background-position : -1435px -995px;
+	width : 16px;
+	height : 22px;
+	margin : 126px 0px 0px 295px;
+}
+.aus-map .region[region='Brisbane'].active, .aus-map .region[region='Brisbane'].active.hover {
+	background-position : -1438px -1029px;
+	width : 50px;
+	height : 18px;
+	margin : 129px 0px 0px 298px;
+}
+.aus-map .region[region='Sydney'] {
+	background-position : -1488px -960px;
+	width : 49px;
+	height : 15px;
+	margin : 195px 0px 0px 282px;
+}
+.aus-map .region[region='Sydney'].hover {
+	background-position : -1485px -997px;
+	width : 21px;
+	height : 23px;
+	margin : 191px 0px 0px 279px;
+}
+.aus-map .region[region='Sydney'].active, .aus-map .region[region='Sydney'].active.hover {
+	background-position : -1488px -1033px;
+	width : 49px;
+	height : 17px;
+	margin : 195px 0px 0px 281px;
+}
+.aus-map .region[region='Australian Capital Territory'] {
+	background-position : -1540px -967px;
+	width : 25px;
+	height : 11px;
+	margin : 201px 0px 0px 252px;
+}
+.aus-map .region[region='Australian Capital Territory'].hover {
+	background-position : -1536px -997px;
+	width : 33px;
+	height : 19px;
+	margin : 197px 0px 0px 248px;
+}
+.aus-map .region[region='Australian Capital Territory'].active, .aus-map .region[region='Australian Capital Territory'].active.hover {
+	background-position : -1538px -1033px;
+	width : 28px;
+	height : 14px;
+	margin : 200px 0px 0px 250px;
+}
+.aus-map .region[region='Adelaide'] {
+	background-position : -1565px -960px;
+	width : 55px;
+	height : 14px;
+	margin : 206px 0px 0px 148px;
+}
+.aus-map .region[region='Adelaide'].hover {
+	background-position : -1605px -991px;
+	width : 62px;
+	height : 21px;
+	margin : 203px 0px 0px 188px;
+}
+.aus-map .region[region='Adelaide'].active, .aus-map .region[region='Adelaide'].active.hover {
+	background-position : -1565px -1026px;
+	width : 56px;
+	height : 21px;
+	margin : 201px 0px 0px 148px;
+}
+.aus-map .hint {
+	display : none;
+}
+.aus-map .hint[hintfor='Darwin'] {
+	background-position : -943px -995px;
+	width : 56px;
+	height : 24px;
+	margin : 12px 0px 0px 69px;
+}
+.aus-map .hint[hintfor='Perth'] {
+	background-position : -943px -1021px;
+	width : 56px;
+	height : 24px;
+	margin : 172px 0px 0px -43px;
+}
+.aus-map .hint[hintfor='Hobart'] {
+	background-position : -1090px -1048px;
+	width : 58px;
+	height : 24px;
+	margin : 260px 0px 0px 276px;
+}
+.aus-map .hint[hintfor='Melbourne'] {
+	background-position : -1069px -1021px;
+	width : 78px;
+	height : 24px;
+	margin : 226px 0px 0px 262px;
+}
+.aus-map .hint[hintfor='Gold Coast'] {
+	background-position : -1069px -995px;
+	width : 78px;
+	height : 24px;
+	margin : 137px 0px 0px 314px;
+}
+.aus-map .hint[hintfor='Brisbane'] {
+	background-position : -1002px -1021px;
+	width : 66px;
+	height : 24px;
+	margin : 123px 0px 0px 314px;
+}
+.aus-map .hint[hintfor='Sydney'] {
+	background-position : -1002px -995px;
+	width : 66px;
+	height : 24px;
+	margin : 192px 0px 0px 300px;
+}
+.aus-map .hint[hintfor='Australian Capital Territory'] {
+	background-position : -943px -1048px;
+	width : 56px;
+	height : 24px;
+	margin : 193px 0px 0px 187px;
+}
+.aus-map .hint[hintfor='Adelaide'] {
+	background-position : -1007px -1048px;
+	width : 75px;
+	height : 24px;
+	margin : 204px 0px 0px 107px;
+}
+img[usemap='#mapAus'] {
+	width : 365px;
+	height : 290px;
+	position : absolute;
+	border : none;
+}
+#AnyWhereInAus {
+	float : left;
+	width : 350px;
+	margin : 269px 0px 0px 170px;
+	cursor : pointer;
+	z-index : 100;
+	position : absolute;
+}
+.IE7 #AnyWhereInAus {
+	margin-left : -355px;
+}
+#AnyWhereInAus span {
+	font : bold 12px Arial;
+}
+.shoppinglist {
+	width : 500px;
+	float : left;
+}
+.shoppinglist-item {
+	background-position : -1372px -361px;
+	width : 192px;
+	height : 31px;
+	float : left;
+	margin : 0px 5px 5px 0px;
+}
+.shoppinglist-item span {
+	font : bold 12px Arial;
+	margin : 7px 0px 0px 7px;
+	float : left;
+}
+.shoppinglist-item .delete-icon {
+	background-position : -1723px -48px;
+	width : 10px;
+	height : 10px;
+	float : right;
+	margin : 9px 7px 0px 0px;
+	cursor : pointer;
+}
+#joinflow-content .Visa_control {
+	width : 385px;
+}
+#joinflow-content .Visa_control .control {
+	margin-top : 10px;
+}
+#joinflow-content .Visa_control label {
+	width : 305px;
+}
+#joinflow-content .radio_control label[for='Female'] {
+	width : 216px;
+}
+.help-icon[helpfor='Female'] {
+	margin-top : 0px;
+}
+.DOBMonth_control {
+	margin-right : 100px;
+}
+.DOBMonth_control .textbox-bg, .DOBYear_control .textbox-bg {
+	width : 116px;
+	overflow : hidden;
+}
+.DOBMonth_control .right-edge, .DOBYear_control .right-edge {
+	background-position : -1735px -286px;
+	width : 4px;
+	height : 34px;
+	float : left;
+	margin : 0px -3px 0px -1px;
+	cursor : pointer;
+}
+.help-icon[helpfor='DateOfBirthYear'] {
+	margin-left : 64px;
+}
+.finish-button {
+	background-position : -1696px -206px;
+	width : 174px;
+	height : 47px;
+	float : left;
+	margin-left : 252px;
+	cursor : pointer;
+}
+.finish-button:hover {
+	background-position : -2130px -921px;
+}
+#joinflow-content .button_field {
+	display : none;
+}
+.thanks-for-signup .top-bar {
+	background-position : -1794px -905px;
+	width : 940px;
+	height : 4px;
+	float : left;
+}
+.thanks-for-signup .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6sAAAABCAYAAAA4jTiQAAAAQ0lEQVRIS2Ocf23C/2jNTIb3/98yjILREBgNgdEQGA2B0RAYDYHREBgNgdEQGA2B0RAYDYHREBjIEBBkFGZYen06AwDALAkGH4FtPAAAAABJRU5ErkJggg==);
+	background-repeat : repeat-y;
+	width : 940px;
+	float : left;
+}
+.thanks-for-signup .bottom-bar {
+	background-position : -1794px -911px;
+	width : 940px;
+	height : 5px;
+	float : left;
+}
+.thanks-for-signup .check-icon {
+	background-position : -1825px -920px;
+	width : 28px;
+	height : 20px;
+	float : left;
+	margin : 40px 0px 0px 60px;
+}
+.thanks-for-signup .title {
+	font : Bold 14px Arial;
+	float : left;
+	width : 830px;
+	margin : 40px 0px 0px 10px;
+}
+.thanks-for-signup .mail-icon {
+	background-position : -1862px -923px;
+	width : 90px;
+	height : 53px;
+	float : left;
+	margin : 20px 420px 0px 340px;
+}
+.thanks-for-signup .email-line {
+	font : 14px Arial;
+	float : left;
+	width : 940px;
+	text-align : center;
+	margin-top : 20px;
+}
+.thanks-for-signup .email-address {
+	font : Bold 20px Arial;
+	float : left;
+	width : 940px;
+	text-align : center;
+	margin-top : 10px;
+}
+.thanks-for-signup .check {
+	font : 14px Arial;
+	float : left;
+	width : 940px;
+	text-align : center;
+	margin-top : 10px;
+}
+.thanks-for-signup .change {
+	float : left;
+	width : 940px;
+	font : 12px Arial;
+	margin : 40px 0px 0px 60px;
+}
+.thanks-for-signup .contact {
+	float : left;
+	width : 840px;
+	font : 12px Arial;
+	margin : 5px 0px 20px 60px;
+	line-height : 18px;
+}
+body.IE7 .thanks-for-signup .contact {
+	padding-bottom : 20px;
+}
+.thanks-for-signup a {
+	cursor : pointer;
+}
+.profile {
+	margin-left : 60px;
+}
+.profile .star-icon {
+	background-position : -1747px -51px;
+	width : 16px;
+	height : 15px;
+	float : left;
+}
+.profile .alert-icon {
+	background-position : -1722px -74px;
+	width: 15px;
+	height : 15px;
+	display : block;
+	margin : 0px;
+}
+.profile .auto-extraction-icon {
+	background-position : -1667px -33px;
+	width : 34px;
+	height : 38px;
+	float : left;
+	margin : 10px 10px 0px 27px;
+}
+.profile .bold {
+	font : bold 14px Arial;
+	margin-left : 10px;
+	float : left;
+	width : 590px;
+}
+.IE7 .profile .bold {
+	width : 855px;
+}
+.profile .red {
+	color : red;
+	width : 550px;
+	float : left;
+}
+.profile span {
+	width : 550px;
+	float : left;
+}
+.IE7 .profile span.red {
+	width : 865px;
+}
+.IE7 .profile .text span.red, .IE8 .profile .text span.red, .IE9 .profile .text span.red {
+	width : 900px;
+}
+.profile .text {
+	margin : -37px 0px 0px 70px;
+	float : left;
+}
+.IE7 .profile .text {
+	width : 865px;
+}
+.view-profile-button {
+	background-position : -1574px -405px;
+	width : 255px;
+	height : 47px;
+	float : left;
+	margin : 10px 0px 0px 15px;
+	cursor : pointer;
+}
+.profile .txt-under-button {
+	float : left;
+	width : 275px;
+	margin : 65px 0px 0px -250px;
+}
+.profile .resume-icon {
+	background-position : -1673px -74px;
+	width : 34px;
+	height : 28px;
+	float : left;
+	margin : 10px 10px 10px 27px;
+}
+.complete-profile-button {
+	background-position : -1574px -358px;
+	width : 255px;
+	height : 47px;
+	float : left;
+	margin : 10px 0px 0px 15px;
+	cursor : pointer;
+}
+.profile li {
+	list-style : none;
+}
+.profile .list-icon {
+	width : 6px;
+	height : 8px;
+	float : left;
+	margin : 4px 5px 0px 0px;
+}
+.profile .list-icon.black {
+	background-position : -1739px -69px;
+}
+.profile .list-icon.red {
+	background-position : -1739px -59px;
+}
+.profile.incomplete .red {
+	margin-bottom : 5px;
+}
+.profile.incomplete li {
+	color : red;
+}

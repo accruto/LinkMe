@@ -1,0 +1,254 @@
+.main_columns .column {
+	float: left;
+	width: 340px;
+	margin-left: 0px !important;
+}
+
+.main_columns .column:first-child {
+	margin-left: 0px !important;
+}
+
+.help{
+	cursor:pointer;
+}
+
+.show{ 
+	display:block;
+}
+
+.hide{ 
+	display:none;
+}
+
+	/* Main page - collapsible sections */
+
+.m-section-icon {
+	*margin-top:-22px 0 0 0;
+	cursor:pointer;
+	position:relative;
+	float:right;
+	top:-27px;
+	right:8px;
+	*right:8px;
+}
+
+.m-section-title {
+	margin-top: 14px;
+	padding: 1px 1px 0 1px;
+	background: url(../../images/universal/collapsible-head-bg.png) top left no-repeat;
+	font-weight: normal;
+	border: 0;
+	width:694px;
+	height:34px;
+	cursor: pointer;
+}
+
+.m-section-title  h1{
+	padding: 5px 0 5px 40px;
+	margin-top:-32px;
+	font-size:135%;
+	font-weight: bold;
+	color:#000033;
+}
+
+.saved-searches {
+	margin: 0;
+	padding: 0;
+	background-image: url(../../images/employers/large-section-heading-icons/saved-search.png);
+	width: 32px;
+	height: 32px;
+}
+.get-most {
+	margin: 0;
+	padding: 0;
+	background-image: url(../../images/employers/large-section-heading-icons/linkme-men.png);
+	width: 32px;
+	height: 32px;
+}
+
+.get-most-header{
+	color:#000033;
+	font-size:120%;
+	font-weight:bold;
+	padding:8px 5px 20px 5px;
+}
+
+.get-most-container .get-most_section li.section-title {
+	color: #4477AA;
+	font-size:100%;
+	font-weight:bold;
+	margin: 0 0 14px 0;
+	cursor: pointer;
+	border: 0px;
+	background: none;
+	padding: 0px;
+	zoom:normal;
+}
+
+.get-most-container .get-most_section li.section-title .title {
+    min-height: 16px;
+    padding: 3px 18px 3px 0;
+}
+
+.get-most-container .get-most_section li.section-title .down-icon 
+{
+    background: url("../../images/universal/expand_triangle.png") no-repeat scroll right center transparent;
+}
+
+.get-most-container .get-most_section li.section-title .up-icon {
+    background: url("../../images/universal/collapse_triangle.png") no-repeat scroll right center transparent;
+}
+
+.columns .column:first-child .get-most_section .section-title, .columns .ie_firstcolumn .get-most_section .section-title {
+	border-right: 0px;
+}
+
+.get-most-container .get-most_section .section-content{
+	color:#000000;
+	font-size:85%;
+	font-weight:normal;
+	padding:3px 0 0 0;
+	cursor: default;
+	border: 0px;
+	margin:0px;
+}
+
+.get-most-container .get-most_section .section-content div{
+	line-height:14px;
+	padding:10px 0px;
+}
+
+.get-most-container .section-content .columns .column{
+	width:322px;
+}
+
+.get-most-container .section-content, .saved-searches-container .section-content{
+	background-color: #FAFAFA;
+	border-bottom:1px solid #C0C0C0;
+	border-left:1px solid #C0C0C0;
+	border-right:1px solid #C0C0C0;
+	margin-top:-1px;
+}
+
+.saved-searches-container .section-content{
+	padding: 10px 0 30px 0;
+}
+
+.saved-searches-container .no-saved-searches{
+	padding: 0px 0px 0 10px;
+	float:auto;
+	width:100%;
+}
+
+.manage-saved-searches-container {
+    text-align: center;
+    margin: 0px 0px 0px -1px;
+    padding: 8px;
+    width: 676px;
+    float:left;
+    background-color: #FAFAFA;
+    border-color: #EBEBEB #C0C0C0 #C0C0C0 #C0C0C0;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.manage-saved-searches-container.IE7 {
+	margin-right : -1px;
+}
+
+.manage-saved-searches-container .view-all {
+    margin: auto;
+    padding: 0pt;
+    width: 68px;
+}
+
+.manage-saved-searches-container .manage-saved-searches {
+    float: right;
+    /*margin: -13px 0pt 0pt;*/
+}
+
+.manage-saved-searches-container a {
+    font-size: 85%;
+}
+
+.manage-saved-searches-container .manage-saved-searches a {
+    color: #91B0F6;
+}
+
+.manage-saved-searches-container .manage-saved-searches a:hover {
+    color: #FF6600;
+}
+
+.view-all .icon {
+	margin-top: 5px;
+	margin-left: 5px;
+	*margin: 4px 8px 0 8px;
+	cursor: pointer;
+	width: 7px;
+	height: 6px;
+	display: block;
+	float: right;
+	border: none;
+	outline: none;
+}
+
+.view-all .down-icon {
+	background-image: url(../../images/universal/more-details-triangle.gif);	
+}
+
+.view-all .up-icon {
+	background-image: url(../../images/universal/less-details-triangle.gif);	
+}
+
+.view-all:hover .down-icon{
+	background-image: url(../../images/universal/more-details-triangle_over.gif);
+}
+
+.view-all:hover .up-icon{
+	background-image: url(../../images/universal/less-details-triangle_over.gif);
+}
+
+#saved-searches-data ul {
+    list-style-image: url(../../images/employers/icons/save-search.png);
+    padding: 0;
+    margin: 0 0 0 40px;
+}
+
+#saved-searches-data ul li a {
+    overflow: hidden;
+}
+
+.saved-searches-container .section-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#saved-searches-data div.list-holder {
+    float: none;
+    padding: 0;
+    margin: 0;
+    background-color: #FAFAFA;
+    border: none;
+    border-left: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+}
+
+#saved-searches-data div.list-holder {
+    width: 346px;
+    float: left;
+    padding: 10px 0 5px 0;
+    margin: -17px -1px 0 0;
+    background-color: #FAFAFA;
+    border: none;
+    border-right: 1px solid #C0C0C0;
+}
+
+#saved-searches-data div.list-holder:first-child {
+    border-left: 1px solid #C0C0C0;
+    margin: -10px 0 0 -1px;
+    width: 345px;
+}
+
+#saved-searches-data div.list-holder.IE7 {
+	margin-top : -11px;
+}

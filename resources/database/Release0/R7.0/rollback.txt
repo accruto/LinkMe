@@ -1,0 +1,8 @@
+rollback_email_table_changes.sql
+rollback_search_log_table_changes.sql
+rollback_search_log_criteria_table_changes.sql
+rollback_event_log_table.sql
+rollback_event_log_profile_table.sql
+rollback_assessme_table.sql
+rollback_user_profile_ideal_job_table_changes.sql
+rollback_employer_profile_table_changes.sql

@@ -1,0 +1,21 @@
+﻿.minijoin_ascx {}
+
+	.minijoin_ascx .email_textbox_field label {
+		margin-right: 3px;
+	}
+
+	.minijoin_ascx .email_textbox_field .helptext {
+		font-size: 85%;
+	}
+	
+	.minijoin_ascx .checkbox_control label {
+		font-size: 85% !important;
+	}
+	
+	.minijoin_ascx .validationerrortext {
+		display: none;
+	}
+
+	.minijoin_ascx .file_control input {
+		width: 250px;
+	}

@@ -1,0 +1,105 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, #JobDescription table, #JobDescription th, #JobDescription td, #JobDescription ul, #JobDescription li, #JobDescription label, #JobDescription span {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: url('database_consultants_images/dca_lside.gif') repeat-y left top;
+	margin-bottom: 1em;
+	position: relative;
+	width: 460px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	border-right: 1px solid #fff; /* Fix for IE bug with #Ad's right bg image */
+	margin: 0 15px 1em 2em;	
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	border-right: none;
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad {
+	background: url('database_consultants_images/dca_rside.gif') repeat-y right top;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: url('database_consultants_images/dca_black_logo.gif') no-repeat left top;
+	height: 100px;
+	width: 159px;
+	position: absolute;
+	left: 0;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+#JobAd #JobDescription #Ad #JobAdHeading {
+	background: url('database_consultants_images/dca_black_basebg_mod.gif') repeat-x left top;
+	padding-top: 100px;	
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #fff;
+	font-size: 200%;
+	_font-size: 190%;
+	/font-size: 190%;
+	font-weight: bold;
+	margin-top: 15px;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	width: 270px;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-top: 2em;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 90% !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	color: #f00;
+	font-weight: bold;
+	list-style-image: url('database_consultants_images/dca_bullet.gif');
+	margin-left: 51px;	
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	margin-bottom: 0;
+	padding-bottom: 1em;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: url('database_consultants_images/dca_black_base.gif') no-repeat left top;
+	height: 130px;
+}

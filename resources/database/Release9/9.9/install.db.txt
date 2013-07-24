@@ -1,0 +1,16 @@
+alter_UserEventActionedUser.sql
+
+create_ContentItem.sql
+create_ContentDetail.sql
+
+data_migrate_N2.sql
+drop_N2.sql
+
+create_OfferCategory.sql
+create_OfferProvider.sql
+create_Offering.sql
+create_OfferCategoryOffering.sql
+create_OfferRequest.sql
+create_Offer.sql
+
+data_EquivalentTerms.sql

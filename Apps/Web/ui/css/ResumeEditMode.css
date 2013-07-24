@@ -1,0 +1,40 @@
+/*	-----------------------------------------------------
+	If the resume is editable, this style sheet is loaded
+	-----------------------------------------------------
+*/
+
+.displaying_resume-section-view,
+.displaying_record-view {
+	min-height: 60px;
+	cursor: pointer;
+}
+	.displaying_resume-section-view *,
+	.displaying_record-view * {
+		cursor: pointer
+	}
+	
+.empty_resume-section-view,
+.empty_resume-section-view * {
+	cursor: pointer
+}
+
+.other_resume_control h2 {
+	cursor: pointer
+}
+
+.other_resume_control {
+	display: block !important;
+}
+
+	.other_resume_control .default_cursor,
+	.other_resume_control .default_cursor * {
+		cursor: default
+	}
+	
+	.other_resume_control .default_cursor a {
+		cursor: pointer;
+	}
+
+.default_cursor .empty_resume-section-view {
+	cursor: default
+}

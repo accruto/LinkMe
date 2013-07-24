@@ -1,0 +1,16 @@
+Database name: 'linkme'
+Database user id: 'linkme_owner'
+Database password: 'linkme'
+Processing script: 'install_new_linkme_resume_data_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i install_new_linkme_resume_data_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 1> 
++++ End Command Output +++
+Processing script: 'update_database_version_table.sql'
+CommandLine: 'isql -U linkme_owner -P linkme -d linkme -i update_database_version_table.sql'
+Execution proceeding
++++ Begin Command Output +++
+1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> (1 row affected)
+1> 
++++ End Command Output +++

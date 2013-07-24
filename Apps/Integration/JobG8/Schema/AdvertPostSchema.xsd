@@ -1,0 +1,91 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://jobg8.com/" targetNamespace="http://jobg8.com/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xs:import id="header" namespace="http://jobg8.com/postadvertheaders" schemaLocation="AdvertPostHeader.xsd"></xs:import>
+   <xs:complexType name="PostAdvertType">
+		<xs:sequence>
+			<xs:element name="Adverts">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="PostAdvert">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="JobReference" type="xs:string"/>
+									<xs:element name="ClientReference" type="xs:string"/>
+									<xs:element name="Classification" type="xs:string"/>
+									<xs:element name="SubClassification" type="xs:string"/>
+									<xs:element name="Position"/>
+									<xs:element name="Description" type="xs:string"/>
+									<xs:element name="Location" type="xs:string"/>
+									<xs:element name="Area" type="xs:string"/>
+									<xs:element name="PostCode" type="xs:string" minOccurs="0"/>
+									<xs:element name="Country" type="xs:string"/>
+									<xs:element name="EmploymentType">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Permanent"/>
+												<xs:enumeration value="Contract"/>
+												<xs:enumeration value="Temporary"/>
+												<xs:enumeration value="Any"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="StartDate" type="xs:string" minOccurs="0"/>
+									<xs:element name="Duration" type="xs:string" minOccurs="0"/>
+									<xs:element name="WorkHours" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Part Time"/>
+												<xs:enumeration value="Full Time"/>
+												<xs:enumeration value="Not Specified"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="VisaRequired">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Applications welcome from candidates who require a work visa"/>
+												<xs:enumeration value="Applications considered from candidates who require a work visa"/>
+												<xs:enumeration value="Applicants must be eligible to work in the specified location"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="PayPeriod">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Hourly"/>
+												<xs:enumeration value="Weekly"/>
+												<xs:enumeration value="Monthly"/>
+												<xs:enumeration value="Annual"/>
+												<xs:enumeration value="Day"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="PayAmount" type="xs:decimal" minOccurs="0"/>
+									<xs:element name="PayMinimum" type="xs:decimal" minOccurs="0"/>
+									<xs:element name="PayMaximum" type="xs:decimal" minOccurs="0"/>
+									<xs:element name="Currency" type="xs:string"/>
+									<xs:element name="PayAdditional" type="xs:string" minOccurs="0"/>
+									<xs:element name="Contact" type="xs:string"/>
+									<xs:element name="Telephone" type="xs:string" minOccurs="0"/>
+									<xs:element name="ApplicationURL" type="xs:string" minOccurs="0"/>
+									<xs:element name="ApplicationFormXML" type="xs:string" minOccurs="0"/>
+									<xs:element name="JobSource" type="xs:string" minOccurs="0"/>
+									<xs:element name="AdvertiserName" type="xs:string" minOccurs="0"/>
+									<xs:element name="AdvertiserType" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Company"/>
+												<xs:enumeration value="Agency"/>
+												<xs:enumeration value="AdvertisingAgency"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="AccountNumber" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>  
+</xs:schema>

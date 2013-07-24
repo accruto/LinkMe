@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29B2CC57-2147-424E-BEF6-D86A4B5C8A70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Apps.Agents</RootNamespace>
+    <AssemblyName>LinkMe.Apps.Agents</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlexCel, Version=4.9.6.0, Culture=neutral, PublicKeyToken=cb8f6080e6d5a4d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\FlexCel.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Domain">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\bin\LinkMe.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Roles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Roles\bin\LinkMe.Domain.Roles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Domain.Users">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Domain\Users\bin\LinkMe.Domain.Users.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Content">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Content\bin\LinkMe.Framework.Content.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Text">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Text\bin\LinkMe.Framework.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\bin\LinkMe.Query.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Reports">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Reports\bin\LinkMe.Query.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Query.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Query\Search\bin\LinkMe.Query.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\ApplicationSetUp.cs" />
+    <Compile Include="Applications\Commands\ITinyUrlCommand.cs" />
+    <Compile Include="Applications\Commands\TinyUrlCommand.cs" />
+    <Compile Include="Applications\Data\Applications.cs">
+      <DependentUpon>Applications.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Data\Applications.designer.cs">
+      <DependentUpon>Applications.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Applications\Data\Mappings.cs" />
+    <Compile Include="Applications\Data\ApplicationsRepository.cs" />
+    <Compile Include="Applications\IApplicationsRepository.cs" />
+    <Compile Include="Applications\Queries\ITinyUrlQuery.cs" />
+    <Compile Include="Applications\Queries\IWebSiteQuery.cs" />
+    <Compile Include="Applications\Queries\TinyUrlQuery.cs" />
+    <Compile Include="Applications\Queries\WebSiteQuery.cs" />
+    <Compile Include="Applications\TinyUrlMapping.cs" />
+    <Compile Include="Applications\WebSite.cs" />
+    <Compile Include="Communications\Alerts\AlertType.cs" />
+    <Compile Include="Communications\Alerts\ISavedResumeSearchAlertResult.cs" />
+    <Compile Include="Communications\Alerts\SavedResumeSearchAlertResult.cs" />
+    <Compile Include="Communications\Alerts\SavedSearchAlertResult.cs" />
+    <Compile Include="Communications\Emails\AdministratorEmails\AdministratorEmail.cs" />
+    <Compile Include="Communications\Emails\CustodianEmails\CustodianEmail.cs" />
+    <Compile Include="Communications\Emails\EmailsExtensions.cs" />
+    <Compile Include="Communications\Emails\EmailUser.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\CandidateResumeEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\CandidateResumesEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerMemberViewEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerMemberEmailView.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ExpiringApplicantCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ExpiringCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ExpiringJobAdCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ExpiringUnlimitedContactCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\CreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerContactCandidateConfirmationEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerUsageEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\JobApplicationEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\LowContactCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\NewEmployerWelcomeEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ResumeSearchAlertEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\SuggestedCandidatesEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerToMemberNotifications\ContactCandidateEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerToMemberNotifications\EmployerToMemberNotification.cs" />
+    <Compile Include="Communications\Emails\EmployerToMemberNotifications\RejectCandidateEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerToMemberNotifications\RepresentativeContactCandidateEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerUpdates\EmployerNewsletterEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerUpdates\EmployerUpdate.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\ContactUsEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\EmployerRequestAccessEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\ServicesEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\StatsEmail.cs" />
+    <Compile Include="Communications\Emails\MemberAlerts\JobSearchAlertEmail.cs" />
+    <Compile Include="Communications\Emails\MemberAlerts\MemberAlertEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\ActivationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\CandidateStatusEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\EmailVerificationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\ReactivationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\ResumeAttachmentEmail.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\VerificationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\SendJobToFriendEmail.cs" />
+    <Compile Include="Communications\Emails\MemberUpdates\MemberNewsletterEmail.cs" />
+    <Compile Include="Communications\Emails\MemberUpdates\MemberUpdate.cs" />
+    <Compile Include="Communications\Emails\PartnerEmails\NewResourceQuestionEmail.cs" />
+    <Compile Include="Communications\Emails\Queries\AffiliateEmailsQuery.cs" />
+    <Compile Include="Context\ChannelContext.cs" />
+    <Compile Include="Context\CommunityContext.cs" />
+    <Compile Include="Context\LocationContext.cs" />
+    <Compile Include="Context\VerticalContext.cs" />
+    <Compile Include="Domain\Roles\Candidates\Commands\CandidateStatusCommand.cs" />
+    <Compile Include="Domain\Roles\Candidates\Commands\ICandidateStatusCommand.cs" />
+    <Compile Include="Domain\Roles\JobAds\Handlers\JobAdsHandler.cs" />
+    <Compile Include="Domain\Roles\JobAds\Handlers\IJobAdsHandler.cs" />
+    <Compile Include="Domain\Roles\Recruiters\Affiliations\Handlers\AffiliationsHandler.cs" />
+    <Compile Include="Domain\Roles\Recruiters\Affiliations\Handlers\IAffiliationsHandler.cs" />
+    <Compile Include="Query\Search\Resources\ResourceSearchSubscriber.cs" />
+    <Compile Include="Security\AnonymousUserIdentity.cs" />
+    <Compile Include="Security\AnonymousUserPrincipal.cs" />
+    <Compile Include="Security\UserPrincipalExtensions.cs" />
+    <Compile Include="Security\UserIdentityExtensions.cs" />
+    <Compile Include="Profiles\UserProfile.cs" />
+    <Compile Include="Profiles\MemberProfile.cs" />
+    <Compile Include="Query\Search\JobAdsSupplemental\JobAdSortSubscriber.cs" />
+    <Compile Include="Security\Handlers\ISecurityHandler.cs" />
+    <Compile Include="Security\Handlers\SecurityHandler.cs" />
+    <Compile Include="Subscribers\ResumeEventsSubscriber.cs" />
+    <Compile Include="Subscribers\JobAdsSubscriber.cs" />
+    <Compile Include="Subscribers\MembersSubscriber.cs" />
+    <Compile Include="Context\ActivityContext.cs" />
+    <Compile Include="Domain\Credits\Handlers\CreditsHandler.cs" />
+    <Compile Include="Domain\Credits\Handlers\ICreditsHandler.cs" />
+    <Compile Include="Domain\Roles\Affiliations\Communities\CommunityFooterContentItem.cs" />
+    <Compile Include="Domain\Roles\Affiliations\Communities\CommunityHeaderContentItem.cs" />
+    <Compile Include="Domain\Roles\Orders\Handlers\IOrdersHandler.cs" />
+    <Compile Include="Domain\Roles\Orders\Handlers\OrdersHandler.cs" />
+    <Compile Include="Featured\Commands\FeaturedCommand.cs" />
+    <Compile Include="Featured\Commands\IFeaturedCommand.cs" />
+    <Compile Include="Featured\Data\Featured.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Featured.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Featured\Data\FeaturedRepository.cs" />
+    <Compile Include="Featured\Data\Mappings.cs" />
+    <Compile Include="Featured\FeaturedEmployer.cs" />
+    <Compile Include="Featured\FeaturedItem.cs" />
+    <Compile Include="Featured\FeaturedStatistics.cs" />
+    <Compile Include="Featured\IFeaturedRepository.cs" />
+    <Compile Include="Featured\Queries\FeaturedQuery.cs" />
+    <Compile Include="Featured\Queries\IFeaturedQuery.cs" />
+    <Compile Include="Profiles\Commands\IProfilesCommand.cs" />
+    <Compile Include="Profiles\Commands\ProfilesCommand.cs" />
+    <Compile Include="Profiles\Data\Mappings.cs" />
+    <Compile Include="Profiles\Data\Profiles.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Profiles.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles\Data\ProfilesRepository.cs" />
+    <Compile Include="Profiles\EmployerProfile.cs" />
+    <Compile Include="Profiles\IProfilesRepository.cs" />
+    <Compile Include="Profiles\Queries\IProfilesQuery.cs" />
+    <Compile Include="Profiles\Queries\ProfilesQuery.cs" />
+    <Compile Include="Query\Search\JobAds\JobAdSearchSubscriber.cs" />
+    <Compile Include="Security\Commands\AuthenticationStatus.cs" />
+    <Compile Include="Security\Commands\ExternalAuthenticationCommand.cs" />
+    <Compile Include="Security\Commands\IExternalAutenticationCommand.cs" />
+    <Compile Include="Security\Commands\ILoginAuthenticationCommand.cs" />
+    <Compile Include="Security\Commands\LoginAuthenticationCommand.cs" />
+    <Compile Include="Security\Constants.cs" />
+    <Compile Include="Security\RegisteredUserIdentity.cs" />
+    <Compile Include="Security\RegisteredUserPrincipal.cs" />
+    <Compile Include="Security\Validation.cs" />
+    <Compile Include="Subscribers\PartnersEmailSubscriber.cs" />
+    <Compile Include="Unity\AgentsConfigurator.cs" />
+    <Compile Include="Users\Accounts\Commands\AccountVerificationsCommand.cs" />
+    <Compile Include="Users\Accounts\Commands\IAccountVerificationsCommand.cs" />
+    <Compile Include="Users\Administrators\Commands\AdministratorAccountsCommand.cs" />
+    <Compile Include="Users\Administrators\Commands\IAdministratorAccountsCommand.cs" />
+    <Compile Include="Communications\Alerts\Data\Alerts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alerts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Communications\Alerts\Data\Mappings.cs" />
+    <Compile Include="Communications\Alerts\Data\SearchAlertsRepository.cs" />
+    <Compile Include="Communications\Alerts\Commands\IJobAdSearchAlertsCommand.cs" />
+    <Compile Include="Communications\Alerts\Commands\IMemberSearchAlertsCommand.cs" />
+    <Compile Include="Communications\Alerts\ISearchAlertsRepository.cs" />
+    <Compile Include="Communications\Alerts\JobAdSearchAlert.cs" />
+    <Compile Include="Communications\Alerts\Commands\JobAdSearchAlertsCommand.cs" />
+    <Compile Include="Communications\Alerts\MemberSearchAlert.cs" />
+    <Compile Include="Communications\Alerts\Commands\MemberSearchAlertsCommand.cs" />
+    <Compile Include="Communications\Alerts\Queries\IJobAdSearchAlertsQuery.cs" />
+    <Compile Include="Communications\Alerts\Queries\IMemberSearchAlertsQuery.cs" />
+    <Compile Include="Communications\Alerts\Queries\JobAdSearchAlertsQuery.cs" />
+    <Compile Include="Communications\Alerts\Queries\MemberSearchAlertsQuery.cs" />
+    <Compile Include="Communications\Campaigns\Emails\CampaignEmail.cs" />
+    <Compile Include="Communications\Campaigns\Emails\CampaignEmailsCommand.cs" />
+    <Compile Include="Communications\Campaigns\Emails\EmployerCampaignEmail.cs" />
+    <Compile Include="Communications\Campaigns\Emails\ICampaignEmailsCommand.cs" />
+    <Compile Include="Communications\Campaigns\Emails\MemberCampaignEmail.cs" />
+    <Compile Include="Communications\Emails\Commands\EmailsCommand.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerClientEmails\CandidateCareReportEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerClientEmails\EmployerClientEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerClientEmails\EmployerReportEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerClientEmails\NoSearchActivityEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerCommunityEnquiryEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\EmployerEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\ExpiringContactCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\NoContactCreditsEmail.cs" />
+    <Compile Include="Communications\Emails\EmployerEmails\OrderReceiptEmail.cs" />
+    <Compile Include="Communications\Emails\Queries\IAffiliateEmailsQuery.cs" />
+    <Compile Include="Communications\Emails\AdministratorEmails\AccountManagerReportEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\AdministratorEmployerEnquiryEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\AllStaffEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\EmployerServicesEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\GroupAbandonedEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\InternalEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\MemberServicesEmail.cs" />
+    <Compile Include="Communications\Emails\InternalEmails\SalesEmail.cs" />
+    <Compile Include="Communications\Emails\Commands\IEmailsCommand.cs" />
+    <Compile Include="Communications\Emails\Queries\IUserEmailsQuery.cs" />
+    <Compile Include="Communications\Emails\MemberEmails\MemberEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\ContactInvitationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\FriendInvitationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\FriendInvitationConfirmationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\MemberMessageSentEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\MemberToMemberNotification.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\RepresentativeInvitationConfirmationEmail.cs" />
+    <Compile Include="Communications\Emails\MemberToMemberNotifications\RepresentativeInvitationEmail.cs" />
+    <Compile Include="Communications\Emails\Queries\UserEmailsQuery.cs" />
+    <Compile Include="Communications\Emails\TemplateEmail.cs" />
+    <Compile Include="Communications\Emails\UserEmails\PasswordReminderEmail.cs" />
+    <Compile Include="Communications\Emails\UserEmails\UserEmail.cs" />
+    <Compile Include="Subscribers\AffiliationsSubscriber.cs" />
+    <Compile Include="Subscribers\MessagesSubscriber.cs" />
+    <Compile Include="Subscribers\FriendsSubscriber.cs" />
+    <Compile Include="Subscribers\ProductsSubscriber.cs" />
+    <Compile Include="Subscribers\SecuritySubscriber.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Users\LinkedIn\Commands\ILinkedInAuthenticationCommand.cs" />
+    <Compile Include="Users\LinkedIn\Commands\LinkedInAuthenticationCommand.cs" />
+    <Compile Include="Users\Members\Handlers\IResumesHandler.cs" />
+    <Compile Include="Users\Members\Handlers\ResumesHandler.cs" />
+    <Compile Include="Users\VisitorFrequency.cs" />
+    <Compile Include="Users\Employers\Defaults.cs" />
+    <Compile Include="Users\Members\Defaults.cs" />
+    <Compile Include="Users\Members\Handlers\FriendsHandler.cs" />
+    <Compile Include="Users\Members\Handlers\IFriendsHandler.cs" />
+    <Compile Include="Users\Members\Handlers\IMembersHandler.cs" />
+    <Compile Include="Users\Members\Handlers\IMessagesHandler.cs" />
+    <Compile Include="Users\Members\Handlers\MembersHandler.cs" />
+    <Compile Include="Users\Members\Handlers\MessagesHandler.cs" />
+    <Compile Include="Users\Members\Queries\VisitorStatusQuery.cs" />
+    <Compile Include="Users\Members\Queries\IVisitorStatusQuery.cs" />
+    <Compile Include="Users\VisitorStatus.cs" />
+    <Compile Include="Users\Sessions\Commands\IUserSessionsCommand.cs" />
+    <Compile Include="Users\Sessions\Commands\UserSessionsCommand.cs" />
+    <Compile Include="Users\Custodians\Commands\CustodianAccountsCommand.cs" />
+    <Compile Include="Users\Custodians\Commands\ICustodianAccountsCommand.cs" />
+    <Compile Include="Users\Sessions\Data\Mappings.cs" />
+    <Compile Include="Users\Sessions\Data\Users.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Sessions\Data\UserSessionsRepository.cs" />
+    <Compile Include="Users\Employers\Commands\EmployerAccountsCommand.cs" />
+    <Compile Include="Users\Employers\Commands\IEmployerAccountsCommand.cs" />
+    <Compile Include="Users\Employers\Queries\EmployerAccountsQuery.cs" />
+    <Compile Include="Users\Employers\Queries\IEmployerAccountsQuery.cs" />
+    <Compile Include="Users\Sessions\IUserSessionsRepository.cs" />
+    <Compile Include="Users\Members\Commands\IMemberAccountsCommand.cs" />
+    <Compile Include="Users\Members\Commands\MemberAccountsCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Data\Mappings.cs" />
+    <Compile Include="Reports\Data\Reports.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reports.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Data\ReportsRepository.cs" />
+    <Compile Include="Reports\Employers\CandidateCareReport.cs" />
+    <Compile Include="Reports\Employers\Commands\CandidateCareReportRunner.cs" />
+    <Compile Include="Reports\Employers\ResumeSearchActivityReport.cs" />
+    <Compile Include="Reports\Employers\Commands\ResumeSearchActivityReportRunner.cs" />
+    <Compile Include="Reports\Employers\Commands\ExecuteEmployerReportsCommand.cs" />
+    <Compile Include="Reports\Employers\Commands\IExecuteEmployerReportsCommand.cs" />
+    <Compile Include="Reports\Employers\EmployerReport.cs" />
+    <Compile Include="Reports\Employers\Commands\EmployerReportsCommand.cs" />
+    <Compile Include="Reports\Employers\Commands\IEmployerReportsCommand.cs" />
+    <Compile Include="Reports\Employers\JobBoardActivityReport.cs" />
+    <Compile Include="Reports\Employers\Commands\JobBoardActivityReportRunner.cs" />
+    <Compile Include="Reports\Employers\Queries\EmployerReportsQuery.cs" />
+    <Compile Include="Reports\Employers\Queries\IEmployerReportsQuery.cs" />
+    <Compile Include="Reports\Employers\Commands\ReportRunner.cs" />
+    <Compile Include="Reports\Commands\IReportsCommand.cs" />
+    <Compile Include="Reports\IReportsRepository.cs" />
+    <Compile Include="Reports\Queries\IReportsQuery.cs" />
+    <Compile Include="Reports\Queries\ReportsQuery.cs" />
+    <Compile Include="Reports\Report.cs" />
+    <Compile Include="Reports\ReportParameter.cs" />
+    <Compile Include="Reports\ReportRun.cs" />
+    <Compile Include="Reports\Commands\ReportsCommand.cs" />
+    <Compile Include="Security\Data\Mappings.cs" />
+    <Compile Include="Security\Data\Security.designer.cs">
+      <DependentUpon>Security.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Security\Data\SecurityRepository.cs" />
+    <Compile Include="Security\ExternalCredentials.cs" />
+    <Compile Include="Security\Commands\ExternalCredentialsCommand.cs" />
+    <Compile Include="Security\Commands\IExternalCredentialsCommand.cs" />
+    <Compile Include="Security\Commands\ILoginCredentialsCommand.cs" />
+    <Compile Include="Security\Commands\IPasswordsCommand.cs" />
+    <Compile Include="Security\ISecurityRepository.cs" />
+    <Compile Include="Security\LoginCredentials.cs" />
+    <Compile Include="Security\Commands\LoginCredentialsCommand.cs" />
+    <Compile Include="Security\Commands\PasswordsCommand.cs" />
+    <Compile Include="Security\PublishedEvents.cs" />
+    <Compile Include="Security\Queries\ExternalCredentialsQuery.cs" />
+    <Compile Include="Security\Queries\IExternalCredentialsQuery.cs" />
+    <Compile Include="Security\Queries\ILoginCredentialsQuery.cs" />
+    <Compile Include="Security\Queries\LoginCredentialsQuery.cs" />
+    <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\Task.cs" />
+    <Compile Include="Query\Search\Members\MemberSearchSubscriber.cs" />
+    <Compile Include="Users\Members\PublishedEvents.cs" />
+    <Compile Include="Users\Sessions\Queries\IUserSessionsQuery.cs" />
+    <Compile Include="Users\Sessions\Queries\UserSessionsQuery.cs" />
+    <Compile Include="Users\Sessions\UserSessionActivity.cs" />
+    <Compile Include="Workflows\CandidateWorkflowSubscriber.cs" />
+    <Compile Include="Workflows\SuggestedJobsWorkflowSubscriber.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Communications\Communications.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Data\Reports.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Reports.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Applications\Data\Applications.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Applications.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Communications\Alerts\Data\Alerts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Alerts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Featured\Data\Featured.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Featured.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Profiles\Data\Profiles.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Profiles.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\Data\Reports.dbml.layout">
+      <DependentUpon>Reports.dbml</DependentUpon>
+    </None>
+    <None Include="Communications\Alerts\Data\Alerts.dbml.layout">
+      <DependentUpon>Alerts.dbml</DependentUpon>
+    </None>
+    <None Include="Security\Data\Security.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Security.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Applications\Data\Applications.dbml.layout">
+      <DependentUpon>Applications.dbml</DependentUpon>
+    </None>
+    <None Include="Profiles\Data\Profiles.dbml.layout">
+      <DependentUpon>Profiles.dbml</DependentUpon>
+    </None>
+    <None Include="Featured\Data\Featured.dbml.layout">
+      <DependentUpon>Featured.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Reports\Employers\JobBoardActivityNoCredits.xls" />
+    <EmbeddedResource Include="Reports\Employers\ResumeSearchActivityNoCredits.xls" />
+    <EmbeddedResource Include="Reports\Employers\ResumeSearchActivity.xls" />
+    <EmbeddedResource Include="Reports\Employers\JobBoardActivity.xls" />
+    <None Include="Users\Sessions\Data\Users.dbml.layout">
+      <DependentUpon>Users.dbml</DependentUpon>
+    </None>
+    <None Include="Security\Data\Security.dbml.layout">
+      <DependentUpon>Security.dbml</DependentUpon>
+    </None>
+    <None Include="Users\Sessions\Data\Users.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Users.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presentation\Presentation.csproj">
+      <Project>{22C993FE-72CE-46AE-B34B-276D0B9B41FD}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow\Workflow.csproj">
+      <Project>{BE0A851B-3FAB-4275-B4A8-21F9F2A62FDA}</Project>
+      <Name>Workflow %28Workflow\Workflow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\Build\KillByDll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

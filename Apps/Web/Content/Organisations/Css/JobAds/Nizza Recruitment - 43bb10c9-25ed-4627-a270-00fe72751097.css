@@ -1,0 +1,110 @@
+/* div#JobAd is the outer wrapper. This applies to all nested DIVs including
+   #JobDescription and the subsequent controls and links (unless overrideen) */
+#JobAd div {
+	margin-bottom: 1em;
+} 
+
+/* div#JobDescription is where the job ad reallu begins
+   - it contains #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	border: 1px solid #000;
+	padding: 0;
+	width: 458px;
+}  
+
+#JobDescription #Ad {
+	margin: 0;
+	padding: 0 30px; /* indents all children, even cruddy paras in middle of ad */
+}
+
+#JobDescription #Ad p {
+	margin-bottom: 0; /* counteracts LinkMe text-links-headings.css */
+}
+#JobDescription #Ad br {
+	display: none;
+}
+#JobDescription #Ad p br {
+	display: block;
+}
+
+/* Reset areas where client cannot inject html */
+/*#JobDescription #Ad #brandingLogo,*/
+#JobDescription #Ad #JobAdHeading,
+#JobDescription #Ad #JobAdHeading h1,
+#JobDescription #Ad #JobAdHeading p, 
+#JobDescription #Ad #JobAdHeading table,
+#JobDescription #Ad #JobAdHeading th, 
+#JobDescription #Ad #JobAdHeading td, 
+#JobDescription #Ad #JobAdHeading ul, 
+#JobDescription #Ad #JobAdHeading li, 
+#JobDescription #Ad #JobAdHeading label,
+#JobDescription #Ad #AdContactDetails,
+#JobAd #JobDescription #LogoFooter {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: url(nizza_images/nizza_banner.gif) no-repeat center top;
+	height: 114px;
+	margin-left: -30px; /* counter-act left padding on #Ad */
+    margin-right: -30px; /* necessary? */
+	width: 458px;
+}
+
+/* #JobAdHeading section */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	margin-top: -50px;
+	text-align: left;	
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	font-size: 200%;
+	font-weight: bolder;
+	line-height: 1.3em;
+	margin-bottom: 1em;
+	padding-right: 85px;	
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading p strong {
+	display: block; 
+	font-weight: bold; /* acts as sub-heading in the #JobAdHeading section */
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading table {
+	margin-bottom: 1em;
+	width: 80% !important;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+/* AdContactDetails just before the #LogoFooter */
+#JobAd #JobDescription #Ad #AdContactDetails {
+/*    background: url(nizza_images/nizza_logo.jpg) no-repeat top right;
+	font-size: smaller;
+	margin-top: 2em;
+	min-height: 70px;
+	padding-right: 155px;
+	text-align: left;
+*/}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+/*    background: url(nizza_images/nizza_footer.gif) no-repeat center bottom;
+	height: 72px;
+*/ background: url(nizza_images/nizza_footer_bris.gif) no-repeat center bottom;
+	height: 191px;
+	margin-top: 2em;
+}

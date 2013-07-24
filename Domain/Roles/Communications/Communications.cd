@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Roles.Communications.CommunicationsCommand" Collapsed="true">
+    <Position X="3.5" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAEAAAAAAAABAAQCAgCAAAAABAAA=</HashCode>
+      <FileName>Communications\CommunicationsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_settingsCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.OctazenImportContactsCommand" Collapsed="true">
+    <Position X="3.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communications\OctazenImportContactsCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Settings.SettingsCommand" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgAABAAUAIAAABAAKEAAABAACACAAAAAAAAEA=</HashCode>
+      <FileName>Communications\Settings\SettingsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Settings.Data.SettingsRepository" Collapsed="true">
+    <Position X="12.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAFAMAAYAAAAAICAAJECAIQQAJAAIQAAUAAAhAAMA=</HashCode>
+      <FileName>Communications\Settings\Data\SettingsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Messages.MessagesCommand" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQIDACAAQABABAQBBAAAAQAAAIQQAAEAAAAoAAQAEAA=</HashCode>
+      <FileName>Communications\Messages\MessagesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+      <Field Name="_spamCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Messages.Data.MessagesRepository" Collapsed="true">
+    <Position X="12.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ASAAAIEAARYAIAAAuQAQwCgIgMAAEAAAIAAAIgUEAQA=</HashCode>
+      <FileName>Communications\Messages\Data\MessagesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Campaigns.CampaignsCommand" Collapsed="true">
+    <Position X="3.5" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAgAAASADAAAgIAAAAQAIAAAAAAAAAAAAAAAAAwAg=</HashCode>
+      <FileName>Communications\Campaigns\CampaignsCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Communications.Campaigns.Data.CampaignsRepository" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>lAAQgAAAAAAAQCgAr4IAAiAAhgCAABgyAkABEQRAACA=</HashCode>
+      <FileName>Communications\Campaigns\Data\CampaignsRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_campaignCategoriesCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Settings.ISettingsCommand" Collapsed="true">
+    <Position X="1" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAACAAAAAAAAQABgAAAAAQAAAAIAMA=</HashCode>
+      <FileName>Communications\Settings\ISettingsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Settings.ISettingsRepository" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAACAAAAAAAAQABgAAAAAQAAAAIAMA=</HashCode>
+      <FileName>Communications\Settings\ISettingsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Messages.IMessagesRepository" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAABYAMAAAQQAAAEgAAEAAEACAAAAAAAEAAAA=</HashCode>
+      <FileName>Communications\Messages\IMessagesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Spam.ISpamCommand" Collapsed="true">
+    <Position X="7" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Campaigns.ICampaignsRepository" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAEAEAAAEAAAAABAAAAAAAAABAQAEAAAAAAAAA=</HashCode>
+      <FileName>Communications\Campaigns\ICampaignsRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Campaigns.ICampaignCategoriesCommand" Collapsed="true">
+    <Position X="1" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Communications\Campaigns\ICampaignCategoriesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.IImportContactsCommand" Collapsed="true">
+    <Position X="1" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Communications\IImportContactsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.ICommunicationsCommand" Collapsed="true">
+    <Position X="1" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communications\ICommunicationsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Messages.IMessagesCommand" Collapsed="true">
+    <Position X="1" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAABYAIAAAYSAAAEgAAUAAEAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Communications\Messages\IMessagesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Communications.Campaigns.ICampaignsCommand" Collapsed="true">
+    <Position X="1" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAEAEAAAEAAAAABAAAAAAAAABAQAEAAAAAAAAA=</HashCode>
+      <FileName>Communications\Campaigns\ICampaignsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,2 @@
+data_create_nat_admin_account.sql
+data_remove_verification_alliance_related_companies.sql

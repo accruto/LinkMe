@@ -1,0 +1,1171 @@
+/*	------------
+	Action icons
+	------------
+*/
+
+/* These actions have slightly larger than normal icons - so that they line
+   up in future usage, icon-to-text spacing has been preserved as per
+   widgets_and_lists.css */
+
+.new-search-action          { background: url(../../images/employers/icons/new-search.png)                   left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 16px; *display: inline; *zoom: 1; }
+.new-search-action-icon {
+	background : url("../../images/employers/icons/leftPanelIcons.png") -13px 0px no-repeat;
+	width : 18px;
+	height : 15px;
+	display : inline-block;
+	margin : 1px 3px -2px 0px;
+	float : left;
+}
+.change-search-action       { background: url(../../images/employers/icons/change-search.png)                left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 16px; *display: inline; *zoom: 1; }
+.change-search-action-icon {
+	background : url("../../images/employers/icons/leftPanelIcons.png") -31px 0px no-repeat;
+	width : 16px;
+	height : 15px;
+	display : inline-block;
+	margin : 1px 5px -2px 0px;
+	float : left;
+}
+.save-search-action         { background: url(../../images/employers/icons/save-search.png)                  left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 16px; *display: inline; *zoom: 1; }
+.new-candidate-alert-action { background: url(../../images/universal/action-icons/candidate-email-alerts.png) left center no-repeat; padding: 1px 0 2px 17px; display: inline-block; min-height: 16px; *display: inline; *zoom: 1; }
+.blocklist-action {
+	background: url("../../images/employers/icons/leftPanelIcons.png") 0px -42px no-repeat;
+	width : 14px;
+	height : 14px;
+	margin : 0px 2px -5px 1px;
+	display: inline-block; min-height: 16px; *display: inline; *zoom: 1;
+}
+
+/* But, in the context these icons are intended for, alter the icon-to-text
+   spacing to 'full spacing' */
+
+#left-sidebar .new-search-action,
+#left-sidebar .change-search-action,
+#left-sidebar .save-search-action,
+#left-sidebar .new-candidate-alert-action {
+    padding-left: 21px;
+}
+
+/* Ajax loader for left hand side sections */
+.ajax-loader { background-image: url(../../images/universal/ajax-loader.gif); border:0; width: 16px;background-position:left top; background-repeat:no-repeat; height:11px; margin:-12px 0 0 0; padding:0; float:right; }
+
+.search-container .page-title {
+	padding:10px 0 0 5px;
+}
+
+/*  ----------------------------------
+    Page title for any results
+    (imitates fat-title_section style)
+    ----------------------------------
+*/
+.results_page-title {
+    margin:0;padding:0;border:none;position:static;
+    border: 1px solid #ccced6;
+    border-top-color: #dcdcdb;
+    border-bottom-color: #c0c0c0;
+    background: #FFFFFF url(../../images/controls/section/fat-title/bg_title.png) bottom left repeat-x;
+}
+.results_page-title h1 {
+    margin:0;padding:0;border:none;position:static;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 130%;
+    padding: 6px;
+}
+.result-header-icon {
+	background: url("../../images/employers/icons/leftPanelIcons.png") 0px -15px no-repeat;
+	width : 28px;
+	height : 25px;
+	margin : 0px 2px -5px 1px;
+	display: inline-block;
+	float : left;
+}
+
+/*  -----------------------------
+    Page title for search results
+    -----------------------------
+*/
+#search-header-text {
+	float : left;
+	width : 649px;
+}
+.search-header h1:after, .blocklist-header h1:after {  /* Modern browser self-clearing */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.search-header h1,
+.blocklist-header h1 {		/* IE6,7 solution */
+    zoom: 1;			/* Invalid CSS, hasLayout trigger */
+}
+
+.search-header .search-criterion,
+.blocklist-header .search-criterion {
+    display: block;
+    *display: inline;
+    font-weight: normal;
+    font-size: 85%;
+    float: left;
+    *float: none;
+    clear: left;
+    *clear: none;
+    margin-top: 0.15em;
+}
+
+.blocklist-header .search-criterion {
+    clear: none;
+}
+
+.search-header .search-criterion-name,
+.blocklist-header .search-criterion-name {
+    font-weight: normal;
+    color: #808080;
+}
+
+.search-header .boolean-operator,
+.blocklist-header .boolean-operator {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.search-criterion-note {
+    font-size: 80%;
+    color: #808080;
+    padding: 3px 3px 0 3px;
+}
+            
+.search-header .search-criterion-separator,
+.blocklist-header .search-criterion-separator {
+    float: left;
+    *float: none;
+    *display: inline;
+    white-space: pre;
+}
+        
+/* First criterion: special emphasis */
+        
+.search-header .search-criterion:first-child,
+.blocklist-header .search-criterion:first-child {
+    font-size: 100%;
+    margin-top: 0;
+}
+
+.search-header .search-criterion:first-child .search-criterion-name,
+.blocklist-header .search-criterion:first-child .search-criterion-name {
+    font-weight: normal;
+    color: #000033;
+}
+
+.search-header .search-criterion:first-child .search-criterion-data,
+.blocklist-header .search-criterion:first-child .search-criterion-data {
+    font-weight: bold;
+}
+
+.search-header .search-criterion:first-child .search-criterion-note,
+.blocklist-header .search-criterion:first-child .search-criterion-note {
+    font-size: 85%;
+    font-weight: normal;
+}
+
+.search-header .boolean-operator,
+.blocklist-header .boolean-operator {
+    font-size: 85%;
+}
+        
+/* Location criterion: special emphasis */
+
+.search-header .location_search-criterion,
+.blocklist-header .location_search-criterion {
+    clear: none;
+    margin-top: 0;
+}
+
+.search-header .location_search-criterion .search-criterion-data,
+.blocklist-header .location_search-criterion .search-criterion-data {
+    font-weight: bold;
+    font-size: 118%;    /* 85% * 118% = back to 100% */
+}
+
+.search-header .location_search-criterion .search-criterion-note,
+.blocklist-header .location_search-criterion .search-criterion-note {
+}
+            
+/* Some criteria data are meaningful enough to imply the heading (thus the heading may be hidden) */
+
+.search-header .keywords_search-criterion .search-criterion-name,
+.search-header .location_search-criterion .search-criterion-name,
+.blocklist-header .keywords_search-criterion .search-criterion-name,
+.blocklist-header .location_search-criterion .search-criterion-name {
+    display: none;
+}
+
+/*  ---------------------------------
+    Change keywords and location ASCX
+    ---------------------------------
+*/
+
+.keyword-location-search_ascx {height: 200px;}
+.overlay-content .keyword-location-search_ascx {height: auto;}
+.keyword-location-search_ascx .location_holder {
+	float: left;
+	width: 250px;
+}
+
+.keyword-location-search_ascx .search_btn_holder {
+	float: right;
+	width: 90px;
+	padding-top:10px;
+}
+
+.keyword-location-search_ascx .keywords_field label,
+.keyword-location-search_ascx .location_field label {
+	font-size: 100%;
+}
+
+.keyword-location-search_ascx input[type=text], body.IE7 .forms_v2 .keyword-location-search_ascx input[type=text], body.IE8 .forms_v2 .keyword-location-search_ascx input[type=text] {
+	height: 20px;
+	border: 1px solid #4477AA;
+	padding-top: 3px\9;
+}
+
+    .keyword-location-search_ascx input.keywords_textbox {
+	    width: 327px;	
+    }
+
+    .keyword-location-search_ascx input.location_textbox {
+	    width: 250px;	
+    }
+    
+.keyword-location-search_ascx select {
+	font-size: 100%;
+}
+
+.keyword-location-search_ascx .text-label {
+	color: #959595;
+}
+
+.forms_v2 .control input.text-label {
+    color: #959595;
+}
+
+.forms_v2 .keyword-location-search_ascx .autocomplete_textbox {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.keyword-location-search_ascx .options-holder { 
+	padding: 16px 0 0 0;
+}
+
+.keyword-location-search_ascx .location_options .options-holder { 
+	*padding: 13px 0 0 0;
+}
+
+    .keyword-location-search_ascx .options_text a {
+	    color:#1155EE;
+	    font-size:85%;
+	    padding:0 0 5px 0;
+	    text-decoration:none;
+	    cursor: pointer;
+    }
+
+    .keyword-location-search_ascx .options_text a:hover {
+	    color:#FF6600;
+    }
+
+    .keyword-location-search_ascx .options_label {
+	    float:left;
+	    padding:0 0 8px 0;
+    }
+
+.keyword-location-search_ascx .down-icon {
+	margin-top: 5px;
+	margin-left: 5px;
+	*margin: 4px 8px 0 8px;
+	cursor: pointer;
+	width: 7px;
+	height: 6px;
+	background-image: url(../../images/universal/more-details-triangle.gif);
+	display: block;
+	float: left;
+	border: none;
+	outline: none;
+}
+
+.keyword-location-search_ascx a:hover .down-icon{
+	background-image: url(../../images/universal/more-details-triangle_over.gif);
+}
+
+.keyword-location-search_ascx .up-icon {
+	margin-top: 5px;
+	margin-left: 5px;
+	*margin: 4px 8px 0 8px;
+	cursor: pointer;
+	width: 7px;
+	height: 6px;
+	background-image: url(../../images/universal/less-details-triangle.gif);
+	display: block;
+	float: left;
+	border: none;
+	outline: none;
+}
+
+.keyword-location-search_ascx a:hover .up-icon{
+	background-image: url(../../images/universal/less-details-triangle_over.gif);
+}
+
+.keyword-location-search_ascx .clear-icon {
+	*margin: 0px 8px 0 3px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	background-image: url(../../images/universal/search-close.png);
+	display: block;
+	float: left;
+	border: none;
+	outline: none;
+}
+
+.keyword-location-search_ascx a:hover .clear-icon {
+	background-image: url(../../images/universal/search-close_over.png);
+}
+
+.keyword-location-search_ascx .forms_v2 .new_search_button,
+.keyword-location-search_ascx .new_search_button {
+	background-image: url(../../images/buttons/large/search.png);
+	border: 0;
+	width: 71px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-size: 0;
+	height: 31px;
+	margin: 0 0 8px 12px;
+	padding: 0 5px;
+	position:absolute;
+	*position:inherit;
+}
+
+.keyword-location-search_ascx .button_control .new_search_button {
+    *margin-top: -3px;
+}
+
+.keyword-location-search_ascx .options_contents {
+	margin-top: 20px;
+	*margin: 0px;
+}
+
+.keyword-location-search_ascx .search_tip {
+	margin: 44px 0 0 18px;
+	*margin: 11px 0 0 18px;
+	position: absolute;
+	right: 13px;
+	*right: auto;
+}
+
+.keyword-location-search_ascx .search_tip a {
+	cursor: pointer;
+}
+
+.keyword-location-search_ascx .location_options {
+	padding: 0;
+}
+
+.keyword-location-search_ascx .advanced_search_box {
+	float:left;
+	margin-right:17px;
+	width:330px;
+}
+    
+    .keyword-location-search_ascx .advanced_search_box .section .control {
+        padding: 3px 0 0 0;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box .section {
+	    background:url("../../images/controls/section/search/bg.png") no-repeat scroll left top transparent;
+	    margin:0 0 9px;
+	    padding:0;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box .section .section-content {
+	    background:url("../../images/controls/section/search/bg-bottom.png") no-repeat scroll left bottom transparent;
+	    margin:0;
+	    padding:8px 8px 25px 8px;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box select {
+	    width:auto;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box input[type=text] {
+	    width: 290px;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box .more input[type=text] {
+	    width: 79px;
+	    width: 77px\9;
+	    *width: 77px;
+    }
+    
+    .keyword-location-search_ascx .advanced_search_box .small {
+	    font-size: 85%;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box .section .section-content .options_contents .section {
+        *margin:0;
+    }
+    
+    .keyword-location-search_ascx .advanced_search_box .section .section-content .section {
+        background: none;
+        border-top: 1px solid #D7D9DA;
+        margin: 10px 0 0;
+        padding: 0;
+    }
+
+    .keyword-location-search_ascx .advanced_search_box .section .section .section-content {
+        background: none;
+        margin: 0;
+        padding: 10px 0 0 0;
+    }
+
+.keyword-location-search_ascx .heavy {
+	font-weight:bold;
+}
+    
+.keyword-location-search_ascx .loc_label{
+	color:#666666;
+}
+
+.keyword-location-search_ascx .advanced_search_box .section .section .section-content fieldset {
+    padding: 10px 0 0 0;
+}
+
+.ui-dialog.createemailalertprompt-dialog {
+	padding : 0;
+}
+.ui-widget-content.createemailalertprompt-dialog {
+	border : 1px solid #B7C6D1;
+}
+.createemailalertprompt-dialog .ui-dialog-titlebar {
+	display : none;
+}
+.ui-dialog .ui-dialog-content.overlay.createemailalertprompt {
+	overflow : hidden;
+	padding : 0;
+	left : 0px;
+	top : 0px;
+}
+.overlay.createemailalertprompt .titlebar {
+	width : 580px;
+	height : 50px;
+	background-color : #EFF3F7;
+	border-bottom : 1px Solid #D2E1EC;
+	margin-bottom : 17px;
+}
+.overlay.createemailalertprompt .titlebar .title {
+	font : Bold 14px Arial;
+	color :#333333;
+	padding : 19px 0px 0px 18px;
+	text-align : left;
+}
+.overlay.createemailalertprompt .icon.close {
+	margin : -12px 10px 0px 0px;
+}
+.overlay.createemailalertprompt .desc span {
+	font : 12px Arial;
+	color : #333333;
+	width : 580px;
+	line-height : 18px;
+	float : left;
+}
+.overlay.createemailalertprompt .button.ok {
+	float : left;
+	margin : 15px 0px 10px 240px;
+}
+
+/*  -------------------------
+    Refine and filter results 
+    -------------------------
+*/
+.refine_section {}
+
+    /*  -------------------------
+        Filter Activation checkbox
+        -------------------------
+    */
+        .refine_section .filter_pushcheck
+        {
+            background-position: top left;
+            width: 16px;
+            height: 17px;
+            background-image: url(../../images/buttons/checkbox/filter-checkbox.png);
+        }
+
+    /*  --------------------------
+        Candidate status, job type
+        --------------------------
+    */
+    .refine_section .candidate-status_section {}
+    .refine_section .job-type_section {}
+        .refine_section .pushchecks:after {	/* Modern-browser self-clearing solution */
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .refine_section .pushchecks {		/* IE7 self-clearing solution */
+            zoom: 1;			            /* Invalid CSS, hasLayout trigger */
+            *zoom: normal;
+        }
+        .refine_section .pushchecks input {
+            float: left;
+            clear: left;
+        }
+        .refine_section .pushchecks label {	/* Pushbutton-checkboxes we haven't styled yet */
+            float: left;
+            clear: right;
+            position: relative;
+            top: 12px;
+            margin-top: -0.75em;
+            margin-bottom: 0.75em;
+            font-size: 85%;
+            font-weight: normal;
+        }
+            .refine_section .pushcheck {
+                float: left;
+                margin-left: 2px;
+                cursor: pointer;
+            }
+            
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                .refine_section .pushcheck {
+                    float: none;
+                    display: inline-block;
+                }
+            }
+            
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                .refine_section .section-content .pushcheck {
+                    float: left;
+                }
+            }
+
+            .refine_section .pushcheck:first-child {	/* Doesn't work for IE6 */
+                margin-left: 0;
+            }
+            .refine_section .pushcheck-hover         { background-position: left 20%; }
+            .refine_section .pushcheck-down          { background-position: left 40%; }
+            .refine_section .pushcheck-checked       { background-position: left 60%; }
+            .refine_section .pushcheck-checked-hover { background-position: left 80%; }
+            .refine_section .pushcheck-checked-down  { background-position: left 100%; }
+
+            .refine_section .immediately-available_pushcheck,
+            .refine_section .actively-looking_pushcheck,
+            .refine_section .happy-to-talk_pushcheck,
+            .refine_section .not-specified_pushcheck {
+                width: 54px;
+                height: 52px;
+            }
+            .refine_section .immediately-available_pushcheck {
+                background-image: url(../../images/buttons/checkbox/immediately-available.png);
+            }
+            .refine_section .actively-looking_pushcheck {
+                background-image: url(../../images/buttons/checkbox/actively-looking.png);
+            }
+            .refine_section .happy-to-talk_pushcheck {
+                background-image: url(../../images/buttons/checkbox/happy-to-talk.png);
+            }
+            .refine_section .not-specified_pushcheck {
+                background-image: url(../../images/buttons/checkbox/not-specified.png);
+            }
+
+            .refine_section .full-time_pushcheck,
+            .refine_section .part-time_pushcheck,
+            .refine_section .contract_pushcheck,
+            .refine_section .temp_pushcheck,
+            .refine_section .jobshare_pushcheck {
+                width: 43px;
+                height: 42px;
+            }
+            .refine_section .full-time_pushcheck {
+                background-image: url(../../images/buttons/checkbox/full-time.png);
+            }
+            .refine_section .part-time_pushcheck {
+                background-image: url(../../images/buttons/checkbox/part-time.png);
+            }
+            .refine_section .contract_pushcheck {
+                background-image: url(../../images/buttons/checkbox/contract.png);
+            }
+            .refine_section .temp_pushcheck {
+                background-image: url(../../images/buttons/checkbox/temp.png);
+            }
+            .refine_section .jobshare_pushcheck {
+                background-image: url(../../images/buttons/checkbox/jobshare.png);
+            }
+            
+            /*Disabled checkboxes*/
+            .refine_section .disabled_pushcheck {
+                background-position: left top;
+                cursor: default;
+            }
+            .refine_section .AvailableNow_disabled_pushcheck {                
+                background-image: url(../../images/buttons/checkbox/immediately-available-disabled.png);
+            }
+            .refine_section .ActivelyLooking_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/actively-looking-disabled.png);
+            }
+            .refine_section .OpenToOffers_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/happy-to-talk-disabled.png);
+            }
+            .refine_section .Unspecified_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/not-specified-disabled.png);
+            }
+            .refine_section .FullTime_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/full-time-disabled.png);
+            }
+            .refine_section .PartTime_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/part-time-disabled.png);
+            }
+            .refine_section .Contract_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/contract-disabled.png);
+            }
+            .refine_section .Temp_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/temp-disabled.png);
+            }
+            .refine_section .JobShare_disabled_pushcheck {
+                background-image: url(../../images/buttons/checkbox/jobshare-disabled.png);
+            }
+    /*  --------
+        Distance
+        --------
+    */
+    .refine_section .distance_section {}
+        
+    /*  --------------
+        Desired salary
+        --------------
+    */
+    .refine_section .desired-salary_section {}
+        .refine_section .desired-salary_section .checkbox_field {
+            margin-top: 10px;
+        }
+        .refine_section .desired-salary_section .checkbox_control label {
+            font-size: 85%;
+        }
+    
+    /*  ----------------------------
+        Employer, education
+        (sections with a text field)
+        ----------------------------
+    */
+    .refine_section .employer_section {}
+    .refine_section .education_section {}
+        #left-sidebar .refine_section .employer_section  .section-content,
+        #left-sidebar .refine_section .education_section .section-content {
+            padding:10px 0 0 0;
+        }
+        .refine_section .employer_section  fieldset,
+        .refine_section .education_section fieldset {
+            position: relative; /* For AP anchoring */
+        }
+        .refine_section .section fieldset .go_button_field {
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .refine_section .field input.textbox {
+            width: 188px;
+            height: 19px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            .refine_section .field input.textbox {
+                height: 18px;
+            }
+        }
+        
+        .refine_section input.go_button {
+            width: 33px;
+            height: 22px;
+            background: url(../../images/buttons/light/go_half-rounded.png) top left repeat-x;
+        }
+
+/*  ----------------------------------
+    Search results AJAX loader overlay
+    ----------------------------------
+*/
+.results_section {
+    overflow: visible;  /* Desktop-menu needs this or it can get cut off */
+    position: relative; /* Anchor for AP */
+    min-height: 300px;
+    _height: 300px; /* IE6 hack ... even though we don't support IE6 anymore, it would be pretty bad for IE6 users not to see the loading spinner */
+}
+
+.results_section .section-content {
+    padding: 8px 0 0 0;
+}
+
+.results_section .ajax-overlay {
+    position: absolute;
+    left: 0; top: 0; 
+    width: 100%; height: 100%;
+    background: url(../../images/controls/search-results/loading-overlay.png) top left repeat;
+    text-align: center; /* Centers inline-block children too */
+    z-index:3;
+}
+    .results_section .ajax-overlay div {
+        text-align: left;
+        display: -moz-inline-box;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        max-width: 90%;
+        margin: 150px auto;
+        margin-bottom: 0;
+        border: 1px solid #88AACC;
+        color: #999;
+        padding: 20px;
+        padding-top: 20px;
+        background: #FFFFFF;
+    	-moz-box-shadow:    0px 8px 22px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 8px 22px 0px rgba(0,0,0,0.15);
+        box-shadow:         0px 8px 22px 0px rgba(0,0,0,0.15);
+    }
+    .results_section .ajax-overlay div.loading {
+        /*padding-top: 70px;*/
+        width: 50px;
+        height: 40px;
+        background: #FFFFFF url(../../images/universal/loading3.gif) center 20px no-repeat;
+        top: 50%;
+        left: 60%;
+        margin-top: -20px;
+        margin-left: -25px;
+        position: fixed;
+    }
+    
+    .results_section .ajax-overlay div.error {
+    }
+
+/*  ---------------
+    Debug-only form
+    ---------------
+*/
+
+.debug-form input.go_button {
+    width: 65px;
+    height: auto;
+    margin:0;padding:0;
+    padding: 2px;
+    background: #EEE;
+    border: 1px solid #CCC;
+    text-indent: 0;
+    line-height: 1;
+    font-size: 100%;
+    font-weight: normal;
+    color: #000;
+}
+.debug-form input.go_button:hover {
+    background: #F8F8F8;
+}
+.debug-form input.go_button:active {
+    background: #DDD;
+}
+
+/* For toggle checkboxes */
+.toggle-checkboxes {}
+
+    .toggle-checkboxes .children-toggle-checkbox-holder {
+    }
+        .toggle-checkboxes .parent-holder:after,
+        .toggle-checkboxes .child-holder:after {  /* Modern browser self-clearing */
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /* Temporary styles til we get forms_v2 onto this */
+        .toggle-checkboxes .parent-holder,
+        .toggle-checkboxes .child-holder { /* IE 6,7 self-clearing */
+            zoom: 1;
+        }
+            .toggle-checkboxes .parent-holder input,
+            .toggle-checkboxes .child-holder input {
+                float: left;
+            }
+            .toggle-checkboxes .parent-holder label,
+            .toggle-checkboxes .child-holder label {
+                overflow: hidden;
+                font-size: 85%;
+                font-size: 94%\9;
+                font-weight: normal;
+                float: left;
+                margin: 0; padding: 0;
+                padding-top: 2px;
+                /*width: 168px;*/
+            }
+
+    .toggle-checkboxes .list-right {
+        padding:0 0 0 10px;
+    }
+
+    .toggle-checkboxes .link-holder {
+        padding:5px 5px 0 5px;
+    }
+
+    .toggle-checkboxes .left-link {
+        float: left;
+		text-decoration : none;
+		font : 11.25px Verdana, Arial;
+    }
+
+    .toggle-checkboxes .right-link {
+        float: right;
+		text-decoration : none;
+		font : 11.25px Verdana, Arial;
+    }
+
+    .toggle-checkboxes .arrow-icon {
+	    cursor:pointer;
+	    position:relative;
+	    float:left;
+        margin: 5px 0 0 5px;
+        border: none;
+        width: 7px;
+	    height: 6px;
+	    display: block;
+    }
+
+    .toggle-checkboxes .icon-down {
+	    background-image: url(../../images/universal/more-details-triangle.gif);
+    }
+
+    .toggle-checkboxes .icon-up {
+	    background-image: url(../../images/universal/less-details-triangle.gif);
+    }
+
+    .toggle-checkboxes a:hover .icon-down {
+	    background-image: url(../../images/universal/more-details-triangle_over.gif);
+    }
+
+    .toggle-checkboxes a:hover .icon-up {
+	    background-image: url(../../images/universal/less-details-triangle_over.gif);
+    }
+
+    .toggle-checkboxes a {
+	    outline: none;
+}
+
+.retain-filters_section{
+    position:relative;
+    padding: 3px 0 3px 0;
+}
+
+.retain-filters_holder
+{
+    position: absolute;
+    right: 5px;
+    top: -12px;
+    }
+    
+   
+    .forms_v2 .radiobuttons_field .radio_control input.radio 
+    {
+        margin: 0 0.4ex 0 0;
+    }
+
+.filter-section-icon {
+    background: url("../../images/employers/section-heading-icons/filter.png") no-repeat scroll left center transparent;
+}
+
+.sort_holder {
+    float: right;
+    padding: 14px 0 0 0px;
+    position: absolute;
+}
+.sort_holder.IE7 {
+	position : relative;
+	margin-bottom : -37px;
+}
+
+.sort_date-asc, .sort_date-desc {
+    margin-left: 387px;
+}
+
+.sort_distance-asc {
+    margin-left: 400px;
+}
+
+.sort_distance-desc {
+    margin-left: 402px;
+}
+
+.sort_salary-asc {
+    margin-left: 412px;
+}
+
+.sort_salary-desc {
+    margin-left: 415px;
+}
+
+.sort_flagged-asc {
+    margin-left: 407px;
+}
+
+.sort_flagged-desc {
+    margin-left: 432px;
+}
+
+.sort_availability-asc, .sort_availability-desc {
+    margin-left: 437px;
+}
+
+.sort_name-asc, .sort_name-desc {
+    margin-left: 503px;
+}
+
+.sort_relevance-asc, .sort_relevance-desc {
+    margin-left: 437px;
+}
+
+.sort_fields {
+    float: right;
+}
+
+.sort_text {
+    float: right;
+    margin: 3px 0 0 5px;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.sort_fields .dropdown {
+	float: left;
+	width: 120px;
+}
+
+.sort_fields .ascending, .sort_fields .descending {
+    height: 15px;
+	width: 15px;
+	float:left;
+	margin: 3px 0 0 5px;
+	padding: 0 0 0 1px;
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+
+.sort_fields .ascending {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -44px -16px no-repeat;
+	width : 15px;
+	height : 12px;
+	margin-top : 5px;
+}
+
+.sort_fields .descending {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -44px -29px no-repeat;
+	width : 15px;
+	height : 12px;
+}
+
+.sort_fields .ascending input, .sort_fields .descending input {
+    display:none;
+}
+
+.sort_fields .asc_selected{
+	background: url("../../images/employers/icons/leftPanelIcons.png") -28px -29px no-repeat;
+	width : 15px;
+	height : 12px;
+}
+
+.sort_fields .dsc_selected {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -28px -16px no-repeat;
+	width : 15px;
+	height : 12px;
+}
+
+.blocklist-section-icon {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -16px -42px no-repeat;
+	width : 20px;
+	height : 19px;
+	display : inline-block;
+	margin : 3px -20px -4px 0px;
+	padding : 0px 0px 0px 0px;
+}
+body.IE7 .blocklist-section-icon {
+	float : left;
+}
+
+/* Highlighting */
+
+.highlighted-word {
+	font-weight: bold
+}
+a:link .highlighted-word, a:visited .highlighted-word {
+	text-decoration: underline;
+}
+
+/* Synonyms filter */
+
+.synonyms-filter-holder {
+    color: #888888;
+    font-size: 85%;
+    font-weight: normal;
+    float: left;
+    *float: none;
+    *display: inline;
+    padding: 2px 0 0 8px;
+    margin: 0 0 0 0;
+}
+
+.synonyms-filter-text {
+    float: left;
+    *float: none;
+}
+
+.mini-light-x_button {
+	background: url("../../images/employers/icons/leftPanelIcons.png") -38px -58px no-repeat;
+    float: left;
+    *float: none;
+	margin: 1px 0 0 5px;
+	padding: 0;
+	font-size: 0;
+	display: block;
+    *display: inline-block;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+
+/* Search Tips */
+
+.search-tips_ascx{
+    width: 950px;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+.search-tips_ascx .heading{
+    font-size: 180%;
+    font-weight:bold;
+    padding: 0 0 30px 0;
+    margin: 0;
+}
+
+.search-tips_ascx ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-tips_ascx li{
+    padding: 0;
+    margin: 0;
+}
+
+.search-tips_ascx li .title{
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0;
+    margin:0;
+    color: #214263;
+}
+
+.search-tips_ascx li div{
+    font-size: 100%;
+    padding: 10px 0 10px 10px;
+    margin:0;
+}
+
+.search-tips_ascx li div span{
+    font-size: 100%;
+    padding: 0;
+    margin:0;
+}
+
+.search-tips_ascx li div strong{
+    color: #FF6D18;
+}
+
+/* Community Partner logo */
+
+.community-partner_outer-container {
+    float: none;
+    height: 16px;
+}
+.compact_search-results_ascx .search-result.IE7 .community-partner_outer-container {
+	float : right;
+	padding-bottom : 8px;
+}
+.manage-candidate .compact_search-results_ascx .search-result.IE7 .community-partner_outer-container {
+	float : none;
+}
+.compact_search-results_ascx .search-result.IE7:hover .community-partner_outer-container {
+	padding-top : 1px;
+	padding-bottom : 7px;
+}
+.manage-candidate .compact_search-results_ascx .search-result.IE7:hover .community-partner_outer-container {
+	padding-top : 0px;
+	padding-bottom : 8px;
+}
+
+.community-partner_link-container {
+    float: left;
+}
+
+.compact_search-results_ascx .community-partner_link-container {
+    font-size: 85%;
+    margin: 5px 0 0 90px;
+}
+
+.community-partner_inner-container {
+    float: left;
+    position: relative;
+}
+
+.community-partner_container {
+    position: absolute;
+    z-index: 4;
+    display: none;
+    left: 12px;
+    top: -16px;
+}
+
+.community-partner_container .arrow {
+    background-image: url("../../images/controls/Overlay/arrow-left.png");
+    left: -10px;
+    top: 16px;
+    height: 16px;
+    position: absolute;
+    width: 16px;
+    z-index: 6;
+}
+
+.community-partner_container .holder {
+    background-color: #FFFFFF;
+    border: solid 1px #CCCCCC;
+    position: absolute;
+    z-index: 3;
+}
+
+.community-partner_container .content {
+    padding: 8px;
+}
+
+.keyword-location-search_ascx .reset-section {
+    float: none;
+    height: 8px;
+    margin: 16px 16px 0 0;
+}
+
+.keyword-location-search_ascx .reset-section a {
+    float: right;
+    font-size: 85%;
+    text-decoration: none;
+}
+
+.candidate_name_readonly {
+    color: #959595;
+    background-color: #EBEBE4;
+}

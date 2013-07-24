@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B92966B6-9BBA-4096-91C7-E5E447113B1A}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Domain.Users.Test</RootNamespace>
+    <AssemblyName>LinkMe.Domain.Users.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinkMe.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Environment\bin\LinkMe.Environment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrators\AdministratorsCommandTests.cs" />
+    <Compile Include="Administrators\AdministratorsTestExtensions.cs" />
+    <Compile Include="Anonymous\AnonymousContactsTests.cs" />
+    <Compile Include="Anonymous\JobAds\JobAdTestExtensions.cs" />
+    <Compile Include="Employers\JobAds\Create\FeatureBoostCreateJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\Limits\LimitsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\AllUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\ContactDetailsUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\FeaturesUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\FeatureBoostUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\LocationUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Update\IndustryUpdateJobAdsTests.cs" />
+    <Compile Include="Employers\Logos\EmployerLogosTests.cs" />
+    <Compile Include="Members\JobAds\Folders\GetJobAdFoldersTests.cs" />
+    <Compile Include="TestAssembly.cs" />
+    <Compile Include="Custodians\CustodiansTestExtensions.cs" />
+    <Compile Include="Employers\Accounts\AccountsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\CandidateCountsFlaglistsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\CandidateCountsFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\GetFoldersBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\SharedCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\ListsTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\AddCandidatesToCandidateBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\AddCandidatesToCandidateFlagListsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\CandidateFlagListsTests.cs" />
+    <Compile Include="Employers\Candidates\FlagLists\RemoveCandidatesFromCandidateFlagListsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\AddCandidatesToCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\CandidateBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\CandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Notes\CandidateNotesTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\CreateCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\DeleteCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\GetCandidateBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\BlockLists\RemoveCandidatesFromCandidateBlockListsTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\RemoveCandidatesFromCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Candidates\Folders\RenameCandidateFoldersTests.cs" />
+    <Compile Include="Employers\Contacts\MemberMessageCleanBodyTests.cs" />
+    <Compile Include="Employers\Contacts\EmployerMemberContactsTests.cs" />
+    <Compile Include="Employers\Contacts\MemberAttachmentsTests.cs" />
+    <Compile Include="Employers\Contacts\MemberMessageCleanSubjectTests.cs" />
+    <Compile Include="Employers\Contacts\MemberMessagesTests.cs" />
+    <Compile Include="Employers\Contacts\MemberMessageSubstitionsTests.cs" />
+    <Compile Include="Employers\Credits\AllocateTests.cs" />
+    <Compile Include="Employers\Credits\Credits.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Employers\Credits\CreditsTests.cs" />
+    <Compile Include="Employers\Credits\EmployerAllocationsTests.cs" />
+    <Compile Include="Employers\Credits\ExerciseTests.cs" />
+    <Compile Include="Employers\Credits\ExpiringAllocationsTests.cs" />
+    <Compile Include="Employers\Credits\GetAvailableEmployerCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\CandidateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\CloseJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Create\ContactDetailsCreateJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\Create\CreateJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\Create\CreateRandomJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\Credits\ParentOrganisationCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\Credits\ChildOrganisationCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\Credits\UnverifiedOrganisationCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\Credits\EmployerCreditsTests.cs" />
+    <Compile Include="Employers\JobAds\Credits\CreditsTests.cs" />
+    <Compile Include="Employers\JobAds\Create\IndustryCreateJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\GetJobAdTests.cs" />
+    <Compile Include="Employers\JobAds\JobAdExportTests.cs" />
+    <Compile Include="Employers\JobAds\JobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\JobAdTestExtensions.cs" />
+    <Compile Include="Employers\JobAds\Queries\MockJobAdProcessingQuery.cs" />
+    <Compile Include="Employers\JobAds\Update\UpdateJobAdsTests.cs" />
+    <Compile Include="Employers\JobAds\Words.cs" />
+    <Compile Include="Employers\Organisations\EmployerOrganisationsTests.cs" />
+    <Compile Include="Employers\Views\Accesses\AccessesTests.cs" />
+    <Compile Include="Employers\Views\Accesses\ChannelAppTests.cs" />
+    <Compile Include="Employers\Views\Accesses\MultipleAccessesTests.cs" />
+    <Compile Include="Employers\Views\Accesses\RecordsTests.cs" />
+    <Compile Include="Employers\Views\Accesses\SingleAccessesTests.cs" />
+    <Compile Include="Employers\Views\CanAccessResumeTests.cs" />
+    <Compile Include="Employers\Views\CanContactByPhoneTests.cs" />
+    <Compile Include="Employers\Views\ChannelAppsTests.cs" />
+    <Compile Include="Employers\Views\Limits\UnlockLimitsTests.cs" />
+    <Compile Include="Employers\Views\Limits\PhoneNumberViewedLimitsTests.cs" />
+    <Compile Include="Employers\Views\Limits\LimitsTests.cs" />
+    <Compile Include="Employers\Views\Limits\MessageSentLimitsTests.cs" />
+    <Compile Include="Employers\Views\Limits\ResumeDownloadedLimitsTests.cs" />
+    <Compile Include="Employers\Views\Limits\ResumeSentLimitsTests.cs" />
+    <Compile Include="Employers\Views\MemberViewingTests.cs" />
+    <Compile Include="Employers\Views\Contacts\AnonymousContactTests.cs" />
+    <Compile Include="Employers\Views\EmployerMemberViewActivityTests.cs" />
+    <Compile Include="Members\Friends\InvitationsTests.cs" />
+    <Compile Include="Members\JobAds\BlockLists\AddJobAdsToJobAdBlockListsTests.cs" />
+    <Compile Include="Members\JobAds\BlockLists\JobAdBlockListsTests.cs" />
+    <Compile Include="Members\JobAds\BlockLists\GetJobAdBlockListsTests.cs" />
+    <Compile Include="Members\JobAds\BlockLists\RemoveJobAdsFromJobAdBlockListsTests.cs" />
+    <Compile Include="Members\JobAds\FlagLists\AddJobAdsToJobAdFlagListsTests.cs" />
+    <Compile Include="Members\JobAds\FlagLists\JobAdCountsFlaglistsTests.cs" />
+    <Compile Include="Members\JobAds\FlagLists\JobAdFlagListsTests.cs" />
+    <Compile Include="Members\JobAds\FlagLists\RemoveJobAdsFromJobAdFlagListsTests.cs" />
+    <Compile Include="Members\JobAds\Folders\AddJobAdsToJobAdFoldersTests.cs" />
+    <Compile Include="Members\JobAds\Folders\JobAdCountsFoldersTests.cs" />
+    <Compile Include="Members\JobAds\Folders\JobAdFoldersTests.cs" />
+    <Compile Include="Members\JobAds\Folders\RemoveJobAdsFromJobAdFoldersTests.cs" />
+    <Compile Include="Members\JobAds\Folders\RenameJobAdFoldersTests.cs" />
+    <Compile Include="Members\JobAds\ListsTests.cs" />
+    <Compile Include="Members\JobAds\Notes\JobAdNotesTests.cs" />
+    <Compile Include="Members\JobAds\SubmitWithResumeTests.cs" />
+    <Compile Include="Members\JobAds\SubmitWithLastUsedResumeTests.cs" />
+    <Compile Include="Members\JobAds\SubmitTests.cs" />
+    <Compile Include="Members\JobAds\SubmitWithProfileTests.cs" />
+    <Compile Include="Members\Photos\MemberPhotosTests.cs" />
+    <Compile Include="Members\Status\MemberStatusTests.cs" />
+    <Compile Include="Members\Registration\UnverifyEmailAddressTests.cs" />
+    <Compile Include="Members\Views\EmployerMemberViewsTests.cs" />
+    <Compile Include="Members\Views\MembersTests.cs" />
+    <Compile Include="Members\Views\PersonalViewsTests.cs" />
+    <Compile Include="Members\Views\ProfessionalViewsTests.cs" />
+    <Compile Include="Members\Views\ViewsTests.cs" />
+    <Compile Include="Employers\Views\ApplicantContacts\ApplicantContactTests.cs" />
+    <Compile Include="Employers\Views\Applicants\ApplicantTests.cs" />
+    <Compile Include="Employers\Views\ApplicantContacts\ChildOrganisationApplicantContactTests.cs" />
+    <Compile Include="Employers\Views\Applicants\ChildOrganisationApplicantTests.cs" />
+    <Compile Include="Employers\Views\Contacts\ChildOrganisationContactTests.cs" />
+    <Compile Include="Employers\Views\ChildOrganisationOthersTests.cs" />
+    <Compile Include="Employers\Views\Contacts\ContactTests.cs" />
+    <Compile Include="Employers\Views\ViewsTests.cs" />
+    <Compile Include="Employers\Views\ApplicantContacts\EmployerApplicantContactTests.cs" />
+    <Compile Include="Employers\Views\Applicants\EmployerApplicantTests.cs" />
+    <Compile Include="Employers\Views\Contacts\EmployerContactTests.cs" />
+    <Compile Include="Employers\Views\EmployerOthersTests.cs" />
+    <Compile Include="Employers\Views\HierarchyTests.cs" />
+    <Compile Include="Employers\Views\ApplicantContacts\OrganisationApplicantContactTests.cs" />
+    <Compile Include="Employers\Views\Applicants\OrganisationApplicantTests.cs" />
+    <Compile Include="Employers\Views\Contacts\OrganisationContactTests.cs" />
+    <Compile Include="Employers\Views\OrganisationOthersTests.cs" />
+    <Compile Include="Employers\Views\OthersTests.cs" />
+    <Compile Include="Employers\Views\ApplicantContacts\ParentOrganisationApplicantContactTests.cs" />
+    <Compile Include="Employers\Views\Applicants\ParentOrganisationApplicantTests.cs" />
+    <Compile Include="Employers\Views\Contacts\ParentOrganisationContactTests.cs" />
+    <Compile Include="Employers\Views\ParentOrganisationOthersTests.cs" />
+    <Compile Include="Employers\EmployersCommandTests.cs" />
+    <Compile Include="Employers\EmployersTestExtensions.cs" />
+    <Compile Include="Employers\JobAds\JobAdApplicationsTests.cs" />
+    <Compile Include="Employers\Orders\OrdersTests.cs" />
+    <Compile Include="Members\Accounts\AccountsTests.cs" />
+    <Compile Include="Members\Affiliations\AffiliationMemberDataTests.cs" />
+    <Compile Include="Members\Affiliations\AffiliationMemberTests.cs" />
+    <Compile Include="Members\Affiliations\AffiliationTests.cs" />
+    <Compile Include="Members\MembersCommandTests.cs" />
+    <Compile Include="Members\MembersQueryTests.cs" />
+    <Compile Include="Members\MembersTestExtensions.cs" />
+    <Compile Include="Members\Registration\EmailVerificationsTests.cs" />
+    <Compile Include="Members\Registration\ExternalReferralsTests.cs" />
+    <Compile Include="Members\VisibilityTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TestClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain.csproj">
+      <Project>{822187F9-5344-443C-83B8-1A26CE492157}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Roles\Roles.csproj">
+      <Project>{84CAB40C-210E-4CDD-85D9-7BFBA7C51670}</Project>
+      <Name>Roles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Roles\Test\Roles.Test.csproj">
+      <Project>{530111B7-2ED9-4934-9745-66D6C60CD578}</Project>
+      <Name>Roles.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test\Domain.Test.csproj">
+      <Project>{DB53996F-95A9-4091-9FD6-76A564C59D9A}</Project>
+      <Name>Domain.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Users.csproj">
+      <Project>{8D4C94A3-5147-4224-96B2-FC3F786B953F}</Project>
+      <Name>Users</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+    <None Include="Employers\Credits\Credits.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Credits.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Employers\Credits\Credits.dbml.layout">
+      <DependentUpon>Credits.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\build\killbydll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

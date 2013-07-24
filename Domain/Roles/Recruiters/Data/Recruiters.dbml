@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="RecruitersDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Organisation" Member="OrganisationEntities" AccessModifier="Internal">
+    <Type Name="OrganisationEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="addressId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="OrganisationEntity_OrganisationalUnitEntity" Member="OrganisationalUnitEntity" ThisKey="id" OtherKey="id" Type="OrganisationalUnitEntity" Cardinality="One" />
+      <Association Name="OrganisationEntity_EmployerEntity" Member="EmployerEntities" ThisKey="id" OtherKey="organisationId" Type="EmployerEntity" />
+      <Association Name="AddressEntity_OrganisationEntity" Member="AddressEntity" ThisKey="addressId" OtherKey="id" Type="AddressEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganisationalUnit" Member="OrganisationalUnitEntities" AccessModifier="Internal">
+    <Type Name="OrganisationalUnitEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="parentId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="verifiedById" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="accountManagerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="primaryContactId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="OrganisationEntity_OrganisationalUnitEntity" Member="OrganisationEntity" ThisKey="id" OtherKey="id" Type="OrganisationEntity" IsForeignKey="true" />
+      <Association Name="ContactDetailsEntity_OrganisationalUnitEntity" Member="ContactDetailsEntity" ThisKey="primaryContactId" OtherKey="id" Type="ContactDetailsEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactDetails" Member="ContactDetailsEntities" AccessModifier="Internal">
+    <Type Name="ContactDetailsEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="faxNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmails" Type="System.String" DbType="NVarChar(700)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ContactDetailsEntity_OrganisationalUnitEntity" Member="OrganisationalUnitEntities" ThisKey="id" OtherKey="primaryContactId" Type="OrganisationalUnitEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employer" Member="EmployerEntities" AccessModifier="Internal">
+    <Type Name="EmployerEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="organisationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="OrganisationEntity_EmployerEntity" Member="OrganisationEntity" ThisKey="organisationId" OtherKey="id" Type="OrganisationEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="AddressEntities" AccessModifier="Internal">
+    <Type Name="AddressEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="line1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="line2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="locationReferenceId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="AddressEntity_OrganisationEntity" Member="OrganisationEntities" ThisKey="id" OtherKey="addressId" Type="OrganisationEntity" />
+      <Association Name="LocationReferenceEntity_AddressEntity" Member="LocationReferenceEntity" ThisKey="locationReferenceId" OtherKey="id" Type="LocationReferenceEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationReference" Member="LocationReferenceEntities" AccessModifier="Internal">
+    <Type Name="LocationReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="unstructuredLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="namedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_AddressEntity" Member="AddressEntities" ThisKey="id" OtherKey="locationReferenceId" Type="AddressEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunityOrganisationalUnit" Member="CommunityOrganisationalUnitEntities" AccessModifier="Internal">
+    <Type Name="CommunityOrganisationalUnitEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CommunityOrganisationalUnitEntity_CommunityAssociationEntity" Member="CommunityAssociationEntities" ThisKey="id" OtherKey="organisationalUnitId" Type="CommunityAssociationEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunityEmployerEnquiry" Member="CommunityEmployerEnquiryEntities" AccessModifier="Internal">
+    <Type Name="CommunityEmployerEnquiryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="communityId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="companyName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="emailAddress" Type="System.String" DbType="NVarChar(320) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="phoneNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunityAssociation" Member="CommunityAssociationEntities" AccessModifier="Internal">
+    <Type Name="CommunityAssociationEntity" AccessModifier="Internal">
+      <Column Name="organisationalUnitId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="communityId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CommunityOrganisationalUnitEntity_CommunityAssociationEntity" Member="CommunityOrganisationalUnitEntity" ThisKey="organisationalUnitId" OtherKey="id" Type="CommunityOrganisationalUnitEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetOrganisationFullName" Method="GetOrganisationFullName" IsComposable="true">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="separator" Type="System.Char" DbType="NChar(1)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.IsOrganisationDescendent" Method="IsOrganisationDescendent" IsComposable="true">
+    <Parameter Name="parentId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="childId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.GetEffectiveOrgUnitContactDetailsId" Method="GetEffectiveOrgUnitContactDetailsId" IsComposable="true">
+    <Parameter Name="orgUnitId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Guid" />
+  </Function>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetOrganisationRootId" Method="GetOrganisationRootId" IsComposable="true">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Guid" />
+  </Function>
+  <Function Name="dbo.GetRecruiterOrganisationalHierarchy" Method="GetRecruiterOrganisationalHierarchy" IsComposable="true">
+    <Parameter Name="recruiterId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="GetRecruiterOrganisationalHierarchyResult">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetOrganisationAffiliateId" Method="GetOrganisationAffiliateId" IsComposable="true">
+    <Parameter Name="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Guid" />
+  </Function>
+</Database>

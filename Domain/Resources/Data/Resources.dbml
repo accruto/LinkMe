@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="ResourcesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ResourceViewing" Member="ResourceViewingEntities" AccessModifier="Internal">
+    <Type Name="ResourceViewingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userId" Storage="_memberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceAnsweredQuestion" Member="ResourceAnsweredQuestionEntities" AccessModifier="Internal">
+    <Type Name="ResourceAnsweredQuestionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceSubcategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="shortUrl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceSubcategoryEntity_ResourceAnsweredQuestionEntity" Member="ResourceSubcategoryEntity" ThisKey="resourceSubcategoryId" OtherKey="id" Type="ResourceSubcategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceCategory" Member="ResourceCategoryEntities" AccessModifier="Internal">
+    <Type Name="ResourceCategoryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayorder" Type="System.Int32" DbType="tinyint NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceCategoryEntity_ResourceQuestionEntity" Member="ResourceQuestionEntities" ThisKey="id" OtherKey="resourceCategoryId" Type="ResourceQuestionEntity" />
+      <Association Name="ResourceCategoryEntity_ResourceSubcategoryEntity" Member="ResourceSubcategoryEntities" ThisKey="id" OtherKey="resourceCategoryId" Type="ResourceSubcategoryEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceQuestion" Member="ResourceQuestionEntities" AccessModifier="Internal">
+    <Type Name="ResourceQuestionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceCategoryId" Type="System.Guid" DbType="UniqueIdentifier NULL" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="askerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceCategoryEntity_ResourceQuestionEntity" Member="ResourceCategoryEntity" ThisKey="resourceCategoryId" OtherKey="id" Type="ResourceCategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceSubcategory" Member="ResourceSubcategoryEntities" AccessModifier="Internal">
+    <Type Name="ResourceSubcategoryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceCategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceSubcategoryEntity_ResourceAnsweredQuestionEntity" Member="ResourceAnsweredQuestionEntities" ThisKey="id" OtherKey="resourceSubcategoryId" Type="ResourceAnsweredQuestionEntity" />
+      <Association Name="ResourceSubcategoryEntity_ResourceVideoEntity" Member="ResourceVideoEntities" ThisKey="id" OtherKey="resourceSubcategoryId" Type="ResourceVideoEntity" />
+      <Association Name="ResourceSubcategoryEntity_ResourceArticleEntity" Member="ResourceArticleEntities" ThisKey="id" OtherKey="resourceSubcategoryId" Type="ResourceArticleEntity" />
+      <Association Name="ResourceCategoryEntity_ResourceSubcategoryEntity" Member="ResourceCategoryEntity" ThisKey="resourceCategoryId" OtherKey="id" Type="ResourceCategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceVideo" Member="ResourceVideoEntities" AccessModifier="Internal">
+    <Type Name="ResourceVideoEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceSubcategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="transcript" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalVideoId" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="shortUrl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceSubcategoryEntity_ResourceVideoEntity" Member="ResourceSubcategoryEntity" ThisKey="resourceSubcategoryId" OtherKey="id" Type="ResourceSubcategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceArticle" Member="ResourceArticleEntities" AccessModifier="Internal">
+    <Type Name="ResourceArticleEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceSubcategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="rating" Type="System.Decimal" DbType="Decimal(2,1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="shortUrl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceArticleEntity_ResourceFeaturedArticleEntity" Member="ResourceFeaturedArticleEntities" ThisKey="id" OtherKey="resourceArticleId" Type="ResourceFeaturedArticleEntity" />
+      <Association Name="ResourceSubcategoryEntity_ResourceArticleEntity" Member="ResourceSubcategoryEntity" ThisKey="resourceSubcategoryId" OtherKey="id" Type="ResourceSubcategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceFeaturedArticle" Member="ResourceFeaturedArticleEntities" AccessModifier="Internal">
+    <Type Name="ResourceFeaturedArticleEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceArticleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="cssClass" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="featuredType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourceArticleEntity_ResourceFeaturedArticleEntity" Member="ResourceArticleEntity" ThisKey="resourceArticleId" OtherKey="id" Type="ResourceArticleEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FrequentlyAskedQuestion" Member="FrequentlyAskedQuestionEntities" AccessModifier="Internal">
+    <Type Name="FrequentlyAskedQuestionEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="faqSubcategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="helpfulYes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="helpfulNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="keywords" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FAQSubcategoryEntity_FrequentlyAskedQuestionEntity" Member="FAQSubcategoryEntity" ThisKey="faqSubcategoryId" OtherKey="id" Type="FAQSubcategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourcePoll" Member="ResourcePollEntities" AccessModifier="Internal">
+    <Type Name="ResourcePollEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="question" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourcePollEntity_ResourcePollAnswerEntity" Member="ResourcePollAnswerEntities" ThisKey="id" OtherKey="pollId" Type="ResourcePollAnswerEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourcePollAnswer" Member="ResourcePollAnswerEntities" AccessModifier="Internal">
+    <Type Name="ResourcePollAnswerEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="answerNumber" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pollId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourcePollAnswerEntity_ResourcePollAnswerVoteEntity" Member="ResourcePollAnswerVoteEntities" ThisKey="id" OtherKey="resourcePollAnswerId" Type="ResourcePollAnswerVoteEntity" />
+      <Association Name="ResourcePollEntity_ResourcePollAnswerEntity" Member="ResourcePollEntity" ThisKey="pollId" OtherKey="id" Type="ResourcePollEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourcePollAnswerVote" Member="ResourcePollAnswerVoteEntities" AccessModifier="Internal">
+    <Type Name="ResourcePollAnswerVoteEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourcePollAnswerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResourcePollAnswerEntity_ResourcePollAnswerVoteEntity" Member="ResourcePollAnswerEntity" ThisKey="resourcePollAnswerId" OtherKey="id" Type="ResourcePollAnswerEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResourceArticleUserRating" Member="ResourceArticleUserRatingEntities" AccessModifier="Internal">
+    <Type Name="ResourceArticleUserRatingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceArticleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="rating" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUpdatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resourceType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FAQSubcategory" Member="FAQSubcategoryEntities" AccessModifier="Internal">
+    <Type Name="FAQSubcategoryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="faqCategoryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="FAQSubcategoryEntity_FrequentlyAskedQuestionEntity" Member="FrequentlyAskedQuestionEntities" ThisKey="id" OtherKey="faqSubcategoryId" Type="FrequentlyAskedQuestionEntity" />
+      <Association Name="FAQCategory_FAQSubcategoryEntity" Member="FAQCategoryEntity" ThisKey="faqCategoryId" OtherKey="id" Type="FAQCategoryEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FAQCategory" Member="FAQCategoryEntities" AccessModifier="Internal">
+    <Type Name="FAQCategoryEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="displayOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="userType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FAQCategory_FAQSubcategoryEntity" Member="FAQSubcategoryEntities" ThisKey="id" OtherKey="faqCategoryId" Type="FAQSubcategoryEntity" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

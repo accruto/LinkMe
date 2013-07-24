@@ -1,0 +1,64 @@
+; Candidate Folders schema changes
+drop_Publisher.sql
+alter_CandidateList_drop_description.sql
+alter_CandidateList_add_columns.sql
+alter_CandidateList_make_name_nullable.sql
+alter_CandidateListEntry_drop_viewed.sql
+alter_CandidateListEntry_add_columns.sql
+alter_JobAd_make_candidateListId_nullable.sql
+
+; Candidate Folders data migration
+data_CandidateList_null_names_for_default_lists.sql
+data_CandidateListEntry_merge_duplicate_lists.sql
+data_CandidateList_delete_empty_lists.sql
+
+; Add a constraint to prevent such data stuff-ups in the future
+alter_CandidateList_add_name_constraint.sql
+
+create_trigger_OnResumeInsertUpdate.sql
+alter_resumesearch_add_searcherip.sql
+
+data_PostalSuburb_add_Woy_Woy_Bay.sql
+data_Locality_update_Coburg.sql
+data_ReferralSource_add_TradingPost.sql
+
+; Add content identifier to networker events
+alter_NetworkerEvent_add_contentId.sql
+
+; Whiteboard schema changes
+create_Whiteboard.SQL
+alter_WhiteboardMessage_add_whiteboardId.sql
+alter_Networker_add_whiteboardId.sql
+alter_WhiteboardMessage_OnInsert.sql
+alter_Group_add_whiteboardId.sql
+
+; SearchMe indexing changes
+create_udf_HashBytesNvarcharMax.sql
+alter_trigger_OnResumeInsertUpdate.sql
+drop_trigger_OnResumeUpdateClearCache.sql
+create_vw_SearchMe_Resume.sql
+create_vw_SearchMe_DesiredJobTitle.sql
+
+; Email changes
+create_EmailCategory.sql
+create_EmailDefinition.sql
+create_EmailSettings.sql
+create_EmailDefinitionSettings.sql
+create_EmailCategorySettings.sql
+data_EmailCategory_add.sql
+data_EmailDefinition_add.sql
+data_EmailDefinitionSettings_migrate.sql
+alter_Candidate_drop_resumeReminderLastSentTime.sql
+create_sp_EmailSetLastSentTime.sql
+
+; New communities
+data_Community_aimpe.sql
+data_Content_aimpe.sql
+data_Community_aat.sql
+data_Content_aat.sql
+data_Community_maanz.sql
+data_Content_maanz.sql
+data_Community_autopeople.sql
+data_Content_autopeople.sql
+data_Content_scouts.sql
+

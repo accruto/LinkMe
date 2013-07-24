@@ -1,0 +1,87 @@
+/* Reset background, margins and font properties for better control */
+#JobAd div, #JobAd p, #JobAd table, #JobAd th, #JobAd td, #JobAd ul, #JobAd li, #JobAd label, #JobAd span {
+	color: #000;
+	background: transparent;
+	font-family: Verdana, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* Now build up custom properties */
+#JobAd #JobDescription #Ad {	
+	padding-bottom: 1em;
+}
+
+#JobAd div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 0 1em 1em 1em;	
+}
+
+#JobAd div#JobDescription,
+#JobAd div#brandingLogo,
+#JobAd div#JobAdHeading {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad {
+	background: #fff;
+	border: 1px solid #f00;
+	width: 460px;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	background: #fff url('flight_center_images/flight_center_logo.gif') no-repeat center center;
+	height: 100px;
+	width: 100%;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	color: #000;
+	font-size: 200%;
+	margin: 1em 0;
+	text-align: center;
+}
+
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+	margin-top: 2em;
+}
+
+#JobAd #JobDescription #Ad table {
+		width: 90% !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+
+/* Used by IPA - required? */
+#Form1 #JobAd #Finish
+{
+	
+}
+
+#Form1 #JobAd #InfoDownRight
+{
+
+}
+
+#Form1 #JobAd #InfoTop
+{
+	
+}
+
+#Form1 #JobAd HR
+{
+	
+}

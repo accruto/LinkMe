@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="JobAdsDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Domain.Roles.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JobAdLocation" Member="JobAdLocationEntities" AccessModifier="Internal">
+    <Type Name="JobAdLocationEntity" AccessModifier="Internal">
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="locationReferenceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_JobAdLocationEntity" Member="LocationReferenceEntity" ThisKey="locationReferenceId" OtherKey="id" Type="LocationReferenceEntity" IsForeignKey="true" />
+      <Association Name="JobAdEntity_JobAdLocationEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdIndustry" Member="JobAdIndustryEntities" AccessModifier="Internal">
+    <Type Name="JobAdIndustryEntity" AccessModifier="Internal">
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="industryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdIndustryEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileReference" Member="FileReferenceEntities" AccessModifier="Internal">
+    <Type Name="FileReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="mimeType" Type="System.String" DbType="VarChar(128)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(260) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="dataId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="FileReferenceEntity_JobAdEntity" Member="JobAdEntities" ThisKey="id" OtherKey="brandingLogoImageId" Type="JobAdEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactDetails" Member="ContactDetailsEntities" AccessModifier="Internal">
+    <Type Name="ContactDetailsEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(320)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="faxNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="secondaryEmails" Type="System.String" DbType="NVarChar(700)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ContactDetailsEntity_JobAdEntity" Member="JobAdEntities" ThisKey="id" OtherKey="contactDetailsId" Type="JobAdEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationReference" Member="LocationReferenceEntities" AccessModifier="Internal">
+    <Type Name="LocationReferenceEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="unstructuredLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="namedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="countrySubdivisionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="localityId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LocationReferenceEntity_JobAdLocationEntity" Member="JobAdLocationEntities" ThisKey="id" OtherKey="locationReferenceId" Type="JobAdLocationEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobPoster" Member="JobPosterEntities" AccessModifier="Internal">
+    <Type Name="JobPosterEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="flags" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobPosterEntity_JobAdEntity" Member="JobAdEntities" ThisKey="id" OtherKey="jobPosterId" Type="JobAdEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdExport" Member="JobAdExportEntities" AccessModifier="Internal">
+    <Type Name="JobAdExportEntity" AccessModifier="Internal">
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobSearchVacancyId" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="jobSearchControlNumber" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdExportEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdStatus" Member="JobAdStatusEntities" AccessModifier="Internal">
+    <Type Name="JobAdStatusEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="previousStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="newStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdStatusEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdViewing" Member="JobAdViewingEntities" AccessModifier="Internal">
+    <Type Name="JobAdViewingEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="viewerId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdList" Member="JobAdListEntities" AccessModifier="Internal">
+    <Type Name="JobAdListEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="WhenChanged" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="listType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdListEntity_JobAdListEntryEntity" Member="JobAdListEntryEntities" ThisKey="id" OtherKey="jobAdListId" Type="JobAdListEntryEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdListEntry" Member="JobAdListEntryEntities" AccessModifier="Internal">
+    <Type Name="JobAdListEntryEntity" AccessModifier="Internal">
+      <Column Name="jobAdListId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="JobAdListEntity_JobAdListEntryEntity" Member="JobAdListEntity" ThisKey="jobAdListId" OtherKey="id" Type="JobAdListEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdNote" Member="JobAdNoteEntities" AccessModifier="Internal">
+    <Type Name="JobAdNoteEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUpdatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobAdId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdNoteEntity" Member="JobAdEntity" ThisKey="jobAdId" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAd" Member="JobAdEntities" AccessModifier="Internal">
+    <Type Name="JobAdEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="bulletPoints" Type="System.String" DbType="NVarChar(767)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="content" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="employerCompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="expiryTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="externalReferenceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="jobTypes" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastUpdatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="maxSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="minSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="packageDetails" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="postcode" Type="System.String" DbType="VarChar(8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="residencyRequired" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="summary" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="brandingLogoImageId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="candidateListId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="contactDetailsId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="positionTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="externalApplyUrl" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="integratorUserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="cssFilename" Type="System.String" DbType="NVarChar(260)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="salaryRateType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobPosterId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobg8ApplyForm" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="contactCompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="integratorReferenceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hideContactDetails" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="maxParsedSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="minParsedSalary" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hideCompany" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isFeatured" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="seniorityIndex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="features" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdLocationEntity" Member="JobAdLocationEntities" ThisKey="id" OtherKey="jobAdId" Type="JobAdLocationEntity" />
+      <Association Name="JobAdEntity_JobAdIndustryEntity" Member="JobAdIndustryEntities" ThisKey="id" OtherKey="jobAdId" Type="JobAdIndustryEntity" />
+      <Association Name="JobAdEntity_JobAdExportEntity" Member="JobAdExportEntity" ThisKey="id" OtherKey="jobAdId" Type="JobAdExportEntity" Cardinality="One" />
+      <Association Name="JobAdEntity_JobAdStatusEntity" Member="JobAdStatusEntities" ThisKey="id" OtherKey="jobAdId" Type="JobAdStatusEntity" />
+      <Association Name="JobAdEntity_JobAdNoteEntity" Member="JobAdNoteEntities" ThisKey="id" OtherKey="jobAdId" Type="JobAdNoteEntity" />
+      <Association Name="JobAdEntity_JobAdRefreshEntity" Member="JobAdRefreshEntity" ThisKey="id" OtherKey="id" Type="JobAdRefreshEntity" Cardinality="One" />
+      <Association Name="FileReferenceEntity_JobAdEntity" Member="FileReferenceEntity" ThisKey="brandingLogoImageId" OtherKey="id" Type="FileReferenceEntity" IsForeignKey="true" />
+      <Association Name="ContactDetailsEntity_JobAdEntity" Member="ContactDetailsEntity" ThisKey="contactDetailsId" OtherKey="id" Type="ContactDetailsEntity" IsForeignKey="true" />
+      <Association Name="JobPosterEntity_JobAdEntity" Member="JobPosterEntity" ThisKey="jobPosterId" OtherKey="id" Type="JobPosterEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdRefresh" Member="JobAdRefreshEntities" AccessModifier="Internal">
+    <Type Name="JobAdRefreshEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lastRefreshTime" Storage="_refreshTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="JobAdEntity_JobAdRefreshEntity" Member="JobAdEntity" ThisKey="id" OtherKey="id" Type="JobAdEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SplitGuids" Method="SplitGuids" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitGuidsResult">
+      <Column Name="value" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SplitInts" Method="SplitInts" IsComposable="true">
+    <Parameter Name="delimiter" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="SplitIntsResult">
+      <Column Name="value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

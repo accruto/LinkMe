@@ -1,0 +1,10 @@
+alter_Product.sql
+create_Credit.sql
+create_CreditAllocation.sql
+create_CreditAdjustmentReason.sql
+create_CreditAdjustment.sql
+
+drop_Triggers.sql
+alter_OnResumeInsertUpdate.sql
+alter_NetworkerEvent.sql
+alter_NetworkInvitation.sql

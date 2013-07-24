@@ -1,0 +1,77 @@
+﻿.record
+{
+    position: relative; /* For absolute positioning */
+}
+
+.record fieldset
+{
+    position: relative;
+}
+
+/* Title field */
+
+.record fieldset .title_field
+{
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+.record .title_field
+{
+    position: relative;
+    width: 500px;
+    padding-top: 0;
+}
+
+.record .title_field label
+{
+    display: none;
+}
+
+.record .title_field .textbox
+{
+    font-family: Tahoma;
+    font-size: 130%;
+}
+
+/* Sub-title field */
+
+.record fieldset .subtitle_field
+{
+	position: relative;
+    padding-left: 20px;
+	padding-bottom: 0px;
+	padding-top: 1px !important;
+	width: 500px;
+}
+
+.record .subtitle_field label
+{
+    display: none;
+}
+
+.record .subtitle_field .textbox
+{
+	font-size: 85%;
+}
+
+/* Contents field */
+
+.record .contents_field
+{
+    position: relative;
+    padding-left: 20px;
+    padding-top: 12px;
+	width: 500px;
+}
+
+.record .contents_field label
+{
+    display: none;
+}
+
+.record .contents_field .textbox
+{
+    font-size: 11px !important;
+}
+

@@ -1,0 +1,103 @@
+/* div#JobAd is the outer wrapper -- contains Job ad (i.e. #JobDescription)
+   plus the subsequent controls and links */
+#JobAd div {
+	margin-bottom: 1em;
+}   
+
+/* Reset browser-variable properties for better control inside the job ad */
+#JobDescription div, #JobDescription h1, #JobDescription p, #JobDescription table, #JobDescription th, #JobDescription td, #JobDescription ul, #JobDescription li, #JobDescription label, #JobDescription span {
+	color: #000;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* div#JobDescription is where the job ad begins -- holds #Ad and #LogoFooter */
+#JobAd div#JobDescription {
+	background: #d6d4df;
+	border: 2px solid #454d7d;
+	margin-bottom: 1em;
+	width: 460px;
+}
+
+/* Covers (amongst others) containers of actual text */
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad table,
+#JobAd #JobDescription #Ad ul {
+	margin: 0 1.0em 1em 1em;	
+}
+
+#JobAd #JobDescription div,
+#JobAd #JobDescription #Ad p, 
+#JobAd #JobDescription #Ad td,
+#JobAd #JobDescription #Ad li {
+	font-size: 110%;
+}
+
+/* Counter-act the above for outer/branding containers */
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad #brandingLogo,
+#JobAd #JobDescription #Ad #JobAdHeading,
+#JobAd #JobDescription #LogoFooter {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad #brandingLogo {
+	display: none;
+}
+
+/* #JobAdHeading holds the h1 heading PLUS the following p AND table of basic job facts */
+div#JobAd div#JobDescription div#Ad div#JobAdHeading {
+	background-color: #fff;
+	padding-bottom: 1em;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading h1 {
+	background: #454d7d;
+	color: #fff;
+	font-size: 200%;
+	margin-bottom: 1em;	
+	padding: 0.5em;
+}
+
+div#JobAd div#JobDescription div#Ad div#JobAdHeading p, 
+div#JobAd div#JobDescription div#Ad div#JobAdHeading td, 
+div#JobAd div#JobDescription div#Ad div#JobAdHeading td label,
+div#JobAd div#JobDescription div#Ad div#JobAdHeading li {
+	color: #454d7d;
+}
+
+/* strong inside p acts as sub-heading */
+#JobAd #JobDescription #Ad p strong {
+	display: block;
+}
+
+#JobAd #JobDescription #Ad table {
+	width: 90% !important;
+}
+
+#JobAd #JobDescription #Ad label {
+	vertical-align: top;
+}
+
+#JobAd #JobDescription #Ad ul li {
+	list-style-type: disc;
+	margin-left: 2em;	
+}
+
+#JobAd #JobDescription #Ad #AdContactDetails {
+	background: url(davidson_images/davidson_logo.gif) no-repeat bottom right;
+	margin-bottom: 0;
+	margin-right: 0;
+	padding-bottom: 70px;
+}
+
+/* Job Ad Footer logo */
+#JobAd #JobDescription #LogoFooter {
+	background: #454d7d url(davidson_images/davidson_footer.gif) no-repeat center center;
+	height: 26px;
+}

@@ -1,0 +1,13 @@
+delete_DonationRecipient.sql
+delete_Industry.sql
+delete_Locality_etc.sql
+delete_ProductDefinition.sql
+delete_ProductGrantReason.sql
+delete_Publisher.sql
+
+refdata_DonationRecipient.sql
+refdata_Industry_etc.sql
+refdata_Locality_etc.sql
+refdata_ProductDefinition_etc.sql
+refdata_ProductGrantReason.sql
+refdata_Publisher.sql

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LinkMe" Class="MembersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Query.Search.Test.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ResumeSearchCriteria" Member="ResumeSearchCriteriaEntities" AccessModifier="Internal">
+    <Type Name="ResumeSearchCriteriaEntity" AccessModifier="Internal">
+      <Column Name="setId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(19) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Association Name="ResumeSearchCriteriaSetEntity_ResumeSearchCriteriaEntity" Member="ResumeSearchCriteriaSetEntity" ThisKey="setId" OtherKey="id" Type="ResumeSearchCriteriaSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResumeSearchCriteriaSet" Member="ResumeSearchCriteriaSetEntities" AccessModifier="Internal">
+    <Type Name="ResumeSearchCriteriaSetEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="ResumeSearchCriteriaSetEntity_ResumeSearchCriteriaEntity" Member="ResumeSearchCriteriaEntities" ThisKey="id" OtherKey="setId" Type="ResumeSearchCriteriaEntity" />
+      <Association Name="ResumeSearchCriteriaSetEntity_SavedResumeSearchEntity" Member="SavedResumeSearchEntities" ThisKey="id" OtherKey="criteriaSetId" Type="SavedResumeSearchEntity" />
+      <Association Name="ResumeSearchCriteriaSetEntity_ResumeSearchEntity" Member="ResumeSearchEntities" ThisKey="id" OtherKey="criteriaSetId" Type="ResumeSearchEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResumeSearchResult" Member="ResumeSearchResultEntities" AccessModifier="Internal">
+    <Type Name="ResumeSearchResultEntity" AccessModifier="Internal">
+      <Column Name="setId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rank" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="resumeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="ResumeSearchResultSetEntity_ResumeSearchResultEntity" Member="ResumeSearchResultSetEntity" ThisKey="setId" OtherKey="id" Type="ResumeSearchResultSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResumeSearchResultSet" Member="ResumeSearchResultSetEntities" AccessModifier="Internal">
+    <Type Name="ResumeSearchResultSetEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ResumeSearchResultSetEntity_ResumeSearchResultEntity" Member="ResumeSearchResultEntities" ThisKey="id" OtherKey="setId" Type="ResumeSearchResultEntity" />
+      <Association Name="ResumeSearchResultSetEntity_ResumeSearchEntity" Member="ResumeSearchEntities" ThisKey="id" OtherKey="resultSetId" Type="ResumeSearchEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedResumeSearch" Member="SavedResumeSearchEntities" AccessModifier="Internal">
+    <Type Name="SavedResumeSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ownerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ResumeSearchCriteriaSetEntity_SavedResumeSearchEntity" Member="ResumeSearchCriteriaSetEntity" ThisKey="criteriaSetId" OtherKey="id" Type="ResumeSearchCriteriaSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResumeSearch" Member="ResumeSearchEntities" AccessModifier="Internal">
+    <Type Name="ResumeSearchEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="startTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="duration" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="context" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="criteriaSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="resultSetId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="searcherId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="searcherIp" Type="System.String" DbType="VarChar(39)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="savedSearchId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ResumeSearchCriteriaSetEntity_ResumeSearchEntity" Member="ResumeSearchCriteriaSetEntity" ThisKey="criteriaSetId" OtherKey="id" Type="ResumeSearchCriteriaSetEntity" IsForeignKey="true" />
+      <Association Name="ResumeSearchResultSetEntity_ResumeSearchEntity" Member="ResumeSearchResultSetEntity" ThisKey="resultSetId" OtherKey="id" Type="ResumeSearchResultSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

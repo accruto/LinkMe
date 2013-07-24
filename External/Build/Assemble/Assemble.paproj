@@ -1,0 +1,372 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{69B2EF40-1E9A-4d30-9459-B784A647CD30}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.External.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{15F3D6A2-6270-46a1-A33E-397019CDB98B}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\InteropAssemblies\Cdosys\LinkMe.Interop.Cdosys.dll">
+      <Guid>{292AFE8B-95AB-4f35-84F1-C458997141B7}</Guid>
+      <Link>Bin\LinkMe.Interop.Cdosys.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{2AEFAAC5-0B02-4162-86CF-D909093BB818}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\InteropAssemblies\Msado27\LinkMe.Interop.Msado27.dll">
+      <Guid>{5256385c-bd0b-4aa6-a28e-b34d7537d4b4}</Guid>
+      <Link>Bin\LinkMe.Interop.Msado27.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{F5661191-F9EB-4a49-9E7F-928A304D54B1}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\InteropAssemblies\Msscript\LinkMe.Interop.Msscript.dll">
+      <Guid>{2dbf1bd7-a04d-4ddf-8c90-9073c934a262}</Guid>
+      <Link>Bin\LinkMe.Interop.Msscript.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A01BDCCA-E2E6-4e5b-975F-99CBCBEE7C16}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\InteropAssemblies\Oledb32\LinkMe.Interop.Oledb32.dll">
+      <Guid>{7ef6c800-fe11-456d-8983-c7af0bd87877}</Guid>
+      <Link>Bin\LinkMe.Interop.Oledb32.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{2B1C7BAD-2999-4321-904A-A41F2AC132F2}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\Iesi.Collections.dll">
+      <Guid>{E49F8F51-7681-4106-A85B-F20175160463}</Guid>
+      <Link>Bin\Iesi.Collections.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B678FFE0-A384-4566-8C67-ACD7BC193D15}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\Castle.DynamicProxy.dll">
+      <Guid>{B5F07151-37B2-4e53-B685-A6C8EEF00A36}</Guid>
+      <Link>Bin\Castle.DynamicProxy.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{7FF444FF-E718-48e0-9687-81B04E1766DA}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\AjaxPro.2.dll">
+      <Guid>{CB9EFCDB-5B78-42a0-8C3E-A80BBD464016}</Guid>
+      <Link>Bin\AjaxPro.2.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{F627F1A9-11A5-4479-B282-676D47C2125D}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\FlexCel.dll">
+      <Guid>{2E51F289-3BAE-49c0-B01C-01FC68C4C1E1}</Guid>
+      <Link>Bin\FlexCel.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A6B61EEE-3277-44ae-B053-0B5B54DE0B8F}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\HtmlAgilityPack.dll">
+      <Guid>{6CF23185-8D27-4544-A357-2A3A64A97363}</Guid>
+      <Link>Bin\HtmlAgilityPack.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{7BD2EDDF-4812-4285-82AE-64C8F52E02C9}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\ICSharpCode.SharpZipLib.dll">
+      <Guid>{A871CB17-3447-4a18-A10E-46B3998025FE}</Guid>
+      <Link>Bin\ICSharpCode.SharpZipLib.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{716F5C27-919C-4ff8-BC86-478F3B3B679C}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\log4net.dll">
+      <Guid>{926035C8-DB5D-42a9-BD51-9638DE3E7B46}</Guid>
+      <Link>Bin\log4net.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{48799270-B268-41b1-B7E9-7A67564F23E6}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.Unity.dll">
+      <Guid>{0815F97E-6119-4a63-A63A-4D4D094C5E71}</Guid>
+      <Link>Bin\Microsoft.Practices.Unity.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{33B1F5DB-C775-4535-834F-01157917C814}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll">
+      <Guid>{B8623D94-AFC1-4239-883F-BCB9DFC1B85B}</Guid>
+      <Link>Bin\Microsoft.Practices.ObjectBuilder2.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A5AA664E-FDA7-4610-88D2-8DBB7F03517F}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.Unity.Configuration.dll">
+      <Guid>{9186103B-E39F-4f3b-AC16-66BDF7C37F79}</Guid>
+      <Link>Bin\Microsoft.Practices.Unity.Configuration.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{0D4F8ACB-16FC-45bc-A8A9-7BAE4406FABB}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.Unity.Interception.Configuration.dll">
+      <Guid>{22C4E301-8C79-4757-A985-448CF550C51A}</Guid>
+      <Link>Bin\Microsoft.Practices.Unity.Interception.Configuration.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B76D3878-3646-49da-BF8C-9E72DC1CE0B3}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.Unity.Interception.dll">
+      <Guid>{3551D39E-D48F-4d6a-8920-9BD1A72240F1}</Guid>
+      <Link>Bin\Microsoft.Practices.Unity.Interception.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B80254BE-3BF1-4a68-BB80-8EA32436707E}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\Microsoft.Practices.Unity.StaticFactory.dll">
+      <Guid>{C4B29A80-690C-4519-8FD0-70D5C8FE3540}</Guid>
+      <Link>Bin\Microsoft.Practices.Unity.StaticFactory.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{4349D6EC-316B-4fce-95BE-C952B943A4CE}</GacGuid>
+    </Assemble>
+	<Assemble Include="..\..\Lib\commons-codec-1.3.dll">
+      <Guid>{91D76D7B-E176-4430-9323-C075A7D8E051}</Guid>
+      <Link>Bin\commons-codec-1.3.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{C4AC9F21-5944-4ed7-9E82-BDFB114E7EE5}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Lib\MSLens.dll">
+      <Guid>{C759B15E-7C3F-4322-8D86-D25F7D538D40}</Guid>
+      <Link>Bin\MSLens.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B773DC65-D28F-4363-9FF8-1B047DE24450}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Charsets.dll">
+      <Guid>{E181B055-21BC-4357-AA9E-E21662AD1485}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Charsets.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{134279E1-8A90-4704-9297-8AC35311E4E4}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Corba.dll">
+      <Guid>{437DB0B0-090E-41dd-A898-671EF58292DF}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Corba.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6F3230D6-D4C0-4d44-8604-7398198BB056}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Core.dll">
+      <Guid>{49AB83AA-E72C-4a82-AAC9-72823683D7F3}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Core.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6568FD3D-A3E8-43fa-B713-8F1D29D4D7A7}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Jdbc.dll">
+      <Guid>{FCB1E97F-4A3F-4c8c-96CF-C8D9565B7B32}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Jdbc.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{9059A1CD-A3EC-49a4-ACEF-B2F905FFEEE0}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Management.dll">
+      <Guid>{72E65004-FABF-4a5c-A7CC-79D15BFF8E6C}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Management.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{305720B9-F8F2-44db-9FFA-E253E52F288A}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Misc.dll">
+      <Guid>{4358EA09-98F6-4c26-8CA3-4244A3FC2EAE}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Misc.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{89FE8976-E056-43a2-861E-AC0F375828F9}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Security.dll">
+      <Guid>{207C1942-E9C4-42d1-AF0D-F2C8D8C8A612}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Security.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{8DF2318A-B359-4d88-9236-2E80A44D4F74}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.SwingAWT.dll">
+      <Guid>{44EA3993-0672-4e95-8ED6-8AF81E11BB95}</Guid>
+      <Link>Bin\IKVM.OpenJDK.SwingAWT.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{4AE86780-DC5D-4b77-8D5A-E35DE25700E7}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Text.dll">
+      <Guid>{1864EEE4-61B3-4ecd-B6C3-1241386A7010}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Text.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{54C5EDD3-016C-4310-8BF5-2BD84C61D815}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.Util.dll">
+      <Guid>{28B5A7FF-EB41-41f8-AD52-F41A0D374901}</Guid>
+      <Link>Bin\IKVM.OpenJDK.Util.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{9AF78D7A-6D76-42b7-8EE4-C4729BFAB9ED}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.OpenJDK.XML.dll">
+      <Guid>{D31CC54F-1AA9-487c-A067-537CD3B040BC}</Guid>
+      <Link>Bin\IKVM.OpenJDK.XML.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{809165D0-B425-4e01-BD72-972A4661BE0B}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.Runtime.dll">
+      <Guid>{7EDA03CE-BBB4-467a-875D-6102CF516BA1}</Guid>
+      <Link>Bin\IKVM.Runtime.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{F7ABC845-6B2A-46c2-98F7-69B7CFE07C16}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\IKVM.Runtime.JNI.dll">
+      <Guid>{34F8B6C7-8F30-47a2-BABB-A192DABE1E94}</Guid>
+      <Link>Bin\IKVM.Runtime.JNI.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{03FB1EE9-29E1-4248-BB86-E6D033C349B3}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-core-2.9.4.dll">
+      <Guid>{45D798D8-04B8-4a5a-A5A5-B560C66C54FE}</Guid>
+      <Link>Bin\lucene-core-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{8CF1A021-3020-4775-AFF2-453BD31E52F0}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-highlighter-2.9.4.dll">
+      <Guid>{538C4B32-5687-4002-9165-400DAA4BC88B}</Guid>
+      <Link>Bin\lucene-highlighter-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{F220422D-B68D-4ee4-B4A4-CC2CDA5FEBD2}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-memory-2.9.4.dll">
+      <Guid>{8373AAA5-72F5-47e5-93B3-A161D1416F81}</Guid>
+      <Link>Bin\lucene-memory-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{D06FFB5B-3AEB-4249-BCB0-1EB2EAB7E863}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-misc-2.9.4.dll">
+      <Guid>{D6BCC86D-63F5-4006-AB3B-1E0BCE43A90C}</Guid>
+      <Link>Bin\lucene-misc-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{552835C8-D35D-42d7-BB13-6FCBD79FB22E}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-queries-2.9.4.dll">
+      <Guid>{8DC888A3-B3C2-4241-AC1E-E9DF7E984C8D}</Guid>
+      <Link>Bin\lucene-queries-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{E9AA747E-46B0-45e3-AD79-00ADB32807C6}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-spellchecker-2.9.4.dll">
+      <Guid>{D8A353CC-5087-4f2a-AE9C-4AD17383C447}</Guid>
+      <Link>Bin\lucene-spellchecker-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{EDE8F4BB-21CB-4078-9D22-C69E3214294D}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucene-snowball-2.9.4.dll">
+      <Guid>{E55566F9-9315-4B03-BA0F-DB2CFD2BFCE4}</Guid>
+      <Link>Bin\lucene-snowball-2.9.4.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{930EB2CC-C59C-4071-8EB0-F437D1EF1229}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lingpipe-4.1.0.dll">
+      <Guid>{4ED49B27-884C-4851-A0F8-6EAD520AF94B}</Guid>
+      <Link>Bin\lingpipe-4.1.0.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{CF9ECAB7-9139-4BBD-8643-F73200C5FCC0}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\lucid-kstem.dll">
+      <Guid>{96624EDB-A57A-4fad-A984-C40AFA9CE4D6}</Guid>
+      <Link>Bin\lucid-kstem.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{797A4348-0392-4920-86AB-3FBDBB6B54B6}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\bobo-browse-2.5.0.dll">
+      <Guid>{782E54B1-2FD9-4a24-BE98-D76F8399D199}</Guid>
+      <Link>Bin\bobo-browse-2.5.0.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{15F59585-3FE6-44ca-94D0-4F8C25CAFF29}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\fastutil-6.2.2.dll">
+      <Guid>{C317371B-6902-4216-A79F-554B1DDFFF16}</Guid>
+      <Link>Bin\fastutil-6.2.2.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{408F372E-94E0-4cc7-BA55-4611100B42F7}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\kamikaze-2.0.0.dll">
+      <Guid>{FB662F40-4BF3-4b93-8B0A-104635C96F19}</Guid>
+      <Link>Bin\kamikaze-2.0.0.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{8F78F09C-F14C-49d2-A150-12D6DC6CB678}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\log4j-1.2.16.dll">
+      <Guid>{477FE23D-48F5-4d25-B290-BE1F11F87FF7}</Guid>
+      <Link>Bin\log4j-1.2.16.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{14018C47-7F7E-4f82-9927-BE190DF03D14}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\protobuf-java-2.2.0.dll">
+      <Guid>{AFD0C968-FCD1-4193-8035-340FFC3983D9}</Guid>
+      <Link>Bin\protobuf-java-2.2.0.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{A48AC91D-B996-4292-9496-4EC819D372BC}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\System.CoreEx.dll">
+      <Guid>{77B1A703-EB87-4378-B025-A56448BA1AE5}</Guid>
+      <Link>Bin\System.CoreEx.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B1CD966E-A8B4-41fb-82D6-22FCAD83E5F5}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\System.Threading.dll">
+      <Guid>{38524BBA-8724-41c8-8047-123CCE328227}</Guid>
+      <Link>Bin\System.Threading.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{FB329E02-4BB6-4e44-8CE2-C1D7BDDE0480}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\Yahoo.Yui.Compressor.dll">
+      <Guid>{C84DBE74-402F-4658-89AE-BA845D8BB790}</Guid>
+      <Link>Bin\Yahoo.Yui.Compressor.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{CD20C8AC-3AC9-49AD-B9AB-734F3AF2EB9D}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\ajaxmin.dll">
+      <Guid>{0378ACEE-3700-4962-9240-F3B5BCC62811}</Guid>
+      <Link>Bin\ajaxmin.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6E45C463-2E9F-4527-A24C-E0A5287A8A4A}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\Ionic.Zip.dll">
+      <Guid>{90CACAE1-0A11-491D-BAAD-665B7C1C2045}</Guid>
+      <Link>Bin\Ionic.Zip.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{25D44F29-E04E-4FCE-B393-8B6D946F734D}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\JdSoft.Apns.Feedback.dll">
+      <Guid>{BC9E55B5-4F81-445A-962D-B1C88D2A774C}</Guid>
+      <Link>Bin\JdSoft.Apns.Feedback.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{08C46E0B-25AA-4F9D-BC46-EE900AD3F9A9}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\JdSoft.Apns.Notifications.dll">
+      <Guid>{EE8A5C11-CAA8-4D07-8AB4-0279431D066A}</Guid>
+      <Link>Bin\JdSoft.Apns.Notifications.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{EDDC8AC0-3501-4AF4-A76D-364726C9DCB1}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Lib\Newtonsoft.Json.Compact.dll">
+      <Guid>{590B5835-FE35-49A1-9EDA-D3995DE10B16}</Guid>
+      <Link>Bin\Newtonsoft.Json.Compact.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B70093E5-DA98-4A14-AA18-134DBA452642}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Packages\WebGrease.1.0.0\Lib\Antlr3.Runtime.dll">
+      <Guid>{74AA6776-9BBC-4EA6-96A6-4876E9BD9B02}</Guid>
+      <Link>Bin\Antlr3.Runtime.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{45EBFB2B-838F-4F01-8E86-88884E95E758}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll">
+      <Guid>{C2C8757D-A50D-4B7B-B4DA-BAE828DD047B}</Guid>
+      <Link>Bin\Microsoft.Web.Infrastructure.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{AD254555-A2A7-4137-BD13-D3DAC7A27706}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta3\lib\net40\System.Web.Optimization.dll">
+      <Guid>{83A702F2-5DE4-4561-A737-A1F8185F882A}</Guid>
+      <Link>Bin\System.Web.Optimization.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B8A9F082-A2FA-4080-8D5A-FAF5172066B2}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Packages\WebGrease.1.0.0\Lib\WebGrease.dll">
+      <Guid>{B8CE0FCC-0C18-4AD4-BE0D-A0EE1A4DB9C6}</Guid>
+      <Link>Bin\WebGrease.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{C2B25863-5B8B-4737-AFA0-BFAC79ED2551}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

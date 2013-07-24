@@ -1,0 +1,179 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Package">
+
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <InstallDirectory>$(SourceRootDirectory)Install\</InstallDirectory>
+    <FrameworkPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\</FrameworkPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OptiPngPath>$(SourceRootDirectory)..\External\Tools\OptiPNG\optipng.exe</OptiPngPath>
+    <PngOutPath>$(SourceRootDirectory)..\External\Tools\PNGOut\pngout.exe</PngOutPath>
+    <AspMinifierPath>$(SourceRootDirectory)..\External\Tools\AspMinifier\AspMinifier.exe</AspMinifierPath>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\External\MSBuild\AjaxMin.tasks" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+
+  <!-- Build item groups. -->
+
+  <ItemGroup>
+    <CodeAssembleProjects Include="$(SourceRootDirectory)Build\Assemble\Assemble.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DataAssembleProjects Include="$(SourceRootDirectory)Build\Assemble\Data\Data.paproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageProjects Include="$(SourceRootDirectory)Build\Package\Package.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PublishFiles Include="$(SourceRootDirectory)Build\Package\Setup\bin\LinkMe.*.msi" />
+  </ItemGroup>
+
+  <!-- Top-level targets-->
+
+  <Target Name="Check">
+    <Error Condition="$(SourceRootDirectory) == ''" Text="The SourceRootDirectory property must be set" />
+    <Message Text="SourceRootDirectory: $(SourceRootDirectory)" />
+  </Target>
+
+  <Target Name="Package" DependsOnTargets="Prepare; Minify; Optimize; PackageWebs; PackageReports; PackageInstalls;">
+    <Message Text="Completed package $(BuildVersion)." Importance="high" />
+  </Target>
+
+  <Target Name="Prepare">
+    <RemoveDir Directories="$(InstallDirectory)" />
+  </Target>
+
+  <!-- Installs -->
+
+  <Target Name="PackageInstalls" DependsOnTargets="CodeAssemble; DataAssemble; CodePackage; PublishInstalls;" />
+
+  <Target Name="CodeAssemble" Condition="Exists('$(SourceRootDirectory)Build\Assemble\Assemble.paproj')">
+    <MSBuild Projects="@(CodeAssembleProjects)" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration)" />
+  </Target>
+
+  <Target Name="DataAssemble" Condition="Exists('$(SourceRootDirectory)Build\Assemble\Data\Data.paproj')">
+    <MSBuild Projects="@(DataAssembleProjects)" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration)" />
+  </Target>
+
+  <Target Name="CodePackage" Condition="Exists('$(SourceRootDirectory)Build\Package\Package.sln')">
+    <MSBuild Projects="@(PackageProjects)" Targets="Rebuild" StopOnFirstFailure="true" Properties="Configuration=$(Configuration)" />
+  </Target>
+
+  <Target Name="PublishInstalls">
+    <Copy SourceFiles="@(PublishFiles)" DestinationFiles="$(InstallDirectory)%(Filename).$(BuildVersion)%(Extension)" />
+  </Target>
+
+  <Target Name="Minify" DependsOnTargets="PrepareStyleSheets;MinifyJavaScript;MinifyStylesheets;MinifyHtml">
+  </Target>
+
+  <Target Name="PrepareStyleSheets">
+    <Message Text="Replacing data urls" />
+    <ReplaceDataUrls Condition="'@(MinStyleSheets)'!=''" CssSourceFiles="@(MinStyleSheets)" />
+    <Message Text="Making urls absolute" />
+    <MakeUrlsAbsolute Condition="'@(MinStyleSheets)'!=''" CssSourceFiles="@(MinStyleSheets)" WebRootDirectory="$(WebRootDirectory)" />
+  </Target>
+
+  <Target Name="MinifyJavaScript">
+    <Message Text="Minifying JavaScript files" />
+    <AjaxMin Condition="'@(MinJavaScripts)'!=''" JsSourceFiles="@(MinJavaScripts)" JsSourceExtensionPattern="\.js$" JsTargetExtension=".min.js" JsMacSafariQuirks="true" />
+  </Target>
+
+  <Target Name="MinifyStylesheets">
+    <Message Text="Minifying Stylesheet files" />
+    <AjaxMin Condition="'@(MinStyleSheets)'!=''" CssSourceFiles="@(MinStyleSheets)" CssSourceExtensionPattern="\.css$" CssTargetExtension=".min.css" JsKnownGlobalNames="LinkMeUI" />
+  </Target>
+
+  <Target Name="MinifyHtml">
+    <Message Text="Minifying HTML files" />
+    <Exec Condition="'$(WebRootDirectory)'!=''" Command="&quot;$(AspMinifierPath)&quot; &quot;$(WebRootDirectory)&quot;" />
+  </Target>
+
+  <Target Name="Optimize" Condition="$(OptimizePngFiles) != 'False'">
+    <Message Text="Optimizing PNG files" />
+    <!--    <Exec Command="&quot;$(OptiPngPath)&quot; -o7 -preserve -quiet &quot;%(OptimizePngFiles.FullPath)&quot;" /> -->
+    <Exec Command="&quot;$(PngOutPath)&quot; /force /l &quot;%(OptimizePngFiles.FullPath)&quot;" />
+  </Target>
+
+  <!-- Webs -->
+
+  <Target Name="PackageWebs" Inputs="@(WebProjects)" Outputs="$(RootWebDirectory)\%(DestinationDirectory)">
+
+    <Message Text="Source: %(WebProjects.SourceDirectory)" />
+    <Message Text="Destination: %(WebProjects.DestinationDirectory)" />
+
+    <!-- Stop IIS first.  -->
+
+    <CreateProperty Value="true" Condition="Exists(%(WebProjects.DestinationDirectory))">
+      <Output TaskParameter="Value" PropertyName="NeedToRestartIIS" />
+    </CreateProperty>
+    <Exec Command="iisreset.exe -stop" Condition="$(NeedToRestartIIS) == 'true'" />
+    <DeleteDirectoryContents Condition="Exists(%(WebProjects.DestinationDirectory))" Directories="%(WebProjects.DestinationDirectory)" />
+    <Exec Command="iisreset.exe -start" Condition="$(NeedToRestartIIS) == 'true'" />
+
+    <!-- Compile -->
+
+    <AspNetCompiler Clean="true" Force="true" Updateable="true"
+                    PhysicalPath="%(WebProjects.SourceDirectory)"
+                    VirtualPath="%(WebProjects.VirtualPath)"
+                    TargetPath="%(WebProjects.DestinationDirectory)"
+                    ToolPath="$(FrameworkPath)" />
+
+    <!-- Remove what is not needed -->
+
+    <RemoveDir Directories="%(WebProjects.DestinationDirectory)Test\" />
+    <RemoveDir Directories="%(WebProjects.DestinationDirectory)obj\" />
+    <Delete Files="%(WebProjects.DestinationDirectory)%(Identity)" />
+    <Delete Files="%(WebProjects.DestinationDirectory)%(Identity).user" />
+    <Delete Files="%(WebProjects.DestinationDirectory)virtualpath.txt" />
+    <DeleteDirectoryFiles Directory="%(WebProjects.DestinationDirectory)bin\" Files="@(GacAssemblies)" />
+
+    <!-- Assemble everything for install -->
+
+    <AssembleFolder ProjectFullPath="$(MSBuildProjectFullPath)"
+                CatalogueFile="Module\%(WebProjects.CatalogueFile)"
+                CatalogueFileGuid="%(WebProjects.CatalogueFileGuid)"
+                OutputPath="$(InstallDirectory)"
+                SubDirectory="%(WebProjects.SubDirectory)"
+                Configuration="$(Configuration)"
+                AssembleFolders="%(WebProjects.DestinationDirectory)" />
+
+  </Target>
+
+  <!-- Reports -->
+
+  <Target Name="PackageReports">
+
+    <Message Text="Source: %(ReportFolders.FullPath)" />
+    <Message Text="Destination: $(InstallDirectory)%(ReportFolders.SubDirectory)" />
+
+    <!-- Assemble everything for install -->
+
+    <AssembleFolder ProjectFullPath="$(MSBuildProjectFullPath)"
+                    CatalogueFile="Module\%(ReportFolders.CatalogueFile)"
+                    CatalogueFileGuid="%(ReportFolders.CatalogueFileGuid)"
+                    OutputPath="$(InstallDirectory)"
+                    SubDirectory="%(ReportFolders.SubDirectory)"
+                    Configuration="$(Configuration)"
+                    AssembleFolders="%(ReportFolders.FullPath)"
+                    ExtensionFilter=".rdl" />
+
+  </Target>
+  
+</Project>

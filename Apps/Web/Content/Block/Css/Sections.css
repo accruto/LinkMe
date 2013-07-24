@@ -1,0 +1,221 @@
+﻿.section {
+	margin-top: 0;
+	margin-bottom: 0;
+	clear: left;
+	overflow: hidden;   /* Cutting-off looks better than text running rampant screen-wide :) */
+	_width: 100%;       /* Make overflow: hidden actually work using IE6 hack */
+}
+
+.section:after {		    /* Modern-browser self-clearing */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.section {		    	/* IE6,7 solution */
+	zoom: 1;			/* Invalid CSS, hasLayout trigger */
+}
+
+.section-title {
+    margin: 0;
+    padding: 20px 0 0 0;
+    background: none;
+    border: none!important;
+	position: relative;	/* Anchor for AP action-lists etc. */
+	zoom: 1;    /* Prevent IE6 doing funky jumpy spaces before section titles */
+}
+
+.section-title h1 {
+    margin: 0;
+    padding: 0;
+	font-weight: bold;
+	font-size: 125%;
+	color: #000033;
+	font-family: Arial, Helvetica, sans-serif;
+}
+    
+.section-title h2 {
+    margin: 0;
+    padding: 15px 0 0 0;
+	font-weight: bold;
+	font-size: 100%;
+	color: #000033;
+	font-size: 110%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+        
+.section-title p {
+    padding-left: 8px;	
+}
+
+.section-content {
+    margin-bottom: 20px;
+    padding-left: 6px;
+	padding-right: 8px;
+}
+
+.section .section-content {
+    margin: 0;
+	padding: 7px;
+}
+
+.section .section-content h2 {
+    font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.section .section-content h2:first-child {
+    margin-top: 3px;
+}
+    	
+.section .section-title p {
+    margin: 0;
+    padding: 0;
+}
+    	
+.shadowed-section {
+    width: 696px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-right: -6px;
+    margin-bottom: -6px;
+    top: -2px;
+    left: -3px;
+}
+
+.shadowed-section .section-head {
+    background: url(../images/sections/shadowed/690/bg-top.png) top left no-repeat;
+}
+.shadowed-section .section-body {
+    background: url(../images/sections/shadowed/690/bg.png) top left no-repeat;
+}
+.shadowed-section .section-foot {
+    background: url(../images/sections/shadowed/690/bg-bottom.png) top left no-repeat;
+}
+
+.shadowed-section .section-title {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none !important;
+}
+    
+.shadowed-section .section-content {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+    
+.shadowed-section .section-head {
+    font-size: 0;
+    height: 16px;
+}
+
+.shadowed-section .section-body {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 21px;
+    padding-right: 21px;
+    zoom: 1;    /* IE6,7 self-clearing solution */
+}
+
+.shadowed-section .section-body:after {   /* Modern-browser self-clearing solution */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.shadowed-section .section-foot {
+    font-size: 0;
+    height: 19px;
+    padding-bottom: 10px;
+}
+
+.shadowed-section .section-body .textbox,
+.shadowed-section .section-body .checkbox,
+.shadowed-section .section-body .button,
+.shadowed-section .section-body a {
+    position: relative;
+}
+
+.two-columns {
+    padding-left: 0;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.two-columns,
+.two-columns .column {
+    zoom: 1;
+}
+.two-columns .column {
+    width: 335px;
+    display: block;
+    margin-left: 20px;
+    overflow: visible;
+    float: left;
+}
+.two-columns .ie_firstcolumn,
+.two-columns .column:first-child {
+    margin-left: 0;
+}
+
+.two-columns-shadowed-section {
+    width: 341px;
+    position: relative;
+}	
+.two-columns-shadowed-section .section-head {
+    background: url(../images/sections/shadowed/335/bg-top.png) top left no-repeat;
+}
+.two-columns-shadowed-section .section-body {
+    background: url(../images/sections/shadowed/335/bg.png) top left no-repeat;
+}
+.two-columns-shadowed-section .section-foot {
+    background: url(../images/sections/shadowed/335/bg-bottom.png) top left no-repeat;
+}
+
+.three-columns {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+.three-columns,
+.three-columns .column {
+    zoom: 1;
+}
+.three-columns .column {
+    width: 218px;
+    display: block;
+    margin-left: 20px;
+    overflow: visible;
+    float: left;
+}
+.three-columns .ie_firstcolumn,
+.three-columns .column:first-child {
+    margin-left: 0;
+}
+
+.three-columns-shadowed-section {
+    width: 224px;
+    position: relative;
+}	
+.three-columns-shadowed-section .section-head {
+    background: url(../images/sections/shadowed/218/bg-top.png) top left no-repeat;
+}
+.three-columns-shadowed-section .section-body {
+    background: url(../images/sections/shadowed/218/bg.png) top left no-repeat;
+}
+.three-columns-shadowed-section .section-foot {
+    background: url(../images/sections/shadowed/218/bg-bottom.png) top left no-repeat;
+}
+
+.right-buttons-section .buttons_control {
+    float: right;
+    padding-right: 20px;
+}
+

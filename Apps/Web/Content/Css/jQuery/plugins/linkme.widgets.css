@@ -1,0 +1,159 @@
+﻿/*	----------------------
+
+	linkme.desktop-menu.js
+	Default styles
+	
+	----------------------
+*/
+
+.desktop-menu .menu-panel {
+	border: 1px solid #B4BCC8;
+	background: #F3F4F6;
+	position: absolute;
+	float: left;
+	-moz-box-shadow:    0px 8px 22px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 8px 22px 0px rgba(0,0,0,0.25);
+	box-shadow:         0px 8px 22px 0px rgba(0,0,0,0.25);	
+}
+
+#candidate-desktop-menu .menu-panel {
+    width: 287px\9;
+	*width: 284px;
+}
+
+#bulk-desktop-menu .menu-panel {
+    /*width: 212px\9;
+    *width: 217px;*/
+}
+
+.desktop-menu .menu-panel-inner {
+	border: 1px solid #F7F8F9;
+	padding: 2px;
+}
+.desktop-menu .menu-panel .divider {
+	padding:0;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border: none;
+	border-top: 1px solid #D3D8DF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.desktop-menu .menu-item {
+	padding: 3px;
+	padding-left: 24px;
+	padding-bottom: 4px;
+	padding-right: 30px;	/* 21px of which is for sub-menu buttons */
+	position: relative;	/* Anchor for AP */
+	border: 1px solid #F3F4F6;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#bulk-desktop-menu .menu-panel .menu-item {
+	*width: 166px;
+}
+
+#bulk-desktop-menu .menu-panel .divider {
+	*width: 225px;
+}
+
+.desktop-menu .menu-item-disabled {
+    color: #808080;
+    font-size: 100%;
+    cursor: default;
+}
+
+.desktop-menu .menu-item-hover {
+	border: 1px solid #214263;
+	background-color: #638AB0;
+	color: #FFF;
+}
+
+.desktop-menu .menu-item small {
+	font-size: 100%;
+	color: #808080;
+}
+.desktop-menu .menu-item-hover small {
+	color: #c8d8e7;
+}
+
+.desktop-menu .menu-item .menu-submenu-indicator {
+	position: absolute;
+	right: 0px;
+	top: -1px;
+	height: 100%;
+	width: 19px;
+	background: url(../../../images/controls/DesktopMenu/submenu-indicator-contents.png) left center no-repeat;
+}
+.desktop-menu .menu-item-hover .menu-submenu-indicator {
+    background-position: right center;
+}
+
+.desktop-menu .menu-item .menu-submenu-button {
+	position: absolute;
+	right: -1px;
+	top: -1px;
+	height: 100%;
+	width: 19px;
+	border: 1px solid #B4BCC8;
+	-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.5);
+	box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.5);
+	background: url(../../../images/controls/DesktopMenu/submenu-button-contents.png) left center no-repeat;
+}
+
+.desktop-menu .menu-item-hover .menu-submenu-button {
+	border: 1px solid #214263;
+	-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.3);
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.3);
+	box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.3);
+	
+	background-color: #C3D0DF;
+}
+
+.desktop-menu .menu-item-hover .menu-submenu-button-hover,
+.desktop-menu .menu-submenu-button-hover {
+	-moz-box-shadow:    inset 0px 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.6);
+	box-shadow:         inset 0px 0px 0px 1px rgba(255,255,255,0.6);
+	background-color: none;
+	background-position: -38px center;
+}
+
+.desktop-menu .menu-item .menu-submenu-button-opened,
+.desktop-menu .menu-item-hover .menu-submenu-button-opened,
+.desktop-menu .menu-submenu-button-opened {
+	-moz-box-shadow:    none;
+	-webkit-box-shadow: none;
+	box-shadow:         none;
+	border: 1px solid #214263;
+	background-color: #638AB0;
+	background-position: right center;
+}
+
+#hlBulkAddToJobAd .menu-submenu-button.IE7 {
+	height : 25px;
+	margin : 113px 5px 0px 0px;
+}
+#hlBulkAddToJobAd.menu-item-disabled .menu-submenu-button.IE7, #hlBulkAddToJobAd.menu-item-disabled .menu-submenu-button.IE7.menu-submenu-button-opened {
+	margin-right : 7px;
+}
+#hlBulkAddToJobAd .menu-submenu-button.IE7.menu-submenu-button-opened {
+	margin-right : 5px;
+}
+#hlAddToJobAd .menu-submenu-button.IE7 {
+	height : 25px;
+	margin : 113px 4px 0px 0px;
+}
+.manage-candidate #hlAddToJobAd .menu-submenu-button.IE7 {
+	margin-top : 138px;
+}
+
+/*
+ * Default expected image size: 16x16
+ */
+.desktop-menu .menu-item {
+    background-position: 3px center;
+    background-repeat: no-repeat;
+}

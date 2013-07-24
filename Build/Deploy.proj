@@ -1,0 +1,78 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <InstallDirectory>$(SourceRootDirectory)Install\</InstallDirectory>
+    <DistrobutionDirectory>\\intranet2\LinkMe_Releases\</DistrobutionDirectory>
+    <HistoryDirectory>$(DistrobutionDirectory)History\</HistoryDirectory>
+    <LatestDirectory>$(DistrobutionDirectory)Latest\</LatestDirectory>
+    <ProductionSharePath>\\backup.linkme.net.au\Releases</ProductionSharePath>
+    <ProductionShareUsername>Deploy</ProductionShareUsername>
+    <ProductionSharePassword>Into*Pr0d#ItGoes</ProductionSharePassword>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Targets -->
+  
+  <Target Name="Check">
+    <Error Condition="$(LatestSubDirectory) == ''" Text="The 'LatestSubDirectory' property must be set." />
+  </Target>
+
+  <Target Name="Distribute" DependsOnTargets="Check; Archive; CopyLatest;" />
+
+  <Target Name="Archive">
+
+    <DeleteDirectoryContents Directories="$(LatestDirectory)$(LatestSubDirectory)" />
+
+    <!-- Installs used to get copied to a History folder but this seems superflous now -->
+
+    <!--
+    
+    <Message Text="Moving all files in $(LatestDirectory)$(LatestSubDirectory) to $(HistoryDirectory)" />
+
+    <CreateItem Include="$(LatestDirectory)$(LatestSubDirectory)\LinkMe*">
+      <Output TaskParameter="Include" ItemName="LatestFiles" />
+    </CreateItem>
+
+    <Message Text="Moving files @(LatestFiles)" />
+
+    <Move SourceFiles="@(LatestFiles)" DestinationFolder="$(HistoryDirectory)" />
+
+    -->
+    
+  </Target>
+
+  <Target Name="CopyLatest">
+
+    <!-- Copy all files from the install directory to the Latest folder -->
+
+    <Message Text="Copying all files in $(InstallDirectory) to $(LatestDirectory)$(LatestSubDirectory)" />
+
+    <CreateItem Include="$(InstallDirectory)LinkMe*">
+      <Output TaskParameter="Include" ItemName="InstallFiles" />
+    </CreateItem>
+
+    <Message Text="Copying files @(InstallFiles)" />
+
+    <Copy SourceFiles="@(InstallFiles)" DestinationFolder="$(LatestDirectory)$(LatestSubDirectory)" />
+
+  </Target>
+
+  <Target Name="CopyToProduction" DependsOnTargets="Check;">
+
+    <Message Text="Copying all files in $(LatestDirectory)$(LatestSubDirectory) to $(ProductionSharePath)" />
+
+		<Exec Command="net use $(ProductionSharePath) $(ProductionSharePassword) /user:$(ProductionShareUsername)" />
+		<Exec Command="xcopy /z /y &quot;$(LatestDirectory)$(LatestSubDirectory)\LinkMe*&quot; &quot;$(ProductionSharePath)&quot;" />
+    
+	</Target>
+
+</Project>

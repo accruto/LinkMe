@@ -1,0 +1,74 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Package">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+  </PropertyGroup>
+
+  <!-- Build properties. -->
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <InstallDirectory>$(SourceRootDirectory)Install\</InstallDirectory>
+    <FrameworkPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\</FrameworkPath>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- Item groups. -->
+
+  <ItemGroup>
+    <PackageProjects Include="..\Environment\Build\Package.proj" />
+    <PackageProjects Include="..\Framework\Build\Package.proj" />
+    <PackageProjects Include="..\External\Build\Package.proj" />
+    <PackageProjects Include="..\Domain\Build\Package.proj" />
+    <PackageProjects Include="..\Query\Build\Package.proj" />
+    <PackageProjects Include="..\Apps\Build\Package.proj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InstallProjects Include="Package\Package.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PublishFiles Include="$(SourceRootDirectory)Build\Package\**\LinkMe.*.msi" />
+  </ItemGroup>
+
+  <!-- Package -->
+
+  <Target Name="Package">
+
+    <!-- Create all the merge modules and install kits using the 32-bit version, otherwise Wix gets into problems. -->
+
+    <CallTarget Targets="PackageProjects" />
+    <CallTarget Targets="CreateInstalls" />
+    <CallTarget Targets="Publish" />
+
+  </Target>
+
+  <Target Name="PackageProjects">
+    <Exec Command="&quot;$(FrameworkPath)msbuild.exe&quot; %(PackageProjects.Identity) /t:Package &quot;/p:Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)&quot;" />
+  </Target>
+
+  <Target Name="CreateInstalls">
+    <MSBuild Projects="@(InstallProjects)" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+	
+  <Target Name="Publish">
+    <Message Text="Publish: @(PublishFiles)" />
+    <RemoveDir Directories="$(InstallDirectory)" />
+    <MakeDir Directories="$(InstallDirectory)" />
+    <Copy SourceFiles="@(PublishFiles)" DestinationFiles="$(InstallDirectory)%(Filename).$(BuildVersion)%(Extension)" />
+  </Target>
+
+</Project>

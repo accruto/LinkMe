@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:job="http://www.pageuppeople.com">
+  <channel>
+    <title>Salesforce jobs</title>
+    <link>careers.salmat.com.au/jobsrss.ashx?stp=linkme</link>
+    <description>A listing of jobs available at Salesforce</description>
+    <item>
+      <title><![CDATA[Call Centre - Workforce Analyst]]></title>
+      <guid>647438</guid>
+      <link>http://salesforce.clients.pageup.com.au/jobdetails.asp?sJobIDs=647438&amp;stp=linkme&amp;sLanguage=en</link>
+      <description><![CDATA[This is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long summary]]></description>
+      <pubDate>Thu, 05 Aug 2010 08:30:00 GMT</pubDate>
+      <category>NSW - Sydney;FullTime;Call Centre/Cust. Service;</category>
+      <job:refNo>647438</job:refNo>
+      <job:description>
+        <![CDATA[<P><B>Do you use words like, dedicated, analytical and compassionate to describe yourself?</B></P>
+<P>If you have answered <B>YES</B> then we have an opportunity for you that you cannot afford to miss out!</P>
+<P><B>Ticketek</B>&nbsp;is on the lookout for a <B>Workforce Analyst</B> to assist in rostering and scheduling located @<B> Ultimo</B>, this role is truly a rare opportunity to get your foot in the door of the world of Workforce Management</P>
+<P>The <B>Workforce Analyst</B> is responsible for all aspects of the schedule administration. The position requires the person to provide input and monitoring of schedules to ensure the campaigns KPI's are consistently being met.</P>
+<P><B>Primary Duties:</B></P>
+<P>·&nbsp; Provide schedule administration support to the Contact Centre Manager and Operations and Technology Manager </P>
+<P>·&nbsp; Real time management of supply and demand variation factors </P>
+<P>·&nbsp; Update all records within the call centre and maintaining them </P>
+<P>·&nbsp; Data entry</P>
+<P><B>What we are looking for are people who have:</B></P>
+<P>·&nbsp; Accurate data entry </P>
+<P>·&nbsp; Positive Attitude </P>
+<P>·&nbsp; Analytical thought processes</P>
+<P>·&nbsp; Ability to learn computer scheduling software </P>
+<P>·&nbsp; Knowledge of computer software such as Word and Excel (advanced Excel skills are highly desireable)</P>
+<P>·&nbsp; Ability to adhere to deadlines </P>
+<P>·&nbsp; Ability to deal with matters of a confidential nature </P>
+<P>·&nbsp; Communicate effectively across all levels and backgrounds </P>
+<P>·&nbsp; Administration experience </P>
+<P>·&nbsp; Knowledge of call centres and operational metrics highly desirable</P>
+<P>This position is Monday to Friday 8:30am - 4.30pm, however due to the seasonality of events and call volumes, there are often exceptions to this.</P>
+<P>If you think you have what it takes - <B>APPLY NOW</B>!</P>]]>
+      </job:description>
+      <job:applyLink><![CDATA[https://secure.pageuppeople.com/apply/387/gateway/?c=apply&sJobIDs=647438&SourceTypeID=687&sLanguage=en]]></job:applyLink>
+      <job:closingDate>Thu, 19 Aug 2010 13:55:00 GMT</job:closingDate>
+      <job:location PUReferenceID="4318">NSW - Sydney</job:location>
+      <job:workType>FullTime</job:workType>
+      <job:category>Call Centre/Cust. Service</job:category>
+      <job:subCategory />
+      <job:businessLayer1 />
+      <job:positionType />
+      <job:subLocation />
+      <job:language />
+      <job:requiredWorkExperience />
+      <job:salaryCurrency />
+      <job:salaryBand />
+      <job:salaryDescription />
+      <job:category2 />
+      <job:subCategory2 />
+      <job:category3 />
+      <job:subCategory3 />
+      <job:sitePostCode>2007</job:sitePostCode>
+      <job:siteCountryISO2>AU</job:siteCountryISO2>
+      <job:siteCountryISO3>AUS</job:siteCountryISO3>
+      <job:siteCountry>Australia</job:siteCountry>
+      <job:siteState>NSW</job:siteState>
+      <job:siteSuburb>Ultimo</job:siteSuburb>
+      <job:templateid />
+      <job:templatedescription />
+      <job:positionSubType />
+      <job:jobLevel />
+      <job:jobIndustry />
+    </item>
+  </channel>
+</rss>

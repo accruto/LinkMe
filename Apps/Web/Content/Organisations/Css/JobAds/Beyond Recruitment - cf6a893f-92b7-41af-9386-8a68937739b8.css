@@ -1,0 +1,96 @@
+#JobAd {}
+
+	#JobAd #JobDescription {
+		background: #bcbdc0 url(beyond_recruiting_images/beyond_side.gif) no-repeat left 220px;
+		border: 1px solid #c0c0c0;
+		border-top: none;
+		margin-bottom: 1em;
+		position: relative;
+		width: 458px;
+	}
+	
+		#JobAd #JobDescription #Ad {
+			border: 1ox solid red;
+			background-color: #5c5c5c;
+			margin: 0 36px 0 28px; /* aligns with banner, footer and #JobDescription bg images */ 
+		}
+			#JobAd #JobDescription #Ad div,
+			#JobAd #JobDescription #Ad p {
+				color: #fff;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 1.3em;
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+			#JobAd #JobDescription #Ad div#brandingLogo,
+			#JobAd #JobDescription #Ad div#JobAdHeading,
+			#JobAd #JobDescription #Ad div#AdContactDetails {
+				margin-left: 0;
+				margin-right: 0;
+			}	
+			
+			#JobAd #JobDescription #Ad div#brandingLogo {
+				background: #fff url(beyond_recruiting_images/beyond_banner.gif) no-repeat top center;
+				left: -1px;
+				position: absolute;
+				top: 0;
+				width: 460px;
+				height: 143px;
+			}
+					
+			#JobAd #JobDescription #Ad div#JobAdHeading {
+				padding: 142px 0 0 0;
+				margin-bottom: 0;
+			}
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading h1 {
+				    background-color: #ee8e2e;
+					border-left: 28px solid #fff;
+					border-right: 36px solid #fff;
+					color: #fff;
+					font-size: 200%;
+					line-height: 1.3em;
+					font-weight: normal;
+					margin: 0 -36px 0 -28px;
+					padding: 5px 5px 1em 5px;	
+					text-align: center;
+				}		
+					
+				#JobAd #JobDescription #Ad div#JobAdHeading p strong {
+					display: block;
+					margin-top: 2em;
+					text-align: center;
+				}
+	
+				#JobAd #JobDescription #Ad div#JobAdHeading table {
+					margin-left: 1em;
+					width: 90% !important;
+				}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td {
+						font-family: Arial, Helvetica, sans-serif;
+					}
+					#JobAd #JobDescription #Ad div#JobAdHeading table td label{
+						color: #fff;
+						font-family: Arial, Helvetica, sans-serif;
+						font-weight: normal;
+						vertical-align: top;
+					}
+				#JobAd #JobDescription #Ad div#JobAdHeading ul {}
+					#JobAd #JobDescription #Ad div#JobAdHeading ul li {
+						list-style-image: url(beyond_recruiting_images/beyond_bullet.gif);
+						margin-left: 2em;
+					}
+			
+			#JobAd #JobDescription #Ad div#AdContactDetails {
+				margin-bottom: 0;
+				text-align: center;
+			}
+				
+		#JobAd #JobDescription #LogoFooter {
+			background-color: #454d7d;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 87px;
+		}
+	
+	

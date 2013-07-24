@@ -1,0 +1,49 @@
+﻿#body-container {
+    background: none;
+}
+
+#sidebar {
+    display: none;
+}
+
+#main-body {
+    margin: 0 150px;
+    width: 694px;
+    padding-bottom: 30px;
+}
+
+.page-title {
+    border: none;
+    background: none;
+    margin:0; padding:0;
+}
+
+.page-title h1 {
+    border: none;
+    background: none;
+    margin:0;
+    padding:0;
+    font-size: 220%;
+    font-family: Vegur, Arial, Helvetica, sans-serif;
+    color: #003;
+    position: relative;
+    top: -0.35em;
+    margin-bottom: -0.35em;
+    padding-bottom: 15px;
+}
+
+.main_columns {
+    padding-left: 0;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.main_columns .column {
+    width: 335px;
+    margin-left: 20px;
+    overflow: visible;
+}
+    
+.main_columns .ie_firstcolumn { /* Based on IE6 hack in text-links-headings.css */
+    margin-left: 0;
+}

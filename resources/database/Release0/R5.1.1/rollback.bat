@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:rollback.log /f:rollback_networker_profile_resume_xml.sql,rollback_database_version_table.sql

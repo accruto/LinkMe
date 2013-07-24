@@ -1,0 +1,1536 @@
+/* Left side Navigation */
+
+#left-sidebar .resume-left-nav {
+    float: left;
+    width: 253px;
+    margin-right: 10px;
+}
+
+#left-sidebar .resume-left-nav .section {
+    margin: 0;
+    padding: 0;
+    /*background-color: #FBFBFB;
+    border: 1px solid #D9D9D9;
+    background: none;*/
+    background: url("../../images/controls/section/left-sidebar/view-resume/bg.png") no-repeat scroll left top transparent;
+    margin-bottom: 9px;    
+}
+
+#left-sidebar .resume-left-nav .section .section-content {
+    margin: 0;
+    padding: 8px;
+    /*background: none;*/
+    background: url("../../images/controls/section/left-sidebar/view-resume/bg-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.resume-left-nav .section-collapsible-title {
+	margin: 0;
+	padding: 5px 8px;
+	/*background: none;
+	background-color: #375E85;	
+	color: #FFFFFF;*/
+	font-weight: bold;
+	cursor: pointer;
+	/*border: 1px solid #214263;*/
+	background: url("../../images/controls/section/left-sidebar/view-resume/bg-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.resume-left-nav .section-icon 
+{
+    margin-top:4px;
+	*margin:-18px 4px 0 0;	
+	cursor:pointer;
+	float:right;
+}
+.resume-left-nav .section-icon-left { 
+	width: 16px;
+	height: 16px;
+	background-image: url(../../images/controls/section/left-sidebar/view-resume/left_double_triangle.png);
+	display: block;
+}
+
+.resume-left-nav .section-icon-right { 
+	width: 16px; 
+	height: 16px; 
+	background-image: url(../../images/controls/section/left-sidebar/view-resume/right_double_triangle.png);
+	display: block;
+}
+
+#left-sidebar .resume-left-nav .section .section-content .section {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-collapsible-title {
+	margin: 0 0 0 5px;
+	padding: 0;
+	background: none repeat scroll 0 0 transparent;	
+	border: none;
+	color: #4477AA;
+	font-weight: normal;
+	cursor: pointer;
+	float: left;
+	*float: inherit;
+	width: 96%;
+	*width: 98%;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-collapsible-title-active{
+	border-bottom: 0px;
+	font-weight: bold;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-collapsible-title-default {
+	border-bottom: 0px;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-icon {
+	margin-top:0px;
+	*margin:-15px 0 0 0;
+	cursor:pointer;
+	float:right;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-icon-up { 
+	width: 16px;
+	height: 16px;
+	background-image: url(../../images/universal/collapse_triangle.png);
+	display: block;
+}
+
+#left-sidebar .resume-left-nav .section-collapsible-content .section-icon-down { 
+	width: 16px; 
+	height: 16px; 
+	background-image: url(../../images/universal/expand_triangle.png);
+	display: block;
+}
+
+.resume-left-nav .back-action{
+    background: url(../../images/employers/view-resume/back.png) left center no-repeat;
+    padding: 1px 0 2px 17px;
+    display: inline-block;
+    min-height: 16px;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* Overlay z-index for View resume page */
+
+.overlay-bg {
+    z-index: 10;
+}
+
+.shadow {
+    z-index: 11;
+}
+
+.overlay {
+    z-index: 12;
+}
+
+.overlay-arrow {
+    z-index: 13;
+}
+
+/* Folder section */
+
+.folders-resume_ascx .folders-section-icon {
+    background: url("../../images/employers/section-heading-icons/folders.png") no-repeat scroll left center transparent;
+}
+
+.folder-float_holder{
+    float: left;
+    position: absolute;
+    top: 45px;
+    left: 261px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    z-index: 7;
+    *top: auto;
+    *left: auto;
+    *margin: 45px 0 0 5px;
+}
+
+.folder-float_holder .folder-float_container {
+    width: 245px;
+    height: 330px;
+    overflow: auto;
+}
+
+.folder-float_arrow{ position: absolute; left: -12px; top: 10px; z-index:8;  width: 16px; height: 16px; background-image: url(../../images/controls/Overlay/arrow-left.png);}
+
+.folder-float_holder .section-content .section {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.folder-float_holder .section-content .section:last-child {
+    border-bottom: none;
+}
+
+.folder-float_holder .manage-folders-icon {
+    background: url("../../images/universal/action-icons/manage-folder.png") no-repeat scroll left center transparent;
+}
+
+.folder-float_holder .section-collapsible-content .section-collapsible-title {
+    width: 97%;
+    padding: 10px 0 10px 0;
+}
+
+.folder-float_holder .section-collapsible-content .section-collapsible-title-active {
+    padding: 10px 0 10px 0;
+}
+
+.folder-float_holder ul.add-folder-list {
+    list-style-image: url(../../images/universal/action-icons/add.png);
+    padding: 5px 0 5px 0;
+    margin: 0 0 0 22px;
+}
+
+.folder-float_holder .section-content ul.add-folder-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.folder-float_holder .section-content ul.add-folder-list li a {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.folder-float_holder ul.personal-folders-list, .folder-float_holder ul.org-wide-folders-list {
+    list-style-image: url(../../images/universal/action-icons/folder.png);
+    padding: 5px 0 5px 0;
+    margin: 0 0 0 22px;
+}
+
+.folder-float_holder ul.flagged-folder-list {
+    list-style-image: url(../../images/universal/action-icons/flagged.png);
+    padding: 5px 0 0 0;
+    margin: 0 0 0 22px;
+}
+
+.folder-float_holder .section-content ul li {
+    margin: 0;
+    padding: 3px 0 0 0;
+}
+
+.folder-float_holder .section-content ul li a {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.folder-float_holder .personal-folders_section .section-content ul li a, .folder-float_holder .organisation-wide-folders_section .section-content ul li a {
+    font-size: 85%;
+    font-weight: normal;
+}
+
+.folder-float_holder .section-content ul li a.manage-folders-icon {
+    padding: 6px 20px;
+}
+
+.folder-float_holder .section-content ul li .count-holder {
+    font-size: 85%;
+    font-weight: normal;
+    color: #808080;
+}
+
+.folder-float_holder .section-content ul li a.empty-link {
+    font-size: 85%;
+    font-weight: normal;
+    color: #91B0F6;
+    text-decoration: underline;
+}
+
+.folder-float_holder .section-content ul li a.empty-link:hover {
+    color: #FF6600;
+    cursor: pointer;
+}
+
+.folder-float_holder .large-folders {
+    background-color: #EEEEEE;
+    margin: 3px -10px 3px -10px;
+    padding: 3px 10px 5px 10px;
+    text-align: center;
+    font-size:85%;
+}
+
+.folder-float_holder .folderTypeRadio {
+    padding: 3px 0 5px 0;
+    font-size: 85%;
+}
+
+.folder-float_holder .folder-overlay .overlay {
+    width: 450px;
+}
+
+/* Candidate Navigation */
+.resume-left-nav .nav_holder{
+    width: 253px;
+    background: none repeat scroll 0 0 transparent;    
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder{
+    border: 1px solid #9D9D9D;
+    margin: 0 0 2px;
+    padding: 0;
+    height: 30px;
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder .arrow{
+    background-position:left top;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    border:0;
+    width: 46px;    
+    height:30px;
+    margin:0;
+    padding:0;
+    float:left;
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder .left-arrow{
+    background-image: url(../../images/employers/view-resume/previous.png);
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder .right-arrow{
+    background-image: url(../../images/employers/view-resume/next.png);
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder .nav-results-count_holder{
+    width: 157px;
+    height: 25px;
+    background: url(../../images/employers/view-resume/nav-bg.png) top left repeat-x transparent;
+    border: none;
+    border-left: 1px solid #9D9D9D;
+    border-right: 1px solid #9D9D9D;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    text-align: center;
+}
+
+.resume-left-nav .nav_holder .nav-arrow_holder .nav-results-count_holder .nav-results-count_text{
+    font-size: 110%;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder{
+    width: 251px;
+    padding: 0;
+    margin: 0;
+    border:none;
+    height: 434px;
+}
+
+.resume-left-nav .nav_holder .resumes-nav{
+    width: 251px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #E6E6E6;
+    border-bottom: none;
+	float : left;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate{
+    background-color: #F7F7F7;
+    border: none;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 8px 5px 5px 5px;
+    margin: 0;
+    text-align: left;
+    height: 40px;
+    cursor: pointer;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected{
+    background-color: #3E658D;
+    border: 1px solid #3E658D;
+    padding: 9px 6px 6px 6px;
+    margin: -1px -1px 0 -1px;
+    position: relative;
+    *position: inherit;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .arrow{ position: absolute; right: -13px; top: 18px; z-index:2;  width: 14px; height: 19px; background-image: url(../../images/employers/view-resume/arrow.png); *right: auto; *top: auto; *margin-top: 8px; *margin-left: 42px;}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .list-icon {
+	float: left;	
+	background: url(../../images/employers/view-resume/candidate-list-icon.png) top left no-repeat;	
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	margin-right: 9px;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .list-icon {
+	background: url(../../images/employers/view-resume/selected-candidate-list-icon.png) top left no-repeat;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .job-hunter-status, .resume_holder .job-hunter-status {
+		float: left;		
+		width: 12px;
+		height: 12px;
+		overflow: hidden;
+		margin-right: 9px;
+	}
+	
+	.resume-left-nav .nav_holder .resumes-nav_holder .immediately-available_job-hunter-status, .resume_holder .immediately-available_job-hunter-status {
+		background: url(../../images/employers/view-resume/immidiately-available.png) top left no-repeat;
+		height: 13px;
+	}
+	.resume-left-nav .nav_holder .resumes-nav_holder .actively-looking_job-hunter-status, .resume_holder .actively-looking_job-hunter-status {
+		background: url(../../images/employers/view-resume/actively-looking.png) top left no-repeat;
+	}
+	.resume-left-nav .nav_holder .resumes-nav_holder .happy-to-talk_job-hunter-status, .resume_holder .happy-to-talk_job-hunter-status {
+		background: url(../../images/employers/view-resume/happy-to-talk.png) top left no-repeat;
+	}
+	.resume-left-nav .nav_holder .resumes-nav_holder .not-looking_job-hunter-status, .resume_holder .not-looking_job-hunter-status,
+	.resume-left-nav .nav_holder .resumes-nav_holder .not-specified_job-hunter-status, .resume_holder .not-specified_job-hunter-status {
+		background: url(../../images/employers/view-resume/not-specified.png) top left no-repeat;
+	}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .flag-holder {
+	float: right;
+	width: 22px;
+	height: 22px;
+	margin: -2px -2px 0 0;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .flag-holder .flag {
+	background: url(../../images/employers/view-resume/unflagged.png) top left no-repeat;	
+	width: 22px;
+	height: 22px;
+	margin: 0;
+	cursor:pointer;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .flag-holder .flag{
+	background: url(../../images/employers/view-resume/selected-unflagged.png) top left no-repeat;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .flagged .flag{
+	background: url(../../images/employers/view-resume/flagged.png) top left no-repeat;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .flagged .flag{
+	background: url(../../images/employers/view-resume/selected-flagged.png) top left no-repeat;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .basic-details{
+    float:left;
+    width: 160px;
+    margin: -2px 0 0;
+}
+
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .basic-details .candidate-name{
+    font-size: 100%;
+    font-weight: bold;
+    color: #000000;
+    width: 165px\9;
+    max-width: 165px\9;
+    overflow: hidden;   
+    white-space: nowrap; 
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .basic-details .candidate-name{
+    color: #FFFFFF;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .basic-details .location{
+    font-size: 85%;
+    color: #B9B9B9;
+    overflow: hidden;
+	width : 170px;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .basic-details .location{
+    color: #89A6C4;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate .basic-details .last-updated{
+    font-size: 68%;
+    color: #808080;
+    overflow: hidden;
+}
+.resume-left-nav .nav_holder .resumes-nav_holder .nav-candidate-selected .basic-details .last-updated{
+    color: #B4CADF;
+}
+
+/* AJAX Loader */
+
+.resume-section {
+    overflow: visible;  /* Desktop-menu needs this or it can get cut off */
+    position: relative; /* Anchor for AP */
+    *position: inherit;
+    min-height: 300px;
+    _height: 300px; /* IE6 hack ... even though we don't support IE6 anymore, it would be pretty bad for IE6 users not to see the loading spinner */
+}
+
+.resume-section .ajax-overlay {
+    position: absolute;
+    left: 0; top: 0; 
+    width: 100%; height: 100%;
+    background: url(../../images/controls/search-results/loading-overlay.png) top left repeat;
+    text-align: center; /* Centers inline-block children too */
+    z-index:6;
+}
+    .resume-section .ajax-overlay div {
+        text-align: left;
+        display: -moz-inline-box;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        max-width: 90%;
+        margin: 150px auto;
+        margin-bottom: 0;
+        border: 1px solid #88AACC;
+        color: #999;
+        padding: 20px;
+        padding-top: 20px;
+        background: #FFFFFF;
+    	-moz-box-shadow:    0px 8px 22px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 8px 22px 0px rgba(0,0,0,0.15);
+        box-shadow:         0px 8px 22px 0px rgba(0,0,0,0.15);
+    }
+    .resume-section .ajax-overlay div.loading {
+        padding-top: 70px;
+        background: #FFFFFF url(../../images/universal/loading3.gif) center 20px no-repeat;
+    }
+    
+    .resume-section .ajax-overlay div.error {
+    }
+
+/* Resume */
+
+.resume_holder{
+    width: 696px;
+    margin:0;
+    padding:0;
+    *width: 694px;
+}
+
+.resume_holder .resume-header{
+    margin:0;
+    padding:0;
+    border:none;
+    width: 696px;
+    height: 59px;
+    background: url(../../images/employers/view-resume/dropdown-compressed.png) top left repeat-x transparent;
+}
+
+.resume_holder .resume-header .basic-details{
+    width: 300px;
+    height: 39px;
+    margin: 0;
+    padding: 7px 8px 13px 24px;
+    border: none;
+    border-bottom: solid 1px #6C95A8;
+    float: left;
+    text-align: left;
+}
+
+.resume_holder .resume-header .basic-details-expanded{
+    margin: 0;
+    background: url(../../images/employers/view-resume/dropdown-expanded.png) top left repeat-x transparent;
+}
+
+.resume_holder .resume-header .basic-details-over{
+    margin: 0;
+    background: url(../../images/employers/view-resume/dropdown-over.png) top left repeat-x transparent;
+}
+
+.resume_holder .resume-header .basic-details-down{
+    margin: 0;
+    background: url(../../images/employers/view-resume/dropdown-down.png) top left repeat-x transparent;
+}
+
+.resume_holder .resume-header .basic-details .candidate-name{
+    color: #FFFFFF;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 0 0 3px 0;
+    width: 280px\9;
+    max-width: 280px\9;
+    overflow: hidden;   
+    white-space: nowrap; 
+}
+
+.resume_holder .resume-header .basic-details .menu-icon{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin: 17px 0 0 5px;
+    border: none;
+    width: 15px;
+    height: 15px;
+}
+
+.resume_holder .resume-header .basic-details .menu-icon-up {
+    background-image: url(../../images/employers/view-resume/icon-up.png);
+}
+
+.resume_holder .resume-header .basic-details .menu-icon-down {
+    background-image: url(../../images/employers/view-resume/icon-down.png);
+}
+
+.resume_holder .resume-header .basic-details .job-hunter-status_text{
+    color: #D8E7EE;
+    font-size:85%;
+    float:left;
+    width: 185px\9;
+    white-space: nowrap; 
+}
+
+.resume_holder .divider {
+	float: left;		
+	width: 2px;
+	height: 58px;
+	background: url(../../images/employers/view-resume/divider.png) top left no-repeat;
+}
+
+.resume_holder .resume-header .shortcut-button-holder {
+    width: 29px;
+    height: 59px;
+    margin:0;
+    padding:0;
+    border:none;
+    border-bottom: solid 1px #6C95A8;
+    float:left;
+}
+
+.resume_holder .resume-header .shortcut-button-holder .top-holder, .resume_holder .resume-header .shortcut-button-holder .bottom-holder {
+	width : 29px;
+	height : 30px;
+	margin : 0px auto -17px auto;
+	cursor : pointer;
+	padding : 8px 0px 0px 0px;
+}
+.resume_holder .resume-header .shortcut-button-holder .bottom-holder {
+	width : 29px;
+	height : 20px;
+	margin : 0px auto 0px auto;
+	cursor : pointer;
+	padding : 8px 0px 0px 0px;
+}
+
+.resume_holder .resume-header .shortcut-button-holder  .horizontal-divider {
+	height : 1px;
+	width : 30px;
+	background-color : #769AAC;
+	margin-top : 8px;
+}
+
+.resume_holder .resume-header .shortcut-button-holder .shortlist-link_holder {
+	margin : 0px auto 0px 6px;
+}
+.resume_holder .resume-header .shortcut-button-holder .top-holder:hover .shortlist-link_holder {
+	background: url(../../images/employers/icons/icons.png) no-repeat 0px -16px;
+}
+.resume_holder .resume-header .shortcut-button-holder .top-holder .shortlist-link_holder.selected {
+	background: url(../../images/employers/icons/icons.png) no-repeat 0px 0px;
+}
+
+.resume_holder .resume-header .shortcut-button-holder .reject-link_holder {
+	margin : 0px auto -4px 6px;
+}
+.resume_holder .resume-header .shortcut-button-holder .bottom-holder:hover .reject-link_holder {
+	background: url(../../images/employers/icons/icons.png) no-repeat -16px -16px;
+}
+.resume_holder .resume-header .shortcut-button-holder .bottom-holder .reject-link_holder.selected {
+	background : url(../../images/employers/icons/icons.png) no-repeat -16px 0px;
+}
+
+.resume_holder .resume-header .additional-details_holder{
+    width: 362px;
+    height: 59px;
+    margin:0;
+    padding:0;
+    border:none;
+    border-bottom: solid 1px #6C95A8;
+    float:right;
+}
+.resume_holder .resume-header .additional-details_holder.not-search-result {
+	width : 331px;
+}
+
+.resume_holder .resume-header .additional-details_holder .additional-details{
+    font-size:68%;
+    float:left;
+    padding: 7px 10px 10px 10px;
+}
+
+.resume_holder .resume-header .additional-details_holder .additional-details td{
+    padding: 1px;
+}
+
+.resume_holder .resume-header .additional-details_holder .additional-details .last-updated{
+    color: #FFFFFF;
+}
+
+.resume_holder .resume-header .additional-details_holder .additional-details .last-visited, .resume_holder .resume-header .additional-details_holder .additional-details .joined{
+    color: #D8E7EE;
+}
+
+.resume_holder .resume-header .additional-details_holder .additional-details .detail{
+    width: 120px;
+}
+
+.resume_holder .resume-header .additional-details_holder .fullscreen_holder{
+    font-size: 85%;
+    float: right;
+    padding: 5px 5px 0 0;
+    width : 90px;
+}
+
+.resume_holder .resume-header .additional-details_holder .fullscreen_holder .fullscreen_link{
+    color: #ffffff;
+    text-decoration: underline;
+    cursor:pointer;
+    padding: 0 5px 0 0;
+}
+.resume_holder .resume-header .additional-details_holder .fullscreen_holder.fullscreen .fullscreen_link {
+	margin-right : -6px;
+}
+
+.resume_holder .resume-header .additional-details_holder .fullscreen_holder .fullscreen_icon{
+    width: 20px;
+	height: 20px;
+	float:right;
+	cursor:pointer;
+	background: url(../../images/employers/view-resume/fullscreen.png) top left no-repeat;
+	*position: absolute;
+	*top: 5px;
+	*right: 5px;
+}
+
+.resume_holder .resume-header .additional-details_holder .fullscreen .fullscreen_icon{
+	background: url(../../images/employers/view-resume/restore.png) top left no-repeat;
+}
+
+/* Resume Action Menu */
+
+.resume_holder .resume-menu-header{
+    margin: 0;
+    padding: 0 0 90px 0;
+    *padding: 0 0 0px 0;
+    border: none;
+    width: 696px;
+    background-color: #648B9E;
+}
+
+.resume_holder .resume-menu-header .action-menu{
+    border-right: solid 1px #527383;
+    border-left: solid 1px #527383;
+    border-bottom: solid 1px #527383;
+    width: 696px;
+    background-color: #648B9E;
+    float:left;
+    margin: 0 0 10px 0;
+}
+
+.resume_holder .resume-menu-header .action-items{
+    margin: 0;
+    padding: 0;
+    height: 35px;
+}
+
+.resume_holder .resume-menu-header .action-items td{
+    margin: 0;
+    padding: 0 0 5px 8px;
+    width: 220px;
+    color: #FFFFFF;
+    font-size: 100%;
+}
+
+.resume_holder .resume-menu-header .action-items:first-child td{
+    padding-bottom: 0;
+}
+
+.resume_holder .resume-menu-header .action-items td:first-child{
+    padding-left: 18px;
+    width: 240px;
+}
+
+.resume_holder .resume-menu-header .action-items .send-message, .resume_holder .resume-menu-header .action-items .view-phone-numbers{
+    font-weight: bold;
+}
+
+.resume_holder .resume-menu-header .action-items .dynamic-text{
+    color: #D8E7EE;
+    overflow: hidden;
+}
+
+.resume_holder .resume-menu-header .action-items td .action-item{
+    display: inline-block;
+    min-height: 28px;
+    padding: 13px 0 0 35px;
+    cursor: pointer;
+}
+
+.resume_holder .resume-menu-header .action-items td .send-message-disabled,
+.resume_holder .resume-menu-header .action-items td .download-resume-disabled,
+.resume_holder .resume-menu-header .action-items td .add-to-folder-disabled,
+.resume_holder .resume-menu-header .action-items td .view-phone-numbers-disabled,
+.resume_holder .resume-menu-header .action-items td .email-resume-disabled,
+.resume_holder .resume-menu-header .action-items td .add-to-jobad-disabled {
+    cursor: default;
+}
+
+.resume_holder .resume-menu-header .action-items .send-message{    
+    background: url("../../images/employers/view-resume/send-message.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .download-resume{    
+    background: url("../../images/employers/view-resume/download-resume.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-folder{    
+    background: url("../../images/employers/view-resume/add-to-folder.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .view-phone-numbers{    
+    background: url("../../images/employers/view-resume/view-phone-numbers.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .email-resume{    
+    background: url("../../images/employers/view-resume/email-resume.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-jobad{    
+    background: url("../../images/employers/view-resume/add-to-linkme-job-ad.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .send-message-disabled{    
+    background: url("../../images/employers/view-resume/send-message-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .download-resume-disabled{    
+    background: url("../../images/employers/view-resume/download-resume-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-folder-disabled{    
+    background: url("../../images/employers/view-resume/add-to-folder-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .view-phone-numbers-disabled{    
+    background: url("../../images/employers/view-resume/view-phone-numbers-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .email-resume-disabled{    
+    background: url("../../images/employers/view-resume/email-resume-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-jobad-disabled{    
+    background: url("../../images/employers/view-resume/add-to-linkme-job-ad-disabled.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .send-message-locked{    
+    background: url("../../images/employers/view-resume/send-message-locked.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .download-resume-locked{    
+    background: url("../../images/employers/view-resume/download-resume-locked.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .view-phone-numbers-locked{    
+    background: url("../../images/employers/view-resume/view-phone-numbers-locked.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-items .email-resume-locked{    
+    background: url("../../images/employers/view-resume/email-resume-locked.png") no-repeat scroll left center transparent;
+}
+
+.resume_holder .resume-menu-header .action-icon-holder{
+    padding: 8px;
+    *padding: 0px;
+    position: absolute;
+    *position: inherit;
+    margin-top: -8px;
+    *margin-top: 4px;
+    cursor:pointer;
+    *height: 9px;
+    *width: 9px;
+}
+
+.resume_holder .resume-menu-header .add-to-folder .action-icon-holder{
+    margin-left: 8px;
+    *margin-left: 16px;
+}
+
+.resume_holder .resume-menu-header .add-to-jobad .action-icon-holder{
+    margin-left: 8px;
+    *margin-left: 16px;
+}
+
+.resume_holder .resume-menu-header .action-icon
+{
+    float: right;
+    *float: none;
+    border: none;
+    width: 9px;
+    height: 9px;
+    margin: 4px 0 0 0;
+    *background-repeat: no-repeat;
+    *background-position: left 4px;
+}
+
+.resume_holder .resume-menu-header .action-icon-up {
+    background-image: url(../../images/employers/view-resume/arrow-up.png);
+}
+
+.resume_holder .resume-menu-header .action-icon-down {
+    background-image: url(../../images/employers/view-resume/arrow-down.png);
+}
+
+
+/* Resume Details section */
+.resume-details_holder{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-right: solid 1px #648B9E;
+    border-left: solid 1px #648B9E;
+    width: 694px;
+    background-color: #6B95AA;
+}
+
+.resume-details_holder .horizontal-divider{
+    margin:0;
+    padding:0;
+    border:none;
+    width: 694px;
+    height: 1px;
+    background: url(../../images/employers/view-resume/divider-glow.png) top left repeat-x transparent;
+}
+
+.resume-details_holder .resume-status-header{
+    width: 694px;
+    float: none;
+}
+
+.resume-details_holder .status-icons {
+    color: #A0A0A0;
+    font-size: 85%;
+    padding: 10px 5px 30px 5px;
+    width: 684px;
+}
+.resume-details_holder .status-icons ul {
+	background-image : url("../../images/employers/icons/UnlockingAndPhones.png");
+}
+
+.resume-details_holder .status-icons ul {
+    clear: left;
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 22px 16px;
+    padding: 3px 5px 3px 0;
+	background-position : 0px -120px;
+	width : 627px;
+	height : 25px;
+}
+
+.resume-details_holder .status-icons ul li {
+    float: left;
+    margin: 0 0 0 15px;
+    min-height: 16px;
+    padding: 0;
+    color: #8C8C8C;
+    font-size: 100%;
+}
+.resume-details_holder .status-icons ul li.folder {
+	position : absolute;
+	margin : 4px 0px 0px 349px;	
+}
+body.IE7 .resume-details_holder .status-icons ul li.folder {
+	position : relative;
+	left : -145px;
+}
+body.IE7 .resume-details_holder .status-icons ul li.folder .count-holder {
+	position : relative;
+	top : -2px;
+}
+.resume-details_holder .status-icons ul li.notes {
+	position : absolute;
+	margin : 4px 0px 0px 459px;	
+}
+body.IE7 .resume-details_holder .status-icons ul li.notes {
+	top : -27px;
+	position : relative;
+}
+body.IE7 .resume-details_holder .status-icons ul li.notes .count-holder {
+	position : relative;
+	top : -2px;
+}
+.resume-details_holder .status-icons ul li.viewed {
+	position : absolute;
+	margin : 4px 0px 0px 549px;	
+}
+body.IE7 .resume-details_holder .status-icons ul li.viewed {
+	top : -46px;
+	position : relative;
+}
+.resume-details_holder .status-icons ul li:first-child {
+    margin-left: 0;
+}
+
+.resume-details_holder .status-icons ul li a {
+    color: #8C8C8C;
+    text-decoration: underline;
+}    
+.resume-details_holder .status-icons ul li .contact-locked-icon {
+	background-position : -35px -155px;
+	width : 118px;
+	height : 29px;
+	margin : -2px 20px 0px 1px;
+	display : block;
+}
+.resume-details_holder .status-icons ul li .contact-unlocked-icon {
+	background-position : -1px -155px;
+	width : 31px;
+	height : 29px;
+	margin : -2px 20px 0px 1px;
+	display : block;
+}
+.resume-header .flag-holder {
+	float: right;
+	width: 22px;
+	height: 22px;
+	margin: 30px -57px 0 0;
+}
+
+.resume-header .flag-holder .flag {
+	float: right;	
+	background: url(../../images/employers/view-resume/current-unflagged.png) top left no-repeat;	
+	width: 22px;
+	height: 22px;
+	margin: 0;
+	cursor:pointer;
+}
+.resume-header .flag-holder .flag span {
+	margin-left : 25px;
+	font : Bold 14px Arial;
+	color : white;
+}
+
+.resume-header .flagged .flag {
+	background: url(../../images/employers/view-resume/current-flagged.png) top left no-repeat;
+}
+
+.resume-details {
+    padding: 0 20px 20px 20px;
+}
+
+.resume-details .tabs-nav {
+    width: 644px;
+	padding-left : 0px;
+	margin : 0px 0px -5px -2px;
+}
+
+.resume-details .tabs-nav .tab-content-inner {
+	background : none;
+}
+
+.resume-details .tabs-nav li {
+    z-index: 1;
+    position: relative;
+	min-width : 10px;
+	background : url(../../images/employers/view-resume/resume-tabs.png) no-repeat;
+	font-size : 11px;
+	margin : 2px 0px -2px 1px;
+	padding : 0px 4px 0px 4px;
+}
+
+.resume-details .tabs-nav li:hover {
+	height : 45px;
+	margin-top : -6px;
+}
+.resume-details .tabs-nav li.tabs-selected {
+	height : 45px;
+	margin-top : -12px;
+}
+
+.resume-details .tabs-nav li:hover .tab-content-inner, .resume-details .tabs-nav li.tabs-selected .tab-content-inner {
+	padding-top : 20px;
+}
+.resume-details .tabs-nav li.tabs-selected .tab-content-inner {
+	padding-top : 26px;
+}
+
+.resume-details .tabs-nav li#Summary {
+	background-position : 0px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#Summary {
+	width : 68px;
+}
+body.IE9 .resume-details .tabs-nav li#Summary.tabs-selected {
+	width : 72px;
+}
+.resume-details .tabs-nav li#Summary:hover {
+	background-position : 0px -37px;
+}
+ .resume-details .tabs-nav li#Summary.tabs-selected {
+	background-position : 0px -37px;
+	padding : 0px 2px 0px 2px;
+}
+.resume-details .tabs-nav li#Summary.tabs-selected .tab-content-inner {
+	padding : 26px 4px 0px 4px;
+}
+
+.resume-details .tabs-nav li#Employment {
+	background-position : -77px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#Employment {
+	width : 84px;
+}
+body.IE9 .resume-details .tabs-nav li#Employment.tabs-selected {
+	width : 92px;
+	margin-right : 0px;
+}
+.resume-details .tabs-nav li#Employment.tabs-selected {
+	background-position : 0px -37px;
+	padding : 0px 0px 0px 0px;
+	margin-right : -2px;
+}
+.resume-details .tabs-nav li#Employment:hover, .resume-details .tabs-nav li#Employment.tabs-selected {
+	background-position : -77px -37px;
+}
+
+.resume-details .tabs-nav li#Education {
+	background-position : -169px 0px;
+	padding-right : 5px;
+}
+body.IE9 .resume-details .tabs-nav li#Education {
+	width : 69px;
+}
+body.IE9 .resume-details .tabs-nav li#Education.tabs-selected {
+	width : 78px;
+}
+.resume-details .tabs-nav li#Education:hover, .resume-details .tabs-nav li#Education.tabs-selected {
+	background-position : -169px -37px;
+}
+.resume-details .tabs-nav li#Education.tabs-selected {
+	padding : 0px 0px 0px 0px;
+}
+
+.resume-details .tabs-nav li#Skills {
+	background-position : -246px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#Skills {
+	width : 43px;
+}
+body.IE9 .resume-details .tabs-nav li#Skills.tabs-selected {
+	width : 48px;
+}
+.resume-details .tabs-nav li#Skills:hover, .resume-details .tabs-nav li#Skills.tabs-selected {
+	background-position : -246px -37px;
+}
+.resume-details .tabs-nav li#Skills.tabs-selected {
+	padding : 0px 1px 0px 2px;
+}
+
+.resume-details .tabs-nav li#Professional {
+	background-position : -297px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#Professional {
+	width : 82px;
+}
+body.IE9 .resume-details .tabs-nav li#Professional.tabs-selected {
+	width : 90px;
+}
+.resume-details .tabs-nav li#Professional:hover, .resume-details .tabs-nav li#Professional.tabs-selected  {
+	background-position : -297px -37px;
+}
+.resume-details .tabs-nav li#Professional.tabs-selected {
+	padding : 0px 0px 0px 0px;
+}
+.resume-details .tabs-nav li#Professional.tabs-selected .tab-content-inner {
+	padding : 26px 3px 0px 3px;
+}
+
+.resume-details .tabs-nav li#Personal {
+	background-position : -387px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#Personal {
+	width : 62px;
+}
+body.IE9 .resume-details .tabs-nav li#Personal.tabs-selected {
+	width : 70px;
+}
+.resume-details .tabs-nav li#Personal:hover, .resume-details .tabs-nav li#Personal.tabs-selected {
+	background-position : -387px -37px;
+}
+.resume-details .tabs-nav li#Personal.tabs-selected {
+	padding : 0px 0px 0px 0px;
+}
+
+.resume-details .tabs-nav li#CoverLetter {
+	background-position : -457px 0px;
+}
+body.IE9 .resume-details .tabs-nav li#CoverLetter {
+	width : 82px;
+}
+.resume-details .tabs-nav li#CoverLetter:hover, .resume-details .tabs-nav li#CoverLetter.tabs-selected {
+	background-position : -457px -37px;
+}
+.resume-details .tabs-nav li#CoverLetter.tabs-selected {
+	padding : 0px 0px 0px 0px;
+}
+
+.resume-details .tabs-nav li#FullResume {
+	background-position : -547px 0px;
+	width : 88px;
+}
+.resume-details .tabs-nav li#FullResume:hover, .resume-details .tabs-nav li#FullResume.tabs-selected {
+	background-position : -547px -37px;
+}
+
+
+.resume-details .tabs-nav .tabs-selected {
+    z-index: 3;
+	font-weight : bold;
+}
+
+.resume-details .tabs-nav .tab-content-outer {
+    font-size: 96%;
+	padding-right : 1px;
+	background : none;	
+}
+
+.resume-details .tabs-container{
+    padding: 0;
+    background: none;
+    border-top: none;
+    z-index: 2;
+    position: relative;
+    margin: -3px 0 0 0;
+}
+
+.resume-details .tab-content-inner {
+	padding : 12px 5px 0px 5px;
+}
+
+.resume-details .tabs-container .resume-header-bg{
+    margin:0;
+    padding:0;
+    border:none;
+    width: 654px;
+    height: 13px;
+    background: url(../../images/employers/view-resume/resume-header.png) top left no-repeat transparent;
+    -webkit-box-shadow: #5f8497 10px 10px 3px;
+    -moz-box-shadow: #5f8497 10px 10px 3px;
+    box-shadow: #5f8497 10px 10px 3px;
+    -webkit-border-radius: 0 10px 0 0;
+    -moz-border-radius: 0 10px 0 0;
+    border-radius: 0 10px 0 0;
+}
+
+.resume-details .tabs-container .resume-bg{
+    padding: 15px 0 0 25px;
+    /*height: 615px;*/
+    width: 629px;
+    background: url(../../images/employers/view-resume/resume-bg.png) top left repeat-y transparent;
+    -webkit-box-shadow: #5f8497 10px 10px 3px;
+    -moz-box-shadow: #5f8497 10px 10px 3px;
+    box-shadow: #5f8497 10px 10px 3px;
+}
+
+.resume-details .tabs-inner-container{
+    padding: 5px 20px 5px 5px;
+    height: 615px;
+    width: 604px;
+    overflow: auto;
+}
+
+.resume-details .tabs-container .resume-footer-bg{
+    margin:0;
+    padding:0;
+    border:none;
+    width: 654px;
+    height: 28px;
+    background: url(../../images/employers/view-resume/resume-bg.png) top left repeat-y transparent;
+    -webkit-box-shadow: #5f8497 10px 10px 3px;
+    -moz-box-shadow: #5f8497 10px 10px 3px;
+    box-shadow: #5f8497 10px 10px 3px;
+}
+
+.resume-details .tabs-container .resume-photo_holder {
+    margin:0;
+    padding:0;
+    border:none;
+    width: 100px;
+    height: 125px;
+    background: transparent;
+    float:right;
+    position: relative;
+}
+
+.resume-details .tabs-container .resume-photo_frame {
+    margin:0;
+    padding:0;
+    border:none;
+    width: 100px;
+    height: 125px;
+    background: transparent;
+    float:left;
+    position:absolute;
+    z-index: 1;
+}
+
+.resume-details .resume_section{
+    padding: 0 0 25px 0;
+}
+
+.resume-details .summary-container .employment-history_section, .resume-details .summary-container .education-history_section, .resume-details .self-summary_section {
+    width: 480px;
+}
+
+.resume-details .employment-container .employment-history_section, .resume-details .education-container .education-history_section, .resume-details .summary-container .self-summary_section {
+    width: 100%;
+}
+
+.resume-details .resume_section .resume-heading{
+    color: #6B95AA;
+    font-size: 150%;
+    padding: 0 0 0 0;
+       
+}
+
+.resume-details .resume_section .resume-content{
+    border-top: solid 1px #B8C1CB;
+    font-size: 85%;
+    padding: 10px 0 20px 0;
+    margin: -2px 0 0 0;
+}
+
+.resume-details .resume_section .resume-content table{
+    width:100%;
+}
+
+.resume-details .resume_section .resume-content td.duration{
+    width: 40%;
+    vertical-align: top;
+}
+
+.resume-details .resume_section .resume-content td.description{
+    width: 60%;
+    vertical-align: top;
+}
+
+.resume-details .employment-history_section .resume-content .title,
+.resume-details .education-history_section .resume-content .title {
+    font-size: 120%;
+}
+
+.resume-details .employment-history_section .resume-content .company,
+.resume-details .education-history_section .resume-content .institution {
+    color: #8E8E88;
+}
+
+.resume-details .resume_section .resume-content .completion {
+    color: #4477AA;
+}
+
+.resume-details .self-summary_section .resume-content{
+    font-size: 100%;
+    padding: 15px 0 20px 0;
+}
+.resume-details .professional .desired-salary span {
+	float : left;
+	width : 300px;
+}
+
+.employment-container .resume-content td, .employment-container .education-content td{
+    width: 100%;
+}
+
+.employment-container .employment-history_section .resume-content .title a,
+.education-container .education-history_section .resume-content .title a {
+    color: #4477AA;
+    text-decoration: none;
+    cursor: default;
+}
+
+.employment-container .employment-history_section .resume-content .title a span,
+.education-container .education-history_section .resume-content .title a span {
+    text-decoration: none;
+}
+
+.employment-container .resume-content td.last-data, .education-container .resume-content td.last-data{
+    padding: 0 0 15px 0;
+}
+
+.resume-details .skills_section .resume-content{
+    font-size: 96%;
+    padding: 15px 0 20px 0;
+}
+
+.resume-details .professional_section .resume-content td,
+.resume-details .personal_section .resume-content td,
+.resume-details .education-history_section .resume-content .education-level td {
+    vertical-align: top;
+    padding: 5px 0;
+}
+
+.resume-details .professional_section .resume-content tr td:first-child,
+.resume-details .personal_section .resume-content tr td:first-child {
+    color: #4477AA;
+    width: 20%;
+}
+
+.resume-details .education-history_section .resume-content .education-level tr td:first-child {
+    color: #4477AA;
+    width: 40%;
+    vertical-align: top;
+}
+
+.resume-details .employment-history_section .resume-content .profession tr td:first-child {
+    color: #4477AA;
+    width: 40%;
+    vertical-align: top;
+}
+
+.resume-notes_holder{
+    width: 662px;
+    padding: 0 16px;
+}
+
+.resume-notes_holder .notes-textarea{
+    width: 630px;
+}
+
+/* Add to Folder dropdown */
+
+.action-items .add-to-folder{
+    position: relative;
+    *position: inherit;
+}
+
+.add-to-folder_dropdown {
+    position: absolute;
+    z-index: 5;
+}
+
+.add-to-folder_dropdown_holder {
+    background-color: #6C95A8;
+    border: solid 1px #527383;
+    padding: 8px;
+    width:188px;
+    color: #FFFFFF;
+}
+
+.add-to-folder_dropdown .list-item {
+    padding: 0 0 5px 8px;    
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-folder_dropdown .list-item .add-to-folder {
+    background: url("../../images/employers/icons/folder.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-folder_dropdown .list-item:hover .add-to-folder {
+    font-weight:bold;
+}
+
+.resume_holder .folders-dropdown-list .divider {
+    background: url("../../images/employers/view-resume/hr.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 1px;
+    margin: 5px 8px 0 8px;
+    padding: 0 10px 5px 0;
+    width: 163px;
+}
+
+.resume_holder .folders-dropdown-list .large-private-folder-list, .resume_holder .folders-dropdown-list .large-shared-folder-list {
+    height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-folder_dropdown .add-to-new-folder {
+    background: url("../../images/universal/action-icons/add.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+/* Add to JobAd dropdown */
+
+.action-items .add-to-jobad{
+    position: relative;
+    *position: inherit;
+}
+
+.add-to-jobad_dropdown {
+    position: absolute;
+    z-index: 4;
+}
+
+.add-to-jobad_dropdown_holder {
+    background-color: #6C95A8;
+    border: solid 1px #527383;
+    padding: 8px;
+    width:188px;
+    color: #FFFFFF;
+}
+
+.add-to-jobad_dropdown .list-item {
+    padding: 0 0 5px 8px;    
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-jobad_dropdown .list-item .add-to-jobad {
+    background: url("../../images/employers/icons/job-ad.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-jobad_dropdown .list-item:hover .add-to-jobad {
+    font-weight:bold;
+}
+
+.resume_holder .jobads-dropdown-list .divider {
+    background: url("../../images/employers/view-resume/hr.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 1px;
+    margin: 5px 8px 0 8px;
+    padding: 0 10px 5px 0;
+    width: 163px;
+}
+
+.resume_holder .jobads-dropdown-list .large-private-jobad-list, .resume_holder .jobads-dropdown-list .large-shared-jobad-list {
+    height: 120px;
+    margin: 0 -8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.resume_holder .resume-menu-header .action-items .add-to-jobad_dropdown .add-to-new-jobad {
+    background: url("../../images/universal/action-icons/add.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    min-height: 13px;
+    padding: 1px 0 2px 21px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.resume_holder .resume-menu-header .action-items .dropdown {
+    display: none;
+}

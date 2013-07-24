@@ -1,0 +1,195 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B344403-AB76-4420-BA97-115A147F7B7D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NUnitAspTest</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NUnit.Extensions.Asp.Test</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <Name>nunit.framework</Name>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspTester\ButtonTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\CheckBoxTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\DataGridTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\DropDownListTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\ImageButtonTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\LabelTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\LinkButtonTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\ListBoxTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\ListControlTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\ListItemCollectionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\RadioButtonTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\TextBoxTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\UserControlTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AspTester\ValidationSummaryTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTagTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlAnchorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputCheckBoxTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTester\HtmlInputFileTest.cs" />
+    <Compile Include="HttpClientCredentialsTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpClientTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NUnitAspTestCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParserTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PerformanceTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SetupTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnicodeTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebAssertionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NUnitAsp\NUnitAsp.csproj">
+      <Project>{18E46492-3A7D-4BCC-88D2-2B598D955348}</Project>
+      <Name>NUnitAsp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+    <None Include="Filler1.pdf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

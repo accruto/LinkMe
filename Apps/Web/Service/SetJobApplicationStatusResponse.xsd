@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.linkme.com.au/" elementFormDefault="qualified" targetNamespace="http://www.linkme.com.au/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema" />
+  <xs:import schemaLocation="Types.xsd" />
+
+  <!-- SetJobApplicationStatus response version 1.0 -->
+  <xs:element name="SetJobApplicationStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ReturnCode" type="tns:WebServiceReturnCode" />
+        <xs:element name="JobApplications" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence />
+            <!-- The number of job applications for which the status was updated by this request or was already
+            set to the same value. -->
+            <xs:attribute name="updated" use="required" type="xs:nonNegativeInteger" />
+            <!-- The number of job applications that failed to be updated. -->
+            <xs:attribute name="failed" use="required" type="xs:nonNegativeInteger" />
+            <!-- Note that the total of updated + failed should equal the total number of input job applications. -->
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Errors" type="tns:Errors" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="tns:SetJobApplicationStatusResponseVersion" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="SetJobApplicationStatusResponseVersion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

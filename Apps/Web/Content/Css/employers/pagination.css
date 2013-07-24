@@ -1,0 +1,138 @@
+.pagination-container {
+	background: url("../../images/new-search/pagination/pagination-bg.png") repeat-x scroll left top #FFFFFF;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 8px 0 8px 0;
+    /*position: static;*/
+    width: 694px;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 85%;
+}
+
+.pagination-holder {
+    margin: auto;
+    width: 680px;
+    text-align: center;
+    color: #BDBDBD;
+}
+
+.pagination-holder div, .pagination-holder a {
+    margin: auto;
+    /*float: left;*/
+    display: inline;
+    text-align: center;
+    padding: 0 8px;    
+}
+
+.pagination-holder .first, .pagination-holder .previous {
+    /*float: left;*/
+    display: inline;
+    top:0;
+    left:0;
+}
+
+.pagination-holder .next, .pagination-holder .last {
+    /*float: right;*/
+    display: inline;
+}
+
+.pagination-holder .first {
+    background: url(../../images/new-search/pagination/arrow-first.png) left center no-repeat; 
+    padding: 0 0 1px 18px; 
+    *padding: 0 0 0px 18px;
+    display: inline; 
+    min-height: 13px;
+    *zoom: 1;   
+}
+
+.pagination-holder .last {
+    background: url(../../images/new-search/pagination/arrow-last.png) right center no-repeat; 
+    padding: 0 18px 1px 0; 
+    *padding: 0 18px 0px 0;
+    display: inline; 
+    min-height: 13px;
+    *zoom: 1;   
+}
+
+.pagination-holder div.page-holder {
+    width: 440px;
+    text-align: center;
+    font-size: 90%;
+    padding: 2px 0px 2px 0px;
+}
+
+.pagination-holder div.page-numbers {
+    width: 440px;
+    margin:auto;
+    padding: 0 0 8px 0;
+    *padding: 0 5px 0 5px;
+}
+
+.pagination-holder .page-numbers div, .pagination-holder .page-numbers a {
+    padding: 0 2px 8px 2px;
+    *padding: 0 4px 0 4px;
+    color: #1155EE;
+    text-decoration: underline;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+.pagination-holder .page-numbers div:hover {
+    color: #FF6600;
+}
+
+.pagination-holder .page-numbers div.page-selected {
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #CEDCFB;
+    background-color: #F1F5FC;
+    margin: -6px 0 0;
+    padding: 7px 5px 8px 5px;
+    *padding: 0px 5px;
+    cursor: default;
+}
+
+.pagination-holder .active .underline {
+    text-decoration: underline;
+}
+
+.pagination-holder .active {
+    color: #1155EE;
+    text-decoration: none;
+    font-weight:normal;
+    cursor: pointer;
+}
+
+.pagination-holder .secondary {
+    color: #91B0F6;
+    text-decoration: underline;
+}
+
+.pagination-results-container {
+    width:692px;
+    height:30px;  
+    font-size: 85%;
+    margin: 15px 0 0 0;
+}
+
+.pagination-results_dropdown_field {
+    float: right;
+}
+
+.pagination-results_dropdown {
+    width: 50px;
+    font-size: 98%;  
+}
+
+.pagination-results-holder {
+    float: left;
+    padding: 3px 0 0 1px;
+}
+
+.pagination-ellipsis {
+    /*float: left;*/
+    padding: 0 3px 0 3px;
+    display: inline;
+}
+

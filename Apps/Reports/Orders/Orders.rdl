@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="LinkMeDataSource">
+      <rd:DataSourceID>164efa1e-c817-4e06-8ff7-5399fbf19ecb</rd:DataSourceID>
+      <DataSourceReference>LinkMeDataSource</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd(DateInterval.Month, -1, DateAdd(DateInterval.Day, -1 * DatePart(DateInterval.Day, Today) + 1, Today))</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd(DateInterval.Day, -1 * DatePart(DateInterval.Day, Today) + 1, Today)</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="SubTitle">
+        <Top>1.75cm</Top>
+        <Width>21.5cm</Width>
+        <Style>
+          <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.SubTitle)</Color>
+          <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.SubTitle)</FontFamily>
+          <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.SubTitle)</FontSize>
+          <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.SubTitle)</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Format(Parameters!StartDate.Value, "d-MMM-yyy") &amp; " to " &amp; Format(Parameters!EndDate.Value, "d-MMM-yyy")</Value>
+      </Textbox>
+      <Line Name="HeaderLine">
+        <Top>2.75cm</Top>
+        <Width>27.01058cm</Width>
+        <Style>
+          <BorderColor>
+            <Default>=LinkMe.Apps.Reports.Styles.LineColor(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderColor>
+          <BorderStyle>
+            <Default>=LinkMe.Apps.Reports.Styles.LineStyle(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>=LinkMe.Apps.Reports.Styles.LineWidth(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderWidth>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="Title">
+        <Top>1cm</Top>
+        <Width>21.5cm</Width>
+        <Style>
+          <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.Title)</Color>
+          <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.Title)</FontFamily>
+          <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.Title)</FontSize>
+          <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.Title)</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value />
+      </Textbox>
+      <Textbox Name="ReportName">
+        <Top>0.25cm</Top>
+        <Width>21.5cm</Width>
+        <Style>
+          <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.ReportName)</Color>
+          <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.ReportName)</FontFamily>
+          <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.ReportName)</FontSize>
+          <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.ReportName)</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.25cm</Top>
+        <Width>4.49735cm</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <Left>22.5cm</Left>
+        <Height>1.69312cm</Height>
+        <Value>linkme_logo</Value>
+      </Image>
+    </ReportItems>
+    <Height>3cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>ace61cdf-309e-4f14-a500-92f9077fca06</rd:ReportID>
+  <CodeModules>
+    <CodeModule>LinkMe.Framework.Reports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6</CodeModule>
+    <CodeModule>LinkMe.Apps.Reports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b0227c645ed34d6</CodeModule>
+  </CodeModules>
+  <EmbeddedImages>
+    <EmbeddedImage Name="linkme_logo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="Orders">
+      <Fields>
+        <Field Name="Time">
+          <DataField>Time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Price">
+          <DataField>Price</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Products">
+          <DataField>Products</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>LinkMeDataSource</DataSourceName>
+        <CommandText>SELECT
+	o.time AS Time,
+	u.FirstName + ' ' + u.LastName AS Name,
+	g.displayName AS Company,
+	u.emailAddress AS Email,
+	o.priceInclTax AS Price,
+	(
+		SELECT
+			MAX(CASE seq WHEN 1 THEN ProductName ELSE '' END) +
+			MAX(CASE seq WHEN 2 THEN ' AND ' + ProductName ELSE '' END)
+		FROM
+			(
+				SELECT
+					p1.name AS ProductName,
+                    (SELECT
+						COUNT(*)
+					FROM
+						Product AS p2
+					INNER JOIN
+						ProductOrderItem AS i2 ON i2.productId = p2.id
+					WHERE
+						i2.orderId = o.id
+                        AND p2.name &lt;= p1.name
+					) AS seq
+				FROM
+					Product AS p1
+				INNER JOIN
+					ProductOrderItem AS i1 ON i1.productId = p1.id
+				WHERE
+					i1.orderId = o.id
+			) AS x
+	) AS Products
+FROM
+	ProductOrder AS o
+INNER JOIN
+	ProductReceipt AS r ON r.orderId = o.id
+INNER JOIN
+	RegisteredUser AS u ON u.id = o.purchaserId
+INNER JOIN
+	Employer AS e ON e.id = u.id
+INNER JOIN
+	Organisation AS g ON g.id = e.organisationId
+WHERE
+	o.time &gt;= @startDate AND o.time &lt; @endDate
+ORDER BY
+	o.time</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@startDate">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@endDate">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>27.25cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>Orders</DataSetName>
+        <Top>0.25cm</Top>
+        <Width>26.75cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Time">
+                      <rd:DefaultName>Time</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatDateTime(Fields!Time.Value, DateFormat.GeneralDate)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Name">
+                      <rd:DefaultName>Name</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Company.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Email">
+                      <rd:DefaultName>Email</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Email.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Product">
+                      <rd:DefaultName>Product</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Products.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PriceExclGst">
+                      <rd:DefaultName>PriceExclGst</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableText)</Color>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableText)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableText)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableText)</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Fields!Price.Value, 0)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Time</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Company</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Email</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Products</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderWidth(LinkMe.Apps.Reports.StyleItem.TableHeader, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderWidth>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableHeader)</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Price</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>6cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.88492cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableHeader)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableFooter)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableFooter)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableFooter)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableFooter)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.TableFooter)</Color>
+                        <BorderColor>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderColor(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Left)</Left>
+                          <Right>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Right)</Right>
+                          <Top>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Top)</Top>
+                          <Bottom>=LinkMe.Apps.Reports.Styles.BorderStyle(LinkMe.Apps.Reports.StyleItem.TableFooter, LinkMe.Apps.Reports.BorderLocation.Bottom)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontFamily>
+                        <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontSize>
+                        <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.TableFooter)</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=FormatCurrency(Sum(Fields!Price.Value), 0)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.25cm</Left>
+      </Table>
+    </ReportItems>
+    <Height>10.5cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Line Name="line2">
+        <Width>27.01058cm</Width>
+        <Style>
+          <BorderColor>
+            <Default>=LinkMe.Apps.Reports.Styles.LineColor(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderColor>
+          <BorderStyle>
+            <Default>=LinkMe.Apps.Reports.Styles.LineStyle(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>=LinkMe.Apps.Reports.Styles.LineWidth(LinkMe.Apps.Reports.StyleItem.NonBodyLine)</Default>
+          </BorderWidth>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <Height>0cm</Height>
+      </Line>
+      <Textbox Name="Paging">
+        <Top>0.25cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.FooterText)</Color>
+          <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.FooterText)</FontFamily>
+          <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.FooterText)</FontSize>
+          <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.FooterText)</FontWeight>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>19cm</Left>
+        <Value>="Page " + Globals!PageNumber.ToString() + " of " + Globals!TotalPages.ToString()</Value>
+      </Textbox>
+      <Textbox Name="ExecutionTime">
+        <Top>0.25cm</Top>
+        <Width>9cm</Width>
+        <Style>
+          <Color>=LinkMe.Apps.Reports.Styles.FontColor(LinkMe.Apps.Reports.StyleItem.FooterText)</Color>
+          <FontFamily>=LinkMe.Apps.Reports.Styles.FontFamily(LinkMe.Apps.Reports.StyleItem.FooterText)</FontFamily>
+          <FontSize>=LinkMe.Apps.Reports.Styles.FontSize(LinkMe.Apps.Reports.StyleItem.FooterText)</FontSize>
+          <FontWeight>=LinkMe.Apps.Reports.Styles.FontWeight(LinkMe.Apps.Reports.StyleItem.FooterText)</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Value>=Format(Globals!ExecutionTime, "U")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.88492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

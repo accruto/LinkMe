@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinkMe.Domain.Roles.Candidates.CandidateDiariesCommand" Collapsed="true">
+    <Position X="3" Y="1.5" Width="2.5" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Candidates.ICandidatesRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="1.75" />
+        <Point X="5.875" Y="1.75" />
+        <Point X="5.875" Y="2.25" />
+        <Point X="6.5" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAAABACAAAABAAAAAAQAAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>Candidates\CandidateDiariesCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Candidates.CandidatesWorkflowCommand" Collapsed="true">
+    <Position X="3" Y="2.5" Width="2.5" />
+    <AssociationLine Name="_repository" Type="LinkMe.Domain.Roles.Candidates.ICandidatesRepository" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="2.812" />
+        <Point X="5.875" Y="2.812" />
+        <Point X="5.875" Y="2.25" />
+        <Point X="6.5" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAABACAAAAEAAAAAAAAQIAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Candidates\CandidatesWorkflowCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Candidates.Data.CandidatesRepository" Collapsed="true">
+    <Position X="8.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAECAARAAAAEABCQAAGEEAIMAQIAAQCKAAAAEAAA=</HashCode>
+      <FileName>Candidates\Data\CandidatesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LinkMe.Domain.Roles.Candidates.Lens.MsLensCommand" Collapsed="true">
+    <Position X="3" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACQBAAEA6AAAAAAAgAuAAgQQKSCAAAAFAAEhA=</HashCode>
+      <FileName>Candidates\Lens\MsLensCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="LinkMe.Domain.Roles.Candidates.ICandidatesRepository" Collapsed="true">
+    <Position X="6.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAEgRAACgAAQAAAAAAAAAEAAAAAACCAAAAAAQA=</HashCode>
+      <FileName>Candidates\ICandidatesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Candidates.ICandidateDiariesCommand" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgBAACgAAAAAAAAAAAAEAAAAAAACAAAAAAQA=</HashCode>
+      <FileName>Candidates\ICandidateDiariesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Candidates.ICandidatesWorkflowCommand" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAggEAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Candidates\ICandidatesWorkflowCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LinkMe.Domain.Roles.Candidates.Lens.ILensCommand" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAACAAAAAACCAAAAAAAAAA=</HashCode>
+      <FileName>Candidates\Lens\ILensCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

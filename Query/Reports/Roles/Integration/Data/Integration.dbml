@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinkMe" Class="IntegrationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LOCAL);Initial Catalog=LinkMe;Integrated Security=True" SettingsObjectName="LinkMe.Query.Reports.Properties.Settings" SettingsPropertyName="LinkMeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JobAdExportCloseEvent" Member="JobAdExportCloseEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdExportCloseEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="failed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="closed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="notFound" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportCloseEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdImportPostEvent" Member="JobAdImportPostEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdImportPostEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="posterId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="failed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="posted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="closed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="updated" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="duplicates" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ignored" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdImportPostEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdExportFeedEvent" Member="JobAdExportFeedEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdExportFeedEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportFeedEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdExportFeedIdEvent" Member="JobAdExportFeedIdEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdExportFeedIdEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="WhenChanged" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportFeedIdEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdExportPostEvent" Member="JobAdExportPostEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdExportPostEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="failed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="posted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="updated" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportPostEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdImportCloseEvent" Member="JobAdImportCloseEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdImportCloseEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="failed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="closed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="notFound" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdImportCloseEvent" Member="JobAdIntegrationEventEntity" ThisKey="id" OtherKey="id" Type="JobAdIntegrationEventEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAdIntegrationEvent" Member="JobAdIntegrationEventEntities" AccessModifier="Internal">
+    <Type Name="JobAdIntegrationEventEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="success" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="integratorUserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="jobAds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportCloseEvent" Member="JobAdExportCloseEventEntity" ThisKey="id" OtherKey="id" Type="JobAdExportCloseEventEntity" Cardinality="One" />
+      <Association Name="JobAdIntegrationEvent_JobAdImportPostEvent" Member="JobAdImportPostEventEntity" ThisKey="id" OtherKey="id" Type="JobAdImportPostEventEntity" Cardinality="One" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportFeedEvent" Member="JobAdExportFeedEventEntity" ThisKey="id" OtherKey="id" Type="JobAdExportFeedEventEntity" Cardinality="One" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportFeedIdEvent" Member="JobAdExportFeedIdEventEntity" ThisKey="id" OtherKey="id" Type="JobAdExportFeedIdEventEntity" Cardinality="One" />
+      <Association Name="JobAdIntegrationEvent_JobAdExportPostEvent" Member="JobAdExportPostEventEntity" ThisKey="id" OtherKey="id" Type="JobAdExportPostEventEntity" Cardinality="One" />
+      <Association Name="JobAdIntegrationEvent_JobAdImportCloseEvent" Member="JobAdImportCloseEventEntity" ThisKey="id" OtherKey="id" Type="JobAdImportCloseEventEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IntegratorUser" Member="IntegratorUserEntities" AccessModifier="Internal">
+    <Type Name="IntegratorUserEntity" AccessModifier="Internal">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="password" Type="System.String" DbType="Char(24) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="integratorId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="permissions" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

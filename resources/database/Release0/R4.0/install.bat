@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:install_new_content.sql,install_new_resume_complete_status.sql,update_resume_complete_status.sql,update_database_version_table.sql

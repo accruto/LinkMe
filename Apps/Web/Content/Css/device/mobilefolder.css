@@ -1,0 +1,38 @@
+﻿.mobilefolder {
+	width : 100%;
+	padding : 0 0.75em;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-o-box-sizing : border-box;
+	box-sizing : border-box;
+	float : left;
+}
+.mobilefolder > .title {
+	font-size : 2.25em;
+	font-weight : Bold;
+	color : #464646;
+	margin-bottom : 0.5em;
+}
+.mobilefolder .noresults .desc {
+	font-size : 1.875em;
+	color : #464646;
+	margin : 2em 0 1.5em 0;
+	line-height : 1.2em;
+}
+.mobilefolder .noresults ul li {
+	font-size : 1.875em;
+	color : #307EEC;
+	list-style-position : inside;
+	line-height : 1.5em;
+}
+.mobilefolder .noresults ul li a {
+	font-weight : Bold;
+	color : #307EEC;
+	display : inline;
+}
+.mobilefolder .noresults ul li span {
+	color : #464646;
+}
+.mobilefolder .row.jobad {
+	margin : 0 0 0.5em 0;
+}

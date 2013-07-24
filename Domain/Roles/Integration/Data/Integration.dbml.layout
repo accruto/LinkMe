@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Integration">
+  <DataContextMoniker Name="/IntegrationDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5b4b178f-5762-418d-9ef0-5d27352b75bb" absoluteBounds="3, 1.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/IntegrationDataContext/AtsIntegratorEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="805a15ff-9b3d-4c16-ac1e-c836b15e91ae" absoluteBounds="3.015, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="690a10fe-0c6a-4975-bc16-bb04f11973a3" absoluteBounds="4.75, 3.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/IntegrationDataContext/IntegratorUserEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12dbccb1-eee1-4399-a87e-67604a05ab65" absoluteBounds="4.765, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.8749995 : 3.06899251302083); (3.8749995 : 4.76044840494792); (4.75 : 4.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IntegrationDataContext/AtsIntegratorEntity/AtsIntegrator_IntegratorUser" />
+      <nodes>
+        <classShapeMoniker Id="5b4b178f-5762-418d-9ef0-5d27352b75bb" />
+        <classShapeMoniker Id="690a10fe-0c6a-4975-bc16-bb04f11973a3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

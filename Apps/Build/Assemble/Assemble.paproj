@@ -1,0 +1,419 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{5C0D50D9-93DE-433e-9B03-6BD9C315930A}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{7DDA4DA9-B588-4346-A29C-CC60A5DE1265}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Reports\LinkMe.Apps.Reports.dll">
+      <Guid>{45C65C33-198B-499c-BD95-2E0A588EDC92}</Guid>
+      <Link>Bin\LinkMe.Apps.Reports.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{4590FE7A-DA28-4741-89BC-360141CB66E6}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Asp\LinkMe.Apps.Asp.dll">
+      <Guid>{A6254346-B6F5-4812-8C9D-FA84B4CAC188}</Guid>
+      <Link>Bin\LinkMe.Apps.Asp.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{AE7DD592-FC80-484d-B7D2-783C8057858C}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Agents\LinkMe.Apps.Agents.dll">
+      <Guid>{E714F2F6-194A-4e6f-9F5E-D0640878DA26}</Guid>
+      <Link>Bin\LinkMe.Apps.Agents.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{8571584E-527D-4630-ABC0-3E02DE0EF545}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Presentation\LinkMe.Apps.Presentation.dll">
+      <Guid>{E0C1A3C8-66CB-4161-B169-5BF0DB4C3064}</Guid>
+      <Link>Bin\LinkMe.Apps.Presentation.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{D586FD37-9E86-4c40-9DDA-5E5378A8B45E}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Services\LinkMe.Apps.Services.dll">
+      <Guid>{5FC05779-0CF6-4b9e-A620-F8E60FFA33F4}</Guid>
+      <Link>Bin\LinkMe.Apps.Services.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{05016B90-20F5-40ad-906C-DD18B50AAFA4}</GacGuid>
+    </Assemble>
+    <Assemble Include="..\..\Pageflows\LinkMe.Apps.Pageflows.dll">
+      <Guid>{61EEC373-3DFF-4629-94EB-7632A6E5C33E}</Guid>
+      <Link>Bin\LinkMe.Apps.Pageflows.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{F1B1B07C-369B-4A58-8804-04B1EAC4F462}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Common\LinkMe.Common.dll">
+      <Guid>{A435FF00-A984-4418-80C2-69033D4DD572}</Guid>
+      <Link>Bin\LinkMe.Common.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{3C6F833F-1E1F-481c-B5A2-481AA5B25333}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Utility\LinkMe.Utility.dll">
+      <Guid>{688228F7-7056-4454-93E5-198C428AD2A0}</Guid>
+      <Link>Bin\LinkMe.Utility.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{2B808401-CDCA-4b42-8FCB-30994AD7930C}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\WebControls\LinkMe.WebControls.dll">
+      <Guid>{22D2C57A-D62B-4355-A64C-9215CDD77305}</Guid>
+      <Link>Bin\LinkMe.WebControls.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{B5216CF5-9361-4036-802B-C29B920F914B}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Workflow\LinkMe.Workflow.dll">
+      <Guid>{97DE59C4-B2A2-4860-BDF8-8DDD8E2F8689}</Guid>
+      <Link>Bin\LinkMe.Workflow.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{2872DDFD-8EBA-427a-A3D2-0CCC1A890106}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Workflow\Components\LinkMe.Workflow.Components.dll">
+      <Guid>{DFBF71CF-6965-4db0-B091-A07ABB53078E}</Guid>
+      <Link>Bin\LinkMe.Workflow.Components.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{EC58C49C-BEF4-467c-B927-4C08F6CA87D7}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Workflow\Host\LinkMe.Workflow.Host.dll">
+      <Guid>{E86595A5-ECAE-4647-A0F3-B3C7E02E024E}</Guid>
+      <Link>Bin\LinkMe.Workflow.Host.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{379D16F1-57F2-4b73-9D5E-3E0C5E7B8DEA}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Workflow\Design\LinkMe.Workflow.Design.dll">
+      <Guid>{0790EC8F-5994-4067-B030-874BA2AD3E27}</Guid>
+      <Link>Bin\LinkMe.Workflow.Design.dll</Link>
+      <InstallInGac>True</InstallInGac>
+      <GacGuid>{6D7D24A8-CC9E-4634-8D85-D3BB739681EE}</GacGuid>
+    </Assemble>
+  </ItemGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\Config\email-templates-aat.xml">
+      <Guid>{C3A33996-7597-49e2-A0B2-3ED33AD4D455}</Guid>
+      <Link>Config\email-templates-aat.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aba.xml">
+      <Guid>{1B72159D-4EDD-41c8-B7EB-07C7EFD88399}</Guid>
+      <Link>Config\email-templates-aba.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-acma.xml">
+      <Guid>{4CBE00AE-C886-4556-89CD-CD37FBDC3324}</Guid>
+      <Link>Config\email-templates-acma.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aes.xml">
+      <Guid>{9A32A60E-DA66-4815-9C13-7F5FCC36C8F0}</Guid>
+      <Link>Config\email-templates-aes.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-ahri.xml">
+      <Guid>{64254190-553C-48f8-9DD3-E3FEB8746F8C}</Guid>
+      <Link>Config\email-templates-ahri.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aig.xml">
+      <Guid>{99D0556D-BA59-4673-9AD8-0877523DBE23}</Guid>
+      <Link>Config\email-templates-aig.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aime.xml">
+      <Guid>{E38011F5-6C3D-4863-87C4-7280FA4CDF6F}</Guid>
+      <Link>Config\email-templates-aime.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aimpe.xml">
+      <Guid>{4BAAE9D9-5179-4bc0-8A7B-E8261EA03513}</Guid>
+      <Link>Config\email-templates-aimpe.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-aot.xml">
+      <Guid>{65309AE8-F811-49be-80A7-7C37CF74710B}</Guid>
+      <Link>Config\email-templates-aot.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-astutecareers.xml">
+      <Guid>{36B35E94-CD82-4212-9ED0-6CEC8681FEC8}</Guid>
+      <Link>Config\email-templates-astutecareers.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-atc.xml">
+      <Guid>{33F595F2-9823-4b57-B8CE-94E5AEC5FF25}</Guid>
+      <Link>Config\email-templates-atc.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-autopeople.xml">
+      <Guid>{CB4D793D-981F-4de3-9DB7-18E980733105}</Guid>
+      <Link>Config\email-templates-autopeople.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-businessspectator.xml">
+      <Guid>{3EB7EAF0-9BFB-46d8-B02F-1E0C5E02E20B}</Guid>
+      <Link>Config\email-templates-businessspectator.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-cengage.xml">
+      <Guid>{55A84800-5AB6-410c-811D-2B43937EFC5D}</Guid>
+      <Link>Config\email-templates-cengage.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-ceoinstitute.xml">
+      <Guid>{43777A4B-EEDF-4a54-B251-24C67006B5DA}</Guid>
+      <Link>Config\email-templates-ceoinstitute.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-cipsa.xml">
+      <Guid>{163376D8-8826-4cd0-A12E-66789B358CB1}</Guid>
+      <Link>Config\email-templates-cipsa.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-communityadministrator.xml">
+      <Guid>{CE47CE40-E57B-4213-8CDE-092C5BFD1014}</Guid>
+      <Link>Config\email-templates-communityadministrator.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-corporateculcha.xml">
+      <Guid>{B67AA2CA-3B7A-40ae-9DDF-3926CEB18176}</Guid>
+      <Link>Config\email-templates-corporateculcha.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-crossroads.xml">
+      <Guid>{1A3E261E-877A-4586-BDAD-37CE73FA02BE}</Guid>
+      <Link>Config\email-templates-crossroads.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-cxc.xml">
+      <Guid>{7C15E73F-3820-41c5-B890-206694F6A041}</Guid>
+      <Link>Config\email-templates-cxc.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-e4e.xml">
+      <Guid>{BA626975-4B6C-4fdd-BFC8-21C8BAB193F7}</Guid>
+      <Link>Config\email-templates-e4e.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-employer.xml">
+      <Guid>{537F0AFE-1183-40a1-BFF5-13A21CCED3B6}</Guid>
+      <Link>Config\email-templates-employer.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-finsia.xml">
+      <Guid>{5C5BDA20-5858-4519-A7EC-464CEA7ABC37}</Guid>
+      <Link>Config\email-templates-finsia.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-golfjobs.xml">
+      <Guid>{50580CAA-0268-4304-B384-0D6D8745DB9E}</Guid>
+      <Link>Config\email-templates-golfjobs.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-gta.xml">
+      <Guid>{C1AEADCA-578B-4b21-8F5A-E19845A72C05}</Guid>
+      <Link>Config\email-templates-gta.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-headstart.xml">
+      <Guid>{4122BBBE-CD8E-43e9-B7A5-B3A8FC1B8C06}</Guid>
+      <Link>Config\email-templates-headstart.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-hrnational.xml">
+      <Guid>{F53D7DF8-521A-4378-91BB-1FF9BD68E4D6}</Guid>
+      <Link>Config\email-templates-hrnational.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-indigenouscareers.xml">
+      <Guid>{115F8799-EBB6-4a70-8717-36C861A1105D}</Guid>
+      <Link>Config\email-templates-indigenouscareers.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-internal.xml">
+      <Guid>{D190A54E-1FD6-429b-946C-4B602E0139B7}</Guid>
+      <Link>Config\email-templates-internal.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-interviewgold.xml">
+      <Guid>{5736830E-9486-4c3e-A9D1-B094D799EF93}</Guid>
+      <Link>Config\email-templates-interviewgold.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-itcralink.xml">
+      <Guid>{388EAE18-CD0B-4b48-A068-2C620D4B7EA6}</Guid>
+      <Link>Config\email-templates-itcralink.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-itfutures.xml">
+      <Guid>{82486DBB-188F-45b9-AA39-63F3C6942B93}</Guid>
+      <Link>Config\email-templates-itfutures.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-itwire.xml">
+      <Guid>{C89D102B-2601-4074-802C-AA5740BFA094}</Guid>
+      <Link>Config\email-templates-itwire.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-advanced-finance.xml">
+      <Guid>{561F8A45-E9FD-4bc9-B808-86AE42D91813}</Guid>
+      <Link>Config\email-templates-kaplan-advanced-finance.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-bbus.xml">
+      <Guid>{40C8003A-2821-4e22-8630-12590DD94229}</Guid>
+      <Link>Config\email-templates-kaplan-bbus.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-dipcom.xml">
+      <Guid>{5989AF84-4BA0-4cb2-9F73-4488D5B63E8A}</Guid>
+      <Link>Config\email-templates-kaplan-dipcom.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-finance.xml">
+      <Guid>{9573FA41-5781-451e-8501-7E92DBC98D04}</Guid>
+      <Link>Config\email-templates-kaplan-finance.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-gca.xml">
+      <Guid>{55A5A2DF-A25C-4345-B36E-93EC5E36EF59}</Guid>
+      <Link>Config\email-templates-kaplan-gca.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-mas.xml">
+      <Guid>{BBD29451-CC26-4bec-94E0-170C4A7482E2}</Guid>
+      <Link>Config\email-templates-kaplan-mas.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-mpa.xml">
+      <Guid>{487A4D32-7F43-42b7-AD76-265A96D3D3B8}</Guid>
+      <Link>Config\email-templates-kaplan-mpa.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-real-estate.xml">
+      <Guid>{3CF90EE0-650F-4747-A606-9E8BFDD47391}</Guid>
+      <Link>Config\email-templates-kaplan-real-estate.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-kaplan-tax-accounting.xml">
+      <Guid>{B91216A9-97B4-4633-934D-D3509DE59059}</Guid>
+      <Link>Config\email-templates-kaplan-tax-accounting.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-linkme.xml">
+      <Guid>{1A3AED12-7BD1-4acd-8958-D8D78278240A}</Guid>
+      <Link>Config\email-templates-linkme.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-liveinaustralia.xml">
+      <Guid>{66B593BB-F8E9-44b2-88A4-DDC7DDFF8526}</Guid>
+      <Link>Config\email-templates-liveinaustralia.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-maanz.xml">
+      <Guid>{C1A42196-050A-4970-9B50-AF495E8CB9C0}</Guid>
+      <Link>Config\email-templates-maanz.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-member.xml">
+      <Guid>{9A9620CE-8BB1-42fc-873B-B739FAB851D7}</Guid>
+      <Link>Config\email-templates-member.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-milestone.xml">
+      <Guid>{D7168BD7-92D4-4e43-9965-4A710C03F966}</Guid>
+      <Link>Config\email-templates-milestone.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-monash-gsb.xml">
+      <Guid>{6AB38CB6-A8EC-43c1-8EF9-B882AE449899}</Guid>
+      <Link>Config\email-templates-monash-gsb.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-nextstep.xml">
+      <Guid>{88049E2D-7879-4e25-A600-797C39FD5977}</Guid>
+      <Link>Config\email-templates-nextstep.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-onecarenetwork.xml">
+      <Guid>{939D215F-B023-4ebb-83D5-704F3E9D4CE1}</Guid>
+      <Link>Config\email-templates-onecarenetwork.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-otd.xml">
+      <Guid>{926E5A1B-B6DE-4def-8FA0-256E0F295981}</Guid>
+      <Link>Config\email-templates-otd.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-unimelbarts.xml">
+      <Guid>{AADFD66E-9449-4ff6-A865-5F632B468ABA}</Guid>
+      <Link>Config\email-templates-unimelbarts.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-particip8.xml">
+      <Guid>{75FD995C-3BD5-4ae8-B5E5-F4A1660E95B5}</Guid>
+      <Link>Config\email-templates-particip8.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-ping.xml">
+      <Guid>{E3364406-0954-4bfd-B236-24D58C923A13}</Guid>
+      <Link>Config\email-templates-ping.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-rcsa.xml">
+      <Guid>{DA2CFE85-F5DD-40cb-93A7-CBCBEB6299F0}</Guid>
+      <Link>Config\email-templates-rcsa.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-sae.xml">
+      <Guid>{CF1B5BF5-8236-42c1-98EF-CF8B5FC5450E}</Guid>
+      <Link>Config\email-templates-sae.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-scouts.xml">
+      <Guid>{7744AE06-5D61-47c8-BEA7-462B5B193A5C}</Guid>
+      <Link>Config\email-templates-scouts.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-sut.xml">
+      <Guid>{4250FE3C-EA09-48c5-B301-C41A9EAB2A02}</Guid>
+      <Link>Config\email-templates-sut.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-talent2.xml">
+      <Guid>{EFB9ACC3-3B50-4977-A5EC-ADEE93A8F6E3}</Guid>
+      <Link>Config\email-templates-talent2.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-thejunctionworks.xml">
+      <Guid>{28399FA7-A708-47f4-ABFD-D5B410ABF54C}</Guid>
+      <Link>Config\email-templates-thejunctionworks.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-thenursingcentre.xml">
+      <Guid>{70F69679-044E-4970-84E0-40456E072A45}</Guid>
+      <Link>Config\email-templates-thenursingcentre.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-theredtentwoman.xml">
+      <Guid>{1CA14EDB-0DF0-4b50-A31B-748B92E990E7}</Guid>
+      <Link>Config\email-templates-theredtentwoman.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\email-templates-uws.xml">
+      <Guid>{3F77A743-98A7-4a26-9917-2BB7050DA334}</Guid>
+      <Link>Config\email-templates-uws.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\linkme.emails.xml">
+      <Guid>{68A73BAA-752A-4929-A61D-14ABBD78ABD9}</Guid>
+      <Link>Config\linkme.emails.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\linkme.instrumentation.container.config">
+      <Guid>{B850F157-A6BB-4d1c-8C21-8EE5368925EF}</Guid>
+      <Link>Config\linkme.instrumentation.container.config</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\linkme.environment.container.config">
+      <Guid>{F34B5465-699C-4726-9714-AFD238D6A28C}</Guid>
+      <Link>Config\linkme.environment.container.config</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\linkme.monitors.xml">
+      <Guid>{0F3A8765-4BDD-4e7f-A622-89E3ED231D0B}</Guid>
+      <Link>Config\linkme.monitors.xml</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\linkme.resources.container.config">
+      <Guid>{9B64AEBD-41D0-4fd8-9AB7-DC6F0C6B0655}</Guid>
+      <Link>Config\linkme.resources.container.config</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\noise.enu">
+      <Guid>{22D4C0C3-4C6A-4661-9AE8-9801A2792799}</Guid>
+      <Link>Config\noise.enu</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\skills.txt">
+      <Guid>{F99A2890-DA64-4f2d-9B0A-C84BE48F4176}</Guid>
+      <Link>Config\skills.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\titles.txt">
+      <Guid>{71166DD3-CC08-407D-B6B9-B6A91FEB8358}</Guid>
+      <Link>Config\titles.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\stopwords.txt">
+      <Guid>{6C05EE8D-F1E2-4F4F-83A4-4383B4D7206E}</Guid>
+      <Link>Config\stopwords.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\nicknames.txt">
+      <Guid>{261F9B91-0D2A-4b82-A263-9D364EB0779D}</Guid>
+      <Link>Config\nicknames.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\protwords.txt">
+      <Guid>{0A0D16C0-1347-4fd7-9728-DCDFAD75974D}</Guid>
+      <Link>Config\protwords.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\synonyms.txt">
+      <Guid>{E2E60F73-8EA1-4be3-B85A-9917BEAE8E64}</Guid>
+      <Link>Config\synonyms.txt</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\system.serviceModel.bindings.config">
+      <Guid>{EC90690A-0AB6-4672-92E7-1B0B18000179}</Guid>
+      <Link>Config\system.serviceModel.bindings.config</Link>
+    </Assemble>
+    <Assemble Include="..\..\Config\system.serviceModel.client.config">
+      <Guid>{1D731464-8536-4c0e-ABED-C0D74C3F104E}</Guid>
+      <Link>Config\system.serviceModel.client.config</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

@@ -1,0 +1,265 @@
+﻿.button.expand, .button.collapse {
+	background-image : url("../../images/common/ToggleButton.png");
+	width : 25px;
+	height : 25px;
+	cursor : pointer;
+	padding : 0px;
+}
+.button.expand {
+	background-position : -25px 0px;
+}
+.button.expand:hover {
+	background-position : -25px -25px;
+}
+.button.collapse {
+	background-position : 0px 0px;
+}
+.button.collapse:hover {
+	background-position : 0px -25px;
+}
+.button.search {
+	background-image : url("../../images/common/ButtonSearch.png");
+	width : 145px;
+	height : 50px;
+	padding : 0px;
+	margin : 17px 0px 0px 15px;
+	float : left;
+}
+.button.search:hover {
+	background-position : 0px -49px;
+}
+.button.search.a {
+	background-image : url("../../images/common/ButtonSearchA.png");
+	width : 101px;
+	height : 28px;
+	padding : 0px;
+}
+.button.search.a:hover {
+	background-position : 0px -28px;
+}
+.button.search.faq {
+	background-image : url("../../images/common/ButtonSearchFAQ.png");
+	width : 113px;
+	height : 36px;
+	padding : 0px;
+}
+.button.search.faq:hover {
+	background-position : 0px -36px;
+}
+.button.rename {
+	background-image : url("../../images/common/ButtonRename.png");
+	width : 100px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.rename:hover {
+	background-position : 0px -28px;
+}
+.button.save {
+	background-image : url("../../images/common/ButtonSave.png");
+	width : 80px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.save:hover {
+	background-position : 0px -28px;
+}
+.button.cancel {
+	background-image : url("../../images/common/ButtonCancel.png");
+	width : 100px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.cancel:hover {
+	background-position : 0px -28px;
+}
+.button.cancel.eighty {
+	background-image : url("../../images/common/ButtonCancel80.png");
+	width : 81px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.cancel.eighty:hover {
+	background-position : 0px -28px;
+}
+.button.delete {
+	background-image : url("../../images/common/ButtonDelete.png");
+	width : 100px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.delete:hover {
+	background-position : 0px -28px;
+}
+.button.yes {
+	background-image : url("../../images/common/ButtonYes.png");
+	width : 100px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.yes:hover {
+	background-position : 0px -28px;
+}
+.button.yes.eighty {
+	background-image : url("../../images/common/ButtonYes80.png");
+	width : 80px;
+	margin-left : 0px;
+}
+.button.send {
+	background-image : url("../../images/common/ButtonSend.png");
+	width : 81px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.send:hover {
+	background-position : 0px -28px;
+}
+.button.seemoresuggestedjobs {
+	background-image : url("../../images/common/SeeMoreSuggestedJobs.png");
+	width : 200px;
+	height : 28px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.cancel.gray {
+	background-image : url("../../images/common/GrayCancel.png");
+	width : 64px;
+	height : 21px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.cancel.gray:hover {
+	background-position : 0px -21px;
+}
+.button.emptyfolder {
+	background-image : url("../../images/common/EmptyFolder.png");
+	width : 111px;
+	height : 21px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.emptyfolder:hover {
+	background-position : 0px -21px;
+}
+.button.renamefolder {
+	background-image : url("../../images/common/RenameFolder.png");
+	width : 111px;
+	height : 21px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.renamefolder:hover {
+	background-position : 0px -21px;
+}
+.button.savesearch {
+	background-image : url("../../images/buttons/save-search_button.png");
+	width : 95px;
+	height : 21px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.createemailalert {
+	background-image : url("../../images/buttons/create-email-alert_button.png");
+	width : 135px;
+	height : 21px;
+	padding : 0;
+	margin-left : 10px;
+	cursor : pointer;
+}
+.button.learnmore {
+	background-image : url("../../images/common/LearnMore.png");
+	width : 65px;
+	height : 30px;
+	padding : 0;
+	cursor : pointer;
+	margin-left : 10px;
+}
+.button.createnewemailalert {
+	background-image : url("../../images/common/ButtonCreateNewEmailAlert.png");
+	width : 191px;
+	height : 28px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.createnewemailalert:hover {
+	background-position : 0px -28px;
+}
+.icon.close {
+	background-image : url("../../images/common/IconClose.png");
+	width : 11px;
+	height : 11px;
+	cursor : pointer;
+	margin : 9px 9px 0px 0px;
+	float : right;
+}
+.icon.close.black {
+	background-image : url("../../images/common/IconCloseBlack.png");
+	width : 8px;
+	height : 8px;
+}
+.button.ok {
+	background-image : url("../../images/common/ButtonOK.png");
+	width : 100px;
+	height : 28px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.forcandidates {
+	background-image : url("../../images/common/ButtonForCandidates.png");
+	width : 193px;
+	height : 46px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.forcandidates:hover {
+	background-position : 0px -46px;
+}
+.button.foremployers {
+	background-image : url("../../images/common/ButtonForEmployers.png");
+	width : 193px;
+	height : 46px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.foremployers:hover {
+	background-position : 0px -46px;
+}
+.button.onlinesecurity {
+	background-image : url("../../images/common/ButtonOnlineSecurity.png");
+	width : 193px;
+	height : 46px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.onlinesecurity:hover {
+	background-position : 0px -46px;
+}
+.button.no {
+	background-image : url("../../images/common/ButtonNo.png");
+	width : 80px;
+	height : 28px;
+	padding : 0;
+	cursor : pointer;
+}
+.button.no:hover {
+	background-position : 0px -28px;
+}

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ************************************************************
+  Copyright 2006, Burning Glass Technologies
+  Resume Content Model
+  ************************************************************
+  
+  20/Dec/2006 KNK Created
+  
+  OZ DTD
+  
+  Include using:
+  <!DOCTYPE ResDoc SYSTEM "resdoc.dtd">
+  
+  When specifying attributes we often use NMTOKEN instead of CDATA.
+  The values are not expected to correspond to XML token names, but
+  the characters used are restricted to those allowed in NMTOKENs.
+  For example, canonversion is specified as a NMTOKEN because it will
+  be a simple number (e.g. '3').
+  
+-->
+<!-- ************************************************************ -->
+<!-- Root Element -->
+<xs:schema targetNamespace="http://www.burning-glass.com/ResDoc/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rd="http://www.burning-glass.com/ResDoc/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:element name="ResDoc">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:resume"/>
+				<xs:element ref="rd:skillrollup"/>
+				<xs:element ref="rd:special"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- special data section -->
+	<!--
+    This section is reserved for user "meta" data.  
+    The data is indexed for keyword searching but is not used during
+    the scoring/matching process.
+    Here's a (very contrived) example:
+    <special>
+      <Industry code='A234'>Consumer Electronics</Industry>
+      <BrandOfCar>Honda</BrandOfCar>
+    </special>
+  -->
+	<xs:element name="special" type="xs:string"/>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- The actual resume -->
+	<!--
+    present is the date that the resume was processed.  It is the 
+    value assigned to dates that have been interpreted as present.
+  -->
+	<xs:element name="resume">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:contact"/>
+				<xs:element ref="rd:objective"/>
+				<xs:element ref="rd:summary"/>
+				<xs:element ref="rd:education"/>
+				<xs:element ref="rd:experience"/>
+				<xs:element ref="rd:skills"/>
+				<xs:element ref="rd:professional"/>
+				<xs:element ref="rd:statements"/>
+				<xs:element ref="rd:coverletter"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.resume"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.resume">
+		<xs:attribute ref="xml:space" default="preserve"/>
+		<xs:attribute name="canonversion" type="xs:NMTOKEN"/>
+		<xs:attribute name="dateversion" type="xs:NMTOKEN"/>
+		<xs:attribute name="present" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- contact -->
+	<!-- Basic contact information of the candidate's resume -->
+	<xs:element name="contact">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:name"/>
+				<xs:element ref="rd:phone"/>
+				<xs:element ref="rd:email"/>
+				<xs:element ref="rd:website"/>
+				<xs:element ref="rd:address"/>
+				<xs:element ref="rd:personal"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- objective -->
+	<!-- Defines the candidate's main goal in the resume -->
+	<xs:element name="objective" type="xs:string"/>
+	<!-- summary -->
+	<!-- Brief history of the candidate's background -->
+	<xs:element name="summary">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:skills" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- education -->
+	<!--
+    Contains a history of education 
+    Strictly speaking, only #PCDATA and school elements should
+    occur in an education element.  However, certain school sub-
+    elements do occur without an associated school.
+    
+    The start and end attributes are Julian-date representations
+    of the start and end of the entire experience section. These
+    can be used for calculating duration.  They may be numbers 
+    or the token 'present'.
+  -->
+	<xs:element name="education">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:school"/>
+				<xs:element ref="rd:courses"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:honors"/>
+				<xs:element ref="rd:degree"/>
+				<xs:element ref="rd:address"/>
+				<xs:element ref="rd:activities"/>
+				<xs:element ref="rd:affiliations"/>
+				<xs:element ref="rd:training"/>
+				<xs:element ref="rd:languages"/>
+				<xs:element ref="rd:project"/>
+				<xs:element ref="rd:skills"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.education"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.education">
+		<xs:attribute name="start" type="xs:NMTOKEN"/>
+		<xs:attribute name="end" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- experience -->
+	<!--
+    Contains a history of the candidate's work experience
+    The start and end attributes are Julian-date representations
+    of the start and end of the entire experience section. These
+    can be used for calculating duration.  They may be numbers 
+    or the token 'present'.
+  -->
+	<xs:element name="experience">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:job"/>
+				<xs:element ref="rd:jobtype"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:project"/>
+				<xs:element ref="rd:clearance"/>
+				<xs:element ref="rd:skills"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.experience"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.experience">
+		<xs:attribute name="start" type="xs:NMTOKEN"/>
+		<xs:attribute name="end" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- skills -->
+	<!-- Listing of skills -->
+	<xs:element name="skills">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:languages"/>
+				<xs:element ref="rd:courses"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:skills"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- professional -->
+	<!-- Information on professional activity -->
+	<xs:element name="professional">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:publications"/>
+				<xs:element ref="rd:skills"/>
+				<xs:element ref="rd:honors"/>
+				<xs:element ref="rd:affiliations"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:seminars"/>
+				<xs:element ref="rd:courses"/>
+				<xs:element ref="rd:project"/>
+				<xs:element ref="rd:training"/>
+				<xs:element ref="rd:website"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- statements -->
+	<!-- Additional information -->
+	<xs:element name="statements">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:activities"/>
+				<xs:element ref="rd:citizenship"/>
+				<xs:element ref="rd:clearance"/>
+				<xs:element ref="rd:eligibility"/>
+				<xs:element ref="rd:honors"/>
+				<xs:element ref="rd:relocation"/>
+				<xs:element ref="rd:references"/>
+				<xs:element ref="rd:personal"/>
+				<xs:element ref="rd:license"/>
+				<xs:element ref="rd:jobtype"/>
+				<xs:element ref="rd:website"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- references -->
+	<xs:element name="references" type="xs:string"/>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- school -->
+	<!--
+    The pos attribute indicates the chronological order of the
+    school event, where '1' is the most recent school. If the
+    date range of the school event cannot be determined, the pos
+    attribute will be omitted or set to '0'. 
+    
+    The id attribute is a unique element id that is referenced in 
+    the skill rollup section.
+    
+    The start and end attributes are Julian-date representations
+    of the start and end of the school event. These can be used
+    for ordering or calculating duration. Note that most school
+    events have an end attribute, but not necessary a start.
+    They may be numbers or the token 'present'.
+  -->
+	<xs:element name="school">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:institution"/>
+				<xs:element ref="rd:major"/>
+				<xs:element ref="rd:minor"/>
+				<xs:element ref="rd:gpa"/>
+				<xs:element ref="rd:honors"/>
+				<xs:element ref="rd:degree"/>
+				<xs:element ref="rd:courses"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:completiondate"/>
+				<xs:element ref="rd:address"/>
+				<xs:element ref="rd:daterange"/>
+				<xs:element ref="rd:activities"/>
+				<xs:element ref="rd:affiliations"/>
+				<xs:element ref="rd:training"/>
+				<xs:element ref="rd:grade"/>
+				<xs:element ref="rd:languages"/>
+				<xs:element ref="rd:skills"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.school"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.school">
+		<xs:attribute name="id" type="xs:NMTOKEN"/>
+		<xs:attribute name="pos" type="xs:NMTOKEN"/>
+		<xs:attribute name="start" type="xs:NMTOKEN"/>
+		<xs:attribute name="end" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- job -->
+	<!--
+    The pos attribute indicates the chronological order of the job,
+    where '1' is the most recent job. If the date range of the job 
+    cannot be determined, the pos attribute will be omitted or set 
+    to '0'. 
+    
+    The id attribute is a unique element id that is referenced in 
+    the skill rollup section.
+    
+    The start and end attributes are Julian-date representations
+    of the start and end of the job. These can be used for ordering 
+    or calculating duration.  As an example: May 1, 2001 is Julian-
+    date '730608'.  Note, they may be numbers or the token 'present'.
+    
+    If a job does not have an employer sub-element, the markup can 
+    infer an employer from previous jobs.  This is indicated using
+    the inferred-from attribute; it is set to the job pos attribute 
+    value of the inferred job.  Likewise, inferred-to is a comma-
+    delimited list of job pos attribute values. 
+  -->
+	<xs:element name="job">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:title"/>
+				<xs:element ref="rd:employer"/>
+				<xs:element ref="rd:department"/>
+				<xs:element ref="rd:jobtype"/>
+				<xs:element ref="rd:daterange"/>
+				<xs:element ref="rd:description"/>
+				<xs:element ref="rd:address"/>
+				<xs:element ref="rd:skills"/>
+				<xs:element ref="rd:courses"/>
+				<xs:element ref="rd:supervisor"/>
+				<xs:element ref="rd:training"/>
+				<xs:element ref="rd:clearance"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.job"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.job">
+		<xs:attribute name="id" type="xs:NMTOKEN"/>
+		<xs:attribute name="pos" type="xs:NMTOKEN"/>
+		<xs:attribute name="start" type="xs:NMTOKEN"/>
+		<xs:attribute name="end" type="xs:NMTOKEN"/>
+		<xs:attribute name="sic" type="xs:NMTOKEN"/>
+		<xs:attribute name="sic2" type="xs:NMTOKEN"/>
+		<xs:attribute name="inferred-from"/>
+		<xs:attribute name="inferred-to"/>
+	</xs:attributeGroup>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- name -->
+	<xs:element name="name">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:honorific"/>
+				<xs:element ref="rd:givenname"/>
+				<xs:element ref="rd:surname"/>
+				<xs:element ref="rd:namesuffix"/>
+				<xs:element ref="rd:nickname"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- address -->
+	<!--
+    lat/lon are latitude and longitude calculated from the 
+    address fields.  Currently, only the postalcode is used to
+    calculate the values.
+  -->
+	<xs:element name="address">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:street"/>
+				<xs:element ref="rd:city"/>
+				<xs:element ref="rd:state"/>
+				<xs:element ref="rd:postalcode"/>
+				<xs:element ref="rd:country"/>
+			</xs:choice>
+			<xs:attributeGroup ref="rd:attlist.address"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.address">
+		<xs:attribute name="lat"/>
+		<xs:attribute name="lon"/>
+	</xs:attributeGroup>
+	<!-- phone -->
+	<xs:element name="phone">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.phone"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.phone">
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="home"/>
+					<xs:enumeration value="work"/>
+					<xs:enumeration value="pager"/>
+					<xs:enumeration value="cell"/>
+					<xs:enumeration value="fax"/>
+					<xs:enumeration value="voicemail"/>
+					<xs:enumeration value="voice"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- email -->
+	<xs:element name="email">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.email"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.email">
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="home"/>
+					<xs:enumeration value="work"/>
+					<xs:enumeration value="other"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- website -->
+	<xs:element name="website" type="xs:string"/>
+	<!-- clearance -->
+	<!-- special clearances (e.g. "Top secret") -->
+	<xs:element name="clearance" type="xs:string"/>
+	<!-- description -->
+	<xs:element name="description">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:skill"/>
+				<xs:element ref="rd:skills"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- activities -->
+	<!-- Additional activities, interests, sports, etc. -->
+	<xs:element name="activities" type="xs:string"/>
+	<!-- affiliations -->
+	<!-- Interest groups -->
+	<xs:element name="affiliations" type="xs:string"/>
+	<!-- citizenship -->
+	<xs:element name="citizenship">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:country" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- eligibility -->
+	<xs:element name="eligibility">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:visa" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- visa -->
+	<xs:element name="visa" type="xs:string"/>
+	<!-- languages -->
+	<!-- List of spoken/read/written languages -->
+	<xs:element name="languages">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:skill" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- publications -->
+	<!-- List of publications -->
+	<xs:element name="publications" type="xs:string"/>
+	<!-- relocation -->
+	<!-- Candidate's willingness to move to a new location -->
+	<xs:element name="relocation" type="xs:string"/>
+	<!-- institution -->
+	<!-- name of school/college/university -->
+	<xs:element name="institution">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:address" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- major -->
+	<!-- major studied at a college/university -->
+	<xs:element name="major">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.major"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.major">
+		<xs:attribute name="code" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- minor -->
+	<!-- minor studied at a college/university -->
+	<xs:element name="minor">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.minor"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.minor">
+		<xs:attribute name="code" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- gpa -->
+	<!-- gpa achieved during education -->
+	<xs:element name="gpa">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.gpa"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.gpa">
+		<xs:attribute name="value" type="xs:NMTOKEN"/>
+		<xs:attribute name="max" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- honors -->
+	<!-- award or honors received -->
+	<xs:element name="honors" type="xs:string"/>
+	<!-- degree -->
+	<!--
+    Title of degree received
+    level represents the year-equivalent leve for this degree.
+    12 - high school
+    14 - associate
+    16 - bachelor
+    17 - pg diploma
+    18 - master
+    21 - doctor
+  -->
+	<xs:element name="degree">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.degree"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.degree">
+		<xs:attribute name="level">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="0"/>
+					<xs:enumeration value="12"/>
+					<xs:enumeration value="13"/>
+					<xs:enumeration value="14"/>
+					<xs:enumeration value="16"/>
+					<xs:enumeration value="17"/>
+					<xs:enumeration value="18"/>
+					<xs:enumeration value="21"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="name"/>
+	</xs:attributeGroup>
+	<!-- courses -->
+	<!-- list of courses or classes taken, seminars, or training -->
+	<xs:element name="courses">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:skill" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- completiondate -->
+	<!--
+    A single point in time; usually used with degrees
+    The days attribute is a Julian-date representation of the date.
+    It may be a number or the token 'present'.
+    The iso8601 is a compliant version of the date, in the form 
+    YYYY-MM-DD, YYYY-MM, or YYYY.
+  -->
+	<xs:element name="completiondate">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.completiondate"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.completiondate">
+		<xs:attribute name="days" type="xs:NMTOKEN"/>
+		<xs:attribute name="iso8601" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- title -->
+	<!-- name of job position -->
+	<xs:element name="title" type="xs:string"/>
+	<!-- employer -->
+	<!-- Full name of employer -->
+	<xs:element name="employer" type="xs:string"/>
+	<!-- department -->
+	<!-- name of department -->
+	<xs:element name="department" type="xs:string"/>
+	<!-- jobtype -->
+	<!-- full-time, part-time, intern, etc. -->
+	<xs:element name="jobtype" type="xs:string"/>
+	<!-- daterange -->
+	<xs:element name="daterange">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:start"/>
+				<xs:element ref="rd:end"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- start -->
+	<!--
+    A start date; usually used with jobs
+    The days attribute is a Julian-date representation of the date.
+    It may be a number or the token 'present'.
+    The iso8601 is a compliant version of the date, in the form 
+    YYYY-MM-DD, YYYY-MM, or YYYY.
+  -->
+	<xs:element name="start">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.start"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.start">
+		<xs:attribute name="days" type="xs:NMTOKEN"/>
+		<xs:attribute name="iso8601" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- end -->
+	<!--
+    A start date; usually used with jobs
+    The days attribute is a Julian-date representation of the date.
+    It may be a number or the token 'present'.
+    The iso8601 is a compliant version of the date, in the form 
+    YYYY-MM-DD, YYYY-MM, or YYYY.
+  -->
+	<xs:element name="end">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.end"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.end">
+		<xs:attribute name="days" type="xs:NMTOKEN"/>
+		<xs:attribute name="iso8601" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<xs:element name="honorific" type="xs:string"/>
+	<xs:element name="givenname" type="xs:string"/>
+	<xs:element name="surname" type="xs:string"/>
+	<xs:element name="namesuffix" type="xs:string"/>
+	<xs:element name="nickname" type="xs:string"/>
+	<xs:element name="coverletter" type="xs:string"/>
+	<xs:element name="maritalstatus" type="xs:string"/>
+	<xs:element name="dob" type="xs:string"/>
+	<xs:element name="street">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="rd:namesuffix" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="city" type="xs:string"/>
+	<xs:element name="postalcode" type="xs:string"/>
+	<xs:element name="pob" type="xs:string"/>
+	<xs:element name="license" type="xs:string"/>
+	<xs:element name="training" type="xs:string"/>
+	<xs:element name="grade" type="xs:string"/>
+	<xs:element name="project" type="xs:string"/>
+	<xs:element name="supervisor" type="xs:string"/>
+	<xs:element name="seminars" type="xs:string"/>
+	<xs:element name="other" type="xs:string"/>
+	<!-- state -->
+	<!-- The abbrev attribute is the 2-3 letter code for the state -->
+	<xs:element name="state">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.state"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.state">
+		<xs:attribute name="abbrev" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- country -->
+	<!-- The iso3 attribute is the 3 letter code for the country -->
+	<xs:element name="country">
+		<xs:complexType mixed="true">
+			<xs:attributeGroup ref="rd:attlist.country"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.country">
+		<xs:attribute name="iso3" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<xs:element name="personal">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="rd:dob"/>
+				<xs:element ref="rd:pob"/>
+				<xs:element ref="rd:maritalstatus"/>
+				<xs:element ref="rd:citizenship"/>
+				<xs:element ref="rd:license"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="skill" type="xs:string"/>
+	<!-- ************************************************************ -->
+	<!-- ************************************************************ -->
+	<!-- skillrollup -->
+	<xs:element name="skillrollup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rd:canonskill" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="rd:attlist.skillrollup"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.skillrollup">
+		<xs:attribute name="version" type="xs:NMTOKEN"/>
+	</xs:attributeGroup>
+	<!-- canonskill -->
+	<!--
+    A canonicalized (standardized) skill.
+    name is the standardized version of the skill.
+    idrefs lists ids of job/school elements where the skill occurred.
+    start is the start days of the earliest use, and end is the end days
+    of the most recent use.  lastused is the year of most recent use.
+    education and experience indicate if the skill was found in the
+    appropriate section.
+    Here's an example:
+    <canonskill name='microsoft sql 6.5' idrefs='3,5' end='729757' lastused='1999' start='728296' experience='1'>
+      <variant>MS SQL 6.5</variant>
+      <variant>SQL 6.5</variant>
+    </canonskill>
+  -->
+	<xs:element name="canonskill">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rd:variant" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="rd:attlist.canonskill"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.canonskill">
+		<xs:attribute name="name" use="required"/>
+		<xs:attribute name="idrefs"/>
+		<xs:attribute name="start"/>
+		<xs:attribute name="end"/>
+		<xs:attribute name="lastused"/>
+		<xs:attribute name="experience" default="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="0"/>
+					<xs:enumeration value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="education" default="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="0"/>
+					<xs:enumeration value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:element name="variant" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,65 @@
+#JobAd #JobDescription #Ad {
+	width: 625px;
+	border: 1px solid #EEE;
+}
+
+#JobAd #JobDescription #JobAdHeading {
+	background: url(achieve_business_&_recruitment_solutions_images/achieve_header.png) center top no-repeat;
+	padding-top: 210px;
+}
+
+#JobAd #JobDescription #LogoFooter {
+	height: 30px;
+}
+
+#JobAd #JobDescription #Ad,
+#JobAd #JobDescription #Ad .details *,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+}
+
+#JobAd #JobDescription #Ad label {
+	margin: 0;
+}
+
+#JobAd #JobDescription #Ad h1,
+#JobAd #JobDescription #Ad p,
+#JobAd #JobDescription #Ad ul,
+#JobAd #JobDescription #Ad ol,
+#JobAd #JobDescription #Ad div {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#JobAd #JobDescription #JobAdHeading h1 {
+	font-size: 20pt;
+	color: #269;
+	margin-bottom: 10px;
+}
+
+#JobAd #JobDescription #JobAdHeading p {
+	font-size: 14pt;
+}
+
+#JobAd .bulletpoints li {
+	font-size: 9pt;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-left: -9px;
+}
+
+#JobAd #JobDescription #Ad #JobAdHeading {
+	padding-left: 0;
+}
+
+#JobAd #JobDescription #Ad .details {
+	width: 565px !important;
+	position: relative;
+	left: 27px;
+	margin-bottom: 15px;
+}

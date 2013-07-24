@@ -1,0 +1,25 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\..\Install</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{8C75643D-B4AE-4923-8F84-CED82C72A05A}</ProjectGuid>
+    <Name>Assemble</Name>
+    <CatalogueFile>Module\LinkMe.Apps.Workflow.catalogue</CatalogueFile>
+    <CatalogueFileGuid>{946F3782-C35C-4b37-A4E6-BD27DAE503CA}</CatalogueFileGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Assemble Include="..\..\..\Config\linkme.workflow.app.config">
+      <Guid>{B3147914-522B-4852-B93D-E924DB28F8B2}</Guid>
+      <Link>Config\linkme.workflow.app.config</Link>
+    </Assemble>
+    <Assemble Include="..\..\..\Workflow\Host\LinkMe.Workflow.Host.dll">
+      <Guid>{69652B48-2A29-49ee-99E0-A978E9829915}</Guid>
+      <Link>Workflow\LinkMe.Workflow.Host.dll</Link>
+    </Assemble>
+  </ItemGroup>
+  <Import Condition="" Project="..\..\..\..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.Assemble.targets" />
+</Project>

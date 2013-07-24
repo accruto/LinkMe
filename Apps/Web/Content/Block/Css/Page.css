@@ -1,0 +1,140 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+	text-align: center;
+	font-size: 100%;
+	font-family: verdana
+}
+
+#container {
+	background: url(../images/page/bg.png) top left repeat-x;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+#container.IE7 {
+	overflow-x: hidden;
+}
+
+#body-container {
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0px;
+	text-align: left;
+	margin-top: 25px;
+	position: relative;
+	*position: inherit;
+	padding-bottom: 170px;
+	*z-index: 50;
+	font-size: 80%;
+	color: #333;
+	font-family: verdana
+}
+
+td {
+	font-size: 100%;
+	font-family: verdana
+}
+th {
+	font-size: 100%;
+	font-family: verdana
+}
+table {
+	font-size: 100%;
+	font-family: verdana
+}
+p {
+	font-size: 100%;
+    font-family: verdana;
+	margin-bottom: 10px
+}
+html p {
+	margin-top: 4px
+}
+
+h1 {
+	margin-top: 0px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 4px;
+	color: #000033;
+	font-family: arial
+}
+h1 small {
+    font-weight: normal;
+    font-size: 100%;
+}
+h2 {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 4px;
+	color: #000033;
+	font-family: verdana
+}
+h3 {
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 4px;
+	color: #000033;
+	font-family: arial
+}
+h4 {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 4px;
+	color: #000033;
+	font-family: arial
+}
+
+a:link {
+	color: #1155EE;
+	text-decoration: underline
+}
+a:visited {
+	color: #1155EE;
+	text-decoration: underline
+}
+a:hover {
+	color: #FF6600;
+	text-decoration: underline
+}
+
+ul {
+	padding-left: 0px;
+	margin-left: 23px
+}
+li {
+	margin-bottom: 8px
+}
+
+.page-title {
+    border: none;
+    background: none;
+    margin:0; padding:0;
+}
+
+.page-title h1 {
+    border: none;
+    background: none;
+    margin:0;
+     padding:0;
+    font-size: 220%;
+    font-family: Vegur, Arial, Helvetica, sans-serif;
+    color: #003;
+    position: relative;
+    *position: inherit;
+    top: -0.35em;
+    margin-bottom: -0.35em;
+    padding-bottom: 15px;
+}
+
+.clearer {
+    clear: both;
+}

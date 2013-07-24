@@ -1,0 +1,19 @@
+﻿#print-receipt {
+    float: right;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+#seller-details {
+    float: right;
+}
+
+#seller-details .org {
+    font-weight: bold;
+}
+
+#order-summary {
+    padding-bottom: 1em;
+}
+

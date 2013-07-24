@@ -1,0 +1,39 @@
+﻿/*	----------------------
+	Self-clearing elements
+	----------------------
+	Everything but a field is a freeform content area
+*/
+
+	.fileslist_ascx:after {		/* Modern-browser solution */
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.fileslist_ascx {			/* IE6,7 solution */
+		zoom: 1;				/* Invalid CSS, hasLayout trigger */
+	}
+
+
+/*	------------
+	All elements
+	------------
+*/
+	.fileslist_ascx {}
+	
+		.fileslist_ascx .files td.icon {
+			width: 48px;
+		}
+		.fileslist_ascx .files td.filename-and-actions {
+			width: 50%;
+		}
+		
+		.fileslist_ascx .files td.size {
+			font-size: 85%;
+		}
+		.fileslist_ascx .files td.uploaded {
+			font-size: 85%;
+			width: 25%;
+		}

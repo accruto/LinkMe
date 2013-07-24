@@ -1,0 +1,106 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="DevBuild">
+  
+  <!-- Paths and other properties that may need to be changed depending on the build server, config, etc.  -->
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <BuildVersion Condition=" '$(BuildVersion)' == '' ">1.0.0.0</BuildVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <DoSvn Condition=" '$(DoSvn)' == '' ">True</DoSvn>
+    <DoTests Condition=" '$(DoTests)' == '' ">True</DoTests>
+    <DoDistribute Condition=" '$(DoDistribute)' == '' ">True</DoDistribute>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(build_number) != ''">
+    <BuildVersion>$(build_number)</BuildVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(teamcity_build_checkoutDir) != ''">
+    <!-- By default SvnCheckoutDir is SourceRootDir, but if running in TeamCity set it to the correct directory supplied by TeamCity. -->
+    <SvnCheckoutDir>$(teamcity_build_checkoutDir)</SvnCheckoutDir>
+  </PropertyGroup>
+
+  <!-- Import other projects. -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="..\External\MSBuild\MSBuild.Community.Tasks.targets" />
+  <Import Project="..\Environment\Build\Tasks\Targets\LinkMe.Environment.Build.Tasks.targets" />
+
+  <!-- DevBuild -->
+
+  <Target Name="DevBuild" DependsOnTargets="Clean; BuildEnvironment; Build;">
+  </Target>
+
+  <!-- OfficialBuild -->
+
+  <Target Name="OfficialBuild" DependsOnTargets="WriteStartBuildMessage; Pre; Clean; Build; Package; BuildDatabase; DeployReports; Test; Distribute;">
+    <Message Text="Completed build $(BuildNumber)." Importance="high" />
+  </Target>
+
+  <Target Name="OfficialBuildNoTests" DependsOnTargets="WriteStartBuildMessage; Pre; Clean; Build; Package; Distribute;">
+    <Message Text="Completed build $(BuildNumber)." Importance="high" />
+  </Target>
+
+  <Target Name="WriteStartBuildMessage">
+    <Message Text="Starting build $(BuildNumber) $(BuildNumberSuffix) for SVN revision $(BUILD_VCS_NUMBER_1)." Importance="high" />
+  </Target>
+
+  <!-- Pre -->
+
+  <Target Name="Pre" DependsOnTargets="BuildEnvironment; SetupSvn;">
+  </Target>
+
+  <Target Name="BuildEnvironment">
+    <MSBuild Projects="..\Environment\Environment.sln" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration)" />
+  </Target>
+
+  <Target Name="SetupSvn" Condition="$(DoSvn) == 'True'">
+    <MSBuild Projects="Svn.proj" Targets="Setup" StopOnFirstFailure="true" Properties="BuildVersion=$(BuildVersion);SvnCheckoutDir=$(SvnCheckoutDir);" />
+  </Target>
+
+  <!-- Clean -->
+
+  <Target Name="Clean">
+    <MSBuild Projects="Build.proj" Targets="Clean" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+
+  <!-- Build -->
+  
+  <Target Name="Build">
+    <MSBuild Projects="Build.proj" Targets="Build" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+  
+  <!-- Package -->
+
+  <Target Name="Package">
+    <MSBuild Projects="Package.proj" Targets="Package" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+
+  <!-- Database -->
+
+  <Target Name="BuildDatabase" Condition="$(DoTests) == 'True'">
+    <MSBuild Projects="Database.proj" Targets="BuildDatabase" StopOnFirstFailure="true" Properties="BuildVersion=$(BuildVersion)" />
+  </Target>
+  
+  <!-- Reports -->
+
+  <Target Name="DeployReports" Condition="$(DoTests) == 'True'">
+    <MSBuild Projects="Reports.proj" Targets="Deploy" StopOnFirstFailure="true" Properties="BuildVersion=$(BuildVersion)" />
+  </Target>
+
+  <!-- Test -->
+
+  <Target Name="Test" Condition="$(DoTests) == 'True'">
+    <MSBuild Projects="Test.proj" Targets="Test" StopOnFirstFailure="true" Properties="Configuration=$(Configuration);BuildVersion=$(BuildVersion);Platform=$(Platform)" />
+  </Target>
+
+  <!-- Distribute -->
+
+  <Target Name="Distribute" Condition="$(DoDistribute) == 'True'">
+    <MSBuild Projects="Deploy.proj" Targets="Distribute" StopOnFirstFailure="true" />
+  </Target>
+
+</Project>

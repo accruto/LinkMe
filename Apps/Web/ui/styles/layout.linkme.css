@@ -1,0 +1,206 @@
+body {
+	width: 100%;
+	text-align:center;
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.8em;
+	background-image:url(../img/man_sky_blue.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+	
+}
+/**
+ * move anchor to fonts.css~!
+ */
+
+a.simplyblue:link {color:blue; font-weight:bold; text-decoration: none;}
+a.simplyblue:visited {color:blue; font-weight:bold; text-decoration: none;}
+a.simplyblue:hover {color:blue; font-weight:bold; text-decoration: none;}
+
+
+
+.login
+{
+	font-size:0.95em;
+}
+
+.login .rememberMe
+{
+	font-size: 0.9em;
+}
+
+
+
+/*** HEADER */
+#layout-linkme-home
+{
+	background: url(../img/orange_fade.gif) repeat-x top;
+}
+
+#layout-linkme-home .header{
+	height:88px;
+	width: 735px;
+}
+/*** NAV */
+#layout-linkme-home .header .nav {
+	margin-top: 2px;
+	float: right;
+}
+
+#layout-linkme-home .header .nav a {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: white;
+	text-decoration: none;
+	padding-left: 15px;
+}
+#layout-linkme-home .header .nav a:hover {
+	text-decoration: underline;
+}
+#layout-linkme-home .header .logo {
+	text-align: left;
+	padding-top: 6px;
+	display: block;
+	clear: both;
+}
+#layout-linkme-home .content {
+	width:100%;
+	height:40.4em;
+	background-image: url(../img/blue_fade.png);
+	background-position: right;
+	background-repeat: repeat-y;
+	background-color:white;
+}
+
+#layout-linkme-home .content, #layout-linkme-home .bottom .footer   {
+	width: 735px;
+	margin: 0px 20px 0px 20px;
+}
+
+#layout-linkme-home .content .main-content {
+	float: left;
+	width:440px; /*was 450*/
+	text-align:left;
+	padding-bottom:20px;
+	padding-right:10px;
+}
+#layout-linkme-home .content .supplementary-content {
+	padding-top:10px;
+	padding-left:30px;
+	width:250px; /* was 250*/
+	background:1px solid yellow;
+	float:right;
+	text-align:left;
+}
+#layout-linkme-home .content .supplementary-content h2 {
+	background-image:url(../img/linkme_small_logo.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:70px;
+	padding-top:2px;
+	font-size:1.1em;
+}
+#layout-linkme-home .content .supplementary-content .create-accounts {
+	border-bottom:1px solid #E1E5E8;
+	border-top:1px solid #E1E5E8;
+}
+#layout-linkme-home .content .supplementary-content .create-accounts ul{
+	padding:0px;
+	text-align:center;
+	padding-top:1.5em;
+	padding-bottom:1.7em;
+	margin:0px;
+}
+#layout-linkme-home .content .supplementary-content .create-accounts ul li {
+	list-style:none;
+	margin:0px;
+}
+#layout-linkme-home .content .supplementary-content .create-accounts ul li a {
+	font-weight: bold;
+	font-size:1.3em;
+}
+#layout-linkme-home .content .supplementary-content .ads {
+	font-size:0.85em;
+	padding-top:20px;
+}
+#layout-linkme-home .content .supplementary-content .login .LoginError {
+	padding-top:0.5em;
+	display: block;
+	color:#DF0000;
+}
+#layout-linkme-home .content .supplementary-content .login {
+	padding-bottom:1em;
+}
+#layout-linkme-home .content .supplementary-content .login a {
+	padding-top:1em;
+	float:right;
+	white-space: nowrap;
+}
+
+#layout-linkme-home .content .main-content dl dt {
+	font-weight: bold;
+	padding:0px;
+	padding-left: 40px;
+	padding-top:1em;
+}
+#layout-linkme-home .content .main-content dl dd {
+	background-image: url(../img/orange_bullet.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding:0px;
+	padding-left: 40px;
+	margin: 0px;
+}
+#layout-linkme-home .content .main-content .blog h2{
+	font-size:1em;
+	margin-bottom: -1.0em;
+}
+#layout-linkme-home .content .main-content .blog ul li {
+	list-style-image:url(../img/small_orange_bullet.gif);
+	padding-top:0em;
+}
+#layout-linkme-home .content .main-content .blog ul li a {
+	color:#E76801;
+	text-decoration:none;
+}
+#layout-linkme-home .content .main-content .blog ul li a:visited{
+	color:purple;
+}
+#layout-linkme-home .content .main-content .blog ul li a:hover {
+	text-decoration:underline;
+}
+#layout-linkme-home .bottom {
+	border-top: 3px solid #E1E5E8;
+	clear:both;
+}
+#layout-linkme-home .bottom .footer {
+	text-align:center;
+	color: #B8C1C9;
+	font-size:0.9em;
+	margin-bottom:20px;
+}
+#layout-linkme-home .bottom .footer a {
+	color: #B8C1C9;
+}
+#layout-linkme-home .bottom .footer a:visited {
+	color:purple;
+}
+#layout-linkme-home .bottom .footer div{
+	width: 362px;
+	float:left;
+}
+
+#layout-linkme-home .bottom .footer .legal {
+	text-align: left;
+}
+#layout-linkme-home .bottom .footer .legal a {
+	padding-right: 1em;
+}
+#layout-linkme-home .bottom .footer .copyright {
+	text-align: right;
+}
+#layout-linkme-home #ucLogin_btnLogin {
+	margin-top:0.5em;
+	float:left;
+}
+

@@ -1,0 +1,751 @@
+﻿#action-links .member, .login, .joinbutton, .username_textbox_control, .password_textbox_control, .textbox-left, .textbox-right, .loginbutton, .checkbox, .top-bar, .bottom-bar, .learnmore, .new_search_button, .down-icon, .up-icon, .radiobutton, .clear-icon, .fg, .yellow-ribbon, .content, .features, .benefits, .section.jobad .explore, .section.iphone .comments {
+    background-image : url("../../images/employers/home/homepage.png");
+}
+
+#left-sidebar div, #left-sidebar span, #main-body div, #main-body span, #main-body label {
+	font : 12px Helvetica, arial, sans-serif;
+	color : black;
+	float : left;
+}
+body.IE7 .keyword-location-search_ascx .columns {
+	width : 570px;
+	margin-left : -17px;
+}
+#action-links .member {
+	background-position : -765px -90px;
+	width : 157px;
+	height : 29px;
+}
+#action-links .member:hover, #action-links .member:active {
+	background-position : -925px -90px;
+}
+
+#subheader {
+	width : 100%;
+}
+.login {
+	width : 100%;
+	height : 88px;
+	min-width : 970px;
+	background-position : 50% 0px;
+	margin-top : -9px;
+}
+.login .left {
+	float : left;
+	width : 50%;
+}
+.login .right {
+	float : left;
+	width : 49.9999%;
+}
+.login .right div {
+	float : left;
+}
+.joinbutton {
+	background-position : -220px -325px;
+	width : 129px;
+	height : 38px;
+	float : right;
+	margin : 37px 220px 0px 0px;
+	cursor : pointer;
+	display : block;
+}
+.joinbutton:hover {
+	background-position : -349px -325px;
+}
+.control .textbox-left {
+	background-position : -560px -90px;
+	width: 5px;
+	height : 34px;
+}
+.control .textbox-bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAiCAYAAACeLbMRAAAAK0lEQVQIW2PcdOTKf8Ynr979Z3z/6et/xu8/fv1n/PP373/G/0AwWAiQIwFAV4WyOeqrjwAAAABJRU5ErkJggg==);
+	width : 178px;
+	height : 34px;
+	background-repeat : repeat-x;
+}
+.control.anykeywords-control .textbox-bg {
+	width : 70px;
+}
+.control .textbox-right {
+	background-position : -567px -90px;
+	width: 3px;
+	height : 34px;
+}
+.username_textbox_control, .password_textbox_control {
+	background-position : -395px -90px;
+	width : 163px;
+	height : 38px;
+}
+.username_textbox_control .textbox-left, .username_textbox_control .textbox-bg,.username_textbox_control .textbox-right, .password_textbox_control .textbox-left, .password_textbox_control .textbox-bg,.password_textbox_control .textbox-right {
+	background : none;
+	width : auto;
+}
+#LoginId, #Password, #FakePassword {
+	height : 34px;
+	width : 150px;
+	border : none;
+	background : none;
+	padding-left : 9px;
+	font : 12px Arial;
+	margin-left : 1px;
+}
+#LoginId, #Password {
+	color : #464646;
+}
+#LoginId.mask {
+	color : #959595;
+}
+#FakePassword {
+	color : #959595;
+}
+.field .control input[type='text'] {
+	color : #464646;
+	height : 31px;
+	width : 177px;
+	border : none;
+	background : none;
+	padding-left : 6px;
+	font : 12px Arial;
+	margin-left : -3px;
+}
+.field .control input[type='text'].mask {
+	color : #959595;
+}
+#AnyKeywords1, #AnyKeywords2 {
+	width : 63px;
+}
+body.IE8 #LoginId, body.IE8 #Password, body.IE8 #FakePassword, body.IE7 #LoginId, body.IE7 #Password, body.IE7 #FakePassword {
+	height : 14px;
+	padding : 10px 0px 11px 9px;
+}
+body.IE8 .field .control input[type='text'] {
+	/*padding : 9px 0px 9px 7px;*/
+	padding-left : 7px;
+	height : 15px;
+}
+body.IE7 .field .control input[type='text'] {
+	padding : 8px 0px 9px 7px;
+	height : 15px;
+}
+.loginbutton {
+	background-position : 0px -325px;
+	width : 107px;
+	height : 37px;
+	margin : 26px 0px 0px -10px;
+	cursor : pointer;
+}
+.loginbutton:hover {
+	background-position : -111px -325px;
+}
+.username_textbox_field {
+	margin : 25px 0px 0px 30px;
+}
+.password_textbox_field {
+	margin : 25px 10px 0px -10px;
+}
+.login-error {
+    background-color: #9c4f6c;
+    border: #9e526f;
+    color: #FFFFFF;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	margin : 63px 0px 0px -456px;
+	width : 170px;
+	display : none;
+}
+.login-error ul {
+	list-style : none;
+	background-color : #9C4F6C;
+	color : white;
+	margin : 5px 0px 4px 10px;
+	font : Bold 9px Verdana, Arial;
+}
+.login .linkedin {
+	margin : 0px 0px 0px -147px;
+}
+.login .checkbox_field {
+	margin : 65px 0px 0px -282px;
+}
+.login .checkbox_field .checkbox_control {
+	margin-top : 4px;
+}
+.checkbox {
+	width : 16px;
+	height : 16px;
+	background-position : -19px -119px;
+	cursor : pointer;
+	margin-right : 5px;
+}
+.checkbox:hover {
+	background-position : -1px -100px;
+}
+.checkbox.checked, .checkbox.checked:hover {
+	background-position : -1px -119px;
+}
+.checkbox.RememberMe {
+	margin-top : -2px;
+}
+.checkbox.disabled, .checkbox.disabled:hover {
+	background-position : -19px -100px;
+}
+.checkbox.checked.disabled, .checkbox.checked.disabled:hover {
+	background-position : -38px -100px;
+}
+label[for='RememberMe'], .label-RememberMe {
+	color : white;
+	font-size : 9px;
+}
+.forgotpwd {
+	margin : 69px 0px 0px -175px;
+}
+.forgotpwd a {
+	color : #18639F;
+	font-size : 9px;
+	font-weight : bold;
+}
+.videosection {
+	width : 365px;
+	margin-right : 20px;
+}
+.videosection .top-bar {
+	background-position : 0px -138px;
+	width : 361px;
+	height : 7px;
+}
+.videosection .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWkAAAABCAYAAAAcq1/NAAAALUlEQVQ4T2NkYGAw//79+4m/f/8CmaNgNARGQ2A0BEZDYDCEADMzMwMnJ6cFAIpTBzmkunXqAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+	width : 361px;
+}
+.videosection .bottom-bar {
+	background-position : 0px -147px;
+	width : 361px;
+	height : 7px;
+}
+#main-body .videosection .videotitle {
+	font-size : 22px;
+	font-weight : bold;
+	margin : 5px 0px -10px 22px;
+}
+.videosection .video {
+	margin : 20px 0px 20px 21px;
+}
+.right-section {
+	width : 560px;
+}
+.right-section > .section {
+	margin-bottom : 20px;
+}
+body.IE7 .right-section > .section {
+	width : 560px;
+}
+.right-section .section .top-bar {
+	background-position : -365px -138px;
+	width : 557px;
+	height : 7px;
+}
+.right-section .section .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi0AAAABCAYAAAASGJ4WAAAANUlEQVRIS2NkYGAw//79+4m/f/8CmaNgNARGQ2A0BEZDYDQERkNgNAQGVwgwMzMzcHJyWgAAkF4HOb3mF2oAAAAASUVORK5CYII=);
+	background-repeat : repeat-y;
+	width : 558px;
+}
+.right-section .section .bottom-bar {
+	background-position : -365px -147px;
+	width : 557px;
+	height : 7px;
+}
+#container {
+	background-color : #D7E0E4;
+}
+#form-container {
+	width :950px;
+}
+#main-body .section.search .searchtext span {
+	font-weight : Bold;
+	font-size : 22px;
+	margin : 12px 0px 0px 10px;
+}
+#main-body .section.search .searchtext span.red {
+	color : #D11E3E;
+	margin : 12px -5px 0px 5px;
+}
+#main-body .learnmore {
+	background-position : -572px -90px;
+	width : 65px;
+	height : 31px;
+	cursor : pointer;
+	margin : 5px 20px 0px 0px;
+	float : right;
+}
+#main-body .jobad .learnmore {
+	background : none;
+	margin : -168px 19px 0px 0px;
+}
+.keyword-location-search_ascx {
+	margin : 10px 0px 0px 10px;
+	height : auto !important;
+}
+#main-body .keyword-location-search_ascx .keywords_field label {
+	font-weight : Bold;
+	font-size : 13px;
+	font-family : Verdana;
+	margin: 0px 0px 5px 0px;
+}
+#main-body .keyword-location-search_ascx .location_field label {
+	font-weight : Bold;
+	font-size : 13px;
+	font-family : Verdana;
+	margin: 0px;
+}
+.main_columns .column {
+	width : 200px;
+}
+.search_btn_holder {
+	width : 125px;
+}
+.new_search_button {
+	background-position : -640px -90px;
+	width : 123px;
+	height : 45px;
+	font-size : 0px;
+	margin : 10px 0px 0px -5px;
+}
+.new_search_button:hover {
+	background-position : 0px -365px;
+	margin-top : 8px;
+	height : 47px;
+}
+.keyword-location-search_ascx .options_text {
+	margin : 5px 0px 0px 5px;
+}
+.keyword-location-search_ascx .options_text a {
+	text-decoration : none;
+	cursor : pointer;
+}
+body.IE7 .keyword-location-search_ascx .options_text {
+	width : 210px;
+}
+.keyword-location-search_ascx .options_text a.js_search-tips {
+	font-size : 11px;
+	text-decoration : underline;
+	color : #15E;
+}
+#main-body .options_label {
+	font-weight : Bold;
+	font-size : 10px;
+}
+.down-icon {
+	background-position : -111px -120px;
+	width : 10px;
+	height : 7px;
+	margin : 3px 0px 0px 5px;
+}
+.up-icon {
+	background-position : -111px -128px;
+	width : 10px;
+	height : 7px;
+	margin : 3px 0px 0px 5px;
+}
+body.IE7 .advanced_search_box .section {
+	width : 232px;
+}
+.advanced_search_box .small.heavy {
+	font-size : 11px;
+	font-weight : Bold;
+	margin-left : -6px;
+	width : 210px;
+}
+.advanced_search_box fieldset {
+	margin-left : -7px;
+}
+#main-body .advanced_search_box fieldset .field.small, #main-body .advanced_search_box fieldset .field .small {
+	font-size : 11px;
+}
+.keyword-location-search_ascx .control {
+	width : 210px;
+	margin-top : 5px;
+}
+.keyword-location-search_ascx .control.dropdown_control {
+	width : 186px;
+}
+.or-text {
+	float : left;
+	margin : 10px 9px 0px 9px;
+}
+.help.js_tooltip {
+	margin : -20px 0px 0px -15px;
+	cursor : pointer;
+}
+body.IE8 .help.js_tooltip, body.IE9 .help.js_tooltip {
+	margin-bottom : 4px;
+}
+.keyword-location-search_ascx .js_jobtitle_advanced .options_text {
+	margin-left : -5px;
+}
+.keyword-location-search_ascx .js_jobtitle_advanced .options_contents {
+	margin-left : -7px;
+}
+.radiobutton {
+	width : 16px;
+	height : 16px;
+	background-position : -56px -119px;
+	cursor : pointer;
+	margin : -2px 5px 0px 0px;
+}
+.radiobutton:hover {
+	background-position : -56px -100px;
+}
+.radiobutton.checked, .radiobutton.checked:hover {
+	background-position : -38px -119px;
+}
+.keyword-location-search_ascx .js_jobtitle_advanced .options_contents .field .control span {
+	margin-top : 5px;
+	width : 93px;
+}
+.js_jobtitle_advanced .options_contents > .section {
+	margin : 5px 0px 0px 0px;
+	border-top : 1px solid #D7D9DA;
+}
+.advanced_search_box > .section > .section-content > .section {
+	margin : 5px 0px 0px -7px;
+	border-top : 1px solid #D7D9DA;
+}
+.advanced_search_box .section .section .small.heavy {
+	margin : 0px 0px 5px 0px;
+}
+.clear-icon {
+	background-position : -90px -120px;
+	width : 16px;
+	height : 12px;
+	margin : 3px 0px 0px 5px;
+}
+#main-body .keyword-location-search_ascx .reset-section {
+	float : right;
+	margin-right : 28px;
+}
+body.IE7 #main-body .keyword-location-search_ascx .reset-section {
+	margin-right : 36px;
+}
+#main-body .keyword-location-search_ascx .reset-section a {
+	text-decoration : none;
+	cursor : pointer;
+	color : #15E;
+}
+#main-body .keyword-location-search_ascx .reset-section .options_label {
+	color : #15E;
+}
+.ac_results {
+	min-width : 200px;
+}
+body.IE7 .dropdown_field {
+	margin-left : -13px;
+}
+.dropdown-vline {
+	width : 1px;
+	height : 34px;
+	margin-left : -28px;
+	float : left;
+	background-color : #B2C4D4;
+	cursor : pointer;
+}
+.dropdown-arrow {
+	border-top : 4px solid #7794aa;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	margin : 16px 0px 0px -18px;
+	float : left;
+	cursor : pointer;
+}
+.dropdown-scrollpan {
+	position : absolute;
+	margin-top : 33px;
+	overflow : hidden;
+	background-color : white;
+	border-bottom : 1px solid #B3C6D6;
+}
+.dropdown-scrollbar-toparrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	top : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-toparrow {
+	position : absolute;
+	right : 3px;
+	top : 4px;
+	border-bottom : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-toparrow {
+	top : -12px;
+}
+.dropdown-scrollbar-bottomarrow-border {
+	position : absolute;
+	height : 10px;
+	width : 12px;
+	right : 0px;
+	border : 1px solid #B2C4D4;
+	bottom : 0px;
+	cursor : pointer;
+}
+.dropdown-scrollbar-bottomarrow {
+	position : absolute;
+	right : 3px;
+	bottom : 4px;
+	border-top : 4px solid #7794AA;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	cursor : pointer;
+}
+body.IE7 .dropdown-scrollbar-bottomarrow {
+	bottom : -12px;
+}
+.dropdown-scrollbar-wrap {
+	position : absolute;
+	right : 0px;
+	width : 12px;
+	top : 10px;
+	border : 1px solid #B2C4D4;
+	cursor : pointer;
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAIAAABlidhuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0OTMzODBDQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0OTMzODBEQzlGMzExRTBBNjUwQTJDRTREMzdDQjRGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MzM4MEFDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MzM4MEJDOUYzMTFFMEE2NTBBMkNFNEQzN0NCNEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6WxLuLAAAAIUlEQVR42mK8ces2CwsLKysrgmRhYWZmZmJiYoABgAADAGHgAu32HnaBAAAAAElFTkSuQmCC);
+	background-repeat : repeat-y;
+}
+.dropdown-scrollbar {
+	position : absolute;
+	margin-top : 24px;
+}
+.dropdown-scrollbar .ui-slider-handle {
+	width : 14px;
+	height : 49px;
+	background-position : -167px -34px;
+	position : absolute;
+	margin : 0px 0px -25px -1px;
+	cursor : pointer;
+	outline : none;
+	left : 0px;
+	border : none;
+	background-color : transparent;
+}
+.dropdown-items {
+	position : absolute;
+}
+#main-body .dropdown-item {
+	border : 1px solid #B3C6D6;
+	border-top : none;
+	height : 19px;
+	color : #807E7E;
+	font : 12px Arial;
+	background-color : #FFFFFF;
+	cursor : pointer;
+	padding : 6px 0px 0px 8px;
+	float : none;
+}
+#main-body .dropdown-item:first-child {
+	border : 1px solid #B3C6D6;
+}
+#main-body .dropdown-item:hover, #main-body .dropdown-item.selected {
+	color : #F0F6FB;
+	background-color : #207CD5;
+}
+.field .control .dropdown input[type='text'] {
+	cursor : pointer;
+}
+.js_location_advanced .options_contents .advanced_search_box .section .section-content {
+	margin-left : -7px;
+}
+.js_location_advanced .options_contents .advanced_search_box .section .section-content .small.heavy {
+	margin-left : 0px;
+}
+#main-body .js_location_advanced .options_contents .advanced_search_box .section .section-content .reset-section {
+	margin : 5px 43px 0px 0px;
+}
+body.IE7 #main-body .js_location_advanced .options_contents .advanced_search_box .section .section-content .reset-section {
+	margin-right : 37px;
+}
+
+#main-body .include-relocating-holder, #main-body .include-international-holder {
+	margin-top : 5px;
+	width : 232px;
+	font-size : 11px;
+	font-family : Verdana;
+}
+#main-body .close-icon {
+	float : right;
+}
+.tips-overlay .overlay-title {
+	width : 384px;
+}
+#main-body .overlay-title-text {
+	color : white;
+	font-weight : bold;
+}
+.error-container .error-arrow {
+	top : 60px !important;
+}
+.error-container .error-body {
+	top : 60px !important;
+	width : 290px !important;
+}
+.error-container .error-body .error-msg {
+	width : 250px;
+}
+.section.jobad .fg {
+	background-position : 0px -155px;
+	width : 565px;
+	height : 170px;
+	margin-top : 10px;
+}
+.section.jobad .explore {
+	width : 124px;
+	height : 48px;
+	margin : -106px 0px 0px 423px;
+	cursor : pointer;
+	float : left;
+	background-position : -130px -415px;
+}
+.section.jobad .explore:hover {
+	background-position : -130px -365px;
+}
+#main-body .section.jobad .title {
+	font-size : 22px;
+	font-weight : bold;
+	margin : -171px 0px 0px 9px;
+}
+.section.iphone .bg {
+	height : 199px;
+}
+.section.iphone .fg {
+	background-position : -568px -155px;
+	width : 550px;
+	height : 205px;
+	margin : 0px 0px 0px 12px;
+	position : absolute;
+}
+body.IE7 .section.iphone .fg {
+	margin-left : -290px;
+}
+.section.iphone .appstore {
+	width : 171px;
+	height : 61px;
+	margin : 127px 0px 0px 12px;
+	cursor : pointer;
+	position : relative;
+	float : left;
+}
+#main-body .section.iphone .learnmore {
+	width : 34px;
+	height : 15px;
+	margin : 157px 0px 0px 84px;
+	float : left;
+	background : none;
+	cursor : pointer;
+	position : relative;
+}
+#main-body .section.iphone .title {
+	font-size : 22px;
+	font-weight : bold;
+	margin : 13px 0px 0px -291px;
+}
+
+.section.iphone .comments {
+	background-position : -550px -365px;
+	width : 560px;
+	height : 20px;
+}
+#container.features {
+	background-color : white;
+}
+.features .yellow-ribbon {
+	background-position : -1127px -90px;
+	width : 1012px;
+	height : 70px;
+	margin-left : -30px;
+	position : absolute;
+	top : -40px;
+}
+body.IE7 .features .yellow-ribbon {
+	top : 80px;
+	margin-left : -980px;
+}
+.features .left-side, .features .right-side {
+	width : 465px;
+}
+.features .right-side {
+	margin-left : 20px;
+}
+.features .top-bar {
+	background-position : -1164px -165px;
+	width : 465px;
+	height : 7px;
+}
+.features .bg {
+	background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdAAAAABCAYAAABuSP8+AAAAMklEQVQ4T2NkYGAw//79+4m/f/8CmaNgNARGQ2A0BEZDYDQERkMAXwgwMzMzcHJyWgAAlqQHObFbKqcAAAAASUVORK5CYII=);
+	background-repeat : repeat-y;
+	width : 465px;
+}
+.features .bottom-bar {
+	background-position : -1164px -1641px;
+	width : 465px;
+	height : 7px;
+}
+.features .content {
+	width : 465px;
+	height : 288px;
+}
+.features .left-side .content {
+	background-position : -1164px -176px;
+}
+.features .right-side .content {
+	background-position : -1640px -176px;
+}
+.features .features {
+	width : 465px;
+	height : 460px;
+	display : none;
+}
+.features .left-side .features {
+	background-position : -1164px -465px;
+}
+.features .right-side .features {
+	background-position : -1640px -465px;
+	height : 340px;
+}
+.features .benefits {
+	width : 465px;
+	height : 710px;
+	display : none;
+}
+.features .left-side .benefits {
+	background-position : -1164px -925px;
+}
+.features .right-side .benefits {
+	background-position : -1640px -813px;
+	height : 640px;
+}
+.features .togglebutton[for='features'] {
+	width : 50px;
+	height : 11px;
+	margin : -34px 0px 0px 283px;
+	cursor : pointer;
+}
+.features .right-side .togglebutton[for='features'] {
+	margin-left : 266px;
+}
+.features .togglebutton[for='benefits'] {
+	width : 50px;
+	height : 11px;
+	margin : -34px 0px 0px 365px;
+	cursor : pointer;
+}
+.features .right-side .togglebutton[for='benefits'] {
+	margin-left : 348px;
+}
+body.IE7 #main-body .close-icon {
+	margin-top : -1px;
+}

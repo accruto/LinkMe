@@ -1,0 +1,72 @@
+#community-header {
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	zoom: 1;    /* IE 6,7 self-clearing solution */
+}
+
+#community-header:after {    /* Modern browser self-clearing solution */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#community-brought {
+	line-height: 20px;
+	vertical-align: top;
+	text-align: center;
+	font-size: 90%;
+	color: #333333;
+	font-weight: bold;
+}
+
+#logo {
+	width: 111px;
+}
+
+#logo a {
+	background: transparent url(../images/universal/header/home_up.png) no-repeat 0% 0%;
+	_background: none;  /* IE6 PNG hack */
+	_filter: expression(LinkMeUI.IE6Alpha("/ui/images/universal/header/home_up.png"));
+	width: 111px;
+}
+
+#logo a:hover {
+	background: transparent url(../images/universal/header/home_over.png) no-repeat;
+	_background: none;  /* IE6 PNG hack */
+	_filter: expression(LinkMeUI.IE6Alpha("/ui/images/universal/header/home_over.png"));
+}
+
+#header-links-container #logo {
+	background: transparent url(../images/homepage/header/logo_community_home.png) no-repeat 0% 0%;
+	width: 95px;
+	min-width: 95px;
+}
+
+#header-links-container #logo:hover {
+	background: transparent url(../images/homepage/header/logo_community_home-over.png) no-repeat;
+}
+
+#footer .logo {
+    background: none;
+}
+
+#footer .copyright {
+    display: none;
+}
+
+#nav {
+	margin-left: 111px;
+	_margin-left: 55.5px; /* IE6: Double-margin bug compensation */
+}
+
+#brought-to-you-by {
+	visibility: visible;
+}
+
+.job-search-results_ascx .featured_jobad .jobad_inner .jobad_innermore {
+    background: url(../images/controls/JobSearchResults/search-result_featured_bg_bottom.gif) bottom left no-repeat;
+}

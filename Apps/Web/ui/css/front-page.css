@@ -1,0 +1,508 @@
+
+/*	---------------------------------
+	 Defaults for CMS editable areas
+	---------------------------------
+*/
+	#splash-image {
+	}
+
+    #splash-image-1 {
+	    width: 237px;
+	    height: 147px;
+	    float: left;
+        _filter: expression(LinkMeUI.IE6Alpha("/ui/images/home/banner_step_1.png"));
+    }
+    
+    #splash-image-2 {
+	    width: 67px;
+	    height: 147px;
+	    float: left;
+        _filter: expression(LinkMeUI.IE6Alpha("/ui/images/home/banner_step_arrow.png"));
+    }
+    
+    #splash-image-3 {
+	    width: 239px;
+	    height: 147px;
+	    float: left;
+        _filter: expression(LinkMeUI.IE6Alpha("/ui/images/home/banner_step_2.png"));
+    }
+    
+    #mascot-image {
+		float:left;
+		position: relative;
+		left: 6px;
+		margin-bottom: 20px;
+        _filter: expression(LinkMeUI.IE6Alpha("/themes/communities/linkme/img/mascots/default.png"));
+    }
+
+	* html .pngfix img {
+		visibility: hidden;
+	}
+	
+	.pngfix a {
+		position: relative;
+	}
+	
+	#main-body-text {
+        float:left;
+        padding-bottom:20px;
+        position:relative;
+        width:400px;
+        padding-left: 21px;
+    }
+	
+    #main-body-text .fineprint {
+        bottom:10px;
+        font-size:80%;
+        position:absolute;
+    }
+    #main-body-text p {
+        margin-bottom:10px;
+        margin-top:10px;
+    }
+    
+    #main-body-text ul {
+		margin-left: 14px;
+    }
+	#main-body-text ul li {
+		padding-left: 3px;
+	}
+
+	
+/*	-------------------------
+	 Overrides for Home Page
+	-------------------------
+	 NOTE: Some of these styles should eventually be propagated to the whole site, since they
+	 define a stabler layout (it won't break when zooming text size, adding elements etc).
+*/	
+    #txt-password-container {
+        margin: 0 !important;
+    }
+    
+	#container {
+		background: url(../images/home/bg.png) top left repeat-x;
+	}
+	#home-form-container {
+	    zoom: 1;
+	}
+
+	#body-container {
+		background: none;
+		border: none;
+		margin-top: 0;
+	}
+	
+	#main-message-container {
+		width: 570px;
+		float: left;
+		padding-top: 50px;
+	}
+	
+	#form-container {
+		width: 330px;
+		float: right;
+		margin: 0;
+		padding: 0;
+	}
+	
+    /*	-------------
+	     Login panel
+	    -------------
+    */
+
+    .login_section {
+        left: auto;
+        float: right;
+        margin-bottom: 5px;
+    }
+        .login_section .section-body {
+            padding-left: 20px; padding-right: 20px;
+            padding-bottom: 5px;
+        }
+        .login_section .forms_v2 .field label {
+            color: #214263;
+        }
+        .login_section .forms_v2 .field .textbox {
+            border: 1px solid #638DA3;
+            background: #CEDBE1;
+        }
+        .login_section .forms_v2 .field .textbox:focus {
+            background: #DEECF1;
+        }
+        .login_section .forms_v2 .login_button {
+            background-image:                  url(../images/buttons/large/login.png);
+            _filter:expression(LinkMeUI.IE6Alpha("/ui/images/buttons/large/login.png"));
+            _background:none;
+            width: 60px;
+            height: 31px;
+        }
+		.login_section .forms_v2 .layout_control label,
+		.login_section .forms_v2 .layout_control .control,
+		.login_section .forms_v2 .layout_control a {
+			white-space: nowrap;
+		}
+    
+/*	-------------
+	 Any section
+	-------------
+
+	Modifications: selectors with #bottom-section-container (front-page specific).
+
+*/
+
+
+#lower-sections-container:after {     /* Modern browser self-clearing */  
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+			
+#lower-sections-container {         /* IE6,7 self-clearing */
+	zoom: 1;				/* Invalid CSS, hasLayout trigger */
+}
+
+#lower-sections-container {
+    width: 100%;    /* Prevent IE6 counting float-right's against container widths */
+}
+    
+    #lower-sections-container .section {
+	    border: 1px solid #E8E8E8;
+	    border-top: 1px solid #F0F0F0;
+	    border-bottom: 1px solid #CCC;
+	    margin-top: 0px;
+	    margin-bottom: 0;
+    }
+
+	    #lower-sections-container .section .section-title {
+		    margin-top: 0;
+		    border-bottom: 1px solid #CCC;
+		    border-top: none;
+		    border-left: none;
+		    padding: 2px 6px 2px 6px;
+	    }
+
+
+
+    /*	-------------------
+	     Join LinkMe panel
+	    -------------------
+    */
+
+    .front-page-join_section {
+	    background:url('../images/home/panels/bg_join.png') top left no-repeat;
+	    _background:none; /* IE6 Hack */
+	    _filter: expression(LinkMeUI.IE6Alpha("/ui/images/home/panels/bg_join.png"));
+	    width:258px;
+	    margin: 0;
+	    padding: 26px 26px 8px 30px;
+	    float: right;
+	    overflow: hidden; /* For IE6's benefit */
+	    position: relative;
+	    left: 6px;
+    }
+
+        .front-page-join_section .section-title {
+            border: none;
+            background: none;
+            margin:0;padding:0;
+            padding-bottom: 10px;
+        }
+            .front-page-join_section .section-title h1 {
+	            color: rgb(231, 104, 0);
+	            text-align: center;
+	            font-family: Arial, Helvetica, sans-serif;
+	            font-weight: bold;
+	            font-size: 26px;
+	            margin:0;padding:0;
+            }
+
+        .front-page-join_section .section-content {
+            margin:0;padding:0;
+            position: relative; /* IE6 - prevent transparency knocking out links, buttons, etc. */
+        }
+
+        #join-button-area {
+	        text-align: center;
+        }
+        
+        .front-page-join_section .login-sidebar-button {
+	        background:url('../images/home/buttons/join_now.png') top left no-repeat;
+	        height:36px;
+	        width:117px;
+        }
+
+        .front-page-join_section .login-sidebar-button:hover {background-position: left center; }
+        .front-page-join_section .login-sidebar-button:active {background-position: left bottom; }
+
+    .front-page-join_section-bottom {
+	    background:url('../images/home/panels/bg_join_bottom.png') top left no-repeat;
+	    _background: none;  /* IE6 Transparency Hack */
+	    _filter: expression(LinkMeUI.IE6Alpha("/ui/images/home/panels/bg_join_bottom.png"));
+	    float: right;
+        clear: right;
+	    width: 314px;
+	    height: 14px;
+	    margin:0;padding:0;
+	    position: relative;
+	    left: 6px;
+    }
+
+        .minijoin_ascx {}
+
+	        .minijoin_ascx fieldset {
+		        width: 100%;
+	        }
+
+		        .minijoin_ascx .field {
+			        margin-top: 0px;
+			        margin-bottom: 5px;
+		        }
+        		
+		        .minijoin_ascx .email_textbox_field {
+			        position: relative;	/* provide anchor for the helptext re-positioning */
+		        }
+        		
+		        .minijoin_ascx .email_textbox_field .helptext {
+			        position: absolute;
+			        top: 12px;	/* matches padding-top */
+			        left: 4em;
+		        }
+
+		        .minijoin_ascx .textbox_field .textbox {
+			        width:248px !important;
+		        }
+		
+		
+		
+            /*	-------------------
+                 Privacy statement 
+                -------------------
+            */
+
+            #privacy {
+                margin-top: 10px;
+                margin-right: 30px;
+                margin-bottom: 15px;
+                font-size: 85%;
+                clear: both;
+                float: right;
+                width: 255px;
+            }
+
+            #privacy img {
+                float: right;
+                margin-left: 10px;	
+            }
+
+
+
+/*  -------
+     Tiles
+    -------
+*/
+
+.tiles:after {      /* Modern browser self-clearing */
+    content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;    
+}
+
+.tiles {
+    zoom: 1;        /* IE 6,7 self-clearing */
+}
+
+    .tile {
+	    margin: 0;
+	    padding: 0;
+	    min-height: 300px;
+	    _height: 300px;	/* IE6 min-height Hack */
+	    overflow: hidden; /* Stop IE6 munging layout */
+    }
+
+        .tile a img {
+	        border: none;
+        }
+
+        .tile .fixed.content {
+	        padding-top: 10px; padding-left: 20px;
+        }
+
+        .tile ul.action-list {
+	        margin-top: 0px;
+	        margin-bottom: 10px;
+        }
+
+.left-tile {
+	background: url(../images/home/cms_tiles/bg_left.png) top left no-repeat;
+	float: left;
+	width: 271px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+.left-tile h1 {
+	color: white; text-align: center; padding-top: 5px;
+}
+
+.centre-tiles {
+	float: left;
+}
+
+	.centre-tile {
+		background: url(../images/home/cms_tiles/bg_centre.png) top left no-repeat;
+		width: 293px;
+		margin-left: 35px;
+		margin-right: 35px;
+		min-height: 80px;
+		height: auto;   /* Override IE6 hack */
+	}
+	
+	.second_centre-tile {
+		background: url(../images/home/cms_tiles/bg_centre_2.png) top left no-repeat;
+		min-height: 172px;
+		_height: 172px;	/* IE6 min-height hack */
+	}
+	
+	.centre-tile .home-editable-section-content {
+		min-height: 80px;
+		_height: 80px;	/* IE6 min-height hack */
+	}
+	
+	/* Ads tile */
+	
+	.featured-partners-tile .home-editable-section-content:after {
+		content: ".";			/* Self-clearing */
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.featured-partners-tile .home-editable-section-content {
+		padding-left: 15px;
+		padding-right: 15px;	
+		*zoom: 1;				/* IE6,7 hack: self-clearing */
+	}
+
+.right-tile {
+	background: url(../images/home/cms_tiles/bg_right.png) top left no-repeat;
+	float: left;
+	width: 316px;
+}
+
+#find-candidates-video {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+
+
+/*	------------------------------------------------------------------
+	 Employers / Recruiters, Sponsors, Member Talk (Editable sections)
+	------------------------------------------------------------------
+	(Some styling information still remains in the "section-content" DIVs)
+*/
+
+.testimonial .author {
+	margin-top: 9px;
+	margin-bottom: 19px;
+	text-align: right;
+}
+
+.testimonial img.author {
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+	position: absolute;
+	margin-left: -4px;
+	padding: 1px;
+	border: 1px solid #888;
+}
+
+.testimonial .quote {
+	padding-left: 76px;
+	font-size: 85%;
+}
+
+.read-more {
+	text-align: right;
+}
+
+.home-editable-section-title 
+{
+	color: #000051; 
+	text-align: center; 
+	padding-top: 5px;
+}
+    .left-tile .home-editable-section-title h1
+    {
+	    padding-top: 0px;
+    }
+
+.home-editable-section-content 
+{
+	padding-bottom:13px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:13px;
+	min-height:161px;
+	_height:161px;	/* IE6 min-height Hack */
+}
+
+
+
+/*	-------------------
+	 Find Jobs section
+	-------------------
+*/
+
+#divFindJobs {
+	float: left;
+	width: 267px;
+	overflow: hidden;
+}
+
+	.jobsearch_ascx .textbox {
+		width: 248px;
+	}
+	.jobsearch_ascx .dropdown {
+		width: 250px;
+	}
+
+
+
+/*	---------------------------------
+	 Browse Jobs by Industry section
+	---------------------------------
+*/
+
+#divBrowseJobs {			/* ID's not recommended, replace with nice control-specific class ASAP */
+	width: 663px;
+	float: left;
+	clear: none;
+}
+
+
+
+/*	-------------------------
+	 Ads section near footer
+	-------------------------
+*/
+
+#ads {
+    margin-top: 20px;
+    *margin-bottom: 20px;   /* IE6,7 hack */
+}
+
+    #ads #google-ads {
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #E8E8E8;
+        border-bottom-color: #CCCCCC;
+        border-top-color: #F0F0F0;
+        width: 728px;
+    }

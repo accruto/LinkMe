@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <PropertyGroup>
+    <SourceRootDirectory>$(MSBuildProjectDirectory)\..\</SourceRootDirectory>
+    <AssemblyPrefix>LinkMe.Domain.</AssemblyPrefix>
+    <VersionRcFiles>False</VersionRcFiles>
+    <VersionMofFiles>False</VersionMofFiles>
+    <VersionSqlFiles>False</VersionSqlFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CodeProjects Include="$(SourceRootDirectory)\Domain.sln" />
+  </ItemGroup>
+
+  <!-- Import other projects. -->
+
+  <Import Project="..\..\Build\SubsystemBuild.proj" />
+
+</Project>

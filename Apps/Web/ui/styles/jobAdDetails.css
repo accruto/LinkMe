@@ -1,0 +1,28 @@
+body
+{
+}
+
+.wide
+{
+	width: 509px;
+}
+.column
+{
+	width: 150px;
+}
+.columnLeft
+{
+	width: 345px;
+	margin-right: 13px;
+}
+.columnRight
+{
+	width: 150px;
+}
+
+.jobAdValidation
+{
+	color: #f00;
+	font-size: 10px;
+	font-weight: normal;
+}

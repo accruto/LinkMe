@@ -1,0 +1,211 @@
+body {
+	background: url(../img/bgtile.png) repeat-x;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#main {
+	width: 970px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	min-height: 415px;
+}
+
+* html #main {
+	height: 415px;		/* IE6 hack - min-height for blocks without y-padding */
+}
+
+#content {
+	width: 618px;
+	background: url(../img/twostep-header.png) no-repeat;
+	padding-top: 245px;
+	float: left;
+	font-family: Arial;
+	font-size: 16px;
+	color: #1E3D5B;
+}
+
+.field {
+	margin-bottom: 7px;
+}
+
+.control:after,
+#main:after {								/* Self-inner-clearing - no need for for <br class="clearer">	*/
+	content: ".";							/* after child floated elements.								*/
+	display: block; 
+	height: 0;								/* (Inner-clearing is only needed for elements which aren't		*/
+	clear: both;							/* floated themselves, but have floated children.)				*/
+	visibility: hidden;						
+}
+
+	.control label {
+		width:120px;
+		padding-right:20px;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+	}
+
+.textbox_field {}
+.textbox_control {}
+
+	.textbox {
+		display: block;
+		margin-top: 1px;
+		width: 236px;
+	}
+
+.checkbox_field {}
+.checkbox_control label {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7.5pt;
+	padding-right: 0;
+	font-weight: normal;
+	*position: relative;	/* Pixel perfection on IE (6,7) */
+	*top: 2px;				/* Pixel perfection on IE (6,7) */
+}
+
+	.checkbox_control .checkbox {
+		display: inline;
+		float: left;
+		width: auto;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 1em;
+		margin-right: 4px;
+	}
+
+.button_field {}
+.button_control {}
+	.button {}
+		
+.password_textbox_field {}
+.password_textbox_control {}
+	.textbox {}
+
+.firstname_field {}
+.lastname_field {}
+.email_field {}
+.password_field {}
+.accepttc_field {}
+
+.errors {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+	.errors span {
+		margin-bottom: 0.5em;
+		display: block;
+	}
+
+.login_control {
+	padding-right: 38px;
+	font-family: arial;
+	font-size: 80%;
+}
+	
+.joinform_control {
+	float: right;
+	width: 319px;
+}
+
+	.joinform_control .section {}
+
+		.joinform_control .section .section-title,
+		.joinform_control .section .section-content {
+			background: url(../img/join-form-bg.png) repeat-y;
+			_background: none;
+			_filter: expression(LinkMeUI.IE6AlphaScaled("/landing/img/join-form-bg.png"));
+			zoom: 1;											/* hasLayout */
+		}
+
+		.joinform_control .section .section-title h1 {
+			font-family: Arial;
+			font-weight: bold;
+			color: #FF6600;
+			font-size: 23px;
+			text-align: center;
+			margin: 0;
+			padding-top: 16px;
+			padding-bottom: 0px;	/* Errors cover this part of the padding (with its margin). */
+		}		
+		
+		.joinform_control .section .section-content {
+			font-family: arial;
+			padding-left: 38px;
+			padding-right: 38px;
+			padding-top: 1px;
+			padding-bottom: 10px;
+		}
+
+		* html .joinform_control .section .section-content a,	/* IE6 hack - make stuff on transparent bg clickable */
+		* html .joinform_control .section .section-content input,
+		* html .joinform_control .section .section-content label {
+			position: relative;
+		}
+		
+		.joinform_control .privacy {
+			padding-right: 55px;
+			/*background: url("../img/verisign.gif") no-repeat top right;*/
+			min-height: 26px;
+			font-size: 85%;
+			line-height: 1.1em;
+		}
+		
+		* html .joinform_control .privacy {						/* IE6 hack - min-height hack (for 0 y-padding blocks) */
+			height: 26px;
+		}
+		
+		.joinform_control .section .section-footer {
+			background: none;
+			height: 55px;
+			background: url(../img/join-form-bg-bottom.png) no-repeat;
+			_background: none;		/* IE6 hack - transparency */
+			_filter: expression(LinkMeUI.IE6Alpha("/landing/img/join-form-bg-bottom.png"));
+		}
+
+		.joinform_control .section .section-content {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 80%;
+		}
+
+		.joinform_control .section .section-content form {
+			margin: 0;
+			padding: 0;
+		}
+
+		.joinform_control .section .section-content .helptext {
+			color:#999999;
+			font-size: 7.5pt;
+		}
+		 
+		.joinform_control .section .section-content .join_button_control .join_button {
+			width: 227px;
+			height: 36px;
+			background: url("../../ui/img/joinnow.gif") top left no-repeat;
+			margin-bottom: 14px;
+			border: none;
+			padding: 0;
+			margin-left: 8px;
+			overflow: hidden;
+			font-size: 0;
+		}
+
+#footer {
+	height: 389px;
+	background: url(../img/bottom-tile.png);
+	width: 100%
+}
+
+#footer_image {
+	background: url(../img/bottom-image.png) no-repeat;
+	height: 345px;
+	margin-top: 0px;
+	width: 985px;
+	margin-left: auto;
+	margin-right: auto;
+}

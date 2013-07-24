@@ -1,0 +1,327 @@
+/* The following CSS explicity handles the top header and the Primary Navigation only
+	ONLY elements within the Top Header and Primary Nav should be defined in this sheet.*/
+
+/* new stuff */
+
+.clearer{
+	clear: both;
+}
+.clearer.left {
+	clear: left;
+}
+
+.last {
+	background: none;
+}
+
+
+#header:after,		/* Modern-browser self-clearing */
+#header-aux-links-container:after,
+#header-aux-links:after,
+#header-links-container:after,
+#header-links:after,
+#nav:after,
+#rhs-links:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#header,			/* IE6,7 self-clearing */
+#header-aux-links-container,
+#header-aux-links,
+#header-links-container,
+#header-links,
+#nav,
+#rhs-links:after {
+	zoom: 1;
+}
+
+
+#header {
+	position: relative; /* For AP */
+}
+
+    #header-aux-links-container {
+        background: url(../images/universal/header/bg_nav_aux.png) left bottom repeat-x;
+        font-size: 62.5%;
+    }
+    
+        #header-aux-links {
+            width: 950px;
+            margin: 0 auto;
+        }
+            #header-aux-links ul {
+	            float: right;
+                margin:0;padding:0;
+                clear: both;
+            }
+                #header-aux-links ul li {
+                    margin-top:0;margin-bottom:0;
+                    padding-top: 2px;
+                    padding-bottom: 4px;
+                }
+            #header-aux-links a {
+                color: #96BDE8;
+            }
+            #header-aux-links a:hover {
+                color: #E8BD96;
+            }
+
+            
+    #header-links-container {
+        background: url(../images/universal/header/bg_nav.png) left bottom repeat-x;
+        font-size: 62.5%;
+    }
+        #header-links-container-shadow {
+            font-size: 0;
+            text-indent: -9999px;
+            height: 1px;
+            overflow: hidden;
+            background: #000;
+            position: absolute;
+            left:0;
+            width: 100%;
+            -moz-opacity: 0.15;
+            filter: alpha(opacity=15);
+            -ms-filter: alpha(opacity=15);
+            opacity: 0.15;
+            *z-index: -1;
+            
+        }
+
+        #header-links {
+            width: 950px;
+            margin: 0 auto;
+            position: relative; /* For AP */
+            min-height: 42px;
+        }
+        
+            #logo {
+                position: absolute;
+                z-index: 2;
+                left: 0;
+	            height: 53px;
+	            width: 171px;
+	            bottom: -10px;
+            }
+
+            #logo a {
+	            display: block;
+	            height: 53px;
+	            width: 171px;
+	            background: url(../images/universal/header/home_logo_up.png) no-repeat;
+	            _background: none;  /* IE6 PNG hack */
+	            _filter: expression(LinkMeUI.IE6Alpha("/ui/images/universal/header/home_logo_up.png"));
+	            cursor: pointer;    /* IE doesn't want to show the pointer cursor for some reason... */
+            }
+
+            #logo a:hover {
+	            background: url(../images/universal/header/home_logo_over.png) no-repeat;
+	            _background: none;  /* IE6 PNG hack */
+	            _filter: expression(LinkMeUI.IE6Alpha("/ui/images/universal/header/home_logo_over.png"));
+            }
+
+            #nav {
+                margin-left: 171px;
+                _margin-left: 85.5px; /* IE6: Double-margin bug compensation */
+                position: relative; /* For AP anchor AND own positioning */
+                float: left;
+            }
+
+                #nav ul {
+                    margin:0; padding:0;
+                    float: left;
+                    margin-top: 2em;
+                    position: relative;
+                    left: -7px;
+                    _left: -14px;
+                }
+                #nav ul {
+                    zoom:1;
+                }
+
+                #nav ul:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+                
+                    #nav li {
+                        font-family: Verdana;
+                        font-size: 140%;
+                        font-weight: bold;
+                        color: #000033;
+                        list-style: none;
+                        float: left;
+                        margin:0; padding: 0;
+                        margin-left: 8px;
+                        background: url(../images/universal/header/nav_separator.png) no-repeat bottom left;
+                        _width:0;
+                        padding-left: 8px;
+                        padding-bottom: 5px;
+                        
+                    }
+
+                    #nav li:first-child,
+                    #nav .ie_firstli {}
+                    
+                        #nav a {
+                            font-family: Verdana;
+                            font-weight: bold;
+                            color: #000033;
+                            text-decoration: none;
+                            display: block;
+                            white-space: nowrap;    /* Fix IE6 wrapping multi-word titles */
+                        }
+
+                        #nav a:hover {
+                            color: #FF6600;
+                            text-decoration: none;
+                        }
+
+        #header-links #rhs-links {
+            padding-top: 3px;
+            padding-bottom: 5px;
+            right:0;
+            position: absolute;
+            float: none;
+            z-index: 1;
+        }
+            #header-links #rhs-links ul {
+	            float: right;
+                margin:0; padding:0;
+                clear: both;
+                font-size: 110%;
+                float: right;
+            }
+                #header-links #rhs-links ul li {
+                    margin-top:0; margin-bottom:0;
+	                padding-top:2px;
+	                padding-bottom:2px;
+	                margin-left: 6px;
+	                padding-left: 6px;
+                }
+
+/* old stuff */
+
+#login-status{
+	float:right;
+	margin-top:11px;
+	color:#999999;
+	font-size:90%;
+}
+
+a.navitem:link{
+font-family:"Tahoma";
+font-size:110%;
+font-weight:bold;
+color:#000033;
+text-decoration:none;
+}
+
+a.navitem:visited {
+font-family:"Tahoma";
+font-size:110%;
+font-weight:bold;
+color:#000033;
+text-decoration:none;
+}
+a.navitem:link:hover {
+	color: #FF6600;
+	text-decoration: none;
+}
+a.navitem:visited:hover {
+	color: #FF6600;
+	text-decoration: none;
+}
+
+#nav a.primary-nav-selected{
+	font-weight:bold;
+	color:#FF6600;
+}
+
+a.nav-hiring:link{
+	font-family:"Tahoma";
+	font-size:110%;
+	font-weight:bold;
+	color:#0066FF;
+	text-decoration:none;
+	margin-left:41px;
+}
+
+
+a.nav-hiring:visited{
+font-family:"Tahoma";
+font-size:110%;
+font-weight:bold;
+color:#0066FF;
+text-decoration:none;
+margin-left:41px;
+}
+
+#secondary-nav{
+width:100%;
+height:28px;
+background:url(../images/universal/secondary-nav-bg.png) no-repeat;
+line-height:28px;
+padding-left:8px;
+font-size:85%;
+color:#CCC;
+margin-bottom:15px;
+}
+
+/* for IE */
+* html #secondary-nav {
+	width: 686px;
+}
+/* end for ie */
+
+a.secondary-nav-item:link {
+margin-left:3px;
+margin-right:3px;
+text-decoration:none;
+color:#000000;
+font-weight:bold;
+}
+
+a.secondary-nav-item:hover{
+color:#FF6600;
+}
+
+a.secondary-nav-item:visited {
+margin-left:3px;
+margin-right:3px;
+text-decoration:none;
+color:#000000;
+font-weight:bold;
+}
+
+a.secondary-nav-item:visited:hover{
+color:#FF6600;
+}
+
+.secondary-nav-selected{
+color:#FF6600;
+}
+
+a.secondary-nav-selected:visited {
+margin-left:3px;
+margin-right:3px;
+text-decoration:none;
+color:#FF6600;
+font-weight:bold;
+}
+
+a.secondary-nav-selected:link {
+margin-left:3px;
+margin-right:3px;
+text-decoration:none;
+font-weight:bold;
+color:#FF6600;
+}
+

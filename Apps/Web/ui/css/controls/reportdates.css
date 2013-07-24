@@ -1,0 +1,6 @@
+﻿.reportdates_ascx {}
+	.reportdates_ascx .date_field {}
+		.reportdates_ascx .date_control {}
+			.reportdates_ascx .date_control .textbox {
+				width: 6em;
+			}

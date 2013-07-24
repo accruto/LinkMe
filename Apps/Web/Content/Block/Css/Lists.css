@@ -1,0 +1,104 @@
+﻿table.list {
+	border-collapse: separate;
+	border-spacing: 0px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #DDD;
+}
+
+table.list {
+	*border-collapse: collapse !important;	/* IE (6,7) hack - IE ignores border-spacing */
+}
+
+table.list th,
+table.list td {
+	*position: relative; /* IE (6,7) hack - use another IE bug to jump to separated w/0px cellspacing */
+	vertical-align: top;
+}
+
+table.list td.radio-only,
+table.list td.checkbox-only {
+	vertical-align: middle;
+	width: 0;
+}
+
+table.list td.actions ul.action-list li {
+	white-space: nowrap;
+}
+
+table.list td.actions {
+	width: 12em;
+}
+
+table.list thead th,
+table.list thead td {
+	background-color: #E8E8E8;
+	border-bottom: 1px solid #DADADA;
+	padding: 5px 20px 5px 7px;
+	font-weight: bold;
+}
+	
+table.list thead th {
+	border-left: 1px solid #E4E4E4;
+}
+	
+table.list tbody th, 
+table.list tbody td {
+	font-weight: normal;
+	padding: 7px;
+}
+		
+table.list tbody tr.item th,
+table.list tbody tr.item td {
+	border-bottom: 1px solid #DDD;
+}
+	
+table.list tbody tr.item_odd th,
+table.list tbody tr.item_odd td {
+	background-color: #F5F5F5;
+}
+			
+table.list tbody tr.item_odd td:first-child {
+	border-left: 1px solid #F0F0F0;
+}
+table.list tbody tr.item_odd td:last-child {
+	border-right: 1px solid #F0F0F0;
+}
+table.list tbody tr.item_even td:first-child {
+	border-left: 1px solid #F8F8F8;
+}
+table.list tbody tr.item_even td:last-child {
+	border-right: 1px solid #F8F8F8;
+}
+				
+table.list tbody tr.item_odd td	{		/* IE6/7 hack: put this border on all td */
+	*border-right: 1px solid #F0F0F0;
+}	
+table.list tbody tr.item_even td {		/* IE6/7 hack: put this border on all td */
+	*border-right: 1px solid #F8F8F8;
+}
+		
+table.list tbody tr.item td {				/* IE6/7 hack: leave only outermost td borders */
+	*border-left-style: expression(this.previousSibling==null?'solid':'none');
+	*border-right-style: expression(this.nextSibling==null?'solid':'none');
+	*border-left-width: expression(this.previousSibling==null?'1':'0');
+	*border-right-width: expression(this.nextSibling==null?'1':'0');
+}
+			
+table.list tr.item .thumbnail img {
+	max-width: 66px;
+	max-height: 66px;
+	border: 1px solid #DDD !important /* override asp:Image element style */;
+}
+
+table.list tfoot td {}	
+	
+table.list tbody th {
+	/*width: 150px;*/
+}
+	
+table.list tbody th.thumbnail {
+	width: 66px;
+}
+	

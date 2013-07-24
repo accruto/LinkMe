@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D4C94A3-5147-4224-96B2-FC3F786B953F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkMe.Domain.Users</RootNamespace>
+    <AssemblyName>LinkMe.Domain.Users</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\LinkMe.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Communications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Communications\bin\LinkMe.Framework.Communications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Instrumentation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Instrumentation\bin\LinkMe.Framework.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinkMe.Framework.Utility">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Utility\bin\LinkMe.Framework.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrators\Commands\AdministratorsCommand.cs" />
+    <Compile Include="Administrators\Commands\IAdministratorsCommand.cs" />
+    <Compile Include="Anonymous\AnonymousContact.cs" />
+    <Compile Include="Anonymous\Data\Anonymous.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Anonymous.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Anonymous\Data\AnonymousRepository.cs" />
+    <Compile Include="Anonymous\Data\Mappings.cs" />
+    <Compile Include="Anonymous\IAnonymousRepository.cs" />
+    <Compile Include="Anonymous\Commands\AnonymousUsersCommand.cs" />
+    <Compile Include="Anonymous\Commands\IAnonymousUsersCommand.cs" />
+    <Compile Include="Anonymous\JobAds\Commands\AnonymousJobAdsCommand.cs" />
+    <Compile Include="Anonymous\JobAds\Commands\IAnonymousJobAdsCommand.cs" />
+    <Compile Include="Anonymous\JobAds\Commands\InternalApplicationsCommand.cs" />
+    <Compile Include="Anonymous\JobAds\Commands\IInternalApplicationsCommand.cs" />
+    <Compile Include="Anonymous\Queries\AnonymousUsersQuery.cs" />
+    <Compile Include="Anonymous\Queries\IAnonymousUsersQuery.cs" />
+    <Compile Include="Custodians\Commands\CustodiansCommand.cs" />
+    <Compile Include="Custodians\Commands\ICustodiansCommand.cs" />
+    <Compile Include="DuplicateUserException.cs" />
+    <Compile Include="Employers\Candidates\CandidateBlockList.cs" />
+    <Compile Include="Employers\Candidates\CandidateBlockListsPermissionsException.cs" />
+    <Compile Include="Employers\Candidates\CandidateFlagList.cs" />
+    <Compile Include="Employers\Candidates\CandidateFlagListsPermissionsException.cs" />
+    <Compile Include="Employers\Candidates\Commands\CandidateFoldersCommand.cs" />
+    <Compile Include="Employers\Candidates\Commands\CandidateListsCommand.cs" />
+    <Compile Include="Employers\Candidates\Commands\CandidateNotesCommand.cs" />
+    <Compile Include="Employers\Candidates\Commands\ICandidateFoldersCommand.cs" />
+    <Compile Include="Employers\Candidates\Commands\ICandidateListsCommand.cs" />
+    <Compile Include="Employers\Candidates\Commands\ICandidateNotesCommand.cs" />
+    <Compile Include="Employers\Candidates\Queries\CandidateBlockListsQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\CandidateFlagListsQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\CandidateFoldersQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\CandidateNotesQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\ICandidateBlockListsQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\ICandidateFlagListsQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\ICandidateFoldersQuery.cs" />
+    <Compile Include="Employers\Candidates\Queries\ICandidateNotesQuery.cs" />
+    <Compile Include="Employers\Commands\EmployersCommand.cs" />
+    <Compile Include="Employers\Commands\IEmployersCommand.cs" />
+    <Compile Include="Employers\Contacts\Commands\EmployerMemberContactsCommand.cs" />
+    <Compile Include="Employers\Contacts\Commands\IEmployerMemberContactsCommand.cs" />
+    <Compile Include="Employers\Contacts\Constants.cs" />
+    <Compile Include="Employers\Contacts\ContactMemberMessage.cs" />
+    <Compile Include="Employers\Contacts\Data\Contacts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contacts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Employers\Contacts\Data\EmployerContactsRepository.cs" />
+    <Compile Include="Employers\Contacts\Data\Mappings.cs" />
+    <Compile Include="Employers\Contacts\IEmployerContactsRepository.cs" />
+    <Compile Include="Employers\Contacts\MemberMessage.cs" />
+    <Compile Include="Employers\Contacts\MemberMessageCleaner.cs" />
+    <Compile Include="Employers\Contacts\PublishedEvents.cs" />
+    <Compile Include="Employers\Contacts\Queries\EmployerMemberContactsQuery.cs" />
+    <Compile Include="Employers\Contacts\Queries\IEmployerMemberContactsQuery.cs" />
+    <Compile Include="Employers\Contacts\RejectionMemberMessage.cs" />
+    <Compile Include="Employers\Credits\Commands\EmployerAllocationsCommand.cs" />
+    <Compile Include="Employers\Credits\Commands\IEmployerAllocationsCommand.cs" />
+    <Compile Include="Employers\Applicants\Commands\JobAdApplicantsCommand.cs" />
+    <Compile Include="Employers\JobAds\JobAdBlockListsPermissionsException.cs" />
+    <Compile Include="Employers\JobAds\JobAdFlagListsPermissionsException.cs" />
+    <Compile Include="Employers\Credits\EmployerCreditsComponent.cs" />
+    <Compile Include="Employers\Applicants\Queries\IJobAdApplicantsQuery.cs" />
+    <Compile Include="Employers\JobAds\Queries\IJobAdApplicationSubmissionsQuery.cs" />
+    <Compile Include="Employers\JobAds\Queries\IJobAdProcessingQuery.cs" />
+    <Compile Include="Employers\Applicants\Queries\JobAdApplicantsQuery.cs" />
+    <Compile Include="Employers\JobAds\Queries\JobAdApplicationSubmissionsQuery.cs" />
+    <Compile Include="Employers\JobAds\TooManyJobAdsException.cs" />
+    <Compile Include="Employers\Logos\Commands\EmployerLogosCommand.cs" />
+    <Compile Include="Employers\Logos\Commands\IEmployerLogosCommand.cs" />
+    <Compile Include="Employers\Views\Constants.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\AffiliationItemsFactory.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\AimeAffiliationItems.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\AimeAffiliationsProvider.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\FinsiaAffiliationItems.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\FinsiaAffiliationsProvider.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\ItcraLinkAffiliationItems.cs" />
+    <Compile Include="Members\Affiliations\Affiliates\ItcraLinkAffiliationsProvider.cs" />
+    <Compile Include="Members\Affiliations\IAffiliationItemsFactory.cs" />
+    <Compile Include="Members\Affiliations\IAffiliationsProvider.cs" />
+    <Compile Include="Members\Communications\Data\Communications.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Communications.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Communications\Data\MemberCommunicationsRepository.cs" />
+    <Compile Include="Members\Communications\IMemberCommunicationsRepository.cs" />
+    <Compile Include="Members\Communications\Queries\MemberCommunicationsQuery.cs" />
+    <Compile Include="Members\Communications\Queries\IMemberCommunicationsQuery.cs" />
+    <Compile Include="Members\JobAds\Commands\InternalApplicationsCommand.cs" />
+    <Compile Include="Members\JobAds\Commands\MemberJobAdNotesCommand.cs" />
+    <Compile Include="Members\JobAds\Commands\IMemberJobAdNotesCommand.cs" />
+    <Compile Include="Members\JobAds\JobAdFoldersPermissionsException.cs" />
+    <Compile Include="Members\JobAds\Commands\MemberJobAdListsCommand.cs" />
+    <Compile Include="Members\JobAds\Commands\IMemberJobAdListsCommand.cs" />
+    <Compile Include="Employers\Applicants\JobAdApplicantsComponent.cs" />
+    <Compile Include="Employers\Views\Commands\EmployerMemberViewsCommand.cs" />
+    <Compile Include="Employers\Views\Data\Views.cs">
+      <DependentUpon>Views.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Employers\Views\Data\Views.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Views.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Employers\Views\Data\EmployerViewsRepository.cs" />
+    <Compile Include="Employers\Views\Data\Mappings.cs" />
+    <Compile Include="Employers\Credits\Queries\EmployerCreditsQuery.cs" />
+    <Compile Include="Employers\Credits\Queries\IEmployerCreditsQuery.cs" />
+    <Compile Include="Employers\Views\EmployerMemberView.cs" />
+    <Compile Include="Employers\Views\IEmployerViewsRepository.cs" />
+    <Compile Include="Employers\Contacts\MemberMessageAttachment.cs" />
+    <Compile Include="Employers\Views\MemberAccess.cs" />
+    <Compile Include="Employers\Views\MemberViewing.cs" />
+    <Compile Include="Employers\Views\Queries\EmployerMemberViewsQuery.cs" />
+    <Compile Include="Employers\Views\Queries\IEmployerMemberViewsQuery.cs" />
+    <Compile Include="Employers\Views\TooManyAccessesException.cs" />
+    <Compile Include="Members\Contacts\Data\Contacts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contacts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Contacts\Data\Mappings.cs" />
+    <Compile Include="Members\Contacts\Data\MemberContactsRepository.cs" />
+    <Compile Include="Members\Contacts\IMemberContactsRepository.cs" />
+    <Compile Include="Members\Contacts\Queries\MemberContactsQuery.cs" />
+    <Compile Include="Members\Friends\FriendInvitation.cs" />
+    <Compile Include="Members\Friends\Queries\IMemberFriendsQuery.cs" />
+    <Compile Include="Members\Friends\Queries\MemberFriendsQuery.cs" />
+    <Compile Include="Members\JobAds\JobAdBlockList.cs" />
+    <Compile Include="Members\JobAds\JobAdFlagList.cs" />
+    <Compile Include="Members\JobAds\JobAdFolder.cs" />
+    <Compile Include="Members\JobAds\MemberJobAdNote.cs" />
+    <Compile Include="Members\JobAds\JobAdExceptions.cs" />
+    <Compile Include="Employers\JobAds\PublishedEvents.cs" />
+    <Compile Include="Members\JobAds\Commands\IInternalApplicationsCommand.cs" />
+    <Compile Include="Members\JobAds\MemberJobAdView.cs" />
+    <Compile Include="Members\JobAds\Queries\MemberJobAdNotesQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IMemberJobAdNotesQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IMemberJobAdViewsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\MemberApplicationsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IJobAdBlockListsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IJobAdFoldersQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IMemberApplicationsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\JobAdBlockListsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\JobAdFlagListsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\IJobAdFlagListsQuery.cs" />
+    <Compile Include="Members\JobAds\Queries\JobAdFoldersQuery.cs" />
+    <Compile Include="Members\Photos\Commands\IMemberPhotosCommand.cs" />
+    <Compile Include="Members\Photos\Commands\MemberPhotosCommand.cs" />
+    <Compile Include="Members\Status\MemberStatus.cs" />
+    <Compile Include="Members\Status\Queries\IMemberProfilesQuery.cs" />
+    <Compile Include="Members\Status\Queries\MemberProfilesQuery.cs" />
+    <Compile Include="Members\Views\Data\Mappings.cs" />
+    <Compile Include="Members\Views\Data\MemberViewsRepository.cs" />
+    <Compile Include="Members\Views\Data\Views.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Views.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Views\IMemberViewsRepository.cs" />
+    <Compile Include="Members\Views\NotVisibleException.cs" />
+    <Compile Include="Members\Views\ProfessionalView.cs" />
+    <Compile Include="Members\Views\ProfessionalViews.cs" />
+    <Compile Include="Employers\Applicants\ApplicantList.cs" />
+    <Compile Include="Employers\JobAds\Queries\EmployerJobAdsQuery.cs" />
+    <Compile Include="Employers\JobAds\Queries\IEmployerJobAdsQuery.cs" />
+    <Compile Include="Employers\Orders\Commands\EmployerOrdersCommand.cs" />
+    <Compile Include="Employers\Orders\Commands\IEmployerOrdersCommand.cs" />
+    <Compile Include="Employers\Orders\Queries\EmployerOrdersQuery.cs" />
+    <Compile Include="Employers\Orders\Queries\IEmployerOrdersQuery.cs" />
+    <Compile Include="Members\Commands\IMembersCommand.cs" />
+    <Compile Include="Members\Commands\MembersCommand.cs" />
+    <Compile Include="Members\Views\PersonalView.cs" />
+    <Compile Include="Members\Views\PersonalViews.cs" />
+    <Compile Include="Members\Views\Queries\IMemberViewsQuery.cs" />
+    <Compile Include="Members\Views\Queries\MemberViewsQuery.cs" />
+    <Compile Include="Queries\UsersQuery.cs" />
+    <Compile Include="Queries\IUsersQuery.cs" />
+    <Compile Include="Employers\Views\Commands\IEmployerMemberViewsCommand.cs" />
+    <Compile Include="Members\Affiliations\AffiliationItems.cs" />
+    <Compile Include="Members\Affiliations\Commands\MemberAffiliationsCommand.cs" />
+    <Compile Include="Members\Affiliations\PublishedEvents.cs" />
+    <Compile Include="Members\Affiliations\Queries\IMemberAffiliationsQuery.cs" />
+    <Compile Include="Members\Affiliations\Queries\MemberAffiliationsQuery.cs" />
+    <Compile Include="Members\Contacts\Queries\IMemberContactsQuery.cs" />
+    <Compile Include="Members\Friends\Commands\IMemberFriendsCommand.cs" />
+    <Compile Include="Members\Friends\Commands\MemberFriendsCommand.cs" />
+    <Compile Include="Members\Friends\PublishedEvents.cs" />
+    <Compile Include="Members\Affiliations\Commands\IMemberAffiliationsCommand.cs" />
+    <Compile Include="Custodians\Queries\CustodiansQuery.cs" />
+    <Compile Include="Custodians\ICustodianAffiliationsCommand.cs" />
+    <Compile Include="Custodians\ICustodiansRepository.cs" />
+    <Compile Include="Custodians\Queries\ICustodiansQuery.cs" />
+    <Compile Include="Custodians\Data\Custodians.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Custodians.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Custodians\Data\CustodiansRepository.cs" />
+    <Compile Include="Custodians\Data\Mappings.cs" />
+    <Compile Include="Administrators\Queries\AdministratorsQuery.cs" />
+    <Compile Include="Administrators\Data\Administrators.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Administrators.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\Data\AdministratorsRepository.cs" />
+    <Compile Include="Administrators\Data\Mappings.cs" />
+    <Compile Include="Administrators\Queries\IAdministratorsQuery.cs" />
+    <Compile Include="Administrators\IAdministratorsRepository.cs" />
+    <Compile Include="Employers\Candidates\CandidateFolder.cs" />
+    <Compile Include="Members\JobAds\Commands\JobAdFoldersCommand.cs" />
+    <Compile Include="Employers\Candidates\CandidateNote.cs" />
+    <Compile Include="Employers\Candidates\CandidateNotesPermissionsException.cs" />
+    <Compile Include="Employers\Credits\Commands\EmployerCreditsCommand.cs" />
+    <Compile Include="Employers\Credits\Commands\IEmployerCreditsCommand.cs" />
+    <Compile Include="Employers\Queries\EmployersQuery.cs" />
+    <Compile Include="Employers\Data\EmployersRepository.cs" />
+    <Compile Include="Employers\Data\Employers.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employers.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Employers\Data\Mappings.cs" />
+    <Compile Include="Employers\Queries\EmployerRecruitersQuery.cs" />
+    <Compile Include="Employers\Candidates\CandidateFoldersPermissionsException.cs" />
+    <Compile Include="Members\JobAds\Commands\IJobAdFoldersCommand.cs" />
+    <Compile Include="Employers\IEmployersRepository.cs" />
+    <Compile Include="Employers\Queries\IEmployersQuery.cs" />
+    <Compile Include="Employers\JobAds\Commands\EmployerJobAdsCommand.cs" />
+    <Compile Include="Employers\JobAds\Commands\IEmployerJobAdsCommand.cs" />
+    <Compile Include="Employers\Applicants\Commands\IJobAdApplicantsCommand.cs" />
+    <Compile Include="Employers\JobAds\Commands\IJobAdApplicationSubmissionsCommand.cs" />
+    <Compile Include="Employers\JobAds\Commands\JobApplicationPermissionsException.cs" />
+    <Compile Include="Employers\JobAds\Commands\JobAdApplicationSubmissionsCommand.cs" />
+    <Compile Include="Members\Data\MembersRepository.cs" />
+    <Compile Include="Members\Data\Mappings.cs" />
+    <Compile Include="Members\Data\Members.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Members.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Members\IMembersRepository.cs" />
+    <Compile Include="Members\Queries\IMembersQuery.cs" />
+    <Compile Include="Members\Queries\MembersQuery.cs" />
+    <Compile Include="Members\PublishedEvents.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Custodians\CustodianAffiliationsCommand.cs" />
+    <Compile Include="Unity\UsersConfigurator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LinkMe.snk">
+      <Link>LinkMe.snk</Link>
+    </None>
+    <None Include="Custodians\Data\Custodians.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Custodians.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.csproj">
+      <Project>{822187F9-5344-443C-83B8-1A26CE492157}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Roles\Roles.csproj">
+      <Project>{84CAB40C-210E-4CDD-85D9-7BFBA7C51670}</Project>
+      <Name>Roles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Custodians\Data\Custodians.dbml.layout">
+      <DependentUpon>Custodians.dbml</DependentUpon>
+    </None>
+    <None Include="Employers\Data\Employers.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Employers.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Employers\Data\Employers.dbml.layout">
+      <DependentUpon>Employers.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Members\Data\Members.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Members.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Administrators\Administrators.cd" />
+    <None Include="Administrators\Data\Administrators.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Administrators.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="Employers\Employers.cd" />
+    <None Include="Members\Data\Members.dbml.layout">
+      <DependentUpon>Members.dbml</DependentUpon>
+    </None>
+    <None Include="Members\Members.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Administrators\Data\Administrators.dbml.layout">
+      <DependentUpon>Administrators.dbml</DependentUpon>
+    </None>
+    <None Include="Employers\Views\Data\Views.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Views.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Employers\Contacts\Data\Contacts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Contacts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Employers\Views\Data\Views.dbml.layout">
+      <DependentUpon>Views.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Employers\Contacts\Data\Contacts.dbml.layout">
+      <DependentUpon>Contacts.dbml</DependentUpon>
+    </None>
+    <None Include="Members\Views\Data\Views.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Views.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Members\Contacts\Data\Contacts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Contacts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Members\Views\Data\Views.dbml.layout">
+      <DependentUpon>Views.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Anonymous\Data\Anonymous.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Anonymous.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Members\Contacts\Data\Contacts.dbml.layout">
+      <DependentUpon>Contacts.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Anonymous\Data\Anonymous.dbml.layout">
+      <DependentUpon>Anonymous.dbml</DependentUpon>
+    </None>
+    <None Include="Members\Communications\Data\Communications.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Communications.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Members\Communications\Data\Communications.dbml.layout">
+      <DependentUpon>Communications.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>CALL "$(SolutionDir)..\build\killbydll.cmd" "$(TargetFileName)"
+"$(SolutionDir)..\Environment\Util\bin\LinkMe.Environment.Util.exe" /gac /i "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,4 @@
+create_GetJobAdFirstOpenedTime.sql
+create_GetJobAdLastOpenedTime.sql
+create_GetJobAdLastClosedTime.sql
+

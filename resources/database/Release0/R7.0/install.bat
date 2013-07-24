@@ -1,0 +1,1 @@
+..\run_scripts.vbs /l:install.log /f:update_email_table.sql,update_search_log_table.sql,update_search_log_criteria_table.sql,create_event_log_table.sql,create_event_log_profile_table.sql,create_assessme_table.sql,update_user_profile_ideal_job_table.sql,update_employer_profile_table.sql
